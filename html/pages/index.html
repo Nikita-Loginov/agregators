@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Главная", "links" :
+  ["./css/page.css", "./css/main.css"] })
+  <body>
+    @@include('../sprites/sptite.html')
+    
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main">
+        <section class="top">
+          <div class="container">
+            <div class="top__inner"></div>
+          </div>
+        </section>
+      </main>
+
+      @@include('../modules/footer.html')
+    </div>
+    <script src="/js/page.js" type="module"></script>
+  </body>
+</html>

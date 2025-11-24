@@ -1,0 +1,63 @@
+html {
+  --white-color: #ffffff;
+
+  --dark-color-100: #111928;
+  --dark-color-200: #1f2a37;
+  --dark-color-300: #394151;
+  --dark-color-400: #4d5563;
+  --dark-color-500: #6c7280;
+  --dark-color-600: #9da3af;
+  --dark-color-700: #d2d5db;
+  --dark-color-800: #e5e7eb;
+
+  --gray-color-100: #f9fafb;
+  --gray-color-200: #f3f4f6;
+  --gray-color-300: #e5e7eb;
+  --gray-color-400: #dfe2e6;
+  --gray-color-500: #cfd4da;
+
+  --primary-color-100: #da0b35;
+  --primary-color-200: #fee7eb;
+  --primary-color-300: #f72561;
+  --primary-color-400: #feeaf0;
+
+  --secondary-color-100: #636899;
+
+  --font-main: "Roboto", sans-serif;
+
+  --weight-font-main: 400;
+  --weight-font-md: 500;
+  --weight-font-lg: 600;
+  --weight-font-xl: 700;
+
+  --font-size-3xs: 12px;
+  --font-size-2xs: 14px;
+  --font-size-xs: 16px;
+  --font-size-sm: 18px;
+  --font-size-base: 24px;
+  --font-size-md: 28px;
+  --font-size-lg: 30px;
+  --font-size-xl: 40px;
+  --font-size-2xl: 48px;
+  --font-size-3xl: 60px;
+
+  --line-height-tighter: 1;
+  --line-height-tight: 1.1;
+  --line-height-base: 1.26;
+  --line-height-relaxed: 1.42;
+  --line-height-loose: 1.5;
+  --line-height-looser: 1.66;
+  --line-height-loosest: 1.75;
+
+  --radius-sm: 4px;
+  --radius-base: 8px;
+  --radius-md: 12px;
+  --radius-lg: 14px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+
+  --container-inline-padding: #{calculate-clamp(16px, 40px, 767px, 480px)};
+  --container-width: calc(1215px + var(--container-inline-padding));
+
+  --gap-blocks: #{calculate-clamp(48px, 80px, 1024px, 480px)};
+}
