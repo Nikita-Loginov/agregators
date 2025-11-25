@@ -7,6 +7,17 @@
     color: var(--primary-color-100);
   }
 
+  &.active-line {
+    &:before {
+      transform-origin: left;
+      scale: 1;
+    }
+  }
+
+  &.active-noColor {
+    color: inherit;
+  }
+
   &:hover {
     color: var(--primary-color-100);
 

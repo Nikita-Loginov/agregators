@@ -59,3 +59,15 @@ export function isTouchDevice() {
     navigator.maxTouchPoints > 0
   );
 }
+
+export const initSwiper = (element, config = {}) => {
+  if (!element) return;
+
+  const swiperConfig = {
+    ...config,
+  };
+
+  const swiper = new Swiper(element, swiperConfig);
+
+  return swiper;
+};

@@ -1,0 +1,22 @@
+.list-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__link {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+
+      img,
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
