@@ -18,7 +18,6 @@
     }
   }
 
-
   &__box {
     position: absolute;
     right: 0;
@@ -33,15 +32,34 @@
     visibility: hidden;
     transition: all 0.5s;
 
+    &.min {
+      width: 190px;
+    }
+
+    &.inner-list {
+      left: auto;
+      top: 0;
+      right: calc(100% + 12px);
+    }
+
     &.left {
       left: 0;
+      right: auto;
     }
   }
 
-  &:hover {
-    .list-popup__box {
-      opacity: 1;
-      visibility: visible;
-    }
+  &:hover > .list-popup__box {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & .list-popup__btn:hover + .list-popup__box {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  & .list-popup__box:hover {
+    opacity: 1;
+    visibility: visible;
   }
 }

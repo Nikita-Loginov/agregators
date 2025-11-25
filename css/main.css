@@ -1,1 +1,57 @@
-/*# sourceMappingURL=main.css.map */
+.filter {
+  --gap-items: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.filter__items, .filter__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--gap-items);
+}
+.filter__details {
+  --gap-details: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--gap-details);
+}
+.filter__details > *:not(:last-child) {
+  position: relative;
+  padding-right: var(--gap-details);
+}
+.filter__details > *:not(:last-child):before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1px;
+  height: 90%;
+  background-color: var(--dark-color-700);
+}
+.filter__details-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: var(--gap-details);
+}/*# sourceMappingURL=main.css.map */

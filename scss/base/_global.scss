@@ -7,7 +7,6 @@ body {
   height: 100%;
 }
 
-
 body {
   background-color: var(--gray-color-100);
   color: var(--dark-color-200);
@@ -30,6 +29,7 @@ body {
 
 .main {
   flex: 1;
+  padding-top: calc(var(--header-height, 140px) + 20px);
 }
 
 .container {
@@ -61,5 +61,44 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+  }
+}
+
+.checkbox-box {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 4px;
+  background-color: var(--white-color);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-color-400);
+}
+
+.scroll-max {
+  overflow-y: hidden;
+  overflow-x: auto;
+  display: flex;
+
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+
+  &::-webkit-scrollbar {
+    height: 6px;
+    transition: opacity 0.3s;
+    opacity: 0;
+  }
+
+  &:hover::-webkit-scrollbar,
+  &:active::-webkit-scrollbar,
+  &:focus::-webkit-scrollbar {
+    opacity: 1;
+  }
+
+  &:hover {
+    scrollbar-width: thin;
+  }
+
+  * {
+    flex: 0 0 auto;
   }
 }

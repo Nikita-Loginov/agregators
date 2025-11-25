@@ -4,14 +4,291 @@
   ["./css/page.css", "./css/main.css"] })
   <body>
     @@include('../sprites/sptite.html')
-    
+
     <div class="wrapper">
       @@include('../modules/header.html')
 
       <main class="main">
-        <section class="top">
+        <section class="catalogy">
           <div class="container">
-            <div class="top__inner"></div>
+            <div class="catalogy__inner">
+              <div class="filter">
+                <div class="filter__box">
+                  <div class="filter__items">
+                    <div class="filter__item">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#search-icon"></use>
+                              </svg>
+                            </span>
+
+                            <input
+                              type="search"
+                              placeholder="Enter location"
+                              name="search"
+                            />
+                          </div>
+                        </label>
+
+                        <p class="input-box__errors p4">dsljfhdsl</p>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Some 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 3</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 4</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 5</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter__items scroll-max">
+                    <div class="scroll-inner"></div>
+                    <div class="filter__item">
+                      <div class="checkbox-box">
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" checked name="category" />
+
+                            <span class="p2">All</span>
+                          </div>
+                        </label>
+
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" name="category" />
+
+                            <span class="p2">Ready</span>
+                          </div>
+                        </label>
+
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" name="category" />
+
+                            <span class="p2">Off-Plan</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Type 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Type 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Type 3</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Beds & Baths 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Beds & Baths 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Beds & Baths 3</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Price 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Price 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Price 3</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <button class="button button--gray button--big">
+                        More filters
+                      </button>
+                    </div>
+
+                    <div class="filter__item">
+                      <button class="button button--red button--big">
+                        More filters
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter__details">
+                  <div class="filter__details-block">
+                    <button
+                      type="button"
+                      aria-label="Saved searches"
+                      class="button button--noBg button--noMassa p3 medium-fon"
+                    >
+                      Saved searches
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Save search"
+                      class="button button--noBg button--noMassa p3 medium-fon"
+                    >
+                      Save search
+                    </button>
+                  </div>
+
+                  <div class="filter__details-block">
+                    <button
+                      type="button"
+                      aria-label="Clear filters"
+                      class="button button--noBg button--noMassa p3 medium-fon"
+                    >
+                      Clear filters
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>

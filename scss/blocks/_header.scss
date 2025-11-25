@@ -1,6 +1,11 @@
 .header {
   display: flex;
   flex-direction: column;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  left: 0;
+  right: 0;
 }
 
 .header-top {
@@ -85,5 +90,19 @@
     background-color: var(--gray-color-300);
     color: var(--dark-color-200);
     border-radius: var(--radius-md);
+  }
+}
+
+.header-main {
+  padding: 27px 0;
+  background-color: var(--while-color);
+  border-top: 1px solid var(--gray-color-200);
+  border-bottom: 1px solid var(--gray-color-200);
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
   }
 }

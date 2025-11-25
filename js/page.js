@@ -1,5 +1,5 @@
 import { getHeightHeader } from "./modules/header.js";
-import { toggleDropdown } from "./modules/dropdown.js";
+import { toggleDropdown, firstActiveText } from "./modules/dropdown.js";
 import { toggleAccordeonItems } from "./modules/accordeon.js";
 import { initModal } from "./modules/modal.js";
 
@@ -11,6 +11,7 @@ const handleGlobalClick = (e) => {
 
 document.addEventListener("DOMContentLoaded", () => {
   getHeightHeader();
+  firstActiveText()
 
   document.addEventListener("click", handleGlobalClick);
 });

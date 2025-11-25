@@ -1,0 +1,27 @@
+.check {
+  cursor: pointer;
+
+  &__info {
+    input {
+      @include visually-hidden;
+
+      &:checked + span {
+        text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor,
+          0 0.1px 0 currentColor, 0 -0.1px 0 currentColor;
+        background-color: var(--secondary-color-200);
+      }
+    }
+
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 12px;
+      min-height: 40px;
+      font-weight: var(--weight-font-main);
+      border-radius: var(--radius-base);
+      transition: all 0.5s;
+      text-shadow: none;
+    }
+  }
+}

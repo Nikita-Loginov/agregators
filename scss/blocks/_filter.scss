@@ -1,0 +1,45 @@
+.filter {
+  --gap-items: 8px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__items,
+  &__box {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-items);
+  }
+
+  &__details {
+    --gap-details: 24px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: var(--gap-details);
+
+    & > *:not(:last-child) {
+      position: relative;
+      padding-right: var(--gap-details);
+
+      &:before {
+        content:"";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 90%;
+        background-color: var(--dark-color-700);
+      }
+    }
+  }
+
+  &__details-block {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-details);
+  }
+}

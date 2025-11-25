@@ -16,10 +16,16 @@
     }
   }
 
+  &.with-icon {
+    &:before {
+      top: calc(100% - 5px);
+    }
+  }
+
   &:before {
     content: "";
     position: absolute;
-    top: calc(100% - 5px);
+    top: 100%;
     left: 0;
     right: 0;
     scale: 0;
