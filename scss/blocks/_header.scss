@@ -10,6 +10,7 @@
 
 .header-top {
   padding: 8px 0;
+  background-color: var(--gray-color-100);
 
   &__inner {
     display: flex;
@@ -95,7 +96,7 @@
 
 .header-main {
   padding: 27px 0;
-  background-color: var(--while-color);
+  background-color: var(--white-color);
   border-top: 1px solid var(--gray-color-200);
   border-bottom: 1px solid var(--gray-color-200);
 

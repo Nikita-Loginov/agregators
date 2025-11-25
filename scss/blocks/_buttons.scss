@@ -76,6 +76,10 @@
     }
   }
 
+  &--bg-rad {
+    border-radius: var(--radius-3xl);
+  }
+
   &--noBg {
     background-color: transparent;
     min-height: 0;

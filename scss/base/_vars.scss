@@ -59,6 +59,7 @@ html {
   --radius-lg: 14px;
   --radius-xl: 16px;
   --radius-2xl: 20px;
+  --radius-3xl: 24px;
 
   --container-inline-padding: #{calculate-clamp(16px, 40px, 767px, 480px)};
   --container-width: calc(1215px + var(--container-inline-padding));

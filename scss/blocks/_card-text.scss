@@ -1,0 +1,13 @@
+.card-text {
+    overflow: hidden;
+    border-radius: var(--radius-base);
+    overflow: hidden;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1px;
+    color: var(--secondary-color-300);
+    background-color: var(--white-color);
+}
