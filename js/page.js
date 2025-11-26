@@ -3,11 +3,13 @@ import { toggleDropdown, firstActiveText } from "./modules/dropdown.js";
 import { toggleAccordeonItems } from "./modules/accordeon.js";
 import { initModal, checkStartOpen } from "./modules/modal.js";
 import { checkScrollY } from "./modules/header.js";
+import { initMenu } from "./modules/menu.js";
 
 const handleGlobalClick = (e) => {
   toggleDropdown(e);
   toggleAccordeonItems(e);
   initModal(e);
+  initMenu(e)
 };
 
 document.addEventListener("DOMContentLoaded", () => {

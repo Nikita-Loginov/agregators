@@ -317,251 +317,468 @@
           title="Emirates.Estate"
           class="logo"
         >
-          <!-- <span class="logo__info icon"> -->
-          <!-- <svg>
+          <span class="logo__info icon">
+            <svg>
               <use xlink:href="#logo-icon"></use>
-            </svg> -->
-          <!-- </span> -->
+            </svg>
+          </span>
 
-          <!-- <span class="p4">WRE Group</span> -->
+          <span class="p4">WRE Group</span>
 
-          <span class="h4">тутс лого</span>
+          <!-- <span class="h4">тутс лого</span> -->
         </a>
 
+        <a
+          href="#"
+          aria-label="Перейти на страницу Sign in"
+          title="Sign in"
+          class="header-main__person"
+        >
+          <span class="icon">
+            <svg>
+              <use xlink:href="#user-icon"></use>
+            </svg> </span
+        ></a>
+
         <div class="menu">
-          <ul class="menu__list">
-            <li class="menu__link">
-              <a
-                href="#"
-                aria-label="Перейти на страницу Home"
-                title="Home"
-                class="link p2 medium-font"
-                >Home</a
-              >
-            </li>
+          <button
+            class="menu__burger"
+            type="button"
+            aria-label="Открыть/закрыть меню"
+          >
+            <div class="menu__burger-box">
+              <span></span>
+            </div>
+          </button>
 
-            <li class="menu__link list-popup relative">
-              <button
-                class="link list-popup__btn p2 with-icon medium-font"
-                aria-label="Посмотреть список страниц относяюшееся к Buy"
-              >
-                Buy
-              </button>
+          <div class="menu__content">
+            <div class="menu__details">
+              <div class="menu__items">
+                <button
+                  class="button button--mini button--gray button--grayBorder text-uppercase modal-open"
+                  data-modal="languagesModal"
+                  aria-label="Открыть модальное окно с выбором языка"
+                  data-close-menu
+                >
+                  <div class="button__block">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#lang-icon"></use>
+                      </svg>
+                    </span>
 
-              <div class="list-popup__box menu-popup left min">
-                <ul class="menu-popup__list">
-                  <li class="menu-popup__item">
-                    <a
-                      href="#"
-                      aria-label="Перейти на страницу Menu item"
-                      title="Menu item"
-                      class="menu-popup__link"
-                    >
-                      <span class="p1">Menu item</span>
-                    </a>
-                  </li>
+                    <p class="p2 header-top__media">Language</p>
+                  </div>
 
-                  <li class="menu-popup__item">
-                    <div
-                      href="#"
-                      aria-label="Перейти на страницу Menu item"
-                      title="Menu item"
-                      class="menu-popup__link list-popup"
-                    >
-                      <button
-                        aria-label="Посмотреть список страниц для Menu item"
-                        class="p1 list-popup__btn"
-                      >
-                        Menu item
-                      </button>
+                  <p class="p2 medium-font">ru</p>
+                </button>
 
-                      <div class="list-popup__box menu-popup min inner-list">
-                        <ul class="menu-popup__list">
-                          <li class="menu-popup__item">
-                            <a
-                              href="#"
-                              aria-label="Перейти на страницу Menu item"
-                              title="Menu item"
-                              class="menu-popup__link"
-                            >
-                              <span class="p1">Menu item</span>
-                            </a>
-                          </li>
+                <button
+                  class="button button--mini button--gray button--grayBorder text-uppercase modal-open"
+                  data-modal="currenciesModal"
+                  aria-label="Открыть модальное окно с выбором валюты"
+                  data-close-menu
+                >
+                  <div class="button__block">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#currency-icon"></use>
+                      </svg>
+                    </span>
 
-                          <li class="menu-popup__item">
-                            <a
-                              href="#"
-                              aria-label="Перейти на страницу Menu item"
-                              title="Menu item"
-                              class="menu-popup__link"
-                            >
-                              <span class="p1">Menu item</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                    <p class="p2 header-top__media">Currency</p>
+                  </div>
 
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="#arrow-line-icon"></use>
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-                </ul>
+                  <p class="p2 medium-font">usd</p>
+                </button>
               </div>
-            </li>
+            </div>
 
-            <li class="menu__link">
-              <a
-                href="#"
-                aria-label="Перейти на страницу Rent"
-                title="Rent"
-                class="link p2 medium-font"
-                >Rent</a
-              >
-            </li>
+            <div class="menu__details">
+              <div class="menu__items">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Previously viewed"
+                  title="Previously viewed"
+                  class="button button--mini button--grayBorder menu__item-big"
+                  data-close-menu
+                >
+                  <div class="button__block">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#view-icon"></use>
+                      </svg>
+                    </span>
 
-            <li class="menu__link">
-              <a
-                href="#"
-                aria-label="Перейти на страницу Off-Plan"
-                title="Off-Plan"
-                class="link p2 medium-font"
-                >Off-Plan</a
-              >
-            </li>
+                    <p class="p2">Previously viewed</p>
+                  </div>
 
-            <li class="menu__link">
-              <a
-                href="#"
-                aria-label="Перейти на страницу FAQ"
-                title="FAQ"
-                class="link p2 medium-font"
-                >FAQ</a
-              >
-            </li>
+                  <p class="p2 medium-font">192</p>
+                </a>
 
-            <li class="menu__link list-popup relative">
-              <button
-                class="link list-popup__btn p2 with-icon medium-font active"
-                aria-label="Посмотреть список страниц относяюшееся к Companies"
-              >
-                Companies
-              </button>
+                <a
+                  href="#"
+                  aaria-label="Перейти на страницу Comparison"
+                  title="Comparison"
+                  class="button button--mini button--grayBorder"
+                  data-close-menu
+                >
+                  <div class="button__block">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#comparison-icon"></use>
+                      </svg>
+                    </span>
 
-              <div class="list-popup__box menu-popup left min">
-                <ul class="menu-popup__list">
-                  <li class="menu-popup__item">
-                    <a
-                      href="#"
-                      aria-label="Перейти на страницу Menu item"
-                      title="Menu item"
-                      class="menu-popup__link"
-                    >
-                      <span class="p1">Menu item</span>
-                    </a>
-                  </li>
+                    <p class="p2">Comparison</p>
+                  </div>
 
-                  <li class="menu-popup__item">
-                    <div
-                      href="#"
-                      aria-label="Перейти на страницу Menu item"
-                      title="Menu item"
-                      class="menu-popup__link list-popup"
-                    >
-                      <button
-                        aria-label="Посмотреть список страниц для Menu item"
-                        class="p1 list-popup__btn"
-                      >
-                        Menu item
-                      </button>
+                  <p class="p2 medium-font">3</p>
+                </a>
 
-                      <div class="list-popup__box menu-popup min inner-list">
-                        <ul class="menu-popup__list">
-                          <li class="menu-popup__item">
-                            <a
-                              href="#"
-                              aria-label="Перейти на страницу Menu item"
-                              title="Menu item"
-                              class="menu-popup__link"
-                            >
-                              <span class="p1">Menu item</span>
-                            </a>
-                          </li>
+                <a
+                  href="#"
+                  aaria-label="Перейти на страницу Favorites"
+                  title="Favorites"
+                  class="button button--mini button--grayBorder"
+                  data-close-menu
+                >
+                  <div class="button__block">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#star-icon"></use>
+                      </svg>
+                    </span>
 
-                          <li class="menu-popup__item">
-                            <a
-                              href="#"
-                              aria-label="Перейти на страницу Menu item"
-                              title="Menu item"
-                              class="menu-popup__link"
-                            >
-                              <span class="p1">Menu item</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
+                    <p class="p2">Favorites</p>
+                  </div>
 
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="#arrow-icon"></use>
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-
-                  <li class="menu-popup__item">
-                    <div
-                      href="#"
-                      aria-label="Перейти на страницу Menu item"
-                      title="Menu item"
-                      class="menu-popup__link list-popup"
-                    >
-                      <button
-                        aria-label="Посмотреть список страниц для Menu item"
-                        class="p1 list-popup__btn"
-                      >
-                        Menu item
-                      </button>
-
-                      <div class="list-popup__box menu-popup min inner-list">
-                        <ul class="menu-popup__list">
-                          <li class="menu-popup__item">
-                            <a
-                              href="#"
-                              aria-label="Перейти на страницу Menu item"
-                              title="Menu item"
-                              class="menu-popup__link"
-                            >
-                              <span class="p1">Menu item</span>
-                            </a>
-                          </li>
-
-                          <li class="menu-popup__item">
-                            <a
-                              href="#"
-                              aria-label="Перейти на страницу Menu item"
-                              title="Menu item"
-                              class="menu-popup__link"
-                            >
-                              <span class="p1">Menu item</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-
-                      <span class="icon">
-                        <svg>
-                          <use xlink:href="#arrow-icon"></use>
-                        </svg>
-                      </span>
-                    </div>
-                  </li>
-                </ul>
+                  <p class="p2 medium-font">3</p>
+                </a>
               </div>
-            </li>
-          </ul>
+            </div>
+
+            <ul class="menu__list">
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Home"
+                  title="Home"
+                  class="link p2 medium-font"
+                  >Home</a
+                >
+              </li>
+
+              <li class="menu__link list-popup relative">
+                <button
+                  class="link list-popup__btn p2 with-icon medium-font"
+                  aria-label="Посмотреть список страниц относяюшееся к Buy"
+                >
+                  Buy
+                </button>
+
+                <div class="list-popup__box menu-popup min">
+                  <ul class="menu-popup__list">
+                    <li class="menu-popup__item">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Menu item"
+                        title="Menu item"
+                        class="menu-popup__link"
+                      >
+                        <span class="p1">Menu item</span>
+                      </a>
+                    </li>
+
+                    <li class="menu-popup__item">
+                      <div
+                        href="#"
+                        aria-label="Перейти на страницу Menu item"
+                        title="Menu item"
+                        class="menu-popup__link list-popup"
+                      >
+                        <button
+                          aria-label="Посмотреть список страниц для Menu item"
+                          class="p1 list-popup__btn"
+                        >
+                          Menu item
+                        </button>
+
+                        <div class="list-popup__box menu-popup min inner-list">
+                          <ul class="menu-popup__list">
+                            <li class="menu-popup__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Menu item"
+                                title="Menu item"
+                                class="menu-popup__link"
+                              >
+                                <span class="p1">Menu item</span>
+                              </a>
+                            </li>
+
+                            <li class="menu-popup__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Menu item"
+                                title="Menu item"
+                                class="menu-popup__link"
+                              >
+                                <span class="p1">Menu item</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Rent"
+                  title="Rent"
+                  class="link p2 medium-font"
+                  >Rent</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Off-Plan"
+                  title="Off-Plan"
+                  class="link p2 medium-font"
+                  >Off-Plan</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу FAQ"
+                  title="FAQ"
+                  class="link p2 medium-font"
+                  >FAQ</a
+                >
+              </li>
+
+              <li class="menu__link list-popup relative">
+                <button
+                  class="link list-popup__btn p2 with-icon medium-font active"
+                  aria-label="Посмотреть список страниц относяюшееся к Companies"
+                >
+                  Companies
+                </button>
+
+                <div class="list-popup__box menu-popup min">
+                  <ul class="menu-popup__list">
+                    <li class="menu-popup__item">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Menu item"
+                        title="Menu item"
+                        class="menu-popup__link"
+                      >
+                        <span class="p1">Menu item</span>
+                      </a>
+                    </li>
+
+                    <li class="menu-popup__item">
+                      <div
+                        href="#"
+                        aria-label="Перейти на страницу Menu item"
+                        title="Menu item"
+                        class="menu-popup__link list-popup"
+                      >
+                        <button
+                          aria-label="Посмотреть список страниц для Menu item"
+                          class="p1 list-popup__btn"
+                        >
+                          Menu item
+                        </button>
+
+                        <div class="list-popup__box menu-popup min inner-list">
+                          <ul class="menu-popup__list">
+                            <li class="menu-popup__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Menu item"
+                                title="Menu item"
+                                class="menu-popup__link"
+                              >
+                                <span class="p1">Menu item</span>
+                              </a>
+                            </li>
+
+                            <li class="menu-popup__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Menu item"
+                                title="Menu item"
+                                class="menu-popup__link"
+                              >
+                                <span class="p1">Menu item</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-icon"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </li>
+
+                    <li class="menu-popup__item">
+                      <div
+                        href="#"
+                        aria-label="Перейти на страницу Menu item"
+                        title="Menu item"
+                        class="menu-popup__link list-popup"
+                      >
+                        <button
+                          aria-label="Посмотреть список страниц для Menu item"
+                          class="p1 list-popup__btn"
+                        >
+                          Menu item
+                        </button>
+
+                        <div class="list-popup__box menu-popup min inner-list">
+                          <ul class="menu-popup__list">
+                            <li class="menu-popup__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Menu item"
+                                title="Menu item"
+                                class="menu-popup__link"
+                              >
+                                <span class="p1">Menu item</span>
+                              </a>
+                            </li>
+
+                            <li class="menu-popup__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Menu item"
+                                title="Menu item"
+                                class="menu-popup__link"
+                              >
+                                <span class="p1">Menu item</span>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-icon"></use>
+                          </svg>
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="menu__list menu__list--media">
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Home"
+                  title="Home"
+                  class="link p2 medium-font"
+                  data-close-menu
+                  >Home</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Buy"
+                  title="Buy"
+                  class="link p2 medium-font"
+                  data-close-menu
+                  >Buy</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Rent"
+                  title="Rent"
+                  class="link p2 medium-font active"
+                  data-close-menu
+                  >Rent</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Off-Plan"
+                  title="Off-Plan"
+                  class="link p2 medium-font"
+                  data-close-menu
+                  >Off-Plan</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу FAQ"
+                  title="FAQ"
+                  class="link p2 medium-font"
+                  data-close-menu
+                  >FAQ</a
+                >
+              </li>
+
+              <li class="menu__link">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу Companies"
+                  title="Companies"
+                  class="link p2 medium-font"
+                  data-close-menu
+                  >Companies</a
+                >
+              </li>
+            </ul>
+
+            <footer class="menu__footer">
+              <div class="menu__btns">
+                <a
+                  href="#"
+                  aria-label="Перейти на страницу All projects"
+                  title="All projects"
+                  class="button button--red"
+                >
+                  <span class="p3">All projects</span>
+
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="#arrow-line-icon"></use>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     </div>

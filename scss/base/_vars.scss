@@ -40,7 +40,7 @@ html {
 
   --font-size-3xs: 12px;
   --font-size-2xs: 14px;
-  --font-size-xs: 16px;
+  --font-size-xs: #{calculate-clamp(14px, 16px, 1023px, 480px)};
   --font-size-sm: 18px;
   --font-size-base: 24px;
   --font-size-md: 28px;
@@ -66,7 +66,7 @@ html {
   --radius-3xl: 24px;
   --radius-4xl: 28px;
 
-  --container-inline-padding: #{calculate-clamp(16px, 40px, 767px, 480px)};
+  --container-inline-padding: #{calculate-clamp(16px, 40px, 1024px, 767px)};
   --container-width: calc(1215px + calc(var(--container-inline-padding) * 2));
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1024px, 480px)};

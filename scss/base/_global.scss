@@ -19,6 +19,27 @@ body {
   &.open-modal {
     overflow: hidden;
   }
+
+  &:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 100;
+    background-color: rgba(#acabab, 0.8);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+  }
+
+  &.open-decor {
+    &:before {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
 }
 
 .wrapper {
@@ -122,11 +143,11 @@ body {
 
   & > *:not(:last-child) {
     padding-right: calc(var(--gap-dots) + 6px);
-    
+
     position: relative;
 
     &:before {
-      content:"";
+      content: "";
       position: absolute;
       right: 0;
       top: 50%;
