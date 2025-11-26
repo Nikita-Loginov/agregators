@@ -80,3 +80,92 @@
     }
   }
 }
+
+.special-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  width: 100%;
+  border-radius: var(--radius-4xl);
+  background-color: var(--white-color);
+  padding: 4px 4px 4px 16px;
+  justify-content: space-between;
+  border: 1px solid var(--gray-color-400);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s;
+
+  &__info,
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__info {
+    input {
+      background-color: transparent;
+      cursor: pointer;
+      font-size: var(--font-size-xs);
+      color: var(--dark-color-200);
+      transition: all .5s;
+
+      &::placeholder {
+        font-size: var(--font-size-xs);
+        color: var(--dark-color-500);
+      }
+    }
+  }
+
+  &:has(input:focus, input:active, input:hover) {
+    border-color: var(--gray-color-500);
+  }
+
+  &__errors {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-color-200);
+    border-radius: var(--radius-md);
+    padding: 4px 12px;
+    color: var(--white-color);
+    position: absolute;
+    bottom: calc(100% + 14px);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    &:before {
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 12px;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--dark-color-200);
+      clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    }
+  }
+
+  &.error {
+    border-color: var(--primary-color-500);
+
+    .special-input {
+      &__errors {
+        display: flex;
+      }
+
+      &__info {
+        input {
+          color: var(--primary-color-500);
+
+          &::placeholder {
+            color: var(--primary-color-500);
+          }
+        }
+      }
+    }
+  }
+}

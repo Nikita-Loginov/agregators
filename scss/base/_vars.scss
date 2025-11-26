@@ -26,6 +26,9 @@ html {
   --secondary-color-100: #636899;
   --secondary-color-200: #ededfa;
   --secondary-color-300: #474a6d;
+  --secondary-color-400: #2f3148;
+
+  --green-color-100: #26b539;
 
   --font-main: "Roboto", sans-serif;
 
@@ -60,9 +63,10 @@ html {
   --radius-xl: 16px;
   --radius-2xl: 20px;
   --radius-3xl: 24px;
+  --radius-4xl: 28px;
 
   --container-inline-padding: #{calculate-clamp(16px, 40px, 767px, 480px)};
-  --container-width: calc(1215px + var(--container-inline-padding));
+  --container-width: calc(1215px + calc(var(--container-inline-padding) * 2));
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1024px, 480px)};
 }

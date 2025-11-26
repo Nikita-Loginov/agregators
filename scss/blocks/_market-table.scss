@@ -1,0 +1,32 @@
+.market-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: auto;
+  border-radius: var(--radius-base);
+  overflow: hidden;
+  
+  background-color: var(--gray-color-100);
+
+  td {
+    width: calc(100 / 4);
+    padding: 10px 16px;
+  }
+
+  tr:nth-child(even):not(.market-table__head) {
+    background-color: var(--white-color);
+  }
+
+  &__head {
+    background-color: var(--gray-color-200);
+  }
+
+  &__price {
+    &.up {
+      color: var(--green-color-100);
+    }
+
+    &.down {
+        color: var( --primary-color-500);
+    }
+  }
+}

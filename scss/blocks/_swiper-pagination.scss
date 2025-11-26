@@ -31,3 +31,29 @@
     display: none;
   }
 }
+
+.swiper-pagination-progressbar {
+  width: 100%;
+  height: 10px;
+  overflow: hidden;
+  border-radius: 3px;
+  background-color: var(--white-color);
+  padding: 1px;
+  display: block;
+
+  .swiper-pagination-progressbar-fill {
+    height: 100%;
+    display: block;
+    background-color: var(--gray-color-400);
+    border-radius: 2px;
+    transform-origin: left;
+  }
+} 
+
+.swiper {
+  &:has(.swiper-pagination.swiper-pagination-progressbar) {
+   .swiper-wrapper {
+    margin-bottom: 8px;
+   }
+  }
+}

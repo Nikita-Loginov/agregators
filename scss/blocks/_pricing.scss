@@ -1,0 +1,28 @@
+.pricing {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 8px;
+  }
+
+  &__footer {
+    display: block;
+    min-width: 0;
+
+    .swiper {
+        min-width: 0;
+        width: 100%;
+    }
+  }
+}

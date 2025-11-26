@@ -7,4 +7,16 @@ export const SWIPERS = {
       spaceBetween: 16,
     },
   },
+  PRICING_CARD: {
+    selector: ".catalogy .swiper--price",
+    breakpoint: 122300000000,
+    options: {
+      slidesPerView: 5,
+      spaceBetween: 8,
+      pagination: {
+        el: ".catalogy .swiper--price .swiper-pagination",
+       type: 'progressbar'
+      },
+    },
+  },
 };

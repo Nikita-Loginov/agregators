@@ -1,5 +1,17 @@
 import { SWIPERS } from "./swiper/index.js";
 import { initSwiper } from "./modules/functions.js";
+import { initMoreBlocks, hideUnnecessaryButtons } from "./modules/moreContent.js";
+import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
+
+const swipers = [
+  {
+    ...SWIPERS.PRICING_CARD
+  }
+]
+
+const handleGlobalClick = (e) => {
+  initMoreBlocks(e);
+};
 
 const initImgsSwiperGoods = () => {
   const imgSwipers = document.querySelectorAll(".swiper--good-img");
@@ -30,6 +42,22 @@ const initImgsSwiperGoods = () => {
   });
 };
 
+
 document.addEventListener("DOMContentLoaded", () => {
   initImgsSwiperGoods();
+  hideUnnecessaryButtons();
+
+  swipers.forEach((config) => {
+    slidersConfig.push(config);
+  });
+
+  handleAllSliders();
+
+  document.addEventListener("click", handleGlobalClick);
+});
+
+let resizeTimeout;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimeout);
+  resizeTimeout = setTimeout(handleAllSliders, 100);
 });

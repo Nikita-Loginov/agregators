@@ -12,6 +12,10 @@
     gap: var(--gap-items);
   }
 
+  &__box {
+    justify-content: space-between;
+  }
+
   &__details {
     --gap-details: 24px;
 

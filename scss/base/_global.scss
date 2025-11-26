@@ -30,6 +30,15 @@ body {
 .main {
   flex: 1;
   padding-top: calc(var(--header-height, 140px) + 20px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-blocks);
+
+  section {
+    &:last-child {
+      margin-bottom: var(--gap-blocks);
+    }
+  }
 }
 
 .container {
@@ -128,5 +137,11 @@ body {
       background-color: var(--secondary-color-300);
       border-radius: 50%;
     }
+  }
+}
+
+[data-block="more-btn"].more {
+  .icon {
+    rotate: -180deg;
   }
 }
