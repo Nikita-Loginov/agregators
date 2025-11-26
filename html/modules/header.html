@@ -1,11 +1,13 @@
-<header class="header">
+@@include('../sprites/sptite.html') @@include('../sprites/languages.html')
+
+<header class="header header-scroll">
   <div class="header-top">
     <div class="container">
       <div class="header-top__inner">
         <div class="header-top__info">
           <button
             class="button button--mini button--noBg button--grayBorder text-uppercase modal-open"
-            data-modal="langModal"
+            data-modal="languagesModal"
             aria-label="Открыть модальное окно с выбором языка"
           >
             <div class="button__block">
@@ -23,7 +25,7 @@
 
           <button
             class="button button--mini button--noBg button--grayBorder text-uppercase modal-open"
-            data-modal="currencyModal"
+            data-modal="currenciesModal"
             aria-label="Открыть модальное окно с выбором валюты"
           >
             <div class="button__block">

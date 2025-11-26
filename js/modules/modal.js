@@ -87,7 +87,8 @@ const setVideoSrc = (src, modalBlock) => {
   blockVideo.insertAdjacentHTML("beforeend", html);
 };
 
-function closeModal(e) {
+const closeModal = (e) => {
+
   if (
     e.target.classList.contains("modalBlock") ||
     e.target.closest(".modal-close")
@@ -101,7 +102,7 @@ function closeModal(e) {
   }
 }
 
-const checkStartOpen = () => {
+export const checkStartOpen = () => {
   const modals = document.querySelectorAll(".modalBlock");
 
   modals.forEach((modal) => {
@@ -109,6 +110,7 @@ const checkStartOpen = () => {
       modal.classList.contains("open") ||
       modal.classList.contains("openFinish")
     ) {
+      
       document.body.classList.add("open-modal");
       document.documentElement.classList.add("open-modal");
 
@@ -120,7 +122,6 @@ const checkStartOpen = () => {
 };
 
 export function initModal(e) {
-  checkStartOpen();
   openModal(e);
   closeModal(e);
 }

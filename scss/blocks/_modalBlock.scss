@@ -1,0 +1,141 @@
+.modalBlock {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: rgba(var(--dark-color-100-rgb), 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: all 0.5s;
+  opacity: 0;
+  visibility: hidden;
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
+
+    .modalBlock {
+      &__inner {
+        transform: translate(0);
+      }
+    }
+  }
+
+  &__inner {
+    max-width: 985px;
+    width: 100%;
+    margin: 0 auto;
+    height: fit-content;
+    margin: auto 0;
+    transform: translateY(-400%);
+    transition: all 0.5s;
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: var(--radius-md);
+  }
+
+  &__head {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    z-index: 2;
+  }
+
+  &__close {
+    background-color: transparent;
+
+    * {
+      pointer-events: none;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+
+      svg,
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  &__content,
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__btn {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 2px 8px;
+    min-height: 32px;
+    border-radius: var(--radius-sm);
+    transition: all 0.5s;
+    width: fit-content;
+
+    &:hover {
+      background-color: var(--gray-color-200);
+    }
+
+    &.active,
+    &:active {
+      background-color: var(--secondary-color-200);
+    }
+
+    .icon {
+      width: 28px;
+      height: 28px;
+
+      img,
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.languagesModal {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+    gap: 8px 28px;
+  }
+}
+
+.currenciesModal {
+  .modalBlock {
+    &__inner {
+      max-width: 233px;
+    }
+
+    &__btn-text {
+      color: var(--dark-color-600);
+      transition: all .5s;
+    }
+
+    &__btn {
+      &.active,
+      &:active {
+        .modalBlock__btn-text {
+          color: var(--dark-color-400);
+        }
+      }
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 8px;
+  }
+}
