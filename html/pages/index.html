@@ -3,8 +3,6 @@
   @@include('../modules/head.html', { "title" : "Главная", "links" :
   ["./css/page.css", "./css/main.css", "./css/lib/swiper.min.css"] })
   <body>
- 
-
     <div class="wrapper">
       @@include('../modules/header.html')
 
@@ -12,7 +10,7 @@
         <section class="catalogy" data-block="grid-relative" data-grid="list">
           <div class="container">
             <div class="catalogy__inner">
-              <div class="filter">
+              <!-- <div class="filter">
                 <div class="filter__box">
                   <div class="filter__items">
                     <div class="filter__item">
@@ -286,7 +284,7 @@
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <header class="catalogy__header">
                 <div class="breadcrumbs">
@@ -462,6 +460,7 @@
                                         <img
                                           src="/img/goods/one.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -481,6 +480,7 @@
                                         <img
                                           src="/img/goods/one.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -690,6 +690,7 @@
                                         <img
                                           src="/img/goods/two.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -709,6 +710,7 @@
                                         <img
                                           src="/img/goods/two.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -728,6 +730,7 @@
                                         <img
                                           src="/img/goods/two.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -924,6 +927,7 @@
                                         <img
                                           src="/img/goods/three.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1121,6 +1125,7 @@
                                         <img
                                           src="/img/goods/four.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1140,6 +1145,7 @@
                                         <img
                                           src="/img/goods/four.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1349,6 +1355,7 @@
                                         <img
                                           src="/img/goods/one.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1368,6 +1375,7 @@
                                         <img
                                           src="/img/goods/one.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1577,6 +1585,7 @@
                                         <img
                                           src="/img/goods/two.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1596,6 +1605,7 @@
                                         <img
                                           src="/img/goods/two.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1615,6 +1625,7 @@
                                         <img
                                           src="/img/goods/two.webp"
                                           alt="фотография Apartment"
+                                          loading="lazy"
                                         />
                                       </picture>
                                     </div>
@@ -1798,6 +1809,13 @@
                           <div class="banner-promo__img">
                             <picture>
                               <source
+                                media="(max-width: 767px)"
+                                srcset="
+                                  /img/banner/one-media.webp   1x,
+                                  /img/banner/one-media2x.webp 2x
+                                "
+                              />
+                              <source
                                 srcset="
                                   /img/banner/one.webp   1x,
                                   /img/banner/one2x.webp 2x
@@ -1806,6 +1824,7 @@
                               <img
                                 src="/img/banner/one.webp"
                                 alt="фотография баннера"
+                                loading="lazy"
                               />
                             </picture>
                           </div>
@@ -1843,23 +1862,34 @@
                             <p class="h5 semibold-font">from 590,000 AED</p>
 
                             <div class="banner-promo__footer">
-                              <div class="banner-promo__items">
-                                <div class="card-text">
-                                  <p class="p2 medium-font">Q3 2027</p>
+                              <div class="banner-promo__footer-content">
+                                <div class="banner-promo__items">
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">Q3 2027</p>
 
-                                  <p class="p4">Handover</p>
+                                    <p class="p4">Handover</p>
+                                  </div>
+
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">
+                                      Studio, 1-4 beds
+                                    </p>
+
+                                    <p class="p4">Apartments</p>
+                                  </div>
+
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">20/30/50</p>
+
+                                    <p class="p4">Payment plan</p>
+                                  </div>
                                 </div>
 
-                                <div class="card-text">
-                                  <p class="p2 medium-font">Studio, 1-4 beds</p>
-
-                                  <p class="p4">Apartments</p>
-                                </div>
-
-                                <div class="card-text">
-                                  <p class="p2 medium-font">20/30/50</p>
-
-                                  <p class="p4">Payment plan</p>
+                                <div class="banner-promo__logo">
+                                  <img
+                                    src="/img/seller/sellertwo.png"
+                                    alt="логотип селера"
+                                  />
                                 </div>
                               </div>
 
@@ -2037,6 +2067,53 @@
 
                   <div class="catalogy__map">
                     <p class="h4">Тутс будет карта</p>
+                  </div>
+
+                  <div class="banner-news">
+                    <header class="banner-news__header">
+                      <p class="h6">Subscribe to our newsletter</p>
+
+                      <div class="textbox">
+                        <p class="p2">
+                          You'll receive one email per week with exclusive
+                          offers and insights from our experts.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="banner-news__content">
+                      <div class="banner-news__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/banner-news/one.webp   1x,
+                              /img/banner-news/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/banner-news/one.webp"
+                            alt="фотография"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <footer class="banner-news__footer">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Contact Seller"
+                        title="Contact Seller"
+                        class="button button--big button--red button--bg-rad"
+                      >
+                        <span>Subscribe</span>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </footer>
                   </div>
 
                   <div class="quick">
@@ -2505,7 +2582,19 @@
                         </div>
                       </div>
 
-                      <div class="catalogy-content__item">
+                      <button class="button modal-open button--blueviolet catalogy-content__market-btn" data-modal="marketModal" type="button">
+                        <span>Show detailed market insights</span>
+
+                        <span class="icon" style="rotate: -45deg;">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <div
+                        class="catalogy-content__item catalogy-content__market"
+                      >
                         <h2 class="h6">Detailed Market Insights</h2>
 
                         <table class="market-table">
@@ -2689,6 +2778,7 @@
                                 <img
                                   src="/img/goods/one2x.webp"
                                   alt="фотография здания"
+                                  loading="lazy"
                                 />
                               </picture>
                             </div>
@@ -3157,6 +3247,8 @@
       </main>
 
       @@include('../modules/footer.html')
+
+      @@include('../modals/market.html')
     </div>
 
     <script src="/js/lib/swiper.min.js"></script>

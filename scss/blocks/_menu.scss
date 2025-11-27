@@ -25,6 +25,11 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+
+    @media(max-width:359px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__item-big {
@@ -105,16 +110,17 @@
 
     &__content {
       position: fixed;
-      z-index: -1;
+      z-index: 100;
       inset:0;
+      top: var(--header-height, 80px);
       left: auto;
       max-width: fit-content;
       width: 100%;
       background-color: var(--white-color);
-      padding: calc(var(--header-height, 80px) + 16px) var(--container-inline-padding) 20px;
+      padding: 16px var(--container-inline-padding) 20px;
       overflow-x: hidden;
       overflow-y: auto;
-      max-height: calc(100dvh);
+      max-height: calc(100dvh - var(--header-height, 80px));
       transform: translateX(100%);
       transition: all 0.5s;
     }

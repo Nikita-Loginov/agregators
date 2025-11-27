@@ -64,4 +64,10 @@
       background-color: var(--gray-color-200);
     }
   }
+
+  @media(max-width:479px) {
+    &__toggle {
+      justify-content: space-between;
+    }
+  }
 }

@@ -24,6 +24,7 @@ body {
     content: "";
     position: absolute;
     inset: 0;
+    top: var(--header-height, 80px);
     z-index: 100;
     background-color: rgba(#acabab, 0.8);
     backdrop-filter: blur(10px);
@@ -50,7 +51,7 @@ body {
 
 .main {
   flex: 1;
-  padding-top: calc(var(--header-height, 140px) + 20px);
+  padding-top: calc(var(--header-height, 140px) + #{calculate-clamp(16px, 20px, 1023px, 480px)});
   display: flex;
   flex-direction: column;
   gap: var(--gap-blocks);

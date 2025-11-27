@@ -1,16 +1,22 @@
+@mixin bg-item {
+  background-color: var(--gray-color-100);
+  padding: 12px;
+  border-radius: var(--radius-md);
+}
+
 .footer {
   --grid-template-columns: 32% auto;
-  --gap-inner: 32px;
+  --gap-inner: #{calculate-clamp(24px, 32px, 1024px, 480px)};
 
   display: flex;
   flex-direction: column;
-  gap: 48px;
+  gap: calculate-clamp(24px, 48px, 1023px, 480px);
   background-color: var(--gray-color-200);
 
   &__lists {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(8px, 32px, 1023px, 480px);
   }
 
   &__list-box {
@@ -23,7 +29,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px 24px;
+    gap: 8px calculate-clamp(8px, 24px, 1023px, 480px);
   }
 
   &__item {
@@ -42,10 +48,16 @@
       }
     }
   }
+
+  @media (max-width: 1023px) {
+    &__list-box {
+      @include bg-item;
+    }
+  }
 }
 
 .footer-top {
-  padding-top: 48px;
+  padding-top: calculate-clamp(24px, 48px, 1023px, 480px);
 
   &__inner {
     display: grid;
@@ -72,6 +84,52 @@
     flex-direction: column;
     gap: 10px;
   }
+
+  &__detail {
+    .social {
+      display: none;
+    }
+  }
+
+  &__copy {
+    display: none;
+  }
+
+  @media (max-width: 1023px) {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__content {
+      display: contents;
+    }
+
+    &__form {
+      order: 1000;
+      @include bg-item;
+    }
+
+    &__detail {
+      gap: 24px;
+      align-items: center;
+
+      .social {
+        display: flex;
+      }
+
+      .footer__copy {
+        display: none;
+      }
+    }
+
+    &__copy {
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      order: 100000;
+    }
+  }
 }
 
 .footer-bottom {
@@ -82,5 +140,20 @@
     gap: var(--gap-inner);
     grid-template-columns: var(--grid-template-columns);
     padding: 8px 0;
+  }
+
+  @media (max-width: 1023px) {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer__list {
+      justify-content: center;
+    }
+
+    .social {
+      display: none;
+    }
   }
 }

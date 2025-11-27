@@ -35,6 +35,8 @@
     border-radius: var(--radius-md);
     padding: 12px var(--padding-inline);
     transition: all 0.5s;
+    text-align: left;
+    color: var(--dark-color-200);
 
     .icon {
       width: 24px;

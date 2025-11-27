@@ -9,8 +9,8 @@
     gap: 8px;
 
     .icon {
-      width: 24px;
-      height: 24px;
+      width: calculate-clamp(20px, 24px, 1024px, 767px);
+      height: calculate-clamp(20px, 24px, 1024px, 767px);
 
       img,
       svg {

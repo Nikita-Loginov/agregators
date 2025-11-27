@@ -4,16 +4,35 @@
   width: auto;
   border-radius: var(--radius-base);
   overflow: hidden;
-  
+  width: 100%;
+
   background-color: var(--gray-color-100);
 
   td {
-    width: calc(100 / 4);
+    width: calc(100% / 4);
     padding: 10px 16px;
   }
 
-  tr:nth-child(even):not(.market-table__head) {
-    background-color: var(--white-color);
+  &--two-grid {
+    td {
+      width: calc(100% / 2);
+    }
+  }
+
+  &:not(&--noHead) {
+    tr:nth-child(even):not(.market-table__head) {
+      background-color: var(--white-color);
+    }
+  }
+
+  &--noHead {
+    tr:nth-child(odd) {
+      background-color: var(--white-color);
+    }
+
+    tr:nth-child(even) {
+      background-color: var(--gray-color-100);
+    }
   }
 
   &__head {
@@ -26,7 +45,7 @@
     }
 
     &.down {
-        color: var( --primary-color-500);
+      color: var(--primary-color-500);
     }
   }
 }

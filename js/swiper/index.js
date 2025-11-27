@@ -11,11 +11,24 @@ export const SWIPERS = {
     selector: ".catalogy .swiper--price",
     breakpoint: 122300000000,
     options: {
-      slidesPerView: 5,
+      slidesPerView: 1,
       spaceBetween: 8,
       pagination: {
         el: ".catalogy .swiper--price .swiper-pagination",
-       type: 'progressbar'
+        type: "progressbar",
+      },
+      breakpoints: {
+        1280: {
+          slidesPerView: 5,
+        },
+
+        767: {
+          slidesPerView: 4,
+        },
+
+        360: {
+          slidesPerView: 2,
+        }
       },
     },
   },

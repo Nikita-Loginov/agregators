@@ -12,7 +12,6 @@
     .input-box {
       max-width: 65px;
       width: 100%;
-     
 
       &__info {
         padding: 6px 12px;
@@ -22,6 +21,20 @@
       &__content {
         width: 100%;
       }
+    }
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+
+    &__details {
+      display: none;
+    }
+
+    .button--circle {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-base);
     }
   }
 }
@@ -35,7 +48,29 @@
   &__list {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: calculate-clamp(4px, 8px, 1024px, 767px);
+  }
+
+  @media (max-width: 767px) {
+    width: 100%;
+    justify-content: space-between;
+
+    &__list {
+      .pagination-box__link {
+        &:not(:nth-child(-n + 3)):not(:nth-last-child(-n + 2)) {
+          display: none;
+        }
+      }
+
+      .button--cub {
+        width: 36px;
+        height: 36px;
+        border-radius: var(--radius-base);
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    gap: 6px;
   }
 }
-
