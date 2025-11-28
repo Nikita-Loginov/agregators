@@ -2942,6 +2942,23 @@ body.open-decor:before {
             order: 100000;
   }
 }
+@media (max-width: 600px) {
+  .footer-top .footer__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-top .footer__list .link.medium-font {
+    font-weight: var(--weight-font-main);
+  }
+  .footer-top__form {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer-top__inputs {
+    width: 100%;
+  }
+}
 
 .footer-bottom {
   background-color: var(--white-color);

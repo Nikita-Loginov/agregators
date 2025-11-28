@@ -130,6 +130,27 @@
       order: 100000;
     }
   }
+
+  @media (max-width: 600px) {
+    .footer__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .link {
+        &.medium-font {
+          font-weight: var(--weight-font-main);
+        }
+      }
+    }
+
+    &__form {
+      align-items: center;
+    }
+
+    &__inputs {
+      width: 100%;
+    }
+  }
 }
 
 .footer-bottom {
