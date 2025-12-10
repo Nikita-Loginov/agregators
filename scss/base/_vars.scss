@@ -30,6 +30,14 @@ html {
   --secondary-color-400: #2f3148;
 
   --green-color-100: #26b539;
+  --green-color-200: #20808d1a;
+  --green-color-300: #1ab7cc52;
+
+  --yellow-color-100: #fbbc0426;
+  --yellow-color-200: #d9775733;
+
+  --blue-color-100: #4d6bfe33;
+  --blue-color-200: rgba(77, 107, 254, 0.7);
 
   --font-main: "Roboto", sans-serif;
 
@@ -42,6 +50,7 @@ html {
   --font-size-2xs: 14px;
   --font-size-xs: #{calculate-clamp(14px, 16px, 1023px, 480px)};
   --font-size-sm: #{calculate-clamp(16px, 18px, 1023px, 480px)};
+  --font-size-base2: #{calculate-clamp(20px, 22px, 1023px, 480px)};
   --font-size-base: #{calculate-clamp(18px, 24px, 1023px, 480px)};
   --font-size-md: #{calculate-clamp(20px, 28px, 1023px, 480px)};
   --font-size-lg: #{calculate-clamp(22px, 30px, 1023px, 480px)};
@@ -65,9 +74,13 @@ html {
   --radius-2xl: 20px;
   --radius-3xl: 24px;
   --radius-4xl: 28px;
+  --radius-5xl: 32px;
 
   --container-inline-padding: #{calculate-clamp(16px, 40px, 1024px, 767px)};
   --container-width: calc(1215px + calc(var(--container-inline-padding) * 2));
+  --container-width-second: calc(
+    800px + calc(var(--container-inline-padding) * 2)
+  );
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1024px, 480px)};
 }

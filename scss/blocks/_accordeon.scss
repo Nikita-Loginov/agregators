@@ -8,12 +8,22 @@
   &__item {
     overflow: hidden;
 
+    &:hover {
+      .accordeon {
+        &__question {
+          background-color: var(--gray-color-300);
+        }
+      }
+    }
+
     &.active {
       .accordeon {
         &__question {
+          background-color: var(--secondary-color-300);
+          color: var(--white-color);
+
           .icon {
             rotate: -180deg;
-            background-color: var(--dark-color-200);
             color: var(--white-color);
           }
         }

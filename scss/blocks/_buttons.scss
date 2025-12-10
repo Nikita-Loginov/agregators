@@ -6,7 +6,7 @@
   border-radius: var(--radius-md);
   min-height: 40px;
   padding: 10px 12px;
-  transition: all 0.5s;
+  transition: all 0.3s;
   cursor: pointer;
 
   .icon {
@@ -31,6 +31,18 @@
     min-height: 24px;
     font-size: var(--font-size-2xs);
     padding: 2px 8px;
+  }
+
+  &--xl {
+    padding: 10px 32px;
+    min-height: 52px;
+    font-weight: var(--weight-font-lg);
+    border-radius: var(--radius-3xl);
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &--big {
@@ -61,13 +73,53 @@
     }
   }
 
+  &--gray-second {
+    background-color: var(--gray-color-500);
+    color: var(--dark-color-200);
+
+    &:hover,
+    &:active {
+      background-color: var(--dark-color-600);
+    }
+  }
+
+  &--yellow {
+    background-color: var(--yellow-color-100);
+    color: var(--dark-color-200);
+
+    &:hover,
+    &:active {
+      background-color: var(--yellow-color-200);
+    }
+  }
+
+  &--yellow-second {
+    background-color: var(--yellow-color-200);
+    color: var(--dark-color-200);
+
+    &:hover,
+    &:active {
+      background-color: var(--yellow-color-100);
+    }
+  }
+
+  &--blue {
+    background-color: var(--blue-color-100);
+    color: var(--dark-color-200);
+
+    &:hover,
+    &:active {
+      background-color: var(--blue-color-200);
+    }
+  }
+
   &--red {
     background-color: var(--primary-color-600);
     color: var(--white-color);
     border: 1px solid var(--primary-color-100);
 
     &:hover {
-      background-color: var(--primary-color-600);
+      background-color: var(--primary-color-500);
       color: var(--white-color);
     }
 
@@ -110,6 +162,26 @@
     &:hover,
     &:active {
       background-color: var(--secondary-color-300);
+    }
+  }
+
+  &--dark-second {
+    background-color: var(--dark-color-800);
+    color: var(--dark-color-200);
+
+    &:hover,
+    &:active {
+      background-color: var(--dark-color-700);
+    }
+  }
+
+  &--green {
+    background-color: var(--green-color-200);
+    color: var(--dark-color-200);
+
+    &:hover,
+    &:active {
+      background-color: var(--green-color-300);
     }
   }
 

@@ -61,6 +61,16 @@ h6 {
   }
 }
 
+.h6-add{
+  font-weight: var(--weight-font-md);
+  font-size: var(--font-size-base2);
+  line-height: var(--line-height-loose);
+
+  @media (max-width: 767px) {
+    line-height: var(--line-height-relaxed);
+  }
+}
+
 .p1 {
   font-size: var(--font-size-sm);
   line-height: var(--line-height-looser);
@@ -99,4 +109,8 @@ h6 {
 
 .text-secondary-100 {
   color: var(--secondary-color-100);
+}
+
+.accent-color {
+  color: var(--primary-color-100);
 }

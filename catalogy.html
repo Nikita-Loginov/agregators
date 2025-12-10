@@ -5,16 +5,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow">
-  <title>Шаблон</title>
+  <title>Каталог</title>
 
   <link rel="stylesheet" href="/css/page.css">
   
   
-  <link rel="stylesheet" href="" />
+  <link rel="stylesheet" href="./css/catalogy.css" />
+  
+  <link rel="stylesheet" href="./css/lib/swiper.min.css" />
   
 </head>
 
-  <body>    
+  <body>
     <div class="wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <symbol id="lang-icon" viewBox="0 0 17 17">
@@ -2031,7 +2033,3245 @@
 </header>
 
 
-      <main class="main"></main>
+      <main class="main">
+        <section class="catalogy" data-block="grid-relative" data-grid="list">
+          <div class="container">
+            <div class="catalogy__inner">
+              <!-- <div class="filter">
+                <div class="filter__box">
+                  <div class="filter__items">
+                    <div class="filter__item">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#search-icon"></use>
+                              </svg>
+                            </span>
+
+                            <input
+                              type="search"
+                              placeholder="Enter location"
+                              name="search"
+                            />
+                          </div>
+                        </label>
+
+                        <p class="input-box__errors p4">dsljfhdsl</p>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Some 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 3</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 4</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Some 5</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter__items scroll-max">
+                    <div class="filter__item">
+                      <div class="checkbox-box">
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" checked name="category" />
+
+                            <span class="p2">All</span>
+                          </div>
+                        </label>
+
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" name="category" />
+
+                            <span class="p2">Ready</span>
+                          </div>
+                        </label>
+
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" name="category" />
+
+                            <span class="p2">Off-Plan</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Type 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Type 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Type 3</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Beds & Baths 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Beds & Baths 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Beds & Baths 3</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--select input-box">
+                        <button
+                          class="dropdown__toggle input-box__info"
+                          type="button"
+                        >
+                          <p class="dropdown__active p2"></p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="dropdown__content">
+                          <ul class="dropdown__list">
+                            <li class="dropdown__link">
+                              <span
+                                class="dropdown__item active dropdown-item-close"
+                              >
+                                <span class="p2">Price 1</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Price 2</span>
+                              </span>
+                            </li>
+
+                            <li class="dropdown__link">
+                              <span class="dropdown__item dropdown-item-close">
+                                <span class="p2">Price 3</span>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <button class="button button--gray button--big">
+                        More filters
+                      </button>
+                    </div>
+
+                    <div class="filter__item">
+                      <button class="button button--red button--big">
+                        More filters
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="filter__details">
+                  <div class="filter__details-block">
+                    <button
+                      type="button"
+                      aria-label="Saved searches"
+                      class="button button--noBg button--noMassa p3 medium-font"
+                    >
+                      Saved searches
+                    </button>
+
+                    <button
+                      type="button"
+                      aria-label="Save search"
+                      class="button button--noBg button--noMassa p3 medium-font"
+                    >
+                      Save search
+                    </button>
+                  </div>
+
+                  <div class="filter__details-block">
+                    <button
+                      type="button"
+                      aria-label="Clear filters"
+                      class="button button--noBg button--noMassa p3 medium-font"
+                    >
+                      Clear filters
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+
+              <header class="catalogy__header">
+                <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__link">
+                      <a
+                        href="#"
+                        aria-label="Вернуться на Home"
+                        title="Home"
+                        class="breadcrumbs__item link active active-noColor active-line"
+                        >Home</a
+                      >
+                    </li>
+
+                    <li class="breadcrumbs__link">
+                      <span class="breadcrumbs__item"
+                        >Property for sale in Abu-Dhabi</span
+                      >
+                    </li>
+                  </ul>
+
+                  <a
+                    href="#"
+                    aria-label="Вернуться на Home"
+                    title="Home"
+                    class="breadcrumbs__media"
+                  >
+                    <span class="breadcrumbs__circle">
+                      <div class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-circle-icon"></use>
+                        </svg>
+                      </div>
+                    </span>
+
+                    <span>Home</span>
+                  </a>
+                </div>
+
+                <div class="catalogy__header-content">
+                  <h1 class="h2">Property for sale in Abu-Dhabi</h1>
+                </div>
+              </header>
+
+              <div class="catalogy__blocks">
+                <div class="catalogy__block">
+                  <div class="catalogy__filters-block">
+                    <div class="catalogy__top">
+                      <div class="catalogy__filters">
+                        <div class="dropdown dropdown--select input-box">
+                          <button
+                            class="dropdown__toggle input-box__info"
+                            type="button"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#filter-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="dropdown__active p2"></p>
+
+                            <span class="icon arrow">
+                              <svg>
+                                <use xlink:href="#arrow-bottom-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <div class="dropdown__content">
+                            <ul class="dropdown__list">
+                              <li class="dropdown__link">
+                                <span
+                                  class="dropdown__item active dropdown-item-close"
+                                >
+                                  <span class="p2">Popular 1</span>
+                                </span>
+                              </li>
+
+                              <li class="dropdown__link">
+                                <span
+                                  class="dropdown__item dropdown-item-close"
+                                >
+                                  <span class="p2">Popular 2</span>
+                                </span>
+                              </li>
+
+                              <li class="dropdown__link">
+                                <span
+                                  class="dropdown__item dropdown-item-close"
+                                >
+                                  <span class="p2">Popular 3</span>
+                                </span>
+                              </li>
+
+                              <li class="dropdown__link">
+                                <span
+                                  class="dropdown__item dropdown-item-close"
+                                >
+                                  <span class="p2">Popular 4</span>
+                                </span>
+                              </li>
+
+                              <li class="dropdown__link">
+                                <span
+                                  class="dropdown__item dropdown-item-close"
+                                >
+                                  <span class="p2">Popular 5</span>
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="checkbox-box">
+                          <label class="check">
+                            <div class="check__info">
+                              <input
+                                type="radio"
+                                checked
+                                name="grid"
+                                data-check="list"
+                                data-block="grid-check"
+                              />
+
+                              <span class="p2">List</span>
+                            </div>
+                          </label>
+
+                          <label class="check">
+                            <div class="check__info">
+                              <input
+                                type="radio"
+                                name="grid"
+                                data-check="tiles"
+                                data-block="grid-check"
+                              />
+
+                              <span class="p2">Tiles</span>
+                            </div>
+                          </label>
+
+                          <label class="check">
+                            <div class="check__info">
+                              <input
+                                type="radio"
+                                name="grid"
+                                data-check="map"
+                                data-block="grid-check"
+                              />
+
+                              <span class="p2">Map</span>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="catalogy__items-blocks">
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/one.webp   1x,
+                                            /img/goods/one2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/one.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/one.webp   1x,
+                                            /img/goods/one2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/one.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="arrows-swiper arrows-swiper--absolute"
+                              >
+                                <button
+                                  class="button button--white button--circle arrow-swiper prev"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  class="button button--white button--circle arrow-swiper next"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div
+                                class="swiper-pagination swiper-pagination--absolute"
+                              ></div>
+                            </div>
+
+                            <div class="good-item__decor">
+                              <div class="badge badge--blue">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#shield-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="badge__content">
+                                  <p class="p4 medium-font">CompleteTrust</p>
+                                </div>
+                              </div>
+
+                              <div class="badge">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#checks-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font">Apartment</p>
+                              </div>
+
+                              <p class="p2 text-secondary-100 medium-font">
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">1 floor</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">Q2 2026</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+                                  aria-label="Написать сообщение на почту"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#email-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <span class="p3">Contact Seller</span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#heart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#chart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/two.webp   1x,
+                                            /img/goods/two2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/two.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/two.webp   1x,
+                                            /img/goods/two2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/two.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/two.webp   1x,
+                                            /img/goods/two2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/two.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="arrows-swiper arrows-swiper--absolute"
+                              >
+                                <button
+                                  class="button button--white button--circle arrow-swiper prev"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  class="button button--white button--circle arrow-swiper next"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div
+                                class="swiper-pagination swiper-pagination--absolute"
+                              ></div>
+                            </div>
+
+                            <div class="good-item__decor">
+                              <div class="badge badge--blue">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#shield-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="badge__content">
+                                  <p class="p4 medium-font">CompleteTrust</p>
+                                </div>
+                              </div>
+
+                              <div class="badge">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#checks-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <p class="p1 text-secondary-100 semibold-font">
+                                SkyHills Astra in Al Barsha, Dubai, UAE № 574705
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">Q2 2026</p>
+                                </div>
+
+                                <div class="tag">
+                                  <p class="p2">
+                                    Studio
+                                    <span class="medium-font"
+                                      >from 535,300 AED</span
+                                    >
+                                  </p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#train-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="text-dots">
+                                    <p class="p3">
+                                      <span>Mall of the Emirates</span>
+
+                                      <span class="medium-font">700 m</span>
+                                    </p>
+
+                                    <p class="p3">
+                                      <span>Dubai Internet City</span>
+
+                                      <span class="medium-font">1 200 m</span>
+                                    </p>
+
+                                    <p class="p3">
+                                      <span>Al Khail (formerly Nakheel)</span>
+
+                                      <span class="medium-font">9 000 m</span>
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+                                  aria-label="Написать сообщение на почту"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#email-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <span class="p3">Contact Seller</span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#heart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#chart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/three.webp   1x,
+                                            /img/goods/three2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/three.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="arrows-swiper arrows-swiper--absolute"
+                              >
+                                <button
+                                  class="button button--white button--circle arrow-swiper prev"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  class="button button--white button--circle arrow-swiper next"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div
+                                class="swiper-pagination swiper-pagination--absolute"
+                              ></div>
+                            </div>
+
+                            <div class="good-item__decor">
+                              <div class="badge" style="margin-left: auto">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#checks-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font">Apartment</p>
+                              </div>
+
+                              <p class="p2 text-secondary-100 medium-font">
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">1 floor</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">Q2 2026</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+                                  aria-label="Написать сообщение на почту"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#email-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <span class="p3">Contact Seller</span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#heart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#chart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/four.webp   1x,
+                                            /img/goods/four2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/four.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/four.webp   1x,
+                                            /img/goods/four2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/four.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="arrows-swiper arrows-swiper--absolute"
+                              >
+                                <button
+                                  class="button button--white button--circle arrow-swiper prev"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  class="button button--white button--circle arrow-swiper next"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div
+                                class="swiper-pagination swiper-pagination--absolute"
+                              ></div>
+                            </div>
+
+                            <div class="good-item__decor">
+                              <div class="badge badge--blue">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#shield-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="badge__content">
+                                  <p class="p4 medium-font">CompleteTrust</p>
+                                </div>
+                              </div>
+
+                              <div class="badge">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#checks-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font">Apartment</p>
+                              </div>
+
+                              <p class="p2 text-secondary-100 medium-font">
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">1 floor</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">Q2 2026</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+                                  aria-label="Написать сообщение на почту"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#email-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <span class="p3">Contact Seller</span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#heart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#chart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/one.webp   1x,
+                                            /img/goods/one2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/one.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/one.webp   1x,
+                                            /img/goods/one2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/one.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="arrows-swiper arrows-swiper--absolute"
+                              >
+                                <button
+                                  class="button button--white button--circle arrow-swiper prev"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  class="button button--white button--circle arrow-swiper next"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div
+                                class="swiper-pagination swiper-pagination--absolute"
+                              ></div>
+                            </div>
+
+                            <div class="good-item__decor">
+                              <div class="badge badge--blue">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#shield-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="badge__content">
+                                  <p class="p4 medium-font">CompleteTrust</p>
+                                </div>
+                              </div>
+
+                              <div class="badge">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#checks-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font">Apartment</p>
+                              </div>
+
+                              <p class="p2 text-secondary-100 medium-font">
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">1 floor</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">Q2 2026</p>
+                                </div>
+
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+                                  aria-label="Написать сообщение на почту"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#email-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <span class="p3">Contact Seller</span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#heart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#chart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/two.webp   1x,
+                                            /img/goods/two2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/two.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/two.webp   1x,
+                                            /img/goods/two2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/two.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="swiper-slide">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__img">
+                                      <picture>
+                                        <source
+                                          srcset="
+                                            /img/goods/two.webp   1x,
+                                            /img/goods/two2x.webp 2x
+                                          "
+                                        />
+                                        <img
+                                          src="/img/goods/two.webp"
+                                          alt="фотография Apartment"
+                                          loading="lazy"
+                                        />
+                                      </picture>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="arrows-swiper arrows-swiper--absolute"
+                              >
+                                <button
+                                  class="button button--white button--circle arrow-swiper prev"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  class="button button--white button--circle arrow-swiper next"
+                                  type="button"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div
+                                class="swiper-pagination swiper-pagination--absolute"
+                              ></div>
+                            </div>
+
+                            <div class="good-item__decor">
+                              <div class="badge badge--blue">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#shield-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="badge__content">
+                                  <p class="p4 medium-font">CompleteTrust</p>
+                                </div>
+                              </div>
+
+                              <div class="badge">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#checks-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <p class="p1 text-secondary-100 semibold-font">
+                                SkyHills Astra in Al Barsha, Dubai, UAE № 574705
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">Q2 2026</p>
+                                </div>
+
+                                <div class="tag">
+                                  <p class="p2">
+                                    Studio
+                                    <span class="medium-font"
+                                      >from 535,300 AED</span
+                                    >
+                                  </p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p2">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+
+                                <li class="list-icon__link">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#train-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="text-dots">
+                                    <p class="p3">
+                                      <span>Mall of the Emirates</span>
+
+                                      <span class="medium-font">700 m</span>
+                                    </p>
+
+                                    <p class="p3">
+                                      <span>Dubai Internet City</span>
+
+                                      <span class="medium-font">1 200 m</span>
+                                    </p>
+
+                                    <p class="p3">
+                                      <span>Al Khail (formerly Nakheel)</span>
+
+                                      <span class="medium-font">9 000 m</span>
+                                    </p>
+                                  </div>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+                                  aria-label="Написать сообщение на почту"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#email-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <span class="p3">Contact Seller</span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#heart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+
+                                <button
+                                  aria-label="Добавить в избранное"
+                                  class="button button--gray"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#chart-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="banner-promo">
+                          <div class="banner-promo__img">
+                            <picture>
+                              <source
+                                media="(max-width: 767px)"
+                                srcset="
+                                  /img/banner/one-media.webp   1x,
+                                  /img/banner/one-media2x.webp 2x
+                                "
+                              />
+                              <source
+                                srcset="
+                                  /img/banner/one.webp   1x,
+                                  /img/banner/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/banner/one.webp"
+                                alt="фотография баннера"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="banner-promo__content">
+                            <header class="banner-promo__header">
+                              <div class="banner-promo__block">
+                                <p class="h2">Urban Horizon</p>
+
+                                <ul class="list-icon">
+                                  <li class="list-icon__link">
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#geo-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p2">
+                                      Mohammed Bin Rashid City, Dubai
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <div class="banner-promo__block">
+                                <div class="banner-promo__logo">
+                                  <img
+                                    src="/img/seller/sellertwo.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </div>
+                            </header>
+
+                            <p class="h5 semibold-font">from 590,000 AED</p>
+
+                            <div class="banner-promo__footer">
+                              <div class="banner-promo__footer-content">
+                                <div class="banner-promo__items">
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">Q3 2027</p>
+
+                                    <p class="p4">Handover</p>
+                                  </div>
+
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">
+                                      Studio, 1-4 beds
+                                    </p>
+
+                                    <p class="p4">Apartments</p>
+                                  </div>
+
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">20/30/50</p>
+
+                                    <p class="p4">Payment plan</p>
+                                  </div>
+                                </div>
+
+                                <div class="banner-promo__logo">
+                                  <img
+                                    src="/img/seller/sellertwo.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="banner-promo__btns">
+                                <a
+                                  href="#"
+                                  aria-label="Перейти на страницу Contact Seller"
+                                  title="Contact Seller"
+                                  class="button button--big button--red button--bg-rad"
+                                >
+                                  <span>Contact Seller</span>
+
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="text-banner">
+                          <div class="text-banner__block">
+                            <p class="h6">Header. Optional.</p>
+
+                            <div class="textbox">
+                              <p class="p3">
+                                A wonderful serenity has taken possession of my
+                                entire soul, like these sweet mornings of spring
+                                which I enjoy with my whole heart. I am alone,
+                                and feel the charm of existence in this spot,
+                                which was created for the bliss of souls like
+                                mine. I am so happy, my dear friend, so absorbed
+                                in the exquisite sense of mere tranquil
+                                existence, that I neglect my talents. I should
+                                be incapable of drawing a single stroke at the
+                                present moment; and yet I feel that I never was
+                                a greater artist than now. When, while the
+                                lovely valley teems with vapour around me, and
+                                the meridian
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="pagination">
+                      <div class="pagination-box">
+                        <button
+                          class="button button--circle button--circle-big button--gray"
+                          type="button"
+                          aria-label="Перейти к пред странице"
+                          style="rotate: -180deg"
+                        >
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#arrow-line-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <ul class="pagination-box__list">
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--dark button--cub"
+                              aria-label="Перейти на страницу 1"
+                            >
+                              1
+                            </button>
+                          </li>
+
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--gray button--cub"
+                              aria-label="Перейти на страницу 2"
+                            >
+                              2
+                            </button>
+                          </li>
+
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--gray button--cub"
+                              aria-label="Перейти на страницу 3"
+                            >
+                              3
+                            </button>
+                          </li>
+
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--gray button--cub"
+                              aria-label="Перейти на страницу 4"
+                            >
+                              4
+                            </button>
+                          </li>
+
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--gray button--cub"
+                              aria-label="Перейти на страницу 5"
+                            >
+                              5
+                            </button>
+                          </li>
+
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--gray button--cub"
+                              aria-label="Перейти на страницу 6"
+                            >
+                              6
+                            </button>
+                          </li>
+
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--gray button--cub"
+                              aria-label="Перейти на страницу после 6"
+                            >
+                              ...
+                            </button>
+                          </li>
+
+                          <li class="pagination-box__link">
+                            <button
+                              class="button button--gray button--cub"
+                              aria-label="Перейти на страницу 45"
+                            >
+                              45
+                            </button>
+                          </li>
+                        </ul>
+
+                        <button
+                          class="button button--circle button--circle-big button--gray"
+                          type="button"
+                          aria-label="Перейти к след странице"
+                        >
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#arrow-line-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+
+                      <div class="pagination__details">
+                        <button
+                          type="button"
+                          aria-label="Перейти к след странице"
+                          class="button button--noBg button--noMassa p2"
+                        >
+                          Go to
+                        </button>
+
+                        <div class="input-box">
+                          <label class="input-box__content">
+                            <div class="input-box__info">
+                              <input
+                                type="text"
+                                placeholder="page"
+                                name="page"
+                              />
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="catalogy__map">
+                    <p class="h4">Тутс будет карта</p>
+                  </div>
+
+                  <div class="banner-news">
+                    <header class="banner-news__header">
+                      <p class="h6">Subscribe to our newsletter</p>
+
+                      <div class="textbox">
+                        <p class="p2">
+                          You'll receive one email per week with exclusive
+                          offers and insights from our experts.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="banner-news__content">
+                      <div class="banner-news__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/banner-news/one.webp   1x,
+                              /img/banner-news/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/banner-news/one.webp"
+                            alt="фотография"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <footer class="banner-news__footer">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Contact Seller"
+                        title="Contact Seller"
+                        class="button button--big button--red button--bg-rad"
+                      >
+                        <span>Subscribe</span>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </footer>
+                  </div>
+
+                  <div class="quick">
+                    <div class="quick__item" data-block="more-relative">
+                      <div class="quick__title">
+                        <p class="semibold-font p2">By type of property</p>
+                      </div>
+
+                      <div class="quick__info">
+                        <div
+                          class="quick__items"
+                          data-block="more-items"
+                          data-max="6"
+                        >
+                          <div class="quick__block">
+                            <span class="p3">Properties in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Apartments in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Duplexes in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">8,979</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">8,979</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">8,979</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+                        </div>
+
+                        <footer class="quick__footer" data-block="more-footer">
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                          >
+                            <p
+                              class="p3 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              More
+                            </p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="quick__item" data-block="more-relative">
+                      <div class="quick__title">
+                        <p class="semibold-font p2">By popular keywords</p>
+                      </div>
+
+                      <div class="quick__info">
+                        <div
+                          class="quick__items"
+                          data-block="more-items"
+                          data-max="6"
+                        >
+                          <div class="quick__block">
+                            <span class="p3">Properties in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Apartments in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Duplexes in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">8,979</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">8,979</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">8,979</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+                        </div>
+
+                        <footer class="quick__footer" data-block="more-footer">
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                          >
+                            <p
+                              class="p3 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              More
+                            </p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="catalogy-content">
+                    <div class="catalogy__header">
+                      <h2 class="h4">Dubai Real Estate Trends</h2>
+
+                      <p class="p3">Last update: 15 August 2025</p>
+                    </div>
+
+                    <div class="catalogy-content__items">
+                      <div class="pricing">
+                        <div class="pricing__top">
+                          <div class="pricing__items">
+                            <div class="pricing-card">
+                              <header class="pricing-card__header">
+                                <p class="p2">Median price</p>
+                              </header>
+
+                              <footer class="pricing-card__footer">
+                                <p class="h6">$ 520,000</p>
+
+                                <div class="pricing-card__block">
+                                  <div class="pricing-card__rating green">
+                                    <span class="icon">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-up-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p2">5,7%</p>
+                                  </div>
+
+                                  <p class="p2">YoY</p>
+                                </div>
+                              </footer>
+                            </div>
+
+                            <div class="pricing-card">
+                              <header class="pricing-card__header">
+                                <p class="p2">Median price</p>
+                              </header>
+
+                              <footer class="pricing-card__footer">
+                                <p class="h6">$ 6,320</p>
+
+                                <div class="pricing-card__block">
+                                  <div class="pricing-card__rating green">
+                                    <span class="icon">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-up-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p2">4,2%</p>
+                                  </div>
+
+                                  <p class="p2">YoY</p>
+                                </div>
+                              </footer>
+                            </div>
+
+                            <div class="pricing-card">
+                              <header class="pricing-card__header">
+                                <p class="p2">Average price</p>
+                              </header>
+
+                              <footer class="pricing-card__footer">
+                                <p class="h6">$ 740,320</p>
+
+                                <div class="pricing-card__block">
+                                  <div class="pricing-card__rating red">
+                                    <span class="icon">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-up-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p2">12,3%</p>
+                                  </div>
+
+                                  <p class="p2">YoY</p>
+                                </div>
+                              </footer>
+                            </div>
+
+                            <div class="pricing-card">
+                              <header class="pricing-card__header">
+                                <p class="p2">New listings</p>
+                              </header>
+
+                              <footer class="pricing-card__footer">
+                                <p class="h6">910</p>
+
+                                <div class="pricing-card__block">
+                                  <div class="pricing-card__rating red">
+                                    <span class="icon">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-up-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p2">12,8%</p>
+                                  </div>
+
+                                  <p class="p2">YoY</p>
+                                </div>
+                              </footer>
+                            </div>
+
+                            <div class="pricing-card">
+                              <header class="pricing-card__header">
+                                <p class="p2">Ac tive Listings</p>
+                              </header>
+
+                              <footer class="pricing-card__footer">
+                                <p class="h6">32,350</p>
+
+                                <div class="pricing-card__block">
+                                  <div class="pricing-card__rating green">
+                                    <span class="icon">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-up-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p2">2,3%</p>
+                                  </div>
+
+                                  <p class="p2">YoY</p>
+                                </div>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="pricing__footer">
+                          <div class="swiper swiper--price">
+                            <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                <div class="pricing-card pricing-card--gray">
+                                  <header class="pricing-card__header">
+                                    <p class="p4">Minimal price</p>
+                                  </header>
+
+                                  <footer
+                                    class="pricing-card__footer pricing-card__footer--row"
+                                  >
+                                    <p class="p1">$ 110,328</p>
+
+                                    <div class="pricing-card__block">
+                                      <div class="pricing-card__rating green">
+                                        <p class="p4">+2,2%</p>
+                                      </div>
+
+                                      <p class="p4">YoY</p>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+
+                              <div class="swiper-slide">
+                                <div class="pricing-card pricing-card--gray">
+                                  <header class="pricing-card__header">
+                                    <p class="p4">Minimal price</p>
+                                  </header>
+
+                                  <footer
+                                    class="pricing-card__footer pricing-card__footer--row"
+                                  >
+                                    <p class="p1">$ 110,328</p>
+
+                                    <div class="pricing-card__block">
+                                      <div class="pricing-card__rating green">
+                                        <p class="p4">+2,2%</p>
+                                      </div>
+
+                                      <p class="p4">YoY</p>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+
+                              <div class="swiper-slide">
+                                <div class="pricing-card pricing-card--gray">
+                                  <header class="pricing-card__header">
+                                    <p class="p4">Minimal price</p>
+                                  </header>
+
+                                  <footer
+                                    class="pricing-card__footer pricing-card__footer--row"
+                                  >
+                                    <p class="p1">$ 110,328</p>
+
+                                    <div class="pricing-card__block">
+                                      <div class="pricing-card__rating green">
+                                        <p class="p4">+2,2%</p>
+                                      </div>
+
+                                      <p class="p4">YoY</p>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+
+                              <div class="swiper-slide">
+                                <div class="pricing-card pricing-card--gray">
+                                  <header class="pricing-card__header">
+                                    <p class="p4">Minimal price</p>
+                                  </header>
+
+                                  <footer
+                                    class="pricing-card__footer pricing-card__footer--row"
+                                  >
+                                    <p class="p1">$ 110,328</p>
+
+                                    <div class="pricing-card__block">
+                                      <div class="pricing-card__rating green">
+                                        <p class="p4">+2,2%</p>
+                                      </div>
+
+                                      <p class="p4">YoY</p>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+
+                              <div class="swiper-slide">
+                                <div class="pricing-card pricing-card--gray">
+                                  <header class="pricing-card__header">
+                                    <p class="p4">Minimal price</p>
+                                  </header>
+
+                                  <footer
+                                    class="pricing-card__footer pricing-card__footer--row"
+                                  >
+                                    <p class="p1">$ 110,328</p>
+
+                                    <div class="pricing-card__block">
+                                      <div class="pricing-card__rating green">
+                                        <p class="p4">+2,2%</p>
+                                      </div>
+
+                                      <p class="p4">YoY</p>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+
+                              <div class="swiper-slide">
+                                <div class="pricing-card pricing-card--gray">
+                                  <header class="pricing-card__header">
+                                    <p class="p4">Minimal price</p>
+                                  </header>
+
+                                  <footer
+                                    class="pricing-card__footer pricing-card__footer--row"
+                                  >
+                                    <p class="p1">$ 110,328</p>
+
+                                    <div class="pricing-card__block">
+                                      <div class="pricing-card__rating green">
+                                        <p class="p4">+2,2%</p>
+                                      </div>
+
+                                      <p class="p4">YoY</p>
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button class="button modal-open button--blueviolet catalogy-content__market-btn" data-modal="marketModal" type="button">
+                        <span>Show detailed market insights</span>
+
+                        <span class="icon" style="rotate: -45deg;">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <div
+                        class="catalogy-content__item catalogy-content__market"
+                      >
+                        <h2 class="h6">Detailed Market Insights</h2>
+
+                        <table class="market-table">
+                          <tr class="market-table__head">
+                            <td>
+                              <p class="p2 semibold-font">Key Indicators</p>
+                            </td>
+
+                            <td>
+                              <p class="p2 semibold-font">Dubai</p>
+                            </td>
+
+                            <td>
+                              <p class="p2 semibold-font">Abu Dhabi</p>
+                            </td>
+
+                            <td>
+                              <p class="p2 semibold-font">Difference</p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="p3">Median Price</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">$ 520,000</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">$ 520,000</p>
+                            </td>
+
+                            <td>
+                              <p class="p3 market-table__price up">
+                                + $ 230 000 (+ 44.2%)
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="p3">Median price per m² (sqm)</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">$ 520,000</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">$ 520,000</p>
+                            </td>
+
+                            <td>
+                              <p class="p3 market-table__price down">
+                                - $ 20 172 (+15.4%)
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="p3">Average Price</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">$ 480,500</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">$ 480,500</p>
+                            </td>
+
+                            <td>
+                              <p class="p3 market-table__price up">
+                                + $ 230 000 (+ 44.2%)
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="p3">Annual Growth</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">5.7%</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">5.7%</p>
+                            </td>
+
+                            <td>
+                              <p class="p3 market-table__price up">
+                                + $ 230 000 (+ 44.2%)
+                              </p>
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td>
+                              <p class="p3">Median size</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">70 sq.m.</p>
+                            </td>
+
+                            <td>
+                              <p class="p3">70 sq.m.</p>
+                            </td>
+
+                            <td>
+                              <p class="p3 market-table__price down">
+                                - $ 20 172 (-15.4%)
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="catalogy__items">
+                    <div class="catalogy__item-info" data-block="more-relative">
+                      <div class="catalogy__top">
+                        <h2 class="h4">
+                          Guide to buying a property in the UAE
+                        </h2>
+
+                        <div class="catalogy__item-content">
+                          <div class="catalogy__item-head">
+                            <div class="catalogy__item-details">
+                              <div
+                                class="textbox"
+                                data-block="more-items"
+                                data-max="1"
+                              >
+                                <p class="p1">
+                                  Dubai experiences extreme heat, with summer
+                                  temperatures reaching up to 45°C (113°F). The
+                                  city’s desert climate, characterized by high
+                                  temperatures and minimal rainfall, makes air
+                                  conditioning essential to daily life. Recent
+                                  climate projections suggest that the region
+                                  will see a 30% rise in rainfall in the coming
+                                  decade, potentially altering local weather
+                                  patterns. Despite the heat, Dubai enjoys
+                                  year-round sunshine, with mild winters making
+                                  it an appealing location for tourists and
+                                  residents alike.
+                                </p>
+
+                                <p class="p1">
+                                  Dubai experiences extreme heat, with summer
+                                  temperatures reaching up to 45°C (113°F). The
+                                  city’s desert climate, characterized by high
+                                  temperatures and minimal rainfall, makes air
+                                  conditioning essential to daily life. Recent
+                                  climate projections suggest that the region
+                                  will see a 30% rise in rainfall in the coming
+                                  decade, potentially altering local weather
+                                  patterns. Despite the heat, Dubai enjoys
+                                  year-round sunshine, with mild winters making
+                                  it an appealing location for tourists and
+                                  residents alike.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div class="catalogy__item-img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/goods/one.webp 1x,
+                                    /img/goods/one.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/goods/one2x.webp"
+                                  alt="фотография здания"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <footer
+                            class="catalogy__item-footer"
+                            data-block="more-footer"
+                          >
+                            <button
+                              class="btn-decor"
+                              data-block="more-btn"
+                              aria-label="Посмотреть больше"
+                              type="button"
+                            >
+                              <p
+                                class="p3 medium-font"
+                                data-block="more-btn-text"
+                              >
+                                More
+                              </p>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#arrow-line-down-icon"></use>
+                                </svg>
+                              </span>
+                            </button>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="catalogy__top">
+                    <h2 class="h4">Popular Questions</h2>
+
+                    <div class="accordeon" data-width="10000000">
+                      <div class="accordeon__item">
+                        <button type="button" class="accordeon__question">
+                          <p class="p1 medium-font">
+                            Can foreigners buy real estate in Dubai?
+                          </p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="accordeon__answer" data-padding-top="20">
+                          <div class="textbox">
+                            <p class="p2">
+                              Purchasing houses or apartments in Dubai worth AED
+                              750,000 (USD 204,000) or more entitles the buyer
+                              to apply for a 2-year residence visa. Investments
+                              exceeding AED 2 million (USD 544,500) qualify for
+                              a 5-year golden visa in UAE and 10-year golden
+                              visa in Dubai.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordeon__item">
+                        <button type="button" class="accordeon__question">
+                          <p class="p1 medium-font">
+                            Is it possible to obtain UAE residency by investing
+                            in property in Dubai?
+                          </p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="accordeon__answer" data-padding-top="20">
+                          <div class="textbox">
+                            <p class="p2">
+                              Purchasing houses or apartments in Dubai worth AED
+                              750,000 (USD 204,000) or more entitles the buyer
+                              to apply for a 2-year residence visa. Investments
+                              exceeding AED 2 million (USD 544,500) qualify for
+                              a 5-year golden visa in UAE and 10-year golden
+                              visa in Dubai.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordeon__item">
+                        <button type="button" class="accordeon__question">
+                          <p class="p1 medium-font">
+                            How many listings are available on the
+                            Dubai-Real.Estate platform?
+                          </p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="accordeon__answer" data-padding-top="20">
+                          <div class="textbox">
+                            <p class="p2">
+                              Purchasing houses or apartments in Dubai worth AED
+                              750,000 (USD 204,000) or more entitles the buyer
+                              to apply for a 2-year residence visa. Investments
+                              exceeding AED 2 million (USD 544,500) qualify for
+                              a 5-year golden visa in UAE and 10-year golden
+                              visa in Dubai.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="accordeon__item">
+                        <button type="button" class="accordeon__question">
+                          <p class="p1 medium-font">
+                            Can foreigners buy real estate in Dubai?
+                          </p>
+
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <div class="accordeon__answer" data-padding-top="20">
+                          <div class="textbox">
+                            <p class="p2">
+                              Purchasing houses or apartments in Dubai worth AED
+                              750,000 (USD 204,000) or more entitles the buyer
+                              to apply for a 2-year residence visa. Investments
+                              exceeding AED 2 million (USD 544,500) qualify for
+                              a 5-year golden visa in UAE and 10-year golden
+                              visa in Dubai.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalogy__banners">
+                  <div class="quick">
+                    <div class="quick__item" data-block="more-relative">
+                      <div class="quick__title">
+                        <p class="semibold-font p2">Popular Regions</p>
+                      </div>
+
+                      <div class="quick__info">
+                        <div
+                          class="quick__items quick__items--one-grid"
+                          data-block="more-items"
+                          data-max="6"
+                        >
+                          <div class="quick__block">
+                            <span class="p3">Dubai</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Abu Dhabi</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Ajman</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Ras Al Khaimah</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Ajman</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Ras Al Khaimah</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Ajman</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Ras Al Khaimah</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </div>
+                        </div>
+
+                        <footer class="quick__footer" data-block="more-footer">
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                          >
+                            <p
+                              class="p3 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              More
+                            </p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="quick__item" data-block="more-relative">
+                      <div class="quick__title">
+                        <p class="semibold-font p2">Trending Searches</p>
+                      </div>
+
+                      <div class="quick__info">
+                        <div
+                          class="quick__items quick__items--one-grid"
+                          data-block="more-items"
+                          data-max="6"
+                        >
+                          <div class="quick__block">
+                            <span class="p3">Apartments by the sea</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">4 bedrooms apartments</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Apartments from 150,000 $</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </div>
+
+                          <div class="quick__block">
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </div>
+                        </div>
+
+                        <footer class="quick__footer" data-block="more-footer">
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                          >
+                            <p
+                              class="p3 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              More
+                            </p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="quick__item" data-block="more-relative">
+                      <div class="quick__title">
+                        <p class="semibold-font p2">Useful Links</p>
+                      </div>
+
+                      <div class="quick__info">
+                        <div
+                          class="quick__items quick__items--one-grid"
+                          data-block="more-items"
+                          data-max="6"
+                        >
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу How to buy with maximum profit"
+                              title="How to buy with maximum profit"
+                              class="p3 link"
+                              >How to buy with maximum profit</a
+                            >
+                          </div>
+
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу Paperwork you should to do"
+                              title="Paperwork you should to do"
+                              class="p3 link"
+                              >Paperwork you should to do</a
+                            >
+                          </div>
+
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу Paperwork you should to do"
+                              title="Paperwork you should to do"
+                              class="p3 link"
+                              >Paperwork you should to do</a
+                            >
+                          </div>
+
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу Paperwork you should to do"
+                              title="Paperwork you should to do"
+                              class="p3 link"
+                              >Paperwork you should to do</a
+                            >
+                          </div>
+
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу Paperwork you should to do"
+                              title="Paperwork you should to do"
+                              class="p3 link"
+                              >Paperwork you should to do</a
+                            >
+                          </div>
+
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу Paperwork you should to do"
+                              title="Paperwork you should to do"
+                              class="p3 link"
+                              >Paperwork you should to do</a
+                            >
+                          </div>
+
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу Paperwork you should to do"
+                              title="Paperwork you should to do"
+                              class="p3 link"
+                              >Paperwork you should to do</a
+                            >
+                          </div>
+
+                          <div class="quick__block">
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу Paperwork you should to do"
+                              title="Paperwork you should to do"
+                              class="p3 link"
+                              >Paperwork you should to do</a
+                            >
+                          </div>
+                        </div>
+
+                        <footer class="quick__footer" data-block="more-footer">
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                          >
+                            <p
+                              class="p3 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              More
+                            </p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </footer>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="banner-news">
+                    <header class="banner-news__header">
+                      <p class="h6">Subscribe to our newsletter</p>
+
+                      <div class="textbox">
+                        <p class="p2">
+                          You'll receive one email per week with exclusive
+                          offers and insights from our experts.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="banner-news__content">
+                      <div class="banner-news__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/banner-news/one.webp   1x,
+                              /img/banner-news/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/banner-news/one.webp"
+                            alt="фотография"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <footer class="banner-news__footer">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Contact Seller"
+                        title="Contact Seller"
+                        class="button button--big button--red button--bg-rad"
+                      >
+                        <span>Subscribe</span>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
 
       <footer class="footer">
   <div class="footer-top">
@@ -3226,6 +6466,281 @@
 
 <script src="/js/page.js" type="module"></script>
 
+
+      <div class="modalBlock modalSecond marketModal">
+  <div class="modalBlock__inner modalSecond__inner">
+    <header class="modalSecond__header">
+      <div class="modalSecond__header-block">
+        <button
+          class="modal-close button button--cub-big button--secondary"
+          type="button"
+          aria-label="Закрыть модалку"
+          style="color:var(--secondary-color-300)"
+        >
+          <span class="icon" style="rotate: -180deg">
+            <svg>
+              <use xlink:href="#arrow-line-icon"></use>
+            </svg>
+          </span>
+        </button>
+
+        <p class="h4">Detailed Market Insights</p>
+      </div>
+    </header>
+
+    <div class="dropdown dropdown--select input-box">
+      <button class="dropdown__toggle input-box__info" type="button">
+        <p class="dropdown__active p2"></p>
+
+        <span class="icon arrow">
+          <svg>
+            <use xlink:href="#arrow-bottom-icon"></use>
+          </svg>
+        </span>
+      </button>
+
+      <div class="dropdown__content">
+        <ul class="dropdown__list">
+          <li class="dropdown__link">
+            <span class="dropdown__item active dropdown-item-close">
+              <span class="p2">Dubai 1</span>
+            </span>
+          </li>
+
+          <li class="dropdown__link">
+            <span class="dropdown__item dropdown-item-close">
+              <span class="p2">Dubai 2</span>
+            </span>
+          </li>
+
+          <li class="dropdown__link">
+            <span class="dropdown__item dropdown-item-close">
+              <span class="p2">Dubai 3</span>
+            </span>
+          </li>
+
+          <li class="dropdown__link">
+            <span class="dropdown__item dropdown-item-close">
+              <span class="p2">Dubai 4</span>
+            </span>
+          </li>
+
+          <li class="dropdown__link">
+            <span class="dropdown__item dropdown-item-close">
+              <span class="p2">Dubai 5</span>
+            </span>
+          </li>
+        </ul>
+      </div>
     </div>
+
+    <div class="modalSecond__content">
+      <table class="market-table market-table--two-grid market-table--noHead">
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <p class="p3" style="color: var(--dark-color-500)">
+              Median price per m² (sqm)
+            </p>
+          </td>
+
+          <td>
+            <p class="p3 medium-font">$ 520,000</p>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/catalogy.js" type="module"></script>
   </body>
 </html>

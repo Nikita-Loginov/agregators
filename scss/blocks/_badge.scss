@@ -33,3 +33,86 @@
     }
   }
 }
+
+.badge-decor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  .icon {
+    width: 16px;
+    height: 18px;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+}
+
+.badge-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 16px 4px 4px;
+  border-radius: var(--radius-5xl);
+  background-color: var(--secondary-color-200);
+  transition: all 0.3s;
+
+  &--white {
+    background-color: var(--white-color);
+  }
+
+  &--big {
+    .badge-detail {
+      gap: 16px;
+      &__icon {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.3s;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &.isHover {
+    cursor: pointer;
+
+    &:hover {
+      border-radius: var(--radius-xl);
+
+      .badge-detail {
+        &__icon {
+          border-radius: var(--radius-md);
+        }
+      }
+    }
+  }
+}
