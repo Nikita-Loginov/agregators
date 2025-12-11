@@ -30,11 +30,13 @@
       }
     }
 
-    input {
+    input,
+    textarea {
       width: 100%;
       background-color: transparent;
       cursor: pointer;
       color: var(--dark-color-200);
+      resize: none;
 
       &::placeholder {
         font-size: var(--font-size-xs);
@@ -43,7 +45,13 @@
       }
     }
 
-    &:has(input:focus, input:active, input:hover) {
+    textarea {
+      min-height: 180px;
+      max-height: 210px;
+    }
+    
+
+    &:has(input:focus, input:active, input:hover, textarea:focus, textarea:active, textarea:hover) {
       border-color: var(--dark-color-600);
     }
   }
@@ -79,6 +87,24 @@
       }
     }
   }
+
+  &--gray {
+    .input-box {
+      &__info {
+        background-color: var(--gray-color-200);
+        border-color: var(--gray-color-200);
+        color: var(--secondary-color-100);
+      }
+    }
+  }
+
+  &--xl {
+    .input-box {
+      &__info {
+        min-height: 52px;
+      }
+    }
+  }
 }
 
 .special-input {
@@ -109,7 +135,7 @@
       cursor: pointer;
       font-size: var(--font-size-xs);
       color: var(--dark-color-200);
-      transition: all .5s;
+      transition: all 0.5s;
 
       &::placeholder {
         font-size: var(--font-size-xs);

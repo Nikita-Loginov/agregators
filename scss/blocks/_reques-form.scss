@@ -1,0 +1,37 @@
+.reques-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__footer,
+  &__inputs {
+    display: grid;
+    grid-template-columns: calc(50% - 12px) auto;
+    gap: 12px;
+  }
+
+  &__inputs {
+    .input-box--big {
+      grid-row: 1 / 4;
+      grid-column: 2;
+    }
+
+    .input-box {
+      &__content,
+      &__info {
+        height: 100%;
+      }
+    }
+
+    textarea {
+      min-height: 0;
+      height: 100%;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+<div class="modalBlock requestModal">
+  <div class="modalBlock__inner">
+    <header class="modalBlock__head modalBlock__head--static">
+      <p class="h4">Request</p>
+
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <div class="requestModal__content">
+      <p class="p2 medium-font">
+        Fill out the form and we will answer your question as soon as possible.
+      </p>
+
+      <form class="reques-form form" novalidate>
+        <div class="reques-form__content">
+          <div class="reques-form__inputs">
+            <div class="input-box input-box--xl input-box--gray form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <input type="text" placeholder="Name" name="Name" />
+                </div>
+              </label>
+
+              <p class="input-box__errors p4"></p>
+            </div>
+
+            <div class="input-box input-box--xl input-box--gray form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <input
+                    type="tel"
+                    placeholder="Phone*"
+                    name="tel"
+                    required
+                    pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
+                    data-title="Введите телефон в формате: +7 (000) 000-00-00"
+                    data-empty="Ведите минимум один символ"
+                    aria-errormessage="tel-errors"
+                  />
+                </div>
+              </label>
+
+              <p class="input-box__errors form__errors p4" id="tel-errors"></p>
+            </div>
+
+            <div class="input-box input-box--xl input-box--gray form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <input
+                    type="email"
+                    placeholder="Email*"
+                    name="email"
+                    required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
+                    data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
+                    data-empty="Ведите минимум один символ"
+                    aria-errormessage="email-errors"
+                  />
+                </div>
+              </label>
+
+              <p
+                class="input-box__errors p4 form__errors"
+                id="email-errors"
+              ></p>
+            </div>
+
+            <div class="input-box input-box--big input-box--xl input-box--gray">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <textarea
+                    placeholder="Describe your request (optional)"
+                    name="Describe"
+                  ></textarea>
+                </div>
+              </label>
+
+              <p class="input-box__errors p4"></p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="reques-form__footer">
+          <p class="p4">
+            By clicking the send button you agree to the terms of use of the
+            site
+          </p>
+
+          <button
+            class="button button--xl button--red-lite modal-open "
+            data-modal="successRequestModal"
+            style="border-radius: var(--radius-md)"
+            type="submit"
+          >
+            <p class="p2 semibold-font">Send</p>
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+</div>

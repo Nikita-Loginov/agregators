@@ -41,6 +41,10 @@ body {
       transform: translateX(0);
     }
   }
+
+  &.white-page {
+    background-color: #fff;
+  }
 }
 
 .wrapper {

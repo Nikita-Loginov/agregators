@@ -38,6 +38,7 @@
     min-height: 52px;
     font-weight: var(--weight-font-lg);
     border-radius: var(--radius-3xl);
+    gap: 12px;
 
     .icon {
       width: 24px;
@@ -128,6 +129,21 @@
     }
   }
 
+  &--red-lite {
+    background-color: var(--primary-color-100);
+    color: var(--white-color);
+    border: 1px solid var(--primary-color-100);
+
+    &:hover {
+      background-color: var(--primary-color-500);
+      color: var(--white-color);
+    }
+
+    &:active {
+      border-color: var(--primary-color-100);
+    }
+  }
+
   &--bg-rad {
     border-radius: var(--radius-3xl);
 
@@ -139,6 +155,17 @@
   &--noBg {
     background-color: transparent;
     min-height: 0;
+  }
+
+  &--redBorder {
+    border: 1px solid var(--primary-color-100);
+    color: var(--primary-color-100);
+
+    &:hover,
+    &:active {
+      background-color: var(--primary-color-100);
+      color: var(--white-color);
+    }
   }
 
   &--grayBorder {
@@ -163,6 +190,12 @@
     &:active {
       background-color: var(--secondary-color-300);
     }
+  }
+
+  &--darkBorder {
+    background-color: transparent;
+    border: 1px solid var(--dark-color-600);
+    color: var(--dark-color-600);
   }
 
   &--dark-second {
@@ -215,6 +248,17 @@
     &:hover,
     &:active {
       background-color: var(--secondary-color-200);
+    }
+  }
+
+  &--md {
+    padding: 4px 20px;
+    min-height: 36px;
+    border-radius: var(--radius-2xl);
+
+    .icon {
+      width: 20px;
+      height: 20px;
     }
   }
 

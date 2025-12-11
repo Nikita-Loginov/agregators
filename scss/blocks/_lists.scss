@@ -27,8 +27,6 @@
   position: relative;
 
   &.relative {
-    top: calc(100% + var(--top-padding));
-
     &:after {
       position: absolute;
       opacity: 0;
@@ -38,6 +36,14 @@
       width: 100%;
       bottom: calc(var(--top-padding) * -2);
       height: calc(var(--top-padding) * 2);
+    }
+  }
+
+  &.relative-top {
+    .list-popup {
+      &__box {
+        top: calc(100% + var(--top-padding));
+      }
     }
   }
 
@@ -157,5 +163,4 @@
       border-radius: 50%;
     }
   }
-
 }

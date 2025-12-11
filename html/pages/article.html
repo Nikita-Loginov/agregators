@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Статья", "links" :
   ["./css/article.css", "./css/lib/swiper.min.css"] })
-  <body>
+  <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
 
@@ -1281,6 +1281,115 @@
                   </ul>
                 </div>
 
+                <div class="banner-content isChangePhoto">
+                  <div class="banner-content__content">
+                    <header class="banner-content__header">
+                      <div class="banner-content__header-top">
+                        <p class="h5 semibold-font">Download the brochure</p>
+                      </div>
+
+                      <p class="p2">
+                        You will receive detailed information about the
+                        property, additional photos and a calculation of the
+                        expected return on investment.
+                      </p>
+                    </header>
+
+                    <footer class="banner-content__footer">
+                      <a
+                        href="/img/goods/four.webp"
+                        download=""
+                        class="button button--redBorder button--xl modal-open"
+                        data-modal="successModal"
+                      >
+                        <p class="p2 semibold-font">Download</p>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#dowload-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </footer>
+                  </div>
+
+                  <div class="banner-content__img banner-content__img--filter">
+                    <picture>
+                      <source
+                        srcset="
+                          /img/banner/two.webp   1x,
+                          /img/banner/two2x.webp 2x
+                        "
+                      />
+                      <img src="/img/banner/two.webp" alt="фотография" />
+                    </picture>
+                  </div>
+                </div>
+
+                <table class="table-main">
+                  <thead class="table-main__head">
+                    <tr>
+                      <td>
+                        <p class="p2 semibold-font">Key advantage</p>
+                      </td>
+
+                      <td>
+                        <p class="p2 semibold-font">Description</p>
+                      </td>
+                    </tr>
+                  </thead>
+
+                  <tbody class="table-main__body">
+                    <tr>
+                      <td>
+                        <p class="p3 medium-font">
+                          Attractive investment returns
+                        </p>
+                      </td>
+
+                      <td>
+                        <p class="p3">
+                          Dubai real estate offers some of the highest yields
+                          globally: up to 8% annually for long-term rentals and
+                          up to 15% for short-term rentals. In luxury tourist
+                          areas, returns can exceed 20%, allowing investors to
+                          recover their capital in under five years. Property
+                          values have steadily increased (8.1% in 2021, 21.1% in
+                          2022, 14.2% in 2023 and 11.6% in 2024). Thanks to high
+                          liquidity (average time on the market is 40–60 days),
+                          owners can sell quickly. Demand is driven by
+                          infrastructure growth, government incentives,
+                          population growth (+6.3% YoY as of May 2025) and over
+                          18,000,000 tourists in 2024.
+                        </p>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        <p class="p3 medium-font">
+                          Residency through investment
+                        </p>
+                      </td>
+
+                      <td>
+                        <p class="p3">
+                          Buying property worth AED 750,000+ (approx. USD
+                          204,000) grants eligibility for a 2-year UAE residence
+                          visa. Investments from AED 2,000,000 (approx. USD
+                          544,500) qualify for a 5-year Golden Visa. Residency
+                          includes benefits such as legal stay, bank account
+                          access, healthcare and a driver's license. It also
+                          allows family to join (spouse, unmarried children).
+                          Applies to all property types—residential, commercial,
+                          completed or under construction. Residency is
+                          renewable as long as the property is owned.
+                        </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
                 <div class="textbox">
                   <p class="p1">
                     Dubai experiences extreme heat, with summer temperatures
@@ -1293,6 +1402,142 @@
                     year-round sunshine, with mild winters making it an
                     appealing location for tourists and residents alike.
                   </p>
+                </div>
+
+                <div class="gallery">
+                  <div class="gallery__inner">
+                    <div class="gallery__items">
+                      <div class="gallery__item gallery__item--big">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/one.webp   1x,
+                              /img/gallery/one2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/one.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/two.webp   1x,
+                              /img/gallery/two2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/two.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/three.webp   1x,
+                              /img/gallery/three2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/three.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/four.webp   1x,
+                              /img/gallery/four2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/four.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/five.webp   1x,
+                              /img/gallery/five2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/five.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/two.webp   1x,
+                              /img/gallery/two2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/two.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/three.webp   1x,
+                              /img/gallery/three2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/three.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/three.webp   1x,
+                              /img/gallery/three2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/three.webp" alt="фотография" />
+                        </picture>
+                      </div>
+
+                      <div class="gallery__item">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/gallery/one.webp   1x,
+                              /img/gallery/one2x.webp 2x
+                            "
+                          />
+                          <img src="/img/gallery/one.webp" alt="фотография" />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <div class="gallery__modile"></div>
+                  </div>
+                </div>
+
+                <div class="attention">
+                  <div class="attention__icon">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#warning-icon"></use>
+                      </svg>
+                    </span>
+                  </div>
+
+                  <div class="attention__content">
+                    <div class="textbox">
+                      <p class="p1 medium-font">
+                        If you fail to spot a boundary dispute, for example, the
+                        purchase could fall through. And that could have
+                        repercussions throughout the property chain.
+                      </p>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="article__item">
@@ -1503,16 +1748,340 @@
                     </a>
                   </div>
                 </div>
+
+                <footer class="article__footer">
+                  <div class="article__footer-detail">
+                    <div class="tag tag--circle tag--secondary-400">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#label-icon"></use>
+                        </svg>
+                      </span>
+                    </div>
+
+                    <div class="tag tag--big tag--gray-200">
+                      <p class="p3 medium-font">Real Estate</p>
+                    </div>
+
+                    <div class="tag tag--big tag--gray-300">
+                      <p class="p3 medium-font">Buying</p>
+                    </div>
+
+                    <div class="tag tag--big tag--gray-300">
+                      <p class="p3 medium-font">Dubai</p>
+                    </div>
+                  </div>
+
+                  <div class="share list-popup relative relative-top">
+                    <div class="share__btns">
+                      <button class="button button--red-lite button--md">
+                        <p class="p3 medium-font">Share</p>
+
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#share-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+
+                    <div class="list-popup__box share__popup">
+                      <div class="share__items">
+                        <div class="share__item-box">
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+                        </div>
+
+                        <div class="share__item-box">
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+                        </div>
+
+                        <div class="share__item-box">
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+                        </div>
+                      </div>
+
+                      <div class="share__footer">
+                        <div class="share__item-box">
+                          <button
+                            type="button"
+                            aria-label="Скопировать"
+                            title="Copy link"
+                            class="share__item"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#copy-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">Copy link</p>
+                          </button>
+
+                          <button
+                            type="button"
+                            aria-label="Скопировать"
+                            title="Copy link"
+                            class="share__item"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#copy-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">Copy link-2</p>
+                          </button>
+                        </div>
+
+                        <div class="share__item-box">
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="share__item"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="banners-articles">
+          <div class="container container--small">
+            <div class="banners-articles__inner">
+              <div class="banner-content banner-content--absolute-img">
+                <div class="banner-content__content">
+                  <header class="banner-content__header">
+                    <div class="banner-content__header-top">
+                      <p class="h3 semibold-font">Need Help?</p>
+                    </div>
+
+                    <p class="p1 medium-font">
+                      Our experts are always ready to help you with all
+                      questions related to real estate
+                    </p>
+                  </header>
+
+                  <footer class="banner-content__footer">
+                    <button
+                      type="button"
+                      aria-label="Открыть модальное окно"
+                      class="button button--red-lite button--xl modal-open"
+                      data-modal="requestModal"
+                    >
+                      <p class="p2 semibold-font">Send a request</p>
+
+                      <span class="icon" style="width: 10px; height: 10px;">
+                        <svg>
+                          <use xlink:href="#arrow-right-line-icon"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </footer>
+                </div>
+
+                <div class="banner-content__img">
+                  <picture>
+                    <source
+                      srcset="
+                        /img/banner/three.webp   1x,
+                        /img/banner/three2x.webp 2x
+                      "
+                    />
+                    <img src="/img/banner/three.webp" alt="фотография круга" />
+                  </picture>
+                </div>
               </div>
             </div>
           </div>
         </section>
       </main>
 
-      @@include('../modules/footer.html')
+      @@include('../modules/footer.html') @@include('../modals/request.html')
+      @@include('../modals/success.html')
+      @@include('../modals/successRequest.html')
     </div>
 
     <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/lib/imask.min.js" type="module"></script>
     <script src="/js/article.js" type="module"></script>
   </body>
 </html>

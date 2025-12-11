@@ -80,4 +80,17 @@
     gap: 16px;
     align-items: flex-start;
   }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  &__footer-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }
