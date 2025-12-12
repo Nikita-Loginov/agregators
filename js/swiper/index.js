@@ -32,4 +32,15 @@ export const SWIPERS = {
       },
     },
   },
+  ARTICLE_CARDS: {
+    selector: ".article .swiper--articles",
+    breakpoint: 122300000000,
+    options: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      pagination: {
+        el: ".article .swiper-pagination",
+      },
+    },
+  },
 };

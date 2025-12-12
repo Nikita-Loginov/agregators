@@ -77,7 +77,7 @@ function updateSubmitButton(form) {
   }
 }
 
-function checkFormValidity(form) {
+export function checkFormValidity(form) {
   const requiredFields = form.querySelectorAll("[required]");
 
   return Array.from(requiredFields).every((field) => {
@@ -104,10 +104,12 @@ function handleFormSubmit(event) {
     const btnModal = event.target.querySelector(
       'button[type="submit"].modal-open'
     );
-    const nameModal = btnModal.dataset.modal;
-    const modalBlock = document.querySelector(`.${nameModal}`);
+ 
 
     if (btnModal) {
+      const nameModal = btnModal.dataset.modal;
+      const modalBlock = document.querySelector(`.${nameModal}`);
+      
       openModalStep(
         btnModal,
         document.querySelectorAll(`.modalBlock`),

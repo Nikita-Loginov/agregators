@@ -701,6 +701,26 @@
       stroke-linejoin="round"
     />
   </symbol>
+
+  <symbol id="star-icon" viewBox="0 0 21 21" fill="none">
+    <path
+      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
+      fill="currentColor"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+
+  <symbol id="communication-icon" viewBox="0 0 16 16" fill="none">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M8 10.5V8M8 8V5.5M8 8H5.5M8 8H10.5M8.00011 15.5C6.63751 15.5 5.35979 15.1366 4.25854 14.5015C4.14975 14.4387 4.09528 14.4074 4.04411 14.3932C3.99648 14.3801 3.95396 14.3756 3.90466 14.379C3.85211 14.3826 3.79775 14.4007 3.68966 14.4367L1.76506 15.0783L1.76354 15.079C1.35743 15.2143 1.154 15.2821 1.0188 15.2339C0.900997 15.1919 0.808161 15.0989 0.766153 14.9811C0.717976 14.846 0.785565 14.6433 0.920743 14.2377L0.921549 14.2352L1.56224 12.3132L1.56376 12.3091C1.59947 12.202 1.61755 12.1478 1.62112 12.0955C1.6245 12.0462 1.62001 12.0033 1.60684 11.9557C1.59288 11.9052 1.56207 11.8518 1.50095 11.7458L1.49849 11.7416C0.86337 10.6403 0.5 9.3626 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1422 15.5 8.00011 15.5Z"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>
  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <symbol id="rus-lang" viewBox="0 0 28 28">
@@ -2355,27 +2375,33 @@
             </ul>
           </div>
 
-          <form class="footer-top__block footer-top__form">
+          <form class="footer-top__block footer-top__form form" novalidate>
             <p class="h5">Stay in touch</p>
 
             <div class="footer-top__inputs">
-              <label class="special-input">
+              <label class="special-input form__item">
                 <div class="special-input__info">
-                  <input type="email" placeholder="Enter your email" />
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
+                    data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
+                    data-empty="Ведите минимум один символ"
+                    aria-errormessage="email-errors"
+                  />
                 </div>
 
                 <div class="special-input__details">
                   <button
                     class="button button--big button--red button--bg-rad"
-                    type="button"
+                    type="submit"
                   >
                     Subscribe
                   </button>
                 </div>
 
-                <div class="special-input__errors">
-                  <p class="p3">Incorrect email</p>
-                </div>
+                <div class="special-input__errors form__errors" id="email-errors"></div>
               </label>
             </div>
           </form>

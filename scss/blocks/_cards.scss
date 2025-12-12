@@ -1,0 +1,49 @@
+.card-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow: hidden;
+
+  &__img {
+    width: 100%;
+    height: 140px;
+    border-radius: var(--radius-base);
+    overflow: hidden;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.5s;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ellipse-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+a.card-detail {
+  transition: all 0.5s;
+  cursor: pointer;
+
+  &:hover {
+    .card-detail {
+      &__img {
+        img {
+          scale: 1.2;
+        }
+      }
+    }
+  }
+}

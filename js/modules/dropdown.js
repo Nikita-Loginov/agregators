@@ -53,7 +53,7 @@ const openFixedDropdown = (dropdown) => {
   fixedMenu.style.zIndex = "9999";
 
   document.body.appendChild(fixedMenu);
-}
+};
 
 const closeDropdown = (dropdown) => {
   if (!dropdown) return;
@@ -74,7 +74,7 @@ const closeDropdown = (dropdown) => {
 
   fixedMenu = null;
   activeDropdown = null;
-}
+};
 
 function closeAllDropdowns() {
   if (activeDropdown) {
@@ -89,8 +89,9 @@ const applySelectValue = (dropdown, selectedItem) => {
 
   realItems.forEach((item) => item.classList.remove("active"));
 
-  const realItem = Array.from(realItems)
-    .find((el) => el.textContent.trim() === selectedText);
+  const realItem = Array.from(realItems).find(
+    (el) => el.textContent.trim() === selectedText
+  );
 
   if (realItem) realItem.classList.add("active");
 
@@ -98,10 +99,12 @@ const applySelectValue = (dropdown, selectedItem) => {
   if (activeBox) {
     activeBox.textContent = selectedText;
   }
-}
+};
 
 export const firstActiveText = () => {
-  const dropdownSelects = document.querySelectorAll(".dropdown.dropdown--select");
+  const dropdownSelects = document.querySelectorAll(
+    ".dropdown.dropdown--select"
+  );
 
   dropdownSelects.forEach((dropdown) => {
     const selected =

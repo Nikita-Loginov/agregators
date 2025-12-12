@@ -1,0 +1,13 @@
+.swiper-box {
+  &--pagination-bottom {
+    .swiper-wrapper {
+      padding-bottom: 20px;
+    }
+
+    &:has(.swiper-pagination.swiper-pagination-lock) {
+      .swiper-wrapper {
+        padding-bottom: 0px;
+      }
+    }
+  }
+}

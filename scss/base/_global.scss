@@ -103,6 +103,10 @@ body {
   flex-direction: column;
   gap: 40px;
 
+  &--small {
+    gap: 24px;
+  }
+
   &__header {
     display: flex;
     align-items: center;

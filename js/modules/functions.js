@@ -71,3 +71,9 @@ export const initSwiper = (element, config = {}) => {
 
   return swiper;
 };
+
+export const removeAllElementClass = (options, className) => {
+  options.forEach((item) => {
+    item.classList.remove(className);
+  });
+};

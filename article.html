@@ -703,6 +703,26 @@
       stroke-linejoin="round"
     />
   </symbol>
+
+  <symbol id="star-icon" viewBox="0 0 21 21" fill="none">
+    <path
+      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
+      fill="currentColor"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+
+  <symbol id="communication-icon" viewBox="0 0 16 16" fill="none">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M8 10.5V8M8 8V5.5M8 8H5.5M8 8H10.5M8.00011 15.5C6.63751 15.5 5.35979 15.1366 4.25854 14.5015C4.14975 14.4387 4.09528 14.4074 4.04411 14.3932C3.99648 14.3801 3.95396 14.3756 3.90466 14.379C3.85211 14.3826 3.79775 14.4007 3.68966 14.4367L1.76506 15.0783L1.76354 15.079C1.35743 15.2143 1.154 15.2821 1.0188 15.2339C0.900997 15.1919 0.808161 15.0989 0.766153 14.9811C0.717976 14.846 0.785565 14.6433 0.920743 14.2377L0.921549 14.2352L1.56224 12.3132L1.56376 12.3091C1.59947 12.202 1.61755 12.1478 1.62112 12.0955C1.6245 12.0462 1.62001 12.0033 1.60684 11.9557C1.59288 11.9052 1.56207 11.8518 1.50095 11.7458L1.49849 11.7416C0.86337 10.6403 0.5 9.3626 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8C15.5 12.1421 12.1422 15.5 8.00011 15.5Z"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>
  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <symbol id="rus-lang" viewBox="0 0 28 28">
@@ -4173,7 +4193,7 @@
                     >
                       <p class="p2 semibold-font">Send a request</p>
 
-                      <span class="icon" style="width: 10px; height: 10px;">
+                      <span class="icon" style="width: 10px; height: 10px">
                         <svg>
                           <use xlink:href="#arrow-right-line-icon"></use>
                         </svg>
@@ -4192,6 +4212,688 @@
                     />
                     <img src="/img/banner/three.webp" alt="фотография круга" />
                   </picture>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="comments">
+          <div class="container container--small">
+            <div class="comments-box" data-block="comment-relative">
+              <header class="comments__header">
+                <h2 class="h5">Comments 3</h2>
+
+                <button
+                  class="button button--secondary"
+                  type="button"
+                  aria-label="Написать отзыв"
+                  data-block="comment-btn"
+                >
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="#communication-icon"></use>
+                    </svg>
+                  </span>
+
+                  <p class="p2 medium-font">Add Сomment</p>
+                </button>
+              </header>
+
+              <div class="comments__content">
+                <div class="comments-box__inner">
+                  <div class="comments-box__forms">
+                    <form
+                      class="comments-form comments-form--rating form"
+                      novalidate
+                    >
+                      <div class="comments-form__content">
+                        <div class="comments-form__item">
+                          <div class="comments-form__inputs">
+                            <div class="input-box input-box--gray">
+                              <label class="input-box__content">
+                                <div class="input-box__info">
+                                  <textarea
+                                    placeholder="Write your comment"
+                                    name="comment"
+                                  ></textarea>
+                                </div>
+                              </label>
+
+                              <p class="input-box__errors p4"></p>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="comments-form__item comments-form__item--grid-two-proccent"
+                        >
+                          <div class="comments-form__inputs">
+                            <div class="input-box input-box--gray form__item">
+                              <label class="input-box__content">
+                                <div class="input-box__info">
+                                  <input
+                                    type="text"
+                                    placeholder="Name*"
+                                    name="comment-name"
+                                    pattern="^[А-ЯЁ][а-яё]+$"
+                                    required
+                                    data-title="Пожалуйста, введите имя в формате: Иван (Первая буква большая и только буквы и только латиница)"
+                                    data-empty="Ведите минимум один символ"
+                                    aria-errormessage="name-comment-errors"
+                                  />
+                                </div>
+                              </label>
+
+                              <p
+                                class="input-box__errors form__errors p4"
+                                id="name-comment-errors"
+                              ></p>
+                            </div>
+                          </div>
+
+                          <div class="rating">
+                            <p class="p2">Rate the project</p>
+
+                            <ul class="rating-stars">
+                              <li class="rating-stars__item">
+                                <span class="icon">
+                                  <svg viewBox="0 0 21 21">
+                                    <path
+                                      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
+                                      fill="currentColor"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                              </li>
+
+                              <li class="rating-stars__item">
+                                <span class="icon">
+                                  <svg viewBox="0 0 21 21">
+                                    <path
+                                      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
+                                      fill="currentColor"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                              </li>
+
+                              <li class="rating-stars__item">
+                                <span class="icon">
+                                  <svg viewBox="0 0 21 21">
+                                    <path
+                                      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
+                                      fill="currentColor"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                              </li>
+
+                              <li class="rating-stars__item">
+                                <span class="icon">
+                                  <svg viewBox="0 0 21 21">
+                                    <path
+                                      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
+                                      fill="currentColor"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                              </li>
+
+                              <li class="rating-stars__item">
+                                <span class="icon">
+                                  <svg viewBox="0 0 21 21">
+                                    <path
+                                      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
+                                      fill="currentColor"
+                                      stroke="currentColor"
+                                      stroke-linecap="round"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <footer class="comments-form__footer">
+                        <label class="check-simple form__item">
+                          <div class="check-simple__content">
+                            <div class="check-simple__custom">
+                              <input
+                                type="checkbox"
+                                required
+                                aria-errormessage="check-errors"
+                                data-empty="Обязательное поле"
+                              />
+
+                              <span></span>
+                            </div>
+
+                            <div class="check-simple__info">
+                              <p class="p3">
+                                You agree to the
+                                <a
+                                  title="privacy policy"
+                                  href="#"
+                                  aria-label="Перейти на privacy policy"
+                                  class="link-secondary"
+                                  >privacy policy</a
+                                >
+                                and
+                                <a
+                                  href="#"
+                                  title="personal data"
+                                  aria-label="Перейти на consent to the processing of personal data"
+                                  class="link-secondary"
+                                  >consent to the processing of personal data</a
+                                >
+                              </p>
+                            </div>
+                          </div>
+
+                          <div
+                            class="check-simple__errors p4 form__errors"
+                            id="check-errors"
+                          ></div>
+                        </label>
+
+                        <div class="comments-form__btns">
+                          <button
+                            class="button button--gray button--big"
+                            type="reset"
+                            data-block="comment-cancel"
+                          >
+                            <p class="p2 medium-font">Cancel</p>
+                          </button>
+
+                          <button
+                            class="button button--red button--big"
+                            type="submit"
+                            data-block="comment-post"
+                          >
+                            <p class="p2 medium-font">Post Comment</p>
+                          </button>
+                        </div>
+                      </footer>
+                    </form>
+                  </div>
+
+                  <div
+                    class="comments-box__details"
+                    data-block="comment-status"
+                  ></div>
+
+                  <div class="comments-box__items">
+                    <div class="comments-item">
+                      <header class="comments-item__header">
+                        <div class="comments-item__tags">
+                          <div class="comments-item__rating comments-item__tag">
+                            <p class="p3">4</p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#star-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+
+                          <div class="comments-item__author comments-item__tag">
+                            <p class="p2 semibold-font">David Lee</p>
+
+                            <time class="p3" datetime="2025-07-07"
+                              >07.07.2025</time
+                            >
+                          </div>
+                        </div>
+                      </header>
+
+                      <div class="comments-item__content">
+                        <div class="textbox">
+                          <p class="p3">
+                            The breakdown of costs and the comparison between
+                            buying and renting are very insightful. As someone
+                            considering property investment in Dubai, this guide
+                            provides a clear picture of what to expect
+                            financially.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comments-item">
+                      <header class="comments-item__header">
+                        <div class="comments-item__tags">
+                          <div class="comments-item__author comments-item__tag">
+                            <p class="p2 semibold-font">David Lee</p>
+
+                            <time class="p3" datetime="2025-07-07"
+                              >07.07.2025</time
+                            >
+                          </div>
+                        </div>
+                      </header>
+
+                      <div class="comments-item__content">
+                        <div class="textbox">
+                          <p class="p3">
+                            The breakdown of costs and the comparison between
+                            buying and renting are very insightful. As someone
+                            considering property investment in Dubai, this guide
+                            provides a clear picture of what to expect
+                            financially.
+                          </p>
+
+                          <p class="p3">
+                            The breakdown of costs and the comparison between
+                            buying and renting are very insightful. As someone
+                            considering property investment in Dubai, this guide
+                            provides a clear picture of what to expect
+                            financially.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comments-item">
+                      <header class="comments-item__header">
+                        <div class="comments-item__tags">
+                          <div class="comments-item__rating comments-item__tag">
+                            <p class="p3">4</p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#star-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+
+                          <div class="comments-item__author comments-item__tag">
+                            <p class="p2 semibold-font">David Lee</p>
+
+                            <time class="p3" datetime="2025-07-07"
+                              >07.07.2025</time
+                            >
+                          </div>
+                        </div>
+                      </header>
+
+                      <div class="comments-item__content">
+                        <div class="textbox">
+                          <p class="p3">
+                            The breakdown of costs and the comparison between
+                            buying and renting are very insightful. As someone
+                            considering property investment in Dubai, this guide
+                            provides a clear picture of what to expect
+                            financially.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="pagination">
+                  <div class="pagination-box pagination-box--space">
+                    <button
+                      class="button button--circle button--circle-big button--gray"
+                      type="button"
+                      aria-label="Перейти к пред странице"
+                      style="rotate: -180deg"
+                    >
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </button>
+
+                    <ul class="pagination-box__list">
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--dark button--cub"
+                          aria-label="Перейти на страницу 1"
+                        >
+                          1
+                        </button>
+                      </li>
+
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--gray button--cub"
+                          aria-label="Перейти на страницу 2"
+                        >
+                          2
+                        </button>
+                      </li>
+
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--gray button--cub"
+                          aria-label="Перейти на страницу 3"
+                        >
+                          3
+                        </button>
+                      </li>
+
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--gray button--cub"
+                          aria-label="Перейти на страницу 4"
+                        >
+                          4
+                        </button>
+                      </li>
+
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--gray button--cub"
+                          aria-label="Перейти на страницу 5"
+                        >
+                          5
+                        </button>
+                      </li>
+
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--gray button--cub"
+                          aria-label="Перейти на страницу 6"
+                        >
+                          6
+                        </button>
+                      </li>
+
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--gray button--cub"
+                          aria-label="Перейти на страницу 7"
+                        >
+                          7
+                        </button>
+                      </li>
+
+                      <li class="pagination-box__link">
+                        <button
+                          class="button button--gray button--cub"
+                          aria-label="Перейти на страницу 8"
+                        >
+                          8
+                        </button>
+                      </li>
+                    </ul>
+
+                    <button
+                      class="button button--circle button--circle-big button--gray"
+                      type="button"
+                      aria-label="Перейти к след странице"
+                    >
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-line-icon"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="banners-articles">
+          <div class="container container--small">
+            <div class="banners-articles__inner">
+              <div class="newsletter">
+                <header class="newsletter__header">
+                  <p class="h3">Why should you subscribe to our newsletter?</p>
+
+                  <div class="newsletter__tags">
+                    <div class="tag tag--big tag--dark-100">
+                      <p class="p1 medium-font">1 email per week</p>
+                    </div>
+
+                    <div class="tag tag--big tag--dark-200">
+                      <p class="p1 medium-font">
+                        Selection of exclusive objects
+                      </p>
+                    </div>
+
+                    <div class="tag tag--big tag--dark-300">
+                      <p class="p1 medium-font">Tips and tricks</p>
+                    </div>
+
+                    <div class="tag tag--big tag--dark-400">
+                      <p class="p1 medium-font">Analytics from our experts</p>
+                    </div>
+
+                    <div class="tag tag--big tag--dark-500">
+                      <p class="p1 medium-font">
+                        Access to closed online seminars
+                      </p>
+                    </div>
+                  </div>
+                </header>
+
+                <footer class="newsletter__footer">
+                  <form action="" class="form" novalidate>
+                    <label class="special-input form__item">
+                      <div class="special-input__info">
+                        <input
+                          type="email"
+                          placeholder="Enter your email"
+                          required
+                          pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
+                          data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
+                          data-empty="Ведите минимум один символ"
+                          aria-errormessage="email-errors"
+                        />
+                      </div>
+
+                      <div class="special-input__details">
+                        <button
+                          class="button button--big button--red button--bg-rad"
+                          type="submit"
+                        >
+                          Subscribe
+                        </button>
+                      </div>
+
+                      <div
+                        class="special-input__errors form__errors"
+                        id="email-errors"
+                      ></div>
+                    </label>
+                  </form>
+                </footer>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="swiper-box article swiper-box--pagination-bottom">
+          <div class="container container--small">
+            <div class="topBox topBox--small">
+              <header class="topBox__header">
+                <p class="h4">Popular articles and news</p>
+              </header>
+
+              <div class="article__content">
+                <div class="swiper-box__block">
+                  <div class="swiper swiper--articles">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Dubai Launches Ejari Rental Registration via
+                        WhatsApp in Major Digital Leap"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/one.webp   1x,
+                                  /img/gallery/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/one.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Dubai Launches Ejari Rental Registration via
+                              WhatsApp in Major Digital Leap
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4"
+                              style="color: var(--dark-color-600)"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Dubai Launches Ejari Rental Registration via
+                    WhatsApp in Major Digital Leap"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/two.webp   1x,
+                                  /img/gallery/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/two.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Dubai Launches Ejari Rental Registration via
+                              WhatsApp in Major Digital Leap
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4"
+                              style="color: var(--dark-color-600)"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Dubai Launches Ejari Rental Registration via
+                    WhatsApp in Major Digital Leap"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/three.webp   1x,
+                                  /img/gallery/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/three.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Dubai Launches Ejari Rental Registration via
+                              WhatsApp in Major Digital Leap
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4"
+                              style="color: var(--dark-color-600)"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Dubai Launches Ejari Rental Registration via
+                    WhatsApp in Major Digital Leap"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/three.webp   1x,
+                                  /img/gallery/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/three.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Dubai Launches Ejari Rental Registration via
+                              WhatsApp in Major Digital Leap
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4"
+                              style="color: var(--dark-color-600)"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -4424,27 +5126,33 @@
             </ul>
           </div>
 
-          <form class="footer-top__block footer-top__form">
+          <form class="footer-top__block footer-top__form form" novalidate>
             <p class="h5">Stay in touch</p>
 
             <div class="footer-top__inputs">
-              <label class="special-input">
+              <label class="special-input form__item">
                 <div class="special-input__info">
-                  <input type="email" placeholder="Enter your email" />
+                  <input
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
+                    data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
+                    data-empty="Ведите минимум один символ"
+                    aria-errormessage="email-errors"
+                  />
                 </div>
 
                 <div class="special-input__details">
                   <button
                     class="button button--big button--red button--bg-rad"
-                    type="button"
+                    type="submit"
                   >
                     Subscribe
                   </button>
                 </div>
 
-                <div class="special-input__errors">
-                  <p class="p3">Incorrect email</p>
-                </div>
+                <div class="special-input__errors form__errors" id="email-errors"></div>
               </label>
             </div>
           </form>
