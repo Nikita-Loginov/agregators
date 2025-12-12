@@ -43,4 +43,16 @@ export const SWIPERS = {
       },
     },
   },
+  ALSO_CARDS: {
+    selector: ".also-section .swiper--also",
+    breakpoint: 122300000000,
+    options: {
+      slidesPerView: 2,
+      spaceBetween: 32,
+      navigation : {
+        nextEl: '.also-section .arrow-swiper.next',
+        prevEl: '.also-section .arrow-swiper.prev',
+      }
+    },
+  },
 };

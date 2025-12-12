@@ -12,6 +12,9 @@ const swipers = [
   {
     ...SWIPERS.ARTICLE_CARDS,
   },
+  {
+    ...SWIPERS.ALSO_CARDS,
+  },
 ];
 
 const handleGlobalClick = (e) => {

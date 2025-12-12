@@ -25,7 +25,7 @@
 
     &__img-box {
       min-height: 220px;
-      max-height: calculate-clamp(220px, 230px, 767px, 480px);
+      height: calculate-clamp(220px, 230px, 767px, 480px);
     }
   }
 }
@@ -36,6 +36,7 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   border: 1px solid var(--gray-color-400);
+  height: 100%;
 
   &--column {
     @include column-item;
@@ -161,6 +162,14 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    .button {
+      align-items: center;
+      * {
+        line-height: 1;
+        text-align: left;
+      }
+    }
   }
 
   &__logo {

@@ -34,15 +34,26 @@
     ) {
     display: none;
   }
+}
 
-  .arrow-swiper {
-    &.prev {
-      rotate: -180deg;
-    }
-
-    &.swiper-button-disabled {
-      opacity: 0.7;
-      pointer-events: none;
-    }
+.swiper-box {
+  &:has(.arrow-swiper.none.prev.swiper-button-disabled):has(
+      .arrow-swiper.none.next.swiper-button-disabled
+    ) {
+      .arrow-swiper.none {
+        display: none;
+      }
   }
+}
+
+.arrow-swiper {
+  &.prev {
+    rotate: -180deg;
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
 }
