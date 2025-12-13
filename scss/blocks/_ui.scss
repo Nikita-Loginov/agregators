@@ -1,0 +1,33 @@
+.ui {
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #eeeeee;
+    transition: all 0.5s;
+    padding-inline: 10px;
+    border-radius: var(--radius-xl);
+  }
+
+  &__items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+.accordeon {
+  &__item {
+    overflow: hidden;
+    &.active {
+      .accordeon__answer {
+        padding: 10px 0 0 0;
+      }
+
+      .ui__box {
+        padding-block: 10px;
+      }
+    }
+  }
+}
