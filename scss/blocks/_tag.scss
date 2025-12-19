@@ -11,6 +11,17 @@
   &--big {
     border-radius: var(--radius-2xl);
     padding: 4px 16px;
+    min-height: 42px;
+  }
+
+  &--small-radius {
+    border-radius: var(--radius-md);
+  }
+
+  &--small {
+    min-height: 26px;
+    padding: 2px 12px;
+    border-radius: var(--radius-2xl);
   }
 
   &--gray-200 {
@@ -46,9 +57,28 @@
     color: var(--white-color);
   }
 
+  &--secondary-100 {
+    background-color: var(--secondary-color-100);
+    color: var(--secondary-color-200);
+  }
+
+  &--secondary-200 {
+    background-color: var(--secondary-color-200);
+    color: var(--secondary-color-100);
+  }
+
   &--secondary-400 {
     background-color: var(--secondary-color-400);
     color: var(--white-color);
+  }
+
+  &--noBg {
+    background-color: transparent;
+    border: 1px solid var(--gray-color-400);
+  }
+
+  &--border-gray-500 {
+    border-color: var(--gray-color-500);
   }
 
   .icon {
@@ -71,10 +101,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 0;
 
     .icon {
       width: 20px;
       height: 20px;
+    }
+  }
+
+  &--circle-small {
+    width: 26px;
+    height: 26px;
+
+    .icon {
+      width: 16px;
+      height: 16px;
     }
   }
 }

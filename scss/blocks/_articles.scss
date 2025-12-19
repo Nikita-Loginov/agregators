@@ -1,0 +1,7 @@
+.articles {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-blocks);
+  }
+}

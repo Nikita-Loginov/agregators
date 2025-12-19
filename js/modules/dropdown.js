@@ -121,4 +121,20 @@ export const firstActiveText = () => {
 };
 
 window.addEventListener("resize", () => closeAllDropdowns());
-window.addEventListener("scroll", () => closeAllDropdowns(), true);
+window.addEventListener(
+  "scroll",
+  (e) => {
+    if (!activeDropdown) return;
+
+    let target = e.target;
+
+    if (
+      target === document ||
+      target === document.documentElement ||
+      target === document.body
+    ) {
+      closeAllDropdowns();
+    }
+  },
+  true
+);

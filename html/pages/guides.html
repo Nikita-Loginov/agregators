@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "guides", "links" :
+  ["./css/guides.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail">
+        <div class="top-page">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Articles</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="breadcrumbs__circle">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-circle-icon"></use>
+                      </svg>
+                    </div>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="guides">
+            <div class="container">
+              <div class="topBox topBox--middle">
+                <header class="topBox__header">
+                  <h1 class="h2">Guides</h1>
+
+                  <div class="topBox__header-content">
+                    <div
+                      class="dropdown dropdown--select input-box"
+                      style="min-width: 190px"
+                    >
+                      <button
+                        class="dropdown__toggle input-box__info"
+                        type="button"
+                      >
+                        <p class="dropdown__active p2"></p>
+
+                        <span class="icon arrow">
+                          <svg>
+                            <use xlink:href="#arrow-bottom-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <div class="dropdown__content">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__link">
+                            <span
+                              class="dropdown__item active dropdown-item-close"
+                            >
+                              <span class="p2">Sort 1</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Sort 2</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Sort 3</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Sort 4</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Sort 5</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Sort 6</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Sort 7</span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="input-box" style="min-width: 286px">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <input
+                            type="search"
+                            placeholder="Find the guide"
+                            name="search"
+                          />
+
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#search-icon"></use>
+                            </svg>
+                          </span>
+                        </div>
+                      </label>
+
+                      <p class="input-box__errors p4"></p>
+                    </div>
+                  </div>
+                </header>
+
+                <div class="guides__inner">
+                  <div class="guides__content">
+                    <div class="goods-items-block">
+                      <div class="goods-items-block__boxs goods-items-block__boxs--grid">
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/one.webp   1x,
+                                    /img/guides/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/one.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Business Bay</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/two.webp   1x,
+                                    /img/guides/two2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/two.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Yas Island</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/three.webp   1x,
+                                    /img/guides/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/three.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Downtown Dubai</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/four.webp   1x,
+                                    /img/guides/four2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/four.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Saadiyat Island</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/one.webp   1x,
+                                    /img/guides/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/one.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Business Bay</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/two.webp   1x,
+                                    /img/guides/two2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/two.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Yas Island</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/three.webp   1x,
+                                    /img/guides/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/three.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Downtown Dubai</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к гайду"
+                          title="Business Bay"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/four.webp   1x,
+                                    /img/guides/four2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/four.webp"
+                                  alt="фотография гайда"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Saadiyat Island</p>
+
+                            <p
+                              class="p3 medium-font"
+                              style="color: var(--secondary-color-100)"
+                            >
+                              4414 <span class="regular-font">properties</span>
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+
+                      @@include('../modules/pagination.html')
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html') @@include('../modals/request.html')
+      @@include('../modals/success.html')
+      @@include('../modals/successRequest.html')
+    </div>
+  </body>
+</html>

@@ -32,6 +32,7 @@
     grid-template-columns: repeat(3, 1fr);
     gap: calculate-clamp(8px, 16px, 1024px, 767px);
     padding-left: var(--padding-left-title);
+    align-items: flex-start;
 
     &--one-grid {
       display: flex;

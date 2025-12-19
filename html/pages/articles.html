@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Articles", "links" :
+  ["./css/articles.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail">
+        <div class="top-page">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Articles</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="breadcrumbs__circle">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-circle-icon"></use>
+                      </svg>
+                    </div>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="articles">
+            <div class="container">
+              <div class="topBox topBox--middle">
+                <header class="topBox__header">
+                  <h1 class="h2">Articles</h1>
+
+                  <div class="topBox__header-content">
+                    <div
+                      class="dropdown dropdown--select input-box"
+                      style="min-width: 200px"
+                    >
+                      <button
+                        class="dropdown__toggle input-box__info"
+                        type="button"
+                      >
+                        <p class="dropdown__active p2"></p>
+
+                        <span class="icon arrow">
+                          <svg>
+                            <use xlink:href="#arrow-bottom-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <div class="dropdown__content">
+                        <ul class="dropdown__list">
+                          <li class="dropdown__link">
+                            <span
+                              class="dropdown__item active dropdown-item-close"
+                            >
+                              <span class="p2">Tags 1</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Tags 2</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Tags 3</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Tags 4</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Tags 5</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Tags 6</span>
+                            </span>
+                          </li>
+
+                          <li class="dropdown__link">
+                            <span class="dropdown__item dropdown-item-close">
+                              <span class="p2">Tags 7</span>
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="input-box" style="min-width: 280px">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <input
+                            type="search"
+                            placeholder="Find the topic"
+                            name="search"
+                          />
+
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#search-icon"></use>
+                            </svg>
+                          </span>
+                        </div>
+                      </label>
+
+                      <p class="input-box__errors p4"></p>
+                    </div>
+                  </div>
+                </header>
+
+                <div class="articles__inner detail-block">
+                  <div class="articles__content">
+                    <div class="goods-items-block">
+                      <div class="goods-items-block__boxs">
+                        <div class="good-item good-item--midlle">
+                          <div class="good-item__img-box">
+                            <div class="good-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/goods/one.webp   1x,
+                                    /img/goods/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/goods/one.webp"
+                                  alt="фотография Apartment"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <p class="h6 text-secondary-100 medium-font">
+                                The UAE Golden Visa: All the Straightforward
+                                Answers You Need
+                              </p>
+                            </header>
+
+                            <div class="good-item__content-info">
+                              <div class="good-item__badges">
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#calendar-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <time
+                                      class="p3 medium-font"
+                                      datetime="2024-09-18"
+                                      >18.09.2024</time
+                                    >
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#time-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">
+                                      Reading time: 5 minutes
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#eye-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">5621</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-item__tags">
+                                <div
+                                  class="tag tag--circle tag--circle-small tag--secondary-200"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#label-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Real Estate</p>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Buying</p>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Dubai</p>
+                                </div>
+                              </div>
+
+                              <div class="textbox">
+                                <p class="p2">
+                                  It’s no wonder the UAE continues topping the
+                                  charts for relocation hotspots in 2025. The
+                                  region is rolling out the red carpet with
+                                  sky-high safety ratings—Numbeo calls it number
+                                  one—plus zero personal.
+                                </p>
+                              </div>
+                            </div>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <a
+                                  href="#"
+                                  title="Read the article"
+                                  aria-label="Перейти к чтению статьи"
+                                  class="button button--secondary"
+                                >
+                                  <span class="p2 medium-font"
+                                    >Read the article</span
+                                  >
+                                </a>
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="good-item good-item--midlle">
+                          <div class="good-item__img-box">
+                            <div class="good-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/goods/one.webp   1x,
+                                    /img/goods/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/goods/one.webp"
+                                  alt="фотография Apartment"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <p class="h6 text-secondary-100 medium-font">
+                                Freelancer visa
+                              </p>
+                            </header>
+
+                            <div class="good-item__content-info">
+                              <div class="good-item__badges">
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#calendar-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <time
+                                      class="p3 medium-font"
+                                      datetime="2024-09-18"
+                                      >18.09.2024</time
+                                    >
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#time-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">
+                                      Reading time: 5 minutes
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#eye-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">5621</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-item__tags">
+                                <div
+                                  class="tag tag--circle tag--circle-small tag--secondary-200"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#label-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Real Estate</p>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Buying</p>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Dubai</p>
+                                </div>
+                              </div>
+
+                              <div class="textbox">
+                                <p class="p2">
+                                  There is no separate visa for freelancers in
+                                  the United Arab Emirates; however, remote
+                                  specialists can legally work by obtaining one
+                                  of two categories of residence permit – the
+                                  Green Visa or the Virtual Work Permit. The
+                                  Green Visa is issued for 5 years, does not
+                                  require a
+                                </p>
+                              </div>
+                            </div>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <a
+                                  href="#"
+                                  title="Read the article"
+                                  aria-label="Перейти к чтению статьи"
+                                  class="button button--secondary"
+                                >
+                                  <span class="p2 medium-font"
+                                    >Read the article</span
+                                  >
+                                </a>
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div class="good-item good-item--midlle">
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <p class="h6 text-secondary-100 medium-font">
+                                UAE Property Sales: H1 2025 — Record-Breaking,
+                                Red-Hot Market Action
+                              </p>
+                            </header>
+
+                            <div class="good-item__content-info">
+                              <div class="good-item__badges">
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#calendar-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <time
+                                      class="p3 medium-font"
+                                      datetime="2024-09-18"
+                                      >18.09.2024</time
+                                    >
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#time-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">
+                                      Reading time: 5 minutes
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#eye-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">5621</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-item__tags">
+                                <div
+                                  class="tag tag--circle tag--circle-small tag--secondary-200"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#label-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Real Estate</p>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Buying</p>
+                                </div>
+
+                                <div class="tag tag--small tag--noBg">
+                                  <p class="p3 medium-font">Dubai</p>
+                                </div>
+                              </div>
+
+                              <div class="textbox">
+                                <p class="p2">
+                                  There is no separate visa for freelancers in
+                                  the United Arab Emirates; however, remote
+                                  specialists can legally work by obtaining one
+                                  of two categories of residence permit – the
+                                  Green Visa or the Virtual Work Permit. The
+                                  Green Visa is issued for 5 years, does not
+                                  require a
+                                </p>
+                              </div>
+                            </div>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <a
+                                  href="#"
+                                  title="Read the article"
+                                  aria-label="Перейти к чтению статьи"
+                                  class="button button--secondary"
+                                >
+                                  <span class="p2 medium-font"
+                                    >Read the article</span
+                                  >
+                                </a>
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+
+                        <div
+                          class="good-item good-item--midlle good-item--secondary-200"
+                        >
+                          <div class="good-item__img-box">
+                            <div class="good-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/goods/one.webp   1x,
+                                    /img/goods/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/goods/one.webp"
+                                  alt="фотография Apartment"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <p class="h6 text-secondary-100 medium-font">
+                                Affiliate content
+                              </p>
+                            </header>
+
+                            <div class="good-item__content-info">
+                              <div class="good-item__badges">
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#calendar-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <time
+                                      class="p3 medium-font"
+                                      datetime="2024-09-18"
+                                      >18.09.2024</time
+                                    >
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#time-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">
+                                      Reading time: 5 minutes
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="badge-decor badge-decor--big">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#eye-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge-decor__content">
+                                    <p class="p3 medium-font">5621</p>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-item__tags">
+                                <div
+                                  class="tag tag--circle tag--circle-small tag--secondary-100"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#label-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+
+                                <div
+                                  class="tag tag--small tag--noBg tag--border-gray-500"
+                                >
+                                  <p class="p3 medium-font">Real Estate</p>
+                                </div>
+
+                                <div
+                                  class="tag tag--small tag--noBg tag--border-gray-500"
+                                >
+                                  <p class="p3 medium-font">Buying</p>
+                                </div>
+
+                                <div
+                                  class="tag tag--small tag--noBg tag--border-gray-500"
+                                >
+                                  <p class="p3 medium-font">Dubai</p>
+                                </div>
+                              </div>
+
+                              <div class="textbox">
+                                <p class="p2">
+                                  There is no separate visa for freelancers in
+                                  the United Arab Emirates; however, remote
+                                  specialists can legally work by obtaining one
+                                  of two categories of residence permit – the
+                                  Green Visa or the Virtual Work Permit. The
+                                  Green Visa is issued for 5 years, does not
+                                  require a
+                                </p>
+                              </div>
+                            </div>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <a
+                                  href="#"
+                                  title="Read the article"
+                                  aria-label="Перейти к чтению статьи"
+                                  class="button button--blueviolet"
+                                >
+                                  <span class="p2 medium-font"
+                                    >Read the article</span
+                                  >
+                                </a>
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
+                      @@include('../modules/pagination.html')
+                    </div>
+
+                    @@include('../modules/newsletter.html')
+
+                    <div class="text-block">
+                      <h2 class="h4">Text Block</h2>
+
+                      <div class="textbox">
+                        <p class="p1">
+                          A wonderful serenity has taken possession of my entire
+                          soul, like these sweet mornings of spring which I
+                          enjoy with my whole heart. I am alone, and feel the
+                          charm of existence in this spot, which was created for
+                          the bliss of souls like mine. I am so happy, my dear
+                          friend, so absorbed in the exquisite sense of mere
+                          tranquil existence, that I neglect my talents. I
+                          should be incapable of drawing a single stroke at the
+                          present moment; and yet I feel that I never was a
+                          greater artist than now. When, while the lovely valley
+                          teems with vapour around me, and the meridian
+                        </p>
+
+                        <p class="p1">
+                          A wonderful serenity has taken possession of my entire
+                          soul, like these sweet mornings of spring which I
+                          enjoy with my whole heart. I am alone, and feel the
+                          charm of existence in this spot, which was created for
+                          the bliss of souls like mine. I am so happy, my dear
+                          friend, so absorbed in the exquisite sense of mere
+                          tranquil existence, that I neglect my talents. I
+                          should be incapable of drawing a single stroke at the
+                          present moment; and yet I feel that I never was a
+                          greater artist than now. When, while the lovely valley
+                          teems with vapour around me, and the meridian
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="detail-block__banners">
+                    @@include('../modules/quick.html')
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html') @@include('../modals/request.html')
+      @@include('../modals/success.html')
+      @@include('../modals/successRequest.html')
+    </div>
+
+    <script src="/js/articles.js" type="module"></script>
+  </body>
+</html>

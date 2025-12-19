@@ -169,6 +169,8 @@
     background-color: transparent;
     min-height: 0;
   }
+  
+
 
   &--redBorder {
     border: 1px solid var(--primary-color-100);
@@ -193,6 +195,10 @@
       background-color: var(--secondary-color-100);
       color: var(--white-color);
     }
+  }
+
+  &--gray-300-border {
+    border-color: var(--gray-color-300);
   }
 
   &--dark {
@@ -338,9 +344,9 @@
 
   &--cub {
     padding: 0;
-    width: 32px;
+    width: 36px;
     height: 36px;
-    border-radius: var(--radius-base);
+    border-radius: var(--radius-md);
     flex-shrink: 0;
     min-height: 0;
   }

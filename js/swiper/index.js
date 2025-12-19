@@ -47,8 +47,8 @@ export const SWIPERS = {
     selector: ".also-section .swiper--also",
     breakpoint: 122300000000,
     options: {
-      slidesPerView: 2,
-      spaceBetween: 32,
+      slidesPerView: 4,
+      spaceBetween: 14,
       navigation : {
         nextEl: '.also-section .arrow-swiper.next',
         prevEl: '.also-section .arrow-swiper.prev',

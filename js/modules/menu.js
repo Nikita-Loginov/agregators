@@ -34,20 +34,19 @@ const closeMenu = (menu) => {
 };
 
 const closeMenuOnOutsideClick = (e) => {
-    const { target } = e;
-    
-    const openMenus = document.querySelectorAll(".menu.open");
-    
-    openMenus.forEach(menu => {
-      if (!menu.contains(target) && !target.closest(".menu__burger")) {
-        closeMenu(menu);
-      }
-    });
-  };
-  
+  const { target } = e;
+
+  const openMenus = document.querySelectorAll(".menu.open");
+
+  openMenus.forEach((menu) => {
+    if (!menu.contains(target) && !target.closest(".menu__burger")) {
+      closeMenu(menu);
+    }
+  });
+};
 
 export const initMenu = (e) => {
   toggleMenu(e);
   closeMenuOnItemClick(e);
-  closeMenuOnOutsideClick(e)
+  closeMenuOnOutsideClick(e);
 };

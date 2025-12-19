@@ -7,6 +7,23 @@
   border-radius: var(--radius-xl);
   background-color: var(--gray-color-200);
 
+  &--row {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   align-items: center;
+   gap: 28px;
+
+   .newsletter {
+    &__tags {
+      gap: 12px;
+    }
+
+    &__header {
+      gap: 16px;
+    }
+   }
+  }
+
   &__header,
   &__footer {
     display: flex;

@@ -15,9 +15,10 @@
     min-height: 48px;
     border-radius: var(--radius-md);
     border: 1px solid var(--gray-color-400);
-    padding: 12px 16px;
+    padding: 10px 16px;
     color: var(--dark-color-500);
     background-color: var(--white-color);
+    justify-content: space-between;
 
     .icon {
       width: 24px;
@@ -102,6 +103,15 @@
     .input-box {
       &__info {
         min-height: 52px;
+      }
+    }
+  }
+
+  &--little {
+    .input-box {
+      &__info {
+        min-height: 36px;
+        padding: 4012px;
       }
     }
   }
