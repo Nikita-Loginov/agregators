@@ -49,6 +49,23 @@
     flex-direction: column;
   }
 
+  .check {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: var(--secondary-color-100);
+    color: var(--white-color);
+
+    .icon {
+      width: 7px;
+      height: 6px;
+    }
+  }
+
   &__item {
     padding: 4px 10px;
     display: flex;
@@ -65,7 +82,22 @@
     }
   }
 
-  @media(max-width:479px) {
+  &--price {
+    &:has(.input-box [data-type="price_min"].has-value):has(
+        .input-box [data-type="price_max"].has-value
+      ) {
+      .dropdown__btn {
+        border-color: var(--secondary-color-100);
+        color: var(--secondary-color-100);
+
+        .check {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 479px) {
     &__toggle {
       justify-content: space-between;
     }

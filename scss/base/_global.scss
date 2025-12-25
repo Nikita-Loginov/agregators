@@ -94,6 +94,16 @@ body {
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  font-size: 20px;
+
+  .kit-icon {
+    font-size: 100%;
+    color: currentColor;
+  }
+
+  &--big {
+    font-size: 24px;
+  }
 }
 
 .textbox {
@@ -254,4 +264,15 @@ body {
     flex-direction: column;
     gap: 20px;
   }
+}
+
+.decor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: var(--gray-color-200);
+  padding: 2px 8px;
+  border-radius: var(--radius-base);
+  color: var(--secondary-color-300);
 }

@@ -1,0 +1,22 @@
+.city-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-wrap: auto;
+
+  &__header,
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__header {
+    color: var(--dark-color-500);
+  }
+
+  &__footer {
+    color: var(--dark-color-600);
+  }
+}

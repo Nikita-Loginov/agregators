@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Каталог", "links" :
-  ["./css/catalogy.css", "./css/lib/swiper.min.css"] })
+  ["./css/catalogy.css", "./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -13,83 +14,108 @@
               <div class="filter">
                 <div class="filter__box">
                   <div class="filter__items">
-                    <div class="filter__item">
-                      <div class="input-box">
-                        <label class="input-box__content">
-                          <div class="input-box__info">
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#search-icon"></use>
-                              </svg>
-                            </span>
-
-                            <input
-                              type="search"
-                              placeholder="Enter location"
-                              name="search"
-                            />
-                          </div>
-                        </label>
-
-                        <p class="input-box__errors p4">dsljfhdsl</p>
-                      </div>
-                    </div>
-
-                    <div class="filter__item">
-                      <div class="dropdown dropdown--select input-box">
-                        <button
-                          class="dropdown__toggle input-box__info"
-                          type="button"
+                    <div
+                      class="filter__item select-box select-box--big select-box--search with-icon"
+                      data-icon="search"
+                    >
+                      <select
+                        id="search-select"
+                        data-placeholder="Enter location"
+                        multiple
+                        data-search="true"
+                      >
+                        <option value="">Enter location</option>
+                        <option
+                          value="1"
+                          data-type="city"
+                          data-tag="City"
+                          data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                          data-short-desc="Dubai, UAE"
                         >
-                          <p class="dropdown__active p2"></p>
-
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-
-                        <div class="dropdown__content">
-                          <ul class="dropdown__list">
-                            <li class="dropdown__link">
-                              <span
-                                class="dropdown__item active dropdown-item-close"
-                              >
-                                <span class="p2">Some 1</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Some 2</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Some 3</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Some 4</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Some 5</span>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
+                          Dubai
+                        </option>
+                        <option
+                          value="2"
+                          data-type="city"
+                          data-tag="City"
+                          data-desc="Central Business District, Moscow city, Russia"
+                          data-short-desc="Moscow, Russia"
+                        >
+                          Moscow
+                        </option>
+                        <option
+                          value="3"
+                          data-type="city"
+                          data-tag="City"
+                          data-desc="Manhattan borough, New York city, USA"
+                          data-short-desc="New York, USA"
+                        >
+                          New York
+                        </option>
+                        <option
+                          value="4"
+                          data-type="country"
+                          data-tag="Country"
+                          data-desc="Federal republic in Central Europe with rich history and culture"
+                          data-short-desc="Germany"
+                        >
+                          Germany
+                        </option>
+                        <option
+                          value="5"
+                          data-type="country"
+                          data-tag="Country"
+                          data-desc="Island nation in East Asia known for technology and traditions"
+                          data-short-desc="Japan"
+                        >
+                          Japan
+                        </option>
+                        <option
+                          value="6"
+                          data-type="region"
+                          data-tag="Region"
+                          data-desc="Southeastern region of France on the Mediterranean coast"
+                          data-short-desc="Provence, France"
+                        >
+                          Provence
+                        </option>
+                        <option
+                          value="7"
+                          data-type="region"
+                          data-tag="Region"
+                          data-desc="Northern Italian region known for cuisine and automotive industry"
+                          data-short-desc="Emilia-Romagna, Italy"
+                        >
+                          Emilia-Romagna
+                        </option>
+                        <option
+                          value="8"
+                          data-type="district"
+                          data-tag="District"
+                          data-desc="Historic central district of London with government buildings"
+                          data-short-desc="Westminster, London"
+                        >
+                          Westminster
+                        </option>
+                        <option
+                          value="9"
+                          data-type="district"
+                          data-tag="District"
+                          data-desc="Fashionable district in central Paris with luxury boutiques"
+                          data-short-desc="Champs-Élysées, Paris"
+                        >
+                          Champs-Élysées
+                        </option>
+                      </select>
                     </div>
-                  </div>
 
-                  <div class="filter__items scroll-max">
+                    <div class="filter__item select-box select-box--words">
+                      <select id="select1">
+                        <option value="1" selected>Buy</option>
+                        <option value="2">Rent</option>
+                      </select>
+                    </div>
+
                     <div class="filter__item">
                       <div class="checkbox-box">
                         <label class="check">
@@ -118,13 +144,65 @@
                       </div>
                     </div>
 
+                    <div
+                      class="filter__item select-box select-box--words"
+                      data-placeholder="Property type"
+                    >
+                      <select id="select2">
+                        <option value="">Property type</option>
+                        <option value="1">Apartment</option>
+                        <option value="2">Penthouse</option>
+                        <option value="3">Duplex</option>
+                        <option value="4">
+                          Hotel Apartment Hotel Apartment
+                        </option>
+                      </select>
+                    </div>
+
+                    <div
+                      class="filter__item select-box select-box--words select-box--check"
+                      data-placeholder="Beds & Baths"
+                    >
+                      <select id="select3" multiple>
+                        <option value="">Beds & Baths</option>
+                        <option value="beds-studio" data-group="beds">
+                          Studio
+                        </option>
+                        <option value="beds-1" data-group="beds">1</option>
+                        <option value="beds-2" data-group="beds">2</option>
+                        <option value="beds-3" data-group="beds">3</option>
+                        <option value="beds-4" data-group="beds">4</option>
+                        <option value="beds-5" data-group="beds">5</option>
+                        <option value="beds-6" data-group="beds">6</option>
+                        <option value="beds-7" data-group="beds">7</option>
+                        <option value="beds-8" data-group="beds">8</option>
+                        <option value="beds-9" data-group="beds">9</option>
+                        <option value="beds-10" data-group="beds">10+</option>
+
+                        <option value="baths-1" data-group="baths">1</option>
+                        <option value="baths-2" data-group="baths">2</option>
+                        <option value="baths-3" data-group="baths">3</option>
+                        <option value="baths-4" data-group="baths">4</option>
+                        <option value="baths-5" data-group="baths">5</option>
+                        <option value="baths-6" data-group="baths">6+</option>
+                      </select>
+                    </div>
+
                     <div class="filter__item">
-                      <div class="dropdown dropdown--select input-box">
+                      <div class="dropdown dropdown--price input-box">
                         <button
-                          class="dropdown__toggle input-box__info"
+                          class="input-box__info dropdown__btn"
                           type="button"
                         >
-                          <p class="dropdown__active p2"></p>
+                          <div class="check">
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#check-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+
+                          <p class="p2">Price</p>
 
                           <span class="icon arrow">
                             <svg>
@@ -133,123 +211,65 @@
                           </span>
                         </button>
 
-                        <div class="dropdown__content">
-                          <ul class="dropdown__list">
-                            <li class="dropdown__link">
-                              <span
-                                class="dropdown__item active dropdown-item-close"
-                              >
-                                <span class="p2">Type 1</span>
-                              </span>
-                            </li>
+                        <div class="dropdown__content popup price-popup">
+                          <div class="price-popup__content">
+                            <p class="p2 semibold-font">Price range, AED</p>
 
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Type 2</span>
-                              </span>
-                            </li>
+                            <div class="price-popup__items">
+                              <div class="input-box">
+                                <label class="input-box__content">
+                                  <div class="input-box__info">
+                                    <div class="decor p2">Min</div>
 
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Type 3</span>
-                              </span>
-                            </li>
-                          </ul>
+                                    <input
+                                      placeholder="0"
+                                      type="number"
+                                      name="price_min"
+                                      min="0"
+                                      max="10000"
+                                      data-type="price_min"
+                                    />
+                                  </div>
+                                </label>
+                              </div>
+
+                              <div class="input-box">
+                                <label class="input-box__content">
+                                  <div class="input-box__info">
+                                    <div class="decor p2">Max</div>
+
+                                    <input
+                                      placeholder="∞"
+                                      type="number"
+                                      name="price_max"
+                                      min="0"
+                                      max="10000"
+                                      data-type="price_max"
+                                    />
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
 
                     <div class="filter__item">
-                      <div class="dropdown dropdown--select input-box">
-                        <button
-                          class="dropdown__toggle input-box__info"
-                          type="button"
-                        >
-                          <p class="dropdown__active p2"></p>
-
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-
-                        <div class="dropdown__content">
-                          <ul class="dropdown__list">
-                            <li class="dropdown__link">
-                              <span
-                                class="dropdown__item active dropdown-item-close"
-                              >
-                                <span class="p2">Beds & Baths 1</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Beds & Baths 2</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Beds & Baths 3</span>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="filter__item">
-                      <div class="dropdown dropdown--select input-box">
-                        <button
-                          class="dropdown__toggle input-box__info"
-                          type="button"
-                        >
-                          <p class="dropdown__active p2"></p>
-
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-
-                        <div class="dropdown__content">
-                          <ul class="dropdown__list">
-                            <li class="dropdown__link">
-                              <span
-                                class="dropdown__item active dropdown-item-close"
-                              >
-                                <span class="p2">Price 1</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Price 2</span>
-                              </span>
-                            </li>
-
-                            <li class="dropdown__link">
-                              <span class="dropdown__item dropdown-item-close">
-                                <span class="p2">Price 3</span>
-                              </span>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="filter__item">
-                      <button class="button button--gray button--big">
-                        More filters
+                      <button
+                        type="button"
+                        class="button button--gray button--big button--big-base"
+                      >
+                        <p class="p2 medium-font">More filters</p>
                       </button>
                     </div>
 
                     <div class="filter__item">
-                      <button class="button button--red button--big">
-                        More filters
+                      <button
+                        type="button"
+                        class="button button--red button--big button--big-base"
+                      >
+                        <p class="p2 medium-font">Apply</p>
                       </button>
                     </div>
                   </div>
@@ -284,7 +304,7 @@
                     </button>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
               <header class="catalogy__header">
                 <div class="breadcrumbs">
@@ -334,69 +354,15 @@
                   <div class="catalogy__filters-block">
                     <div class="catalogy__top">
                       <div class="catalogy__filters">
-                        <div class="dropdown dropdown--select input-box">
-                          <button
-                            class="dropdown__toggle input-box__info"
-                            type="button"
-                          >
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#filter-icon"></use>
-                              </svg>
-                            </span>
-
-                            <p class="dropdown__active p2"></p>
-
-                            <span class="icon arrow">
-                              <svg>
-                                <use xlink:href="#arrow-bottom-icon"></use>
-                              </svg>
-                            </span>
-                          </button>
-
-                          <div class="dropdown__content">
-                            <ul class="dropdown__list">
-                              <li class="dropdown__link">
-                                <span
-                                  class="dropdown__item active dropdown-item-close"
-                                >
-                                  <span class="p2">Popular 1</span>
-                                </span>
-                              </li>
-
-                              <li class="dropdown__link">
-                                <span
-                                  class="dropdown__item dropdown-item-close"
-                                >
-                                  <span class="p2">Popular 2</span>
-                                </span>
-                              </li>
-
-                              <li class="dropdown__link">
-                                <span
-                                  class="dropdown__item dropdown-item-close"
-                                >
-                                  <span class="p2">Popular 3</span>
-                                </span>
-                              </li>
-
-                              <li class="dropdown__link">
-                                <span
-                                  class="dropdown__item dropdown-item-close"
-                                >
-                                  <span class="p2">Popular 4</span>
-                                </span>
-                              </li>
-
-                              <li class="dropdown__link">
-                                <span
-                                  class="dropdown__item dropdown-item-close"
-                                >
-                                  <span class="p2">Popular 5</span>
-                                </span>
-                              </li>
-                            </ul>
-                          </div>
+                        <div
+                          class="select-box select-box--middle select-box--words with-icon"
+                          data-icon="sort"
+                        >
+                          <select id="select5">
+                            <option value="">Sorted</option>
+                            <option value="1">Popular</option>
+                            <option value="2">Price up</option>
+                          </select>
                         </div>
 
                         <div class="checkbox-box">
@@ -628,7 +594,8 @@
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
                                 <button
-                                  aria-label="Написать сообщение на почту" style="padding-inline: 20px"
+                                  aria-label="Написать сообщение на почту"
+                                  style="padding-inline: 20px"
                                   class="button button--gray"
                                 >
                                   <span class="icon">
@@ -865,7 +832,8 @@
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
                                 <button
-                                  aria-label="Написать сообщение на почту" style="padding-inline: 20px"
+                                  aria-label="Написать сообщение на почту"
+                                  style="padding-inline: 20px"
                                   class="button button--gray"
                                 >
                                   <span class="icon">
@@ -1063,7 +1031,8 @@
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
                                 <button
-                                  aria-label="Написать сообщение на почту" style="padding-inline: 20px"
+                                  aria-label="Написать сообщение на почту"
+                                  style="padding-inline: 20px"
                                   class="button button--gray"
                                 >
                                   <span class="icon">
@@ -1293,7 +1262,8 @@
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
                                 <button
-                                  aria-label="Написать сообщение на почту" style="padding-inline: 20px"
+                                  aria-label="Написать сообщение на почту"
+                                  style="padding-inline: 20px"
                                   class="button button--gray"
                                 >
                                   <span class="icon">
@@ -1523,7 +1493,8 @@
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
                                 <button
-                                  aria-label="Написать сообщение на почту" style="padding-inline: 20px"
+                                  aria-label="Написать сообщение на почту"
+                                  style="padding-inline: 20px"
                                   class="button button--gray"
                                 >
                                   <span class="icon">
@@ -1760,7 +1731,8 @@
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
                                 <button
-                                  aria-label="Написать сообщение на почту" style="padding-inline: 20px"
+                                  aria-label="Написать сообщение на почту"
+                                  style="padding-inline: 20px"
                                   class="button button--gray"
                                 >
                                   <span class="icon">
@@ -1939,130 +1911,8 @@
                       </div>
                     </div>
 
-                    <div class="pagination">
-                      <div class="pagination-box">
-                        <button
-                          class="button button--circle button--circle-big button--gray"
-                          type="button"
-                          aria-label="Перейти к пред странице"
-                          style="rotate: -180deg"
-                        >
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#arrow-line-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-
-                        <ul class="pagination-box__list">
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--dark button--cub"
-                              aria-label="Перейти на страницу 1"
-                            >
-                              1
-                            </button>
-                          </li>
-
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--gray button--cub"
-                              aria-label="Перейти на страницу 2"
-                            >
-                              2
-                            </button>
-                          </li>
-
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--gray button--cub"
-                              aria-label="Перейти на страницу 3"
-                            >
-                              3
-                            </button>
-                          </li>
-
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--gray button--cub"
-                              aria-label="Перейти на страницу 4"
-                            >
-                              4
-                            </button>
-                          </li>
-
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--gray button--cub"
-                              aria-label="Перейти на страницу 5"
-                            >
-                              5
-                            </button>
-                          </li>
-
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--gray button--cub"
-                              aria-label="Перейти на страницу 6"
-                            >
-                              6
-                            </button>
-                          </li>
-
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--gray button--cub"
-                              aria-label="Перейти на страницу после 6"
-                            >
-                              ...
-                            </button>
-                          </li>
-
-                          <li class="pagination-box__link">
-                            <button
-                              class="button button--gray button--cub"
-                              aria-label="Перейти на страницу 45"
-                            >
-                              45
-                            </button>
-                          </li>
-                        </ul>
-
-                        <button
-                          class="button button--circle button--circle-big button--gray"
-                          type="button"
-                          aria-label="Перейти к след странице"
-                        >
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#arrow-line-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-                      </div>
-
-                      <div class="pagination__details">
-                        <button
-                          type="button"
-                          aria-label="Перейти к след странице"
-                          class="button button--noBg button--noMassa p2"
-                        >
-                          Go to
-                        </button>
-
-                        <div class="input-box">
-                          <label class="input-box__content">
-                            <div class="input-box__info">
-                              <input
-                                type="text"
-                                placeholder="page"
-                                name="page"
-                              />
-                            </div>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
+                    @@include('../modules/pagination.html', {"details":
+                    "false"})
                   </div>
 
                   <div class="catalogy__map">
@@ -2128,59 +1978,82 @@
                           data-block="more-items"
                           data-max="6"
                         >
-                          <div class="quick__block">
-                            <span class="p3">Properties in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments by the sea"
+                            title="Apartments by the sea"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments by the sea</span>
 
                             <span class="p3 quick__mean">29,130</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">Apartments in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу 4 bedrooms apartments"
+                            title="4 bedrooms apartments"
+                            class="quick__block link"
+                          >
+                            <span class="p3">4 bedrooms apartments</span>
 
                             <span class="p3 quick__mean">29,130</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">Duplexes in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments from 150,000 $"
+                            title="Apartments from 150,000 $"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments from 150,000 $</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу 4 bedrooms apartments"
+                            title="4 bedrooms apartments"
+                            class="quick__block link"
+                          >
+                            <span class="p3">4 bedrooms apartments</span>
 
                             <span class="p3 quick__mean">29,130</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">Bungalows in UAE</span>
-
-                            <span class="p3 quick__mean">8,979</span>
-                          </div>
-
-                          <div class="quick__block">
-                            <span class="p3">Bungalows in UAE</span>
-
-                            <span class="p3 quick__mean">8,979</span>
-                          </div>
-
-                          <div class="quick__block">
-                            <span class="p3">Bungalows in UAE</span>
-
-                            <span class="p3 quick__mean">8,979</span>
-                          </div>
-
-                          <div class="quick__block">
-                            <span class="p3">New apartments in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments from 150,000 $"
+                            title="Apartments from 150,000 $"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments from 150,000 $</span>
 
                             <span class="p3 quick__mean">260</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">New apartments in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
 
-                            <span class="p3 quick__mean">260</span>
-                          </div>
-
-                          <div class="quick__block">
-                            <span class="p3">New apartments in UAE</span>
-
-                            <span class="p3 quick__mean">260</span>
-                          </div>
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
                         </div>
 
                         <footer class="quick__footer" data-block="more-footer">
@@ -2209,7 +2082,164 @@
 
                     <div class="quick__item" data-block="more-relative">
                       <div class="quick__title">
-                        <p class="semibold-font p2">By popular keywords</p>
+                        <p class="semibold-font p2">By price</p>
+                      </div>
+
+                      <div class="quick__info">
+                        <div
+                          class="quick__items quick__items--ten"
+                          data-block="more-items"
+                          data-max="9"
+                        >
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments by the sea"
+                            title="Apartments by the sea"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments by the sea</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу 4 bedrooms apartments"
+                            title="4 bedrooms apartments"
+                            class="quick__block link"
+                          >
+                            <span class="p3">4 bedrooms apartments</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments from 150,000 $"
+                            title="Apartments from 150,000 $"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments from 150,000 $</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу 4 bedrooms apartments"
+                            title="4 bedrooms apartments"
+                            class="quick__block link"
+                          >
+                            <span class="p3">4 bedrooms apartments</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments from 150,000 $"
+                            title="Apartments from 150,000 $"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments from 150,000 $</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+                        </div>
+
+                        <footer class="quick__footer" data-block="more-footer">
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                          >
+                            <p
+                              class="p3 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              More
+                            </p>
+
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="quick__item" data-block="more-relative">
+                      <div class="quick__title">
+                        <p class="semibold-font p2">By number of bedrooms</p>
                       </div>
 
                       <div class="quick__info">
@@ -2218,59 +2248,151 @@
                           data-block="more-items"
                           data-max="6"
                         >
-                          <div class="quick__block">
-                            <span class="p3">Properties in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments by the sea"
+                            title="Apartments by the sea"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments by the sea</span>
 
                             <span class="p3 quick__mean">29,130</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">Apartments in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу 4 bedrooms apartments"
+                            title="4 bedrooms apartments"
+                            class="quick__block link"
+                          >
+                            <span class="p3">4 bedrooms apartments</span>
 
                             <span class="p3 quick__mean">29,130</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">Duplexes in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments from 150,000 $"
+                            title="Apartments from 150,000 $"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments from 150,000 $</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу 4 bedrooms apartments"
+                            title="4 bedrooms apartments"
+                            class="quick__block link"
+                          >
+                            <span class="p3">4 bedrooms apartments</span>
 
                             <span class="p3 quick__mean">29,130</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">Bungalows in UAE</span>
-
-                            <span class="p3 quick__mean">8,979</span>
-                          </div>
-
-                          <div class="quick__block">
-                            <span class="p3">Bungalows in UAE</span>
-
-                            <span class="p3 quick__mean">8,979</span>
-                          </div>
-
-                          <div class="quick__block">
-                            <span class="p3">Bungalows in UAE</span>
-
-                            <span class="p3 quick__mean">8,979</span>
-                          </div>
-
-                          <div class="quick__block">
-                            <span class="p3">New apartments in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments from 150,000 $"
+                            title="Apartments from 150,000 $"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments from 150,000 $</span>
 
                             <span class="p3 quick__mean">260</span>
-                          </div>
+                          </a>
 
-                          <div class="quick__block">
-                            <span class="p3">New apartments in UAE</span>
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Commercial properties in UAE"
+                            title="Commercial properties in UAE"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Commercial properties in UAE</span>
 
-                            <span class="p3 quick__mean">260</span>
-                          </div>
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+                        </div>
 
-                          <div class="quick__block">
-                            <span class="p3">New apartments in UAE</span>
+                        <footer class="quick__footer" data-block="more-footer">
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                          >
+                            <p
+                              class="p3 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              More
+                            </p>
 
-                            <span class="p3 quick__mean">260</span>
-                          </div>
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </footer>
+                      </div>
+                    </div>
+
+                    <div class="quick__item" data-block="more-relative">
+                      <div class="quick__title">
+                        <p class="semibold-font p2">From developers</p>
+                      </div>
+
+                      <div class="quick__info">
+                        <div
+                          class="quick__items"
+                          data-block="more-items"
+                          data-max="6"
+                        >
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments in Residential"
+                            title="Apartments in Residential"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments in Residential</span>
+
+                            <span class="p3 quick__mean">1,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments in Residential"
+                            title="Apartments in Residential"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments in completed Residential</span>
+
+                            <span class="p3 quick__mean">12,896</span>
+                          </a>
+
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Apartments in Residential"
+                            title="Apartments in Residential"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments in off-plan Residential</span>
+
+                            <span class="p3 quick__mean">12,896</span>
+                          </a>
                         </div>
 
                         <footer class="quick__footer" data-block="more-footer">
@@ -2582,10 +2704,14 @@
                         </div>
                       </div>
 
-                      <button class="button modal-open button--blueviolet catalogy-content__market-btn" data-modal="marketModal" type="button">
+                      <button
+                        class="button modal-open button--blueviolet catalogy-content__market-btn"
+                        data-modal="marketModal"
+                        type="button"
+                      >
                         <span>Show detailed market insights</span>
 
-                        <span class="icon" style="rotate: -45deg;">
+                        <span class="icon" style="rotate: -45deg">
                           <svg>
                             <use xlink:href="#arrow-line-icon"></use>
                           </svg>
@@ -2986,11 +3112,10 @@
         </section>
       </main>
 
-      @@include('../modules/footer.html')
-
-      @@include('../modals/market.html')
+      @@include('../modules/footer.html') @@include('../modals/market.html')
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/catalogy.js" type="module"></script>
   </body>

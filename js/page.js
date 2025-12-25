@@ -6,6 +6,8 @@ import { checkScrollY } from "./modules/header.js";
 import { initMenu } from "./modules/menu.js";
 import { initFormValidation } from "./modules/validate.js";
 import { initRatingStars } from "./modules/rating.js";
+import { initSelects } from "./modules/select.js";
+import { onChangeInput } from "./modules/functions.js";
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -24,13 +26,17 @@ const initValidate = () => {
   });
 };
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   initValidate();
   checkStartOpen();
   getHeightHeader();
   firstActiveText();
+  initSelects();
 
   document.addEventListener("click", handleGlobalEvents);
+  document.addEventListener("input", onChangeInput)
 
   if (!isTouchDevice) {
     document.addEventListener("mouseenter", initRatingStars, true);

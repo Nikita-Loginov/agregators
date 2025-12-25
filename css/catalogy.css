@@ -13,17 +13,23 @@
   z-index: 10;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  text-wrap: nowrap;
 }
 .filter__items, .filter__box {
+  gap: var(--gap-items);
+}
+.filter__items {
+  display: grid;
+  grid-template-columns: auto 91px auto 160px 160px auto auto auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+.filter__box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: var(--gap-items);
-}
-.filter__box {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;

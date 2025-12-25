@@ -94,3 +94,43 @@
     color: var(--primary-color-500);
   }
 }
+
+.check-without-input {
+  display: flex;
+  gap: 12px;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: var(--radius-base);
+  background-color: var(--gray-color-200);
+  align-items: center;
+
+  &.selected {
+    .check-without-input {
+      &__check {
+        background-color: var(--secondary-color-100);
+      }
+     
+    }
+   
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+    border: 1px solid var(--gray-color-600);
+    background-color: var(--white-color);
+    border-radius: var(--radius-sm);
+
+    
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

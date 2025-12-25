@@ -5,6 +5,9 @@
 @import "base/_text.scss";
 @import "base/_global.scss";
 @import "base/_utilis.scss";
+@import "base/_icons.scss";
+
+
 
 @import "blocks/_header.scss";
 @import "blocks/_menu.scss";
@@ -44,4 +47,7 @@
 @import "blocks/_swiper-box.scss";
 @import "blocks/_comments-form.scss";
 @import "blocks/_text-block.scss";
+@import "blocks/_select.scss";
+@import "blocks/_popup.scss";
+@import "blocks/_item.scss";
 @import "blocks/_footer.scss";

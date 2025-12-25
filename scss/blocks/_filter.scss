@@ -9,15 +9,22 @@
   background-color: var(--gray-color-100);
   z-index: 10;
   transition: all .5s;
+  text-wrap: nowrap; 
 
   &__items,
   &__box {
-    display: flex;
-    align-items: center;
     gap: var(--gap-items);
   }
 
+  &__items {
+    display: grid;
+    grid-template-columns: auto 91px auto 160px 160px auto auto auto;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   &__box {
+    display: flex;
     justify-content: space-between;
   }
 

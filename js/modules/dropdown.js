@@ -3,13 +3,24 @@ let fixedMenu = null;
 
 export const toggleDropdown = (e) => {
   const target = e.target;
+  
 
-  if (target.closest(".dropdown__toggle")) {
+  if (activeDropdown && activeDropdown.contains(target)) {
+    if (!target.closest(".dropdown-item-close")) {
+      return; 
+    }
+  }
+
+  if (target.closest(".dropdown")) {
     const dropdown = target.closest(".dropdown");
 
     if (dropdown !== activeDropdown) {
       closeAllDropdowns();
-      openFixedDropdown(dropdown);
+      if (dropdown.hasAttribute("data-fixed-dropdown")) {
+        openFixedDropdown(dropdown);
+      } else {
+        openRegularDropdown(dropdown);
+      }
     } else {
       closeDropdown(dropdown);
     }
@@ -28,7 +39,7 @@ export const toggleDropdown = (e) => {
     return;
   }
 
-  if (!target.closest(".dropdown") && activeDropdown) {
+  if (activeDropdown) {
     closeAllDropdowns();
   }
 };
@@ -40,14 +51,15 @@ const openFixedDropdown = (dropdown) => {
   dropdown.classList.add("active");
   activeDropdown = dropdown;
 
-  const toggle = dropdown.querySelector(".dropdown__toggle");
+  const toggle =
+    dropdown.querySelector(".dropdown__toggle") ||
+    dropdown.querySelector(".dropdown__btn");
   const rect = toggle.getBoundingClientRect();
 
   fixedMenu = menu;
   fixedMenu.style.position = "fixed";
   fixedMenu.style.top = rect.bottom + "px";
   fixedMenu.style.left = rect.left + "px";
-  fixedMenu.style.width = rect.width + "px";
   fixedMenu.style.opacity = "1";
   fixedMenu.style.visibility = "visible";
   fixedMenu.style.zIndex = "9999";
@@ -55,12 +67,23 @@ const openFixedDropdown = (dropdown) => {
   document.body.appendChild(fixedMenu);
 };
 
+const openRegularDropdown = (dropdown) => {
+  const menu = dropdown.querySelector(".dropdown__content");
+  if (!menu) return;
+
+  dropdown.classList.add("active");
+  activeDropdown = dropdown;
+
+  menu.style.opacity = "1";
+  menu.style.visibility = "visible";
+};
+
 const closeDropdown = (dropdown) => {
   if (!dropdown) return;
 
   dropdown.classList.remove("active");
 
-  if (fixedMenu) {
+  if (dropdown.hasAttribute("data-fixed-dropdown") && fixedMenu) {
     dropdown.appendChild(fixedMenu);
 
     fixedMenu.style.position = "";
@@ -70,13 +93,20 @@ const closeDropdown = (dropdown) => {
     fixedMenu.style.opacity = "0";
     fixedMenu.style.visibility = "hidden";
     fixedMenu.style.zIndex = "";
+
+    fixedMenu = null;
+  } else {
+    const menu = dropdown.querySelector(".dropdown__content");
+    if (menu) {
+      menu.style.opacity = "0";
+      menu.style.visibility = "hidden";
+    }
   }
 
-  fixedMenu = null;
   activeDropdown = null;
 };
 
-function closeAllDropdowns() {
+export const closeAllDropdowns = () => {
   if (activeDropdown) {
     closeDropdown(activeDropdown);
   }
@@ -121,20 +151,3 @@ export const firstActiveText = () => {
 };
 
 window.addEventListener("resize", () => closeAllDropdowns());
-window.addEventListener(
-  "scroll",
-  (e) => {
-    if (!activeDropdown) return;
-
-    let target = e.target;
-
-    if (
-      target === document ||
-      target === document.documentElement ||
-      target === document.body
-    ) {
-      closeAllDropdowns();
-    }
-  },
-  true
-);

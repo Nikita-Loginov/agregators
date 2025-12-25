@@ -1,0 +1,28 @@
+.kit-icon {
+  font-family: "GP-Icons" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kit-icon.coin:before {
+  content: "\e91b";
+}
+
+.kit-icon.language:before {
+  content: "\e920";
+}
+
+.kit-icon.archive:before {
+  content: "\e988";
+}
+
+.kit-icon.user:before {
+  content: "\e913";
+}

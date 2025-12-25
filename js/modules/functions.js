@@ -1,3 +1,5 @@
+import { handleNumberInput } from "../utils/handleNumberInput.js";
+
 export const getPositionsElementsScroll = (options) => {
   const { elementScroll, elementStatic, className = "scroll" } = options;
 
@@ -76,4 +78,27 @@ export const removeAllElementClass = (options, className) => {
   options.forEach((item) => {
     item.classList.remove(className);
   });
+};
+
+export const onChangeInput = (e) => {
+  const input = e.target;
+
+  if (input.tagName !== "INPUT") return;
+
+  const hasValue = input.value.trim() !== "";
+  const inputBox = input.closest('.input-box')
+
+  if (hasValue) {
+    input.classList.add("has-value");
+
+    if (inputBox) inputBox.classList.add("has-value");
+  } else {
+    input.classList.remove("has-value");
+
+    if (inputBox) inputBox.classList.remove("has-value");
+  }
+
+  if (input.type === "number") {
+    handleNumberInput(input);
+  }
 };
