@@ -1,0 +1,24 @@
+.map {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    padding-inline: var(--container-inline-full-padding);
+  }
+
+  &__content {
+    position: relative;
+    height: calc(100dvh - var(--header-height, var(--calback-header-height)) - var(--info-map-height, 14px));
+    display: grid;
+    grid-template-columns: 632px auto;
+    background-color: var(--secondary-color-100);
+  }
+
+  &__cart {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}

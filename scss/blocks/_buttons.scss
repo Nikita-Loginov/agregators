@@ -5,7 +5,7 @@
   gap: 8px;
   border-radius: var(--radius-md);
   min-height: 40px;
-  padding: 4px 12px;
+  padding: 4px 16px;
   transition: background-color 0.3s ease, border-color 0.3s ease,
     color 0.3s ease;
     
@@ -359,11 +359,26 @@
     min-height: 0;
   }
 
+  &--cub-small {
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-base);
+    flex-shrink: 0;
+    min-height: 0;
+
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
   &--cub-big {
     width: 40px;
     height: 40px;
     border-radius: var(--radius-md);
     padding: 6px;
+    flex-shrink: 0;
   }
 
   &--cub-xl {

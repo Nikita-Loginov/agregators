@@ -6,7 +6,7 @@
   background-color: var(--gray-color-100);
   border-radius: var(--radius-sm);
   padding: 4px 8px;
-  min-height: 36px;
+  min-height: 32px;
 
   &--big {
     border-radius: var(--radius-2xl);
@@ -19,9 +19,9 @@
   }
 
   &--small {
-    min-height: 26px;
-    padding: 2px 12px;
-    border-radius: var(--radius-2xl);
+    min-height: 28px;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
   }
 
   &--gray-200 {

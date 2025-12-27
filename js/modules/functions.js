@@ -86,7 +86,7 @@ export const onChangeInput = (e) => {
   if (input.tagName !== "INPUT") return;
 
   const hasValue = input.value.trim() !== "";
-  const inputBox = input.closest('.input-box')
+  const inputBox = input.closest(".input-box");
 
   if (hasValue) {
     input.classList.add("has-value");
@@ -101,4 +101,15 @@ export const onChangeInput = (e) => {
   if (input.type === "number") {
     handleNumberInput(input);
   }
+};
+
+export const getHeightFilter = () => {
+  const filter = document.querySelector(".filter");
+
+  if (!filter) return;
+
+  const styles = window.getComputedStyle(filter);
+  const height = styles.getPropertyValue("height");
+
+  return height;
 };

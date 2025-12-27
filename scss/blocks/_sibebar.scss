@@ -1,0 +1,13 @@
+.sibebar {
+  max-width: 100%;
+  width: 100%;
+  background-color: var(--white-color);
+  padding: 16px var(--container-inline-full-padding);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100%;
+}

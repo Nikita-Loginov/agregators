@@ -1,4 +1,5 @@
 import { getHeightHeader } from "./modules/header.js";
+import { setVar } from "./utils/setVar.js";
 import { toggleDropdown, firstActiveText } from "./modules/dropdown.js";
 import { toggleAccordeonItems } from "./modules/accordeon.js";
 import { initModal, checkStartOpen } from "./modules/modal.js";
@@ -19,6 +20,12 @@ const handleGlobalEvents = (e) => {
   initRatingStars(e);
 };
 
+const serVars = () => {
+ const heightHeader = getHeightHeader();
+
+ setVar('--header-height', heightHeader);
+}
+
 const initValidate = () => {
   const forms = document.querySelectorAll("form.form");
   forms.forEach((form) => {
@@ -31,7 +38,7 @@ const initValidate = () => {
 document.addEventListener("DOMContentLoaded", () => {
   initValidate();
   checkStartOpen();
-  getHeightHeader();
+  serVars();
   firstActiveText();
   initSelects();
 
@@ -44,5 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-window.addEventListener("resize", getHeightHeader);
+window.addEventListener("resize", serVars);
 document.addEventListener("scroll", checkScrollY);

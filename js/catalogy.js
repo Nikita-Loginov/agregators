@@ -5,6 +5,9 @@ import {
   hideUnnecessaryButtons,
 } from "./modules/moreContent.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
+import { initSimpleSticky } from "./utils/initSimpleSticky.js";
+import { setVar } from "./utils/setVar.js";
+import { getHeightFilter } from "./modules/functions.js";
 
 const swipers = [
   {
@@ -89,10 +92,19 @@ const handleGridResize = () => {
   });
 };
 
+const serVars = () => {
+ const heightFilter = getHeightFilter();
+
+ setVar('--filter-height', heightFilter);
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
   initImgsSwiperGoods();
   hideUnnecessaryButtons();
   initGridSystem();
+  initSimpleSticky();
+  serVars();
 
   handleGridResize();
 
@@ -113,7 +125,12 @@ let resizeTimeout;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
+    serVars();
     handleAllSliders();
     handleGridResize();
   }, 100);
 });
+
+window.addEventListener('scroll', () => {
+  serVars();
+})

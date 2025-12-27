@@ -1,7 +1,7 @@
 const CONFIG = {
   CLASS_SCROLL_TOP: "scrollTop",
   CLASS_SCROLL_BOTTOM: "scrollBottom",
-  SCROLL_START_MORE: 10,
+  SCROLL_START_MORE: 80,
   SCROLL_THRESHOLD: 5,
 };
 
@@ -19,7 +19,7 @@ export const getHeightHeader = () => {
   const styles = window.getComputedStyle(header);
   const height = styles.getPropertyValue("height");
 
-  document.documentElement.style.setProperty("--header-height", `${height}`);
+  return height
 };
 
 export const checkScrollY = () => {

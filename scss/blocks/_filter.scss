@@ -5,11 +5,17 @@
   flex-direction: column;
   gap: 16px;
   position: sticky;
-  // top: calc(var(--header-height, 140px));
+  top: calc(var(--header-height, 140px));
   background-color: var(--gray-color-100);
   z-index: 10;
-  transition: all .5s;
-  text-wrap: nowrap; 
+  transition: all 0.5s;
+  text-wrap: nowrap;
+
+  &.filter--sticky {
+    padding: 8px 0;
+    backdrop-filter: blur(4px);
+    background-color: #ffffffb2;
+  }
 
   &__items,
   &__box {
@@ -35,6 +41,7 @@
     justify-content: end;
     align-items: center;
     gap: var(--gap-details);
+    transition: all 0.5s;
 
     & > *:not(:last-child) {
       position: relative;
@@ -60,9 +67,9 @@
   }
 }
 
-// body.scrollBottom {
-//   .filter {
-//     position: sticky;
-//     top: 0;
-//   }
-// }
+body.scrollBottom {
+  .filter {
+    position: sticky;
+    top: 0;
+  }
+}

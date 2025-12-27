@@ -5,12 +5,22 @@
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta name="robots" content="noindex, nofollow">
-   <title>Articles</title>
+   <title>Карта</title>
  
    <link rel="stylesheet" href="/css/page.css">
    
    
-   <link rel="stylesheet" href="./css/articles.css" />
+   <link rel="stylesheet" href="./css/map.css" />
+   
+   <link rel="stylesheet" href="./css/lib/swiper.min.css" />
+   
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" />
+   
+   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+   
+   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+   
+   <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
    
  </head>
   <body>
@@ -1264,7 +1274,7 @@
 
 <header class="header header-scroll">
    <div class="header-top">
-      <div class="container ">
+      <div class="container container--full">
          <div class="header-top__inner">
             <div class="header-top__info">
                <button class="button button--mini button--noBg button--grayBorder text-uppercase modal-open"
@@ -1496,7 +1506,7 @@
    </div>
 
    <div class="header-main">
-      <div class="container ">
+      <div class="container container--full">
          <div class="header-main__inner">
             <a href="/" aria-label="Пейрети на главную" title="Emirates.Estate" class="logo">
                <span class="logo__info icon">
@@ -1890,1171 +1900,1012 @@
    </div>
 </header>
 
-      <main class="main main--detail">
-        <div class="top-page">
-          <div class="container">
-            <div class="top-page__inner">
-              <div class="breadcrumbs">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__link">
-                    <a
-                      href="#"
-                      aria-label="Вернуться на Home"
-                      title="Home"
-                      class="breadcrumbs__item link active active-noColor active-line"
-                      >Home</a
-                    >
-                  </li>
+      <main class="main main--noPaddingAdd main--noLastPadding">
+        <section class="map">
+          <div class="map__inner">
+            <div class="map__info">
+              <p>Фильтры</p>
+            </div>
 
-                  <li class="breadcrumbs__link">
-                    <span class="breadcrumbs__item">Articles</span>
-                  </li>
-                </ul>
+            <div class="map__content">
+              <aside class="map-sibebar sibebar">
+                <div class="map-sibebar__top">
+                  <h1 class="h4">Property in selected area</h1>
 
-                <a
-                  href="#"
-                  aria-label="Вернуться на Home"
-                  title="Home"
-                  class="breadcrumbs__media"
-                >
-                  <span class="breadcrumbs__circle">
-                    <div class="icon">
+                  <button class="close">
+                    <span class="icon">
                       <svg>
-                        <use xlink:href="#arrow-circle-icon"></use>
+                        <use xlink:href="#close-icon"></use>
                       </svg>
-                    </div>
-                  </span>
+                    </span>
+                  </button>
+                </div>
 
-                  <span>Home</span>
-                </a>
+                <div class="map-sibebar__swiper-box">
+                  <div class="swiper swiper--goods">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <div class="badge badge--blue">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#shield-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge__content">
+                                    <p class="p4 medium-font">CompleteTrust</p>
+                                  </div>
+                                </div>
+
+                                <div class="badge">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#checks-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  <div
+                                    class="arrows-swiper arrows-swiper--absolute"
+                                  >
+                                    <button
+                                      class="button button--white button--circle arrow-swiper prev"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+
+                                    <button
+                                      class="button button--white button--circle arrow-swiper next"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+                                  </div>
+
+                                  <div
+                                    class="swiper-pagination swiper-pagination--absolute"
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p3 bold-font text-secondary-300">
+                                    Apartment
+                                  </p>
+
+                                  <p
+                                    class="h6-add semibold-font good-item__title"
+                                  >
+                                    761,000
+
+                                    <span class="text-uppercase p1">AED</span>
+                                  </p>
+                                </div>
+
+                                <div class="good-item__top-btns">
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third button--favorite active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#heart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#chart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <p
+                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                              >
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">1 floor</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li
+                                  class="list-icon__link list-icon__link--small"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3 medium-font">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+  aria-label="Написать сообщение на почту"
+  class="button button--secondary"
+>
+  <span class="icon">
+    <svg>
+      <use xlink:href="#email-icon"></use>
+    </svg>
+  </span>
+
+  <span class="p3">Contact Seller</span>
+</button>
+
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <div class="badge badge--blue">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#shield-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge__content">
+                                    <p class="p4 medium-font">CompleteTrust</p>
+                                  </div>
+                                </div>
+
+                                <div class="badge">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#checks-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  <div
+                                    class="arrows-swiper arrows-swiper--absolute"
+                                  >
+                                    <button
+                                      class="button button--white button--circle arrow-swiper prev"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+
+                                    <button
+                                      class="button button--white button--circle arrow-swiper next"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+                                  </div>
+
+                                  <div
+                                    class="swiper-pagination swiper-pagination--absolute"
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p3 bold-font text-secondary-300">
+                                    Apartment
+                                  </p>
+
+                                  <p
+                                    class="h6-add semibold-font good-item__title"
+                                  >
+                                    761,000
+
+                                    <span class="text-uppercase p1">AED</span>
+                                  </p>
+                                </div>
+
+                                <div class="good-item__top-btns">
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third button--favorite active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#heart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#chart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <p
+                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                              >
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">1 floor</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li
+                                  class="list-icon__link list-icon__link--small"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3 medium-font">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+  aria-label="Написать сообщение на почту"
+  class="button button--secondary"
+>
+  <span class="icon">
+    <svg>
+      <use xlink:href="#email-icon"></use>
+    </svg>
+  </span>
+
+  <span class="p3">Contact Seller</span>
+</button>
+
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <div class="badge badge--blue">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#shield-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge__content">
+                                    <p class="p4 medium-font">CompleteTrust</p>
+                                  </div>
+                                </div>
+
+                                <div class="badge">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#checks-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  <div
+                                    class="arrows-swiper arrows-swiper--absolute"
+                                  >
+                                    <button
+                                      class="button button--white button--circle arrow-swiper prev"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+
+                                    <button
+                                      class="button button--white button--circle arrow-swiper next"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+                                  </div>
+
+                                  <div
+                                    class="swiper-pagination swiper-pagination--absolute"
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p3 bold-font text-secondary-300">
+                                    Apartment
+                                  </p>
+
+                                  <p
+                                    class="h6-add semibold-font good-item__title"
+                                  >
+                                    761,000
+
+                                    <span class="text-uppercase p1">AED</span>
+                                  </p>
+                                </div>
+
+                                <div class="good-item__top-btns">
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third button--favorite active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#heart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#chart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <p
+                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                              >
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">1 floor</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li
+                                  class="list-icon__link list-icon__link--small"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3 medium-font">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+  aria-label="Написать сообщение на почту"
+  class="button button--secondary"
+>
+  <span class="icon">
+    <svg>
+      <use xlink:href="#email-icon"></use>
+    </svg>
+  </span>
+
+  <span class="p3">Contact Seller</span>
+</button>
+
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="good-item">
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <div class="badge badge--blue">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#shield-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <div class="badge__content">
+                                    <p class="p4 medium-font">CompleteTrust</p>
+                                  </div>
+                                </div>
+
+                                <div class="badge">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#checks-icon"></use>
+                                    </svg>
+                                  </span>
+                                </div>
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="swiper-slide">
+                                    <div class="good-item__img-item">
+                                      <div class="good-item__img">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/goods/one.webp   1x,
+                                              /img/goods/one2x.webp 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/goods/one.webp"
+                                            alt="фотография Apartment"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  <div
+                                    class="arrows-swiper arrows-swiper--absolute"
+                                  >
+                                    <button
+                                      class="button button--white button--circle arrow-swiper prev"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+
+                                    <button
+                                      class="button button--white button--circle arrow-swiper next"
+                                      type="button"
+                                    >
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#arrow-line-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </button>
+                                  </div>
+
+                                  <div
+                                    class="swiper-pagination swiper-pagination--absolute"
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p3 bold-font text-secondary-300">
+                                    Apartment
+                                  </p>
+
+                                  <p
+                                    class="h6-add semibold-font good-item__title"
+                                  >
+                                    761,000
+
+                                    <span class="text-uppercase p1">AED</span>
+                                  </p>
+                                </div>
+
+                                <div class="good-item__top-btns">
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third button--favorite active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#heart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+
+                                  <button
+                                    aria-label="Добавить в избранное"
+                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#chart-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
+                              </div>
+
+                              <p
+                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                              >
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bedrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">2 Bathrooms</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">1 floor</p>
+                                </div>
+
+                                <div class="tag tag--small">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#bed-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">60.11 sq.m.</p>
+                                </div>
+                              </div>
+
+                              <ul class="list-icon">
+                                <li
+                                  class="list-icon__link list-icon__link--small"
+                                >
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#geo-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3 medium-font">
+                                    Mohammed Bin Rashid City, Dubai
+                                  </p>
+                                </li>
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <button
+  aria-label="Написать сообщение на почту"
+  class="button button--secondary"
+>
+  <span class="icon">
+    <svg>
+      <use xlink:href="#email-icon"></use>
+    </svg>
+  </span>
+
+  <span class="p3">Contact Seller</span>
+</button>
+
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+
+              <div class="map__cart">
+                <div class="map" id="map"></div>
               </div>
             </div>
           </div>
-        </div>
-
-        <div class="main__sections">
-          <section class="articles">
-            <div class="container">
-              <div class="topBox topBox--middle">
-                <header class="topBox__header">
-                  <h1 class="h2">Articles</h1>
-
-                  <div class="topBox__header-content">
-                    <div
-                      class="dropdown dropdown--select input-box"
-                      style="min-width: 200px"
-                    >
-                      <button
-                        class="dropdown__toggle input-box__info"
-                        type="button"
-                      >
-                        <p class="dropdown__active p2"></p>
-
-                        <span class="icon arrow">
-                          <svg>
-                            <use xlink:href="#arrow-bottom-icon"></use>
-                          </svg>
-                        </span>
-                      </button>
-
-                      <div class="dropdown__content">
-                        <ul class="dropdown__list">
-                          <li class="dropdown__link">
-                            <span
-                              class="dropdown__item active dropdown-item-close"
-                            >
-                              <span class="p2">Tags 1</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 2</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 3</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 4</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 5</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 6</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 7</span>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="input-box" style="min-width: 280px">
-                      <label class="input-box__content">
-                        <div class="input-box__info">
-                          <input
-                            type="search"
-                            placeholder="Find the topic"
-                            name="search"
-                          />
-
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#search-icon"></use>
-                            </svg>
-                          </span>
-                        </div>
-                      </label>
-
-                      <p class="input-box__errors p4"></p>
-                    </div>
-                  </div>
-                </header>
-
-                <div class="articles__inner detail-block">
-                  <div class="articles__content">
-                    <div class="goods-items-block">
-                      <div class="goods-items-block__boxs">
-                        <div class="good-item good-item--midlle">
-                          <div class="good-item__img-box">
-                            <div class="good-item__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/goods/one.webp   1x,
-                                    /img/goods/one2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/goods/one.webp"
-                                  alt="фотография Apartment"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-                          </div>
-
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
-                                The UAE Golden Visa: All the Straightforward
-                                Answers You Need
-                              </p>
-                            </header>
-
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#calendar-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#time-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#eye-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="good-item__tags">
-                                <div
-                                  class="tag tag--circle tag--circle-small tag--secondary-200"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#label-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Real Estate</p>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Buying</p>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Dubai</p>
-                                </div>
-                              </div>
-
-                              <div class="textbox">
-                                <p class="p2">
-                                  It’s no wonder the UAE continues topping the
-                                  charts for relocation hotspots in 2025. The
-                                  region is rolling out the red carpet with
-                                  sky-high safety ratings—Numbeo calls it number
-                                  one—plus zero personal.
-                                </p>
-                              </div>
-                            </div>
-
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <a
-                                  href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--secondary"
-                                >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
-                                </a>
-                              </div>
-                            </footer>
-                          </div>
-                        </div>
-
-                        <div class="good-item good-item--midlle">
-                          <div class="good-item__img-box">
-                            <div class="good-item__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/goods/one.webp   1x,
-                                    /img/goods/one2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/goods/one.webp"
-                                  alt="фотография Apartment"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-                          </div>
-
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
-                                Freelancer visa
-                              </p>
-                            </header>
-
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#calendar-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#time-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#eye-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="good-item__tags">
-                                <div
-                                  class="tag tag--circle tag--circle-small tag--secondary-200"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#label-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Real Estate</p>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Buying</p>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Dubai</p>
-                                </div>
-                              </div>
-
-                              <div class="textbox">
-                                <p class="p2">
-                                  There is no separate visa for freelancers in
-                                  the United Arab Emirates; however, remote
-                                  specialists can legally work by obtaining one
-                                  of two categories of residence permit – the
-                                  Green Visa or the Virtual Work Permit. The
-                                  Green Visa is issued for 5 years, does not
-                                  require a
-                                </p>
-                              </div>
-                            </div>
-
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <a
-                                  href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--secondary"
-                                >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
-                                </a>
-                              </div>
-                            </footer>
-                          </div>
-                        </div>
-
-                        <div class="good-item good-item--midlle">
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
-                                UAE Property Sales: H1 2025 — Record-Breaking,
-                                Red-Hot Market Action
-                              </p>
-                            </header>
-
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#calendar-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#time-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#eye-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="good-item__tags">
-                                <div
-                                  class="tag tag--circle tag--circle-small tag--secondary-200"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#label-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Real Estate</p>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Buying</p>
-                                </div>
-
-                                <div class="tag tag--small tag--noBg">
-                                  <p class="p3 medium-font">Dubai</p>
-                                </div>
-                              </div>
-
-                              <div class="textbox">
-                                <p class="p2">
-                                  There is no separate visa for freelancers in
-                                  the United Arab Emirates; however, remote
-                                  specialists can legally work by obtaining one
-                                  of two categories of residence permit – the
-                                  Green Visa or the Virtual Work Permit. The
-                                  Green Visa is issued for 5 years, does not
-                                  require a
-                                </p>
-                              </div>
-                            </div>
-
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <a
-                                  href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--secondary"
-                                >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
-                                </a>
-                              </div>
-                            </footer>
-                          </div>
-                        </div>
-
-                        <div
-                          class="good-item good-item--midlle good-item--secondary-200"
-                        >
-                          <div class="good-item__img-box">
-                            <div class="good-item__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/goods/one.webp   1x,
-                                    /img/goods/one2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/goods/one.webp"
-                                  alt="фотография Apartment"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-                          </div>
-
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
-                                Affiliate content
-                              </p>
-                            </header>
-
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#calendar-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#time-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#eye-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="good-item__tags">
-                                <div
-                                  class="tag tag--circle tag--circle-small tag--secondary-100"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#label-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
-
-                                <div
-                                  class="tag tag--small tag--noBg tag--border-gray-500"
-                                >
-                                  <p class="p3 medium-font">Real Estate</p>
-                                </div>
-
-                                <div
-                                  class="tag tag--small tag--noBg tag--border-gray-500"
-                                >
-                                  <p class="p3 medium-font">Buying</p>
-                                </div>
-
-                                <div
-                                  class="tag tag--small tag--noBg tag--border-gray-500"
-                                >
-                                  <p class="p3 medium-font">Dubai</p>
-                                </div>
-                              </div>
-
-                              <div class="textbox">
-                                <p class="p2">
-                                  There is no separate visa for freelancers in
-                                  the United Arab Emirates; however, remote
-                                  specialists can legally work by obtaining one
-                                  of two categories of residence permit – the
-                                  Green Visa or the Virtual Work Permit. The
-                                  Green Visa is issued for 5 years, does not
-                                  require a
-                                </p>
-                              </div>
-                            </div>
-
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <a
-                                  href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--blueviolet"
-                                >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
-                                </a>
-                              </div>
-                            </footer>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="pagination">
-  <div class="pagination-box">
-    <button
-      class="button button--cub button--gray button--noBg button--gray-300-border"
-      type="button"
-      aria-label="Перейти к пред странице"
-    >
-      <span class="icon" style="width: 16px; height: 16px">
-        <svg>
-          <use xlink:href="#arrow-left-icon"></use>
-        </svg>
-      </span>
-    </button>
-
-    <ul class="pagination-box__list">
-      <li class="pagination-box__link">
-        <button
-          class="button button--blueviolet button--cub"
-          aria-label="Перейти на страницу 1"
-        >
-          1
-        </button>
-      </li>
-
-      <li class="pagination-box__link">
-        <button
-          class="button button--cub button--gray button--noBg button--gray-300-border"
-          aria-label="Перейти на страницу 2"
-        >
-          2
-        </button>
-      </li>
-
-      <li class="pagination-box__link">
-        <button
-          class="button button--cub button--gray button--noBg button--gray-300-border"
-          aria-label="Перейти на страницу 3"
-        >
-          3
-        </button>
-      </li>
-
-      <li class="pagination-box__link">
-        <button
-          class="button button--cub button--gray button--noBg button--gray-300-border"
-          aria-label="Перейти на страницу 4"
-        >
-          4
-        </button>
-      </li>
-
-      <li class="pagination-box__link">
-        <button
-          class="button button--cub button--gray button--noBg button--gray-300-border"
-          aria-label="Перейти на страницу 5"
-        >
-          5
-        </button>
-      </li>
-
-      <li class="pagination-box__link">
-        <button
-          class="button button--cub button--gray button--noBg button--gray-300-border"
-          aria-label="Перейти на страницу 6"
-        >
-          6
-        </button>
-      </li>
-
-      <li class="pagination-box__link">
-        <button
-          class="button button--cub button--gray button--noBg button--gray-300-border"
-          aria-label="Перейти на страницу после 6"
-        >
-          ...
-        </button>
-      </li>
-
-      <li class="pagination-box__link">
-        <button
-          class="button button--cub button--gray button--noBg button--gray-300-border"
-          aria-label="Перейти на страницу 45"
-        >
-          45
-        </button>
-      </li>
-    </ul>
-
-    <button
-      class="button button--cub button--gray button--noBg button--gray-300-border"
-      type="button"
-      aria-label="Перейти к пред странице"
-      style="rotate: -180deg"
-    >
-      <span class="icon" style="width: 16px; height: 16px">
-        <svg>
-          <use xlink:href="#arrow-left-icon"></use>
-        </svg>
-      </span>
-    </button>
-  </div>
-
-  
-</div>
-
-                    </div>
-
-                    <div class="newsletter">
-  <header class="newsletter__header">
-    <p class="h3">Why should you subscribe to our newsletter?</p>
-
-    <div class="newsletter__tags">
-      <div class="tag tag--big tag--dark-100">
-        <p class="p2 medium-font">1 email per week</p>
-      </div>
-
-      <div class="tag tag--big tag--dark-200">
-        <p class="p2 medium-font">Selection of exclusive objects</p>
-      </div>
-
-      <div class="tag tag--big tag--dark-300">
-        <p class="p2 medium-font">Tips and tricks</p>
-      </div>
-
-      <div class="tag tag--big tag--dark-400">
-        <p class="p2 medium-font">Analytics from our experts</p>
-      </div>
-
-      <div class="tag tag--big tag--dark-500">
-        <p class="p2 medium-font">Access to closed online seminars</p>
-      </div>
-    </div>
-  </header>
-
-  <footer class="newsletter__footer">
-    <form action="" class="form" novalidate>
-      <label class="special-input form__item">
-        <div class="special-input__info">
-          <input
-            type="email"
-            placeholder="Enter your email"
-            required
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
-            data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
-            data-empty="Ведите минимум один символ"
-            aria-errormessage="email-errors"
-          />
-        </div>
-
-        <div class="special-input__details">
-          <button
-            class="button button--xl button--red button--bg-rad modal-open"
-            type="submit"
-            data-modal="successRequestModal"
-          >
-            <p class="p2 semibold-font">Subscribe</p>
-
-            <span class="icon">
-              <svg>
-                <use xlink:href="#arrow-line-icon"></use>
-              </svg>
-            </span>
-          </button>
-        </div>
-
-        <div class="special-input__errors form__errors" id="email-errors"></div>
-      </label>
-    </form>
-  </footer>
-</div>
-
-
-                    <div class="text-block">
-                      <h2 class="h4">Text Block</h2>
-
-                      <div class="textbox">
-                        <p class="p1">
-                          A wonderful serenity has taken possession of my entire
-                          soul, like these sweet mornings of spring which I
-                          enjoy with my whole heart. I am alone, and feel the
-                          charm of existence in this spot, which was created for
-                          the bliss of souls like mine. I am so happy, my dear
-                          friend, so absorbed in the exquisite sense of mere
-                          tranquil existence, that I neglect my talents. I
-                          should be incapable of drawing a single stroke at the
-                          present moment; and yet I feel that I never was a
-                          greater artist than now. When, while the lovely valley
-                          teems with vapour around me, and the meridian
-                        </p>
-
-                        <p class="p1">
-                          A wonderful serenity has taken possession of my entire
-                          soul, like these sweet mornings of spring which I
-                          enjoy with my whole heart. I am alone, and feel the
-                          charm of existence in this spot, which was created for
-                          the bliss of souls like mine. I am so happy, my dear
-                          friend, so absorbed in the exquisite sense of mere
-                          tranquil existence, that I neglect my talents. I
-                          should be incapable of drawing a single stroke at the
-                          present moment; and yet I feel that I never was a
-                          greater artist than now. When, while the lovely valley
-                          teems with vapour around me, and the meridian
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="detail-block__banners">
-                    <div class="quick">
-  <div class="quick__item" data-block="more-relative">
-    <div class="quick__title">
-      <p class="semibold-font p2">Popular Regions</p>
-    </div>
-
-    <div class="quick__info">
-      <div
-        class="quick__items quick__items--one-grid"
-        data-block="more-items"
-        data-max="6"
-      >
-        <a
-          href="#"
-          aria-label="Перейти на страницу Dubai"
-          title="Dubai"
-          class="quick__block link"
-        >
-          <span class="p3">Dubai</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Abu Dhabi"
-          title="Abu Dhabi"
-          class="quick__block link"
-        >
-          <span class="p3">Abu Dhabi</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Ajman"
-          title="Ajman"
-          class="quick__block link"
-        >
-          <span class="p3">Ajman</span>
-
-          <span class="p3 quick__mean">260</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Dubai"
-          title="Dubai"
-          class="quick__block link"
-        >
-          <span class="p3">Dubai</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Abu Dhabi"
-          title="Abu Dhabi"
-          class="quick__block link"
-        >
-          <span class="p3">Abu Dhabi</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Ajman"
-          title="Ajman"
-          class="quick__block link"
-        >
-          <span class="p3">Ajman</span>
-
-          <span class="p3 quick__mean">260</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Dubai"
-          title="Dubai"
-          class="quick__block link"
-        >
-          <span class="p3">Dubai</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Abu Dhabi"
-          title="Abu Dhabi"
-          class="quick__block link"
-        >
-          <span class="p3">Abu Dhabi</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Ajman"
-          title="Ajman"
-          class="quick__block link"
-        >
-          <span class="p3">Ajman</span>
-
-          <span class="p3 quick__mean">260</span>
-        </a>
-      </div>
-
-      <footer class="quick__footer" data-block="more-footer">
-        <button
-          class="btn-decor"
-          data-block="more-btn"
-          aria-label="Посмотреть больше"
-          type="button"
-        >
-          <p class="p3 medium-font" data-block="more-btn-text">More</p>
-
-          <span class="icon">
-            <svg>
-              <use xlink:href="#arrow-line-down-icon"></use>
-            </svg>
-          </span>
-        </button>
-      </footer>
-    </div>
-  </div>
-
-  <div class="quick__item" data-block="more-relative">
-    <div class="quick__title">
-      <p class="semibold-font p2">Trending Searches</p>
-    </div>
-
-    <div class="quick__info">
-      <div
-        class="quick__items quick__items--one-grid"
-        data-block="more-items"
-        data-max="6"
-      >
-        <a
-          href="#"
-          aria-label="Перейти на страницу Apartments by the sea"
-          title="Apartments by the sea"
-          class="quick__block link"
-        >
-          <span class="p3">Apartments by the sea</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу 4 bedrooms apartments"
-          title="4 bedrooms apartments"
-          class="quick__block link"
-        >
-          <span class="p3">4 bedrooms apartments</span>
-
-          <span class="p3 quick__mean">29,130</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Apartments from 150,000 $"
-          title="Apartments from 150,000 $"
-          class="quick__block link"
-        >
-          <span class="p3">Apartments from 150,000 $</span>
-
-          <span class="p3 quick__mean">260</span>
-        </a>
-
-        <a
-          href="#"
-          aria-label="Перейти на страницу Commercial properties in UAE"
-          title="Commercial properties in UAE"
-          class="quick__block link"
-        >
-          <span class="p3">Commercial properties in UAE</span>
-
-          <span class="p3 quick__mean">1,896</span>
-        </a>
-      </div>
-
-      <footer class="quick__footer" data-block="more-footer">
-        <button
-          class="btn-decor"
-          data-block="more-btn"
-          aria-label="Посмотреть больше"
-          type="button"
-        >
-          <p class="p3 medium-font" data-block="more-btn-text">More</p>
-
-          <span class="icon">
-            <svg>
-              <use xlink:href="#arrow-line-down-icon"></use>
-            </svg>
-          </span>
-        </button>
-      </footer>
-    </div>
-  </div>
-
-  <div class="quick__item" data-block="more-relative">
-    <div class="quick__title">
-      <p class="semibold-font p2">Useful Links</p>
-    </div>
-
-    <div class="quick__info">
-      <div
-        class="quick__items quick__items--one-grid"
-        data-block="more-items"
-        data-max="6"
-      >
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу How to buy with maximum profit"
-            title="How to buy with maximum profit"
-            class="p3 link"
-            >How to buy with maximum profit</a
-          >
-        </div>
-
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу Paperwork you should to do"
-            title="Paperwork you should to do"
-            class="p3 link"
-            >Paperwork you should to do</a
-          >
-        </div>
-
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу Paperwork you should to do"
-            title="Paperwork you should to do"
-            class="p3 link"
-            >Paperwork you should to do</a
-          >
-        </div>
-
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу Paperwork you should to do"
-            title="Paperwork you should to do"
-            class="p3 link"
-            >Paperwork you should to do</a
-          >
-        </div>
-
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу Paperwork you should to do"
-            title="Paperwork you should to do"
-            class="p3 link"
-            >Paperwork you should to do</a
-          >
-        </div>
-
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу Paperwork you should to do"
-            title="Paperwork you should to do"
-            class="p3 link"
-            >Paperwork you should to do</a
-          >
-        </div>
-
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу Paperwork you should to do"
-            title="Paperwork you should to do"
-            class="p3 link"
-            >Paperwork you should to do</a
-          >
-        </div>
-
-        <div class="quick__block">
-          <a
-            href="#"
-            aria-label="Перейти на страницу Paperwork you should to do"
-            title="Paperwork you should to do"
-            class="p3 link"
-            >Paperwork you should to do</a
-          >
-        </div>
-      </div>
-
-      <footer class="quick__footer" data-block="more-footer">
-        <button
-          class="btn-decor"
-          data-block="more-btn"
-          aria-label="Посмотреть больше"
-          type="button"
-        >
-          <p class="p3 medium-font" data-block="more-btn-text">More</p>
-
-          <span class="icon">
-            <svg>
-              <use xlink:href="#arrow-line-down-icon"></use>
-            </svg>
-          </span>
-        </button>
-      </footer>
-    </div>
-  </div>
-</div>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+        </section>
       </main>
 
       
@@ -3632,173 +3483,13 @@
 
 
 <script src="/js/lib/imask.min.js" type="module"></script>
-<script src="/js/page.js" type="module"></script> <div class="modalBlock requestModal">
-  <div class="modalBlock__inner">
-    <header class="modalBlock__head modalBlock__head--static">
-      <p class="h4">Request</p>
-
-      <button
-        class="modalBlock__close modal-close"
-        type="button"
-        aria-label="Закрыть модалку"
-      >
-        <span class="icon">
-          <svg>
-            <use xlink:href="#close-icon"></use>
-          </svg>
-        </span>
-      </button>
-    </header>
-
-    <div class="requestModal__content">
-      <p class="p2 medium-font">
-        Fill out the form and we will answer your question as soon as possible.
-      </p>
-
-      <form class="reques-form form" novalidate>
-        <div class="reques-form__content">
-          <div class="reques-form__inputs">
-            <div class="input-box input-box--xl input-box--gray form__item">
-              <label class="input-box__content">
-                <div class="input-box__info">
-                  <input type="text" placeholder="Name" name="Name" />
-                </div>
-              </label>
-
-              <p class="input-box__errors p4"></p>
-            </div>
-
-            <div class="input-box input-box--xl input-box--gray form__item">
-              <label class="input-box__content">
-                <div class="input-box__info">
-                  <input
-                    type="tel"
-                    placeholder="Phone*"
-                    name="tel"
-                    required
-                    pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
-                    data-title="Введите телефон в формате: +7 (000) 000-00-00"
-                    data-empty="Ведите минимум один символ"
-                    aria-errormessage="tel-errors"
-                  />
-                </div>
-              </label>
-
-              <p class="input-box__errors form__errors p4" id="tel-errors"></p>
-            </div>
-
-            <div class="input-box input-box--xl input-box--gray form__item">
-              <label class="input-box__content">
-                <div class="input-box__info">
-                  <input
-                    type="email"
-                    placeholder="Email*"
-                    name="email"
-                    required
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
-                    data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
-                    data-empty="Ведите минимум один символ"
-                    aria-errormessage="email-errors"
-                  />
-                </div>
-              </label>
-
-              <p
-                class="input-box__errors p4 form__errors"
-                id="email-errors"
-              ></p>
-            </div>
-
-            <div class="input-box input-box--big input-box--xl input-box--gray">
-              <label class="input-box__content">
-                <div class="input-box__info">
-                  <textarea
-                    placeholder="Describe your request (optional)"
-                    name="Describe"
-                  ></textarea>
-                </div>
-              </label>
-
-              <p class="input-box__errors p4"></p>
-            </div>
-          </div>
-        </div>
-
-        <footer class="reques-form__footer">
-          <p class="p4">
-            By clicking the send button you agree to the terms of use of the
-            site
-          </p>
-
-          <button
-            class="button button--xl button--red-lite modal-open "
-            data-modal="successRequestModal"
-            style="border-radius: var(--radius-md)"
-            type="submit"
-          >
-            <p class="p2 semibold-font">Send</p>
-          </button>
-        </footer>
-      </form>
-    </div>
-  </div>
-</div>
-
-      <div class="modalBlock modalContent successModal">
-  <div class="modalBlock__inner modalContent__inner">
-    <header class="modalContent__header">
-      <p class="h4">File downloaded successfully</p>
-    </header>
-
-    <div class="modalContent__content">
-      <div class="successModal__img">
-        <picture>
-          <source srcset="/img/goods/four.webp 1x, /img/goods/four2x.webp 2x" />
-          <img src="/img/goods/four.webp" alt="фотография" />
-        </picture>
-      </div>
+<script src="/js/page.js" type="module"></script>
     </div>
 
-    <footer class="modalContent__footer">
-      <button class="button button--xl button--darkBorder modal-close">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#close-big-icon"></use>
-          </svg>
-        </span>
-
-        <p class="p2 regular-font">Close</p>
-      </button>
-    </footer>
-  </div>
-</div>
-
-      <div class="modalBlock modalContent successRequestModal">
-  <div class="modalBlock__inner modalContent__inner">
-    <header class="modalContent__header">
-      <p class="h4">Request sent</p>
-    </header>
-
-    <div class="modalContent__content">
-      <p class="p2 medium-font">Thank you for your request. We will contact you shortly.</p>
-    </div>
-
-    <footer class="modalContent__footer">
-      <button class="button button--xl button--darkBorder modal-close">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#close-big-icon"></use>
-          </svg>
-        </span>
-
-        <p class="p2 regular-font">Close</p>
-      </button>
-    </footer>
-  </div>
-</div>
-
-    </div>
-
-    <script src="/js/articles.js" type="module"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/map.js" type="module"></script>
   </body>
 </html>

@@ -1,7 +1,15 @@
+const MOUSE_WHEEL_CONFIG = {
+  enabled: true,
+  forceToAxis: true,
+  sensitivity: 1,
+  eventsTarget: "container",
+};
+
 export const SWIPERS = {
   IMG_GOODS: {
     selector: ".catalogy .swiper--good-img",
     breakpoint: 122300000000,
+    mousewheel: MOUSE_WHEEL_CONFIG,
     options: {
       slidesPerView: 1,
       spaceBetween: 16,
@@ -13,6 +21,7 @@ export const SWIPERS = {
     options: {
       slidesPerView: 1,
       spaceBetween: 8,
+      mousewheel: MOUSE_WHEEL_CONFIG,
       pagination: {
         el: ".catalogy .swiper--price .swiper-pagination",
         type: "progressbar",

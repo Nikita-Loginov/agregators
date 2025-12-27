@@ -78,10 +78,13 @@ html {
   --radius-5xl: 32px;
 
   --container-inline-padding: #{calculate-clamp(16px, 40px, 1024px, 767px)};
+  --container-inline-full-padding: #{calculate-clamp(16px, 20px, 1024px, 767px)};
   --container-width: calc(1215px + calc(var(--container-inline-padding) * 2));
   --container-width-second: calc(
     800px + calc(var(--container-inline-padding) * 2)
   );
+
+  --calback-header-height: 152px;
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1024px, 480px)};
 }

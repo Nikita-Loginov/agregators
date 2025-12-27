@@ -2,7 +2,6 @@ const gulp = require('gulp');
 const fileInclude = require('gulp-file-include');
 const browserSync = require('browser-sync').create();
 
-// Задача для включения HTML
 gulp.task('html', function () {
     return gulp.src('html/pages/*.html')
         .pipe(fileInclude({
@@ -13,7 +12,6 @@ gulp.task('html', function () {
         .pipe(browserSync.stream());
 });
 
-// Задача для отслеживания изменений
 gulp.task('watch', function () {
     browserSync.init({
         server: './' 
