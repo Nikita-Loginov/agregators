@@ -29,3 +29,19 @@ export const initImgsSwiperGoods = () => {
     initSwiper(swiper, config);
   });
 };
+
+let activeVideo = null;
+
+export const toggleVideoSwiper = (slide) => {
+  const video = slide.querySelector("video");
+
+  if (activeVideo && activeVideo !== video) {
+    activeVideo.pause();
+    activeVideo.currentTime = 0;
+  }
+
+  if (video) {
+    video.play();
+    activeVideo = video;
+  }
+};

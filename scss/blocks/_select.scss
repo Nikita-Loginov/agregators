@@ -29,6 +29,10 @@
 }
 
 .select-box {
+  select {
+    opacity: 0;
+  }
+
   .ts-control {
     padding: 4px 16px;
     border-radius: var(--radius-md);
@@ -90,6 +94,13 @@
     min-width: 151px;
   }
 
+  &--noMax {
+    .ts-control,
+    .ts-dropdown {
+      max-width: 100% !important;
+    }
+  }
+
   &--search {
     @mixin search-icon {
       content: "";
@@ -126,6 +137,7 @@
     padding: 4px;
     max-width: 200px;
     width: 100%;
+    z-index: 100;
 
     .ts-option {
       padding: 4px 8px;

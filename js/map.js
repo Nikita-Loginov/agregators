@@ -4,6 +4,7 @@ import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { setVar } from "./utils/setVar.js";
 import { initSimpleMap } from "./modules/map.js";
 import { lagerhauser } from "./data/lagerhauser.js";
+import { toggleSibebar } from "./modules/sibebar.js";
 
 const swipers = [
   {
@@ -23,7 +24,9 @@ const serVars = () => {
  setVar('--info-map-height', height);
 }
 
-const handleGlobalClick = (e) => {};
+const handleGlobalClick = (e) => {
+  toggleSibebar(e)
+};
 
 document.addEventListener("DOMContentLoaded", () => {
   initSimpleMap("map", lagerhauser);
@@ -43,6 +46,7 @@ let resizeTimeout;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
+    handleAllSliders();
     serVars();
   }, 100);
 });

@@ -32,13 +32,29 @@
       height: 100%;
     }
   }
+
+  &--big {
+    min-height: 36px;
+    padding: 6px 10px;
+    gap: 8px;
+    border-radius: var(--radius-xl);
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--secondary-color-470 {
+    background-color: var(--secondary-color-470);
+    color: var(--white-color);
+  }
 }
 
 .badge-decor {
   display: flex;
   align-items: center;
   gap: 8px;
-
 
   .icon {
     width: 16px;
@@ -57,11 +73,9 @@
     gap: 4px;
   }
 
-
   &--big {
     gap: 4px;
-    
-    
+
     .icon {
       width: 20px;
       height: 20px;
@@ -70,6 +84,20 @@
     * {
       line-height: 1;
     }
+  }
+
+  &--xl {
+    gap: 8px;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &--gray-100 {
+    background-color: var(--gray-color-100);
+    padding: 2px 8px;
   }
 }
 

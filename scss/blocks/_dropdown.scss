@@ -26,6 +26,14 @@
     }
   }
 
+  &--gray {
+    .dropdown {
+      &__content {
+        background-color: var(--gray-color-200);
+      }
+    }
+  }
+
   &__content {
     position: absolute;
     top: 100%;
@@ -34,7 +42,7 @@
     border: 1px solid var(--gray-color-400);
     padding: 4px;
     overflow: hidden;
-    z-index: 10;
+    z-index: 100;
     border-radius: var(--radius-md);
     opacity: 0;
     visibility: hidden;
@@ -93,6 +101,17 @@
         .check {
           display: flex;
         }
+      }
+    }
+  }
+
+  &--simple {
+    .dropdown {
+      &__content {
+        width: 144px;
+        left: 50%;
+        padding: 8px;
+        transform: translateX(-50%);
       }
     }
   }

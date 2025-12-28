@@ -2,6 +2,13 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  height: fit-content;
+
+  &--white {
+    background-color: var(--white-color);
+    padding: 4px 12px 8px;
+    border-radius: var(--radius-xl);
+  }
 
   &__list {
     --gap-items: 8px;

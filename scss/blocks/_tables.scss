@@ -1,0 +1,43 @@
+.table-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+
+  &__header {
+    background-color: var(--gray-color-200);
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 60% repeat(3, calc(40% / 3));
+    gap: 4px;
+    border-radius: var(--radius-base);
+    overflow: hidden;
+  }
+
+  &__cell {
+    padding: 10px 16px;
+   
+  }
+
+  &__row {
+
+  }
+
+  &__decor {
+    grid-column: 1 / -1;
+  }
+
+  &__decor-cell {
+    padding: 12px 10px;
+  }
+
+  &__items {
+    .table-grid__row {
+      &:nth-child(even) {
+        background-color: var(--gray-color-100);
+      }
+    }
+  }
+}

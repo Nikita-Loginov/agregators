@@ -2,24 +2,349 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Карта", "links" :
   ["./css/map.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css", "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css", "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css", "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"] })
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
+  "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"]
+  })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html', {"full" : "true"})
 
       <main class="main main--noPaddingAdd main--noLastPadding">
-        <section class="map">
+        <section class="map sibebar-open" data-block="sibebar-box">
           <div class="map__inner">
             <div class="map__info">
-              <p>Фильтры</p>
+              <div class="filter filter--big filter--bg">
+                <div class="filter__box">
+                  <div class="filter__items">
+                    <div
+                      class="filter__item select-box select-box--big select-box--search with-icon"
+                      data-icon="search"
+                    >
+                      <select
+                        id="search-select"
+                        data-placeholder="Enter location"
+                        multiple
+                        data-search="true"
+                      >
+                        <option value="">Enter location</option>
+                        <option
+                          value="1"
+                          data-type="city"
+                          data-tag="City"
+                          data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                          data-short-desc="Dubai, UAE"
+                        >
+                          Dubai
+                        </option>
+                        <option
+                          value="2"
+                          data-type="city"
+                          data-tag="City"
+                          data-desc="Central Business District, Moscow city, Russia"
+                          data-short-desc="Moscow, Russia"
+                        >
+                          Moscow
+                        </option>
+                        <option
+                          value="3"
+                          data-type="city"
+                          data-tag="City"
+                          data-desc="Manhattan borough, New York city, USA"
+                          data-short-desc="New York, USA"
+                        >
+                          New York
+                        </option>
+                        <option
+                          value="4"
+                          data-type="country"
+                          data-tag="Country"
+                          data-desc="Federal republic in Central Europe with rich history and culture"
+                          data-short-desc="Germany"
+                        >
+                          Germany
+                        </option>
+                        <option
+                          value="5"
+                          data-type="country"
+                          data-tag="Country"
+                          data-desc="Island nation in East Asia known for technology and traditions"
+                          data-short-desc="Japan"
+                        >
+                          Japan
+                        </option>
+                        <option
+                          value="6"
+                          data-type="region"
+                          data-tag="Region"
+                          data-desc="Southeastern region of France on the Mediterranean coast"
+                          data-short-desc="Provence, France"
+                        >
+                          Provence
+                        </option>
+                        <option
+                          value="7"
+                          data-type="region"
+                          data-tag="Region"
+                          data-desc="Northern Italian region known for cuisine and automotive industry"
+                          data-short-desc="Emilia-Romagna, Italy"
+                        >
+                          Emilia-Romagna
+                        </option>
+                        <option
+                          value="8"
+                          data-type="district"
+                          data-tag="District"
+                          data-desc="Historic central district of London with government buildings"
+                          data-short-desc="Westminster, London"
+                        >
+                          Westminster
+                        </option>
+                        <option
+                          value="9"
+                          data-type="district"
+                          data-tag="District"
+                          data-desc="Fashionable district in central Paris with luxury boutiques"
+                          data-short-desc="Champs-Élysées, Paris"
+                        >
+                          Champs-Élysées
+                        </option>
+                      </select>
+                    </div>
+
+                    <div class="filter__item select-box select-box--words">
+                      <select id="select1">
+                        <option value="1" selected>Buy</option>
+                        <option value="2">Rent</option>
+                      </select>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="checkbox-box">
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" checked name="category" />
+                            <span class="p2">All</span>
+                          </div>
+                        </label>
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" name="category" />
+                            <span class="p2">Ready</span>
+                          </div>
+                        </label>
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" name="category" />
+                            <span class="p2">Off-Plan</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div
+                      class="filter__item select-box select-box--words"
+                      data-placeholder="Property type"
+                    >
+                      <select id="select2">
+                        <option value="">Property type</option>
+                        <option value="1">Apartment</option>
+                        <option value="2">Penthouse</option>
+                        <option value="3">Duplex</option>
+                        <option value="4">
+                          Hotel Apartment Hotel Apartment
+                        </option>
+                      </select>
+                    </div>
+
+                    <div
+                      class="filter__item select-box select-box--words select-box--check"
+                      data-placeholder="Beds & Baths"
+                    >
+                      <select id="select3" multiple>
+                        <option value="">Beds & Baths</option>
+                        <option value="beds-studio" data-group="beds">
+                          Studio
+                        </option>
+                        <option value="beds-1" data-group="beds">1</option>
+                        <option value="beds-2" data-group="beds">2</option>
+                        <option value="beds-3" data-group="beds">3</option>
+                        <option value="beds-4" data-group="beds">4</option>
+                        <option value="beds-5" data-group="beds">5</option>
+                        <option value="beds-6" data-group="beds">6</option>
+                        <option value="beds-7" data-group="beds">7</option>
+                        <option value="beds-8" data-group="beds">8</option>
+                        <option value="beds-9" data-group="beds">9</option>
+                        <option value="beds-10" data-group="beds">10+</option>
+                        <option value="baths-1" data-group="baths">1</option>
+                        <option value="baths-2" data-group="baths">2</option>
+                        <option value="baths-3" data-group="baths">3</option>
+                        <option value="baths-4" data-group="baths">4</option>
+                        <option value="baths-5" data-group="baths">5</option>
+                        <option value="baths-6" data-group="baths">6+</option>
+                      </select>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="dropdown dropdown--price input-box">
+                        <button
+                          class="input-box__info dropdown__btn"
+                          type="button"
+                        >
+                          <div class="check">
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#check-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                          <p class="p2">Price</p>
+                          <span class="icon arrow">
+                            <svg>
+                              <use xlink:href="#arrow-bottom-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+                        <div class="dropdown__content popup price-popup">
+                          <div class="price-popup__content">
+                            <p class="p2 semibold-font">Price range, AED</p>
+                            <div class="price-popup__items">
+                              <div class="input-box">
+                                <label class="input-box__content">
+                                  <div class="input-box__info">
+                                    <div class="decor p2">Min</div>
+                                    <input
+                                      placeholder="0"
+                                      type="number"
+                                      name="price_min"
+                                      min="0"
+                                      max="10000"
+                                      data-type="price_min"
+                                    />
+                                  </div>
+                                </label>
+                              </div>
+                              <div class="input-box">
+                                <label class="input-box__content">
+                                  <div class="input-box__info">
+                                    <div class="decor p2">Max</div>
+                                    <input
+                                      placeholder="∞"
+                                      type="number"
+                                      name="price_max"
+                                      min="0"
+                                      max="10000"
+                                      data-type="price_max"
+                                    />
+                                  </div>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <button
+                        type="button"
+                        class="button button--gray button--big button--big-base"
+                      >
+                        <p class="p2 medium-font">More filters</p>
+                      </button>
+                    </div>
+
+                    <div
+                      class="filter__item dropdown dropdown--simple dropdown--gray"
+                    >
+                      <button
+                        type="button"
+                        class="button button--gray-third button--cub-lg dropdown__btn"
+                      >
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#filter-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <div class="dropdown__content">
+                        <ul class="list-links">
+                          <li class="list-links__link">
+                            <div class="list-links__item">
+                              <button>
+                                <p class="p2 text-secondary-100">
+                                  Seved searches
+                                </p>
+                              </button>
+                            </div>
+                          </li>
+
+                          <li class="list-links__link">
+                            <div class="list-links__item">
+                              <button>
+                                <p class="p2 text-secondary-100">Save search</p>
+                              </button>
+                            </div>
+                          </li>
+
+                          <li class="list-links__link">
+                            <div class="list-links__item">
+                              <button>
+                                <p class="p2 text-secondary-100 text-primary-100">
+                                  Clear filters
+                                </p>
+                              </button>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="filter__item">
+                      <div class="checkbox-box">
+                        <label class="check">
+                          <a
+                            href="/catalogy.html"
+                            aria-label="Перейти на страницу каталога"
+                            title="List"
+                            class="check__info"
+                          >
+                            <span class="p2">List</span>
+                          </a>
+                        </label>
+
+                        <label class="check">
+                          <a
+                            href="/catalogy.html"
+                            aria-label="Перейти на страницу каталога"
+                            title="Tiles"
+                            class="check__info"
+                          >
+                            <span class="p2">Tiles</span>
+                          </a>
+                        </label>
+
+                        <label class="check">
+                          <div class="check__info">
+                            <input type="radio" checked name="map" />
+                            <span class="p2">Map</span>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div class="map__content">
-              <aside class="map-sibebar sibebar">
+              <aside class="map-sibebar sibebar open" data-block="sibebar-box__block">
                 <div class="map-sibebar__top">
                   <h1 class="h4">Property in selected area</h1>
 
-                  <button class="close">
+                  <button class="close" data-block="sibebar-box__close">
                     <span class="icon">
                       <svg>
                         <use xlink:href="#close-icon"></use>
@@ -170,7 +495,7 @@
 
                                   <button
                                     aria-label="Добавить в избранное"
-                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                    class="button button--cub-small button--gray-third button--comparison active"
                                   >
                                     <span class="icon">
                                       <svg>
@@ -248,7 +573,8 @@
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
-                                @@include('../btns/contact-btn.html', {"text" : "Contact Seller"})
+                                @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller"})
                               </div>
 
                               <div class="good-item__logo">
@@ -401,7 +727,7 @@
 
                                   <button
                                     aria-label="Добавить в избранное"
-                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                    class="button button--cub-small button--gray-third button--comparison active"
                                   >
                                     <span class="icon">
                                       <svg>
@@ -479,7 +805,8 @@
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
-                                @@include('../btns/contact-btn.html', {"text" : "Contact Seller"})
+                                @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller"})
                               </div>
 
                               <div class="good-item__logo">
@@ -632,7 +959,7 @@
 
                                   <button
                                     aria-label="Добавить в избранное"
-                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                    class="button button--cub-small button--gray-third button--comparison active"
                                   >
                                     <span class="icon">
                                       <svg>
@@ -710,7 +1037,8 @@
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
-                                @@include('../btns/contact-btn.html', {"text" : "Contact Seller"})
+                                @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller"})
                               </div>
 
                               <div class="good-item__logo">
@@ -863,7 +1191,7 @@
 
                                   <button
                                     aria-label="Добавить в избранное"
-                                    class="button button--cub-small button--gray-third  button--comparison active"
+                                    class="button button--cub-small button--gray-third button--comparison active"
                                   >
                                     <span class="icon">
                                       <svg>
@@ -941,7 +1269,8 @@
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
-                                @@include('../btns/contact-btn.html', {"text" : "Contact Seller"})
+                                @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller"})
                               </div>
 
                               <div class="good-item__logo">
@@ -958,6 +1287,45 @@
                   </div>
                 </div>
               </aside>
+
+              <div class="map__details">
+                <div class="breadcrumbs breadcrumbs--white">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__link">
+                      <a
+                        href="#"
+                        aria-label="Вернуться на Home"
+                        title="Home"
+                        class="breadcrumbs__item link active active-noColor active-line"
+                        >Home</a
+                      >
+                    </li>
+
+                    <li class="breadcrumbs__link">
+                      <span class="breadcrumbs__item"
+                        >Property for sale in Abu-Dhabi</span
+                      >
+                    </li>
+                  </ul>
+
+                  <a
+                    href="#"
+                    aria-label="Вернуться на Home"
+                    title="Home"
+                    class="breadcrumbs__media"
+                  >
+                    <span class="breadcrumbs__circle">
+                      <div class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-circle-icon"></use>
+                        </svg>
+                      </div>
+                    </span>
+
+                    <span>Home</span>
+                  </a>
+                </div>
+              </div>
 
               <div class="map__cart">
                 <div class="map" id="map"></div>

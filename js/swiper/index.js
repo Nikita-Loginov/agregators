@@ -37,7 +37,7 @@ export const SWIPERS = {
 
         360: {
           slidesPerView: 2,
-        }
+        },
       },
     },
   },
@@ -58,10 +58,32 @@ export const SWIPERS = {
     options: {
       slidesPerView: 4,
       spaceBetween: 14,
-      navigation : {
-        nextEl: '.also-section .arrow-swiper.next',
-        prevEl: '.also-section .arrow-swiper.prev',
-      }
+      pagination: {
+        el: ".also-section .swiper-pagination--also",
+      },
+    },
+  },
+  GALLERY_BIG: {
+    selector: ".gallery .swiper--gallery-big",
+    breakpoint: 122300000000,
+    mousewheel: MOUSE_WHEEL_CONFIG,
+    options: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+  },
+  GALLERY_SMALL: {
+    selector: ".gallery .swiper--gallery-small",
+    breakpoint: 122300000000,
+    mousewheel: MOUSE_WHEEL_CONFIG,
+    options: {
+      slidesPerView: 3,
+      spaceBetween: 8,
+      direction: "vertical",
+      navigation: {
+        nextEl: ".gallery .swiper--gallery-small .arrow-swiper.next",
+        prevEl: ".gallery .swiper--gallery-small .arrow-swiper.prev",
+      },
     },
   },
 };
