@@ -1,140 +1,67 @@
-import { maskTel } from "./masks.js";
-import { classAction } from "./classActions.js";
+import { validateFormField } from "../validation/index.js";
+import { initPhoneMasks } from "./masks.js";
 import { openModalStep } from "./modal.js";
+import { classAction } from "../modules/classActions.js";
 
-export function initFormValidation(form) {
+export const initFormValidation = (form) => {
   if (!form) return;
 
-  maskTel();
+  initPhoneMasks(form);
 
-  form.addEventListener("input", handleFieldChange);
-  form.addEventListener("change", handleFieldChange);
-  form.addEventListener("submit", handleFormSubmit);
-}
+  form.addEventListener("input", onChange);
+  form.addEventListener("change", onChange);
+  form.addEventListener("submit", onSubmit);
+};
 
-function handleFieldChange(event) {
-  const field = event.target;
-  const formItem = field.closest(".form__item");
+const onChange = (e) => {
+  const formItem = e.target.closest(".form__item");
+  if (!formItem) return;
 
-  if (formItem) {
-    validateField(field);
-    updateSubmitButton(field.closest(".form"));
-  }
-}
+  validateFormField(formItem);
+  updateSubmit(e.target.closest("form"));
+};
 
-export function checkActionInput(formItem) {
-  const input = formItem.querySelector("input, textarea");
-  // classAction(formItem, "focus", "add");
+const updateSubmit = (form) => {
+  const btn = form.querySelector('[type="submit"]');
+  if (!btn) return;
 
-  if (input.value.length) {
-    classAction(formItem, "more", "add");
-  } else {
-    classAction(formItem, "more", "remove");
-  }
-}
+  const valid = [...form.querySelectorAll(".form__item")].every(
+    validateFormField
+  );
+  classAction(btn, "disabled", valid ? "remove" : "add");
+};
 
-function validateField(field) {
-  const formItem = field.closest(".form__item");
-  const errorContainer = formItem.querySelector(".form__errors");
-  let isValid = true;
-  let errorMessage = "";
+export const isFormValid = (form) =>
+  [...form.querySelectorAll(".form__item")].every(validateFormField);
 
-  if (field.classList.contains("selected-option")) {
-    const realSelect = field
-      .closest(".custom-select")
-      .querySelector(".real-select");
-    isValid = realSelect.value !== "";
-    errorMessage = isValid ? "" : field.dataset.empty;
-  } else {
-    if (field.validity.valueMissing) {
-      errorMessage = field.dataset.empty;
-      isValid = false;
-    } else if (field.validity.patternMismatch) {
-      errorMessage = field.dataset.title;
-      isValid = false;
-    }
-  }
+const onSubmit = (e) => {
+  e.preventDefault();
+  const form = e.target;
 
-  if (errorContainer) {
-    errorContainer.textContent = errorMessage;
-  }
+  if (!isFormValid(form)) return;
 
-  if (formItem) {
-    classAction(formItem, "error", isValid ? "remove" : "add");
-    classAction(formItem, "success", isValid ? "add" : "remove");
-  }
+  const submitBtn = form.querySelector('button[type="submit"].modal-open');
 
-  field.setAttribute("aria-invalid", isValid ? "false" : "true");
-  return isValid;
-}
+  if (submitBtn) {
+    const modalName = submitBtn.dataset.modal;
+    const modalBlock = document.querySelector(`.${modalName}`);
 
-function updateSubmitButton(form) {
-  const submitButton = form.querySelector('button[type="submit"]');
-  const formIsValid = checkFormValidity(form);
-
-  if (submitButton) {
-    classAction(submitButton, "disabled", formIsValid ? "remove" : "add");
-  }
-}
-
-export function checkFormValidity(form) {
-  const requiredFields = form.querySelectorAll("[required]");
-
-  return Array.from(requiredFields).every((field) => {
-    if (field.classList.contains("selected-option")) {
-      const realSelect = field
-        .closest(".custom-select")
-        .querySelector(".real-select");
-
-      return realSelect.value !== "";
-    }
-    return field.validity.valid;
-  });
-}
-
-function handleFormSubmit(event) {
-  event.preventDefault();
-  const form = event.target;
-
-  if (checkFormValidity(form)) {
-    form.reset();
-    resetSelect(form);
-    updateSubmitButton(form);
-
-    const btnModal = event.target.querySelector(
-      'button[type="submit"].modal-open'
+    openModalStep(
+      submitBtn,
+      document.querySelectorAll(".modalBlock"),
+      modalBlock
     );
- 
-
-    if (btnModal) {
-      const nameModal = btnModal.dataset.modal;
-      const modalBlock = document.querySelector(`.${nameModal}`);
-      
-      openModalStep(
-        btnModal,
-        document.querySelectorAll(`.modalBlock`),
-        modalBlock
-      );
-    }
-  } else {
-    const requiredFields = form.querySelectorAll("[required]");
-    requiredFields.forEach((field) => validateField(field));
   }
-}
 
-function resetSelect(form) {
-  const selectsRequired = form.querySelectorAll("select[required]");
+  updateSubmit(form);
+  form.reset();
 
-  selectsRequired.forEach((select) => {
-    const customSelect = select.closest(".custom-select");
-    const selectedOption = customSelect.querySelector(".selected-option");
-    const optionsList = customSelect.querySelector(".options-list");
-    const realSelect = customSelect.querySelector(".real-select");
-    const optionFirst = optionsList.querySelectorAll("li")[0];
+  form.querySelectorAll(".form__item").forEach((item) => {
+    const field = item.querySelector("input, textarea, .selected-option");
+    const errorBox = item.querySelector(".form__errors");
+    if (errorBox) errorBox.textContent = "";
 
-    if (optionFirst) {
-      selectedOption.value = optionFirst.textContent.trim();
-      realSelect.value = optionFirst.dataset.value;
-    }
+    field?.setAttribute("aria-invalid", "false");
+    item.classList.remove("error", "success");
   });
-}
+};

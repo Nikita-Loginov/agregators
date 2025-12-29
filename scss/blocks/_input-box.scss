@@ -8,6 +8,16 @@
     cursor: pointer;
   }
 
+  &--gray {
+    .input-box {
+      &__info {
+        background-color: var(--gray-color-200);
+        border-color: var(--gray-color-200);
+        color: var(--secondary-color-100);
+      }
+    }
+  }
+
   &__info {
     display: flex;
     align-items: center;
@@ -50,9 +60,9 @@
       min-height: 96px;
       max-height: 210px;
     }
-    
 
-    &:has(input:focus, input:active, input:hover, textarea:focus, textarea:active, textarea:hover) {
+    &:focus,
+    &:hover {
       border-color: var(--dark-color-600);
     }
   }
@@ -89,29 +99,25 @@
     }
   }
 
-  &--gray {
-    .input-box {
-      &__info {
-        background-color: var(--gray-color-200);
-        border-color: var(--gray-color-200);
-        color: var(--secondary-color-100);
-      }
-    }
-  }
+ 
 
   &--xl {
-    .input-box {
-      &__info {
-        min-height: 52px;
+    &:first-child {
+      .input-box {
+        &__info {
+          min-height: 52px;
+        }
       }
     }
   }
 
   &--little {
-    .input-box {
-      &__info {
-        min-height: 36px;
-        padding: 4012px;
+    &:first-child {
+      .input-box {
+        &__info {
+          min-height: 36px;
+          padding: 4px 12px;
+        }
       }
     }
   }

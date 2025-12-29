@@ -28,6 +28,10 @@
           }
         }
 
+        &__item-arrow {
+          background-color: var(--dark-color-200);
+        } 
+
         &__answer {
           padding-inline: var(--padding-inline);
         }
@@ -71,4 +75,6 @@
     overflow: hidden;
     transition: all 0.5s;
   }
+
+  
 }

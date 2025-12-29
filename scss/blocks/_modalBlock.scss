@@ -8,8 +8,7 @@
   display: flex;
   justify-content: center;
   max-height: 100dvh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
   transition: all 0.5s;
   opacity: 0;
   visibility: hidden;
@@ -34,9 +33,21 @@
     transform: translateY(-400%);
     transition: all 0.5s;
     background-color: var(--white-color);
-    padding: 20px;
+    padding: 20px 20px 24px;
     border-radius: var(--radius-md);
     overflow: hidden;
+    max-height: 90vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &--big {
+      padding: 28px 32px;
+
+      .modalBlock__head {
+        top: 12px;
+        right: 20px;
+      }
+    }
   }
 
   &__head {
@@ -56,19 +67,24 @@
 
   &__close {
     background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
 
     * {
       pointer-events: none;
     }
 
     .icon {
-      width: 24px;
-      height: 24px;
+      width: 12px;
+      height: 12px;
 
       svg,
       img {
-        width: 12px;
-        height: 12px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -196,7 +212,7 @@
     flex-direction: column;
     gap: 20px;
   }
-  
+
   .modal-close {
     .icon {
       width: 14px;
@@ -235,5 +251,29 @@
     display: flex;
     flex-direction: column;
     gap: 28px;
+  }
+}
+
+.featuresModal {
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .modalBlock__block {
+    gap: 20px;
+  }
+
+  &__item-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__items-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px 28px;
   }
 }

@@ -251,7 +251,7 @@
                     <div class="filter__item">
                       <button
                         type="button"
-                        class="button button--gray button--big button--big-base"
+                        class="button button--bg-gray-200 button--lg button--rounded-md"
                       >
                         <p class="p2 medium-font">More filters</p>
                       </button>
@@ -260,7 +260,7 @@
                     <div class="filter__item">
                       <button
                         type="button"
-                        class="button button--red button--big button--big-base"
+                        class="button button--lg button--rounded-md button--bg-primary-500"
                       >
                         <p class="p2 medium-font">Apply</p>
                       </button>
@@ -393,6 +393,7 @@
                           </label>
                         </div>
                       </div>
+
                       <div class="catalogy__items-blocks">
                         <div class="good-item">
                           <div class="good-item__swiper-box">
@@ -463,39 +464,8 @@
                                 </div>
 
                                 <div class="good-item__decors-img">
-                                  <div
-                                    class="arrows-swiper arrows-swiper--absolute"
-                                  >
-                                    <button
-                                      class="button button--white button--circle arrow-swiper prev"
-                                      type="button"
-                                    >
-                                      <span class="icon">
-                                        <svg>
-                                          <use
-                                            xlink:href="#arrow-line-icon"
-                                          ></use>
-                                        </svg>
-                                      </span>
-                                    </button>
-
-                                    <button
-                                      class="button button--white button--circle arrow-swiper next"
-                                      type="button"
-                                    >
-                                      <span class="icon">
-                                        <svg>
-                                          <use
-                                            xlink:href="#arrow-line-icon"
-                                          ></use>
-                                        </svg>
-                                      </span>
-                                    </button>
-                                  </div>
-
-                                  <div
-                                    class="swiper-pagination swiper-pagination--absolute"
-                                  ></div>
+                                  @@include('../swiper/arrows-absolute.html')
+                                  @@include('../swiper/swiper-pagination-absolute.html')
                                 </div>
                               </div>
                             </div>
@@ -533,7 +503,9 @@
                                 </div>
                               </div>
 
-                              <p class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc">
+                              <p
+                                class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                              >
                                 Apartment, 2 bedroom, 60.11 sq.m. № 3427
                               </p>
 
@@ -606,22 +578,12 @@
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
-                                <button
-                                  aria-label="Написать сообщение на почту"
-                                  class="button button--gray"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#email-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <span class="p3">Contact Seller</span>
-                                </button>
+                                @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller"})
 
                                 <button
                                   aria-label="Добавить в избранное"
-                                  class="button button--gray button--favorite button--cub-big active"
+                                  class="button button--bg-gray-200 button--cub button--cub-md-add button--favorite active"
                                 >
                                   <span class="icon">
                                     <svg>
@@ -632,7 +594,7 @@
 
                                 <button
                                   aria-label="Добавить в избранное"
-                                  class="button button--gray button--cub-big button--comparison active"
+                                  class="button button--bg-gray-200 button--cub button--cub-md-add button--comparison active"
                                 >
                                   <span class="icon">
                                     <svg>
@@ -649,6 +611,138 @@
                                 />
                               </div>
                             </footer>
+                          </div>
+                        </div>
+
+                        <div class="banner-promo">
+                          <div class="banner-promo__img">
+                            <picture>
+                              <source
+                                media="(max-width: 767px)"
+                                srcset="
+                                  /img/banner/one-media.webp   1x,
+                                  /img/banner/one-media2x.webp 2x
+                                "
+                              />
+                              <source
+                                srcset="
+                                  /img/banner/one.webp   1x,
+                                  /img/banner/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/banner/one.webp"
+                                alt="фотография баннера"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="banner-promo__content">
+                            <header class="banner-promo__header">
+                              <div class="banner-promo__block">
+                                <p class="h2">Urban Horizon</p>
+
+                                <ul class="list-icon">
+                                  <li class="list-icon__link">
+                                    <span class="icon icon">
+                                      <svg>
+                                        <use xlink:href="#geo-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p2">
+                                      Mohammed Bin Rashid City, Dubai
+                                    </p>
+                                  </li>
+                                </ul>
+                              </div>
+
+                              <div class="banner-promo__block">
+                                <div class="banner-promo__logo">
+                                  <img
+                                    src="/img/seller/sellertwo.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </div>
+                            </header>
+
+                            <p class="h5 semibold-font">from 590,000 AED</p>
+
+                            <div class="banner-promo__footer">
+                              <div class="banner-promo__footer-content">
+                                <div class="banner-promo__items">
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">Q3 2027</p>
+
+                                    <p class="p4">Handover</p>
+                                  </div>
+
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">
+                                      Studio, 1-4 beds
+                                    </p>
+
+                                    <p class="p4">Apartments</p>
+                                  </div>
+
+                                  <div class="card-text">
+                                    <p class="p2 medium-font">20/30/50</p>
+
+                                    <p class="p4">Payment plan</p>
+                                  </div>
+                                </div>
+
+                                <div class="banner-promo__logo">
+                                  <img
+                                    src="/img/seller/sellertwo.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </div>
+
+                              <div class="banner-promo__btns">
+                                <a
+                                  href="#"
+                                  aria-label="Перейти на страницу Contact Seller"
+                                  title="Contact Seller"
+                                  class="button button--bg-primary-100 button--lg button--rounded-3xl"
+                                >
+                                  <span>Contact Seller</span>
+
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="text-banner">
+                          <div class="text-banner__block">
+                            <p class="h6">Header. Optional.</p>
+
+                            <div class="textbox">
+                              <p class="p3">
+                                A wonderful serenity has taken possession of my
+                                entire soul, like these sweet mornings of spring
+                                which I enjoy with my whole heart. I am alone,
+                                and feel the charm of existence in this spot,
+                                which was created for the bliss of souls like
+                                mine. I am so happy, my dear friend, so absorbed
+                                in the exquisite sense of mere tranquil
+                                existence, that I neglect my talents. I should
+                                be incapable of drawing a single stroke at the
+                                present moment; and yet I feel that I never was
+                                a greater artist than now. When, while the
+                                lovely valley teems with vapour around me, and
+                                the meridian
+                              </p>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -690,10 +784,11 @@
                         href="#"
                         aria-label="Перейти на страницу Contact Seller"
                         title="Contact Seller"
-                        class="button button--big button--red button--bg-rad"
+                        class="button button--bg-primary-100 button--lg button--rounded-3xl"
                       >
                         <span>Subscribe</span>
-                        <span class="icon">
+
+                        <span class="icon icon--big">
                           <svg>
                             <use xlink:href="#arrow-line-icon"></use>
                           </svg>
@@ -784,16 +879,21 @@
                             type="button"
                           >
                             <p
-                              class="p3 medium-font"
+                              class="p2 medium-font"
                               data-block="more-btn-text"
                             >
                               More
                             </p>
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#arrow-line-down-icon"></use>
-                              </svg>
-                            </span>
+
+                            <div
+                              class="button--circle button--circle-3xs button--bg-gray-600"
+                            >
+                              <span class="icon icon--sm">
+                                <svg>
+                                  <use xlink:href="#arrow-line-down-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
                           </button>
                         </footer>
                       </div>
@@ -917,16 +1017,21 @@
                             type="button"
                           >
                             <p
-                              class="p3 medium-font"
+                              class="p2 medium-font"
                               data-block="more-btn-text"
                             >
                               More
                             </p>
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#arrow-line-down-icon"></use>
-                              </svg>
-                            </span>
+
+                            <div
+                              class="button--circle button--circle-3xs button--bg-gray-600"
+                            >
+                              <span class="icon icon--sm">
+                                <svg>
+                                  <use xlink:href="#arrow-line-down-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
                           </button>
                         </footer>
                       </div>
@@ -1014,16 +1119,21 @@
                             type="button"
                           >
                             <p
-                              class="p3 medium-font"
+                              class="p2 medium-font"
                               data-block="more-btn-text"
                             >
                               More
                             </p>
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#arrow-line-down-icon"></use>
-                              </svg>
-                            </span>
+
+                            <div
+                              class="button--circle button--circle-3xs button--bg-gray-600"
+                            >
+                              <span class="icon icon--sm">
+                                <svg>
+                                  <use xlink:href="#arrow-line-down-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
                           </button>
                         </footer>
                       </div>
@@ -1079,16 +1189,21 @@
                             type="button"
                           >
                             <p
-                              class="p3 medium-font"
+                              class="p2 medium-font"
                               data-block="more-btn-text"
                             >
                               More
                             </p>
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#arrow-line-down-icon"></use>
-                              </svg>
-                            </span>
+
+                            <div
+                              class="button--circle button--circle-3xs button--bg-gray-600"
+                            >
+                              <span class="icon icon--sm">
+                                <svg>
+                                  <use xlink:href="#arrow-line-down-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
                           </button>
                         </footer>
                       </div>
@@ -1517,16 +1632,23 @@
                               type="button"
                             >
                               <p
-                                class="p3 medium-font"
+                                class="p2 medium-font"
                                 data-block="more-btn-text"
                               >
                                 More
                               </p>
-                              <span class="icon">
-                                <svg>
-                                  <use xlink:href="#arrow-line-down-icon"></use>
-                                </svg>
-                              </span>
+
+                              <div
+                                class="button--circle button--circle-3xs button--bg-gray-600"
+                              >
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use
+                                      xlink:href="#arrow-line-down-icon"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </div>
                             </button>
                           </footer>
                         </div>
@@ -1536,106 +1658,7 @@
                   <div class="catalogy__top">
                     <h2 class="h4">Popular Questions</h2>
 
-                    <div class="accordeon" data-width="10000000">
-                      <div class="accordeon__item">
-                        <button type="button" class="accordeon__question">
-                          <p class="p1 medium-font">
-                            Can foreigners buy real estate in Dubai?
-                          </p>
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-                        <div class="accordeon__answer" data-padding-top="20">
-                          <div class="textbox">
-                            <p class="p2">
-                              Purchasing houses or apartments in Dubai worth AED
-                              750,000 (USD 204,000) or more entitles the buyer
-                              to apply for a 2-year residence visa. Investments
-                              exceeding AED 2 million (USD 544,500) qualify for
-                              a 5-year golden visa in UAE and 10-year golden
-                              visa in Dubai.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordeon__item">
-                        <button type="button" class="accordeon__question">
-                          <p class="p1 medium-font">
-                            Is it possible to obtain UAE residency by investing
-                            in property in Dubai?
-                          </p>
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-                        <div class="accordeon__answer" data-padding-top="20">
-                          <div class="textbox">
-                            <p class="p2">
-                              Purchasing houses or apartments in Dubai worth AED
-                              750,000 (USD 204,000) or more entitles the buyer
-                              to apply for a 2-year residence visa. Investments
-                              exceeding AED 2 million (USD 544,500) qualify for
-                              a 5-year golden visa in UAE and 10-year golden
-                              visa in Dubai.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordeon__item">
-                        <button type="button" class="accordeon__question">
-                          <p class="p1 medium-font">
-                            How many listings are available on the
-                            Dubai-Real.Estate platform?
-                          </p>
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-                        <div class="accordeon__answer" data-padding-top="20">
-                          <div class="textbox">
-                            <p class="p2">
-                              Purchasing houses or apartments in Dubai worth AED
-                              750,000 (USD 204,000) or more entitles the buyer
-                              to apply for a 2-year residence visa. Investments
-                              exceeding AED 2 million (USD 544,500) qualify for
-                              a 5-year golden visa in UAE and 10-year golden
-                              visa in Dubai.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordeon__item">
-                        <button type="button" class="accordeon__question">
-                          <p class="p1 medium-font">
-                            Can foreigners buy real estate in Dubai?
-                          </p>
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
-                        </button>
-                        <div class="accordeon__answer" data-padding-top="20">
-                          <div class="textbox">
-                            <p class="p2">
-                              Purchasing houses or apartments in Dubai worth AED
-                              750,000 (USD 204,000) or more entitles the buyer
-                              to apply for a 2-year residence visa. Investments
-                              exceeding AED 2 million (USD 544,500) qualify for
-                              a 5-year golden visa in UAE and 10-year golden
-                              visa in Dubai.
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    @@include('../modules/accordeon.html')
                   </div>
                 </div>
                 <div class="catalogy__banners">
@@ -1674,10 +1697,11 @@
                         href="#"
                         aria-label="Перейти на страницу Contact Seller"
                         title="Contact Seller"
-                        class="button button--big button--red button--bg-rad"
+                        class="button button--bg-primary-100 button--lg button--rounded-3xl"
                       >
                         <span>Subscribe</span>
-                        <span class="icon">
+
+                        <span class="icon icon--big">
                           <svg>
                             <use xlink:href="#arrow-line-icon"></use>
                           </svg>

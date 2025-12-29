@@ -121,7 +121,7 @@
                               <picture>
                                 <source
                                   srcset="
-                                    /img/goods/one.webp            1x,
+                                    /img/goods/one.webp   1x,
                                     /img/goods/one2x.webp 2x
                                   "
                                 />
@@ -224,7 +224,7 @@
                               <picture>
                                 <source
                                   srcset="
-                                    /img/goods/one.webp            1x,
+                                    /img/goods/one.webp   1x,
                                     /img/goods/one2x.webp 2x
                                   "
                                 />
@@ -285,17 +285,114 @@
 
                             <div class="price__change">
                               <div
-                                class="price__change-content text-primary-500"
+                                class="price__change-content list-popup relative relative-top list-price"
                               >
-                                <span class="icon icon--big">
-                                  <svg>
-                                    <use xlink:href="#lang-icon"></use>
-                                  </svg>
-                                </span>
+                                <button
+                                  class="price__change-btn text-primary-500"
+                                  type="button"
+                                >
+                                  <span class="icon icon--big">
+                                    <svg>
+                                      <use xlink:href="#lang-icon"></use>
+                                    </svg>
+                                  </span>
 
-                                <p class="p2 medium-font">
-                                  – 120,000 AED (-2.7%)
-                                </p>
+                                  <p class="p2 medium-font">
+                                    – 120,000 AED (-2.7%)
+                                  </p>
+                                </button>
+
+                                <div
+                                  class="list-popup__box left list-popup__box--white"
+                                >
+                                  <div class="list-price__header">
+                                    <p class="p2 medium-font">Price history</p>
+                                  </div>
+
+                                  <div class="table-grid table-grid--two table-grid--odd">
+                                    <div class="table-grid__items">
+                                      <div class="table-grid__row">
+                                        <div class="table-grid__cell">
+                                          <time datetime="2025-11-10"
+                                            >10.11.2025</time
+                                          >
+                                        </div>
+
+                                        <div
+                                          class="table-grid__cell text-green-100"
+                                        >
+                                          <p class="p3 medium-font">
+                                            1,102,500 AED
+                                          </p>
+                                        </div>
+                                      </div>
+
+                                      <div class="table-grid__row">
+                                        <div class="table-grid__cell">
+                                          <time datetime="2025-09-23"
+                                            >23.09.2025</time
+                                          >
+                                        </div>
+
+                                        <div
+                                          class="table-grid__cell text-primary-500"
+                                        >
+                                          <p class="p3 medium-font">
+                                            1,095,500 AED
+                                          </p>
+                                        </div>
+                                      </div>
+
+                                      <div class="table-grid__row">
+                                        <div class="table-grid__cell">
+                                          <time datetime="2025-09-06"
+                                            >06.09.2025</time
+                                          >
+                                        </div>
+
+                                        <div
+                                          class="table-grid__cell text-primary-500"
+                                        >
+                                          <p class="p3 medium-font">
+                                            1,095,500 AED
+                                          </p>
+                                        </div>
+                                      </div>
+
+                                      <div class="table-grid__row">
+                                        <div class="table-grid__cell">
+                                          <time datetime="2025-08-17"
+                                            >17.08.2025</time
+                                          >
+                                        </div>
+
+                                        <div
+                                          class="table-grid__cell text-primary-500"
+                                        >
+                                          <p class="p3 medium-font">
+                                            1,095,500 AED
+                                          </p>
+                                        </div>
+                                      </div>
+
+                                      <div class="table-grid__row">
+                                        <div class="table-grid__cell">
+                                          <time datetime="2025-07-31"
+                                            >31.07.2025</time
+                                          >
+                                        </div>
+
+                                        <div
+                                          class="table-grid__cell"
+                                        >
+                                          <p class="p3 medium-font">
+                                            1,095,500 AED
+                                          </p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -817,7 +914,7 @@
                       </div>
                     </div>
 
-                    <button class="button button--secondary button--bg-rad-2x">
+                    <button class="button button--secondary button--bg-rad-2x modal-open" data-modal="featuresModal">
                       <p class="p2 medium-font">See all</p>
 
                       <span class="icon">
@@ -852,7 +949,9 @@
                                 </span>
 
                                 <div class="list-popup__box">
-                                  <p class="p2">Какая-то инфа</p>
+                                  <p class="p2">
+                                    Цена квадратного метра в центре города
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -878,7 +977,9 @@
                                 </span>
 
                                 <div class="list-popup__box">
-                                  <p class="p2">Какая-то инфа</p>
+                                  <p class="p2">177/240</p>
+
+                                  <p class="p2">Очень высокий</p>
                                 </div>
                               </div>
                             </div>
@@ -904,7 +1005,19 @@
                                 </span>
 
                                 <div class="list-popup__box">
-                                  <p class="p2">Какая-то инфа</p>
+                                  <p class="p2">
+                                    Индекс стоимости проживания (без учета
+                                    аренды) - это относительный показатель,
+                                    учитывающий цены на потребительские товары,
+                                    включая товары общего потребления,
+                                    рестораны, транспорт и услуги. Индекс
+                                    стоимости проживания не включает в себя
+                                    расходны на жилье, такие как арендная плата
+                                    или ипотека. Если город имеет индекс
+                                    стоимости проживания равный 120, это значит,
+                                    что он на 20% дороже, чем Нью Йорк (без
+                                    учета аренды).
+                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -1054,6 +1167,388 @@
                       </div>
                     </div>
                   </div>
+                </div>
+
+                <div class="object-bottom__banners">
+                  <aside class="contact-aside">
+                    <div class="contact-aside__items">
+                      <div class="share list-popup relative relative-top">
+                        <div class="share__btns">
+                          <button class="button button--gray-third button--big">
+                            <span class="icon icon--big">
+                              <svg>
+                                <use xlink:href="#share-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+
+                        <div class="list-popup__box share__popup">
+                          <div class="share__items">
+                            <div class="share__item-box">
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+                            </div>
+
+                            <div class="share__item-box">
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+                            </div>
+
+                            <div class="share__item-box">
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+                            </div>
+                          </div>
+
+                          <div class="share__footer">
+                            <div class="share__item-box">
+                              <button
+                                type="button"
+                                aria-label="Скопировать"
+                                title="Copy link"
+                                class="share__item"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#copy-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">Copy link</p>
+                              </button>
+
+                              <button
+                                type="button"
+                                aria-label="Скопировать"
+                                title="Copy link"
+                                class="share__item"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#copy-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">Copy link-2</p>
+                              </button>
+                            </div>
+
+                            <div class="share__item-box">
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+
+                              <a
+                                href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                                aria-label="Поделиться статьей в WhatsApp"
+                                title="WhatsApp"
+                                class="share__item"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#whats-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p2">WhatsApp</p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button
+                        aria-label="Добавить в избранное"
+                        class="button button--gray-third button--favorite button--big"
+                      >
+                        <span class="icon icon--big">
+                          <svg>
+                            <use xlink:href="#heart-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <button
+                        aria-label="Добавить в избранное"
+                        class="button button--gray-third button--big button--comparison"
+                      >
+                        <span class="icon icon--big">
+                          <svg>
+                            <use xlink:href="#chart-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+
+                    <div class="contact-form-aside">
+                      <header class="contact-form-aside__header">
+                        <div class="contact-form-aside__logo">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/company/one.webp   1x,
+                                /img/company/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/company/one.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+
+                        <p class="p3 text-secondary-300">Emaar Properties</p>
+                      </header>
+
+                      <div class="contact-form-aside__content">
+                        <div class="person">
+                          <div class="person__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/persons/one.webp   1x,
+                                  /img/persons/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/persons/one.webp"
+                                alt="фотография"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="person__content">
+                            <p class="p1 text-secondary-300 semibold-font">
+                              Elisabeth Nixon
+                            </p>
+
+                            <p class="p4 text-dark-500">
+                              Emaar Properties Manager
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="contact-form-aside__footer">
+                          <a
+                            href="mailto:test@gmail.com"
+                            aria-label="Написать на почту test@gmail.com"
+                            class="button button--secondary br-base"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#email-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2 medium-font">Email</p>
+                          </a>
+
+                          <a
+                            href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+                            aria-label="Поделиться статьей в WhatsApp"
+                            title="WhatsApp"
+                            class="button button--green-400 br-base"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#whats-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2">WhatsApp</p>
+                          </a>
+
+                          <button
+                            class="button button--blueviolet contact-form-aside__footer-item-big br-base"
+                          >
+                            <span class="icon">
+                              <svg>
+                                <use xlink:href="#phone-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2 medium-font">Request Call</p>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="contact-aside__footer">
+                      <button type="button" class="chips">
+                        <span class="icon icon--middle">
+                          <svg>
+                            <use xlink:href="#flug-icon"></use>
+                          </svg>
+                        </span>
+
+                        <p class="p3">Report this property</p>
+                      </button>
+                    </div>
+                  </aside>
                 </div>
               </div>
             </div>
@@ -2128,6 +2623,8 @@
       </main>
 
       @@include('../modules/footer.html', {"inner" : ''})
+
+      @@include('../modals/features.html')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>

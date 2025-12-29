@@ -1,0 +1,13 @@
+.chips {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background-color: transparent;
+  border-radius: var(--radius-base);
+  padding: 5px 12px;
+  border: 1px solid var(--dark-color-100);
+  color: var(--dark-color-100);
+  cursor: pointer;
+  min-height: 32px;
+}

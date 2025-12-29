@@ -30,7 +30,7 @@
   width: 100%;
 }
 .filter--big .filter__items {
-  grid-template-columns: 40% 91px auto 160px 160px 100px auto auto auto;
+  grid-template-columns: 40% 91px auto 160px 160px 110px auto auto auto;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;

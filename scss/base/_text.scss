@@ -131,6 +131,16 @@ h6 {
   color: var(--dark-color-500);
 }
 
+.text-green-100 {
+  color: var(--green-color-100);
+}
+
+body .main {
+  .br-base {
+    border-radius: var(--radius-base);
+  }
+}
+
 .accent-color {
   color: var(--primary-color-100);
 }

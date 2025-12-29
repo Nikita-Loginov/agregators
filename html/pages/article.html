@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Статья", "links" :
-  ["./css/article.css", "./css/lib/swiper.min.css"] })
+  ["./css/article.css", "./css/lib/swiper.min.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"]
+  })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -3739,7 +3741,12 @@
       @@include('../modals/successRequest.html')
     </div>
 
-    <script src="/js/lib/swiper.min.js"></script>
-    <script src="/js/article.js" type="module"></script>
+    <script src="/js/lib/swiper.min.js" defer></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+      defer
+    ></script>
+
+    <script src="/js/article.js" type="module" defer></script>
   </body>
 </html>

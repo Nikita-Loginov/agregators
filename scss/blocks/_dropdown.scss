@@ -18,6 +18,10 @@
   }
 
   .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     transition: all 0.5s;
 
     &.icon {
@@ -32,6 +36,12 @@
         background-color: var(--gray-color-200);
       }
     }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   &__content {

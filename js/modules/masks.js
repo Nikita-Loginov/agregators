@@ -1,16 +1,60 @@
-export function maskTel() {
-  const maskTels = document.querySelectorAll("input[name='tel']");
+import { allCountries, preferredCountries } from "../data/countries.js";
 
-  if (typeof IMask === 'undefined') {
-    console.error('IMask не загружен');
+export function initPhoneMasks(form) {
+  const inputs = form.querySelectorAll("input[name='tel']");
 
-    return; 
+  if (!window.IMask || !window.intlTelInput) {
+    console.error("IMask или intlTelInput не загружены");
+    return;
   }
 
-  maskTels.forEach((tel) => {
-    const maskOptions = {
-      mask: "+{7} (000) 000-00-00",
+  const countriesMap = {};
+  allCountries.forEach((country) => {
+    countriesMap[country.code.toLowerCase()] = country;
+  });
+
+  inputs.forEach((input) => {
+    const iti = window.intlTelInput(input, {
+      initialCountry: "ru",
+      onlyCountries: allCountries.map(c => c.code.toLowerCase()),
+      preferredCountries: preferredCountries.filter(p =>
+        allCountries.some(c => c.code.toLowerCase() === p)
+      ),
+      separateDialCode: true,
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+    });
+
+    let maskInstance = null;
+    let currentCountry = null;
+
+    const applyMask = () => {
+      const { iso2 } = iti.getSelectedCountryData();
+      const country = countriesMap[iso2];
+
+      if (!country) return;
+
+      currentCountry = country;
+
+      if (maskInstance) {
+        maskInstance.destroy();
+      }
+
+      maskInstance = IMask(input, {
+        mask: country.mask,
+        lazy: true,
+        placeholderChar: "_",
+      });
+
+      input.placeholder = country.placeholder;
+
+      input._validator = () => {
+        return maskInstance?.masked?.isComplete === true;
+      };
     };
-    const mask = IMask(tel, maskOptions);
+
+    input.addEventListener("countrychange", applyMask);
+
+    applyMask();
   });
 }

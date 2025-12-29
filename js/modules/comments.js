@@ -1,4 +1,4 @@
-import { checkFormValidity } from "./validate.js";
+import { isFormValid } from "./validate.js";
 
 const postForm = (target) => {
   const relative = target.closest('[data-block="comment-relative"]');
@@ -7,7 +7,7 @@ const postForm = (target) => {
 
   // ТУТ РЕБЯТ ПИШИТЕ СВОИ ЗАПРОСЫ И СВОЮ ЛОГИКУ РЕНДЕРА ОТЗЫВОВ, Я БУДУ СЧИТАТЬ ЧТО ЕСЛИ ФОРМА ВАЛИДНА ТО СТАТУС УСПЕШНЫЙ И РЕНДЕРЮ ПОКА ЧТО БЛОК С УСПЕШНОСТЬЮ НО ВЫ РЕНДЕРИТЕ В ЗАВИСИМОСТИ ОТ ЗАПРОСА , ФУНКЦИЯ КОТОРАЯ РЕНДЕРИТ СТАТУТСЫ ПРИНИМАЕТ В СЕБЯ STATUS : 'success' | 'error'.КАК И СКАЗАЛ ВЫШЕ, Я ПОКА ЧТО ПЕРЕДАЮ ПРИ ВАЛИДНОСТИ success
 
-  if (checkFormValidity(form)) {
+  if (isFormValid(form)) {
     showDetails(target, "success");
   }
 };

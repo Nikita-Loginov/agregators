@@ -1,8 +1,16 @@
 .table-grid {
+  --grid-template-columns: 60% repeat(3, calc(40% / 3));
+  --gap-items: 4px;
+
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: var(--gap-items);
   width: 100%;
+
+  &--two {
+    --grid-template-columns: repeat(2, 1fr);
+    --gap-items: 20px;
+  }
 
   &__header {
     background-color: var(--gray-color-200);
@@ -10,7 +18,7 @@
 
   &__row {
     display: grid;
-    grid-template-columns: 60% repeat(3, calc(40% / 3));
+    grid-template-columns: var(--grid-template-columns);
     gap: 4px;
     border-radius: var(--radius-base);
     overflow: hidden;
@@ -18,11 +26,6 @@
 
   &__cell {
     padding: 10px 16px;
-   
-  }
-
-  &__row {
-
   }
 
   &__decor {
@@ -33,10 +36,26 @@
     padding: 12px 10px;
   }
 
-  &__items {
-    .table-grid__row {
-      &:nth-child(even) {
-        background-color: var(--gray-color-100);
+  &:not(.table-grid--odd) {
+    .table-grid {
+      &__items {
+        .table-grid__row {
+          &:nth-child(even) {
+            background-color: var(--gray-color-100);
+          }
+        }
+      }
+    }
+  }
+
+  &--odd {
+    .table-grid {
+      &__items {
+        .table-grid__row {
+          &:nth-child(odd) {
+            background-color: var(--gray-color-100);
+          }
+        }
       }
     }
   }

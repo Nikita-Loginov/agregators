@@ -20,6 +20,13 @@
     display: flex;
     gap: 4px;
     align-items: center;
+  }
+
+  &__change-btn {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    background-color: transparent;
 
     p {
       text-decoration: underline;

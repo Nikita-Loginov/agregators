@@ -27,30 +27,23 @@
             <div class="input-box input-box--xl input-box--gray form__item">
               <label class="input-box__content">
                 <div class="input-box__info">
-                  <input type="text" placeholder="Name" name="Name" />
+                  <input type="text" name="name" placeholder="Name" required />
                 </div>
               </label>
 
-              <p class="input-box__errors p4"></p>
+              <p class="input-box__errors p4 form__errors"></p>
             </div>
 
-            <div class="input-box input-box--xl input-box--gray form__item">
-              <label class="input-box__content">
-                <div class="input-box__info">
-                  <input
-                    type="tel"
-                    placeholder="Phone*"
-                    name="tel"
-                    required
-                    pattern="^\+7\s\(\d{3}\)\s\d{3}-\d{2}-\d{2}$"
-                    data-title="Введите телефон в формате: +7 (000) 000-00-00"
-                    data-empty="Ведите минимум один символ"
-                    aria-errormessage="tel-errors"
-                  />
+            <div
+              class="input-box input-box--xl input-box--gray form__item input-tel-wrapper"
+            >
+              <div class="input-box__content">
+                <div class="input-box__info popup-select">
+                  <input type="tel" name="tel" placeholder="Phone" required />
                 </div>
-              </label>
+              </div>
 
-              <p class="input-box__errors form__errors p4" id="tel-errors"></p>
+              <p class="input-box__errors p4 form__errors"></p>
             </div>
 
             <div class="input-box input-box--xl input-box--gray form__item">
@@ -58,34 +51,29 @@
                 <div class="input-box__info">
                   <input
                     type="email"
-                    placeholder="Email*"
                     name="email"
+                    placeholder="Email"
                     required
-                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
-                    data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
-                    data-empty="Ведите минимум один символ"
-                    aria-errormessage="email-errors"
                   />
                 </div>
               </label>
 
-              <p
-                class="input-box__errors p4 form__errors"
-                id="email-errors"
-              ></p>
+              <p class="input-box__errors p4 form__errors"></p>
             </div>
 
-            <div class="input-box input-box--big input-box--xl input-box--gray">
+            <div
+              class="input-box input-box--big input-box--xl input-box--gray form__item"
+            >
               <label class="input-box__content">
                 <div class="input-box__info">
                   <textarea
+                    name="message"
                     placeholder="Describe your request (optional)"
-                    name="Describe"
                   ></textarea>
                 </div>
               </label>
 
-              <p class="input-box__errors p4"></p>
+              <p class="input-box__errors p4 form__errors"></p>
             </div>
           </div>
         </div>
@@ -97,10 +85,10 @@
           </p>
 
           <button
-            class="button button--xl button--red-lite modal-open "
+            class="button button--xl button--red-lite modal-open"
             data-modal="successRequestModal"
-            style="border-radius: var(--radius-md)"
             type="submit"
+            style="border-radius: var(--radius-md)"
           >
             <p class="p2 semibold-font">Send</p>
           </button>

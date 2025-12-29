@@ -34,6 +34,8 @@ html {
   --green-color-100: #26b539;
   --green-color-200: #20808d1a;
   --green-color-300: #1ab7cc52;
+  --green-color-400: #e7f4f6;
+  --green-color-500: #128c7e;
 
   --yellow-color-100: #fbbc0426;
   --yellow-color-200: #d9775733;
@@ -89,3 +91,4 @@ html {
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1024px, 480px)};
 }
+

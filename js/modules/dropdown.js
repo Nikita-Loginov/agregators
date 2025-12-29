@@ -108,6 +108,7 @@ const closeDropdown = (dropdown) => {
 
 export const closeAllDropdowns = () => {
   if (activeDropdown) {
+    console.log(activeDropdown)
     closeDropdown(activeDropdown);
   }
 }
