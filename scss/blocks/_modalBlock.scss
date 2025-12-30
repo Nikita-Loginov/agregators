@@ -277,3 +277,79 @@
     gap: 20px 28px;
   }
 }
+
+.filterModal {
+  &__inner {
+    padding: 4px;
+    max-width: 1130px;
+    overflow: hidden;
+    max-height: none;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 28px;
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__items-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &--bg {
+      padding: 12px 0px;
+      background-color: var(--secondary-color-200);
+      border-radius: var(--radius-md);
+    }
+  }
+
+  &__items-boxs {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  &__item-big {
+    grid-column: span 2;
+  }
+
+  &__footer {
+    padding: 18px 28px;
+    background-color: var(--gray-color-100);
+    border: 1px solid var(--gray-color-300);
+    border-radius: var(--radius-md);
+  }
+
+  &__footer-box,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__footer-box {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  &__footer-btns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .button:not(.button--noMassa) {
+      padding-inline: 45px;
+    }
+  }
+}

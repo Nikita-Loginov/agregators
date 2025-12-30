@@ -1,5 +1,6 @@
 .check {
   cursor: pointer;
+  width: 100%;
 
   &__info {
     input {
@@ -31,6 +32,14 @@
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
+
+  &--center {
+    .check-simple {
+      &__content {
+        align-items: center;
+      }
+    }
+  }
 
   &.error {
     .check-simple {
@@ -74,7 +83,7 @@
       position: relative;
 
       &:before {
-        content:"";
+        content: "";
         position: absolute;
         width: 10px;
         height: 10px;
@@ -109,9 +118,7 @@
       &__check {
         background-color: var(--secondary-color-100);
       }
-     
     }
-   
   }
 
   &__check {
@@ -124,8 +131,6 @@
     border: 1px solid var(--gray-color-600);
     background-color: var(--white-color);
     border-radius: var(--radius-sm);
-
-    
   }
 
   &__content {

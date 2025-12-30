@@ -249,7 +249,8 @@
                     <div class="filter__item">
                       <button
                         type="button"
-                        class="button button--bg-gray-300 button--lg button--rounded-md"
+                        class="button button--bg-gray-300 button--lg button--rounded-md modal-open"
+                        data-modal="filterModal"
                       >
                         <p class="p2 medium-font">More filters</p>
                       </button>
@@ -978,6 +979,7 @@
       </main>
 
       @@include('../modules/footer.html')
+      @@include('../modals/filter.html')
     </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>

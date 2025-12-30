@@ -902,6 +902,26 @@
       stroke-linejoin="round"
     />
   </symbol>
+
+  <symbol id="undo-icon" viewBox="0 0 16 18" fill="none">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M5.5 5.5H0.5V0.5M0.791016 13.8569C1.72284 15.2918 3.09014 16.3902 4.69218 16.9907C6.29422 17.5913 8.047 17.6624 9.69245 17.1937C11.3379 16.725 12.7893 15.7413 13.8344 14.3867C14.8795 13.0321 15.463 11.378 15.4989 9.66748C15.5347 7.95695 15.0211 6.28001 14.0337 4.88281C13.0462 3.48561 11.6366 2.442 10.0122 1.90479C8.38782 1.36757 6.63408 1.36499 5.0083 1.89795C3.38252 2.43091 1.97059 3.47095 0.979492 4.86556"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+
+  <symbol id="save-icon" viewBox="0 0 16 16" fill="none">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M12.1667 15.5002L3.83333 15.5M12.1667 15.5002L12.8359 15.5C13.7675 15.5 14.2333 15.5 14.5895 15.3185C14.9031 15.1587 15.1587 14.9036 15.3185 14.59C15.5 14.2338 15.5 13.7675 15.5 12.8359V5.68296C15.5 5.30894 15.5 5.12101 15.4601 4.94255C15.4245 4.78333 15.366 4.63043 15.286 4.48829C15.1972 4.33061 15.0725 4.19212 14.8274 3.91982L12.5314 1.36868C12.2474 1.05312 12.1035 0.893173 11.9307 0.77832C11.7752 0.675003 11.6035 0.59882 11.4227 0.552389C11.2188 0.5 10.9998 0.5 10.5625 0.5H3.16683C2.23341 0.5 1.76635 0.5 1.40983 0.681656C1.09623 0.841445 0.841445 1.09623 0.681656 1.40983C0.5 1.76635 0.5 2.23341 0.5 3.16683V12.8335C0.5 13.7669 0.5 14.233 0.681656 14.5895C0.841445 14.9031 1.09623 15.1587 1.40983 15.3185C1.766 15.5 2.23249 15.5 3.16409 15.5H3.83333M12.1667 15.5002V12.3308C12.1667 11.3992 12.1667 10.9327 11.9852 10.5765C11.8254 10.2629 11.5698 10.0081 11.2562 9.84832C10.8996 9.66667 10.4336 9.66667 9.50016 9.66667H6.50016C5.56674 9.66667 5.09968 9.66667 4.74316 9.84832C4.42956 10.0081 4.17478 10.2629 4.01499 10.5765C3.83333 10.933 3.83333 11.4001 3.83333 12.3335V15.5M10.5 3.83333H5.5"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>
  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <symbol id="rus-lang" viewBox="0 0 28 28">
@@ -2448,18 +2468,23 @@
                         <label class="check">
                           <div class="check__info">
                             <input type="radio" checked name="category" />
+                            
                             <span class="p2">All</span>
                           </div>
                         </label>
+
                         <label class="check">
                           <div class="check__info">
                             <input type="radio" name="category" />
+                            
                             <span class="p2">Ready</span>
                           </div>
                         </label>
+
                         <label class="check">
                           <div class="check__info">
                             <input type="radio" name="category" />
+                            
                             <span class="p2">Off-Plan</span>
                           </div>
                         </label>
@@ -2572,7 +2597,8 @@
                     <div class="filter__item">
                       <button
                         type="button"
-                        class="button button--bg-gray-200 button--lg button--rounded-md"
+                        class="button button--bg-gray-200 button--lg button--rounded-md modal-open"
+                        data-modal="filterModal"
                       >
                         <p class="p2 medium-font">More filters</p>
                       </button>
@@ -6122,6 +6148,1159 @@
           </td>
         </tr>
       </table>
+    </div>
+  </div>
+</div>
+
+      <div class="modalBlock filterModal">
+  <div class="modalBlock__inner filterModal__inner">
+    <div class="modalBlock__content">
+      <form class="filterModal__top">
+        <div class="filterModal__items">
+          <div class="filterModal__items-box filterModal__items-box--bg lg-show">
+            <p class="h6">Main parameters</p>
+
+            <div class="filterModal__items-boxs">
+              <div
+                class="select-box select-box--noMax select-box--big select-box--search with-icon filterModal__item-big"
+                data-icon="search"
+              >
+                <select
+                  id="search-select"
+                  data-placeholder="Enter location"
+                  multiple
+                  data-search="true"
+                >
+                  <option value="">Enter location</option>
+                  <option
+                    value="1"
+                    data-type="city"
+                    data-tag="City"
+                    data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                    data-short-desc="Dubai, UAE"
+                  >
+                    Dubai
+                  </option>
+                  <option
+                    value="2"
+                    data-type="city"
+                    data-tag="City"
+                    data-desc="Central Business District, Moscow city, Russia"
+                    data-short-desc="Moscow, Russia"
+                  >
+                    Moscow
+                  </option>
+                  <option
+                    value="3"
+                    data-type="city"
+                    data-tag="City"
+                    data-desc="Manhattan borough, New York city, USA"
+                    data-short-desc="New York, USA"
+                  >
+                    New York
+                  </option>
+                  <option
+                    value="4"
+                    data-type="country"
+                    data-tag="Country"
+                    data-desc="Federal republic in Central Europe with rich history and culture"
+                    data-short-desc="Germany"
+                  >
+                    Germany
+                  </option>
+                  <option
+                    value="5"
+                    data-type="country"
+                    data-tag="Country"
+                    data-desc="Island nation in East Asia known for technology and traditions"
+                    data-short-desc="Japan"
+                  >
+                    Japan
+                  </option>
+                  <option
+                    value="6"
+                    data-type="region"
+                    data-tag="Region"
+                    data-desc="Southeastern region of France on the Mediterranean coast"
+                    data-short-desc="Provence, France"
+                  >
+                    Provence
+                  </option>
+                  <option
+                    value="7"
+                    data-type="region"
+                    data-tag="Region"
+                    data-desc="Northern Italian region known for cuisine and automotive industry"
+                    data-short-desc="Emilia-Romagna, Italy"
+                  >
+                    Emilia-Romagna
+                  </option>
+                  <option
+                    value="8"
+                    data-type="district"
+                    data-tag="District"
+                    data-desc="Historic central district of London with government buildings"
+                    data-short-desc="Westminster, London"
+                  >
+                    Westminster
+                  </option>
+                  <option
+                    value="9"
+                    data-type="district"
+                    data-tag="District"
+                    data-desc="Fashionable district in central Paris with luxury boutiques"
+                    data-short-desc="Champs-Élysées, Paris"
+                  >
+                    Champs-Élysées
+                  </option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Type of deal"
+              >
+                <select id="type-select">
+                  <option value="">Type of deal</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div class="checkbox-box">
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" checked name="category-2" />
+
+                    <span class="p2">All</span>
+                  </div>
+                </label>
+
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" name="category-2" />
+
+                    <span class="p2">Ready</span>
+                  </div>
+                </label>
+
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" name="category-2" />
+
+                    <span class="p2">Off-Plan</span>
+                  </div>
+                </label>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Property type"
+              >
+                <select id="select50">
+                  <option value="">Property type</option>
+                  <option value="1">Apartment</option>
+                  <option value="2">Penthouse</option>
+                  <option value="3">Duplex</option>
+                  <option value="4">Hotel Apartment Hotel Apartment</option>
+                </select>
+              </div>
+
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#check-icon"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p class="p2">Price</p>
+
+                  <span class="icon arrow">
+                    <svg>
+                      <use xlink:href="#arrow-bottom-icon"></use>
+                    </svg>
+                  </span>
+                </button>
+
+                <div
+                  class="dropdown__content popup price-popup popup--fit-content left"
+                >
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Price range, AED</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="number"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="number"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="select-box select-box--noMax select-box--words select-box--check"
+                data-placeholder="Beds"
+              >
+                <select id="select80" multiple>
+                  <option value="">Beds</option>
+                  <option value="beds-studio" data-group="beds">Studio</option>
+                  <option value="beds-1" data-group="beds">1</option>
+                  <option value="beds-2" data-group="beds">2</option>
+                  <option value="beds-3" data-group="beds">3</option>
+                  <option value="beds-4" data-group="beds">4</option>
+                  <option value="beds-5" data-group="beds">5</option>
+                  <option value="beds-6" data-group="beds">6</option>
+                  <option value="beds-7" data-group="beds">7</option>
+                  <option value="beds-8" data-group="beds">8</option>
+                  <option value="beds-9" data-group="beds">9</option>
+                  <option value="beds-10" data-group="beds">10+</option>
+                </select>
+              </div>
+
+              <div
+              class="select-box select-box--noMax select-box--words select-box--check"
+              data-placeholder="Baths"
+            >
+              <select id="select100" multiple>
+                <option value="">Baths</option>
+                <option value="baths-1" data-group="baths">1</option>
+                <option value="baths-2" data-group="baths">2</option>
+                <option value="baths-3" data-group="baths">3</option>
+                <option value="baths-4" data-group="baths">4</option>
+                <option value="baths-5" data-group="baths">5</option>
+                <option value="baths-6" data-group="baths">6+</option>
+              </select>
+            </div>
+            </div>
+          </div>
+
+          <div class="filterModal__items-box">
+            <p class="h6">Main parameters</p>
+
+            <div class="filterModal__items-boxs">
+              <div
+                class="select-box select-box--noMax select-box--big select-box--search with-icon filterModal__item-big"
+                data-icon="search"
+              >
+                <select
+                  id="search-select"
+                  data-placeholder="Enter location"
+                  multiple
+                  data-search="true"
+                >
+                  <option value="">Enter location</option>
+                  <option
+                    value="1"
+                    data-type="city"
+                    data-tag="City"
+                    data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                    data-short-desc="Dubai, UAE"
+                  >
+                    Dubai
+                  </option>
+                  <option
+                    value="2"
+                    data-type="city"
+                    data-tag="City"
+                    data-desc="Central Business District, Moscow city, Russia"
+                    data-short-desc="Moscow, Russia"
+                  >
+                    Moscow
+                  </option>
+                  <option
+                    value="3"
+                    data-type="city"
+                    data-tag="City"
+                    data-desc="Manhattan borough, New York city, USA"
+                    data-short-desc="New York, USA"
+                  >
+                    New York
+                  </option>
+                  <option
+                    value="4"
+                    data-type="country"
+                    data-tag="Country"
+                    data-desc="Federal republic in Central Europe with rich history and culture"
+                    data-short-desc="Germany"
+                  >
+                    Germany
+                  </option>
+                  <option
+                    value="5"
+                    data-type="country"
+                    data-tag="Country"
+                    data-desc="Island nation in East Asia known for technology and traditions"
+                    data-short-desc="Japan"
+                  >
+                    Japan
+                  </option>
+                  <option
+                    value="6"
+                    data-type="region"
+                    data-tag="Region"
+                    data-desc="Southeastern region of France on the Mediterranean coast"
+                    data-short-desc="Provence, France"
+                  >
+                    Provence
+                  </option>
+                  <option
+                    value="7"
+                    data-type="region"
+                    data-tag="Region"
+                    data-desc="Northern Italian region known for cuisine and automotive industry"
+                    data-short-desc="Emilia-Romagna, Italy"
+                  >
+                    Emilia-Romagna
+                  </option>
+                  <option
+                    value="8"
+                    data-type="district"
+                    data-tag="District"
+                    data-desc="Historic central district of London with government buildings"
+                    data-short-desc="Westminster, London"
+                  >
+                    Westminster
+                  </option>
+                  <option
+                    value="9"
+                    data-type="district"
+                    data-tag="District"
+                    data-desc="Fashionable district in central Paris with luxury boutiques"
+                    data-short-desc="Champs-Élysées, Paris"
+                  >
+                    Champs-Élysées
+                  </option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Type of deal"
+              >
+                <select id="type-select">
+                  <option value="">Type of deal</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div class="checkbox-box">
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" checked name="category-1" />
+
+                    <span class="p2">All</span>
+                  </div>
+                </label>
+
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" name="category-1" />
+
+                    <span class="p2">Ready</span>
+                  </div>
+                </label>
+
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" name="category-1" />
+
+                    <span class="p2">Off-Plan</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterModal__items-box">
+            <p class="h6">Property</p>
+
+            <div class="filterModal__items-boxs">
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Property type"
+              >
+                <select id="select2">
+                  <option value="">Property type</option>
+                  <option value="1">Apartment</option>
+                  <option value="2">Penthouse</option>
+                  <option value="3">Duplex</option>
+                  <option value="4">Hotel Apartment Hotel Apartment</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Rooms"
+              >
+                <select id="select3">
+                  <option value="">Rooms</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Bathrooms"
+              >
+                <select id="select4">
+                  <option value="">Bathrooms</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Living space"
+              >
+                <select id="select4">
+                  <option value="">Living space</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Furniture"
+              >
+                <select id="select5">
+                  <option value="">Furniture</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Status"
+              >
+                <select id="select6">
+                  <option value="">Status</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Floor"
+              >
+                <select id="select7">
+                  <option value="">Floor</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Land area"
+              >
+                <select id="select8">
+                  <option value="">Land area</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Ownership"
+              >
+                <select id="select9">
+                  <option value="">Ownership</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="ID"
+              >
+                <select id="select10">
+                  <option value="">ID</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterModal__items-box">
+            <p class="h6">Building</p>
+
+            <div class="filterModal__items-boxs">
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Completion year"
+              >
+                <select id="select11">
+                  <option value="">Completion year</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Construction stage"
+              >
+                <select id="select12">
+                  <option value="">Construction stage</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Total floors"
+              >
+                <select id="select13">
+                  <option value="">Total floors</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Developer"
+              >
+                <select id="select14">
+                  <option value="">Developer</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Pool type"
+              >
+                <select id="select15">
+                  <option value="">Pool type</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Parking type"
+              >
+                <select id="select16">
+                  <option value="">Parking type</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Park places"
+              >
+                <select id="select17">
+                  <option value="">Park places</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterModal__items-box">
+            <p class="h6">Finance</p>
+
+            <div class="filterModal__items-boxs">
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#check-icon"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p class="p2">Price</p>
+
+                  <span class="icon arrow">
+                    <svg>
+                      <use xlink:href="#arrow-bottom-icon"></use>
+                    </svg>
+                  </span>
+                </button>
+
+                <div
+                  class="dropdown__content popup price-popup popup--fit-content left"
+                >
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Price range, AED</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="number"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="number"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#check-icon"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p class="p2">Installment payment</p>
+
+                  <span class="icon arrow">
+                    <svg>
+                      <use xlink:href="#arrow-bottom-icon"></use>
+                    </svg>
+                  </span>
+                </button>
+
+                <div
+                  class="dropdown__content popup price-popup popup--fit-content left"
+                >
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Installment payment</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="number"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="number"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#check-icon"></use>
+                      </svg>
+                    </span>
+                  </div>
+                  <p class="p2">Installment payment</p>
+
+                  <span class="icon arrow">
+                    <svg>
+                      <use xlink:href="#arrow-bottom-icon"></use>
+                    </svg>
+                  </span>
+                </button>
+
+                <div
+                  class="dropdown__content popup price-popup popup--fit-content left"
+                >
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Rent income, %</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="number"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="number"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterModal__items-box">
+            <p class="h6">Environment</p>
+
+            <div class="filterModal__items-boxs">
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="To the sea"
+              >
+                <select id="select18">
+                  <option value="">To the sea</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="To city center"
+              >
+                <select id="select19">
+                  <option value="">To city center</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="To airport"
+              >
+                <select id="select20">
+                  <option value="">To airport</option>
+                  <option value="1">some info 1</option>
+                  <option value="2">some info 2</option>
+                  <option value="3">some info 3</option>
+                  <option value="4">some info 4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="filterModal__items-box">
+            <p class="h6">Environment</p>
+
+            <div class="filterModal__items-boxs">
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Swimming pool</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Balcony</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" checked />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Terrace</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" checked />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Car park</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Elevator</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">First sea line</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Second sea line</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Tap water</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Electricity</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Gas</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Driveway to the land plot</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Construction permit</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Bank-owned property</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Foreclosed property</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Guaranteed rental</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+
+              <label class="check-simple check-simple--center">
+                <div class="check-simple__content">
+                  <div class="check-simple__custom">
+                    <input type="checkbox" />
+
+                    <span></span>
+                  </div>
+
+                  <div class="check-simple__info">
+                    <p class="p2">Beach</p>
+                  </div>
+                </div>
+
+                <div class="check-simple__errors p4"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="filterModal__footer">
+        <div class="filterModal__footer-box">
+          <div class="filterModal__footer-btns">
+            <button class="button button--noMassa text-secondary-300">
+              <span class="icon icon--little">
+                <svg>
+                  <use xlink:href="#undo-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p2 medium-font">Clear filters</p>
+            </button>
+          </div>
+
+          <div class="filterModal__footer-btns">
+            <button class="button button--bg-gray-300 modal-close">
+              <span class="icon icon--little">
+                <svg>
+                  <use xlink:href="#close-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p2 medium-font">Close</p>
+            </button>
+
+            <button class="button button--bg-primary-100">
+              <span class="icon icon--little">
+                <svg>
+                  <use xlink:href="#save-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p2 medium-font">Apply</p>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

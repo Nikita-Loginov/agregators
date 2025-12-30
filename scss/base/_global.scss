@@ -484,3 +484,13 @@ body .wrapper {
     gap: 6px;
   }
 }
+
+body .wrapper {
+  .lg-show {
+    display: none;
+
+    @media (max-width: 1279px) {
+      display: flex;
+    }
+  }
+}

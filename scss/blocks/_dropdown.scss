@@ -60,6 +60,11 @@
     overflow-y: auto;
     max-height: 200px;
     background-color: var(--white-color);
+
+    &.left {
+      left: 0;
+      right: auto;
+    }
   }
 
   &__list {
@@ -110,6 +115,10 @@
 
         .check {
           display: flex;
+        }
+
+        .arrow {
+          margin-left: auto;
         }
       }
     }

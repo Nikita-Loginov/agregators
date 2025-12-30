@@ -127,18 +127,23 @@
                         <label class="check">
                           <div class="check__info">
                             <input type="radio" checked name="category" />
+                            
                             <span class="p2">All</span>
                           </div>
                         </label>
+
                         <label class="check">
                           <div class="check__info">
                             <input type="radio" name="category" />
+                            
                             <span class="p2">Ready</span>
                           </div>
                         </label>
+
                         <label class="check">
                           <div class="check__info">
                             <input type="radio" name="category" />
+                            
                             <span class="p2">Off-Plan</span>
                           </div>
                         </label>
@@ -251,7 +256,8 @@
                     <div class="filter__item">
                       <button
                         type="button"
-                        class="button button--bg-gray-200 button--lg button--rounded-md"
+                        class="button button--bg-gray-200 button--lg button--rounded-md modal-open"
+                        data-modal="filterModal"
                       >
                         <p class="p2 medium-font">More filters</p>
                       </button>
@@ -1606,6 +1612,7 @@
       </main>
       @@include('../modules/footer.html', {"inner" : ""})
       @@include('../modals/market.html')
+      @@include('../modals/filter.html')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
