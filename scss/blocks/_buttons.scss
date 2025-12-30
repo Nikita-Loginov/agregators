@@ -325,6 +325,22 @@
       border-color: var(--secondary-color-300);
     }
   }
+
+  &--bg-secondary-300 {
+    background-color: var(--secondary-color-300);
+    color: var(--white-color);
+
+    &:hover,
+    &:active {
+      background-color: var(--secondary-color-100);
+      color: var(--white-color);
+    }
+
+    &:active {
+      border-color: var(--secondary-color-300);
+    }
+  }
+
   &--bg-green-100 {
     background-color: var(--green-color-100);
     color: var(--white-color);
@@ -333,7 +349,18 @@
   &--bg-green-400 {
     background-color: var(--green-color-400);
     color: var(--green-color-500);
+
+    &:hover,
+    &:active {
+      background-color: var(--green-color-500);
+      color: var(--white-color);
+    }
+
+    &:active {
+      border-color: var(--green-color-500);
+    }
   }
+
   &--bg-yellow-100 {
     background-color: var(--yellow-color-100);
     color: var(--dark-color-200);

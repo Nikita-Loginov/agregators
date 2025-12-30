@@ -350,7 +350,7 @@
                   <h1 class="h4">Property in selected area</h1>
 
                   <button class="close" data-block="sibebar-box__close">
-                    <span class="icon icon--big">
+                    <span class="icon icon--little">
                       <svg>
                         <use xlink:href="#close-icon"></use>
                       </svg>
@@ -362,72 +362,24 @@
                   <div class="swiper swiper--goods">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <div class="good-item">
+                        <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
                               <div class="good-item__decor">
-                                <div class="badge badge--blue">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#shield-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <div class="badge__content">
-                                    <p class="p4 medium-font">CompleteTrust</p>
-                                  </div>
-                                </div>
-
-                                <div class="badge">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#checks-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
+                                @@include('../good-item/badges.html',
+                                {"complete": true})
                               </div>
 
                               <div class="swiper swiper--good-img">
                                 <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <!-- prettier-ignore -->
 
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  @@loop('../good-item/slides-imgs.html', [
+                                  {"img": '/img/goods/one'},
+                                  {"img": '/img/goods/two'}
+                                  ])
                                 </div>
 
                                 <div class="good-item__decors-img">
@@ -441,114 +393,55 @@
                           <div class="good-item__content">
                             <header class="good-item__header">
                               <div class="good-item__top-box">
-                                <div class="good-item__top">
-                                  <p class="p3 bold-font text-secondary-300">
-                                    Apartment
-                                  </p>
-
-                                  <p
-                                    class="h6-add semibold-font good-item__title"
-                                  >
-                                    761,000
-
-                                    <span class="text-uppercase p1">AED</span>
-                                  </p>
-                                </div>
+                                <p class="p3 medium-font">Apartments</p>
 
                                 <div class="good-item__top-btns">
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--favorite active"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#heart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  <!-- prettier-ignore -->
 
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--comparison active"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#chart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
                                 </div>
                               </div>
 
+                              <div class="good-item__top">
+                                <p class="h6-add bold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p2">AED</span>
+                                </p>
+                              </div>
+
                               <p
-                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
                               >
                                 Apartment, 2 bedroom, 60.11 sq.m. № 3427
                               </p>
 
                               <div class="good-item__tags">
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <p class="p3">2 Bedrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">2 Bathrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">1 floor</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">60.11 sq.m.</p>
-                                </div>
+                                @@loop('../components/tag.html', [ 
+                                { "text": "2 Baths", "icon": "#bed-icon" },
+                                { "text": "Q4 2026", "icon": "#bed-icon" },
+                                { "text": "2 Beds", "icon": "#bed-icon" },
+                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
                               </div>
 
                               <ul class="list-icon">
-                                <li
-                                  class="list-icon__link list-icon__link--small"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#geo-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3 medium-font">
-                                    Mohammed Bin Rashid City, Dubai
-                                  </p>
-                                </li>
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                               </ul>
                             </header>
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
                                 @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller"})
+                                "Contact Seller", "classAddText" : "p2 medium-font"})
                               </div>
 
                               <div class="good-item__logo">
@@ -563,72 +456,24 @@
                       </div>
 
                       <div class="swiper-slide">
-                        <div class="good-item">
+                        <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
                               <div class="good-item__decor">
-                                <div class="badge badge--blue">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#shield-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <div class="badge__content">
-                                    <p class="p4 medium-font">CompleteTrust</p>
-                                  </div>
-                                </div>
-
-                                <div class="badge">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#checks-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
+                                @@include('../good-item/badges.html',
+                                {"complete": true})
                               </div>
 
                               <div class="swiper swiper--good-img">
                                 <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <!-- prettier-ignore -->
 
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  @@loop('../good-item/slides-imgs.html', [
+                                  {"img": '/img/goods/one'},
+                                  {"img": '/img/goods/two'}
+                                  ])
                                 </div>
 
                                 <div class="good-item__decors-img">
@@ -642,114 +487,55 @@
                           <div class="good-item__content">
                             <header class="good-item__header">
                               <div class="good-item__top-box">
-                                <div class="good-item__top">
-                                  <p class="p3 bold-font text-secondary-300">
-                                    Apartment
-                                  </p>
-
-                                  <p
-                                    class="h6-add semibold-font good-item__title"
-                                  >
-                                    761,000
-
-                                    <span class="text-uppercase p1">AED</span>
-                                  </p>
-                                </div>
+                                <p class="p3 medium-font">Apartments</p>
 
                                 <div class="good-item__top-btns">
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--favorite"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#heart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  <!-- prettier-ignore -->
 
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--comparison"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#chart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
                                 </div>
                               </div>
 
+                              <div class="good-item__top">
+                                <p class="h6-add bold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p2">AED</span>
+                                </p>
+                              </div>
+
                               <p
-                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
                               >
                                 Apartment, 2 bedroom, 60.11 sq.m. № 3427
                               </p>
 
                               <div class="good-item__tags">
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <p class="p3">2 Bedrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">2 Bathrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">1 floor</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">60.11 sq.m.</p>
-                                </div>
+                                @@loop('../components/tag.html', [ 
+                                { "text": "2 Baths", "icon": "#bed-icon" },
+                                { "text": "Q4 2026", "icon": "#bed-icon" },
+                                { "text": "2 Beds", "icon": "#bed-icon" },
+                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
                               </div>
 
                               <ul class="list-icon">
-                                <li
-                                  class="list-icon__link list-icon__link--small"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#geo-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3 medium-font">
-                                    Mohammed Bin Rashid City, Dubai
-                                  </p>
-                                </li>
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                               </ul>
                             </header>
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
                                 @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller"})
+                                "Contact Seller", "classAddText" : "p2 medium-font"})
                               </div>
 
                               <div class="good-item__logo">
@@ -764,72 +550,24 @@
                       </div>
 
                       <div class="swiper-slide">
-                        <div class="good-item">
+                        <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
                               <div class="good-item__decor">
-                                <div class="badge badge--blue">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#shield-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <div class="badge__content">
-                                    <p class="p4 medium-font">CompleteTrust</p>
-                                  </div>
-                                </div>
-
-                                <div class="badge">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#checks-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
+                                @@include('../good-item/badges.html',
+                                {"complete": true})
                               </div>
 
                               <div class="swiper swiper--good-img">
                                 <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <!-- prettier-ignore -->
 
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  @@loop('../good-item/slides-imgs.html', [
+                                  {"img": '/img/goods/one'},
+                                  {"img": '/img/goods/two'}
+                                  ])
                                 </div>
 
                                 <div class="good-item__decors-img">
@@ -843,114 +581,55 @@
                           <div class="good-item__content">
                             <header class="good-item__header">
                               <div class="good-item__top-box">
-                                <div class="good-item__top">
-                                  <p class="p3 bold-font text-secondary-300">
-                                    Apartment
-                                  </p>
-
-                                  <p
-                                    class="h6-add semibold-font good-item__title"
-                                  >
-                                    761,000
-
-                                    <span class="text-uppercase p1">AED</span>
-                                  </p>
-                                </div>
+                                <p class="p3 medium-font">Apartments</p>
 
                                 <div class="good-item__top-btns">
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--favorite"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#heart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  <!-- prettier-ignore -->
 
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--comparison"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#chart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
                                 </div>
                               </div>
 
+                              <div class="good-item__top">
+                                <p class="h6-add bold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p2">AED</span>
+                                </p>
+                              </div>
+
                               <p
-                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
                               >
                                 Apartment, 2 bedroom, 60.11 sq.m. № 3427
                               </p>
 
                               <div class="good-item__tags">
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <p class="p3">2 Bedrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">2 Bathrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">1 floor</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">60.11 sq.m.</p>
-                                </div>
+                                @@loop('../components/tag.html', [ 
+                                { "text": "2 Baths", "icon": "#bed-icon" },
+                                { "text": "Q4 2026", "icon": "#bed-icon" },
+                                { "text": "2 Beds", "icon": "#bed-icon" },
+                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
                               </div>
 
                               <ul class="list-icon">
-                                <li
-                                  class="list-icon__link list-icon__link--small"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#geo-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3 medium-font">
-                                    Mohammed Bin Rashid City, Dubai
-                                  </p>
-                                </li>
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                               </ul>
                             </header>
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
                                 @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller"})
+                                "Contact Seller", "classAddText" : "p2 medium-font"})
                               </div>
 
                               <div class="good-item__logo">
@@ -965,72 +644,24 @@
                       </div>
 
                       <div class="swiper-slide">
-                        <div class="good-item">
+                        <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
                               <div class="good-item__decor">
-                                <div class="badge badge--blue">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#shield-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <div class="badge__content">
-                                    <p class="p4 medium-font">CompleteTrust</p>
-                                  </div>
-                                </div>
-
-                                <div class="badge">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#checks-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
+                                @@include('../good-item/badges.html',
+                                {"complete": true})
                               </div>
 
                               <div class="swiper swiper--good-img">
                                 <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <!-- prettier-ignore -->
 
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  @@loop('../good-item/slides-imgs.html', [
+                                  {"img": '/img/goods/one'},
+                                  {"img": '/img/goods/two'}
+                                  ])
                                 </div>
 
                                 <div class="good-item__decors-img">
@@ -1044,114 +675,55 @@
                           <div class="good-item__content">
                             <header class="good-item__header">
                               <div class="good-item__top-box">
-                                <div class="good-item__top">
-                                  <p class="p3 bold-font text-secondary-300">
-                                    Apartment
-                                  </p>
-
-                                  <p
-                                    class="h6-add semibold-font good-item__title"
-                                  >
-                                    761,000
-
-                                    <span class="text-uppercase p1">AED</span>
-                                  </p>
-                                </div>
+                                <p class="p3 medium-font">Apartments</p>
 
                                 <div class="good-item__top-btns">
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--favorite"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#heart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  <!-- prettier-ignore -->
 
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--comparison"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#chart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
                                 </div>
                               </div>
 
+                              <div class="good-item__top">
+                                <p class="h6-add bold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p2">AED</span>
+                                </p>
+                              </div>
+
                               <p
-                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
                               >
                                 Apartment, 2 bedroom, 60.11 sq.m. № 3427
                               </p>
 
                               <div class="good-item__tags">
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <p class="p3">2 Bedrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">2 Bathrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">1 floor</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">60.11 sq.m.</p>
-                                </div>
+                                @@loop('../components/tag.html', [ 
+                                { "text": "2 Baths", "icon": "#bed-icon" },
+                                { "text": "Q4 2026", "icon": "#bed-icon" },
+                                { "text": "2 Beds", "icon": "#bed-icon" },
+                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
                               </div>
 
                               <ul class="list-icon">
-                                <li
-                                  class="list-icon__link list-icon__link--small"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#geo-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3 medium-font">
-                                    Mohammed Bin Rashid City, Dubai
-                                  </p>
-                                </li>
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                               </ul>
                             </header>
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
                                 @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller"})
+                                "Contact Seller", "classAddText" : "p2 medium-font"})
                               </div>
 
                               <div class="good-item__logo">
@@ -1166,72 +738,24 @@
                       </div>
 
                       <div class="swiper-slide">
-                        <div class="good-item">
+                        <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
                               <div class="good-item__decor">
-                                <div class="badge badge--blue">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#shield-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <div class="badge__content">
-                                    <p class="p4 medium-font">CompleteTrust</p>
-                                  </div>
-                                </div>
-
-                                <div class="badge">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#checks-icon"></use>
-                                    </svg>
-                                  </span>
-                                </div>
+                                @@include('../good-item/badges.html',
+                                {"complete": true})
                               </div>
 
                               <div class="swiper swiper--good-img">
                                 <div class="swiper-wrapper">
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  <!-- prettier-ignore -->
 
-                                  <div class="swiper-slide">
-                                    <div class="good-item__img-item">
-                                      <div class="good-item__img">
-                                        <picture>
-                                          <source
-                                            srcset="
-                                              /img/goods/one.webp   1x,
-                                              /img/goods/one2x.webp 2x
-                                            "
-                                          />
-                                          <img
-                                            src="/img/goods/one.webp"
-                                            alt="фотография Apartment"
-                                            loading="lazy"
-                                          />
-                                        </picture>
-                                      </div>
-                                    </div>
-                                  </div>
+                                  @@loop('../good-item/slides-imgs.html', [
+                                  {"img": '/img/goods/one'},
+                                  {"img": '/img/goods/two'}
+                                  ])
                                 </div>
 
                                 <div class="good-item__decors-img">
@@ -1245,114 +769,55 @@
                           <div class="good-item__content">
                             <header class="good-item__header">
                               <div class="good-item__top-box">
-                                <div class="good-item__top">
-                                  <p class="p3 bold-font text-secondary-300">
-                                    Apartment
-                                  </p>
-
-                                  <p
-                                    class="h6-add semibold-font good-item__title"
-                                  >
-                                    761,000
-
-                                    <span class="text-uppercase p1">AED</span>
-                                  </p>
-                                </div>
+                                <p class="p3 medium-font">Apartments</p>
 
                                 <div class="good-item__top-btns">
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--favorite"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#heart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  <!-- prettier-ignore -->
 
-                                  <button
-                                    aria-label="Добавить в избранное"
-                                    class="button button--bg-gray-200 button--cub button--cub-sm button--comparison"
-                                  >
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use xlink:href="#chart-icon"></use>
-                                      </svg>
-                                    </span>
-                                  </button>
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
                                 </div>
                               </div>
 
+                              <div class="good-item__top">
+                                <p class="h6-add bold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p2">AED</span>
+                                </p>
+                              </div>
+
                               <p
-                                class="p3 text-secondary-100 ellipsis-text ellipsis-text--one good-item__desc"
+                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
                               >
                                 Apartment, 2 bedroom, 60.11 sq.m. № 3427
                               </p>
 
                               <div class="good-item__tags">
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
+                                <!-- prettier-ignore -->
 
-                                  <p class="p3">2 Bedrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">2 Bathrooms</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">1 floor</p>
-                                </div>
-
-                                <div class="tag tag--small">
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#bed-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3">60.11 sq.m.</p>
-                                </div>
+                                @@loop('../components/tag.html', [ 
+                                { "text": "2 Baths", "icon": "#bed-icon" },
+                                { "text": "Q4 2026", "icon": "#bed-icon" },
+                                { "text": "2 Beds", "icon": "#bed-icon" },
+                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
                               </div>
 
                               <ul class="list-icon">
-                                <li
-                                  class="list-icon__link list-icon__link--small"
-                                >
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#geo-icon"></use>
-                                    </svg>
-                                  </span>
-
-                                  <p class="p3 medium-font">
-                                    Mohammed Bin Rashid City, Dubai
-                                  </p>
-                                </li>
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                               </ul>
                             </header>
 
                             <footer class="good-item__footer">
                               <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
                                 @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller"})
+                                "Contact Seller", "classAddText" : "p2 medium-font"})
                               </div>
 
                               <div class="good-item__logo">
@@ -1365,6 +830,101 @@
                           </div>
                         </div>
                       </div>
+
+                      <div class="swiper-slide">
+                        <div class="good-item good-item--small">
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <!-- prettier-ignore -->
+
+                                @@include('../good-item/badges.html',
+                                {"complete": true})
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../good-item/slides-imgs.html', [
+                                  {"img": '/img/goods/one'},
+                                  {"img": '/img/goods/two'}
+                                  ])
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  @@include('../swiper/arrows-absolute.html')
+                                  @@include('../swiper/swiper-pagination-absolute.html')
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <p class="p3 medium-font">Apartments</p>
+
+                                <div class="good-item__top-btns">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                </div>
+                              </div>
+
+                              <div class="good-item__top">
+                                <p class="h6-add bold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p2">AED</span>
+                                </p>
+                              </div>
+
+                              <p
+                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                              >
+                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                              </p>
+
+                              <div class="good-item__tags">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../components/tag.html', [ 
+                                { "text": "2 Baths", "icon": "#bed-icon" },
+                                { "text": "Q4 2026", "icon": "#bed-icon" },
+                                { "text": "2 Beds", "icon": "#bed-icon" },
+                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                              </div>
+
+                              <ul class="list-icon">
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                              </ul>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
+                                @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller", "classAddText" : "p2 medium-font"})
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>

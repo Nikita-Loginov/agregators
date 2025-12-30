@@ -81,17 +81,6 @@
     border-color: var(--gray-color-500);
   }
 
-  .icon {
-    width: 24px;
-    height: 24px;
-
-    img,
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
   &--circle {
     width: 36px;
     height: 36px;
@@ -102,20 +91,10 @@
     align-items: center;
     justify-content: center;
     min-height: 0;
-
-    .icon {
-      width: 20px;
-      height: 20px;
-    }
   }
 
   &--circle-small {
     width: 26px;
     height: 26px;
-
-    .icon {
-      width: 16px;
-      height: 16px;
-    }
   }
 }

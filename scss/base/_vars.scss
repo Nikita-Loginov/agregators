@@ -80,6 +80,11 @@ html {
   --radius-4xl: 28px;
   --radius-5xl: 32px;
 
+  --icon-xs: 10px;
+  --icon-sm: 16px;
+  --icon-base: 20px;
+  --icon-md: 24px;
+
   --container-inline-padding: #{calculate-clamp(16px, 40px, 1024px, 767px)};
   --container-inline-full-padding: #{calculate-clamp(16px, 20px, 1024px, 767px)};
   --container-width: calc(1215px + calc(var(--container-inline-padding) * 2));

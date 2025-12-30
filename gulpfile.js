@@ -6,7 +6,8 @@ gulp.task('html', function () {
     return gulp.src('html/pages/*.html')
         .pipe(fileInclude({
             prefix: '@@', 
-            basepath: '@file'
+            basepath: '@file',
+            ignoreErrors: true,
         }))
         .pipe(gulp.dest('.')) 
         .pipe(browserSync.stream());

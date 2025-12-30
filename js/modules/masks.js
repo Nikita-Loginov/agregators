@@ -45,6 +45,7 @@ export function initPhoneMasks(form) {
         lazy: true,
         placeholderChar: "_",
       });
+      
 
       input.placeholder = country.placeholder;
 
