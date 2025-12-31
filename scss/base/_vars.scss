@@ -1,5 +1,6 @@
 html {
   --white-color: #ffffff;
+  --white-color-170: #ffffffb2;
 
   --dark-color-100: #111928;
   --dark-color-100-rgb: 17, 25, 40;
@@ -96,4 +97,3 @@ html {
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1024px, 480px)};
 }
-

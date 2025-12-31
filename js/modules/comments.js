@@ -25,8 +25,17 @@ const hiddenForm = (target) => {
   relative.classList.remove("active-form");
 };
 
+const hiddenStatus = (target) => {
+  const relative = target.closest('[data-block="comment-relative"]');
+
+  const statusBox = relative.querySelector('[data-block="comment-status"]');
+
+  statusBox.innerHTML = "";
+}
+
 const showDetails = (target, status = "success") => {
   hiddenForm(target);
+  hiddenStatus(target)
 
   const relative = target.closest('[data-block="comment-relative"]');
   relative.classList.add("active-status");

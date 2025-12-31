@@ -1,3 +1,5 @@
+import { toggleVideoSwiper } from "./functions.js";
+
 const MOUSE_WHEEL_CONFIG = {
   enabled: true,
   forceToAxis: true,
@@ -66,23 +68,46 @@ export const SWIPERS = {
   GALLERY_BIG: {
     selector: ".gallery .swiper--gallery-big",
     breakpoint: 122300000000,
-    mousewheel: MOUSE_WHEEL_CONFIG,
+   
     options: {
       slidesPerView: 1,
       spaceBetween: 16,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      pagination: {
+        el: ".gallery .swiper--gallery-big .swiper-pagination",
+      },
+    },
+    events: {
+      slideChange: (swiper) => {
+        toggleVideoSwiper(swiper.slides[swiper.activeIndex]);
+      },
     },
   },
   GALLERY_SMALL: {
     selector: ".gallery .swiper--gallery-small",
     breakpoint: 122300000000,
-    mousewheel: MOUSE_WHEEL_CONFIG,
+    
     options: {
       slidesPerView: 3,
       spaceBetween: 8,
+      mousewheel: MOUSE_WHEEL_CONFIG,
       direction: "vertical",
       navigation: {
         nextEl: ".gallery .swiper--gallery-small .arrow-swiper.next",
         prevEl: ".gallery .swiper--gallery-small .arrow-swiper.prev",
+      },
+    },
+  },
+  PROPERTY: {
+    selector: ".object-bottom__property-swiper-box .swiper--property",
+    breakpoint: 122300000000,
+    
+    options: {
+      slidesPerView: 3,
+      spaceBetween: 14,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      pagination: {
+        el: ".object-bottom__property-swiper-box .swiper-pagination",
       },
     },
   },

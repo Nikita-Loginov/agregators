@@ -46,6 +46,17 @@ export const validationRules = {
     hint: "Выберите один из доступных вариантов",
   },
 
+  policy: {
+    required: true,
+    type: "checkbox",
+
+    message: {
+      required: "Необходимо принять условия",
+    },
+
+    hint: "Без этого мы не сможем продолжить",
+  },
+
   message: {
     required: false,
 

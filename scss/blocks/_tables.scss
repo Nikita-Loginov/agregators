@@ -12,6 +12,11 @@
     --gap-items: 20px;
   }
 
+  &--four {
+    --grid-template-columns: repeat(5, 1fr);
+    --gap-items: 2px;
+  }
+
   &__header {
     background-color: var(--gray-color-200);
   }
@@ -26,6 +31,10 @@
 
   &__cell {
     padding: 10px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   &__decor {
@@ -58,5 +67,10 @@
         }
       }
     }
+  }
+
+  &__cell-btns {
+    display: flex;
+    gap: 10px;
   }
 }

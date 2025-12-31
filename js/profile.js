@@ -1,40 +1,30 @@
 import { SWIPERS } from "./swiper/index.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
-import { toggleVideoSwiper } from "./swiper/functions.js";
 import {
   initMoreBlocks,
   hideUnnecessaryButtons,
 } from "./modules/moreContent.js";
 import { initImgsSwiperGoods } from "./swiper/functions.js";
+import { initComments } from "./modules/comments.js";
 
 const swipers = [
   {
     ...SWIPERS.ALSO_CARDS
+  },
+  {
+    ...SWIPERS.GALLERY_BIG
+  },
+  {
+    ...SWIPERS.PROPERTY
   }
 ];
 
-const initSwipersGood = () => {
-  const swiperThumbs = new Swiper(SWIPERS.GALLERY_SMALL.selector, {
-    ...SWIPERS.GALLERY_SMALL.options,
-  });
-
-  const swiperMain = new Swiper(SWIPERS.GALLERY_BIG.selector, {
-    ...SWIPERS.GALLERY_BIG.options,
-    thumbs: {
-      swiper: swiperThumbs,
-    },
-    on: {
-      ...SWIPERS.GALLERY_BIG.events
-    },
-  });
-};
-
 const handleGlobalClick = (e) => {
   initMoreBlocks(e);
+  initComments(e);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  initSwipersGood();
   hideUnnecessaryButtons();
   initImgsSwiperGoods();
 

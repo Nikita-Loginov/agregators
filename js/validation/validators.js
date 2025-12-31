@@ -22,4 +22,8 @@ export const validators = {
 
     return !!realSelect?.value;
   },
+
+  checkbox(field) {
+    return field.checked === true;
+  },
 };

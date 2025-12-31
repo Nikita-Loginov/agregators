@@ -26,4 +26,18 @@
     flex-direction: column;
     gap: 1px;
   }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  &__budges {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
 }

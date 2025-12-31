@@ -24,11 +24,14 @@ export const initMoreBlocks = (
     return;
   }
 
-  itemsContainer.classList.toggle("more");
+  const moreTextFromAttr = moreBtn.getAttribute("data-more-text") || moreText;
+  const lessTextFromAttr = moreBtn.getAttribute("data-less-text") || lessText;
 
+  itemsContainer.classList.toggle("more");
   const buttonText = itemsContainer.classList.contains("more")
-    ? lessText
-    : moreText;
+    ? lessTextFromAttr
+    : moreTextFromAttr;
+    
   moreBtn.querySelector('[data-block="more-btn-text"]').textContent =
     buttonText;
 

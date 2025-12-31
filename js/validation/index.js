@@ -15,36 +15,46 @@ export const validateFormField = (formItem) => {
 
   for (const rule in rules) {
     if (rule === "message" || rule === "type" || rule === "hint") continue;
-
+  
     const value = field.value || "";
-
+  
     if (rule === "required" && rules.required) {
-      valid = validators.required(value);
+      if (rules.type === "checkbox") {
+        valid = validators.checkbox(field);
+      } else {
+        valid = validators.required(value);
+      }
       message = rules.message?.required || "";
     }
-
+  
     if (valid && rule === "minLength") {
       valid = validators.minLength(value, rules.minLength);
       message = rules.message?.minLength || "";
     }
-
+  
     if (valid && rule === "pattern") {
       valid = validators.pattern(value, rules.pattern);
       message = rules.message?.pattern || "";
     }
-
+  
     if (valid && rules.type === "phone") {
       valid = validators.phone(field);
       message = rules.message?.invalid || "";
     }
-
+  
     if (valid && rules.type === "select") {
       valid = validators.select(field);
       message = rules.message?.required || "";
     }
-
+  
+    if (valid && rules.type === "checkbox") {
+      valid = validators.checkbox(field);
+      message = rules.message?.required || "";
+    }
+  
     if (!valid) break;
   }
+  
 
   if (!valid && rules.hint) {
     message = `${message}. ${rules.hint}`;
@@ -58,4 +68,4 @@ export const validateFormField = (formItem) => {
   field.setAttribute("aria-invalid", String(!valid));
 
   return valid;
-}
+};
