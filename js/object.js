@@ -1,11 +1,11 @@
 import { SWIPERS } from "./swiper/index.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
-import { toggleVideoSwiper } from "./swiper/functions.js";
 import {
   initMoreBlocks,
   hideUnnecessaryButtons,
 } from "./modules/moreContent.js";
 import { initImgsSwiperGoods } from "./swiper/functions.js";
+import { searcBlockTab } from "./modules/tab.js";
 
 const swipers = [
   {
@@ -31,6 +31,7 @@ const initSwipersGood = () => {
 
 const handleGlobalClick = (e) => {
   initMoreBlocks(e);
+  searcBlockTab(e);
 };
 
 document.addEventListener("DOMContentLoaded", () => {

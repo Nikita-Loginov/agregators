@@ -1,6 +1,6 @@
 import { toggleVideoSwiper } from "./functions.js";
 
-const MOUSE_WHEEL_CONFIG = {
+export const MOUSE_WHEEL_CONFIG = {
   enabled: true,
   forceToAxis: true,
   sensitivity: 1,

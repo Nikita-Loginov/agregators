@@ -1,3 +1,5 @@
+import { initGallery } from "./gallery.js";
+
 const openModal = (e) => {
   const modalBtn = e.target.closest(".modal-open");
 
@@ -28,6 +30,10 @@ export const openModalStep = (modalBtn, modals, modalBlock) => {
 
   if (modalBlock.classList.contains("videoModal")) {
     getVideoSrc(modalBtn, modalBlock);
+  }
+
+  if (modalBlock.classList.contains("galleryModal")) {
+    initGallery(modalBtn, modalBlock);
   }
 
   modalBlock.classList.add("open");
@@ -88,7 +94,6 @@ const setVideoSrc = (src, modalBlock) => {
 };
 
 const closeModal = (e) => {
-
   if (
     e.target.classList.contains("modalBlock") ||
     e.target.closest(".modal-close")
@@ -100,7 +105,7 @@ const closeModal = (e) => {
     document.body.classList.remove("open-modal");
     document.documentElement.classList.remove("open-modal");
   }
-}
+};
 
 export const checkStartOpen = () => {
   const modals = document.querySelectorAll(".modalBlock");
@@ -110,7 +115,6 @@ export const checkStartOpen = () => {
       modal.classList.contains("open") ||
       modal.classList.contains("openFinish")
     ) {
-      
       document.body.classList.add("open-modal");
       document.documentElement.classList.add("open-modal");
 

@@ -22,9 +22,7 @@
         right: 0;
       }
     }
-
   }
-
 
   &--full {
     position: absolute;
@@ -69,9 +67,19 @@
   &:has(.arrow-swiper.none.prev.swiper-button-disabled):has(
       .arrow-swiper.none.next.swiper-button-disabled
     ) {
-      .arrow-swiper.none {
+    .arrow-swiper.none {
+      display: none;
+    }
+  }
+
+  &--arrows-disabled {
+    &:has(.arrow-swiper.prev.swiper-button-disabled):has(
+        .arrow-swiper.next.swiper-button-disabled
+      ) {
+      .arrow-swiper {
         display: none;
       }
+    }
   }
 }
 
@@ -84,5 +92,4 @@
     opacity: 0.7;
     pointer-events: none;
   }
-  
 }

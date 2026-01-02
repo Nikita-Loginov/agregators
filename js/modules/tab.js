@@ -1,4 +1,5 @@
 import { classAction } from "./classActions.js";
+import { initSwiperGallery } from "./gallery.js";
 
 const TAB__INFO = {
   nameTabBtn: "tab-btn",
@@ -27,7 +28,6 @@ function toggleClassesTabElements(elements) {
   if (block) {
     const tabsBox = btn.closest(".tabs-box");
     const tabsBoxName = tabsBox.dataset.tabCategory;
-
 
     if (tabsBox.dataset.url) {
       const name = tabsBox.dataset.url;
@@ -63,20 +63,18 @@ function toggleClassesTabElements(elements) {
             `.${TAB__INFO.nameTabBtn}.${TAB__INFO.nameActiveClass}`
           );
 
-          const firstBtn = btns.querySelector(
-            `.${TAB__INFO.nameTabBtn}`
-          )
+          const firstBtn = btns.querySelector(`.${TAB__INFO.nameTabBtn}`);
 
           const itemNeed = searchs[index + 1].split("=");
 
           const categoryItem = itemNeed[0];
           const nameItem = itemNeed[1];
 
-          if (activeBtn) {   
+          if (activeBtn) {
             url.searchParams.set(categoryItem, nameItem);
             history.pushState({}, "", url);
           } else {
-            firstBtn.click()
+            firstBtn.click();
           }
         });
       }
@@ -93,7 +91,6 @@ function toggleClassesTabElements(elements) {
       classAction(prevActiveBtn, TAB__INFO.nameActiveClass, "remove");
     if (prevActiveBlock)
       classAction(prevActiveBlock, TAB__INFO.nameActiveClass, "remove");
-
 
     if (btn.closest(".tabs__btns")) {
       classAction(btn, TAB__INFO.nameActiveClass, "add");
@@ -114,8 +111,19 @@ function toggleClassesTabElements(elements) {
     if (btnFind) {
       classAction(btnFind, TAB__INFO.nameActiveClass, "add");
     }
-   
+
     classAction(block, TAB__INFO.nameActiveClass, "add");
+
+    if (tabsBox.closest('[data-block="gallery-box"]')) {
+      const fisrtActiveSlide =
+        block.querySelector(".swiper--big-gallery .swiper-slide-active") ||
+        block.querySelector(".swiper--big-gallery .swiper-slide");
+
+      const name = fisrtActiveSlide.dataset.block;
+      const type = name.startsWith("img") ? "img" : "video";
+
+      initSwiperGallery(tabsBox.closest(".galleryModal"), type, name, true);
+    }
 
     if (functionTab) {
       functionTab();
@@ -138,7 +146,9 @@ export const setFirstActiveClasses = () => {
 
     firstBtn.click();
 
-    const contentBlock = document.querySelector(`[data-block-tab="${nameBox}"]`);
+    const contentBlock = document.querySelector(
+      `[data-block-tab="${nameBox}"]`
+    );
     if (!contentBlock) return;
 
     activateFirstTab(contentBlock);

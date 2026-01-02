@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   <meta lang="en">
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <meta name="robots" content="noindex, nofollow">
-   <title>Профиль объекта</title>
- 
-   <link rel="stylesheet" href="/css/page.css">
-   
-   
-   <link rel="stylesheet" href="./css/object.css" />
-   
-   <link rel="stylesheet" href="./css/lib/swiper.min.css" />
-   
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" />
-   
- </head>
+  <meta lang="en" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Профиль объекта</title>
+
+  <link rel="stylesheet" href="/css/page.css" />
+
+  
+  <link rel="stylesheet" href="./css/object.css" />
+  
+  <link rel="stylesheet" href="./css/lib/swiper.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" />
+  
+</head>
+
   <body class="white-page">
     <div class="wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
@@ -2605,12 +2606,12 @@
                               <picture>
                                 <source
                                   srcset="
-                                    /img/object/one.webp   1x,
-                                    /img/object/one2x.webp 2x
+                                    /img/goods/one.webp   1x,
+                                    /img/goods/one2x.webp 2x
                                   "
                                 />
                                 <img
-                                  src="/img/object/one.webp"
+                                  src="/img/goods/one.webp"
                                   alt="фотография"
                                   loading="lazy"
                                 />
@@ -2618,7 +2619,7 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <!-- <div class="swiper-slide">
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -2634,7 +2635,7 @@
                                 />
                               </picture>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
 
@@ -2669,9 +2670,11 @@
 
                     <div class="gallery-simple__swiper-small">
                       <div class="swiper swiper--gallery-small">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
+                        <div class="swiper-wrapper" data-block="gallery">
+                          <div class="swiper-slide modal-open" data-modal="galleryModal" data-gallery-item data-block="img-gallery-1">
+                            <div
+                              class="gallery-simple__img-box"
+                            >
                               <picture>
                                 <source
                                   srcset="
@@ -2688,8 +2691,10 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
+                          <div class="swiper-slide modal-open" data-modal="galleryModal" data-gallery-item data-block="video-gallery-1">
+                            <div
+                              class="gallery-simple__img-box"
+                            >
                               <video
                                 src="/videos/one.mp4"
                                 poster="/videos/posters/one.png"
@@ -2701,26 +2706,10 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/object/one.webp   1x,
-                                    /img/object/one2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/object/one.webp"
-                                  alt="фотография"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
+                          <div class="swiper-slide modal-open" data-modal="galleryModal" data-gallery-item data-block="img-gallery-2">
+                            <div
+                              class="gallery-simple__img-box"
+                            >
                               <picture>
                                 <source
                                   srcset="
@@ -2736,34 +2725,55 @@
                               </picture>
                             </div>
                           </div>
+
+                          <!-- <div class="swiper-slide">
+                            <a
+                              href="/img/goods/one.webp"
+                              data-gallery-item
+                              data-thumb="/img/goods/one.webp"
+                              class="gallery-simple__img-box"
+                            >
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/goods/one.webp   1x,
+                                    /img/goods/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/goods/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </a>
+                          </div> -->
                         </div>
 
                         <div class="arrows-swiper arrows-swiper--full">
-    <button
-      class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
-      type="button"
-    >
-      <span
-        class="icon icon--big"
-        style="rotate: -180deg"
-      >
-        <svg>
-          <use xlink:href="#arrow-up-line-icon"></use>
-        </svg>
-      </span>
-    </button>
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <span class="icon icon--big" style="rotate: -180deg">
+      <svg>
+        <use xlink:href="#arrow-up-line-icon"></use>
+      </svg>
+    </span>
+  </button>
 
-    <button
-      class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
-      type="button"
-    >
-      <span class="icon icon--big">
-        <svg>
-          <use xlink:href="#arrow-down-line-icon"></use>
-        </svg>
-      </span>
-    </button>
-  </div>
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <span class="icon icon--big">
+      <svg>
+        <use xlink:href="#arrow-down-line-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
                       </div>
                     </div>
                   </div>
@@ -6857,10 +6867,240 @@
     </div>
   </div>
 </div>
+ <div class="modalBlock galleryModal" data-block="gallery-box">
+  <div
+    class="modalBlock__inner galleryModal__inner tabs-box"
+    data-tab-category="gallery"
+  >
+    <header class="modalBlock__head modalBlock__head--static">
+      <div class="checkbox-box tab-btns">
+        <label class="check tab-btn" data-btn-tab="gallery-imgs">
+          <div class="check__info">
+            <input type="radio" checked name="gallery-popup" />
+
+            <span class="p2">Photos (27)</span>
+          </div>
+        </label>
+
+        <label class="check tab-btn" data-btn-tab="gallery-videos">
+          <div class="check__info">
+            <input type="radio" name="gallery-popup" />
+
+            <span class="p2">Videos (2)</span>
+          </div>
+        </label>
+      </div>
+
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon" style="color: var(--white-color)">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <div class="modalBlock__content">
+      <div
+        class="galleryModal__box galleryModal__box-imgs swiper-box swiper-box--arrows-disabled tab-item active"
+        data-block-tab="gallery-imgs"
+        data-block-category="gallery"
+      >
+        <div class="galleryModal__swiper-box">
+          <button
+            class="button button--bg-white button--circle arrow-swiper prev"
+            type="button"
+          >
+            <span class="icon icon--big">
+              <svg>
+                <use xlink:href="#arrow-line-icon"></use>
+              </svg>
+            </span>
+          </button>
+
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--big-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-block="img-gallery-1">
+                  <div class="galleryModal__img">
+                    <picture>
+                      <source
+                        srcset="
+                          /img/object/one.webp   1x,
+                          /img/object/one2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="/img/object/one.webp"
+                        alt="фотография"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide" data-block="img-gallery-2">
+                  <div class="galleryModal__img">
+                    <picture>
+                      <source
+                        srcset="
+                          /img/goods/one.webp   1x,
+                          /img/goods/one2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="/img/goods/one.webp"
+                        alt="фотография"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="button button--bg-white button--circle arrow-swiper next"
+            type="button"
+          >
+            <span class="icon icon--little" >
+              <svg>
+                <use xlink:href="#arrow-line-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="galleryModal__swiper-box">
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--small-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="galleryModal__img">
+                    <picture>
+                      <source
+                        srcset="
+                          /img/object/one.webp   1x,
+                          /img/object/one2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="/img/object/one.webp"
+                        alt="фотография"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="galleryModal__img">
+                    <picture>
+                      <source
+                        srcset="
+                          /img/goods/one.webp   1x,
+                          /img/goods/one2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="/img/goods/one.webp"
+                        alt="фотография"
+                        loading="lazy"
+                      />
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="galleryModal__box galleryModal__box-videos tab-item swiper-box swiper-box--arrows-disabled"
+        data-block-tab="gallery-videos"
+        data-block-category="gallery"
+      >
+        <div class="galleryModal__swiper-box">
+          <button
+            class="button button--bg-white button--circle arrow-swiper prev"
+            type="button"
+          >
+            <span class="icon icon--big">
+              <svg>
+                <use xlink:href="#arrow-line-icon"></use>
+              </svg>
+            </span>
+          </button>
+
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--big-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide" data-block="video-gallery-1">
+                  <div class="galleryModal__img">
+                    <video
+                      src="/videos/one.mp4"
+                      poster="/videos/posters/one.png"
+                      loop
+                      muted
+                      preload="metadata"
+                      playsinline
+                    ></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button
+            class="button button--bg-white button--circle arrow-swiper next"
+            type="button"
+          >
+            <span class="icon icon--little" >
+              <svg>
+                <use xlink:href="#arrow-line-icon"></use>
+              </svg>
+            </span>
+          </button>
+        </div>
+
+        <div class="galleryModal__swiper-box">
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--small-gallery">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="galleryModal__img">
+                    <video
+                      src="/videos/one.mp4"
+                      poster="/videos/posters/one.png"
+                      loop
+                      muted
+                      preload="metadata"
+                      playsinline
+                    ></video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"
+      defer
+    ></script>
+
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/object.js" type="module"></script>
   </body>

@@ -103,12 +103,12 @@
                               <picture>
                                 <source
                                   srcset="
-                                    /img/object/one.webp   1x,
-                                    /img/object/one2x.webp 2x
+                                    /img/goods/one.webp   1x,
+                                    /img/goods/one2x.webp 2x
                                   "
                                 />
                                 <img
-                                  src="/img/object/one.webp"
+                                  src="/img/goods/one.webp"
                                   alt="фотография"
                                   loading="lazy"
                                 />
@@ -116,7 +116,7 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <!-- <div class="swiper-slide">
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -132,7 +132,7 @@
                                 />
                               </picture>
                             </div>
-                          </div>
+                          </div> -->
                         </div>
                       </div>
 
@@ -167,9 +167,11 @@
 
                     <div class="gallery-simple__swiper-small">
                       <div class="swiper swiper--gallery-small">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
+                        <div class="swiper-wrapper" data-block="gallery">
+                          <div class="swiper-slide modal-open" data-modal="galleryModal" data-gallery-item data-block="img-gallery-1">
+                            <div
+                              class="gallery-simple__img-box"
+                            >
                               <picture>
                                 <source
                                   srcset="
@@ -186,8 +188,10 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
+                          <div class="swiper-slide modal-open" data-modal="galleryModal" data-gallery-item data-block="video-gallery-1">
+                            <div
+                              class="gallery-simple__img-box"
+                            >
                               <video
                                 src="/videos/one.mp4"
                                 poster="/videos/posters/one.png"
@@ -199,26 +203,10 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/object/one.webp   1x,
-                                    /img/object/one2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/object/one.webp"
-                                  alt="фотография"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-                          </div>
-
-                          <div class="swiper-slide">
-                            <div class="gallery-simple__img-box">
+                          <div class="swiper-slide modal-open" data-modal="galleryModal" data-gallery-item data-block="img-gallery-2">
+                            <div
+                              class="gallery-simple__img-box"
+                            >
                               <picture>
                                 <source
                                   srcset="
@@ -234,6 +222,29 @@
                               </picture>
                             </div>
                           </div>
+
+                          <!-- <div class="swiper-slide">
+                            <a
+                              href="/img/goods/one.webp"
+                              data-gallery-item
+                              data-thumb="/img/goods/one.webp"
+                              class="gallery-simple__img-box"
+                            >
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/goods/one.webp   1x,
+                                    /img/goods/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/goods/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </a>
+                          </div> -->
                         </div>
 
                         @@include('../swiper/arrows-swiper-full.html')
@@ -1991,10 +2002,14 @@
       </main>
 
       @@include('../modules/footer.html', {"inner" : ''})
-      @@include('../modals/features.html')
+      @@include('../modals/features.html') @@include('../modals/gallery.html')
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"
+      defer
+    ></script>
+
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/object.js" type="module"></script>
   </body>
