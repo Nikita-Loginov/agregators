@@ -6,22 +6,24 @@ import {
 } from "./modules/moreContent.js";
 import { initImgsSwiperGoods } from "./swiper/functions.js";
 import { initComments } from "./modules/comments.js";
+import { searcBlockTab } from "./modules/tab.js";
 
 const swipers = [
   {
-    ...SWIPERS.ALSO_CARDS
+    ...SWIPERS.GALLERY_BIG,
   },
   {
-    ...SWIPERS.GALLERY_BIG
+    ...SWIPERS.PROPERTY,
   },
   {
-    ...SWIPERS.PROPERTY
-  }
+    ...SWIPERS.ALSO_CARDS_THREE,
+  },
 ];
 
 const handleGlobalClick = (e) => {
   initMoreBlocks(e);
   initComments(e);
+  searcBlockTab(e);
 };
 
 document.addEventListener("DOMContentLoaded", () => {

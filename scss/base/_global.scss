@@ -405,6 +405,19 @@ body .wrapper {
   border: none !important;
 }
 
+.leaflet-marker-icon.custom-marker {
+  &.is-active {
+    .decor {
+      &__map {
+        background-color: var(--green-color-100);
+        width: 32px;
+        height: 40px;
+        border-radius: 0;
+      }
+    }
+  }
+}
+
 .cluster-icon {
   display: flex;
   align-items: center;
@@ -433,6 +446,20 @@ body .wrapper {
     }
 
     & > *:nth-child(-n + 2) {
+      display: block;
+    }
+  }
+
+  &:not(.more-block--grid).more-block--eight {
+    & > *:not(:nth-child(-n + 8)) {
+      display: none;
+    }
+
+    & > *:nth-child(-n + 8) {
+      display: block;
+    }
+
+    & > *:nth-child(-n + 8) {
       display: block;
     }
   }
@@ -536,4 +563,10 @@ body .wrapper {
       border-radius: var(--radius-3xl);
     }
   }
+}
+
+.decor-el {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }

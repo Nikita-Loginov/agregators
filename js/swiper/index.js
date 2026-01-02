@@ -65,6 +65,17 @@ export const SWIPERS = {
       },
     },
   },
+  ALSO_CARDS_THREE: {
+    selector: ".also-section .swiper--also",
+    breakpoint: 122300000000,
+    options: {
+      slidesPerView: 3,
+      spaceBetween: 14,
+      pagination: {
+        el: ".also-section .swiper-pagination--also",
+      },
+    },
+  },
   GALLERY_BIG: {
     selector: ".gallery .swiper--gallery-big",
     breakpoint: 122300000000,

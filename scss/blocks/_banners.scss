@@ -80,6 +80,16 @@
   transition: all 0.5s;
   overflow: hidden;
 
+  &--secondary-bg-300 {
+    background-color: var(--secondary-color-300);
+
+    .banner-content {
+      &__header {
+        color: var(--white-color);
+      }
+    }
+  }
+
   &.isChangePhoto {
     &:has(.banner-content__footer .button:hover) {
       .banner-content__img--filter img {
@@ -101,6 +111,21 @@
         width: auto;
         height: auto;
         max-width: 200px;
+
+        &--big {
+          max-width: 100%;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        &--filter-inherit {
+          img {
+            mix-blend-mode: soft-light;
+            opacity: 0.4;
+          }
+        }
       }
 
       &__content,
@@ -125,6 +150,10 @@
     align-items: center;
     gap: 8px;
     flex-wrap: wrap;
+
+    * {
+      font-weight: var(--weight-font-main);
+    }
   }
 
   &__header,

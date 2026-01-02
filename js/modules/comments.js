@@ -1,4 +1,5 @@
 import { isFormValid } from "./validate.js";
+import { removeAllActiveStarts } from "./rating.js";
 
 const postForm = (target) => {
   const relative = target.closest('[data-block="comment-relative"]');
@@ -35,7 +36,8 @@ const hiddenStatus = (target) => {
 
 const showDetails = (target, status = "success") => {
   hiddenForm(target);
-  hiddenStatus(target)
+  hiddenStatus(target);
+
 
   const relative = target.closest('[data-block="comment-relative"]');
   relative.classList.add("active-status");
@@ -47,6 +49,8 @@ const showDetails = (target, status = "success") => {
   } else if (status === "error") {
     renderStatusError(statusBox);
   }
+
+  removeAllActiveStarts(relative)
 };
 
 const renderStatusSuccess = (statusBox) => {

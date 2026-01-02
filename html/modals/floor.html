@@ -1,0 +1,64 @@
+<div class="modalBlock floorModal">
+  <div
+    class="modalBlock__inner floorModal__inner tabs-box"
+    data-tab-category="floor-popup"
+  >
+    <header class="modalBlock__head modalBlock__head--static">
+      <p class="h6">Type С</p>
+
+      <div class="checkbox-box tab-btns">
+        <label class="check tab-btn" data-btn-tab="2d-floor-popup">
+          <div class="check__info">
+            <input type="radio" checked name="floor-popup" />
+
+            <span class="p2">2D</span>
+          </div>
+        </label>
+
+        <label class="check tab-btn" data-btn-tab="3d-floor-popup">
+          <div class="check__info">
+            <input type="radio" name="floor-popup" />
+
+            <span class="p2">3D</span>
+          </div>
+        </label>
+      </div>
+
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <div class="modalBlock__content">
+      <div
+        class="floorModal__img tab-item active"
+        data-block-tab="2d-floor-popup"
+        data-block-category="floor-popup"
+      >
+        <picture>
+          <source srcset="/img/floor/one.webp 1x, /img/floor/one2x.webp 2x" />
+          <img src="/img/floor/one.webp" alt="фотография" loading="lazy" />
+        </picture>
+      </div>
+
+      <div
+        class="floorModal__img tab-item"
+        data-block-tab="3d-floor-popup"
+        data-block-category="floor-popup"
+      >
+        <picture>
+          <source srcset="/img/floor/two.webp 1x, /img/floor/two2x.webp 2x" />
+          <img src="/img/floor/two.webp" alt="фотография" loading="lazy" />
+        </picture>
+      </div>
+    </div>
+  </div>
+</div>

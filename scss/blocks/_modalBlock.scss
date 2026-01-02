@@ -353,3 +353,29 @@
     }
   }
 }
+
+.floorModal {
+ 
+
+  &__inner {
+    padding: 8px 18px 8px 8px;
+    max-width: 655px;
+    border-radius: var(--radius-2xl);
+  }
+
+  &__img {
+    width: 100%;
+    height: 558px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+   
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

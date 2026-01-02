@@ -1,0 +1,19 @@
+.name-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  &__box {
+    background-color: var(--gray-color-200);
+    border-radius: var(--radius-md);
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 38px;
+
+    * {
+      line-height: var(--line-height-tighter);
+    }
+  }
+}

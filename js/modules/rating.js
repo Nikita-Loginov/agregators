@@ -60,6 +60,17 @@ const removePreActiveStars = (e) => {
   removeAllElementClass(stars, CONFIG.CLASS_PRE_ACTIVE);
 };
 
+export const removeAllActiveStarts = (box) => {
+  if (!box) return;
+
+
+
+  const stars = box.querySelectorAll(`.${CONFIG.CLASS_ITEM}`);
+
+  removeAllElementClass(stars, CONFIG.CLASS_PRE_ACTIVE);
+  removeAllElementClass(stars, CONFIG.CLASS_ACTIVE);
+}
+
 export const initRatingStars = (e) => {
   if (!e || !e.target) return;
 

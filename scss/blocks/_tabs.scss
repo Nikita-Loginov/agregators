@@ -49,3 +49,13 @@
     gap: 4px;
   }
 }
+
+body .wrapper {
+  .tab-item {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+}

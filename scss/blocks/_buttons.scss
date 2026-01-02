@@ -19,7 +19,7 @@
 
   &.disabled {
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 0.5;
   }
 
   &--xs {
@@ -32,6 +32,12 @@
     min-height: 28px;
     padding: 4px 12px;
     font-size: var(--font-size-2xs);
+  }
+
+  &--md2x {
+    min-height: 32px;
+    padding: 5px 16px;
+    font-size: var(--font-size-xs);
   }
 
   &--md {
