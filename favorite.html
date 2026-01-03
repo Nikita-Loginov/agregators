@@ -5,12 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Все страницы</title>
+  <title>Избранное</title>
 
   <link rel="stylesheet" href="/css/page.css" />
 
   
-  <link rel="stylesheet" href="./css/allPages.css" />
+  <link rel="stylesheet" href="./css/favorite.css" />
+  
+  <link rel="stylesheet" href="./css/lib/swiper.min.css" />
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" />
   
 </head>
 
@@ -2568,232 +2572,1131 @@
 </header>
 
 
-      <main class="main">
-        <section class="allPages">
+      <main class="main main--detail main--detail-big">
+        <div class="top-page">
           <div class="container">
-            <div class="allPages__inner">
-              <div class="allPages__box">
-                
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Featured Properties</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="breadcrumbs__circle">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-circle-icon"></use>
+                      </svg>
+                    </div>
+                  </span>
+
+                  <span>Home</span>
+                </a>
               </div>
-              <ul class="allPages__list">
-                <li class="allPages__link">
-                  <a
-                    href="/"
-                    aria-label="Перейти на Главную страницу"
-                    title="Главная"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐶 Главная(кликабельно)
-                  </a>
-                </li>
 
-                <li class="allPages__link">
-                  <a
-                    href="/map.html"
-                    aria-label="Перейти в Карта"
-                    title="Карта"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐔 Карта (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/object.html"
-                    aria-label="Перейти в Профиль объекта"
-                    title="Профиль объекта"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🦄 Профиль объекта (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/profile.html"
-                    aria-label="Перейти в Профиль Жк"
-                    title="Профиль Жк"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🦁 Профиль Жк (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/layout.html"
-                    aria-label="Перейти в Планировка"
-                    title="Планировка"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐶 Планировка (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/floor.html"
-                    aria-label="Перейти в Этаж"
-                    title="Этаж"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🦊 Этаж (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/comparison.html"
-                    aria-label="Перейти в Сравнение объектов"
-                    title="Сравнение объектов"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐻 Сравнение объектов (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/previously-viewed.html"
-                    aria-label="Перейти в История просмотра"
-                    title="История просмотра"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                  🐵 История просмотра (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/favorite.html"
-                    aria-label="Перейти в Избранное"
-                    title="Избранное"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                  🦄 Избранное + empty блок снизу (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/catalogy.html"
-                    aria-label="Перейти в Каталог"
-                    title="Каталог"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐭 Каталог (кликабельно)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/article.html"
-                    aria-label="Перейти в статью"
-                    title="Статья"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐰 Деталка статьи (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/articles.html"
-                    aria-label="Перейти в Список статей"
-                    title="Статьи"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐻 Страница статей (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/authors.html"
-                    aria-label="Перейти в Список авторов"
-                    title="Авторы"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐵 Страница Авторов (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/author-detail.html"
-                    aria-label="Перейти в деталки автора"
-                    title="деталка автора"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🦄 Страница деталки автора (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/guides.html"
-                    aria-label="Перейти на страницу Гайдов"
-                    title="Гайды"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐮 Страница Гайдов (кликабельно) (без адаптива)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="/ui.html"
-                    aria-label="Перейти в UI"
-                    title="UI"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🦊 UI (кликабельно)
-                  </a>
-                </li>
-
-                <li class="allPages__link">
-                  <a
-                    href="page.html"
-                    aria-label="Перейти на Шаблон"
-                    title="Шаблон"
-                    class="allPages__item"
-                    target="_blank"
-                  >
-                    🐱 Шаблон(кликабельно)
-                  </a>
-                </li>
-              </ul>
-
-              <div class="allPages__review">
-                <p>
-                  Понравился сайт? Либо есть претензии? Тогда оставь отзыв
-                  <a
-                    href="https://web.telegram.org/k/#@AlbertNitik"
-                    target="_blank"
-                    >тут</a
-                  >
-                </p>
-              </div>
+              <h1 class="h2">Favorite Properties</h1>
             </div>
           </div>
-        </section>
+        </div>
+
+        <div class="main__sections">
+          <section
+            class="catalogy-box"
+            data-block="grid-relative"
+            data-grid="list"
+          >
+            <div class="container">
+              <div class="catalogy-box__inner detail-block">
+                <div class="catalogy-box__content topBox">
+                  <div class="catalogy-box__info">
+                    <div class="catalogy-box__top">
+                      <div
+                        class="select-box select-box--noMax select-box--words with-icon"
+                        data-icon="sort"
+                        data-placeholder="Sorted"
+                      >
+                        <select id="select5">
+                          <option value="">Sorted</option>
+                          <option value="1">Popular</option>
+                          <option value="2">Price up</option>
+                        </select>
+                      </div>
+
+                      <a
+                        class="button button--bg-secondary-200 catalogy-box__map-btn"
+                        href="/map.html"
+                        aria-label="Перейти на страницу карты"
+                        title="Map"
+                      >
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#map-icon"></use>
+                          </svg>
+                        </span>
+
+                        <span class="p2 medium-font" style="line-height: 1"
+                          >Map</span
+                        >
+                      </a>
+
+                      <div class="checkbox-box">
+  <label class="check">
+    <div class="check__info">
+      <input
+        type="radio"
+        checked
+        name="grid"
+        data-check="list"
+        data-block="grid-check"
+      />
+
+      <div class="check__info-content">
+        <span class="icon">
+          <svg>
+            <use xlink:href="#rows-icon"></use>
+          </svg>
+        </span>
+
+        <span class="p2">List</span>
+      </div>
+    </div>
+  </label>
+
+  <label class="check">
+    <div class="check__info">
+      <input
+        type="radio"
+        name="grid"
+        data-check="tiles"
+        data-block="grid-check"
+      />
+
+      <div class="check__info-content">
+        <span class="icon">
+          <svg>
+            <use xlink:href="#table-icon"></use>
+          </svg>
+        </span>
+
+        <span class="p2">Tiles</span>
+      </div>
+    </div>
+  </label>
+
+  <label class="check">
+    <a
+      href="/map.html"
+      aria-label="Перейти на страницу карты"
+      title="Map"
+      class="check__info"
+    >
+      <div class="check__info-content">
+        <span class="icon">
+          <svg>
+            <use xlink:href="#map-icon"></use>
+          </svg>
+        </span>
+
+        <span class="p2">Map</span>
+      </div>
+    </a>
+  </label>
+</div>
+
+                    </div>
+
+                    <div class="catalogy-box__items">
+                      <div class="good-item">
+                        <div class="good-item__swiper-box">
+                          <div class="good-item__img-box">
+                            <div class="good-item__decor">
+                              <!-- prettier-ignore -->
+
+                              
+<div class="badge badge--blue">
+  <span class="icon icon--little">
+    <svg>
+      <use xlink:href="#shield-icon"></use>
+    </svg>
+  </span>
+
+  <div class="badge__content">
+    <p class="p4 medium-font">CompleteTrust</p>
+  </div>
+</div>
+ 
+<div class="badge">
+  <span class="icon icon--little">
+    <svg>
+      <use xlink:href="#checks-icon"></use>
+    </svg>
+  </span>
+</div>
+
+
+                            </div>
+
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <!-- prettier-ignore -->
+
+                                <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/one.webp 1x, /img/goods/one2x.webp 2x" />
+
+        <img
+          src="/img/goods/one.webp"
+          alt="фотография Apartment"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img
+          src="/img/goods/two.webp"
+          alt="фотография Apartment"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+
+                              </div>
+
+                              <div class="good-item__decors-img">
+                                <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <span class="icon">
+      <svg>
+        <use xlink:href="#arrow-line-icon"></use>
+      </svg>
+    </span>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <span class="icon">
+      <svg>
+        <use xlink:href="#arrow-line-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+                                <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__content">
+                          <header class="good-item__header">
+                            <div class="good-item__top-box">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font text-secondary-300">
+                                  Apartment
+                                </p>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/seller/seller.png 1x,
+                                      /img/seller/seller.png 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="фотография"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <p
+                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                            >
+                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                            </p>
+
+                            <div class="good-item__tags">
+                              <!-- prettier-ignore -->
+
+                              <div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">2 Bedrooms</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">2 Bathrooms</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">1 floor</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">Q2 2026</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">60.11 sq.m.</p>
+</div>
+                            </div>
+
+                            <ul class="list-icon">
+                              <!-- prettier-ignore -->
+                              <li class="list-icon__link">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#geo-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+                            </ul>
+                          </header>
+
+                          <footer class="good-item__footer">
+                            <div class="good-item__btns">
+                              <!-- prettier-ignore -->
+
+                              <button
+  aria-label="Написать сообщение на почту"
+  class="button button--bg-secondary-200  "
+>
+  <span class="icon @@classAddIcon">
+    <svg>
+      <use xlink:href="#email-icon"></use>
+    </svg>
+  </span>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+  
+                                  <button
+  aria-label="Добавить в избранное"
+  class="button button--favorite button--bg-gray-200 button--cub button--cub-md-add "
+>
+  <span class="icon ">
+    <svg>
+      <use xlink:href="#heart-icon"></use>
+    </svg>
+  </span>
+</button>
+
+  
+                                  <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add "
+>
+  <span class="icon ">
+    <svg>
+      <use xlink:href="#chart-icon"></use>
+    </svg>
+  </span>
+</button>
+
+                            </div>
+
+                            <div class="good-item__logo">
+                              <img
+                                src="/img/seller/seller.png"
+                                alt="логотип селера"
+                              />
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="good-item">
+                        <div class="good-item__swiper-box">
+                          <div class="good-item__img-box">
+                            <div class="good-item__decor">
+                              <!-- prettier-ignore -->
+
+                              
+<div class="badge badge--blue">
+  <span class="icon icon--little">
+    <svg>
+      <use xlink:href="#shield-icon"></use>
+    </svg>
+  </span>
+
+  <div class="badge__content">
+    <p class="p4 medium-font">CompleteTrust</p>
+  </div>
+</div>
+ 
+<div class="badge">
+  <span class="icon icon--little">
+    <svg>
+      <use xlink:href="#checks-icon"></use>
+    </svg>
+  </span>
+</div>
+
+
+                            </div>
+
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <!-- prettier-ignore -->
+
+                                <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/decor/one.webp 1x, /img/decor/one2x.webp 2x" />
+
+        <img
+          src="/img/decor/one.webp"
+          alt="фотография Apartment"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img
+          src="/img/goods/two.webp"
+          alt="фотография Apartment"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+
+                              </div>
+
+                              <div class="good-item__decors-img">
+                                <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <span class="icon">
+      <svg>
+        <use xlink:href="#arrow-line-icon"></use>
+      </svg>
+    </span>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <span class="icon">
+      <svg>
+        <use xlink:href="#arrow-line-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+                                <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__content">
+                          <header class="good-item__header">
+                            <div class="good-item__top-box">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font text-secondary-300">
+                                  Apartment
+                                </p>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/seller/seller.png 1x,
+                                      /img/seller/seller.png 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="фотография"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <p
+                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                            >
+                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                            </p>
+
+                            <div class="good-item__tags">
+                              <!-- prettier-ignore -->
+
+                              <div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">2 Bedrooms</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">2 Bathrooms</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">1 floor</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">Q2 2026</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">60.11 sq.m.</p>
+</div>
+                            </div>
+
+                            <ul class="list-icon">
+                              <!-- prettier-ignore -->
+                              <li class="list-icon__link">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#geo-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+
+                              <li class="list-icon__link">
+                                <span class="icon icon--big">
+                                  <svg>
+                                    <use xlink:href="#train-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="text-dots">
+                                  <p class="p3">
+                                    <span>Mall of the Emirates</span>
+
+                                    <span class="medium-font">700 m</span>
+                                  </p>
+
+                                  <p class="p3">
+                                    <span>Dubai Internet City</span>
+
+                                    <span class="medium-font">1 200 m</span>
+                                  </p>
+
+                                  <p class="p3">
+                                    <span>Al Khail (formerly Nakheel)</span>
+
+                                    <span class="medium-font">9 000 m</span>
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </header>
+
+                          <footer class="good-item__footer">
+                            <div class="good-item__btns">
+                              <!-- prettier-ignore -->
+
+                              <button
+  aria-label="Написать сообщение на почту"
+  class="button button--bg-secondary-200  "
+>
+  <span class="icon @@classAddIcon">
+    <svg>
+      <use xlink:href="#email-icon"></use>
+    </svg>
+  </span>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+  
+                                  <button
+  aria-label="Добавить в избранное"
+  class="button button--favorite button--bg-gray-200 button--cub button--cub-md-add "
+>
+  <span class="icon ">
+    <svg>
+      <use xlink:href="#heart-icon"></use>
+    </svg>
+  </span>
+</button>
+
+  
+                                  <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add "
+>
+  <span class="icon ">
+    <svg>
+      <use xlink:href="#chart-icon"></use>
+    </svg>
+  </span>
+</button>
+
+                            </div>
+
+                            <div class="good-item__logo">
+                              <img
+                                src="/img/seller/seller.png"
+                                alt="логотип селера"
+                              />
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="good-item">
+                        <div class="good-item__swiper-box">
+                          <div class="good-item__img-box">
+                            <div class="good-item__decor">
+                              <!-- prettier-ignore -->
+
+                              
+<div class="badge badge--blue">
+  <span class="icon icon--little">
+    <svg>
+      <use xlink:href="#shield-icon"></use>
+    </svg>
+  </span>
+
+  <div class="badge__content">
+    <p class="p4 medium-font">CompleteTrust</p>
+  </div>
+</div>
+ 
+<div class="badge">
+  <span class="icon icon--little">
+    <svg>
+      <use xlink:href="#checks-icon"></use>
+    </svg>
+  </span>
+</div>
+
+
+                            </div>
+
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <!-- prettier-ignore -->
+
+                                <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/decor/two.webp 1x, /img/decor/two2x.webp 2x" />
+
+        <img
+          src="/img/decor/two.webp"
+          alt="фотография Apartment"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img
+          src="/img/goods/two.webp"
+          alt="фотография Apartment"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</div>
+
+                              </div>
+
+                              <div class="good-item__decors-img">
+                                <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <span class="icon">
+      <svg>
+        <use xlink:href="#arrow-line-icon"></use>
+      </svg>
+    </span>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <span class="icon">
+      <svg>
+        <use xlink:href="#arrow-line-icon"></use>
+      </svg>
+    </span>
+  </button>
+</div>
+
+                                <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__content">
+                          <header class="good-item__header">
+                            <div class="good-item__top-box">
+                              <div class="good-item__top">
+                                <!-- <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p> -->
+
+                                <p class="p1 bold-font text-secondary-300">
+                                  Apartment
+                                </p>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/seller/seller.png 1x,
+                                      /img/seller/seller.png 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="фотография"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <p
+                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                            >
+                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                            </p>
+
+                            <div class="good-item__tags">
+                              <!-- prettier-ignore -->
+
+                              <div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">2 Bedrooms</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">2 Bathrooms</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">1 floor</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">Q2 2026</p>
+</div><div class="tag">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#bed-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">60.11 sq.m.</p>
+</div>
+                            </div>
+
+                            <ul class="list-icon">
+                              <!-- prettier-ignore -->
+                              <li class="list-icon__link">
+  <span class="icon icon--big">
+    <svg>
+      <use xlink:href="#geo-icon"></use>
+    </svg>
+  </span>
+
+  <p class="p2">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+                            </ul>
+                          </header>
+
+                          <footer class="good-item__footer">
+                            <div class="good-item__btns">
+                              <!-- prettier-ignore -->
+
+                              <button
+  aria-label="Написать сообщение на почту"
+  class="button button--bg-secondary-200  "
+>
+  <span class="icon @@classAddIcon">
+    <svg>
+      <use xlink:href="#email-icon"></use>
+    </svg>
+  </span>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+  
+                                  <button
+  aria-label="Добавить в избранное"
+  class="button button--favorite button--bg-gray-200 button--cub button--cub-md-add "
+>
+  <span class="icon ">
+    <svg>
+      <use xlink:href="#heart-icon"></use>
+    </svg>
+  </span>
+</button>
+
+  
+                                  <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add "
+>
+  <span class="icon ">
+    <svg>
+      <use xlink:href="#chart-icon"></use>
+    </svg>
+  </span>
+</button>
+
+                            </div>
+
+                            <div class="good-item__logo">
+                              <img
+                                src="/img/seller/seller.png"
+                                alt="логотип селера"
+                              />
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pagination">
+  <div class="pagination-box">
+    <button
+      class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+      type="button"
+      aria-label="Перейти к пред странице"
+    >
+      <span class="icon icon--little">
+        <svg>
+          <use xlink:href="#arrow-left-icon"></use>
+        </svg>
+      </span>
+    </button>
+
+    <ul class="pagination-box__list">
+      <li class="pagination-box__link">
+        <button
+          class="button button--bg-secondary-100 button--cub button--rounded-md"
+          aria-label="Перейти на страницу 1"
+        >
+          1
+        </button>
+      </li>
+
+      <li class="pagination-box__link">
+        <button
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          aria-label="Перейти на страницу 2"
+        >
+          2
+        </button>
+      </li>
+
+      <li class="pagination-box__link">
+        <button
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          aria-label="Перейти на страницу 3"
+        >
+          3
+        </button>
+      </li>
+
+      <li class="pagination-box__link">
+        <button
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          aria-label="Перейти на страницу 4"
+        >
+          4
+        </button>
+      </li>
+
+      <li class="pagination-box__link">
+        <button
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          aria-label="Перейти на страницу 5"
+        >
+          5
+        </button>
+      </li>
+
+      <li class="pagination-box__link">
+        <button
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          aria-label="Перейти на страницу 6"
+        >
+          6
+        </button>
+      </li>
+
+      <li class="pagination-box__link">
+        <button
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          aria-label="Перейти на страницу после 6"
+        >
+          ...
+        </button>
+      </li>
+
+      <li class="pagination-box__link">
+        <button
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          aria-label="Перейти на страницу 45"
+        >
+          45
+        </button>
+      </li>
+    </ul>
+
+    <button
+      class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+      type="button"
+      aria-label="Перейти к пред странице"
+      style="rotate: -180deg"
+    >
+      <span class="icon icon--little">
+        <svg>
+          <use xlink:href="#arrow-left-icon"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+
+  
+</div>
+
+
+                  <div class="empty">
+                    <div class="empty__content">
+                      <p class="h2">
+                        You haven't added any items to your favorites list yet.
+                      </p>
+
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Contact Seller"
+                        title="Contact Seller"
+                        class="button button--bg-primary-100 button--xl button--rounded-3xl"
+                      >
+                        <span class="p2 semibold-font"
+                          >Find Your Favorites</span
+                        >
+
+                        <span class="icon icon--big" style="rotate: -45deg">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+
+                    <div class="empty__img">
+                        <picture>
+                            <source srcset="/img/empty/one.webp 1x, /img/empty/one2x.webp 2x">
+                            <img src="/img/empty/one.webp" alt="фотография" loading='lazy'>
+                        </picture>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalogy-box__banners">
+                  <div class="banner-news">
+                    <header class="banner-news__header">
+                      <p class="h6">Subscribe to our newsletter</p>
+
+                      <div class="textbox">
+                        <p class="p2">
+                          You'll receive one email per week with exclusive
+                          offers and insights from our experts.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="banner-news__content">
+                      <div class="banner-news__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/banner-news/one.webp   1x,
+                              /img/banner-news/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/banner-news/one.webp"
+                            alt="фотография"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <footer class="banner-news__footer">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Contact Seller"
+                        title="Contact Seller"
+                        class="button button--bg-primary-100 button--lg button--rounded-3xl"
+                      >
+                        <span>Subscribe</span>
+
+                        <span class="icon icon--big">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
 
       
@@ -4032,23 +4935,9 @@
 <script src="/js/page.js" type="module"></script>
 
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/favorite.js" type="module"></script>
   </body>
 </html>
-
-<!-- 🐶 Собака  
-    🐱 Кошка  
-    🐭 Мышь  
-    🐹 Хомяк  
-    🐰 Кролик  
-    🦊 Лиса  
-    🐻 Медведь  
-    🐼 Панда  
-    🐨 Коала  
-    🦁 Лев  
-    🐮 Корова  
-    🐷 Свинья  
-    🐸 Лягушка  
-    🐵 Обезьяна  
-    🐔 Курица  
-    🦄 Единорог    
--->

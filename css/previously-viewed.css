@@ -1,0 +1,82 @@
+.catalogy-box__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 28px;
+}
+.catalogy-box__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+.catalogy-box__top .select-box {
+  max-width: 151px;
+  width: 100%;
+}
+.catalogy-box__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.catalogy-box__map-btn {
+  display: none;
+}
+.catalogy-box__banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: clamp(20px, 9.3922651934px + 2.2099447514vw, 32px);
+}
+.catalogy-box__banners .banner-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: sticky;
+  top: calc(var(--header-height, --calback-header-height) + 10px);
+}
+.catalogy-box[data-grid=tiles] .catalogy-box__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px 14px;
+}
+.catalogy-box[data-grid=tiles] .catalogy-box__items > *:not(.good-item) {
+  grid-column: 1/-1;
+}
+@media (max-width: 767px) {
+  .catalogy-box[data-grid=tiles] .catalogy__items-blocks, .catalogy-box[data-grid=list] .catalogy__items-blocks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .catalogy-box .checkbox-box {
+    display: none;
+  }
+  .catalogy-box__map-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+body.scrollBottom .catalogy-box__banners .banner-news {
+  position: sticky;
+  top: 10px;
+}

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Избранное", "links" :
+  ["./css/favorite.css", "./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail main--detail-big">
+        <div class="top-page">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Featured Properties</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="breadcrumbs__circle">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-circle-icon"></use>
+                      </svg>
+                    </div>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+
+              <h1 class="h2">Favorite Properties</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section
+            class="catalogy-box"
+            data-block="grid-relative"
+            data-grid="list"
+          >
+            <div class="container">
+              <div class="catalogy-box__inner detail-block">
+                <div class="catalogy-box__content topBox">
+                  <div class="catalogy-box__info">
+                    <div class="catalogy-box__top">
+                      <div
+                        class="select-box select-box--noMax select-box--words with-icon"
+                        data-icon="sort"
+                        data-placeholder="Sorted"
+                      >
+                        <select id="select5">
+                          <option value="">Sorted</option>
+                          <option value="1">Popular</option>
+                          <option value="2">Price up</option>
+                        </select>
+                      </div>
+
+                      <a
+                        class="button button--bg-secondary-200 catalogy-box__map-btn"
+                        href="/map.html"
+                        aria-label="Перейти на страницу карты"
+                        title="Map"
+                      >
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#map-icon"></use>
+                          </svg>
+                        </span>
+
+                        <span class="p2 medium-font" style="line-height: 1"
+                          >Map</span
+                        >
+                      </a>
+
+                      @@include('../components/checkboxs/checkbox-box-grid.html')
+                    </div>
+
+                    <div class="catalogy-box__items">
+                      <div class="good-item">
+                        <div class="good-item__swiper-box">
+                          <div class="good-item__img-box">
+                            <div class="good-item__decor">
+                              <!-- prettier-ignore -->
+
+                              @@include('../good-item/badges.html',
+                                  {"complete": true, "check" : true})
+                            </div>
+
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../good-item/slides-imgs.html', [
+                                    {"img": '/img/goods/one'},
+                                    {"img": '/img/goods/two'}
+                                    ])
+                              </div>
+
+                              <div class="good-item__decors-img">
+                                @@include('../swiper/arrows-absolute.html')
+                                @@include('../swiper/swiper-pagination-absolute.html')
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__content">
+                          <header class="good-item__header">
+                            <div class="good-item__top-box">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font text-secondary-300">
+                                  Apartment
+                                </p>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/seller/seller.png 1x,
+                                      /img/seller/seller.png 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="фотография"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <p
+                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                            >
+                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                            </p>
+
+                            <div class="good-item__tags">
+                              <!-- prettier-ignore -->
+
+                              @@loop('../components/tag.html', [ 
+                                  { "text": "2 Bedrooms", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "2 Bathrooms", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "1 floor", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "Q2 2026", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "60.11 sq.m.", "icon": "#bed-icon", "classAddIcon" : "icon--big" } ])
+                            </div>
+
+                            <ul class="list-icon">
+                              <!-- prettier-ignore -->
+                              @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                            </ul>
+                          </header>
+
+                          <footer class="good-item__footer">
+                            <div class="good-item__btns">
+                              <!-- prettier-ignore -->
+
+                              @@include('../btns/contact-btn.html', {"text" :
+                                  "Contact Seller", "classAddText" : "p3 medium-font"})
+  
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                            </div>
+
+                            <div class="good-item__logo">
+                              <img
+                                src="/img/seller/seller.png"
+                                alt="логотип селера"
+                              />
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="good-item">
+                        <div class="good-item__swiper-box">
+                          <div class="good-item__img-box">
+                            <div class="good-item__decor">
+                              <!-- prettier-ignore -->
+
+                              @@include('../good-item/badges.html',
+                                  {"complete": true, "check" : true})
+                            </div>
+
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../good-item/slides-imgs.html', [
+                                    {"img": '/img/decor/one'},
+                                    {"img": '/img/goods/two'}
+                                    ])
+                              </div>
+
+                              <div class="good-item__decors-img">
+                                @@include('../swiper/arrows-absolute.html')
+                                @@include('../swiper/swiper-pagination-absolute.html')
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__content">
+                          <header class="good-item__header">
+                            <div class="good-item__top-box">
+                              <div class="good-item__top">
+                                <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p>
+
+                                <p class="p1 bold-font text-secondary-300">
+                                  Apartment
+                                </p>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/seller/seller.png 1x,
+                                      /img/seller/seller.png 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="фотография"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <p
+                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                            >
+                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                            </p>
+
+                            <div class="good-item__tags">
+                              <!-- prettier-ignore -->
+
+                              @@loop('../components/tag.html', [ 
+                                  { "text": "2 Bedrooms", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "2 Bathrooms", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "1 floor", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "Q2 2026", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "60.11 sq.m.", "icon": "#bed-icon", "classAddIcon" : "icon--big" } ])
+                            </div>
+
+                            <ul class="list-icon">
+                              <!-- prettier-ignore -->
+                              @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+
+                              <li class="list-icon__link">
+                                <span class="icon icon--big">
+                                  <svg>
+                                    <use xlink:href="#train-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="text-dots">
+                                  <p class="p3">
+                                    <span>Mall of the Emirates</span>
+
+                                    <span class="medium-font">700 m</span>
+                                  </p>
+
+                                  <p class="p3">
+                                    <span>Dubai Internet City</span>
+
+                                    <span class="medium-font">1 200 m</span>
+                                  </p>
+
+                                  <p class="p3">
+                                    <span>Al Khail (formerly Nakheel)</span>
+
+                                    <span class="medium-font">9 000 m</span>
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
+                          </header>
+
+                          <footer class="good-item__footer">
+                            <div class="good-item__btns">
+                              <!-- prettier-ignore -->
+
+                              @@include('../btns/contact-btn.html', {"text" :
+                                  "Contact Seller", "classAddText" : "p3 medium-font"})
+  
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                            </div>
+
+                            <div class="good-item__logo">
+                              <img
+                                src="/img/seller/seller.png"
+                                alt="логотип селера"
+                              />
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="good-item">
+                        <div class="good-item__swiper-box">
+                          <div class="good-item__img-box">
+                            <div class="good-item__decor">
+                              <!-- prettier-ignore -->
+
+                              @@include('../good-item/badges.html',
+                                  {"complete": true, "check" : true})
+                            </div>
+
+                            <div class="swiper swiper--good-img">
+                              <div class="swiper-wrapper">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../good-item/slides-imgs.html', [
+                                    {"img": '/img/decor/two'},
+                                    {"img": '/img/goods/two'}
+                                    ])
+                              </div>
+
+                              <div class="good-item__decors-img">
+                                @@include('../swiper/arrows-absolute.html')
+                                @@include('../swiper/swiper-pagination-absolute.html')
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="good-item__content">
+                          <header class="good-item__header">
+                            <div class="good-item__top-box">
+                              <div class="good-item__top">
+                                <!-- <p class="h5 semibold-font good-item__title">
+                                  761,000
+
+                                  <span class="text-uppercase p1">AED</span>
+                                </p> -->
+
+                                <p class="p1 bold-font text-secondary-300">
+                                  Apartment
+                                </p>
+                              </div>
+
+                              <div class="good-item__logo">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/seller/seller.png 1x,
+                                      /img/seller/seller.png 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="фотография"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <p
+                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                            >
+                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                            </p>
+
+                            <div class="good-item__tags">
+                              <!-- prettier-ignore -->
+
+                              @@loop('../components/tag.html', [ 
+                                  { "text": "2 Bedrooms", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "2 Bathrooms", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "1 floor", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "Q2 2026", "icon": "#bed-icon", "classAddIcon" : "icon--big" },
+                                  { "text": "60.11 sq.m.", "icon": "#bed-icon", "classAddIcon" : "icon--big" } ])
+                            </div>
+
+                            <ul class="list-icon">
+                              <!-- prettier-ignore -->
+                              @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                            </ul>
+                          </header>
+
+                          <footer class="good-item__footer">
+                            <div class="good-item__btns">
+                              <!-- prettier-ignore -->
+
+                              @@include('../btns/contact-btn.html', {"text" :
+                                  "Contact Seller", "classAddText" : "p3 medium-font"})
+  
+                                  @@include('../btns/favorite-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+  
+                                  @@include('../btns/comparison-btn.html', {"classAdd" :
+                                  "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                            </div>
+
+                            <div class="good-item__logo">
+                              <img
+                                src="/img/seller/seller.png"
+                                alt="логотип селера"
+                              />
+                            </div>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  @@include('../modules/pagination.html', {"details": "false"})
+
+                  <div class="empty">
+                    <div class="empty__content">
+                      <p class="h2">
+                        You haven't added any items to your favorites list yet.
+                      </p>
+
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Contact Seller"
+                        title="Contact Seller"
+                        class="button button--bg-primary-100 button--xl button--rounded-3xl"
+                      >
+                        <span class="p2 semibold-font"
+                          >Find Your Favorites</span
+                        >
+
+                        <span class="icon icon--big" style="rotate: -45deg">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </div>
+
+                    <div class="empty__img">
+                        <picture>
+                            <source srcset="/img/empty/one.webp 1x, /img/empty/one2x.webp 2x">
+                            <img src="/img/empty/one.webp" alt="фотография" loading='lazy'>
+                        </picture>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="catalogy-box__banners">
+                  <div class="banner-news">
+                    <header class="banner-news__header">
+                      <p class="h6">Subscribe to our newsletter</p>
+
+                      <div class="textbox">
+                        <p class="p2">
+                          You'll receive one email per week with exclusive
+                          offers and insights from our experts.
+                        </p>
+                      </div>
+                    </header>
+
+                    <div class="banner-news__content">
+                      <div class="banner-news__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/banner-news/one.webp   1x,
+                              /img/banner-news/one2x.webp 2x
+                            "
+                          />
+                          <img
+                            src="/img/banner-news/one.webp"
+                            alt="фотография"
+                          />
+                        </picture>
+                      </div>
+                    </div>
+
+                    <footer class="banner-news__footer">
+                      <a
+                        href="#"
+                        aria-label="Перейти на страницу Contact Seller"
+                        title="Contact Seller"
+                        class="button button--bg-primary-100 button--lg button--rounded-3xl"
+                      >
+                        <span>Subscribe</span>
+
+                        <span class="icon icon--big">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/favorite.js" type="module"></script>
+  </body>
+</html>

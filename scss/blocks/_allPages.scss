@@ -14,13 +14,14 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 11px;
+    align-items: flex-start;
   }
 
   &__link {
     counter-increment: list;
     font-size: calculate-clamp(16px, 30px);
-    font-weight: 700;
+    font-weight: var(--weight-font-xl);
     line-height: line-height(16px, 16px);
     display: flex;
     flex-direction: column;
@@ -37,16 +38,16 @@
     flex-direction: column;
     gap: 10px;
     font-size: calculate-clamp(16px, 20px);
-    font-weight: 400;
+    font-weight: var(--weight-font-xl);
     text-transform: uppercase;
   }
 
   &__review {
     font-size: calculate-clamp(16px, 30px);
-    font-weight: 500;
+    font-weight: var(--weight-font-main);
 
     a {
-      font-weight: 700;
+      font-weight: var(--weight-font-xl);
     }
   }
 }

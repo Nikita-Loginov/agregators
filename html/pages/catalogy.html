@@ -337,51 +337,24 @@
                           </select>
                         </div>
 
-                        <div class="checkbox-box">
-                          <label class="check">
-                            <div class="check__info">
-                              <input
-                                type="radio"
-                                checked
-                                name="grid"
-                                data-check="list"
-                                data-block="grid-check"
-                              />
+                        <a
+                          class="button button--bg-secondary-200 catalogy__map-btn"
+                          href="/map.html"
+                          aria-label="Перейти на страницу карты"
+                          title="Map"
+                        >
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#map-icon"></use>
+                            </svg>
+                          </span>
 
-                              <div class="check__info-content">
-                                <span class="p2">List</span>
-                              </div>
-                            </div>
-                          </label>
+                          <span class="p2 medium-font" style="line-height: 1"
+                            >Map</span
+                          >
+                        </a>
 
-                          <label class="check">
-                            <div class="check__info">
-                              <input
-                                type="radio"
-                                name="grid"
-                                data-check="tiles"
-                                data-block="grid-check"
-                              />
-
-                              <div class="check__info-content">
-                                <span class="p2">Tiles</span>
-                              </div>
-                            </div>
-                          </label>
-
-                          <label class="check">
-                            <a
-                              href="/map.html"
-                              aria-label="Перейти на страницу карты"
-                              title="Map"
-                              class="check__info"
-                            >
-                              <div class="check__info-content">
-                                <span class="p2">Map</span>
-                              </div>
-                            </a>
-                          </label>
-                        </div>
+                        @@include('../components/checkboxs/checkbox-box-grid.html')
                       </div>
 
                       <div class="catalogy__items-blocks">

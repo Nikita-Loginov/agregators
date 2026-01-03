@@ -126,7 +126,10 @@
     .banner-news {
       display: flex;
       position: sticky;
-      top: calc(var(--header-height, --calback-header-height) + var(--filter-height) + 10px);
+      top: calc(
+        var(--header-height, --calback-header-height) + var(--filter-height) +
+          10px
+      );
     }
   }
 
@@ -148,6 +151,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+  }
+
+  &__map-btn {
+    display: none;
   }
 
   // &[data-grid="map"] {
@@ -217,11 +224,11 @@
     }
 
     .checkbox-box {
-      .check {
-        &:has(input[data-check="list"]) {
-          display: none;
-        }
-      }
+      display: none;
+    }
+
+    &__map-btn {
+      display: flex;
     }
 
     &__item-head {
@@ -233,8 +240,6 @@
       width: 100%;
     }
   }
-
-
 
   @media (max-width: 375px) {
     .banner-news {
@@ -271,7 +276,7 @@
     display: none;
   }
 
-  @media(max-width:600px) {
+  @media (max-width: 600px) {
     &__market {
       display: none;
     }

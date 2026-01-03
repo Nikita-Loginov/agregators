@@ -10,6 +10,7 @@
         text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor,
           0 0.1px 0 currentColor, 0 -0.1px 0 currentColor;
         background-color: var(--secondary-color-200);
+        color: var(--secondary-color-300);
       }
     }
 
@@ -23,6 +24,7 @@
       border-radius: var(--radius-base);
       transition: all 0.5s;
       text-shadow: none;
+      
     }
   }
 

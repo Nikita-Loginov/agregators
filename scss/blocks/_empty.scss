@@ -1,0 +1,43 @@
+.empty {
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  position: relative;
+  background-color: var(--secondary-color-300);
+  padding: 28px 32px;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__content {
+    z-index: 2;
+    position: relative;
+    max-width: 530px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    color: var(--white-color);
+  }
+
+  &__img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    max-width: 400px;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      mix-blend-mode: soft-light;
+      opacity: 0.4;
+    }
+  }
+}
