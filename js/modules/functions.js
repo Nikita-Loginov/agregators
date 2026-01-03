@@ -113,3 +113,15 @@ export const getHeightFilter = () => {
 
   return height;
 };
+
+export const getArrowSwiper = (box) => {
+  if (!box) return;
+
+  const arrowPrev = box.querySelector(".arrow-swiper.prev");
+  const arrowNext = box.querySelector(".arrow-swiper.next");
+
+  return {
+    arrowPrev,
+    arrowNext,
+  };
+};

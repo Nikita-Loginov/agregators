@@ -1,0 +1,17 @@
+.links-section {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px 20px;
+  }
+
+  &__link {
+    width: fit-content;
+  }
+}

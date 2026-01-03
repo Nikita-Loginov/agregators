@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Планировка", "links" :
+  ["./css/object.css", "./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
+  <body class="white-page">
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--paddingLastSmall">
+        <section class="object">
+          <div class="container">
+            <div class="object__inner">
+              <div class="object-top">
+                <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__link">
+                      <a
+                        href="#"
+                        aria-label="Вернуться на Home"
+                        title="Home"
+                        class="breadcrumbs__item link active active-noColor active-line"
+                        >Home</a
+                      >
+                    </li>
+
+                    <li class="breadcrumbs__link">
+                      <a
+                        href="#"
+                        aria-label="Вернуться на Real estate in UAE"
+                        title="Real estate in UAE"
+                        class="breadcrumbs__item link active active-noColor active-line"
+                        >Real estate in UAE</a
+                      >
+                    </li>
+
+                    <li class="breadcrumbs__link">
+                      <span class="breadcrumbs__item"
+                        >2 bedrooms Apartment in Dubai, UAE, No.093490</span
+                      >
+                    </li>
+                  </ul>
+
+                  <a
+                    href="#"
+                    aria-label="Вернуться на Home"
+                    title="Home"
+                    class="breadcrumbs__media"
+                  >
+                    <span class="breadcrumbs__circle">
+                      <div class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-circle-icon"></use>
+                        </svg>
+                      </div>
+                    </span>
+
+                    <span>Home</span>
+                  </a>
+                </div>
+
+                <div class="object-top__info">
+                  <div class="floor-plan floor-plan--big">
+                    <div class="floor-plan__content">
+                      <div
+                        class="floor-plan__img-box tabs-box"
+                        data-tab-category="floor"
+                      >
+                        <div
+                          class="floor-plan__img tab-item active"
+                          data-block-tab="2d-floor"
+                          data-block-category="floor"
+                        >
+                          <picture>
+                            <source
+                              srcset="
+                                /img/floor/three.webp   1x,
+                                /img/floor/three2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/floor/three.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+
+                        <div
+                          class="floor-plan__img tab-item"
+                          data-block-tab="3d-floor"
+                          data-block-category="floor"
+                        >
+                          <picture>
+                            <source
+                              srcset="
+                                /img/floor/two.webp   1x,
+                                /img/floor/two2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/floor/two.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+
+                        <div class="floor-plan__decors">
+                          @@include('../components/checkboxs/checkbox-box-floor.html',
+                          {"classAdd" : "tab-btns"})
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="object-bottom">
+                <div class="object-bottom__content">
+                  <div class="object-bottom__top">
+                    <div class="object-bottom__top-item">
+                      <div class="object-bottom__top-line">
+                        <div class="price">
+                          <div class="price__top price__top--end">
+                            <p class="h2">
+                              1,102,500
+
+                              <span class="text-uppercase h4">AED</span>
+                            </p>
+
+                            <div class="price__content">
+                              <p class="p3">11,529 AED / sqm</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="object-bottom__top-item">
+                      <div class="topBox topBox--small">
+                        <h1 class="h2 text-secondary-300">
+                          Layout Type B 1 bedroom in The Bristol Luxury in Dubai
+                          Marina, UAE
+                        </h1>
+
+                        <div class="object-bottom__badges">
+                          <div
+                            class="badge-decor badge-decor--xl badge-decor--gray-100"
+                          >
+                            <span class="icon icon--big">
+                              <svg>
+                                <use xlink:href="#bed-icon"></use>
+                              </svg>
+                            </span>
+
+                            <div class="badge-decor__content">
+                              <p class="p2 medium-font">2</p>
+
+                              <p class="p2">Bedrooms</p>
+                            </div>
+                          </div>
+
+                          <div
+                            class="badge-decor badge-decor--xl badge-decor--gray-100"
+                          >
+                            <span class="icon icon--big">
+                              <svg>
+                                <use xlink:href="#bed-icon"></use>
+                              </svg>
+                            </span>
+
+                            <div class="badge-decor__content">
+                              <p class="p2 medium-font">2</p>
+
+                              <p class="p2">Bathrooms</p>
+                            </div>
+                          </div>
+
+                          <div
+                            class="badge-decor badge-decor--xl badge-decor--gray-100"
+                          >
+                            <span class="icon icon--big">
+                              <svg>
+                                <use xlink:href="#bed-icon"></use>
+                              </svg>
+                            </span>
+
+                            <div class="badge-decor__content">
+                              <p class="p2 medium-font">60.11 sq.m.</p>
+
+                              <p class="p2">Apartment area</p>
+                            </div>
+                          </div>
+
+                          <div
+                            class="badge-decor badge-decor--xl badge-decor--gray-100"
+                          >
+                            <span class="icon icon--big">
+                              <svg>
+                                <use xlink:href="#bed-icon"></use>
+                              </svg>
+                            </span>
+
+                            <div class="badge-decor__content">
+                              <p class="p2 medium-font">Q2 2026</p>
+
+                              <p class="p2">Completion date</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="object-bottom__top-footer">
+                      <div class="object-bottom__top-items">
+                        <div class="guide-item">
+                          <div class="guide-item__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/guide/one.webp   1x,
+                                  /img/guide/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/guide/one.webp"
+                                alt="фотография"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="guide-item__content">
+                            <p class="p1 medium-font text-secondary-300">
+                              Mohammed Bin Rashid City
+                            </p>
+
+                            <p class="p2 text-dark-500">
+                              223 properties from 560,00 AED
+                            </p>
+                          </div>
+                        </div>
+
+                        <div class="guide-item">
+                          <div class="guide-item__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/guide/one.webp   1x,
+                                  /img/guide/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/guide/one.webp"
+                                alt="фотография"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="guide-item__content">
+                            <p class="p1 medium-font text-secondary-300">
+                              Jumeirah Residences Emirates Towers
+                            </p>
+
+                            <p class="p2 text-dark-500">
+                              14 apartments from 560,00 AED
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="object-bottom__item" data-block="more-relative">
+                    <h2 class="h4">Parameters</h2>
+
+                    <div class="object-bottom__footer">
+                      <div
+                        class="list-info more-block more-block--two"
+                        data-block="more-items"
+                        data-max="2"
+                      >
+                        <ul class="list-info__box">
+                          <li class="list-info__link">
+                            <span class="list-info__key">
+                              <p class="p2">Layout</p>
+                            </span>
+
+                            <div class="list-info__mean">
+                              <p class="p2 medium-font">ST-08b</p>
+                            </div>
+                          </li>
+
+                          <li class="list-info__link">
+                            <span class="list-info__key">
+                              <p class="p2">Type</p>
+                            </span>
+
+                            <div class="list-info__mean">
+                              <p class="p2 medium-font">Apartment</p>
+                            </div>
+                          </li>
+
+                          <li class="list-info__link">
+                            <span class="list-info__key">
+                              <p class="p2">To sea</p>
+                            </span>
+
+                            <div class="list-info__mean">
+                              <p class="p2 medium-font">900 m</p>
+                            </div>
+                          </li>
+
+                          <li class="list-info__link">
+                            <span class="list-info__key">
+                              <p class="p2">To downtown</p>
+                            </span>
+
+                            <div class="list-info__mean">
+                              <p class="p2 medium-font">450 m</p>
+                            </div>
+                          </li>
+                        </ul>
+
+                        <ul class="list-info__box">
+                          <li class="list-info__link">
+                            <span class="list-info__key">
+                              <p class="p2">To airport</p>
+                            </span>
+
+                            <div class="list-info__mean">
+                              <p class="p2 medium-font">3,200 m</p>
+                            </div>
+                          </li>
+
+                          <li class="list-info__link">
+                            <span class="list-info__key">
+                              <p class="p2">Completion</p>
+                            </span>
+
+                            <div class="list-info__mean">
+                              <p class="p2 medium-font">Q2 2026</p>
+                            </div>
+                          </li>
+
+                          <li class="list-info__link">
+                            <span class="list-info__key">
+                              <p class="p2">Parking lots</p>
+                            </span>
+
+                            <div class="list-info__mean">
+                              <p class="p2 medium-font">360</p>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <div
+                        class="object-bottom__item-content"
+                        data-block="more-footer"
+                      >
+                        <button
+                          class="btn-decor"
+                          data-block="more-btn"
+                          aria-label="Посмотреть больше"
+                          type="button"
+                        >
+                          <p class="p3 medium-font" data-block="more-btn-text">
+                            More
+                          </p>
+
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#arrow-line-down-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="object-bottom__item">
+                    <h2 class="h4">Features</h2>
+
+                    <div class="object-bottom__items">
+                      <div class="card-simple">
+                        <div class="card-simple__header">
+                          <div class="card-simple__icon">
+                            <svg>
+                              <use xlink:href="#swimming-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="card-simple__content">
+                          <p class="p2">Swimming Pool</p>
+                        </div>
+                      </div>
+
+                      <div class="card-simple">
+                        <div class="card-simple__header">
+                          <div class="card-simple__icon">
+                            <svg>
+                              <use xlink:href="#terrace-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="card-simple__content">
+                          <p class="p2">Balcony or Terrace</p>
+                        </div>
+                      </div>
+
+                      <div class="card-simple">
+                        <div class="card-simple__header">
+                          <div class="card-simple__icon">
+                            <svg>
+                              <use xlink:href="#area-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="card-simple__content">
+                          <p class="p2">Barbeque Area</p>
+                        </div>
+                      </div>
+
+                      <div class="card-simple">
+                        <div class="card-simple__header">
+                          <div class="card-simple__icon">
+                            <svg>
+                              <use xlink:href="#swimming-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="card-simple__content">
+                          <p class="p2">Swimming Pool</p>
+                        </div>
+                      </div>
+
+                      <div class="card-simple">
+                        <div class="card-simple__header">
+                          <div class="card-simple__icon">
+                            <svg>
+                              <use xlink:href="#terrace-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="card-simple__content">
+                          <p class="p2">Balcony or Terrace</p>
+                        </div>
+                      </div>
+
+                      <div class="card-simple">
+                        <div class="card-simple__header">
+                          <div class="card-simple__icon">
+                            <svg>
+                              <use xlink:href="#area-icon"></use>
+                            </svg>
+                          </div>
+                        </div>
+
+                        <div class="card-simple__content">
+                          <p class="p2">Barbeque Area</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button
+                      class="button button--bg-secondary-200 button--rounded-2xl modal-open"
+                      data-modal="featuresModal"
+                    >
+                      <p class="p2 medium-font">See all</p>
+
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#arrow-right-line-icon"></use>
+                        </svg>
+                      </span>
+                    </button>
+                  </div>
+
+                  <div class="object-bottom__item">
+                    <h2 class="h4">Properties in SkyHills Astra</h2>
+
+                    <div class="object-bottom__property">
+                      <div
+                        class="object-bottom__property-items object-bottom__property-items--three"
+                      >
+                        <div
+                          class="select-box select-box--words select-box--noMax"
+                          data-placeholder="Floor"
+                        >
+                          <select id="select101">
+                            <option value="">Floor</option>
+                            <option value="1">some info 1</option>
+                            <option value="2">some info 2</option>
+                            <option value="3">some info 3</option>
+                            <option value="4">some info 4</option>
+                          </select>
+                        </div>
+
+                        <div class="dropdown dropdown--price input-box">
+                          <button
+                            class="input-box__info dropdown__btn"
+                            type="button"
+                          >
+                            <div class="check">
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#check-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                            <p class="p2">Price</p>
+
+                            <span class="icon arrow">
+                              <svg>
+                                <use xlink:href="#arrow-bottom-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+
+                          <div class="dropdown__content popup price-popup left">
+                            <div class="price-popup__content">
+                              <p class="p2 semibold-font">Price range, AED</p>
+
+                              <div class="price-popup__items">
+                                <div class="input-box">
+                                  <label class="input-box__content">
+                                    <div class="input-box__info">
+                                      <div class="decor p2">Min</div>
+                                      <input
+                                        placeholder="0"
+                                        type="number"
+                                        name="price_min"
+                                        min="0"
+                                        max="10000"
+                                        data-type="price_min"
+                                      />
+                                    </div>
+                                  </label>
+                                </div>
+                                <div class="input-box">
+                                  <label class="input-box__content">
+                                    <div class="input-box__info">
+                                      <div class="decor p2">Max</div>
+                                      <input
+                                        placeholder="∞"
+                                        type="number"
+                                        name="price_max"
+                                        min="0"
+                                        max="10000"
+                                        data-type="price_max"
+                                      />
+                                    </div>
+                                  </label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <button
+                          type="button"
+                          class="button button--lg button--bg-primary-200 button--rounded-md"
+                        >
+                          <p class="p2 medium-font">Search</p>
+
+                          <span class="icon icon--big">
+                            <svg>
+                              <use xlink:href="#search-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+                      </div>
+
+                      <div
+                        class="object-bottom__property-swiper-box swiper-box swiper-box--pagination-bottom"
+                      >
+                        <div class="swiper swiper--property">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div
+                                class="good-item good-item--column good-item--noShadow"
+                              >
+                                <div class="good-item__swiper-box">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__decor">
+                                      <!-- prettier-ignore -->
+
+                                      @@include('../good-item/badges.html',
+                                      {"complete": true, "check" : true})
+                                    </div>
+
+                                    <div class="swiper swiper--good-img">
+                                      <div class="swiper-wrapper">
+                                        <!-- prettier-ignore -->
+
+                                        @@loop('../good-item/slides-imgs.html', [
+                                        {"img": '/img/goods/one'},
+                                        {"img": '/img/goods/two'}
+                                        ])
+                                      </div>
+
+                                      <div class="good-item__decors-img">
+                                        @@include('../swiper/arrows-absolute.html')
+                                        @@include('../swiper/swiper-pagination-absolute.html')
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__content">
+                                  <header class="good-item__header">
+                                    <div class="good-item__top-box">
+                                      <div class="good-item__top">
+                                        <p
+                                          class="h5 bold-font good-item__title"
+                                        >
+                                          761,000
+
+                                          <span class="text-uppercase p2"
+                                            >AED</span
+                                          >
+                                        </p>
+
+                                        <p
+                                          class="p1 bold-font text-secondary-300"
+                                        >
+                                          Apartment
+                                        </p>
+                                      </div>
+
+                                      <div class="good-item__logo">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/seller/seller.png 1x,
+                                              /img/seller/seller.png 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/seller/seller.png"
+                                            alt="фотография"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+
+                                    <p
+                                      class="p3 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                    >
+                                      Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                    </p>
+
+                                    <div class="good-item__tags">
+                                      <!-- prettier-ignore -->
+
+                                      @@loop('../components/tag.html', [ 
+                                      { "text": "2 Bedrooms", "icon": "#bed-icon" },
+                                      { "text": "2 Bathrooms", "icon": "#bed-icon" },
+                                      { "text": "1 floor", "icon": "#bed-icon" },
+                                      { "text": "Q2 2026", "icon": "#bed-icon" } ])
+                                    </div>
+
+                                    <ul class="list-icon">
+                                      <!-- prettier-ignore -->
+                                      @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "" }])
+                                    </ul>
+                                  </header>
+
+                                  <footer class="good-item__footer">
+                                    <div class="good-item__btns">
+                                      <!-- prettier-ignore -->
+
+                                      @@include('../btns/contact-btn.html', {"text" :
+                                      "Contact Seller", "classAddText" : "p3 medium-font"})
+      
+                                      @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+      
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                                    </div>
+
+                                    <div class="good-item__logo">
+                                      <img
+                                        src="/img/seller/seller.png"
+                                        alt="логотип селера"
+                                      />
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div
+                                class="good-item good-item--column good-item--noShadow"
+                              >
+                                <div class="good-item__swiper-box">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__decor">
+                                      <!-- prettier-ignore -->
+
+                                      @@include('../good-item/badges.html',
+                                      {"complete": true, "check" : true})
+                                    </div>
+
+                                    <div class="swiper swiper--good-img">
+                                      <div class="swiper-wrapper">
+                                        <!-- prettier-ignore -->
+
+                                        @@loop('../good-item/slides-imgs.html', [
+                                        {"img": '/img/goods/one'},
+                                        {"img": '/img/goods/two'}
+                                        ])
+                                      </div>
+
+                                      <div class="good-item__decors-img">
+                                        @@include('../swiper/arrows-absolute.html')
+                                        @@include('../swiper/swiper-pagination-absolute.html')
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__content">
+                                  <header class="good-item__header">
+                                    <div class="good-item__top-box">
+                                      <div class="good-item__top">
+                                        <p
+                                          class="h5 bold-font good-item__title"
+                                        >
+                                          761,000
+
+                                          <span class="text-uppercase p2"
+                                            >AED</span
+                                          >
+                                        </p>
+
+                                        <p
+                                          class="p1 bold-font text-secondary-300"
+                                        >
+                                          Apartment
+                                        </p>
+                                      </div>
+
+                                      <div class="good-item__logo">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/seller/seller.png 1x,
+                                              /img/seller/seller.png 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/seller/seller.png"
+                                            alt="фотография"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+
+                                    <p
+                                      class="p3 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                    >
+                                      Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                    </p>
+
+                                    <div class="good-item__tags">
+                                      <!-- prettier-ignore -->
+
+                                      @@loop('../components/tag.html', [ 
+                                      { "text": "2 Bedrooms", "icon": "#bed-icon" },
+                                      { "text": "2 Bathrooms", "icon": "#bed-icon" },
+                                      { "text": "1 floor", "icon": "#bed-icon" },
+                                      { "text": "Q2 2026", "icon": "#bed-icon" } ])
+                                    </div>
+
+                                    <ul class="list-icon">
+                                      <!-- prettier-ignore -->
+                                      @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "" }])
+                                    </ul>
+                                  </header>
+
+                                  <footer class="good-item__footer">
+                                    <div class="good-item__btns">
+                                      <!-- prettier-ignore -->
+
+                                      @@include('../btns/contact-btn.html', {"text" :
+                                      "Contact Seller", "classAddText" : "p3 medium-font"})
+      
+                                      @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+      
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                                    </div>
+
+                                    <div class="good-item__logo">
+                                      <img
+                                        src="/img/seller/seller.png"
+                                        alt="логотип селера"
+                                      />
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div
+                                class="good-item good-item--column good-item--noShadow"
+                              >
+                                <div class="good-item__swiper-box">
+                                  <div class="good-item__img-box">
+                                    <div class="good-item__decor">
+                                      <!-- prettier-ignore -->
+
+                                      @@include('../good-item/badges.html',
+                                      {"complete": true, "check" : true})
+                                    </div>
+
+                                    <div class="swiper swiper--good-img">
+                                      <div class="swiper-wrapper">
+                                        <!-- prettier-ignore -->
+
+                                        @@loop('../good-item/slides-imgs.html', [
+                                        {"img": '/img/goods/one'},
+                                        {"img": '/img/goods/two'}
+                                        ])
+                                      </div>
+
+                                      <div class="good-item__decors-img">
+                                        @@include('../swiper/arrows-absolute.html')
+                                        @@include('../swiper/swiper-pagination-absolute.html')
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__content">
+                                  <header class="good-item__header">
+                                    <div class="good-item__top-box">
+                                      <div class="good-item__top">
+                                        <p
+                                          class="h5 bold-font good-item__title"
+                                        >
+                                          761,000
+
+                                          <span class="text-uppercase p2"
+                                            >AED</span
+                                          >
+                                        </p>
+
+                                        <p
+                                          class="p1 bold-font text-secondary-300"
+                                        >
+                                          Apartment
+                                        </p>
+                                      </div>
+
+                                      <div class="good-item__logo">
+                                        <picture>
+                                          <source
+                                            srcset="
+                                              /img/seller/seller.png 1x,
+                                              /img/seller/seller.png 2x
+                                            "
+                                          />
+                                          <img
+                                            src="/img/seller/seller.png"
+                                            alt="фотография"
+                                            loading="lazy"
+                                          />
+                                        </picture>
+                                      </div>
+                                    </div>
+
+                                    <p
+                                      class="p3 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                    >
+                                      Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                    </p>
+
+                                    <div class="good-item__tags">
+                                      <!-- prettier-ignore -->
+
+                                      @@loop('../components/tag.html', [ 
+                                      { "text": "2 Bedrooms", "icon": "#bed-icon" },
+                                      { "text": "2 Bathrooms", "icon": "#bed-icon" },
+                                      { "text": "1 floor", "icon": "#bed-icon" },
+                                      { "text": "Q2 2026", "icon": "#bed-icon" } ])
+                                    </div>
+
+                                    <ul class="list-icon">
+                                      <!-- prettier-ignore -->
+                                      @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "" }])
+                                    </ul>
+                                  </header>
+
+                                  <footer class="good-item__footer">
+                                    <div class="good-item__btns">
+                                      <!-- prettier-ignore -->
+
+                                      @@include('../btns/contact-btn.html', {"text" :
+                                      "Contact Seller", "classAddText" : "p3 medium-font"})
+      
+                                      @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+      
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                                    </div>
+
+                                    <div class="good-item__logo">
+                                      <img
+                                        src="/img/seller/seller.png"
+                                        alt="логотип селера"
+                                      />
+                                    </div>
+                                  </footer>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="object-bottom__banners">
+                  <aside class="contact-aside">
+                    <div class="contact-aside__items">
+                      <div class="share list-popup relative relative-top">
+                        <div class="share__btns">
+                          <button class="button button--bg-gray-200 button--lg">
+                            <span class="icon icon--big">
+                              <svg>
+                                <use xlink:href="#share-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+
+                        @@include('../modules/share-popup.html')
+                      </div>
+
+                      <button
+                        aria-label="Добавить в избранное"
+                        class="button button--bg-gray-200 button--lg button--favorite"
+                      >
+                        <span class="icon icon--big">
+                          <svg>
+                            <use xlink:href="#heart-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <button
+                        aria-label="Добавить в избранное"
+                        class="button button--bg-gray-200 button--lg button--comparison"
+                      >
+                        <span class="icon icon--big">
+                          <svg>
+                            <use xlink:href="#chart-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+
+                    @@include('../modules/contact-form-aside.html')
+
+                    <div class="contact-aside__footer">
+                      <button type="button" class="chips">
+                        <span class="icon icon--little">
+                          <svg>
+                            <use xlink:href="#flug-icon"></use>
+                          </svg>
+                        </span>
+
+                        <p class="p3">Report this property</p>
+                      </button>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="links-section">
+          <div class="container">
+            <div class="links-section__inner">
+              <ul class="links-section__list">
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Apartments in UAE"
+                    title="Apartments in UAE"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Apartments in UAE</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Apartments in Jumeirah"
+                    title="Apartments in Jumeirah"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Apartments in Jumeirah</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Residential complexes in Dubai"
+                    title="Residential complexes in Dubai"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Residential complexes in Dubai</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Penthouses in UAE"
+                    title="Penthouses in UAE"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Penthouses in UAE</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Apartments in UAE"
+                    title="Apartments in UAE"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Apartments in UAE</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Apartments in Jumeirah"
+                    title="Apartments in Jumeirah"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Apartments in Jumeirah</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Residential complexes in Dubai"
+                    title="Residential complexes in Dubai"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Residential complexes in Dubai</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Penthouses in UAE"
+                    title="Penthouses in UAE"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Penthouses in UAE</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Apartments in UAE"
+                    title="Apartments in UAE"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Apartments in UAE</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Apartments in Jumeirah"
+                    title="Apartments in Jumeirah"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Apartments in Jumeirah</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Residential complexes in Dubai"
+                    title="Residential complexes in Dubai"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Residential complexes in Dubai</p>
+                  </a>
+                </li>
+
+                <li class="links-section__link">
+                  <a
+                    href="#"
+                    aria-label="Перейти на страницу Penthouses in UAE"
+                    title="Penthouses in UAE"
+                    class="links-section__item text-dark-600 link"
+                  >
+                    <p class="p3">Penthouses in UAE</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+      @@include('../modals/features.html')
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"
+      defer
+    ></script>
+
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/layout.js" type="module"></script>
+  </body>
+</html>

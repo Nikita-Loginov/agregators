@@ -11,6 +11,11 @@
     .button {
       width: 100%;
     }
+
+    &--one {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__footer {

@@ -7,6 +7,10 @@
     transition: all 0.5s;
     padding-inline: 10px;
     border-radius: var(--radius-xl);
+
+    &--big {
+      padding-bottom: 200px;
+    }
   }
 
   &__items {
@@ -27,6 +31,10 @@
 
       .ui__box {
         padding-block: 10px;
+
+        &--big {
+          padding-bottom: 200px;
+        }
       }
     }
   }

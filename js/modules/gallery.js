@@ -1,10 +1,10 @@
 import { initSwiper } from "./functions.js";
 import { MOUSE_WHEEL_CONFIG } from "../swiper/index.js";
+import { getArrowSwiper } from "./functions.js";
 
 export const initGallery = (slide, modalBlock, skipClick = false) => {
   const galleryItem = slide.closest("[data-gallery-item]");
-  
-  
+
   if (!galleryItem) return;
 
   const name = galleryItem.dataset.block;
@@ -15,8 +15,12 @@ export const initGallery = (slide, modalBlock, skipClick = false) => {
   initSwiperGallery(modalBlock, type, name, skipClick);
 };
 
-export const initSwiperGallery = (modalBlock, type, nameActive, skipClick = false) => {
-  
+export const initSwiperGallery = (
+  modalBlock,
+  type,
+  nameActive,
+  skipClick = false
+) => {
   const tabSelector =
     type === "img"
       ? '[data-btn-tab="gallery-imgs"]'
@@ -25,10 +29,10 @@ export const initSwiperGallery = (modalBlock, type, nameActive, skipClick = fals
     type === "img" ? ".galleryModal__box-imgs" : ".galleryModal__box-videos";
 
   const checkedBox = modalBlock.querySelector(tabSelector);
-  
+
   if (checkedBox && !skipClick) {
-    checkedBox.click()
-  };
+    checkedBox.click();
+  }
 
   const swiperBig = modalBlock.querySelector(
     `${boxSelector} .swiper--big-gallery`
@@ -39,12 +43,18 @@ export const initSwiperGallery = (modalBlock, type, nameActive, skipClick = fals
 
   if (!swiperBig || !swiperSmall) return;
 
+  const swiperBoxSmall = swiperSmall.closest(".galleryModal__swiper-box");
+
   if (!swiperSmall.classList.contains("swiper-initialized")) {
     initSwiper(swiperSmall, {
       slidesPerView: 5,
       spaceBetween: 8,
       watchSlidesProgress: true,
       mousewheel: MOUSE_WHEEL_CONFIG,
+      navigation: {
+        nextEl: getArrowSwiper(swiperBoxSmall).arrowNext,
+        prevEl: getArrowSwiper(swiperBoxSmall).arrowPrev,
+      },
     });
   }
 
@@ -54,16 +64,14 @@ export const initSwiperGallery = (modalBlock, type, nameActive, skipClick = fals
   const findItem = swiperBig.querySelector(`[data-block="${nameActive}"]`);
   const activeIndex = slides.findIndex((item) => item === findItem);
 
-  const swiperBox = swiperBig.closest('.galleryModal__swiper-box')
-  const arrowPrevBig = swiperBox.querySelector('.arrow-swiper.prev');
-  const arrowNextBig = swiperBox.querySelector('.arrow-swiper.next');
+  const swiperBoxBig = swiperBig.closest(".galleryModal__swiper-box");
 
   const bigOptions = {
     initialSlide: activeIndex >= 0 ? activeIndex : 0,
     thumbs: { swiper: swiperSmall.swiper },
     navigation: {
-      nextEl: arrowNextBig,
-      prevEl: arrowPrevBig,
+      nextEl: getArrowSwiper(swiperBoxBig).arrowNext,
+      prevEl: getArrowSwiper(swiperBoxBig).arrowPrev,
     },
     mousewheel: MOUSE_WHEEL_CONFIG,
   };
@@ -72,6 +80,7 @@ export const initSwiperGallery = (modalBlock, type, nameActive, skipClick = fals
     bigOptions.on = {
       init: (swiper) => {
         const activeVideo = slides[swiper.activeIndex].querySelector("video");
+
         if (activeVideo) activeVideo.play();
       },
       slideChange: () => {
@@ -93,3 +102,4 @@ export const initSwiperGallery = (modalBlock, type, nameActive, skipClick = fals
     swiperBig.swiper.slideTo(activeIndex, 0);
   }
 };
+

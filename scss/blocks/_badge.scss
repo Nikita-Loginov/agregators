@@ -96,7 +96,17 @@
     padding: 2px 8px;
   }
 
- 
+  &--noBg {
+    min-height: 0;
+    padding: 0;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+
+    * {
+      line-height: 1;
+    }
+  }
 }
 
 .badge-detail {

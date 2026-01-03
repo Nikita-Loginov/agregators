@@ -11,6 +11,11 @@
     transform: translateY(-50%);
     z-index: 4;
 
+    &-full {
+      left: 0;
+      right: 0;
+    }
+
     .arrow-swiper {
       position: absolute;
 
@@ -72,15 +77,16 @@
     }
   }
 
-  &--arrows-disabled {
-    &:has(.arrow-swiper.prev.swiper-button-disabled):has(
-        .arrow-swiper.next.swiper-button-disabled
-      ) {
-      .arrow-swiper {
-        display: none;
-      }
-    }
-  }
+  // &--arrows-disabled {
+  //   &:has(.arrow-swiper.prev.swiper-button-disabled):has(
+  //       .arrow-swiper.next.swiper-button-disabled
+  //     ) {
+  //     .arrow-swiper {
+  //       opacity: 0;
+  //       visibility: hidden;
+  //     }
+  //   }
+  // }
 }
 
 .arrow-swiper {

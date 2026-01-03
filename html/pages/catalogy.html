@@ -123,31 +123,7 @@
                     </div>
 
                     <div class="filter__item">
-                      <div class="checkbox-box">
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" checked name="category" />
-
-                            <span class="p2">All</span>
-                          </div>
-                        </label>
-
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" name="category" />
-
-                            <span class="p2">Ready</span>
-                          </div>
-                        </label>
-
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" name="category" />
-
-                            <span class="p2">Off-Plan</span>
-                          </div>
-                        </label>
-                      </div>
+                      @@include('../components/checkboxs/checkbox-box-filter.html')
                     </div>
 
                     <div
@@ -371,7 +347,10 @@
                                 data-check="list"
                                 data-block="grid-check"
                               />
-                              <span class="p2">List</span>
+
+                              <div class="check__info-content">
+                                <span class="p2">List</span>
+                              </div>
                             </div>
                           </label>
 
@@ -383,7 +362,10 @@
                                 data-check="tiles"
                                 data-block="grid-check"
                               />
-                              <span class="p2">Tiles</span>
+
+                              <div class="check__info-content">
+                                <span class="p2">Tiles</span>
+                              </div>
                             </div>
                           </label>
 
@@ -394,7 +376,9 @@
                               title="Map"
                               class="check__info"
                             >
-                              <span class="p2">Map</span>
+                              <div class="check__info-content">
+                                <span class="p2">Map</span>
+                              </div>
                             </a>
                           </label>
                         </div>

@@ -122,4 +122,18 @@ export const SWIPERS = {
       },
     },
   },
+  COMPARISON: {
+    selector: ".comparison .swiper--comparison",
+    breakpoint: 122300000000,
+    
+    options: {
+      slidesPerView: 3,
+      spaceBetween: 32,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      navigation: {
+        nextEl: ".comparison .arrow-swiper.next",
+        prevEl: ".comparison .arrow-swiper.prev",
+      },
+    },
+  }
 };

@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
     transition: all 0.5s;
 
     &.icon {
@@ -41,7 +41,9 @@
   &__btn {
     display: flex;
     align-items: center;
+    background-color: transparent;
     gap: 8px;
+    color: inherit;
   }
 
   &__content {
@@ -139,5 +141,40 @@
     &__toggle {
       justify-content: space-between;
     }
+  }
+}
+
+.dropdown-number {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    border-radius: var(--radius-sm);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color-300);
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &.active {
+      background-color: var(--secondary-color-100);
+      color: var(--white-color);
+    }
+
+    &:hover {
+      background-color: var(--gray-color-100);
+      color: var(--secondary-color-300);
+    }
+  }
+
+  &__content {
+    background-color: var(--secondary-color-200);
+    border-radius: var(--radius-base);
+    border: none;
   }
 }

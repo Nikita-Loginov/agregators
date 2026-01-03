@@ -1,0 +1,40 @@
+.good-small {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: 100%;
+
+  &__img-box {
+    width: 100%;
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 280 / 207;
+    max-height: 300px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__img-decor {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 3;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+}

@@ -65,7 +65,7 @@ body {
   );
   display: flex;
   flex-direction: column;
-  padding-bottom: 120px;
+  padding-bottom: 80px;
 
   section {
     &:not(:last-child) {
@@ -79,7 +79,7 @@ body {
     gap: 20px;
 
     &-big {
-      gap: 32px;
+      gap: 40px;
     }
   }
 
@@ -89,6 +89,10 @@ body {
 
   &--noLastPadding {
     padding-bottom: 0;
+  }
+
+  &--paddingLastSmall {
+    padding-bottom: 24px;
   }
 }
 
@@ -266,7 +270,7 @@ body .wrapper {
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
   }
 }
 
@@ -345,6 +349,11 @@ body .wrapper {
   &--one {
     line-clamp: 1;
     -webkit-line-clamp: 1;
+  }
+
+  &--three {
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
   }
 }
 

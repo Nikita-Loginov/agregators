@@ -1,0 +1,38 @@
+.params {
+  width: 100%;
+
+  &__box {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--gray-color-100);
+    border: 1px solid var(--gray-color-600);
+    border-radius: var(--radius-md);
+    min-height: 92px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__item {
+    width: 100%;
+    border-radius: var(--radius-base);
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.active-card {
+      background-color: var(--secondary-color-100);
+      color: var(--white-color);
+      cursor: pointer;
+    }
+  }
+
+  &__item-header,
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

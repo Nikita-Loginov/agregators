@@ -13,6 +13,9 @@
   padding-inline: 10px;
   border-radius: var(--radius-xl);
 }
+.ui__box--big {
+  padding-bottom: 200px;
+}
 .ui__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -33,4 +36,7 @@
 }
 .accordeon__item.active .ui__box {
   padding-block: 10px;
+}
+.accordeon__item.active .ui__box--big {
+  padding-bottom: 200px;
 }

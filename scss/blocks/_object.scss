@@ -59,6 +59,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+    width: 100%;
   }
 
   &__block {
@@ -72,6 +73,8 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
+    width: 100%;
+    align-items: center;
   }
 
   &__item {
@@ -170,6 +173,17 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 8px;
     width: 100%;
+
+    &--three {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+  }
+
+  &__goods {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 8px;
   }
 
   &__property-swiper-box {

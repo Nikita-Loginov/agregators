@@ -429,6 +429,23 @@
       height: 100%;
       object-fit: cover;
     }
+
+    &--big {
+      .arrow-swiper {
+
+        visibility: hidden;
+      }
+
+      &:hover {
+        .arrow-swiper {
+          visibility: visible;
+        }
+      }
+    }
+
+    &--small {
+      padding-inline: 52px;
+    }
   }
 
   .swiper--big-gallery {

@@ -1,0 +1,30 @@
+.comparison {
+  --count-cards: 4;
+  --gap-cards: 32px;
+
+  &__content {
+    display: grid;
+    width: 100%;
+    gap: var(--gap-cards);
+    grid-template-columns:
+      calc((100% / var(--count-cards, 4)) - (var(--gap-cards, 32px)))
+      auto;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  &__decor {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__swiper-box {
+    width: 100%;
+    min-width: 0;
+  }
+}

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Сравнение", "links" :
+  ["./css/comparison.css", "./css/lib/swiper.min.css"] })
+  <body class="white-page">
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail main--detail-big">
+        <div class="top-page">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item"
+                      >Comparison of properties</span
+                    >
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="breadcrumbs__circle">
+                    <div class="icon">
+                      <svg>
+                        <use xlink:href="#arrow-circle-icon"></use>
+                      </svg>
+                    </div>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+
+              <h1 class="h2">Comparison of Properties</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="comparison">
+            <div class="container">
+              <div class="comparison__inner swiper-box">
+                <div class="comparison__header topBox">
+                  <div class="topBox__header">
+                    <div class="checkbox-box">
+                      <label class="check">
+                        <div class="check__info">
+                          <input type="radio" checked name="comparison" />
+
+                          <div class="check__info-content">
+                            <span class="p2">Properties</span>
+                          </div>
+                        </div>
+                      </label>
+
+                      <label class="check">
+                        <div class="check__info">
+                          <input type="radio" name="comparison" />
+
+                          <div class="check__info-content">
+                            <span class="p2">Developments</span>
+                          </div>
+                        </div>
+                      </label>
+
+                      <label class="check">
+                        <div class="check__info">
+                          <input type="radio" name="comparison" />
+
+                          <div class="check__info-content">
+                            <span class="p2">Layouts</span>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+
+                    <div class="arrows-swiper">
+                      <button
+                        class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper prev"
+                        type="button"
+                      >
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <button
+                        class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper next"
+                        type="button"
+                      >
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#arrow-line-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="comparison__content">
+                    <div class="comparison__decor">
+                      <div class="check-switch">
+                        <label class="check-switch__box">
+                          <input type="checkbox" name="comparison" />
+
+                          <div class="check-switch__decor"></div>
+                        </label>
+
+                        <div class="check-switch__content">
+                          <p class="p2 text-dark-500 medium-font">
+                            Show only different values
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="comparison__swiper-box">
+                      <div class="swiper swiper--comparison">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <div class="good-small">
+                              <div class="good-small__img-box">
+                                <a
+                                  href="#"
+                                  aria-label="Перейти к товару"
+                                  title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                  class="good-small__img"
+                                >
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/decor/one.webp   1x,
+                                        /img/decor/one2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/decor/one.webp"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </a>
+
+                                <div class="good-small__img-decor">
+                                  <div class="good-small__btns">
+                                    <!-- prettier-ignore -->
+
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base active ", "classAddIcon" : ""})
+      
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base active ", "classAddIcon" : ""})
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-small__content">
+                                <div class="textbox">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти к товару"
+                                    title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                    class="p2 text-secondary-300 ellipsis-text ellipsis-text--three"
+                                    >Apartment in The Bristol Luxury in Dubai
+                                    Marina, UAE 2 bedrooms, 136.57 sq.m. №
+                                    576866 Apartment in The Bristol Luxury in
+                                    Dubai Marina, UAE 2 bedrooms, 136.57 sq.m. №
+                                    576866</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <div class="good-small">
+                              <div class="good-small__img-box">
+                                <a
+                                  href="#"
+                                  aria-label="Перейти к товару"
+                                  title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                  class="good-small__img"
+                                >
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/decor/two.webp   1x,
+                                        /img/decor/two2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/decor/two.webp"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </a>
+
+                                <div class="good-small__img-decor">
+                                  <div class="good-small__btns">
+                                    <!-- prettier-ignore -->
+
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base ", "classAddIcon" : ""})
+      
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base active ", "classAddIcon" : ""})
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-small__content">
+                                <div class="textbox">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти к товару"
+                                    title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                    class="p2 text-secondary-300 ellipsis-text ellipsis-text--three"
+                                    >Apartment in The Bristol Luxury in Dubai
+                                    Marina</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <div class="good-small">
+                              <div class="good-small__img-box">
+                                <a
+                                  href="#"
+                                  aria-label="Перейти к товару"
+                                  title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                  class="good-small__img"
+                                >
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/decor/one.webp   1x,
+                                        /img/decor/one2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/decor/one.webp"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </a>
+
+                                <div class="good-small__img-decor">
+                                  <div class="good-small__btns">
+                                    <!-- prettier-ignore -->
+
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base active ", "classAddIcon" : ""})
+      
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base active ", "classAddIcon" : ""})
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-small__content">
+                                <div class="textbox">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти к товару"
+                                    title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                    class="p2 text-secondary-300 ellipsis-text ellipsis-text--three"
+                                    >Apartment in The Bristol Luxury in Dubai
+                                    Marina, UAE 2 bedrooms, 136.57 sq.m. №
+                                    576866 Apartment in The Bristol Luxury in
+                                    Dubai Marina, UAE 2 bedrooms, 136.57 sq.m. №
+                                    576866</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="swiper-slide">
+                            <div class="good-small">
+                              <div class="good-small__img-box">
+                                <a
+                                  href="#"
+                                  aria-label="Перейти к товару"
+                                  title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                  class="good-small__img"
+                                >
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/decor/two.webp   1x,
+                                        /img/decor/two2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/decor/two.webp"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </a>
+
+                                <div class="good-small__img-decor">
+                                  <div class="good-small__btns">
+                                    <!-- prettier-ignore -->
+
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base ", "classAddIcon" : ""})
+      
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-md-add button--rounded-base active ", "classAddIcon" : ""})
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="good-small__content">
+                                <div class="textbox">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти к товару"
+                                    title="Apartment in Amazonia in Al Jaddaf, Dubai, UAE 2 bedrooms, 105.93 sq.m. № 576139"
+                                    class="p2 text-secondary-300 ellipsis-text ellipsis-text--three"
+                                    >Apartment in The Bristol Luxury in Dubai
+                                    Marina</a
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="comparison__info">
+                  <div
+                    class="table-grid table-grid--noGap table-grid--four table-grid--line table-grid--noBg"
+                  >
+                    <div class="table-grid__items">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p2 semibold-font">Type of property</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">Apartment</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">Apartment</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">Apartment</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p2 semibold-font">City</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">Dubai</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">Al Zorah</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">Dubai</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="table-grid__decor">
+                      <div class="table-grid__decor-cell table-grid__decor-cell--big table-grid__decor-cell--gray-color-600">
+                        <p class="p1 medium-font">Ctegory Header</p>
+                      </div>
+                    </div>
+
+                    <div class="table-grid__items">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p2 semibold-font">Living space</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">116.62 sq.m.</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">68.05 sq.m.</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">116.62 sq.m.</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p2 semibold-font">Rooms</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">2</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">1</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">3</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p2 semibold-font">Sea view</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">+</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">-</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p2">+</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+    </div>
+
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/comparison.js" type="module"></script>
+  </body>
+</html>
