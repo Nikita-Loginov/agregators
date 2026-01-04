@@ -27,9 +27,11 @@ export const changeTypeGrid = (e) => {
 export const initGridSystem = () => {
   document.querySelectorAll('[data-block="grid-relative"]').forEach((box) => {
     const currentType = box.getAttribute("data-grid") || "list";
+  
     const targetCheckbox = box.querySelector(
       `[data-block="grid-check"][data-check="${currentType}"]`
     );
+
 
     if (targetCheckbox) {
       targetCheckbox.checked = true;
@@ -53,7 +55,7 @@ export const handleGridResize = () => {
         tilesCheckbox.checked = true;
       }
     } else {
-      const userChoice = box.getAttribute("data-user-grid") || "list";
+      const userChoice = box.getAttribute("data-grid") || box.getAttribute("data-user-grid") || "list";
 
       box.setAttribute("data-grid", userChoice);
 

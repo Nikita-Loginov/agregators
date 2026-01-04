@@ -34,6 +34,25 @@
           flex-direction: column;
   gap: 20px;
 }
+.catalogy-box__filter {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+.catalogy-box__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.catalogy-box__swiper-box {
+  min-width: 0;
+  width: 100%;
+}
 .catalogy-box__map-btn {
   display: none;
 }

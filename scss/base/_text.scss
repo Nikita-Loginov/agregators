@@ -124,7 +124,7 @@ h6 {
 }
 
 .text-primary-500 {
-  color: var(--primary-color-100);
+  color: var(--primary-color-500);
 }
 
 .text-dark-100 {
@@ -133,6 +133,14 @@ h6 {
 
 .text-dark-300 {
   color: var(--dark-color-300);
+}
+
+.text-yellow-300 {
+  color: var(--yellow-color-300);
+}
+
+.text-yellow-400 {
+  color: var(--yellow-color-400);
 }
 
 .text-dark-500 {
@@ -145,6 +153,10 @@ h6 {
 
 .text-green-100 {
   color: var(--green-color-100);
+}
+
+.text-green-600 {
+  color: var(--green-color-600);
 }
 
 body .main {

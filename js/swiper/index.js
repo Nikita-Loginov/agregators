@@ -135,5 +135,30 @@ export const SWIPERS = {
         prevEl: ".comparison .arrow-swiper.prev",
       },
     },
-  }
+  },
+  RESULT_CARD: {
+    selector: ".result-block .swiper--result",
+    breakpoint: 122300000000,
+    options: {
+      slidesPerView: 1,
+      spaceBetween: 8,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      pagination: {
+        el: ".result-block .swiper--result .swiper-pagination",
+      },
+      breakpoints: {
+        1280: {
+          slidesPerView: 5,
+        },
+
+        767: {
+          slidesPerView: 4,
+        },
+
+        360: {
+          slidesPerView: 2,
+        },
+      },
+    },
+  },
 };
