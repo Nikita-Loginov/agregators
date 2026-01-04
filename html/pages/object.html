@@ -2,7 +2,10 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Профиль объекта", "links" :
   ["./css/object.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css", 
+  "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -592,20 +595,19 @@
                       </div>
 
                       <div class="object-bottom__top-line">
-                        <a
-                          href="/map.html"
-                          aria-label="Перейти на страницу карты"
-                          title="On the Map"
-                          class="button button--bg-gray-200 button--lg button--rounded-3xl"
-                        >
-                          <span class="icon icon--big">
-                            <svg>
-                              <use xlink:href="#map-icon"></use>
-                            </svg>
-                          </span>
+                        <button
+                        title="On the Map"
+                        class="button button--bg-gray-200 button--lg button--rounded-3xl modal-open"
+                        data-modal="mapModal"
+                      >
+                        <span class="icon icon--big">
+                          <svg>
+                            <use xlink:href="#map-icon"></use>
+                          </svg>
+                        </span>
 
-                          <p class="p2 medium-font">On the Map</p>
-                        </a>
+                        <p class="p2 medium-font">On the Map</p>
+                      </button>
                       </div>
                     </div>
 
@@ -1881,8 +1883,11 @@
 
       @@include('../modules/footer.html', {"inner" : ''})
       @@include('../modals/features.html') @@include('../modals/gallery.html')
+      @@include('../modals/map.html')
     </div>
 
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"
       defer

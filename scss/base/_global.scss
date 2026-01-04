@@ -583,3 +583,15 @@ body .wrapper {
 .lg-download {
   display: none !important;
 }
+
+.fixed-block {
+  position: fixed;
+  z-index: 100;
+  left: 24px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 360px;
+  width: 100%;
+}

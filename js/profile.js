@@ -7,6 +7,10 @@ import {
 import { initImgsSwiperGoods } from "./swiper/functions.js";
 import { initComments } from "./modules/comments.js";
 import { searcBlockTab } from "./modules/tab.js";
+import { initCharts } from "./modules/chart.js";
+import { charts } from "./data/chart.js";
+import { initSimpleMap } from "./modules/map.js";
+import { lagerhauser } from "./data/lagerhauser.js";
 
 const swipers = [
   {
@@ -35,6 +39,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   handleAllSliders();
+
+  initCharts([{...charts.priceChange}])
+  initSimpleMap("map-2d", [lagerhauser.at(-1)]);
+
 
   document.addEventListener("click", handleGlobalClick);
 });

@@ -42,7 +42,7 @@
 
   &--md {
     min-height: 36px;
-    padding: 6px 16px;
+    padding: 2px 16px;
     font-size: var(--font-size-xs);
   }
 
@@ -170,8 +170,6 @@
     }
   }
 
-  
-
   &--cub-second {
     width: 32px;
     height: 48px;
@@ -204,7 +202,7 @@
     &:hover,
     &:active {
       background-color: var(--secondary-color-200);
-      color: var(--secondary-color-400)
+      color: var(--secondary-color-400);
     }
   }
 
@@ -485,7 +483,12 @@
 
     &-dark-color-600 {
       border-color: var(--dark-color-600);
-      color: var(--dark-color-600)
+      color: var(--dark-color-600);
+    }
+
+    &-dark-color-700 {
+      border-color: var(--dark-color-700);
+      color: var(--dark-color-500);
     }
 
     &-primary-color-100 {
@@ -500,6 +503,10 @@
 
   &--pading-inline-lg {
     padding-inline: 30px;
+  }
+
+  &--dashed {
+    border-style: dashed;
   }
 
   &__block {

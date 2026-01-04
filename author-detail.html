@@ -1152,6 +1152,96 @@
       stroke-linejoin="round"
     />
   </symbol>
+
+  <symbol id="plus-icon" viewBox="0 0 13 13" fill="none">
+    <path
+      xmlns="http://www.w3.org/2000/svg"
+      d="M0.5 6.5H6.5M6.5 6.5H12.5M6.5 6.5V12.5M6.5 6.5V0.5"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
+
+  <symbol id="cookies-icon" viewBox="0 0 28 28" fill="none">
+    <path
+      d="M14.1774 4.76843C14.1765 4.33952 14.1168 3.91276 14 3.5C19.7963 3.50635 24.4935 8.21308 24.4999 14C24.5187 19.7896 19.799 24.4808 14 24.4996C8.20104 24.5184 3.51885 19.7902 3.5 14.0006C4.79696 14.2757 6.14878 13.9978 7.17489 13.1595C8.23223 12.3027 8.84205 11.0126 8.8319 9.65308C8.83118 9.34728 8.80378 9.04251 8.75 8.74145C9.93748 9.21228 11.2822 9.0581 12.3326 8.33189C13.4979 7.5196 14.1879 6.1873 14.1774 4.76843Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3.50228 8.169V8.16667H3.5V8.16895L3.50228 8.169Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M9.33561 3.50233V3.5H9.33333V3.50228L9.33561 3.50233Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M4.66895 3.50233V3.5H4.66667V3.50228L4.66895 3.50233Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M11.6689 19.8357V19.8333H11.6667V19.8356L11.6689 19.8357Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M17.5023 17.5023V17.5H17.5V17.5023L17.5023 17.5023Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M12.8356 14.0023V14H12.8333V14.0023L12.8356 14.0023Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M18.6689 11.669V11.6667H18.6667V11.6689L18.6689 11.669Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M3.50228 8.169V8.16667H3.5V8.16895L3.50228 8.169Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M9.33561 3.50233V3.5H9.33333V3.50228L9.33561 3.50233Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      d="M4.66895 3.50233V3.5H4.66667V3.50228L4.66895 3.50233Z"
+      stroke="#EDEDFA"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </symbol>
 </svg>
  <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
   <symbol id="rus-lang" viewBox="0 0 28 28">
@@ -3358,7 +3448,54 @@
         </div>
       </main>
 
-       <div class="modalBlock languagesModal">
+      <div class="fixed-block">
+  <div
+  class="cookies"
+  data-storage-key="cookies-agregators"
+  data-storage-type="localstorage"
+  data-storage-days="30"
+  data-storage-remove="true"
+  data-storage-value="true"
+>
+  <div class="cookies__box">
+    <div class="cookies__content">
+      <div class="textbox">
+        <p class="p2">
+          We use third-party cookies to personalize content, ads, and analyze
+          site traffic.
+        </p>
+      </div>
+    </div>
+
+    <div class="cookies__footer">
+      <div class="cookies__icon">
+        <span class="icon icon--full">
+          <svg>
+            <use xlink:href="#cookies-icon"></use>
+          </svg>
+        </span>
+      </div>
+
+      <div class="cookies__btns">
+        <button class="button button--noMassa" type="button" data-storage-decline>
+          <p class="p3 medium-font text-secondary-200">Decline</p>
+        </button>
+
+        <button
+          class="button button--bg-white button--md2x"
+          type="button"
+          data-storage-close
+        >
+          <p class="p3 regular-font text-secondary-300">Allow cookies</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+ <div class="modalBlock languagesModal ">
   <div class="modalBlock__inner">
     <header class="modalBlock__head">
       <button
@@ -3881,7 +4018,7 @@
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon">
+        <span class="icon icon--little">
           <svg>
             <use xlink:href="#close-icon"></use>
           </svg>

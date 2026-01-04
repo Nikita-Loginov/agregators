@@ -9,6 +9,7 @@ import { initFormValidation } from "./modules/validate.js";
 import { initRatingStars } from "./modules/rating.js";
 import { initSelects } from "./modules/select.js";
 import { onChangeInput } from "./modules/functions.js";
+import { checkStorage, initStorage } from "./modules/localStorage.js";
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -18,24 +19,25 @@ const handleGlobalEvents = (e) => {
   initModal(e);
   initMenu(e);
   initRatingStars(e);
+  initStorage(e);
 };
 
 const serVars = () => {
- const heightHeader = getHeightHeader();
+  const heightHeader = getHeightHeader();
 
- setVar('--header-height', heightHeader);
-}
+  setVar("--header-height", heightHeader);
+};
 
 const initValidate = () => {
   const forms = document.querySelectorAll("form.form");
+
   forms.forEach((form) => {
     initFormValidation(form);
   });
 };
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
+  checkStorage();
   initValidate();
   checkStartOpen();
   serVars();
@@ -43,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSelects();
 
   document.addEventListener("click", handleGlobalEvents);
-  document.addEventListener("input", onChangeInput)
+  document.addEventListener("input", onChangeInput);
 
   if (!isTouchDevice) {
     document.addEventListener("mouseenter", initRatingStars, true);

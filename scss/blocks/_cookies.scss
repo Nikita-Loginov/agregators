@@ -1,0 +1,47 @@
+.cookies {
+  background-color: var(--secondary-color-400);
+  width: 100%;
+  border-radius: var(--radius-base);
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 32px;
+
+  &.active {
+    display: flex;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--white-color);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    white-space: nowrap;
+    flex-wrap: wrap;
+  }
+}

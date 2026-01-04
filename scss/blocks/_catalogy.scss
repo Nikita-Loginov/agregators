@@ -22,6 +22,10 @@
     display: flex;
     flex-direction: column;
     gap: calculate-clamp(4px, 16px, 767px, 480px);
+
+    &--small {
+      gap: 8px;
+    }
   }
 
   &__header-content {
@@ -274,6 +278,27 @@
 
   &__market-btn {
     display: none;
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__filter-items {
+    display: grid;
+    grid-template-columns: 24% 24% 24% auto;
+    gap: 8px;
+
+    .checkbox-box {
+      white-space: nowrap;
+    }
+
+    &--flex {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
   @media (max-width: 600px) {

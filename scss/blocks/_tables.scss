@@ -74,6 +74,16 @@
           }
         }
       }
+
+      &.table-grid--white-bg {
+        .table-grid__items {
+          .table-grid__row {
+            &:nth-child(even) {
+              background-color: var(--white-color);
+            }
+          }
+        }
+      }
     }
   }
 
@@ -89,7 +99,16 @@
         }
       }
     }
-   
+
+    &.table-grid--white-bg {
+      .table-grid__items {
+        .table-grid__row {
+          &:nth-child(odd) {
+            background-color: var(--white-color);
+          }
+        }
+      }
+    }
   }
 
   &__cell-btns {

@@ -1,0 +1,78 @@
+<div class="modalBlock mapModal tabs-box" data-tab-category="map-popup">
+  <div class="modalBlock__inner modalBlock__inner--big">
+    <header class="modalBlock__head modalBlock__head--static">
+      <div class="checkbox-box">
+        <label class="check tab-btn" data-btn-tab="2d-map">
+          <div class="check__info">
+            <input type="radio" checked name="map-popup" />
+
+            <div class="p2 check__info-content">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="#map-icon"></use>
+                </svg>
+              </span>
+
+              Map
+            </div>
+          </div>
+        </label>
+
+        <label class="check tab-btn" data-btn-tab="3d-map">
+          <div class="check__info">
+            <input type="radio" name="map-popup" />
+
+            <div class="p2 check__info-content">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="#3d-icon"></use>
+                </svg>
+              </span>
+
+              3D
+            </div>
+          </div>
+        </label>
+      </div>
+
+      <p class="h6">
+        Apartment in The Bristol Luxury in Dubai Marina, UAE, № 576866
+      </p>
+
+      <button
+        class="modalBlock__close modalBlock__close--width modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <div class="modalBlock__content">
+      <div
+        class="tab-item active"
+        data-block-tab="2d-map"
+        data-block-category="map-popup"
+      >
+        <div class="mapModal__map">
+          <div class="map" id="map-2d"></div>
+        </div>
+      </div>
+
+      <div
+        class="tab-item"
+        data-block-tab="3d-map"
+        data-block-category="map-popup"
+      >
+        <div class="mapModal__map">
+          <!-- <div class="map" id="map-3d"></div> -->
+           <p class="h6">Тут будет 3d карта(узнать сервис)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+.chart-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+
+  &__block {
+    width: 100%;
+
+    canvas {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+}

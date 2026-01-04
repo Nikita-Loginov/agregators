@@ -139,6 +139,9 @@ body.scrollBottom .filter {
           flex-direction: column;
   gap: clamp(4px, -16.0696864111px + 4.181184669vw, 16px);
 }
+.catalogy__header--small {
+  gap: 8px;
+}
 .catalogy__header-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,6 +412,31 @@ body.scrollBottom .filter {
 .catalogy-content__market-btn {
   display: none;
 }
+.catalogy-content__filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.catalogy-content__filter-items {
+  display: grid;
+  grid-template-columns: 24% 24% 24% auto;
+  gap: 8px;
+}
+.catalogy-content__filter-items .checkbox-box {
+  white-space: nowrap;
+}
+.catalogy-content__filter-items--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 @media (max-width: 600px) {
   .catalogy-content__market {
     display: none;
@@ -450,6 +478,16 @@ body.scrollBottom .catalogy__banners .banner-news {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 8px;
+}
+.pricing__items--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.pricing__items--flex .pricing-card {
+  min-width: 172px;
 }
 .pricing__footer {
   display: block;
@@ -497,15 +535,23 @@ body.scrollBottom .catalogy__banners .banner-news {
 }
 .pricing-card--gray {
   background-color: var(--gray-color-200);
+}
+.pricing-card--small {
   padding: 8px 12px;
+  gap: 0;
 }
-.pricing-card--gray .pricing-card__header, .pricing-card--gray .pricing-card__block {
-  color: var(--dark-color-500);
-}
-.pricing-card--gray .pricing-card__footer {
+.pricing-card--small .pricing-card__footer {
   gap: 8px;
 }
-.pricing-card--gray .pricing-card__block {
+.pricing-card--small .pricing-card__block {
+  gap: 2px;
+}
+.pricing-card--middle {
+  padding: 12px 24px;
+  gap: 4px;
+  border-radius: var(--radius-md);
+}
+.pricing-card--middle .pricing-card__block {
   gap: 2px;
 }
 .pricing-card__header {
@@ -517,7 +563,6 @@ body.scrollBottom .catalogy__banners .banner-news {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 12px;
-  color: var(--dark-color-600);
 }
 .pricing-card__footer {
   display: -webkit-box;
@@ -534,6 +579,9 @@ body.scrollBottom .catalogy__banners .banner-news {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 .pricing-card__block {
   display: -webkit-box;
@@ -543,7 +591,6 @@ body.scrollBottom .catalogy__banners .banner-news {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-  color: var(--dark-color-600);
 }
 .pricing-card__rating {
   display: -webkit-box;
@@ -553,15 +600,6 @@ body.scrollBottom .catalogy__banners .banner-news {
       -ms-flex-align: center;
           align-items: center;
   gap: 8px;
-}
-.pricing-card__rating .icon {
-  width: 10px;
-  height: 10px;
-}
-.pricing-card__rating .icon img,
-.pricing-card__rating .icon svg {
-  width: 100%;
-  height: 100%;
 }
 .pricing-card__rating.green {
   color: var(--green-color-100);
@@ -603,4 +641,36 @@ body.scrollBottom .catalogy__banners .banner-news {
 }
 .market-table__price.down {
   color: var(--primary-color-500);
+}
+
+.chart-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.chart-box__block {
+  width: 100%;
+}
+.chart-box__block canvas {
+  width: 100%;
+}
+.chart-box__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
 }

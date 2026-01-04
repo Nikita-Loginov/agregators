@@ -125,3 +125,9 @@ export const getArrowSwiper = (box) => {
     arrowNext,
   };
 };
+
+export const getRetinaDPR = () => {
+  const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+
+  return isMac ? 2 : (window.devicePixelRatio || 1);
+}

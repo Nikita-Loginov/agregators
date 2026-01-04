@@ -6,6 +6,8 @@ import {
 } from "./modules/moreContent.js";
 import { initImgsSwiperGoods } from "./swiper/functions.js";
 import { searcBlockTab } from "./modules/tab.js";
+import { initSimpleMap } from "./modules/map.js";
+import { lagerhauser } from "./data/lagerhauser.js";
 
 const swipers = [
   {
@@ -44,6 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   handleAllSliders();
+
+  initSimpleMap("map-2d", [lagerhauser.at(-1)]);
 
   document.addEventListener("click", handleGlobalClick);
 });

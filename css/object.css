@@ -106,6 +106,17 @@
   gap: 20px;
   width: 100%;
 }
+.object-bottom__boxs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 .object-bottom__top-items {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -809,6 +820,97 @@
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+}
+
+.pricing-card {
+  padding: 16px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+  border-radius: var(--radius-base);
+  background-color: var(--white-color);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.pricing-card--gray {
+  background-color: var(--gray-color-200);
+}
+.pricing-card--small {
+  padding: 8px 12px;
+  gap: 0;
+}
+.pricing-card--small .pricing-card__footer {
+  gap: 8px;
+}
+.pricing-card--small .pricing-card__block {
+  gap: 2px;
+}
+.pricing-card--middle {
+  padding: 12px 24px;
+  gap: 4px;
+  border-radius: var(--radius-md);
+}
+.pricing-card--middle .pricing-card__block {
+  gap: 2px;
+}
+.pricing-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.pricing-card__footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4px;
+}
+.pricing-card__footer--row {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.pricing-card__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.pricing-card__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+}
+.pricing-card__rating.green {
+  color: var(--green-color-100);
+}
+.pricing-card__rating.red {
+  color: var(--primary-color-500);
 }
 
 .floor-plan {

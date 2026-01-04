@@ -13,11 +13,13 @@ import {
   initGridSystem,
   handleGridResize,
 } from "./modules/catalogy-grid.js";
+import { initCharts } from "./modules/chart.js";
+import { charts } from "./data/chart.js";
 
 const swipers = [
-  {
-    ...SWIPERS.PRICING_CARD,
-  },
+  // {
+  //   ...SWIPERS.PRICING_CARD,
+  // },
 ];
 
 const handleGlobalClick = (e) => {
@@ -46,6 +48,8 @@ document.addEventListener("DOMContentLoaded", () => {
   handleAllSliders();
 
   document.addEventListener("click", handleGlobalClick);
+
+  initCharts([{...charts.market}])
 });
 
 document.addEventListener("change", (e) => {
