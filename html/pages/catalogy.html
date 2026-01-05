@@ -397,7 +397,7 @@
                     class="breadcrumbs__media"
                   >
                     <span class="breadcrumbs__circle">
-                      <div class="icon">
+                      <div class="icon icon--full">
                         <svg>
                           <use xlink:href="#arrow-circle-icon"></use>
                         </svg>
@@ -418,14 +418,24 @@
                     <div class="catalogy__top">
                       <div class="catalogy__filters">
                         <div
-                          class="select-box select-box--middle select-box--words with-icon"
-                          data-icon="sort"
+                          class="catalogy__item-content"
+                          data-loader-relative
                         >
-                          <select id="select5">
-                            <option value="">Sorted</option>
-                            <option value="1">Popular</option>
-                            <option value="2">Price up</option>
-                          </select>
+                          <div class="loader" data-loader-box>
+                            <span></span>
+                          </div>
+
+                          <div
+                            class="select-box select-box--middle select-box--words with-icon"
+                            data-icon="sort"
+                            data-loading="true"
+                          >
+                            <select id="select5">
+                              <option value="">Sorted</option>
+                              <option value="1">Popular</option>
+                              <option value="2">Price up</option>
+                            </select>
+                          </div>
                         </div>
 
                         <a
@@ -698,6 +708,7 @@
                   <div class="banner-news">
                     <header class="banner-news__header">
                       <p class="h6">Subscribe to our newsletter</p>
+
                       <div class="textbox">
                         <p class="p2">
                           You'll receive one email per week with exclusive
@@ -730,9 +741,9 @@
                         title="Contact Seller"
                         class="button button--bg-primary-100 button--lg button--rounded-3xl"
                       >
-                        <span>Subscribe</span>
+                        <span>Subsdcribe</span>
 
-                        <span class="icon icon--big">
+                        <span class="icon icon--little">
                           <svg>
                             <use xlink:href="#arrow-line-icon"></use>
                           </svg>
@@ -766,7 +777,7 @@
                       <div class="accordeon__answer" data-padding-top="2000">
                         <div class="quick__info">
                           <div
-                            class="quick__items"
+                            class="quick__items more-block more-block--six"
                             data-block="more-items"
                             data-max="6"
                           >
@@ -878,7 +889,7 @@
                     >
                       <div class="accordeon__question" role="button">
                         <div class="quick__title">
-                          <p class="semibold-font p2">By type of property</p>
+                          <p class="semibold-font p2">By price</p>
 
                           <div class="accordeon__item-arrow lg-show">
                             <span class="icon icon--sm">
@@ -893,7 +904,7 @@
                       <div class="accordeon__answer" data-padding-top="2000">
                         <div class="quick__info">
                           <div
-                            class="quick__items"
+                            class="quick__items more-block more-block--six"
                             data-block="more-items"
                             data-max="6"
                           >
@@ -1005,7 +1016,7 @@
                     >
                       <div class="accordeon__question" role="button">
                         <div class="quick__title">
-                          <p class="semibold-font p2">By type of property</p>
+                          <p class="semibold-font p2">By number of bedrooms</p>
 
                           <div class="accordeon__item-arrow lg-show">
                             <span class="icon icon--sm">
@@ -1020,9 +1031,9 @@
                       <div class="accordeon__answer" data-padding-top="2000">
                         <div class="quick__info">
                           <div
-                            class="quick__items"
+                            class="quick__items more-block more-block--three"
                             data-block="more-items"
-                            data-max="6"
+                            data-max="3"
                           >
                             <a
                               href="#"
@@ -1367,124 +1378,209 @@
                         <h2 class="h6">Real Estate Market Overview</h2>
 
                         <div class="catalogy-content__filter">
-                          <div class="catalogy-content__filter-items">
-                            <div
-                              class="catalogy-content__filter-item tablet-none"
-                              data-loader-relative
-                            >
-                              <div class="loader" data-loader-box>
-                                <span></span>
+                          <div
+                            class="accordeon accordeon--noMassa accordeon--tablet"
+                            data-width="767"
+                          >
+                            <div class="accordeon__item">
+                              <div class="catalogy-content__filter-block">
+                                <div class="accordeon__question tablet-show">
+                                  <button
+                                    class="button button--cub button--bg-secondary-200 button--cub-md-add"
+                                  >
+                                    <div class="button__block">
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#filter-second-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                  </button>
+                                </div>
+
+                                <div class="checkbox-box tablet-show">
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input
+                                        type="radio"
+                                        checked
+                                        name="market-1"
+                                      />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">1 year</span>
+                                      </div>
+                                    </div>
+                                  </label>
+
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input type="radio" name="market-2" />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">3 year</span>
+                                      </div>
+                                    </div>
+                                  </label>
+
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input type="radio" name="market-3" />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">5 year</span>
+                                      </div>
+                                    </div>
+                                  </label>
+
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input type="radio" name="market-4" />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">All</span>
+                                      </div>
+                                    </div>
+                                  </label>
+                                </div>
                               </div>
 
                               <div
-                                class="select-box select-box--words select-box--noMax"
-                                data-loading="true"
+                                class="accordeon__answer"
+                                data-padding-top="100"
                               >
-                                <select
-                                  id="select250"
-                                  data-placeholder="Median price"
-                                >
-                                  <option value="">Median price</option>
-                                  <option value="1">$ 750k</option>
-                                  <option value="2">$ 700k</option>
-                                  <option value="3">$ 650k</option>
-                                  <option value="4">$ 600k</option>
-                                </select>
-                              </div>
-                            </div>
+                                <div class="catalogy-content__filter-items">
+                                  <div
+                                    class="catalogy-content__filter-item"
+                                    data-loader-relative
+                                  >
+                                    <div class="loader" data-loader-box>
+                                      <span></span>
+                                    </div>
 
-                            <div
-                              class="catalogy-content__filter-item tablet-none"
-                              data-loader-relative
-                            >
-                              <div class="loader" data-loader-box>
-                                <span></span>
-                              </div>
+                                    <div
+                                      class="select-box select-box--words select-box--noMax"
+                                      data-loading="true"
+                                    >
+                                      <select
+                                        id="select250"
+                                        data-placeholder="Median price"
+                                        data-dropdown-outside
+                                      >
+                                        <option value="">Median price</option>
+                                        <option value="1">$ 750k</option>
+                                        <option value="2">$ 700k</option>
+                                        <option value="3">$ 650k</option>
+                                        <option value="4">$ 600k</option>
+                                      </select>
+                                    </div>
+                                  </div>
 
-                              <div
-                                class="select-box select-box--words select-box--noMax"
-                                data-loading="true"
-                              >
-                                <select
-                                  id="select252"
-                                  data-placeholder="All property types"
-                                >
-                                  <option value="">All property types</option>
-                                  <option value="1">Apartment</option>
-                                  <option value="2">Penthouse</option>
-                                  <option value="3">Duplex</option>
-                                  <option value="4">
-                                    Hotel Apartment Hotel Apartment
-                                  </option>
-                                </select>
-                              </div>
-                            </div>
+                                  <div
+                                    class="catalogy-content__filter-item"
+                                    data-loader-relative
+                                  >
+                                    <div class="loader" data-loader-box>
+                                      <span></span>
+                                    </div>
 
-                            <div
-                              class="catalogy-content__filter-item tablet-none"
-                              data-loader-relative
-                            >
-                              <div class="loader" data-loader-box>
-                                <span></span>
-                              </div>
+                                    <div
+                                      class="select-box select-box--words select-box--noMax"
+                                      data-loading="true"
+                                    >
+                                      <select
+                                        id="select252"
+                                        data-placeholder="All property types"
+                                        data-dropdown-outside
+                                      >
+                                        <option value="">
+                                          All property types
+                                        </option>
+                                        <option value="1">Apartment</option>
+                                        <option value="2">Penthouse</option>
+                                        <option value="3">Duplex</option>
+                                        <option value="4">
+                                          Hotel Apartment Hotel Apartment
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
 
-                              <div
-                                class="select-box select-box--words select-box--noMax"
-                                data-loading="true"
-                              >
-                                <select
-                                  id="select253"
-                                  data-placeholder="Bedrooms"
-                                >
-                                  <option value="">Bedrooms</option>
-                                  <option value="1">some info 1</option>
-                                  <option value="2">some info 2</option>
-                                  <option value="3">some info 3</option>
-                                  <option value="4">some info 4</option>
-                                </select>
-                              </div>
-                            </div>
+                                  <div
+                                    class="catalogy-content__filter-item"
+                                    data-loader-relative
+                                  >
+                                    <div class="loader" data-loader-box>
+                                      <span></span>
+                                    </div>
 
-                            <div class="checkbox-box">
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" checked name="market" />
+                                    <div
+                                      class="select-box select-box--words select-box--noMax"
+                                      data-loading="true"
+                                    >
+                                      <select
+                                        id="select253"
+                                        data-placeholder="Bedrooms"
+                                        data-dropdown-outside
+                                      >
+                                        <option value="">Bedrooms</option>
+                                        <option value="1">some info 1</option>
+                                        <option value="2">some info 2</option>
+                                        <option value="3">some info 3</option>
+                                        <option value="4">some info 4</option>
+                                      </select>
+                                    </div>
+                                  </div>
 
-                                  <div class="check__info-content">
-                                    <span class="p2">1 year</span>
+                                  <div class="checkbox-box tablet-none">
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input
+                                          type="radio"
+                                          checked
+                                          name="market"
+                                        />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">1 year</span>
+                                        </div>
+                                      </div>
+                                    </label>
+
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input type="radio" name="market" />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">3 year</span>
+                                        </div>
+                                      </div>
+                                    </label>
+
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input type="radio" name="market" />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">5 year</span>
+                                        </div>
+                                      </div>
+                                    </label>
+
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input type="radio" name="market" />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">All</span>
+                                        </div>
+                                      </div>
+                                    </label>
                                   </div>
                                 </div>
-                              </label>
-
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" name="market" />
-
-                                  <div class="check__info-content">
-                                    <span class="p2">3 year</span>
-                                  </div>
-                                </div>
-                              </label>
-
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" name="market" />
-
-                                  <div class="check__info-content">
-                                    <span class="p2">5 year</span>
-                                  </div>
-                                </div>
-                              </label>
-
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" name="market" />
-
-                                  <div class="check__info-content">
-                                    <span class="p2">All</span>
-                                  </div>
-                                </div>
-                              </label>
+                              </div>
                             </div>
                           </div>
 
@@ -1538,8 +1634,9 @@
 
                         <div class="catalogy-content__item tablet-show">
                           <button
-                            class="button button--rounded-md button--bg-secondary-300"
+                            class="button button--rounded-md button--bg-secondary-300 modal-open "
                             type="button"
+                            data-modal="marketModal"
                             aria-label="Открыть модалку Show detailed market insights"
                           >
                             <p class="p3 medium-font">
@@ -1800,6 +1897,7 @@
                   <div class="banner-news">
                     <header class="banner-news__header">
                       <p class="h6">Subscribe to our newsletter</p>
+
                       <div class="textbox">
                         <p class="p2">
                           You'll receive one email per week with exclusive

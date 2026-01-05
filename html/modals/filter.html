@@ -259,7 +259,7 @@
             </div>
           </div>
 
-          <div class="filterModal__items-box">
+          <div class="filterModal__items-box lg-none">
             <p class="h6">Main parameters</p>
 
             <div class="filterModal__items-boxs">
@@ -399,7 +399,6 @@
                     <div class="check__info-content">
                       <span class="p2">Off-Plan</span>
                     </div>
-
                   </div>
                 </label>
               </div>
@@ -409,7 +408,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Property</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-four"
+            >
               <div
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Property type"
@@ -536,7 +537,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Building</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-twelve"
+            >
               <div
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Completion year"
@@ -633,7 +636,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Finance</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-three"
+            >
               <div class="dropdown dropdown--price input-box">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
@@ -819,7 +824,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Environment</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-three"
+            >
               <div
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="To the sea"
@@ -864,7 +871,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Environment</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-two filterModal__items-boxs--tablet-two"
+            >
               <label class="check-simple check-simple--center">
                 <div class="check-simple__content">
                   <div class="check-simple__custom">
@@ -1127,8 +1136,10 @@
 
       <div class="filterModal__footer">
         <div class="filterModal__footer-box">
-          <div class="filterModal__footer-btns">
-            <button class="button button--noMassa text-secondary-300">
+          <div
+            class="filterModal__footer-btns filterModal__footer-btns--media-big"
+          >
+            <button class="button button--noMassa text-secondary-300 lg-none">
               <span class="icon icon--little">
                 <svg>
                   <use xlink:href="#undo-icon"></use>
@@ -1137,10 +1148,30 @@
 
               <p class="p2 medium-font">Clear filters</p>
             </button>
+
+            <button class="button button--noMassa lg-show modal-close text-dark-200">
+              <span class="icon icon--little">
+                <svg>
+                  <use xlink:href="#close-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p3 medium-font">Close</p>
+            </button>
+
+            <button class="button button--noMassa text-primary-100 lg-show">
+              <span class="icon icon--little">
+                <svg>
+                  <use xlink:href="#undo-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p3 medium-font">Clear filters</p>
+            </button>
           </div>
 
           <div class="filterModal__footer-btns">
-            <button class="button button--bg-gray-300 modal-close">
+            <button class="button button--bg-gray-300 modal-close lg-none text-dark-200">
               <span class="icon icon--little">
                 <svg>
                   <use xlink:href="#close-icon"></use>
@@ -1150,7 +1181,7 @@
               <p class="p2 medium-font">Close</p>
             </button>
 
-            <button class="button button--bg-primary-100">
+            <button class="button button--bg-primary-100 modal-close">
               <span class="icon icon--little">
                 <svg>
                   <use xlink:href="#save-icon"></use>
@@ -1158,6 +1189,18 @@
               </span>
 
               <p class="p2 medium-font">Apply</p>
+            </button>
+          </div>
+        </div>
+
+        <div class="tablet-show">
+          <div class="filterModal__footer-info">
+            <button type="button" class="button button--noMassa modal-close">
+              <p class="p3 medium-font text-secondary-100">Saved searches</p>
+            </button>
+
+            <button type="button" class="button button--noMassa modal-close">
+              <p class="p3 medium-font text-secondary-100">Save search</p>
             </button>
           </div>
         </div>

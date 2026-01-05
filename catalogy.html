@@ -224,10 +224,10 @@
     />
   </symbol>
 
-  <symbol id="arrow-icon" viewBox="0 0 8 8" fill="none">
+  <symbol id="arrow-icon" viewBox="0 0 6 11" fill="none">
     <path
       xmlns="http://www.w3.org/2000/svg"
-      d="M0.5 0.5L3.5 3.5L0.5 6.5"
+      d="M0.5 0.5L5.16667 5.16667L0.5 9.83333"
       stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
@@ -3113,7 +3113,7 @@
                     class="breadcrumbs__media"
                   >
                     <span class="breadcrumbs__circle">
-                      <div class="icon">
+                      <div class="icon icon--full">
                         <svg>
                           <use xlink:href="#arrow-circle-icon"></use>
                         </svg>
@@ -3134,14 +3134,24 @@
                     <div class="catalogy__top">
                       <div class="catalogy__filters">
                         <div
-                          class="select-box select-box--middle select-box--words with-icon"
-                          data-icon="sort"
+                          class="catalogy__item-content"
+                          data-loader-relative
                         >
-                          <select id="select5">
-                            <option value="">Sorted</option>
-                            <option value="1">Popular</option>
-                            <option value="2">Price up</option>
-                          </select>
+                          <div class="loader" data-loader-box>
+                            <span></span>
+                          </div>
+
+                          <div
+                            class="select-box select-box--middle select-box--words with-icon"
+                            data-icon="sort"
+                            data-loading="true"
+                          >
+                            <select id="select5">
+                              <option value="">Sorted</option>
+                              <option value="1">Popular</option>
+                              <option value="2">Price up</option>
+                            </select>
+                          </div>
                         </div>
 
                         <a
@@ -3617,11 +3627,11 @@
                     <div class="pagination">
   <div class="pagination-box">
     <button
-      class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+      class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 button--border-small"
       type="button"
       aria-label="Перейти к пред странице"
     >
-      <span class="icon icon--little">
+      <span class="icon icon--little text-dark-300">
         <svg>
           <use xlink:href="#arrow-left-icon"></use>
         </svg>
@@ -3631,7 +3641,7 @@
     <ul class="pagination-box__list">
       <li class="pagination-box__link">
         <button
-          class="button button--bg-secondary-100 button--cub button--rounded-md"
+          class="button button--bg-secondary-100 button--cub button--rounded-md button--border-small"
           aria-label="Перейти на страницу 1"
         >
           1
@@ -3640,7 +3650,7 @@
 
       <li class="pagination-box__link">
         <button
-          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 text-dark-500 button--border-small"
           aria-label="Перейти на страницу 2"
         >
           2
@@ -3649,7 +3659,7 @@
 
       <li class="pagination-box__link">
         <button
-          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 text-dark-500 button--border-small"
           aria-label="Перейти на страницу 3"
         >
           3
@@ -3658,7 +3668,7 @@
 
       <li class="pagination-box__link">
         <button
-          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 text-dark-500 button--border-small"
           aria-label="Перейти на страницу 4"
         >
           4
@@ -3667,7 +3677,7 @@
 
       <li class="pagination-box__link">
         <button
-          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 text-dark-500 button--border-small"
           aria-label="Перейти на страницу 5"
         >
           5
@@ -3676,7 +3686,7 @@
 
       <li class="pagination-box__link">
         <button
-          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 text-dark-500 button--border-small"
           aria-label="Перейти на страницу 6"
         >
           6
@@ -3685,7 +3695,7 @@
 
       <li class="pagination-box__link">
         <button
-          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 text-dark-500 button--border-small"
           aria-label="Перейти на страницу после 6"
         >
           ...
@@ -3694,7 +3704,7 @@
 
       <li class="pagination-box__link">
         <button
-          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+          class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 text-dark-500 button--border-small"
           aria-label="Перейти на страницу 45"
         >
           45
@@ -3703,12 +3713,12 @@
     </ul>
 
     <button
-      class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300"
+      class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 button--border-small"
       type="button"
       aria-label="Перейти к пред странице"
       style="rotate: -180deg"
     >
-      <span class="icon icon--little">
+      <span class="icon icon--little text-dark-300">
         <svg>
           <use xlink:href="#arrow-left-icon"></use>
         </svg>
@@ -3724,6 +3734,7 @@
                   <div class="banner-news">
                     <header class="banner-news__header">
                       <p class="h6">Subscribe to our newsletter</p>
+
                       <div class="textbox">
                         <p class="p2">
                           You'll receive one email per week with exclusive
@@ -3756,9 +3767,9 @@
                         title="Contact Seller"
                         class="button button--bg-primary-100 button--lg button--rounded-3xl"
                       >
-                        <span>Subscribe</span>
+                        <span>Subsdcribe</span>
 
-                        <span class="icon icon--big">
+                        <span class="icon icon--little">
                           <svg>
                             <use xlink:href="#arrow-line-icon"></use>
                           </svg>
@@ -3792,7 +3803,7 @@
                       <div class="accordeon__answer" data-padding-top="2000">
                         <div class="quick__info">
                           <div
-                            class="quick__items"
+                            class="quick__items more-block more-block--six"
                             data-block="more-items"
                             data-max="6"
                           >
@@ -3904,7 +3915,7 @@
                     >
                       <div class="accordeon__question" role="button">
                         <div class="quick__title">
-                          <p class="semibold-font p2">By type of property</p>
+                          <p class="semibold-font p2">By price</p>
 
                           <div class="accordeon__item-arrow lg-show">
                             <span class="icon icon--sm">
@@ -3919,7 +3930,7 @@
                       <div class="accordeon__answer" data-padding-top="2000">
                         <div class="quick__info">
                           <div
-                            class="quick__items"
+                            class="quick__items more-block more-block--six"
                             data-block="more-items"
                             data-max="6"
                           >
@@ -4031,7 +4042,7 @@
                     >
                       <div class="accordeon__question" role="button">
                         <div class="quick__title">
-                          <p class="semibold-font p2">By type of property</p>
+                          <p class="semibold-font p2">By number of bedrooms</p>
 
                           <div class="accordeon__item-arrow lg-show">
                             <span class="icon icon--sm">
@@ -4046,9 +4057,9 @@
                       <div class="accordeon__answer" data-padding-top="2000">
                         <div class="quick__info">
                           <div
-                            class="quick__items"
+                            class="quick__items more-block more-block--three"
                             data-block="more-items"
-                            data-max="6"
+                            data-max="3"
                           >
                             <a
                               href="#"
@@ -4393,124 +4404,209 @@
                         <h2 class="h6">Real Estate Market Overview</h2>
 
                         <div class="catalogy-content__filter">
-                          <div class="catalogy-content__filter-items">
-                            <div
-                              class="catalogy-content__filter-item tablet-none"
-                              data-loader-relative
-                            >
-                              <div class="loader" data-loader-box>
-                                <span></span>
+                          <div
+                            class="accordeon accordeon--noMassa accordeon--tablet"
+                            data-width="767"
+                          >
+                            <div class="accordeon__item">
+                              <div class="catalogy-content__filter-block">
+                                <div class="accordeon__question tablet-show">
+                                  <button
+                                    class="button button--cub button--bg-secondary-200 button--cub-md-add"
+                                  >
+                                    <div class="button__block">
+                                      <span class="icon">
+                                        <svg>
+                                          <use
+                                            xlink:href="#filter-second-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </div>
+                                  </button>
+                                </div>
+
+                                <div class="checkbox-box tablet-show">
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input
+                                        type="radio"
+                                        checked
+                                        name="market-1"
+                                      />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">1 year</span>
+                                      </div>
+                                    </div>
+                                  </label>
+
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input type="radio" name="market-2" />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">3 year</span>
+                                      </div>
+                                    </div>
+                                  </label>
+
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input type="radio" name="market-3" />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">5 year</span>
+                                      </div>
+                                    </div>
+                                  </label>
+
+                                  <label class="check">
+                                    <div class="check__info">
+                                      <input type="radio" name="market-4" />
+
+                                      <div class="check__info-content">
+                                        <span class="p2">All</span>
+                                      </div>
+                                    </div>
+                                  </label>
+                                </div>
                               </div>
 
                               <div
-                                class="select-box select-box--words select-box--noMax"
-                                data-loading="true"
+                                class="accordeon__answer"
+                                data-padding-top="100"
                               >
-                                <select
-                                  id="select250"
-                                  data-placeholder="Median price"
-                                >
-                                  <option value="">Median price</option>
-                                  <option value="1">$ 750k</option>
-                                  <option value="2">$ 700k</option>
-                                  <option value="3">$ 650k</option>
-                                  <option value="4">$ 600k</option>
-                                </select>
-                              </div>
-                            </div>
+                                <div class="catalogy-content__filter-items">
+                                  <div
+                                    class="catalogy-content__filter-item"
+                                    data-loader-relative
+                                  >
+                                    <div class="loader" data-loader-box>
+                                      <span></span>
+                                    </div>
 
-                            <div
-                              class="catalogy-content__filter-item tablet-none"
-                              data-loader-relative
-                            >
-                              <div class="loader" data-loader-box>
-                                <span></span>
-                              </div>
+                                    <div
+                                      class="select-box select-box--words select-box--noMax"
+                                      data-loading="true"
+                                    >
+                                      <select
+                                        id="select250"
+                                        data-placeholder="Median price"
+                                        data-dropdown-outside
+                                      >
+                                        <option value="">Median price</option>
+                                        <option value="1">$ 750k</option>
+                                        <option value="2">$ 700k</option>
+                                        <option value="3">$ 650k</option>
+                                        <option value="4">$ 600k</option>
+                                      </select>
+                                    </div>
+                                  </div>
 
-                              <div
-                                class="select-box select-box--words select-box--noMax"
-                                data-loading="true"
-                              >
-                                <select
-                                  id="select252"
-                                  data-placeholder="All property types"
-                                >
-                                  <option value="">All property types</option>
-                                  <option value="1">Apartment</option>
-                                  <option value="2">Penthouse</option>
-                                  <option value="3">Duplex</option>
-                                  <option value="4">
-                                    Hotel Apartment Hotel Apartment
-                                  </option>
-                                </select>
-                              </div>
-                            </div>
+                                  <div
+                                    class="catalogy-content__filter-item"
+                                    data-loader-relative
+                                  >
+                                    <div class="loader" data-loader-box>
+                                      <span></span>
+                                    </div>
 
-                            <div
-                              class="catalogy-content__filter-item tablet-none"
-                              data-loader-relative
-                            >
-                              <div class="loader" data-loader-box>
-                                <span></span>
-                              </div>
+                                    <div
+                                      class="select-box select-box--words select-box--noMax"
+                                      data-loading="true"
+                                    >
+                                      <select
+                                        id="select252"
+                                        data-placeholder="All property types"
+                                        data-dropdown-outside
+                                      >
+                                        <option value="">
+                                          All property types
+                                        </option>
+                                        <option value="1">Apartment</option>
+                                        <option value="2">Penthouse</option>
+                                        <option value="3">Duplex</option>
+                                        <option value="4">
+                                          Hotel Apartment Hotel Apartment
+                                        </option>
+                                      </select>
+                                    </div>
+                                  </div>
 
-                              <div
-                                class="select-box select-box--words select-box--noMax"
-                                data-loading="true"
-                              >
-                                <select
-                                  id="select253"
-                                  data-placeholder="Bedrooms"
-                                >
-                                  <option value="">Bedrooms</option>
-                                  <option value="1">some info 1</option>
-                                  <option value="2">some info 2</option>
-                                  <option value="3">some info 3</option>
-                                  <option value="4">some info 4</option>
-                                </select>
-                              </div>
-                            </div>
+                                  <div
+                                    class="catalogy-content__filter-item"
+                                    data-loader-relative
+                                  >
+                                    <div class="loader" data-loader-box>
+                                      <span></span>
+                                    </div>
 
-                            <div class="checkbox-box">
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" checked name="market" />
+                                    <div
+                                      class="select-box select-box--words select-box--noMax"
+                                      data-loading="true"
+                                    >
+                                      <select
+                                        id="select253"
+                                        data-placeholder="Bedrooms"
+                                        data-dropdown-outside
+                                      >
+                                        <option value="">Bedrooms</option>
+                                        <option value="1">some info 1</option>
+                                        <option value="2">some info 2</option>
+                                        <option value="3">some info 3</option>
+                                        <option value="4">some info 4</option>
+                                      </select>
+                                    </div>
+                                  </div>
 
-                                  <div class="check__info-content">
-                                    <span class="p2">1 year</span>
+                                  <div class="checkbox-box tablet-none">
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input
+                                          type="radio"
+                                          checked
+                                          name="market"
+                                        />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">1 year</span>
+                                        </div>
+                                      </div>
+                                    </label>
+
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input type="radio" name="market" />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">3 year</span>
+                                        </div>
+                                      </div>
+                                    </label>
+
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input type="radio" name="market" />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">5 year</span>
+                                        </div>
+                                      </div>
+                                    </label>
+
+                                    <label class="check">
+                                      <div class="check__info">
+                                        <input type="radio" name="market" />
+
+                                        <div class="check__info-content">
+                                          <span class="p2">All</span>
+                                        </div>
+                                      </div>
+                                    </label>
                                   </div>
                                 </div>
-                              </label>
-
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" name="market" />
-
-                                  <div class="check__info-content">
-                                    <span class="p2">3 year</span>
-                                  </div>
-                                </div>
-                              </label>
-
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" name="market" />
-
-                                  <div class="check__info-content">
-                                    <span class="p2">5 year</span>
-                                  </div>
-                                </div>
-                              </label>
-
-                              <label class="check">
-                                <div class="check__info">
-                                  <input type="radio" name="market" />
-
-                                  <div class="check__info-content">
-                                    <span class="p2">All</span>
-                                  </div>
-                                </div>
-                              </label>
+                              </div>
                             </div>
                           </div>
 
@@ -4597,8 +4693,9 @@
 
                         <div class="catalogy-content__item tablet-show">
                           <button
-                            class="button button--rounded-md button--bg-secondary-300"
+                            class="button button--rounded-md button--bg-secondary-300 modal-open "
                             type="button"
+                            data-modal="marketModal"
                             aria-label="Открыть модалку Show detailed market insights"
                           >
                             <p class="p3 medium-font">
@@ -4863,7 +4960,7 @@
       </div>
     </button>
 
-    <div class="accordeon__answer" data-padding-top="20">
+    <div class="accordeon__answer" data-padding-top="40">
       <div class="textbox">
         <p class="p2">
           Purchasing houses or apartments in Dubai worth AED 750,000 (USD
@@ -4890,7 +4987,7 @@
       </div>
     </button>
 
-    <div class="accordeon__answer" data-padding-top="20">
+    <div class="accordeon__answer" data-padding-top="40">
       <div class="textbox">
         <p class="p2">
           Purchasing houses or apartments in Dubai worth AED 750,000 (USD
@@ -4917,7 +5014,7 @@
       </div>
     </button>
 
-    <div class="accordeon__answer" data-padding-top="20">
+    <div class="accordeon__answer" data-padding-top="40">
       <div class="textbox">
         <p class="p2">
           Purchasing houses or apartments in Dubai worth AED 750,000 (USD
@@ -4942,7 +5039,7 @@
       </div>
     </button>
 
-    <div class="accordeon__answer" data-padding-top="20">
+    <div class="accordeon__answer" data-padding-top="40">
       <div class="textbox">
         <p class="p2">
           Purchasing houses or apartments in Dubai worth AED 750,000 (USD
@@ -5308,6 +5405,7 @@
                   <div class="banner-news">
                     <header class="banner-news__header">
                       <p class="h6">Subscribe to our newsletter</p>
+
                       <div class="textbox">
                         <p class="p2">
                           You'll receive one email per week with exclusive
@@ -5402,6 +5500,7 @@
 </div>
 
 </div>
+
 
 
 <footer class="footer">
@@ -5645,7 +5744,15 @@
 
                 <div class="special-input__details">
                   <button
-                    class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
+                    class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open tablet-none"
+                    type="submit"
+                    data-modal="successRequestModal"
+                  >
+                    Subscribe
+                  </button>
+
+                  <button
+                    class="button button--bg-primary-100 button--lg br-el--rounded-3xl modal-open tablet-show"
                     type="submit"
                     data-modal="successRequestModal"
                   >
@@ -6638,272 +6745,402 @@
 <script src="/js/lib/imask.min.js" type="module"></script>
 <script src="/js/page.js" type="module"></script>
 
-      <div class="modalBlock modalSecond marketModal">
-  <div class="modalBlock__inner modalSecond__inner">
-    <header class="modalSecond__header">
-      <div class="modalSecond__header-block">
+      <div class="modalBlock marketModal modalBox modalTableBox">
+  <div class="modalBlock__inner marketModal__inner">
+    <header class="modalBlock__head modalBlock__head--static">
+      <div class="modalBlock__head-block">
         <button
-          class="modal-close button button--cub-big button--secondary"
+          class="button button--cub button--bg-secondary-200 button--cub-md-add modal-close"
           type="button"
           aria-label="Закрыть модалку"
         >
-          <span class="icon" style="rotate: -180deg">
+          <span class="icon icon--little" style="rotate: -180deg">
             <svg>
               <use xlink:href="#arrow-line-icon"></use>
             </svg>
           </span>
         </button>
 
-        <p class="h4">Detailed Market Insights</p>
+        <p class="h6-add">Detailed Market Insights</p>
       </div>
     </header>
 
-    <div class="dropdown dropdown--select input-box">
-      <button class="dropdown__toggle input-box__info" type="button">
-        <p class="dropdown__active p2"></p>
+    <div class="modalBlock__content">
+      <div class="modalBlock__swiper-box">
+        <div class="table-swiper swiper-box">
+          <div class="table-swiper__header">
+            <div class="swiper-box__decor-full">
+              <button
+                class="button button--noMassa arrow-swiper prev"
+                type="button"
+                aria-label="Посомтреть прошлый слайд"
+              >
+                <span class="icon icon--sm">
+                  <svg>
+                    <use xlink:href="#arrow-icon"></use>
+                  </svg>
+                </span>
+              </button>
 
-        <span class="icon arrow">
-          <svg>
-            <use xlink:href="#arrow-bottom-icon"></use>
-          </svg>
-        </span>
-      </button>
+              <div class="swiper-pagination"></div>
 
-      <div class="dropdown__content">
-        <ul class="dropdown__list">
-          <li class="dropdown__link">
-            <span class="dropdown__item active dropdown-item-close">
-              <span class="p2">Dubai 1</span>
-            </span>
-          </li>
+              <button
+                class="button button--noMassa arrow-swiper next"
+                type="button"
+                aria-label="Посомтреть прошлый слайд"
+              >
+                <span class="icon icon--sm">
+                  <svg>
+                    <use xlink:href="#arrow-icon"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 2</span>
-            </span>
-          </li>
+          <div class="table-swiper__box">
+            <div class="swiper swiper--market">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="table-grid table-grid--two">
+                    <div class="table-grid__header">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Key Indicators</p>
+                        </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 3</span>
-            </span>
-          </li>
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Dubai</p>
+                        </div>
+                      </div>
+                    </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 4</span>
-            </span>
-          </li>
+                    <div class="table-grid__items">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 5</span>
-            </span>
-          </li>
-        </ul>
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="table-grid table-grid--two">
+                    <div class="table-grid__header">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Key Indicators</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Kazan</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="table-grid__items">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 550,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 61,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 7680,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="modalSecond__content">
-      <table class="market-table market-table--two-grid market-table--noHead">
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-      </table>
     </div>
   </div>
 </div>
@@ -7168,7 +7405,7 @@
             </div>
           </div>
 
-          <div class="filterModal__items-box">
+          <div class="filterModal__items-box lg-none">
             <p class="h6">Main parameters</p>
 
             <div class="filterModal__items-boxs">
@@ -7308,7 +7545,6 @@
                     <div class="check__info-content">
                       <span class="p2">Off-Plan</span>
                     </div>
-
                   </div>
                 </label>
               </div>
@@ -7318,7 +7554,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Property</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-four"
+            >
               <div
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Property type"
@@ -7445,7 +7683,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Building</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-twelve"
+            >
               <div
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Completion year"
@@ -7542,7 +7782,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Finance</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-three"
+            >
               <div class="dropdown dropdown--price input-box">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
@@ -7728,7 +7970,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Environment</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-three"
+            >
               <div
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="To the sea"
@@ -7773,7 +8017,9 @@
           <div class="filterModal__items-box">
             <p class="h6">Environment</p>
 
-            <div class="filterModal__items-boxs">
+            <div
+              class="filterModal__items-boxs filterModal__items-boxs--media-two filterModal__items-boxs--tablet-two"
+            >
               <label class="check-simple check-simple--center">
                 <div class="check-simple__content">
                   <div class="check-simple__custom">
@@ -8036,8 +8282,10 @@
 
       <div class="filterModal__footer">
         <div class="filterModal__footer-box">
-          <div class="filterModal__footer-btns">
-            <button class="button button--noMassa text-secondary-300">
+          <div
+            class="filterModal__footer-btns filterModal__footer-btns--media-big"
+          >
+            <button class="button button--noMassa text-secondary-300 lg-none">
               <span class="icon icon--little">
                 <svg>
                   <use xlink:href="#undo-icon"></use>
@@ -8046,10 +8294,30 @@
 
               <p class="p2 medium-font">Clear filters</p>
             </button>
+
+            <button class="button button--noMassa lg-show modal-close text-dark-200">
+              <span class="icon icon--little">
+                <svg>
+                  <use xlink:href="#close-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p3 medium-font">Close</p>
+            </button>
+
+            <button class="button button--noMassa text-primary-100 lg-show">
+              <span class="icon icon--little">
+                <svg>
+                  <use xlink:href="#undo-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p3 medium-font">Clear filters</p>
+            </button>
           </div>
 
           <div class="filterModal__footer-btns">
-            <button class="button button--bg-gray-300 modal-close">
+            <button class="button button--bg-gray-300 modal-close lg-none text-dark-200">
               <span class="icon icon--little">
                 <svg>
                   <use xlink:href="#close-icon"></use>
@@ -8059,7 +8327,7 @@
               <p class="p2 medium-font">Close</p>
             </button>
 
-            <button class="button button--bg-primary-100">
+            <button class="button button--bg-primary-100 modal-close">
               <span class="icon icon--little">
                 <svg>
                   <use xlink:href="#save-icon"></use>
@@ -8067,6 +8335,18 @@
               </span>
 
               <p class="p2 medium-font">Apply</p>
+            </button>
+          </div>
+        </div>
+
+        <div class="tablet-show">
+          <div class="filterModal__footer-info">
+            <button type="button" class="button button--noMassa modal-close">
+              <p class="p3 medium-font text-secondary-100">Saved searches</p>
+            </button>
+
+            <button type="button" class="button button--noMassa modal-close">
+              <p class="p3 medium-font text-secondary-100">Save search</p>
             </button>
           </div>
         </div>

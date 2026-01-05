@@ -308,7 +308,7 @@ export const initSelects = () => {
       plugins.optgroup_columns = { equalWidth: true };
     }
 
-    hiddenLoader(select)
+    hiddenLoader(select);
 
     const ts = new TomSelect(select, {
       maxItems: isMultiple ? null : 1,
@@ -325,6 +325,19 @@ export const initSelects = () => {
       onInitialize: function () {
         const self = this;
 
+        const findAndDisableInput = () => {
+          const tsControl = self.control;
+
+          if (tsControl) {
+            const input = tsControl.querySelector("input");
+
+            input.setAttribute("readonly", "true");
+          }
+        };
+
+        setTimeout(findAndDisableInput, 0);
+        setTimeout(findAndDisableInput, 100);
+
         const updateCounter = setupEventListeners(
           self,
           isMultiple,
@@ -333,8 +346,8 @@ export const initSelects = () => {
         setupCheckboxHandlers(self, hasCheckboxes, updateCounter);
         setupMultipleSelectHandlers(self, isMultiple, select, updateCounter);
 
-        self.on('dropdown_open', function() {
-          closeAllDropdowns(); 
+        self.on("dropdown_open", function () {
+          closeAllDropdowns();
         });
 
         if (updateCounter) {

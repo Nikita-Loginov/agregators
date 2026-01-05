@@ -41,8 +41,8 @@
   }
 
   &--md {
-    min-height: 36px;
-    padding: 2px 16px;
+    min-height: calculate-clamp(30px, 36px, 1023px, 767px);
+    padding: 2px calculate-clamp(8px, 16px, 1023px, 767px);
     font-size: var(--font-size-xs);
   }
 
@@ -137,7 +137,7 @@
   }
 
   &--rounded-3xl {
-    border-radius: var(--radius-3xl);
+    border-radius: calculate-clamp(8px, 24px, 1012px, 480px);
   }
 
   &--circle {

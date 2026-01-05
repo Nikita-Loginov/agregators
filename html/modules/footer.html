@@ -2,6 +2,7 @@
   @@include('../modules/cookies.html')
 </div>
 
+
 @@if (typeof inner !== 'undefined' && inner !== 'true') {
 <footer class="footer">
   <div class="footer-top">
@@ -244,7 +245,15 @@
 
                 <div class="special-input__details">
                   <button
-                    class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
+                    class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open tablet-none"
+                    type="submit"
+                    data-modal="successRequestModal"
+                  >
+                    Subscribe
+                  </button>
+
+                  <button
+                    class="button button--bg-primary-100 button--lg br-el--rounded-3xl modal-open tablet-show"
                     type="submit"
                     data-modal="successRequestModal"
                   >

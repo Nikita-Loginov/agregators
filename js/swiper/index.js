@@ -7,6 +7,25 @@ export const MOUSE_WHEEL_CONFIG = {
   eventsTarget: "container",
 };
 
+export const TABLE_OPTIONS = {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  speed: 0,
+  followFinger: false,
+  touchReleaseOnEdges: true,
+  allowTouchMove: false,
+  simulateTouch: false,
+  shortSwipes: false,
+  longSwipes: false,
+  allowSlidePrev: true,
+  allowSlideNext: true,
+  preventInteractionOnTransition: true,
+  touchRatio: 0,
+  touchAngle: 0,
+  grabCursor: false,
+  mousewheel: false,
+};
+
 export const SWIPERS = {
   IMG_GOODS: {
     selector: ".catalogy .swiper--good-img",
@@ -79,11 +98,12 @@ export const SWIPERS = {
   GALLERY_BIG: {
     selector: ".gallery .swiper--gallery-big",
     breakpoint: 122300000000,
-   
+
     options: {
       slidesPerView: 1,
       spaceBetween: 16,
       mousewheel: MOUSE_WHEEL_CONFIG,
+
       pagination: {
         el: ".gallery .swiper--gallery-big .swiper-pagination",
       },
@@ -97,7 +117,7 @@ export const SWIPERS = {
   GALLERY_SMALL: {
     selector: ".gallery .swiper--gallery-small",
     breakpoint: 122300000000,
-    
+
     options: {
       slidesPerView: 3,
       spaceBetween: 8,
@@ -112,7 +132,7 @@ export const SWIPERS = {
   PROPERTY: {
     selector: ".object-bottom__property-swiper-box .swiper--property",
     breakpoint: 122300000000,
-    
+
     options: {
       slidesPerView: 3,
       spaceBetween: 14,
@@ -125,7 +145,7 @@ export const SWIPERS = {
   COMPARISON: {
     selector: ".comparison .swiper--comparison",
     breakpoint: 122300000000,
-    
+
     options: {
       slidesPerView: 3,
       spaceBetween: 32,
@@ -159,6 +179,26 @@ export const SWIPERS = {
           slidesPerView: 2,
         },
       },
+    },
+  },
+  MARKET_TABLE: {
+    selector: ".marketModal .swiper--market",
+    breakpoint: 122300000000,
+    options: {
+      ...TABLE_OPTIONS,
+
+      navigation: {
+        nextEl: ".marketModal .table-swiper .arrow-swiper.next",
+        prevEl: ".marketModal .table-swiper .arrow-swiper.prev",
+      },
+
+      pagination: {
+        el: ".marketModal .table-swiper .swiper-pagination",
+        type: 'custom',
+        renderCustom: function(swiper, current, total) {
+          return `<span class="current-slide">${current}</span>/<span class="total-slides">${total}</span>`;
+        }
+      }
     },
   },
 };

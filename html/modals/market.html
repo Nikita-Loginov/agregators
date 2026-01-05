@@ -1,269 +1,399 @@
-<div class="modalBlock modalSecond marketModal">
-  <div class="modalBlock__inner modalSecond__inner">
-    <header class="modalSecond__header">
-      <div class="modalSecond__header-block">
+<div class="modalBlock marketModal modalBox modalTableBox">
+  <div class="modalBlock__inner marketModal__inner">
+    <header class="modalBlock__head modalBlock__head--static">
+      <div class="modalBlock__head-block">
         <button
-          class="modal-close button button--cub-big button--secondary"
+          class="button button--cub button--bg-secondary-200 button--cub-md-add modal-close"
           type="button"
           aria-label="Закрыть модалку"
         >
-          <span class="icon" style="rotate: -180deg">
+          <span class="icon icon--little" style="rotate: -180deg">
             <svg>
               <use xlink:href="#arrow-line-icon"></use>
             </svg>
           </span>
         </button>
 
-        <p class="h4">Detailed Market Insights</p>
+        <p class="h6-add">Detailed Market Insights</p>
       </div>
     </header>
 
-    <div class="dropdown dropdown--select input-box">
-      <button class="dropdown__toggle input-box__info" type="button">
-        <p class="dropdown__active p2"></p>
+    <div class="modalBlock__content">
+      <div class="modalBlock__swiper-box">
+        <div class="table-swiper swiper-box">
+          <div class="table-swiper__header">
+            <div class="swiper-box__decor-full">
+              <button
+                class="button button--noMassa arrow-swiper prev"
+                type="button"
+                aria-label="Посомтреть прошлый слайд"
+              >
+                <span class="icon icon--sm">
+                  <svg>
+                    <use xlink:href="#arrow-icon"></use>
+                  </svg>
+                </span>
+              </button>
 
-        <span class="icon arrow">
-          <svg>
-            <use xlink:href="#arrow-bottom-icon"></use>
-          </svg>
-        </span>
-      </button>
+              <div class="swiper-pagination"></div>
 
-      <div class="dropdown__content">
-        <ul class="dropdown__list">
-          <li class="dropdown__link">
-            <span class="dropdown__item active dropdown-item-close">
-              <span class="p2">Dubai 1</span>
-            </span>
-          </li>
+              <button
+                class="button button--noMassa arrow-swiper next"
+                type="button"
+                aria-label="Посомтреть прошлый слайд"
+              >
+                <span class="icon icon--sm">
+                  <svg>
+                    <use xlink:href="#arrow-icon"></use>
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 2</span>
-            </span>
-          </li>
+          <div class="table-swiper__box">
+            <div class="swiper swiper--market">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="table-grid table-grid--two">
+                    <div class="table-grid__header">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Key Indicators</p>
+                        </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 3</span>
-            </span>
-          </li>
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Dubai</p>
+                        </div>
+                      </div>
+                    </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 4</span>
-            </span>
-          </li>
+                    <div class="table-grid__items">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
 
-          <li class="dropdown__link">
-            <span class="dropdown__item dropdown-item-close">
-              <span class="p2">Dubai 5</span>
-            </span>
-          </li>
-        </ul>
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="table-grid table-grid--two">
+                    <div class="table-grid__header">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Key Indicators</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 semibold-font">Kazan</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="table-grid__items">
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 550,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 61,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 7680,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 520,000</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Median price per m² (sqm)</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 6,320</p>
+                        </div>
+                      </div>
+
+                      <div class="table-grid__row">
+                        <div class="table-grid__cell">
+                          <p class="p3">Average Price</p>
+                        </div>
+
+                        <div class="table-grid__cell">
+                          <p class="p3 medium-font">$ 480,500</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="modalSecond__content">
-      <table class="market-table market-table--two-grid market-table--noHead">
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">Median Price</p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-
-        <tr>
-          <td>
-            <p class="p3" style="color: var(--dark-color-500)">
-              Median price per m² (sqm)
-            </p>
-          </td>
-
-          <td>
-            <p class="p3 medium-font">$ 520,000</p>
-          </td>
-        </tr>
-      </table>
     </div>
   </div>
 </div>

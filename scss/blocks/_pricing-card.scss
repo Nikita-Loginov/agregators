@@ -1,5 +1,5 @@
 .pricing-card {
-  padding: 16px 20px;
+  padding: calculate-clamp(8px, 16px, 1023px, 767px) calculate-clamp(12px, 20px, 767px, 480px);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -12,12 +12,12 @@
   }
 
   &--small {
-    padding: 8px 12px;
+    padding: calculate-clamp(6px, 8px, 1023px, 767px) calculate-clamp(8px, 12px, 767px, 480px);
     gap: 0;
 
     .pricing-card {
       &__footer {
-        gap: 8px;
+        gap: calculate-clamp(4px, 8px, 1023px, 767px);
       }
 
       &__block {
@@ -72,6 +72,13 @@
 
     &.red {
       color: var(--primary-color-500);
+    }
+  }
+
+  @media(max-width: $tablet-breakpoint) {
+    &--gray  {
+      background-color: transparent;
+      border: 1px solid var(--gray-color-300);
     }
   }
 }

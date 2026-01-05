@@ -80,7 +80,7 @@ html {
   --radius-lg: 14px;
   --radius-xl: 16px;
   --radius-2xl: 20px;
-  --radius-3xl: #{calculate-clamp(8px, 24px, 1012px, 480px)};
+  --radius-3xl: 24px;
   --radius-4xl: 28px;
   --radius-5xl: 32px;
 

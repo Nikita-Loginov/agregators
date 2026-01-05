@@ -17,9 +17,9 @@ import { initCharts } from "./modules/chart.js";
 import { charts } from "./data/chart.js";
 
 const swipers = [
-  // {
-  //   ...SWIPERS.PRICING_CARD,
-  // },
+  {
+    ...SWIPERS.MARKET_TABLE,
+  },
 ];
 
 const handleGlobalClick = (e) => {

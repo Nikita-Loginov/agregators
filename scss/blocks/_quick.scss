@@ -55,35 +55,14 @@
       gap: 8px;
     }
 
-    &.more {
-      .quick {
-        &__block {
-          &:nth-child(-n + 99999) {
-            display: flex;
-          }
-        }
-      }
-    }
-
-    &--ten {
-      .quick__block {
-        &:nth-child(-n + 9) {
-          display: flex;
-        }
-      }
-    }
   }
 
   &__block {
-    display: none;
+    display: flex;
     align-items: center;
     gap: 8px;
     width: fit-content;
     flex-wrap: wrap;
-
-    &:nth-child(-n + 6) {
-      display: flex;
-    }
   }
 
   &__mean {
@@ -99,7 +78,11 @@
   }
 
   @media (max-width: 767px) {
-    --padding-left-title: 0px;
+    // --padding-left-title: 0px;
+
+    // &__title {
+    //   padding: 10px 16px;
+    // }
 
     &__items {
       grid-template-columns: repeat(2, 1fr);

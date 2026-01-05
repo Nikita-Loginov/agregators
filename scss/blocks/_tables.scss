@@ -131,3 +131,18 @@
     }
   }
 }
+
+.table-swiper {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    margin-left: auto;
+    width: fit-content;
+  }
+
+  &__box {
+    width: 100%;
+    min-width: 0;
+  }
+}

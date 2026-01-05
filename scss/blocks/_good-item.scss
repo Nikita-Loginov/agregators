@@ -134,6 +134,7 @@
     svg {
       width: 100%;
       height: 100%;
+      object-fit: cover;
     }
   }
 
@@ -224,5 +225,25 @@
   &__top-btns {
     display: flex;
     gap: 4px;
+  }
+
+  @media(max-width:$tablet-breakpoint) {
+    display: flex;
+    flex-direction: column;
+
+    &__btns {
+      width: 100%;
+
+      .button {
+        &:first-child {
+          width: 100%;
+        }
+      }
+    }
+
+    &__decors-img {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }

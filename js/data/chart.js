@@ -31,7 +31,7 @@ export const charts = {
             pointBackgroundColor: "#DA0B35",
             pointBorderColor: "#FFFFFF",
             pointBorderWidth: 2,
-            pointRadius: 6,
+            pointRadius: window.innerWidth <= 768 ? 0 : 6,
             pointHoverRadius: 8,
             borderWidth: 2,
             tension: 0.4,
@@ -48,7 +48,7 @@ export const charts = {
             pointBackgroundColor: "#636899",
             pointBorderColor: "#FFFFFF",
             pointBorderWidth: 2,
-            pointRadius: 6,
+            pointRadius: window.innerWidth <= 768 ? 0 : 6,
             pointHoverRadius: 8,
             borderWidth: 2,
             tension: 0.4,
@@ -61,11 +61,25 @@ export const charts = {
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         devicePixelRatio: getRetinaDPR() || 1,
         scales: {
           x: {
             ticks: {
               color: "#6C7280",
+              autoSkip: true,
+              autoSkipPadding: 10,
+              callback: function (value, index, values) {
+                if (window.innerWidth <= 768) {
+                  const labels = ["Jan", "Jun", "Dec"];
+                  if (index === 0) return labels[0];
+                  if (index === 5) return labels[1];
+                  if (index === 11) return labels[2];
+                  return null;
+                }
+
+                return this.getLabelForValue(value);
+              },
             },
             grid: {
               display: false,
@@ -82,9 +96,18 @@ export const charts = {
             ticks: {
               color: "#6C7280",
               callback: function (value) {
+                if (window.innerWidth <= 768) {
+                  if (value === 500) return "$ 500k";
+                  if (value === 600) return "$ 600k";
+                  if (value === 700) return "$ 700k";
+                  return null;
+                }
+
                 return `$ ${value}k`;
               },
-              stepSize: 50,
+              stepSize: function (context) {
+                return window.innerWidth <= 768 ? 100 : 50;
+              },
             },
             title: {
               display: false,
@@ -102,22 +125,16 @@ export const charts = {
       },
     },
   },
-  priceChange : {
+  priceChange: {
     id: "chart-price-change",
     config: {
       type: "line",
       data: {
-        labels: [
-          "01.2024",
-          "",
-          "",
-          "06.2024",
-          "12.2024",
-        ],
+        labels: ["01.2024", "", "", "06.2024", "12.2024"],
         datasets: [
           {
             label: "Dynamics of Price Change",
-            data: [172000,175000, 171000, 185000, 187000],
+            data: [172000, 175000, 171000, 185000, 187000],
             borderColor: "#636899",
             backgroundColor: "transparent",
             pointBackgroundColor: "#636899",
@@ -152,12 +169,12 @@ export const charts = {
           },
           y: {
             beginAtZero: false,
-            position: 'right',
+            position: "right",
             min: 170000,
             max: 190000,
             ticks: {
               color: "#6C7280",
-              
+
               stepSize: 10000,
             },
             title: {
@@ -175,5 +192,5 @@ export const charts = {
         },
       },
     },
-  }
+  },
 };

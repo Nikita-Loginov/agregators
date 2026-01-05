@@ -6,7 +6,7 @@
   display: none;
   flex-direction: column;
   gap: 10px;
-  padding: 28px 32px;
+  padding: calculate-clamp(16px, 28px, 1023px, 767px) calculate-clamp(16px, 32px, 1023px, 767px);
 
   &.active {
     display: flex;

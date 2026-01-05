@@ -198,6 +198,7 @@ body .wrapper {
   background-color: var(--white-color);
   border-radius: var(--radius-md);
   border: 1px solid var(--gray-color-400);
+  white-space: nowrap;
 }
 
 .scroll-max {
@@ -458,6 +459,20 @@ body .wrapper {
     }
   }
 
+  &:not(.more-block--grid).more-block--three {
+    & > *:not(:nth-child(-n + 3)) {
+      display: none;
+    }
+
+    & > *:nth-child(-n + 3) {
+      display: block;
+    }
+
+    & > *:nth-child(-n + 3) {
+      display: block;
+    }
+  }
+
   &:not(.more-block--grid).more-block--eight {
     & > *:not(:nth-child(-n + 8)) {
       display: none;
@@ -468,6 +483,20 @@ body .wrapper {
     }
 
     & > *:nth-child(-n + 8) {
+      display: block;
+    }
+  }
+
+  &:not(.more-block--grid).more-block--six {
+    & > *:not(:nth-child(-n + 6)) {
+      display: none;
+    }
+
+    & > *:nth-child(-n + 6) {
+      display: block;
+    }
+
+    & > *:nth-child(-n + 6) {
       display: block;
     }
   }
@@ -630,6 +659,12 @@ body .wrapper {
   gap: 10px;
   max-width: 360px;
   width: 100%;
+
+  @media (max-width: $modile-breakpoint) {
+    left: 12px;
+    right: 12px;
+    width: auto;
+  }
 }
 
 

@@ -11,7 +11,7 @@
   position: sticky;
   top: calc(var(--header-height, var(--calback-header-height)));
   background-color: var(--gray-color-100);
-  z-index: 10;
+  z-index: 100;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   text-wrap: nowrap;
@@ -443,11 +443,43 @@ body.scrollBottom .filter {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
+.catalogy-content__filter-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.catalogy-content__filter-block .checkbox-box {
+  width: 100%;
+}
 @media (max-width: 800px) {
   .catalogy-content__filter-items {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+}
+@media (max-width: 767px) {
+  .catalogy-content__filter-items:not(.catalogy-content__filter-items--flex) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .catalogy-content__filter-items:not(.catalogy-content__filter-items--flex) .catalogy-content__filter-item {
+    grid-column: span 2;
+  }
+  .catalogy-content__filter-items:not(.catalogy-content__filter-items--flex) .catalogy-content__filter-item:nth-child(1), .catalogy-content__filter-items:not(.catalogy-content__filter-items--flex) .catalogy-content__filter-item:nth-child(2) {
+    grid-column: span 1;
+  }
+  .catalogy-content__filter .accordeon__item.active .accordeon__answer {
+    padding-top: 8px;
+  }
+  .catalogy-content__filter .accordeon__item.active .accordeon__question .button {
+    background-color: var(--dark-color-200);
+    color: var(--white-color);
   }
 }
 @media (max-width: 600px) {
@@ -549,7 +581,7 @@ body.scrollBottom .catalogy__banners .banner-news {
 }
 
 .pricing-card {
-  padding: 16px 20px;
+  padding: clamp(8px, -15.96875px + 3.125vw, 16px) clamp(12px, -1.3797909408px + 2.787456446vw, 20px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -568,11 +600,11 @@ body.scrollBottom .catalogy__banners .banner-news {
   background-color: var(--gray-color-200);
 }
 .pricing-card--small {
-  padding: 8px 12px;
+  padding: clamp(6px, 0.0078125px + 0.78125vw, 8px) clamp(8px, 1.3101045296px + 1.393728223vw, 12px);
   gap: 0;
 }
 .pricing-card--small .pricing-card__footer {
-  gap: 8px;
+  gap: clamp(4px, -7.984375px + 1.5625vw, 8px);
 }
 .pricing-card--small .pricing-card__block {
   gap: 2px;
@@ -637,6 +669,12 @@ body.scrollBottom .catalogy__banners .banner-news {
 }
 .pricing-card__rating.red {
   color: var(--primary-color-500);
+}
+@media (max-width: 767px) {
+  .pricing-card--gray {
+    background-color: transparent;
+    border: 1px solid var(--gray-color-300);
+  }
 }
 
 .market-table {

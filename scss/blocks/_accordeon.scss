@@ -45,6 +45,7 @@
 
             &__answer {
               padding-inline: var(--padding-inline);
+              padding-top: 8px;
             }
           }
         }
@@ -104,6 +105,24 @@
       }
 
       @media (max-width: $lg-breakpoint) {
+        &__answer {
+          max-height: 0;
+        }
+
+        &__question {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  &--tablet {
+    .accordeon {
+      &__answer {
+        max-height: max-content;
+      }
+
+      @media (max-width: $tablet-breakpoint) {
         &__answer {
           max-height: 0;
         }

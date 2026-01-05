@@ -32,4 +32,29 @@
   .swiper-slide {
     height: auto;
   }
+
+  &__decor-full {
+    background-color: var(--secondary-color-200);
+    min-height: 40px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top-right-radius: var(--radius-3xl);
+    border-top-left-radius: var(--radius-3xl);
+    width: 146px;
+    gap: 16px;
+    color: var(--dark-color-500);
+    font-size: var(--font-size-2xs);
+
+    .arrow-swiper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 16px;
+      height: 16px;
+      font-size: 16px;
+      color: var(--secondary-color-300);
+    }
+  }
 }

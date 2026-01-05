@@ -300,11 +300,57 @@
     }
   }
 
-  @media (max-width:800px) {
+  &__filter-block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+
+    .checkbox-box {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 800px) {
     &__filter-items {
       display: flex;
     }
-   
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__filter-items {
+      &:not(.catalogy-content__filter-items--flex) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .catalogy-content__filter-item {
+          grid-column: span 2;
+          &:nth-child(1),
+          &:nth-child(2) {
+            grid-column: span 1;
+          }
+        }
+      }
+    }
+
+    &__filter {
+      .accordeon {
+        &__item {
+          &.active {
+            .accordeon__answer {
+              padding-top: 8px;
+            }
+
+            .accordeon__question {
+              .button {
+                background-color: var(--dark-color-200);
+                color: var(--white-color);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   @media (max-width: 600px) {
