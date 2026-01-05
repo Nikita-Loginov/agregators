@@ -89,7 +89,7 @@
           flex-direction: column;
   gap: 16px;
   position: sticky;
-  top: calc(var(--header-height, 140px));
+  top: calc(var(--header-height, var(--calback-header-height)));
   background-color: var(--gray-color-100);
   z-index: 10;
   -webkit-transition: all 0.5s;
@@ -123,7 +123,7 @@
 }
 .filter__items {
   display: grid;
-  grid-template-columns: auto 91px auto 160px 160px auto auto auto;
+  grid-template-columns: 260px 91px auto 160px 160px auto auto auto;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -176,6 +176,16 @@
       -ms-flex-align: center;
           align-items: center;
   gap: var(--gap-details);
+}
+@media (max-width: 1439px) {
+  .filter__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .filter__item:not(:has(.button)) {
+    width: 100%;
+  }
 }
 
 body.scrollBottom .filter {

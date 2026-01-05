@@ -1,4 +1,5 @@
 import { closeAllDropdowns } from "./dropdown.js";
+import { hiddenLoader } from "./loader.js";
 
 const collectOptionsData = (select) => {
   const groups = {};
@@ -306,6 +307,8 @@ export const initSelects = () => {
     if (optgroups.length > 0) {
       plugins.optgroup_columns = { equalWidth: true };
     }
+
+    hiddenLoader(select)
 
     const ts = new TomSelect(select, {
       maxItems: isMultiple ? null : 1,

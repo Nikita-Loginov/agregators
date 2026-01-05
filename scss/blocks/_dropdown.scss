@@ -67,6 +67,11 @@
       left: 0;
       right: auto;
     }
+
+    &.right {
+      right: 0;
+      left: auto;
+    }
   }
 
   &__list {
@@ -114,6 +119,7 @@
       .dropdown__btn {
         border-color: var(--secondary-color-100);
         color: var(--secondary-color-100);
+        
 
         .check {
           display: flex;
@@ -123,6 +129,10 @@
           margin-left: auto;
         }
       }
+    }
+
+    .dropdown__btn {
+      background-color: var(--white-color);
     }
   }
 

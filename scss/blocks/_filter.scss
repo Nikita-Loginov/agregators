@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: 16px;
   position: sticky;
-  top: calc(var(--header-height, 140px));
+  top: calc(var(--header-height, var(--calback-header-height)));
   background-color: var(--gray-color-100);
   z-index: 10;
   transition: all 0.5s;
@@ -24,16 +24,15 @@
   }
 
   &--big {
-   
     .filter {
-     &__item {
-      width: 100%;
-     }
+      &__item {
+        width: 100%;
+      }
 
-     &__items {
-      grid-template-columns: 40% 91px auto 160px 160px 110px auto auto auto;
-      justify-content: flex-start;
-     }
+      &__items {
+        grid-template-columns: 40% 91px auto 160px 160px 110px auto auto auto;
+        justify-content: flex-start;
+      }
     }
 
     .ts-control {
@@ -48,7 +47,7 @@
 
   &__items {
     display: grid;
-    grid-template-columns: auto 91px auto 160px 160px auto auto auto;
+    grid-template-columns: 260px 91px auto 160px 160px auto auto auto;
     justify-content: space-between;
     width: 100%;
     gap: 8px;
@@ -89,6 +88,19 @@
     display: flex;
     align-items: center;
     gap: var(--gap-details);
+  }
+
+  @media (max-width: $desktop-breakpoint) {
+    &__items {
+      display: flex;
+    }
+
+    &__item {
+      &:not(:has(.button)) {
+        width: 100%;
+      }
+     
+    }
   }
 }
 

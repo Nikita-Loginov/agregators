@@ -1,7 +1,7 @@
 import { getHeightHeader } from "./modules/header.js";
 import { setVar } from "./utils/setVar.js";
 import { toggleDropdown, firstActiveText } from "./modules/dropdown.js";
-import { toggleAccordeonItems } from "./modules/accordeon.js";
+import { toggleAccordeonItems, initAccordeonActiveItems } from "./modules/accordeon.js";
 import { initModal, checkStartOpen } from "./modules/modal.js";
 import { checkScrollY } from "./modules/header.js";
 import { initMenu } from "./modules/menu.js";
@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   serVars();
   firstActiveText();
   initSelects();
+  initAccordeonActiveItems()
 
   document.addEventListener("click", handleGlobalEvents);
   document.addEventListener("input", onChangeInput);

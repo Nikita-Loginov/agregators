@@ -43,3 +43,114 @@
                                   @@include('../btns/comparison-btn.html', {"classAdd" :
                                   "button--bg-gray-200 button--cub button--cub-md-add active"})
                                 </div> -->
+
+<div class="good-item">
+  <div class="good-item__swiper-box">
+    <div class="good-item__img-box">
+      <div class="good-item__decor">
+        <!-- prettier-ignore -->
+
+        @@include('../good-item/badges.html',
+                                        {"complete": true, "check" : true})
+      </div>
+
+      <div class="swiper swiper--good-img">
+        <div class="swiper-wrapper">
+          <!-- prettier-ignore -->
+
+          @@loop('../good-item/slides-imgs.html', [
+                                          {"img": '/img/goods/one'},
+                                          {"img": '/img/goods/two'}
+                                          ])
+        </div>
+
+        <div class="good-item__decors-img">
+          @@include('../swiper/arrows-absolute.html')
+          @@include('../swiper/swiper-pagination-absolute.html')
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="good-item__content">
+    <header class="good-item__header">
+      <div class="good-item__top-box">
+        <div class="good-item__top">
+          <p class="h5 semibold-font good-item__title">
+            761,000
+
+            <span class="text-uppercase p1">AED</span>
+          </p>
+
+          <p class="p1 bold-font text-secondary-300">Apartment</p>
+        </div>
+
+        <div class="good-item__logo">
+          <picture>
+            <source
+              srcset="/img/seller/seller.png 1x, /img/seller/seller.png 2x"
+            />
+            <img src="/img/seller/seller.png" alt="фотография" loading="lazy" />
+          </picture>
+        </div>
+      </div>
+
+      <p
+        class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+      >
+        Apartment, 2 bedroom, 60.11 sq.m. № 3427
+      </p>
+
+      <div class="good-item__tags">
+        <!-- prettier-ignore -->
+
+        @@loop('../components/tag.html', [ 
+                                        { "text": "2 Bedrooms", "icon": "#bed-icon" },
+                                        { "text": "2 Bathrooms", "icon": "#bed-icon" },
+                                        { "text": "1 floor", "icon": "#bed-icon" },
+                                        { "text": "Q2 2026", "icon": "#bed-icon" },
+                                        { "text": "60.11 sq.m.", "icon": "#bed-icon" } ])
+      </div>
+
+      <ul class="list-icon">
+        <!-- prettier-ignore -->
+        @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+      </ul>
+    </header>
+
+    <footer class="good-item__footer">
+      <div class="good-item__btns">
+        <!-- prettier-ignore -->
+
+        @@include('../btns/contact-btn.html', {"text" :
+                                        "Contact Seller", "classAddText" : "p2 medium-font"})
+        
+                                        @@include('../btns/favorite-btn.html', {"classAdd" :
+                                        "button--bg-gray-200 button--cub button--cub-md-add active", "classAddIcon" : ""})
+        
+                                        @@include('../btns/comparison-btn.html', {"classAdd" :
+                                        "button--bg-gray-200 button--cub button--cub-md-add active", "classAddIcon" : ""})
+      </div>
+
+      <div class="good-item__logo">
+        <img src="/img/seller/seller.png" alt="логотип селера" />
+      </div>
+    </footer>
+  </div>
+</div>
+
+<div class="filter__item desktop-none" data-loader-relative>
+  <div class="loader" data-loader-box>
+    <span></span>
+  </div>
+
+  <div class="select-box select-box--words" data-loading="true">
+    <select id="select2" data-placeholder="Property type">
+      <option value="">Property type</option>
+      <option value="1">Apartment</option>
+      <option value="2">Penthouse</option>
+      <option value="3">Duplex</option>
+      <option value="4">Hotel Apartment Hotel Apartment</option>
+    </select>
+  </div>
+</div>

@@ -38,7 +38,7 @@
     gap: 7px;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: $lg-breakpoint) {
     &__list-box {
       @include bg-item;
     }
@@ -84,7 +84,7 @@
     display: none;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: $lg-breakpoint) {
     &__inner {
       display: flex;
       flex-direction: column;
@@ -152,7 +152,7 @@
     padding: 8px 0;
   }
 
-  @media (max-width: 1023px) {
+  @media (max-width: $lg-breakpoint) {
     &__inner {
       display: flex;
       flex-direction: column;

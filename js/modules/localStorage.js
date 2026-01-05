@@ -31,6 +31,8 @@ export const initStorage = (e) => {
   const { target } = e;
   const btn = target.closest(".button");
 
+  if (!btn?.dataset) return;
+
   if (btn.dataset.storageBtn !== undefined) {
     const element = btn.closest("[data-storage-key]");
     if (!element) return;
