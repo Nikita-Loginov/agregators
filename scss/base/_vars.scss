@@ -112,3 +112,10 @@ html {
     --calback-header-height: 72px;
   }
 }
+
+@media (max-width: $mobile-breakpoint) {
+  html {
+    --calback-header-height: 63px;
+  }
+}
+

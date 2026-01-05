@@ -660,7 +660,7 @@ body .wrapper {
   max-width: 360px;
   width: 100%;
 
-  @media (max-width: $modile-breakpoint) {
+  @media (max-width: $mobile-breakpoint) {
     left: 12px;
     right: 12px;
     width: auto;

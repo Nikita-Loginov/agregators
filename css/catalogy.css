@@ -107,6 +107,12 @@
     width: 100%;
   }
 }
+@media (max-width: 479px) {
+  .filter__items {
+    display: grid;
+    grid-template-columns: 40px calc(100% - 80px - 16px) 40px;
+  }
+}
 
 body.scrollBottom .filter {
   position: sticky;

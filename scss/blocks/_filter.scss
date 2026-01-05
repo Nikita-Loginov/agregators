@@ -99,7 +99,13 @@
       &:not(:has(.button)) {
         width: 100%;
       }
-     
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    &__items {
+      display: grid;
+      grid-template-columns: 40px calc(100% - 80px - 16px) 40px;
     }
   }
 }
