@@ -83,6 +83,12 @@
       width: 40px;
       height: 40px;
       flex-shrink: 0;
+      border-radius: var(--radius-base);
+
+      @media (max-width: $tablet-breakpoint) {
+        box-shadow: 0px 5px 12px 0px #0000001A;
+        background-color: var(--white-color);
+      }
     }
 
     * {
@@ -146,12 +152,16 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    padding: 0;
-
-    &__inner {
-      height: 100%;
-      max-height: 100dvh;
-      border-radius: 0;
+    &:not(.modalBlock--media-fit) {
+      padding: 0;
+      
+      .modalBlock {
+        &__inner {
+          height: 100%;
+          max-height: 100dvh;
+          border-radius: 0;
+        }
+      }
     }
   }
 }
@@ -301,7 +311,8 @@
   &__items-box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: calculate-clamp(8px, 20px, 1023px, 767px) calculate-clamp(8px, 28px, 1023px, 767px);
+    gap: calculate-clamp(8px, 20px, 1023px, 767px)
+      calculate-clamp(8px, 28px, 1023px, 767px);
   }
 
   @media (max-width: $tablet-breakpoint) {
@@ -637,6 +648,80 @@
       }
     }
   }
+
+  @media (max-width: $lg-breakpoint) {
+    --padding-top-content: 0;
+
+    &__swiper-box--small,
+    .arrow-swiper,
+    .modalBlock__head .checkbox-box {
+      display: none;
+    }
+
+    .swiper--big-gallery {
+      .galleryModal {
+        &__img {
+          height: 100dvh;
+        }
+      }
+    }
+
+    &__inner {
+      padding: 0;
+    }
+
+    .modalBlock {
+      &__head,
+      &__head--static {
+        position: absolute;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        top: 12px;
+        right: 12px;
+        left: 4px;
+      }
+
+      &__close {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        flex-shrink: 0;
+        transition: all 0.3s;
+
+        &:hover,
+        &:active {
+          background-color: #00000080;
+        }
+      }
+    }
+
+    &__arrows-main {
+      position: absolute;
+      z-index: 10;
+      right: 24px;
+      bottom: 12px;
+
+      .arrow-swiper {
+        display: flex;
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .modalBlock {
+      &__close {
+        background-color: #00000080;
+      }
+    }
+
+    &__arrows-main {
+      left: 24px;
+      justify-content: center;
+    }
+  }
 }
 
 .mapModal {
@@ -644,6 +729,9 @@
     &__inner {
       padding: 8px;
       max-width: var(--container-width);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
     }
   }
 
@@ -653,6 +741,28 @@
     border-radius: var(--radius-md);
     overflow: hidden;
     background-color: var(--secondary-color-200);
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .modalBlock {
+      &__content {
+        height: 100%;
+      }
+      
+      &__inner {
+        gap: 6px;
+      }
+     
+    }
+
+    .tab-item {
+      height: 100%;
+      flex:1;
+    }
+
+    &__map {
+      height: 100%;
+    }
   }
 }
 

@@ -47,13 +47,19 @@ export const initSwiperGallery = (
 
   if (!swiperSmall.classList.contains("swiper-initialized")) {
     initSwiper(swiperSmall, {
-      slidesPerView: 5,
+      slidesPerView: 4,
       spaceBetween: 8,
       watchSlidesProgress: true,
       mousewheel: MOUSE_WHEEL_CONFIG,
       navigation: {
         nextEl: getArrowSwiper(swiperBoxSmall).arrowNext,
         prevEl: getArrowSwiper(swiperBoxSmall).arrowPrev,
+      },
+
+      breakpoints: {
+        1200: {
+          slidesPerView: 5,
+        },
       },
     });
   }
@@ -66,18 +72,36 @@ export const initSwiperGallery = (
 
   const swiperBoxBig = swiperBig.closest(".galleryModal__swiper-box");
 
+  const arrowMainBox = modalBlock.querySelector(
+    ".arrows-swiper.galleryModal__arrows-main"
+  );
+
+  const isModile = window.innerWidth < 1023;
+
   const bigOptions = {
     initialSlide: activeIndex >= 0 ? activeIndex : 0,
     thumbs: { swiper: swiperSmall.swiper },
     navigation: {
-      nextEl: getArrowSwiper(swiperBoxBig).arrowNext,
-      prevEl: getArrowSwiper(swiperBoxBig).arrowPrev,
+      nextEl: isModile
+        ? getArrowSwiper(arrowMainBox).arrowNext
+        : getArrowSwiper(swiperBoxBig).arrowNext,
+      prevEl: isModile
+        ? getArrowSwiper(arrowMainBox).arrowPrev
+        : getArrowSwiper(swiperBoxBig).arrowPrev,
     },
     mousewheel: MOUSE_WHEEL_CONFIG,
+    pagination: {
+      el: ".galleryModal .swiper-pagination",
+      type: "custom",
+      renderCustom: function (swiper, current, total) {
+        return `<span class="current-slide">${current}</span>of<span class="total-slides">${total}</span>`;
+      },
+    },
   };
 
   if (type === "video") {
     bigOptions.on = {
+      ...bigOptions.on,
       init: (swiper) => {
         const activeVideo = slides[swiper.activeIndex].querySelector("video");
 
@@ -102,4 +126,3 @@ export const initSwiperGallery = (
     swiperBig.swiper.slideTo(activeIndex, 0);
   }
 };
-

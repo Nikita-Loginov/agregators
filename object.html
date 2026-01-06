@@ -3346,6 +3346,24 @@
                               </div>
                             </div>
 
+                            <div class="price__change tablet-show">
+                              <button
+                                class="price__change-btn text-primary-500 modal-open"
+                                data-modal="priceModal"
+                                type="button"
+                              >
+                                <span class="icon icon--little">
+                                  <svg>
+                                    <use xlink:href="#arrow-up-line-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">
+                                  – 120,000 AED (-2.7%)
+                                </p>
+                              </button>
+                            </div>
+
                             <div class="price__content">
                               <p class="p3">11,529 AED / sqm</p>
                             </div>
@@ -8088,12 +8106,14 @@
         </label>
       </div>
 
+      <div class="swiper-pagination swiper-pagination--counter lg-show"></div>
+
       <button
         class="modalBlock__close modal-close"
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon" style="color: var(--white-color)">
+        <span class="icon icon--little" style="color: var(--white-color)">
           <svg>
             <use xlink:href="#close-icon"></use>
           </svg>
@@ -8546,10 +8566,39 @@
         </div>
       </div>
     </div>
+
+    <div class="arrows-swiper arrows-swiper--bg galleryModal__arrows-main lg-show">
+      <button
+        class="arrow-swiper prev"
+        type="button"
+        aria-label="Посмотреть прошлый слайд"
+      >
+        <span class="icon icon--big">
+          <svg>
+            <use xlink:href="#arrow-line-icon"></use>
+          </svg>
+        </span>
+      </button>
+
+      <button
+        class="arrow-swiper next"
+        type="button"
+        aria-label="Посмотреть прошлый слайд"
+      >
+        <span class="icon icon--big">
+          <svg>
+            <use xlink:href="#arrow-line-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
   </div>
 </div>
 
-      <div class="modalBlock mapModal tabs-box" data-tab-category="map-popup">
+      <div
+  class="modalBlock mapModal tabs-box"
+  data-tab-category="map-popup"
+>
   <div class="modalBlock__inner modalBlock__inner--big">
     <header class="modalBlock__head modalBlock__head--static">
       <div class="checkbox-box">
@@ -8586,16 +8635,16 @@
         </label>
       </div>
 
-      <p class="h6">
+      <p class="h6 lg-none">
         Apartment in The Bristol Luxury in Dubai Marina, UAE, № 576866
       </p>
 
       <button
-        class="modalBlock__close modalBlock__close--width modal-close"
+        class="modalBlock__close modalBlock__close--width modal-close text-dark-200"
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon">
+        <span class="icon icon--little">
           <svg>
             <use xlink:href="#close-icon"></use>
           </svg>
@@ -8621,7 +8670,86 @@
       >
         <div class="mapModal__map">
           <!-- <div class="map" id="map-3d"></div> -->
-           <p class="h6">Тут будет 3d карта(узнать сервис)</p>
+          <p class="h6">Тут будет 3d карта(узнать сервис)</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="p1 medium-font lg-show">Apartment in The Bristol Luxury in Dubai Marina, UAE, № 576866</p>
+  </div>
+</div>
+ <div class="modalBlock priceModal modalBlock--media-fit">
+  <div class="modalBlock__inner">
+    <header class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon icon--little">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <div class="modalBlock__content">
+      <div class="modalBlock__block">
+        <p class="p1 medium-font" style="text-align: center;">Price history</p>
+
+        <div class="table-grid table-grid--two table-grid--odd">
+          <div class="table-grid__items">
+            <div class="table-grid__row">
+              <div class="table-grid__cell">
+                <time datetime="2025-11-10">10.11.2025</time>
+              </div>
+
+              <div class="table-grid__cell text-green-100">
+                <p class="p3 medium-font">1,102,500 AED</p>
+              </div>
+            </div>
+
+            <div class="table-grid__row">
+              <div class="table-grid__cell">
+                <time datetime="2025-09-23">23.09.2025</time>
+              </div>
+
+              <div class="table-grid__cell text-primary-500">
+                <p class="p3 medium-font">1,095,500 AED</p>
+              </div>
+            </div>
+
+            <div class="table-grid__row">
+              <div class="table-grid__cell">
+                <time datetime="2025-09-06">06.09.2025</time>
+              </div>
+
+              <div class="table-grid__cell text-primary-500">
+                <p class="p3 medium-font">1,095,500 AED</p>
+              </div>
+            </div>
+
+            <div class="table-grid__row">
+              <div class="table-grid__cell">
+                <time datetime="2025-08-17">17.08.2025</time>
+              </div>
+
+              <div class="table-grid__cell text-primary-500">
+                <p class="p3 medium-font">1,095,500 AED</p>
+              </div>
+            </div>
+
+            <div class="table-grid__row">
+              <div class="table-grid__cell">
+                <time datetime="2025-07-31">31.07.2025</time>
+              </div>
+
+              <div class="table-grid__cell">
+                <p class="p3 medium-font">1,095,500 AED</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

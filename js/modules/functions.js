@@ -98,7 +98,7 @@ export const onChangeInput = (e) => {
     if (inputBox) inputBox.classList.remove("has-value");
   }
 
-  if (input.type === "number") {
+  if (input.type === "number" || input.closest('[data-input-number]')) {
     handleNumberInput(input);
   }
 };
@@ -123,6 +123,16 @@ export const getArrowSwiper = (box) => {
   return {
     arrowPrev,
     arrowNext,
+  };
+};
+
+export const getPaginationSwiper = (box) => {
+  if (!box) return;
+
+  const pagination = box.querySelector(".swiper-pagination");
+
+  return {
+    pagination,
   };
 };
 

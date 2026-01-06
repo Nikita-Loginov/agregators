@@ -11,6 +11,20 @@
     right: 10px;
   }
 
+  &--counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #00000080;
+    min-height: 26px;
+    font-size: var(--font-size-2xs);
+    border-radius: var(--radius-2xl);
+    padding: 2px 8px;
+    color: var(--white-color);
+    gap: 4px;
+  }
+
   .swiper-pagination-bullet {
     width: 8px;
     height: 8px;
@@ -48,12 +62,12 @@
     border-radius: 2px;
     transform-origin: left;
   }
-} 
+}
 
 .swiper {
   &:has(.swiper-pagination.swiper-pagination-progressbar) {
-   .swiper-wrapper {
-    margin-bottom: 8px;
-   }
+    .swiper-wrapper {
+      margin-bottom: 8px;
+    }
   }
 }

@@ -636,6 +636,24 @@
                               </div>
                             </div>
 
+                            <div class="price__change tablet-show">
+                              <button
+                                class="price__change-btn text-primary-500 modal-open"
+                                data-modal="priceModal"
+                                type="button"
+                              >
+                                <span class="icon icon--little">
+                                  <svg>
+                                    <use xlink:href="#arrow-up-line-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">
+                                  – 120,000 AED (-2.7%)
+                                </p>
+                              </button>
+                            </div>
+
                             <div class="price__content">
                               <p class="p3">11,529 AED / sqm</p>
                             </div>
@@ -2340,7 +2358,7 @@
 
       @@include('../modules/footer.html', {"inner" : ''})
       @@include('../modals/features.html') @@include('../modals/gallery.html')
-      @@include('../modals/map.html')
+      @@include('../modals/map.html') @@include('../modals/price.html')
     </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>

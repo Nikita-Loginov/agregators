@@ -51,6 +51,24 @@
     }
   }
 
+  &--bg {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .arrow-swiper {
+      min-height: 40px;
+      border-radius: var(--radius-2xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #00000080;
+      color: var(--white-color);
+      padding: 10px;
+      min-width: 70px;
+    }
+  }
+
   .icon {
     width: 12px;
     height: 12px;

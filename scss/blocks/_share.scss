@@ -1,4 +1,6 @@
 .share {
+  
+
   &__bnts {
     display: flex;
     align-items: center;
@@ -16,12 +18,18 @@
     gap: 8px;
   }
 
+  button,
+  a {
+    color: var(--dark-color-200);
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(142px, 1fr));
     max-width: 460px;
     width: 100%;
     gap: 8px;
+   
   }
 
   &__item-box {
