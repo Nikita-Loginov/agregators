@@ -14,14 +14,19 @@ export const initMoreBlocks = (
 
   if (!itemsContainer) return;
 
-  const maxItems = parseInt(itemsContainer.getAttribute("data-max")) || 6;
+  const maxItems = getMaxItems(itemsContainer);
   const allItems = itemsContainer.children;
 
-  if (allItems.length <= maxItems) {
-    const footer = moreItem.querySelector('[data-block="more-footer"]');
+  setVisibleItems(itemsContainer, maxItems);
 
+  const footer = moreItem.querySelector('[data-block="more-footer"]');
+
+  if (allItems.length <= maxItems) {
     if (footer) footer.remove();
+
     return;
+  } else {
+    if (footer) footer.classList.add("visible");
   }
 
   const moreTextFromAttr = moreBtn.getAttribute("data-more-text") || moreText;
@@ -31,11 +36,51 @@ export const initMoreBlocks = (
   const buttonText = itemsContainer.classList.contains("more")
     ? lessTextFromAttr
     : moreTextFromAttr;
-    
+
   moreBtn.querySelector('[data-block="more-btn-text"]').textContent =
     buttonText;
 
   moreBtn.classList.toggle("more");
+
+  if (itemsContainer.classList.contains("more")) {
+    showAllItems(itemsContainer);
+  } else {
+    setVisibleItems(itemsContainer, maxItems);
+  }
+};
+
+const getMaxItems = (container) => {
+  const mediaInit = container.getAttribute("data-media-init");
+  const mediaMax = container.getAttribute("data-media-max");
+  const defaultMax = parseInt(container.getAttribute("data-max")) || 6;
+
+  if (mediaInit && window.innerWidth <= parseInt(mediaInit)) {
+    return mediaMax ? parseInt(mediaMax) : defaultMax;
+  }
+
+  return defaultMax;
+};
+
+const setVisibleItems = (container, maxItems) => {
+  const allItems = container.children;
+
+  Array.from(allItems).forEach((item) => {
+    item.classList.remove("item-visible");
+  });
+
+  Array.from(allItems).forEach((item, index) => {
+    if (index < maxItems) {
+      item.classList.add("item-visible");
+    }
+  });
+};
+
+const showAllItems = (container) => {
+  const allItems = container.children;
+
+  Array.from(allItems).forEach((item) => {
+    item.classList.add("item-visible");
+  });
 };
 
 export const hideUnnecessaryButtons = () => {
@@ -44,14 +89,19 @@ export const hideUnnecessaryButtons = () => {
   );
 
   allItemsContainers.forEach((container) => {
-    const maxItems = parseInt(container.getAttribute("data-max")) || 6;
+    const maxItems = getMaxItems(container);
     const allItems = container.children;
 
+    setVisibleItems(container, maxItems);
+
+    const footer = container
+      .closest('[data-block="more-relative"]')
+      ?.querySelector('[data-block="more-footer"]');
+
     if (allItems.length <= maxItems) {
-      const footer = container
-        .closest('[data-block="more-relative"]')
-        ?.querySelector('[data-block="more-footer"]');
       if (footer) footer.remove();
+    } else {
+      if (footer) footer.classList.add("visible");
     }
   });
 };

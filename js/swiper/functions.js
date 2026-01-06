@@ -45,3 +45,17 @@ export const toggleVideoSwiper = (slide) => {
     activeVideo = video;
   }
 };
+
+export const checkIfDisabledSwiper = (swiper) => {
+  const wrapper = swiper.el;
+  const slides = swiper.slides;
+  const slidesPerView = swiper.params.slidesPerView;
+
+  if (slides.length <= slidesPerView) {
+    wrapper.classList.add("swiper-disabled");
+    swiper.enabled = false;
+  } else {
+    wrapper.classList.remove("swiper-disabled");
+    swiper.enabled = true;
+  }
+};

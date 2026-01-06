@@ -11,6 +11,20 @@
     }
   }
 
+  &--visible {
+    &-tablet {
+      @media (max-width: $tablet-breakpoint) {
+        &:not(:has(.swiper.swiper-disabled)) {
+          overflow: hidden;
+
+          .swiper {
+            overflow: visible;
+          }
+        }
+      }
+    }
+  }
+
   &__block {
     width: 100%;
     min-width: 0;
@@ -27,7 +41,6 @@
       min-width: 0;
     }
   }
-
 
   .swiper-slide {
     height: auto;

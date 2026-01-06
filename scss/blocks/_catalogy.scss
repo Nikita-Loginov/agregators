@@ -98,24 +98,6 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: calculate-clamp(12px, 32px, 1024px, 767px);
-
-    .textbox {
-      & > * {
-        display: none;
-
-        &:nth-child(-n + 1) {
-          display: block;
-        }
-      }
-
-      &.more {
-        & > * {
-          &:nth-child(-n + 99999) {
-            display: block;
-          }
-        }
-      }
-    }
   }
 
   .banner-news {

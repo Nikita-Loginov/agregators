@@ -8,7 +8,7 @@ import { toggleSibebar } from "./modules/sibebar.js";
 
 const swipers = [
   {
-    ...SWIPERS.PRICING_CARD,
+    ...SWIPERS.MAP_SIBEBAR_CARDS,
   },
 ];
 

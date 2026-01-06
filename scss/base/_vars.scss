@@ -61,9 +61,9 @@ html {
   --font-size-base2: #{calculate-clamp(20px, 22px, 767px, 480px)};
   --font-size-base: #{calculate-clamp(18px, 24px, 1023px, 480px)};
   --font-size-md: #{calculate-clamp(20px, 28px, 1023px, 480px)};
-  --font-size-lg: #{calculate-clamp(22px, 30px, 1023px, 480px)};
+  --font-size-lg: #{calculate-clamp(22px, 30px, 1439px, 1023px)};
   --font-size-xl: #{calculate-clamp(24px, 40px, 1023px, 480px)};
-  --font-size-2xl: #{calculate-clamp(28px, 48px, 1023px, 480px)};
+  --font-size-2xl: #{calculate-clamp(28px, 48px, 1023px, 767px)};
   --font-size-3xl: #{calculate-clamp(32px, 60px, 1023px, 480px)};
 
   --line-height-tighter: 1;

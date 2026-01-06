@@ -24,6 +24,7 @@
     transition: all 0.5s;
     color: var(--dark-color-200);
     padding: 8px 12px;
+    text-align: center;
 
     &.active {
       background-color: var(--secondary-color-300);
@@ -43,10 +44,18 @@
     gap: 4px;
   }
 
-  &__content-item {
+  &__content-item,
+  &__header-item {
     display: flex;
     align-items: center;
     gap: 4px;
+  }
+
+  @media (max-width: 370px) {
+    &__btns {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 .text-block {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: calculate-clamp(8px, 16px, 1439px, 1023px);
 }

@@ -3,7 +3,7 @@
 
   &.sibebar-open {
     .sibebar {
-      max-width: 632px;
+      max-width: calculate-clamp(352px, 632px, 1440px, 1023px);
     }
   }
 
@@ -18,12 +18,13 @@
 
   &__content {
     position: relative;
-    height: calc(100dvh - var(--header-height, var(--calback-header-height)) - var(--info-map-height, 14px));
+    height: calc(
+      100dvh - var(--header-height, var(--calback-header-height)) -
+        var(--info-map-height, 14px)
+    );
     display: flex;
     width: 100%;
     background-color: var(--secondary-color-100);
-
-
   }
 
   &__cart {
@@ -34,13 +35,109 @@
   }
 
   &__details {
+    
     position: absolute;
-    right: 16px;
-    top: 16px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 16px;
-    z-index: 10;
+    z-index: 1000;
+    background-color: var(--white-color);
+    padding: 4px 12px 8px;
+    border-radius: var(--radius-xl);
+
+    @media (min-width: 1024px) {
+      right: 16px;
+      top: 16px;
+     
+    }
+  }
+
+  @media (max-width:$lg-breakpoint) {
+    &__details {
+      left: 8px;
+      bottom: 8px;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width:$desktop-breakpoint) {
+    .good-item {
+      min-height: 104px;
+
+      &__swiper-box {
+        aspect-ratio: 1 / 1;
+        // width: auto;
+      }
+
+      .swiper--good-img {
+        .swiper-slide {
+          &:not(:first-child) {
+            display: none;
+          }
+        }
+      }
+
+      &__tags {
+        gap: 6px;
+
+        .tag {
+          background-color: transparent;
+          padding: 0;
+          min-height: 0;
+
+          p {
+            font-size: var(--font-size-3xs);
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .good-item {
+      display: grid;
+      
+
+      &__title {
+        font-size: var(--font-size-base);
+
+        * {
+          font-size: var(--font-size-3xs);
+        }
+      }
+
+      &__header {
+        // gap: 4px;
+      }
+
+      &__content {
+        padding: 8px 12px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column-reverse;
+      background-color: transparent;
+    }
+
+    &.sibebar-open {
+      .sibebar {
+        max-width: 100%;
+        max-height: fit-content;
+        padding: 8px;
+        height: 100%;
+        
+      }
+    }
+
+    .sibebar {
+      max-width: 100%;
+      box-shadow: 0px -8px 8px 0px #A6AFC340;
+      border-radius: var(--radius-md);
+      max-height: 0;
+      
+      overflow: hidden;
+    }
   }
 }

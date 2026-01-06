@@ -12,6 +12,9 @@ import { lagerhauser } from "./data/lagerhauser.js";
 const swipers = [
   {
     ...SWIPERS.ALSO_CARDS
+  },
+  {
+    ...SWIPERS.STATIC_TABLE
   }
 ];
 

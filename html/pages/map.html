@@ -18,156 +18,217 @@
               <div class="filter filter--big filter--bg">
                 <div class="filter__box">
                   <div class="filter__items">
-                    <div
-                      class="filter__item select-box select-box--big select-box--search with-icon"
-                      data-icon="search"
-                    >
-                      <select
-                        id="search-select"
-                        data-placeholder="Enter location"
-                        multiple
-                        data-search="true"
+                    <div class="filter__item tablet-show">
+                      <button
+                        class="button button--cub button--bg-secondary-200 button--cub-md-add modal-open"
+                        data-modal="filterModal"
                       >
-                        <option value="">Enter location</option>
-                        <option
-                          value="1"
-                          data-type="city"
-                          data-tag="City"
-                          data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
-                          data-short-desc="Dubai, UAE"
-                        >
-                          Dubai
-                        </option>
-                        <option
-                          value="2"
-                          data-type="city"
-                          data-tag="City"
-                          data-desc="Central Business District, Moscow city, Russia"
-                          data-short-desc="Moscow, Russia"
-                        >
-                          Moscow
-                        </option>
-                        <option
-                          value="3"
-                          data-type="city"
-                          data-tag="City"
-                          data-desc="Manhattan borough, New York city, USA"
-                          data-short-desc="New York, USA"
-                        >
-                          New York
-                        </option>
-                        <option
-                          value="4"
-                          data-type="country"
-                          data-tag="Country"
-                          data-desc="Federal republic in Central Europe with rich history and culture"
-                          data-short-desc="Germany"
-                        >
-                          Germany
-                        </option>
-                        <option
-                          value="5"
-                          data-type="country"
-                          data-tag="Country"
-                          data-desc="Island nation in East Asia known for technology and traditions"
-                          data-short-desc="Japan"
-                        >
-                          Japan
-                        </option>
-                        <option
-                          value="6"
-                          data-type="region"
-                          data-tag="Region"
-                          data-desc="Southeastern region of France on the Mediterranean coast"
-                          data-short-desc="Provence, France"
-                        >
-                          Provence
-                        </option>
-                        <option
-                          value="7"
-                          data-type="region"
-                          data-tag="Region"
-                          data-desc="Northern Italian region known for cuisine and automotive industry"
-                          data-short-desc="Emilia-Romagna, Italy"
-                        >
-                          Emilia-Romagna
-                        </option>
-                        <option
-                          value="8"
-                          data-type="district"
-                          data-tag="District"
-                          data-desc="Historic central district of London with government buildings"
-                          data-short-desc="Westminster, London"
-                        >
-                          Westminster
-                        </option>
-                        <option
-                          value="9"
-                          data-type="district"
-                          data-tag="District"
-                          data-desc="Fashionable district in central Paris with luxury boutiques"
-                          data-short-desc="Champs-Élysées, Paris"
-                        >
-                          Champs-Élysées
-                        </option>
-                      </select>
+                        <div class="button__block">
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#filter-second-icon"></use>
+                            </svg>
+                          </span>
+
+                          <p class="p4 text-secondary-100 button__decor-item">
+                            4
+                          </p>
+                        </div>
+                      </button>
                     </div>
 
-                    <div class="filter__item select-box select-box--words">
-                      <select id="select1">
-                        <option value="1" selected>Buy</option>
-                        <option value="2">Rent</option>
-                      </select>
+                    <div class="filter__item" data-loader-relative>
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--noMax select-box--search with-icon"
+                        data-icon="search"
+                        data-loading="true"
+                      >
+                        <select
+                          id="search-select"
+                          data-placeholder="Enter location"
+                          multiple
+                          data-search="true"
+                        >
+                          <option value="">Enter location</option>
+                          <option
+                            value="1"
+                            data-type="city"
+                            data-tag="City"
+                            data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                            data-short-desc="Dubai, UAE"
+                          >
+                            Dubai
+                          </option>
+                          <option
+                            value="2"
+                            data-type="city"
+                            data-tag="City"
+                            data-desc="Central Business District, Moscow city, Russia"
+                            data-short-desc="Moscow, Russia"
+                          >
+                            Moscow
+                          </option>
+                          <option
+                            value="3"
+                            data-type="city"
+                            data-tag="City"
+                            data-desc="Manhattan borough, New York city, USA"
+                            data-short-desc="New York, USA"
+                          >
+                            New York
+                          </option>
+                          <option
+                            value="4"
+                            data-type="country"
+                            data-tag="Country"
+                            data-desc="Federal republic in Central Europe with rich history and culture"
+                            data-short-desc="Germany"
+                          >
+                            Germany
+                          </option>
+                          <option
+                            value="5"
+                            data-type="country"
+                            data-tag="Country"
+                            data-desc="Island nation in East Asia known for technology and traditions"
+                            data-short-desc="Japan"
+                          >
+                            Japan
+                          </option>
+                          <option
+                            value="6"
+                            data-type="region"
+                            data-tag="Region"
+                            data-desc="Southeastern region of France on the Mediterranean coast"
+                            data-short-desc="Provence, France"
+                          >
+                            Provence
+                          </option>
+                          <option
+                            value="7"
+                            data-type="region"
+                            data-tag="Region"
+                            data-desc="Northern Italian region known for cuisine and automotive industry"
+                            data-short-desc="Emilia-Romagna, Italy"
+                          >
+                            Emilia-Romagna
+                          </option>
+                          <option
+                            value="8"
+                            data-type="district"
+                            data-tag="District"
+                            data-desc="Historic central district of London with government buildings"
+                            data-short-desc="Westminster, London"
+                          >
+                            Westminster
+                          </option>
+                          <option
+                            value="9"
+                            data-type="district"
+                            data-tag="District"
+                            data-desc="Fashionable district in central Paris with luxury boutiques"
+                            data-short-desc="Champs-Élysées, Paris"
+                          >
+                            Champs-Élysées
+                          </option>
+                        </select>
+                      </div>
                     </div>
 
-                    <div class="filter__item">
+                    <div
+                      class="filter__item tablet-none"
+                      data-loader-relative
+                      style="max-width: 91px"
+                    >
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--noMax select-box--words"
+                        data-loading="true"
+                      >
+                        <select id="select1">
+                          <option value="1" selected>Buy</option>
+                          <option value="2">Rent</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="filter__item tablet-none">
                       @@include('../components/checkboxs/checkbox-box-filter.html')
                     </div>
 
                     <div
-                      class="filter__item select-box select-box--words"
-                      data-placeholder="Property type"
+                      class="filter__item xl-desktop-none"
+                      data-loader-relative
                     >
-                      <select id="select2">
-                        <option value="">Property type</option>
-                        <option value="1">Apartment</option>
-                        <option value="2">Penthouse</option>
-                        <option value="3">Duplex</option>
-                        <option value="4">
-                          Hotel Apartment Hotel Apartment
-                        </option>
-                      </select>
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--words"
+                        data-loading="true"
+                      >
+                        <select id="select2" data-placeholder="Property type">
+                          <option value="">Property type</option>
+                          <option value="1">Apartment</option>
+                          <option value="2">Penthouse</option>
+                          <option value="3">Duplex</option>
+                          <option value="4">
+                            Hotel Apartment Hotel Apartment
+                          </option>
+                        </select>
+                      </div>
                     </div>
 
                     <div
-                      class="filter__item select-box select-box--words select-box--check"
-                      data-placeholder="Beds & Baths"
+                      class="filter__item xl-desktop-none"
+                      data-loader-relative
                     >
-                      <select id="select3" multiple>
-                        <option value="">Beds & Baths</option>
-                        <option value="beds-studio" data-group="beds">
-                          Studio
-                        </option>
-                        <option value="beds-1" data-group="beds">1</option>
-                        <option value="beds-2" data-group="beds">2</option>
-                        <option value="beds-3" data-group="beds">3</option>
-                        <option value="beds-4" data-group="beds">4</option>
-                        <option value="beds-5" data-group="beds">5</option>
-                        <option value="beds-6" data-group="beds">6</option>
-                        <option value="beds-7" data-group="beds">7</option>
-                        <option value="beds-8" data-group="beds">8</option>
-                        <option value="beds-9" data-group="beds">9</option>
-                        <option value="beds-10" data-group="beds">10+</option>
-                        <option value="baths-1" data-group="baths">1</option>
-                        <option value="baths-2" data-group="baths">2</option>
-                        <option value="baths-3" data-group="baths">3</option>
-                        <option value="baths-4" data-group="baths">4</option>
-                        <option value="baths-5" data-group="baths">5</option>
-                        <option value="baths-6" data-group="baths">6+</option>
-                      </select>
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--words select-box--check"
+                        data-loading="true"
+                      >
+                        <select
+                          id="select3"
+                          multiple
+                          data-placeholder="Beds & Baths"
+                        >
+                          <option value="">Beds & Baths</option>
+                          <option value="beds-studio" data-group="beds">
+                            Studio
+                          </option>
+                          <option value="beds-1" data-group="beds">1</option>
+                          <option value="beds-2" data-group="beds">2</option>
+                          <option value="beds-3" data-group="beds">3</option>
+                          <option value="beds-4" data-group="beds">4</option>
+                          <option value="beds-5" data-group="beds">5</option>
+                          <option value="beds-6" data-group="beds">6</option>
+                          <option value="beds-7" data-group="beds">7</option>
+                          <option value="beds-8" data-group="beds">8</option>
+                          <option value="beds-9" data-group="beds">9</option>
+                          <option value="beds-10" data-group="beds">10+</option>
+                          <option value="baths-1" data-group="baths">1</option>
+                          <option value="baths-2" data-group="baths">2</option>
+                          <option value="baths-3" data-group="baths">3</option>
+                          <option value="baths-4" data-group="baths">4</option>
+                          <option value="baths-5" data-group="baths">5</option>
+                          <option value="baths-6" data-group="baths">6+</option>
+                        </select>
+                      </div>
                     </div>
 
-                    <div class="filter__item">
+                    <div class="filter__item md-desktop-none">
                       <div class="dropdown dropdown--price input-box">
                         <button
                           class="input-box__info dropdown__btn"
@@ -227,18 +288,26 @@
                       </div>
                     </div>
 
-                    <div class="filter__item">
+                    <div class="filter__item tablet-none">
                       <button
                         type="button"
                         class="button button--bg-gray-300 button--lg button--rounded-md modal-open"
                         data-modal="filterModal"
                       >
-                        <p class="p2 medium-font">More filters</p>
+                        <div class="button__block">
+                          <p class="p2 medium-font">More filters</p>
+
+                          <p
+                            class="p3 regular-font text-secondary-100 md-desktop-show"
+                          >
+                            3
+                          </p>
+                        </div>
                       </button>
                     </div>
 
                     <div
-                      class="filter__item dropdown dropdown--simple dropdown--gray"
+                      class="filter__item dropdown dropdown--simple dropdown--gray tablet-none"
                     >
                       <button
                         type="button"
@@ -286,7 +355,7 @@
                       </div>
                     </div>
 
-                    <div class="filter__item">
+                    <div class="filter__item tablet-none">
                       <div class="checkbox-box">
                         <label class="check">
                           <a
@@ -296,7 +365,13 @@
                             class="check__info"
                           >
                             <div class="check__info-content">
-                              <span class="p2">List</span>
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#rows-icon"></use>
+                                </svg>
+                              </span>
+
+                              <span class="p2 lg-none">List</span>
                             </div>
                           </a>
                         </label>
@@ -309,7 +384,13 @@
                             class="check__info"
                           >
                             <div class="check__info-content">
-                              <span class="p2">Tiles</span>
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#table-icon"></use>
+                                </svg>
+                              </span>
+
+                              <span class="p2 lg-none">Tiles</span>
                             </div>
                           </a>
                         </label>
@@ -319,11 +400,29 @@
                             <input type="radio" checked name="map" />
 
                             <div class="check__info-content">
-                              <span class="p2">Map</span>
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#map-icon"></use>
+                                </svg>
+                              </span>
+
+                              <span class="p2 lg-none">Map</span>
                             </div>
                           </div>
                         </label>
                       </div>
+                    </div>
+
+                    <div class="filter__item tablet-show">
+                      <button
+                        class="button button--cub button--bg-primary-100 button--cub-md-add"
+                      >
+                        <span class="icon">
+                          <svg>
+                            <use xlink:href="#search-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -338,7 +437,41 @@
                 <div class="map-sibebar__top">
                   <h1 class="h4">Property in selected area</h1>
 
-                  <button class="close" data-block="sibebar-box__close">
+                  <div class="tablet-show">
+                    <div class="map-sibebar__btns">
+                      <button
+                        type="button"
+                        class="button button--cub button--bg-gray-200 button--cub-sm"
+                        data-block="sibebar-box__close"
+                      >
+                        <span class="icon icon--little text-dark-100">
+                          <svg>
+                            <use xlink:href="#arrow-bottom-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <button
+                        type="button"
+                        class="button button--cub button--bg-gray-200 button--cub-sm modal-open"
+                        data-modal="selectedItemsModal"
+                      >
+                        <span
+                          class="icon icon--little text-dark-100"
+                          style="rotate: -180deg"
+                        >
+                          <svg>
+                            <use xlink:href="#arrow-bottom-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button
+                    class="close tablet-none"
+                    data-block="sibebar-box__close"
+                  >
                     <span class="icon icon--little">
                       <svg>
                         <use xlink:href="#close-icon"></use>
@@ -354,7 +487,7 @@
                         <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
-                              <div class="good-item__decor">
+                              <div class="good-item__decor desktop-none">
                                 <!-- prettier-ignore -->
 
                                 @@include('../good-item/badges.html',
@@ -371,7 +504,7 @@
                                   ])
                                 </div>
 
-                                <div class="good-item__decors-img">
+                                <div class="good-item__decors-img desktop-none">
                                   @@include('../swiper/arrows-absolute.html')
                                   @@include('../swiper/swiper-pagination-absolute.html')
                                 </div>
@@ -381,17 +514,19 @@
 
                           <div class="good-item__content">
                             <header class="good-item__header">
-                              <div class="good-item__top-box">
-                                <p class="p3 medium-font">Apartments</p>
+                              <div class="desktop-none">
+                                <div class="good-item__top-box">
+                                  <p class="p3 medium-font">Apartments</p>
 
-                                <div class="good-item__top-btns">
-                                  <!-- prettier-ignore -->
+                                  <div class="good-item__top-btns">
+                                    <!-- prettier-ignore -->
 
-                                  @@include('../btns/favorite-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-  
-                                  @@include('../btns/comparison-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                  </div>
                                 </div>
                               </div>
 
@@ -401,45 +536,78 @@
 
                                   <span class="text-uppercase p2">AED</span>
                                 </p>
+
+                                <p
+                                  class="p3 medium-font text-secondary-300 desktop-show"
+                                >
+                                  Apartment
+                                </p>
                               </div>
 
-                              <p
-                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                              >
-                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                              </p>
-
-                              <div class="good-item__tags">
-                                <!-- prettier-ignore -->
-
-                                @@loop('../components/tag.html', [ 
-                                { "text": "2 Baths", "icon": "#bed-icon" },
-                                { "text": "Q4 2026", "icon": "#bed-icon" },
-                                { "text": "2 Beds", "icon": "#bed-icon" },
-                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                              <div class="tablet-none">
+                                <p
+                                  class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
                               </div>
 
-                              <ul class="list-icon">
-                                <!-- prettier-ignore -->
-                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
-                              </ul>
+                              <div class="tablet-show">
+                                <p
+                                  class="p4 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
+                              </div>
+
+                              <div class="lg-none">
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2 Baths", "icon": "#bed-icon" },
+                                  { "text": "Q4 2026", "icon": "#bed-icon" },
+                                  { "text": "2 Beds", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                </div>
+                              </div>
+
+                              <div class="lg-show">
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                </div>
+                              </div>
+
+                              <div class="desktop-none">
+                                <ul class="list-icon">
+                                  <!-- prettier-ignore -->
+                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                </ul>
+                              </div>
                             </header>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <!-- prettier-ignore -->
+                            <div class="desktop-none">
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
 
-                                @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller", "classAddText" : "p2 medium-font"})
-                              </div>
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                  "Contact Seller", "classAddText" : "p2 medium-font"})
+                                </div>
 
-                              <div class="good-item__logo">
-                                <img
-                                  src="/img/seller/seller.png"
-                                  alt="логотип селера"
-                                />
-                              </div>
-                            </footer>
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -448,7 +616,7 @@
                         <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
-                              <div class="good-item__decor">
+                              <div class="good-item__decor desktop-none">
                                 <!-- prettier-ignore -->
 
                                 @@include('../good-item/badges.html',
@@ -465,7 +633,7 @@
                                   ])
                                 </div>
 
-                                <div class="good-item__decors-img">
+                                <div class="good-item__decors-img desktop-none">
                                   @@include('../swiper/arrows-absolute.html')
                                   @@include('../swiper/swiper-pagination-absolute.html')
                                 </div>
@@ -475,17 +643,19 @@
 
                           <div class="good-item__content">
                             <header class="good-item__header">
-                              <div class="good-item__top-box">
-                                <p class="p3 medium-font">Apartments</p>
+                              <div class="desktop-none">
+                                <div class="good-item__top-box">
+                                  <p class="p3 medium-font">Apartments</p>
 
-                                <div class="good-item__top-btns">
-                                  <!-- prettier-ignore -->
+                                  <div class="good-item__top-btns">
+                                    <!-- prettier-ignore -->
 
-                                  @@include('../btns/favorite-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-  
-                                  @@include('../btns/comparison-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                  </div>
                                 </div>
                               </div>
 
@@ -495,45 +665,78 @@
 
                                   <span class="text-uppercase p2">AED</span>
                                 </p>
+
+                                <p
+                                  class="p3 medium-font text-secondary-300 desktop-show"
+                                >
+                                  Apartment
+                                </p>
                               </div>
 
-                              <p
-                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                              >
-                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                              </p>
-
-                              <div class="good-item__tags">
-                                <!-- prettier-ignore -->
-
-                                @@loop('../components/tag.html', [ 
-                                { "text": "2 Baths", "icon": "#bed-icon" },
-                                { "text": "Q4 2026", "icon": "#bed-icon" },
-                                { "text": "2 Beds", "icon": "#bed-icon" },
-                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                              <div class="tablet-none">
+                                <p
+                                  class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
                               </div>
 
-                              <ul class="list-icon">
-                                <!-- prettier-ignore -->
-                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
-                              </ul>
+                              <div class="tablet-show">
+                                <p
+                                  class="p4 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
+                              </div>
+
+                              <div class="lg-none">
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2 Baths", "icon": "#bed-icon" },
+                                  { "text": "Q4 2026", "icon": "#bed-icon" },
+                                  { "text": "2 Beds", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                </div>
+                              </div>
+
+                              <div class="lg-show">
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                </div>
+                              </div>
+
+                              <div class="desktop-none">
+                                <ul class="list-icon">
+                                  <!-- prettier-ignore -->
+                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                </ul>
+                              </div>
                             </header>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <!-- prettier-ignore -->
+                            <div class="desktop-none">
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
 
-                                @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller", "classAddText" : "p2 medium-font"})
-                              </div>
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                  "Contact Seller", "classAddText" : "p2 medium-font"})
+                                </div>
 
-                              <div class="good-item__logo">
-                                <img
-                                  src="/img/seller/seller.png"
-                                  alt="логотип селера"
-                                />
-                              </div>
-                            </footer>
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -542,7 +745,7 @@
                         <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
-                              <div class="good-item__decor">
+                              <div class="good-item__decor desktop-none">
                                 <!-- prettier-ignore -->
 
                                 @@include('../good-item/badges.html',
@@ -559,7 +762,7 @@
                                   ])
                                 </div>
 
-                                <div class="good-item__decors-img">
+                                <div class="good-item__decors-img desktop-none">
                                   @@include('../swiper/arrows-absolute.html')
                                   @@include('../swiper/swiper-pagination-absolute.html')
                                 </div>
@@ -569,17 +772,19 @@
 
                           <div class="good-item__content">
                             <header class="good-item__header">
-                              <div class="good-item__top-box">
-                                <p class="p3 medium-font">Apartments</p>
+                              <div class="desktop-none">
+                                <div class="good-item__top-box">
+                                  <p class="p3 medium-font">Apartments</p>
 
-                                <div class="good-item__top-btns">
-                                  <!-- prettier-ignore -->
+                                  <div class="good-item__top-btns">
+                                    <!-- prettier-ignore -->
 
-                                  @@include('../btns/favorite-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-  
-                                  @@include('../btns/comparison-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                  </div>
                                 </div>
                               </div>
 
@@ -589,45 +794,78 @@
 
                                   <span class="text-uppercase p2">AED</span>
                                 </p>
+
+                                <p
+                                  class="p3 medium-font text-secondary-300 desktop-show"
+                                >
+                                  Apartment
+                                </p>
                               </div>
 
-                              <p
-                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                              >
-                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                              </p>
-
-                              <div class="good-item__tags">
-                                <!-- prettier-ignore -->
-
-                                @@loop('../components/tag.html', [ 
-                                { "text": "2 Baths", "icon": "#bed-icon" },
-                                { "text": "Q4 2026", "icon": "#bed-icon" },
-                                { "text": "2 Beds", "icon": "#bed-icon" },
-                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                              <div class="tablet-none">
+                                <p
+                                  class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
                               </div>
 
-                              <ul class="list-icon">
-                                <!-- prettier-ignore -->
-                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
-                              </ul>
+                              <div class="tablet-show">
+                                <p
+                                  class="p4 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
+                              </div>
+
+                              <div class="lg-none">
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2 Baths", "icon": "#bed-icon" },
+                                  { "text": "Q4 2026", "icon": "#bed-icon" },
+                                  { "text": "2 Beds", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                </div>
+                              </div>
+
+                              <div class="lg-show">
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                </div>
+                              </div>
+
+                              <div class="desktop-none">
+                                <ul class="list-icon">
+                                  <!-- prettier-ignore -->
+                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                </ul>
+                              </div>
                             </header>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <!-- prettier-ignore -->
+                            <div class="desktop-none">
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
 
-                                @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller", "classAddText" : "p2 medium-font"})
-                              </div>
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                  "Contact Seller", "classAddText" : "p2 medium-font"})
+                                </div>
 
-                              <div class="good-item__logo">
-                                <img
-                                  src="/img/seller/seller.png"
-                                  alt="логотип селера"
-                                />
-                              </div>
-                            </footer>
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -636,7 +874,7 @@
                         <div class="good-item good-item--small">
                           <div class="good-item__swiper-box">
                             <div class="good-item__img-box">
-                              <div class="good-item__decor">
+                              <div class="good-item__decor desktop-none">
                                 <!-- prettier-ignore -->
 
                                 @@include('../good-item/badges.html',
@@ -653,7 +891,7 @@
                                   ])
                                 </div>
 
-                                <div class="good-item__decors-img">
+                                <div class="good-item__decors-img desktop-none">
                                   @@include('../swiper/arrows-absolute.html')
                                   @@include('../swiper/swiper-pagination-absolute.html')
                                 </div>
@@ -663,17 +901,19 @@
 
                           <div class="good-item__content">
                             <header class="good-item__header">
-                              <div class="good-item__top-box">
-                                <p class="p3 medium-font">Apartments</p>
+                              <div class="desktop-none">
+                                <div class="good-item__top-box">
+                                  <p class="p3 medium-font">Apartments</p>
 
-                                <div class="good-item__top-btns">
-                                  <!-- prettier-ignore -->
+                                  <div class="good-item__top-btns">
+                                    <!-- prettier-ignore -->
 
-                                  @@include('../btns/favorite-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-  
-                                  @@include('../btns/comparison-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                    @@include('../btns/favorite-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                
+                                      @@include('../btns/comparison-btn.html', {"classAdd" :
+                                      "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
+                                  </div>
                                 </div>
                               </div>
 
@@ -683,282 +923,135 @@
 
                                   <span class="text-uppercase p2">AED</span>
                                 </p>
+
+                                <p
+                                  class="p3 medium-font text-secondary-300 desktop-show"
+                                >
+                                  Apartment
+                                </p>
                               </div>
 
-                              <p
-                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                              >
-                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                              </p>
-
-                              <div class="good-item__tags">
-                                <!-- prettier-ignore -->
-
-                                @@loop('../components/tag.html', [ 
-                                { "text": "2 Baths", "icon": "#bed-icon" },
-                                { "text": "Q4 2026", "icon": "#bed-icon" },
-                                { "text": "2 Beds", "icon": "#bed-icon" },
-                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                              <div class="tablet-none">
+                                <p
+                                  class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
                               </div>
 
-                              <ul class="list-icon">
-                                <!-- prettier-ignore -->
-                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
-                              </ul>
-                            </header>
-
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <!-- prettier-ignore -->
-
-                                @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller", "classAddText" : "p2 medium-font"})
+                              <div class="tablet-show">
+                                <p
+                                  class="p4 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  Apartment, 2 bedroom, 60.11 sq.m. № 3427
+                                </p>
                               </div>
 
-                              <div class="good-item__logo">
-                                <img
-                                  src="/img/seller/seller.png"
-                                  alt="логотип селера"
-                                />
-                              </div>
-                            </footer>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="good-item good-item--small">
-                          <div class="good-item__swiper-box">
-                            <div class="good-item__img-box">
-                              <div class="good-item__decor">
-                                <!-- prettier-ignore -->
-
-                                @@include('../good-item/badges.html',
-                                {"complete": true})
-                              </div>
-
-                              <div class="swiper swiper--good-img">
-                                <div class="swiper-wrapper">
+                              <div class="lg-none">
+                                <div class="good-item__tags">
                                   <!-- prettier-ignore -->
 
-                                  @@loop('../good-item/slides-imgs.html', [
-                                  {"img": '/img/goods/one'},
-                                  {"img": '/img/goods/two'}
-                                  ])
-                                </div>
-
-                                <div class="good-item__decors-img">
-                                  @@include('../swiper/arrows-absolute.html')
-                                  @@include('../swiper/swiper-pagination-absolute.html')
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2 Baths", "icon": "#bed-icon" },
+                                  { "text": "Q4 2026", "icon": "#bed-icon" },
+                                  { "text": "2 Beds", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
                                 </div>
                               </div>
+
+                              <div class="lg-show">
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "2", "icon": "#bed-icon" },
+                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                </div>
+                              </div>
+
+                              <div class="desktop-none">
+                                <ul class="list-icon">
+                                  <!-- prettier-ignore -->
+                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                </ul>
+                              </div>
+                            </header>
+
+                            <div class="desktop-none">
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                  "Contact Seller", "classAddText" : "p2 medium-font"})
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
                             </div>
-                          </div>
-
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <div class="good-item__top-box">
-                                <p class="p3 medium-font">Apartments</p>
-
-                                <div class="good-item__top-btns">
-                                  <!-- prettier-ignore -->
-
-                                  @@include('../btns/favorite-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-  
-                                  @@include('../btns/comparison-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-                                </div>
-                              </div>
-
-                              <div class="good-item__top">
-                                <p class="h6-add bold-font good-item__title">
-                                  761,000
-
-                                  <span class="text-uppercase p2">AED</span>
-                                </p>
-                              </div>
-
-                              <p
-                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                              >
-                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                              </p>
-
-                              <div class="good-item__tags">
-                                <!-- prettier-ignore -->
-
-                                @@loop('../components/tag.html', [ 
-                                { "text": "2 Baths", "icon": "#bed-icon" },
-                                { "text": "Q4 2026", "icon": "#bed-icon" },
-                                { "text": "2 Beds", "icon": "#bed-icon" },
-                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
-                              </div>
-
-                              <ul class="list-icon">
-                                <!-- prettier-ignore -->
-                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
-                              </ul>
-                            </header>
-
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <!-- prettier-ignore -->
-
-                                @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller", "classAddText" : "p2 medium-font"})
-                              </div>
-
-                              <div class="good-item__logo">
-                                <img
-                                  src="/img/seller/seller.png"
-                                  alt="логотип селера"
-                                />
-                              </div>
-                            </footer>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="swiper-slide">
-                        <div class="good-item good-item--small">
-                          <div class="good-item__swiper-box">
-                            <div class="good-item__img-box">
-                              <div class="good-item__decor">
-                                <!-- prettier-ignore -->
-
-                                @@include('../good-item/badges.html',
-                                {"complete": true})
-                              </div>
-
-                              <div class="swiper swiper--good-img">
-                                <div class="swiper-wrapper">
-                                  <!-- prettier-ignore -->
-
-                                  @@loop('../good-item/slides-imgs.html', [
-                                  {"img": '/img/goods/one'},
-                                  {"img": '/img/goods/two'}
-                                  ])
-                                </div>
-
-                                <div class="good-item__decors-img">
-                                  @@include('../swiper/arrows-absolute.html')
-                                  @@include('../swiper/swiper-pagination-absolute.html')
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <div class="good-item__top-box">
-                                <p class="p3 medium-font">Apartments</p>
-
-                                <div class="good-item__top-btns">
-                                  <!-- prettier-ignore -->
-
-                                  @@include('../btns/favorite-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-  
-                                  @@include('../btns/comparison-btn.html', {"classAdd" :
-                                  "button--bg-gray-200 button--cub button--cub-sm", "classAddIcon" : "icon--little"})
-                                </div>
-                              </div>
-
-                              <div class="good-item__top">
-                                <p class="h6-add bold-font good-item__title">
-                                  761,000
-
-                                  <span class="text-uppercase p2">AED</span>
-                                </p>
-                              </div>
-
-                              <p
-                                class="p3 text-secondary-300 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                              >
-                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                              </p>
-
-                              <div class="good-item__tags">
-                                <!-- prettier-ignore -->
-
-                                @@loop('../components/tag.html', [ 
-                                { "text": "2 Baths", "icon": "#bed-icon" },
-                                { "text": "Q4 2026", "icon": "#bed-icon" },
-                                { "text": "2 Beds", "icon": "#bed-icon" },
-                                { "text": "65 sq.m.", "icon": "#bed-icon" } ])
-                              </div>
-
-                              <ul class="list-icon">
-                                <!-- prettier-ignore -->
-                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
-                              </ul>
-                            </header>
-
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <!-- prettier-ignore -->
-
-                                @@include('../btns/contact-btn.html', {"text" :
-                                "Contact Seller", "classAddText" : "p2 medium-font"})
-                              </div>
-
-                              <div class="good-item__logo">
-                                <img
-                                  src="/img/seller/seller.png"
-                                  alt="логотип селера"
-                                />
-                              </div>
-                            </footer>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </aside>
 
-              <div class="map__details">
-                <div class="breadcrumbs breadcrumbs--white">
-                  <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__link">
-                      <a
-                        href="#"
-                        aria-label="Вернуться на Home"
-                        title="Home"
-                        class="breadcrumbs__item link active active-noColor active-line"
-                        >Home</a
-                      >
-                    </li>
-
-                    <li class="breadcrumbs__link">
-                      <span class="breadcrumbs__item"
-                        >Property for sale in Abu-Dhabi</span
-                      >
-                    </li>
-                  </ul>
-
-                  <a
-                    href="#"
-                    aria-label="Вернуться на Home"
-                    title="Home"
-                    class="breadcrumbs__media"
-                  >
-                    <span class="breadcrumbs__circle">
-                      <div class="icon icon--full">
-                        <svg>
-                          <use xlink:href="#arrow-circle-icon"></use>
-                        </svg>
-                      </div>
-                    </span>
-
-                    <span>Home</span>
-                  </a>
+                <div class="map-sibebar__pagination desktop-none">
+                  @@include('../modules/pagination.html', {"details": "false"})
                 </div>
-              </div>
+              </aside>
 
               <div class="map__cart">
                 <div class="map" id="map"></div>
+
+                <div class="map__details">
+                  <p class="p2 medium-font lg-show text-dark-100">
+                    Property for sale in Abu-Dhabi
+                  </p>
+
+                  <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Home"
+                          title="Home"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Home</a
+                        >
+                      </li>
+
+                      <li class="breadcrumbs__link">
+                        <span class="breadcrumbs__item"
+                          >Property for sale in Abu-Dhabi</span
+                        >
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__media"
+                    >
+                      <span class="breadcrumbs__circle">
+                        <div class="icon icon--full">
+                          <svg>
+                            <use xlink:href="#arrow-circle-icon"></use>
+                          </svg>
+                        </div>
+                      </span>
+
+                      <span>Home</span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -966,6 +1059,7 @@
       </main>
 
       @@include('../modules/footer.html') @@include('../modals/filter.html')
+      @@include('../modals/selectedItems.html')
     </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>

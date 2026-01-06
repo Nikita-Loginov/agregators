@@ -10,13 +10,29 @@
     }
   }
 
+  &__pagination {
+    margin-top: auto;
+  }
+
   .swiper--goods {
     overflow: visible;
 
-    & > .swiper-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+    @media (min-width: 768px) {
+      & > .swiper-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
     }
+
+    @media (max-width: $tablet-breakpoint) {
+
+    }
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 16px;
   }
 }

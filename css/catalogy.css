@@ -30,10 +30,44 @@
   width: 100%;
 }
 .filter--big .filter__items {
-  grid-template-columns: 40% 91px auto 160px 160px 110px auto auto auto;
+  grid-template-columns: clamp(250px, -1750px + 125vw, 650px) 91px auto 160px 160px 110px auto auto auto;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+}
+@media (max-width: 1550px) {
+  .filter--big .filter__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .filter--big .filter__items .filter__item:has(.button), .filter--big .filter__items .filter__item:has(.checkbox-box) {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .filter--big .filter__items .filter__item:has(.select-box--search) {
+    width: clamp(170px, -26.7307692308px + 19.2307692308vw, 250px);
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .filter--big .filter__items .filter__item .button--cub {
+    width: clamp(40px, 16.03125px + 3.125vw, 48px);
+  }
+}
+@media (max-width: 1023px) {
+  .filter--big .filter__items {
+    --font-size-xs: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .filter--big .filter__items {
+    display: grid;
+    grid-template-columns: 40px calc(100% - 80px - 16px) 40px;
+  }
+  .filter--big .filter__items .filter__item:not(:has(.button)) {
+    width: 100%;
+  }
 }
 .filter--big .ts-control {
   max-width: 100%;
@@ -107,7 +141,7 @@
     width: 100%;
   }
 }
-@media (max-width: 479px) {
+@media (max-width: 767px) {
   .filter__items {
     display: grid;
     grid-template-columns: 40px calc(100% - 80px - 16px) 40px;
@@ -266,15 +300,6 @@ body.scrollBottom .filter {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: clamp(12px, -47.6887159533px + 7.7821011673vw, 32px);
-}
-.catalogy__item-head .textbox > * {
-  display: none;
-}
-.catalogy__item-head .textbox > *:nth-child(-n+1) {
-  display: block;
-}
-.catalogy__item-head .textbox.more > *:nth-child(-n+99999) {
-  display: block;
 }
 .catalogy .banner-news {
   display: none;

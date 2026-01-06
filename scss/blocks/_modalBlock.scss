@@ -42,7 +42,8 @@
     overflow-y: auto;
 
     &--big {
-      padding: 28px 32px;
+      padding: calculate-clamp(16px, 28px, 1023px, 767px)
+        calculate-clamp(16px, 32px, 1023px, 767px);
 
       .modalBlock__head {
         top: 12px;
@@ -284,7 +285,7 @@
   &__items {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: calculate-clamp(20px, 40px, 1023px, 767px);
   }
 
   .modalBlock__block {
@@ -294,13 +295,20 @@
   &__item-box {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: calculate-clamp(16px, 20px, 1023px, 767px);
   }
 
   &__items-box {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px 28px;
+    gap: calculate-clamp(8px, 20px, 1023px, 767px) calculate-clamp(8px, 28px, 1023px, 767px);
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items-box {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }
 
@@ -445,7 +453,7 @@
 
         &:before {
           position: absolute;
-          content:"";
+          content: "";
           right: 0;
           background-color: var(--dark-color-700);
           width: 1px;
@@ -671,5 +679,68 @@
     &__content {
       // padding-inline: 14px;
     }
+  }
+}
+
+.selectedItemsModal {
+  transition: all 1s;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(calc(100% - 200px));
+    transition: 1s;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    height: 100%;
+    max-height: calc(100dvh);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .good-item {
+      display: grid;
+      min-height: 104px;
+
+      &__swiper-box {
+        aspect-ratio: 1 / 1;
+        // width: auto;
+      }
+
+      .swiper--good-img {
+        .swiper-slide {
+          &:not(:first-child) {
+            display: none;
+          }
+        }
+      }
+
+      &__tags {
+        gap: 6px;
+
+        .tag {
+          background-color: transparent;
+          padding: 0;
+          min-height: 0;
+
+          p {
+            font-size: var(--font-size-3xs);
+          }
+        }
+      }
+    }
+  }
+
+  &__footer {
+    margin-top: auto;
   }
 }

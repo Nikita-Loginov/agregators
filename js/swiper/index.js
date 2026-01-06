@@ -1,4 +1,5 @@
 import { toggleVideoSwiper } from "./functions.js";
+import { checkIfDisabledSwiper } from "./functions.js";
 
 export const MOUSE_WHEEL_CONFIG = {
   enabled: true,
@@ -77,12 +78,42 @@ export const SWIPERS = {
     selector: ".also-section .swiper--also",
     breakpoint: 122300000000,
     options: {
-      slidesPerView: 4,
-      spaceBetween: 14,
+      slidesPerView: 1.03,
+      spaceBetween: 12,
+      watchOverflow: true,
       pagination: {
         el: ".also-section .swiper-pagination--also",
       },
+      breakpoints: {
+        1220: {
+          slidesPerView: 4,
+          spaceBetween: 14,
+        },
+        1024: {
+          slidesPerView: 3.4,
+        },
+        767: {
+          slidesPerView: 2.4,
+        },
+        570: {
+          slidesPerView: 1.8,
+        },
+        360: {
+          slidesPerView: 1.2,
+        }
+      },
     },
+    events: {
+      init: function(swiper) {
+        checkIfDisabledSwiper(swiper);
+      },
+      update: function(swiper) {
+        checkIfDisabledSwiper(swiper);
+      },
+      resize: function(swiper) {
+        checkIfDisabledSwiper(swiper);
+      }
+    }
   },
   ALSO_CARDS_THREE: {
     selector: ".also-section .swiper--also",
@@ -194,11 +225,46 @@ export const SWIPERS = {
 
       pagination: {
         el: ".marketModal .table-swiper .swiper-pagination",
-        type: 'custom',
-        renderCustom: function(swiper, current, total) {
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
           return `<span class="current-slide">${current}</span>/<span class="total-slides">${total}</span>`;
-        }
-      }
+        },
+      },
+    },
+  },
+  MAP_SIBEBAR_CARDS: {
+    selector: ".map-sibebar .swiper--goods",
+    breakpoint: 767,
+    options: {
+      slidesPerView: 1.05,
+      spaceBetween: 8,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      breakpoints: {
+        360: {
+          slidesPerView: 1.1,
+        },
+      },
+    },
+  },
+  STATIC_TABLE: {
+    selector: ".object .swiper--static",
+    breakpoint: 122300000000,
+    options: {
+      ...TABLE_OPTIONS,
+
+      navigation: {
+        nextEl: ".object .table-swiper .arrow-swiper.next",
+        prevEl: ".object .table-swiper .arrow-swiper.prev",
+      },
+
+      pagination: {
+        el: ".object .table-swiper .swiper-pagination",
+        type: "custom",
+        renderCustom: function (swiper, current, total) {
+          return `<span class="current-slide">${current}</span>/<span class="total-slides">${total}</span>`;
+        },
+      },
     },
   },
 };
+

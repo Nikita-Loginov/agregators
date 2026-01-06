@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  height: 523px;
+  height: calculate-clamp(414px, 523px, 1439px, 1023px);;
 
   --gap-small-items: 8px;
 
@@ -93,6 +93,34 @@
     &--decor {
       left: 12px;
       bottom: 12px;
+    }
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__swiper-small {
+      display: none;
+    }
+
+    &__item {
+      border-radius: var(--radius-2xl);
+    }
+
+    &__tags {
+      top: 8px;
+      left: 8px;
+      right: auto;
+      bottom: auto;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    height: calculate-clamp(270px, 414px, 767px, 480px);
+    position: relative;
+    width: calc(100% + (var(--container-inline-padding) * 2));
+    left: calc(var(--container-inline-padding) * -1);
+
+    &__item {
+      border-radius: 0;
     }
   }
 }

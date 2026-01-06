@@ -173,7 +173,7 @@ body .wrapper {
   }
 
   &--small {
-    gap: 24px;
+    gap: calculate-clamp(16px, 24px, 1439px, 1023px);
   }
 
   &__header {
@@ -441,78 +441,18 @@ body .wrapper {
 }
 
 .more-block {
-  & > *:not(:first-child) {
+  &__item {
     display: none;
-  }
+    width: 100%;
 
-  &:not(.more-block--grid).more-block--two {
-    & > *:not(:nth-child(-n + 2)) {
-      display: none;
-    }
-
-    & > *:nth-child(-n + 2) {
-      display: block;
-    }
-
-    & > *:nth-child(-n + 2) {
+    &.item-visible {
       display: block;
     }
   }
-
-  &:not(.more-block--grid).more-block--three {
-    & > *:not(:nth-child(-n + 3)) {
-      display: none;
-    }
-
-    & > *:nth-child(-n + 3) {
-      display: block;
-    }
-
-    & > *:nth-child(-n + 3) {
-      display: block;
-    }
-  }
-
-  &:not(.more-block--grid).more-block--eight {
-    & > *:not(:nth-child(-n + 8)) {
-      display: none;
-    }
-
-    & > *:nth-child(-n + 8) {
-      display: block;
-    }
-
-    & > *:nth-child(-n + 8) {
-      display: block;
-    }
-  }
-
-  &:not(.more-block--grid).more-block--six {
-    & > *:not(:nth-child(-n + 6)) {
-      display: none;
-    }
-
-    & > *:nth-child(-n + 6) {
-      display: block;
-    }
-
-    & > *:nth-child(-n + 6) {
-      display: block;
-    }
-  }
-
-  // &--grid {
-  //   .&.more-block--two {
-
-  //   }
-  //   & > *:nth-child(-n + 2) {
-  //     display: grid;
-  //   }
-  // }
 
   &.more {
-    & > *:nth-child(-n + 9999) {
-      display: block !important;
+    .more-block__item {
+      display: block;
     }
   }
 }
@@ -563,6 +503,21 @@ body .wrapper {
 }
 
 body .wrapper {
+  .xl-desktop-none {
+    @media (max-width: $xl-desktop-breakpoint) {
+      display: none;
+    }
+  }
+
+  .xl-desktop-show {
+    display: none;
+
+    @media (max-width: $xl-desktop-breakpoint) {
+      display: flex;
+      height: fit-content;
+    }
+  }
+
   .desktop-none {
     @media (max-width: $desktop-breakpoint) {
       display: none;
@@ -573,6 +528,21 @@ body .wrapper {
     display: none;
 
     @media (max-width: $desktop-breakpoint) {
+      display: flex;
+      height: fit-content;
+    }
+  }
+
+  .md-desktop-none {
+    @media (max-width: $md-desktop-breakpoint) {
+      display: none;
+    }
+  }
+
+  .md-desktop-show {
+    display: none;
+
+    @media (max-width: $md-desktop-breakpoint) {
       display: flex;
       height: fit-content;
     }
@@ -643,6 +613,10 @@ body .wrapper {
   display: flex;
   align-items: center;
   gap: 8px;
+
+  &--small {
+    gap: 4px;
+  }
 }
 
 .lg-download {
@@ -667,8 +641,22 @@ body .wrapper {
   }
 }
 
-
-
 [data-loading="true"] {
   display: none;
+}
+
+[data-block="more-footer"] {
+  opacity: 0;
+  visibility: hidden;
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.full-btn-media {
+  @media (max-width: $tablet-breakpoint) {
+    width: 100%;
+  }
 }

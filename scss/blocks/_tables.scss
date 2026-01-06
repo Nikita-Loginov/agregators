@@ -24,13 +24,40 @@
   }
 
   &--noGap {
+    --gap-items: 0px;
     --gap-table: 0px;
+  }
+
+  &--noRadius {
+    .table-grid__row,
+    .table-grid__header {
+      border-radius: 0;
+    }
+  }
+
+  &--border {
+    border-bottom: 1px solid var(--gray-color-600);
+
+    .table-grid {
+      &__row,
+      &__decor {
+        border-top: 1px solid var(--gray-color-600);
+      }
+
+      &__cell {
+        padding: 6px 8px;
+      }
+    }
   }
 
   &__header {
     background-color: var(--gray-color-200);
     border-radius: var(--radius-base);
     overflow: hidden;
+
+    &--noBg {
+      background-color: transparent;
+    }
   }
 
   &__row {
@@ -47,6 +74,10 @@
     display: flex;
     align-items: center;
     gap: 8px;
+
+    &--gray-color-200 {
+      background-color: var(--gray-color-200);
+    }
   }
 
   &__decor {
@@ -135,6 +166,7 @@
 .table-swiper {
   display: flex;
   flex-direction: column;
+  width: 100%;
 
   &__header {
     margin-left: auto;

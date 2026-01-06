@@ -23,9 +23,9 @@
   }
 
   &--big {
-    min-height: 36px;
+    min-height: calculate-clamp(28px, 36px, 1439px, 1023px);
     padding: 2px 10px;
-    gap: 8px;
+    gap: calculate-clamp(6px, 8px, 1439px, 1023px);
     border-radius: var(--radius-xl);
   }
 

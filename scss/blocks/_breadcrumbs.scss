@@ -15,6 +15,7 @@
 
     display: flex;
     gap: var(--gap-items);
+    flex-wrap: wrap;
 
     & > *:not(:last-child) {
       padding-right: calc(var(--gap-items) + 6px);
@@ -68,7 +69,7 @@
     }
   }
 
-  @media(max-width:767px) {
+  @media(max-width:$lg-breakpoint) {
     &__list {
       display: none;
     }

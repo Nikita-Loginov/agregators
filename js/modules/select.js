@@ -99,6 +99,12 @@ const createOptionRenderer =
             <p class="p4">${desc ? escape(desc) : ""}</p>
           </div>
         </div>
+
+        ${
+          isMultiple
+            ? '<button class="ts-option-remove" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 12L8.00001 8.00001M8.00001 8.00001L4 4M8.00001 8.00001L12 4M8.00001 8.00001L4 12" stroke="#636899" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+            : ""
+        }
       </div>
     `;
     }

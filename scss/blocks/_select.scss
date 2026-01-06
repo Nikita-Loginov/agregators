@@ -32,7 +32,7 @@
 
 .select-box {
   .ts-control {
-    padding: calculate-clamp(2px, 4px, 1500px, 767px)
+    padding: calculate-clamp(2px, 4px, 1023px, 767px)
       calculate-clamp(12px, 16px, 1023px, 767px);
     border-radius: var(--radius-md);
     border: 1px solid var(--gray-color-600);

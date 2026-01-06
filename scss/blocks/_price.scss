@@ -1,7 +1,7 @@
 .price {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: calculate-clamp(4px, 8px, 1023px, 767px);
 
   &__top,
   &__content {
