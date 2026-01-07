@@ -8,10 +8,24 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px 20px;
+    gap: calculate-clamp(4px, 12px, 767px, 480px)
+      calculate-clamp(16px, 20px, 1023px, 767px);
   }
 
   &__link {
     width: fit-content;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

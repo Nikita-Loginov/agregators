@@ -1,5 +1,5 @@
 import { SWIPERS } from "./index.js";
-import { initSwiper } from "../modules/functions.js";
+import { initSwiper, setVarElement } from "../modules/functions.js";
 
 export const initImgsSwiperGoods = () => {
   const imgSwipers = document.querySelectorAll(".swiper--good-img");
@@ -55,7 +55,7 @@ export const checkIfDisabledSwiper = (swiper) => {
     if (slides.length <= slidesPerView) {
       wrapper.classList.add("swiper-disabled");
       swiper.enabled = false;
-  
+
       if (swiper.pagination) {
         swiper.pagination.update();
       }
@@ -68,4 +68,19 @@ export const checkIfDisabledSwiper = (swiper) => {
       }
     }
   }, 10);
+};
+
+export const setTableCountItems = (swiper) => {
+  if (!swiper) return;
+
+  const { slidesPerView } = swiper.params;
+
+  const tableCount = Number(slidesPerView) + 1;
+
+  const comparison = swiper.el.closest(".comparison");
+
+  if (comparison)
+    setVarElement(comparison, "--count-item-table", tableCount);
+
+  comparison.setAttribute('data-count', tableCount);
 };

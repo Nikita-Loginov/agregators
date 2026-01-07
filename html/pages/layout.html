@@ -11,52 +11,98 @@
         <section class="object">
           <div class="container">
             <div class="object__inner">
-              <div class="object-top">
-                <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__link">
-                      <a
-                        href="#"
-                        aria-label="Вернуться на Home"
-                        title="Home"
-                        class="breadcrumbs__item link active active-noColor active-line"
-                        >Home</a
-                      >
-                    </li>
+              <div class="object-top object-top--big">
+                <div class="object-top__header">
+                  <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Home"
+                          title="Home"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Home</a
+                        >
+                      </li>
 
-                    <li class="breadcrumbs__link">
-                      <a
-                        href="#"
-                        aria-label="Вернуться на Real estate in UAE"
-                        title="Real estate in UAE"
-                        class="breadcrumbs__item link active active-noColor active-line"
-                        >Real estate in UAE</a
-                      >
-                    </li>
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Real estate in UAE"
+                          title="Real estate in UAE"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Real estate in UAE</a
+                        >
+                      </li>
 
-                    <li class="breadcrumbs__link">
-                      <span class="breadcrumbs__item"
-                        >2 bedrooms Apartment in Dubai, UAE, No.093490</span
-                      >
-                    </li>
-                  </ul>
+                      <li class="breadcrumbs__link">
+                        <span class="breadcrumbs__item"
+                          >2 bedrooms Apartment in Dubai, UAE, No.093490</span
+                        >
+                      </li>
+                    </ul>
 
-                  <a
-                    href="#"
-                    aria-label="Вернуться на Home"
-                    title="Home"
-                    class="breadcrumbs__media"
-                  >
-                    <span class="breadcrumbs__circle">
-                      <div class="icon icon--full">
-                        <svg>
-                          <use xlink:href="#arrow-circle-icon"></use>
-                        </svg>
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__media"
+                    >
+                      <span class="breadcrumbs__circle">
+                        <span class="icon icon--full">
+                          <svg>
+                            <use xlink:href="#arrow-circle-icon"></use>
+                          </svg>
+                        </span>
+                      </span>
+
+                      <span>Home</span>
+                    </a>
+                  </div>
+
+                  <div class="tablet-none">
+                    <div class="lg-show">
+                      <div class="object-top__header-btns">
+                        <div class="share list-popup relative relative-top">
+                          <div class="share__btns">
+                            <button
+                              class="button button--bg-gray-200 button--cub button--cub-sm"
+                            >
+                              <span class="icon icon--little">
+                                <svg>
+                                  <use xlink:href="#share-icon"></use>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+
+                          @@include('../modules/share-popup.html')
+                        </div>
+
+                        <button
+                          aria-label="Добавить в избранное"
+                          class="button button--bg-gray-200 button--cub button--cub-sm button--favorite"
+                        >
+                          <span class="icon icon--little">
+                            <svg>
+                              <use xlink:href="#heart-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <button
+                          aria-label="Добавить в избранное"
+                          class="button button--bg-gray-200 button--cub button--cub-sm button--comparison"
+                        >
+                          <span class="icon icon--little">
+                            <svg>
+                              <use xlink:href="#chart-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
                       </div>
-                    </span>
-
-                    <span>Home</span>
-                  </a>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="object-top__info">
@@ -113,37 +159,87 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="tablet-show">
+                    <div class="object-top__info-btns">
+                      <div class="share list-popup relative relative-top left-media">
+                        <div class="share__btns">
+                          <button
+                            class="button button--bg-gray-200 button--md2x"
+                          >
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#share-icon"></use>
+                              </svg>
+                            </span>
+                          </button>
+                        </div>
+
+                        @@include('../modules/share-popup.html')
+                      </div>
+
+                      <button
+                        aria-label="Добавить в избранное"
+                        class="button button--bg-gray-200 button--md2x button--favorite"
+                      >
+                        <span class="icon icon--little">
+                          <svg>
+                            <use xlink:href="#heart-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <button
+                        aria-label="Добавить в избранное"
+                        class="button button--bg-gray-200 button--md2x button--comparison"
+                      >
+                        <span class="icon icon--little">
+                          <svg>
+                            <use xlink:href="#chart-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               <div class="object-bottom">
                 <div class="object-bottom__content">
                   <div class="object-bottom__top">
-                    <div class="object-bottom__top-item">
-                      <div class="object-bottom__top-line">
-                        <div class="price">
-                          <div class="price__top price__top--end">
-                            <p class="h2">
-                              1,102,500
+                    <div class="object-bottom__top-items-boxs">
+                      <div class="object-bottom__top-items-box">
+                        <div class="object-bottom__top-item">
+                          <div class="object-bottom__top-line">
+                            <div class="price">
+                              <div
+                                class="price__top price__top--end price__top--column-media"
+                              >
+                                <p class="h2 fz-48-26">
+                                  1,102,500
 
-                              <span class="text-uppercase h4">AED</span>
-                            </p>
+                                  <span class="text-uppercase h4">AED</span>
+                                </p>
 
-                            <div class="price__content">
-                              <p class="p3">11,529 AED / sqm</p>
+                                <div class="price__content">
+                                  <p class="p3">11,529 AED / sqm</p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
+
+                        <div class="object-bottom__top-item">
+                          <div class="topBox topBox--small">
+                            <h1 class="h2 text-secondary-300">
+                              Layout Type B 1 bedroom in The Bristol Luxury in
+                              Dubai Marina, UAE
+                            </h1>
+                          </div>
+                        </div>
                       </div>
-                    </div>
 
-                    <div class="object-bottom__top-item">
-                      <div class="topBox topBox--small">
-                        <h1 class="h2 text-secondary-300">
-                          Layout Type B 1 bedroom in The Bristol Luxury in Dubai
-                          Marina, UAE
-                        </h1>
-
+                      <div class="object-bottom__top-item">
                         <div class="object-bottom__badges">
                           <div
                             class="badge-decor badge-decor--xl badge-decor--gray-100"
@@ -215,60 +311,100 @@
                     <div class="object-bottom__top-footer">
                       <div class="object-bottom__top-items">
                         <div class="guide-item">
-                          <div class="guide-item__img">
-                            <picture>
-                              <source
-                                srcset="
-                                  /img/guide/one.webp   1x,
-                                  /img/guide/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/guide/one.webp"
-                                alt="фотография"
-                                loading="lazy"
-                              />
-                            </picture>
-                          </div>
+                          <a
+                            href="#"
+                            aria-label="Перейти к Guide"
+                            title="Guide"
+                            class="guide-item__header"
+                          >
+                            <p class="p2 bold-font text-secondary-100">Guide</p>
 
-                          <div class="guide-item__content">
-                            <p class="p1 medium-font text-secondary-300">
-                              Mohammed Bin Rashid City
-                            </p>
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#arrow-right-line-icon"></use>
+                              </svg>
+                            </span>
+                          </a>
 
-                            <p class="p2 text-dark-500">
-                              223 properties from 560,00 AED
-                            </p>
+                          <div class="guide-item__info">
+                            <div class="guide-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guide/one.webp   1x,
+                                    /img/guide/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guide/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="guide-item__content">
+                              <p class="p1 medium-font text-secondary-300">
+                                Mohammed Bin Rashid City
+                              </p>
+
+                              <p class="p2 text-dark-500">
+                                223 properties from 560,00 AED
+                              </p>
+                            </div>
                           </div>
                         </div>
 
                         <div class="guide-item">
-                          <div class="guide-item__img">
-                            <picture>
-                              <source
-                                srcset="
-                                  /img/guide/one.webp   1x,
-                                  /img/guide/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/guide/one.webp"
-                                alt="фотография"
-                                loading="lazy"
-                              />
-                            </picture>
-                          </div>
+                          <a
+                            href="#"
+                            aria-label="Перейти к Guide"
+                            title="Guide"
+                            class="guide-item__header"
+                          >
+                            <p class="p2 bold-font text-secondary-100">Guide</p>
 
-                          <div class="guide-item__content">
-                            <p class="p1 medium-font text-secondary-300">
-                              Jumeirah Residences Emirates Towers
-                            </p>
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#arrow-right-line-icon"></use>
+                              </svg>
+                            </span>
+                          </a>
 
-                            <p class="p2 text-dark-500">
-                              14 apartments from 560,00 AED
-                            </p>
+                          <div class="guide-item__info">
+                            <div class="guide-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guide/one.webp   1x,
+                                    /img/guide/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guide/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="guide-item__content">
+                              <p class="p1 medium-font text-secondary-300">
+                                Mohammed Bin Rashid City
+                              </p>
+
+                              <p class="p2 text-dark-500">
+                                223 properties from 560,00 AED
+                              </p>
+                            </div>
                           </div>
                         </div>
+                      </div>
+
+                      <div class="md-desktop-show">
+                        <aside class="contact-aside">
+                          @@include('../modules/contact-form-aside.html')
+                        </aside>
                       </div>
                     </div>
                   </div>
@@ -278,83 +414,89 @@
 
                     <div class="object-bottom__footer">
                       <div
-                        class="list-info more-block more-block--two"
+                        class="list-info more-block"
                         data-block="more-items"
                         data-max="2"
+                        data-media-init="767"
+                        data-media-max="1"
                       >
-                        <ul class="list-info__box">
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Layout</p>
-                            </span>
+                        <div class="more-block__item">
+                          <ul class="list-info__box">
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Layout</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">ST-08b</p>
-                            </div>
-                          </li>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">ST-08b</p>
+                              </div>
+                            </li>
 
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Type</p>
-                            </span>
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Type</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">Apartment</p>
-                            </div>
-                          </li>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Apartment</p>
+                              </div>
+                            </li>
 
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">To sea</p>
-                            </span>
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">To sea</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">900 m</p>
-                            </div>
-                          </li>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">900 m</p>
+                              </div>
+                            </li>
 
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">To downtown</p>
-                            </span>
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">To downtown</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">450 m</p>
-                            </div>
-                          </li>
-                        </ul>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">450 m</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
 
-                        <ul class="list-info__box">
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">To airport</p>
-                            </span>
+                        <div class="more-block__item">
+                          <ul class="list-info__box">
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">To airport</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">3,200 m</p>
-                            </div>
-                          </li>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">3,200 m</p>
+                              </div>
+                            </li>
 
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Completion</p>
-                            </span>
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Completion</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">Q2 2026</p>
-                            </div>
-                          </li>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Q2 2026</p>
+                              </div>
+                            </li>
 
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Parking lots</p>
-                            </span>
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Parking lots</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">360</p>
-                            </div>
-                          </li>
-                        </ul>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">360</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
 
                       <div
@@ -371,11 +513,15 @@
                             More
                           </p>
 
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#arrow-line-down-icon"></use>
-                            </svg>
-                          </span>
+                          <div
+                            class="button--circle button--circle-3xs button--bg-gray-600"
+                          >
+                            <span class="icon icon--sm">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
                         </button>
                       </div>
                     </div>
@@ -580,7 +726,7 @@
                       </div>
 
                       <div
-                        class="object-bottom__property-swiper-box swiper-box swiper-box--pagination-bottom"
+                        class="object-bottom__property-swiper-box swiper-box swiper-box--pagination-bottom swiper-box--visible-tablet-inner"
                       >
                         <div class="swiper swiper--property">
                           <div class="swiper-wrapper">

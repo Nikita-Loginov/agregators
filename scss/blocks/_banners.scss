@@ -318,6 +318,10 @@
     background-color: var(--white-color);
     border: 1px solid var(--gray-color-200);
   }
+
+  @media (max-width: $lg-breakpoint) {
+    align-items: flex-start;
+  }
 }
 
 .banner-about {

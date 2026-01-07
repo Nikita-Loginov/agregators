@@ -1,5 +1,4 @@
-import { toggleVideoSwiper } from "./functions.js";
-import { checkIfDisabledSwiper } from "./functions.js";
+import { toggleVideoSwiper, checkIfDisabledSwiper, setTableCountItems } from "./functions.js";
 
 export const MOUSE_WHEEL_CONFIG = {
   enabled: true,
@@ -135,7 +134,7 @@ export const SWIPERS = {
         },
         600: {
           slidesPerView: 1.7,
-        }
+        },
       },
     },
     events: {
@@ -223,13 +222,34 @@ export const SWIPERS = {
     breakpoint: 122300000000,
 
     options: {
-      slidesPerView: 3,
-      spaceBetween: 32,
+      slidesPerView: 1,
+      spaceBetween: 16,
       mousewheel: MOUSE_WHEEL_CONFIG,
+      observer: true,
+      observeParents: true,
+      observeSlideChildren: true,
       navigation: {
         nextEl: ".comparison .arrow-swiper.next",
         prevEl: ".comparison .arrow-swiper.prev",
       },
+      breakpoints: {
+        1100: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        768: {
+          slidesPerView: 2,
+        }
+      }
+    },
+
+    events: {
+      init: (swiper) => {
+        setTableCountItems(swiper)
+      },
+      resize: (swiper) => {
+        setTableCountItems(swiper);
+      }
     },
   },
   RESULT_CARD: {
@@ -243,15 +263,13 @@ export const SWIPERS = {
         el: ".result-block .swiper--result .swiper-pagination",
       },
       breakpoints: {
-        1280: {
+        
+
+        900: {
           slidesPerView: 5,
         },
 
-        767: {
-          slidesPerView: 4,
-        },
-
-        360: {
+        550: {
           slidesPerView: 2,
         },
       },

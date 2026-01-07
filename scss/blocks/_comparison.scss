@@ -7,7 +7,7 @@
     width: 100%;
     gap: var(--gap-cards);
     grid-template-columns:
-      calc((100% / var(--count-cards, 4)) - (var(--gap-cards, 32px)))
+      calc((100% / var(--count-item-table, 4)) - (var(--gap-cards, 32px)))
       auto;
   }
 
@@ -26,5 +26,90 @@
   &__swiper-box {
     width: 100%;
     min-width: 0;
+  }
+
+  .table-grid {
+    &__row {
+      grid-template-columns: repeat(var(--count-item-table, 4), 1fr);
+    }
+  }
+
+  &[data-count="2"] {
+    .table-grid {
+      &__row {
+        .table-grid__cell {
+          &:nth-child(n + 3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-count="3"] {
+    .table-grid {
+      &__row {
+        .table-grid__cell {
+          &:nth-child(n + 4) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &[data-count="4"] {
+    .table-grid {
+      &__row {
+        .table-grid__cell {
+          &:nth-child(n + 5) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1099px) {
+    --gap-cards: 16px;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    .table-grid {
+      &__cell,
+      &__decor-cell--big {
+        padding: calculate-clamp(8px, 10px, 767px, 480px) 0;
+      }
+
+      &__decor-cell--big {
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    &__inner {
+      gap: 16px;
+    }
+
+    .topBox {
+      gap: 16px;
+
+      &__header {
+        display: contents;
+
+        .arrows-swiper {
+          order: 1000;
+        }
+      }
+    }
+
+    
   }
 }

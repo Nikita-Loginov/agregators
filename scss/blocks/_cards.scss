@@ -262,4 +262,27 @@ a.card-box {
     align-items: center;
     gap: 2px;
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    flex-direction: row;
+    gap: 40px;
+    justify-content: center;
+
+    &__item {
+      flex-direction: row;
+      gap: 4px;
+    }
+
+    &__head {
+      p {
+        font-size: 48px;
+      }
+    }
+
+    &__item {
+      .p1 {
+        font-size: 18px;
+      }
+    }
+  }
 }

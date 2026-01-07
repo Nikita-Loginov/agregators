@@ -1,6 +1,6 @@
 .object {
   overflow: hidden;
-  
+
   &__inner {
     display: flex;
     flex-direction: column;
@@ -13,11 +13,45 @@
   flex-direction: column;
   gap: calculate-clamp(8px, 16px, 1439px, 1023px);
 
+  &--big {
+    gap: 16px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+  }
+
+  &__header-btns {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &__info-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+
+    &--full {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .share {
+      &__btns {
+        .button {
+          width: 100%;
+        }
+      }
+    }
   }
 }
 
@@ -108,6 +142,13 @@
     gap: calculate-clamp(20px, 32px, 1439px, 1023px);
     min-width: 0;
     width: 100%;
+  }
+
+  &__top-items-boxs,
+  &__top-items-box {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(16px, 32px, 1439px, 1023px);
   }
 
   &__item-content {
@@ -221,7 +262,7 @@
 
     &--three {
       grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
+      gap: calculate-clamp(8px, 14px, 1439px, 1023px);
     }
   }
 
@@ -229,6 +270,17 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px 8px;
+    width: 100%;
+
+    @media (max-width: $lg-breakpoint) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 16px;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__property-swiper-box {
@@ -264,6 +316,14 @@
       flex-direction: column;
       gap: 40px;
       width: 100%;
+
+      &--reverse {
+        flex-direction: column-reverse;
+      }
+
+      &--between-md {
+        justify-content: space-between;
+      }
     }
 
     &__top-footer {
@@ -318,6 +378,14 @@
       }
     }
 
+    &__top-items-boxs {
+      gap: 32px;
+    }
+
+    &__top-items-box {
+      gap: 12px;
+    }
+
     &__top-footer {
       --gap-footer: 32px;
 
@@ -359,6 +427,12 @@
       .checkbox-box {
         width: 100%;
       }
+
+      &--three {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
     }
 
     &__info {
@@ -377,6 +451,26 @@
       position: relative;
       width: calc(100% + (var(--container-inline-padding) * 2));
       left: calc(var(--container-inline-padding) * -1);
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    &__property-items {
+      &--three {
+        grid-template-columns: 108px 108px auto;
+      }
+    }
+  }
+
+  @media (max-width: 376px) {
+    &__property-items {
+      &--three {
+        grid-template-columns: repeat(2, 1fr);
+
+        & > *:last-child {
+          grid-column: 1 / -1;
+        }
+      }
     }
   }
 }

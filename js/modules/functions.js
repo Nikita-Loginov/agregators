@@ -98,7 +98,7 @@ export const onChangeInput = (e) => {
     if (inputBox) inputBox.classList.remove("has-value");
   }
 
-  if (input.type === "number" || input.closest('[data-input-number]')) {
+  if (input.type === "number" || input.closest("[data-input-number]")) {
     handleNumberInput(input);
   }
 };
@@ -139,5 +139,11 @@ export const getPaginationSwiper = (box) => {
 export const getRetinaDPR = () => {
   const isMac = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
 
-  return isMac ? 2 : (window.devicePixelRatio || 1);
-}
+  return isMac ? 2 : window.devicePixelRatio || 1;
+};
+
+export const setVarElement = (el, nameVar, value) => {
+  if (!el || !nameVar) return;
+
+  el.style.setProperty(nameVar, value);
+};

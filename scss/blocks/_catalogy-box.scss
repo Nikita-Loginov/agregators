@@ -1,8 +1,30 @@
 .catalogy-box {
+  overflow: hidden;
+
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: calculate-clamp(22px, 28px, 1280px, 1023px);
+  }
+
+  &__content {
+    gap: calculate-clamp(20px, 40px, 1280px, 1023px);
+
+    &--big {
+      gap: 40px;
+
+      @media (max-width: $lg-breakpoint) {
+        gap: 48px;
+      }
+    }
+
+    &--xl {
+      gap: calculate-clamp(48px, 60px, 1280px, 1023px);
+
+      @media (max-width: $tablet-breakpoint) {
+        gap: 48px;
+      }
+    }
   }
 
   &__top {
@@ -29,10 +51,14 @@
     gap: 8px;
   }
 
+  &__filter-item {
+    width: 100%;
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(20px, 32px, 1280px, 1023px);
   }
 
   &__swiper-box {
@@ -72,7 +98,17 @@
     }
   }
 
-  @media (max-width: 767px) {
+  &__top-item {
+    width: 100%;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__filter {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
     &[data-grid="tiles"],
     &[data-grid="list"] {
       .catalogy__items-blocks {
@@ -86,6 +122,22 @@
 
     &__map-btn {
       display: flex;
+    }
+
+    .banner-status {
+      position: relative;
+      width: calc(100% + (var(--container-inline-padding) * 2));
+      left: calc(var(--container-inline-padding) * -1);
+      border-radius: var(--radius-base);
+    }
+
+    &__filter {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__item {
+      gap: calculate-clamp(12px, 20px, 1280px, 1023px);
     }
   }
 }

@@ -2720,11 +2720,11 @@
                   class="breadcrumbs__media"
                 >
                   <span class="breadcrumbs__circle">
-                    <div class="icon">
+                    <span class="icon icon--full">
                       <svg>
                         <use xlink:href="#arrow-circle-icon"></use>
                       </svg>
-                    </div>
+                    </span>
                   </span>
 
                   <span>Home</span>
@@ -2747,16 +2747,23 @@
                 <div class="catalogy-box__content topBox">
                   <div class="catalogy-box__info">
                     <div class="catalogy-box__top">
-                      <div
-                        class="select-box select-box--noMax select-box--words with-icon"
-                        data-icon="sort"
-                        data-placeholder="Sorted"
-                      >
-                        <select id="select5">
-                          <option value="">Sorted</option>
-                          <option value="1">Popular</option>
-                          <option value="2">Price up</option>
-                        </select>
+                      <div class="catalogy-box__top-item" style="max-width: 151px; width: 100%;" data-loader-relative>
+                        <div class="loader" data-loader-box>
+                          <span></span>
+                        </div>
+
+                        <div
+                          class="select-box select-box--noMax select-box--words with-icon"
+                          data-icon="sort"
+                          data-placeholder="Sorted"
+                          data-loading="true"
+                        >
+                          <select id="select5">
+                            <option value="">Sorted</option>
+                            <option value="1">Popular</option>
+                            <option value="2">Price up</option>
+                          </select>
+                        </div>
                       </div>
 
                       <a
@@ -3735,51 +3742,46 @@
 
                 <div class="catalogy-box__banners">
                   <div class="banner-news">
-                    <header class="banner-news__header">
-                      <p class="h6">Subscribe to our newsletter</p>
+  <header class="banner-news__header">
+    <p class="h6 fz-24-22">Subscribe to our newsletter</p>
 
-                      <div class="textbox">
-                        <p class="p2">
-                          You'll receive one email per week with exclusive
-                          offers and insights from our experts.
-                        </p>
-                      </div>
-                    </header>
+    <div class="textbox">
+      <p class="p2">
+        You'll receive one email per week with exclusive offers and insights
+        from our experts.
+      </p>
+    </div>
+  </header>
 
-                    <div class="banner-news__content">
-                      <div class="banner-news__img">
-                        <picture>
-                          <source
-                            srcset="
-                              /img/banner-news/one.webp   1x,
-                              /img/banner-news/one2x.webp 2x
-                            "
-                          />
-                          <img
-                            src="/img/banner-news/one.webp"
-                            alt="фотография"
-                          />
-                        </picture>
-                      </div>
-                    </div>
+  <div class="banner-news__content">
+    <div class="banner-news__img">
+      <picture>
+        <source
+          srcset="/img/banner-news/one.webp 1x, /img/banner-news/one2x.webp 2x"
+        />
+        <img src="/img/banner-news/one.webp" alt="фотография" />
+      </picture>
+    </div>
+  </div>
 
-                    <footer class="banner-news__footer">
-                      <a
-                        href="#"
-                        aria-label="Перейти на страницу Contact Seller"
-                        title="Contact Seller"
-                        class="button button--bg-primary-100 button--lg button--rounded-3xl"
-                      >
-                        <span>Subscribe</span>
+  <footer class="banner-news__footer">
+    <a
+      href="#"
+      aria-label="Перейти на страницу Contact Seller"
+      title="Contact Seller"
+      class="button button--bg-primary-100 button--lg button--rounded-3xl"
+    >
+      <span>Subscribe</span>
 
-                        <span class="icon icon--big">
-                          <svg>
-                            <use xlink:href="#arrow-line-icon"></use>
-                          </svg>
-                        </span>
-                      </a>
-                    </footer>
-                  </div>
+      <span class="icon icon--big">
+        <svg>
+          <use xlink:href="#arrow-line-icon"></use>
+        </svg>
+      </span>
+    </a>
+  </footer>
+</div>
+
                 </div>
               </div>
             </div>

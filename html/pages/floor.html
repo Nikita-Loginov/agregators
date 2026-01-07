@@ -10,52 +10,76 @@
         <section class="object">
           <div class="container">
             <div class="object__inner">
-              <div class="object-top">
-                <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__link">
-                      <a
-                        href="#"
-                        aria-label="Вернуться на Home"
-                        title="Home"
-                        class="breadcrumbs__item link active active-noColor active-line"
-                        >Home</a
-                      >
-                    </li>
+              <div class="object-top object-top--big">
+                <div class="object-top__header">
+                  <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Home"
+                          title="Home"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Home</a
+                        >
+                      </li>
 
-                    <li class="breadcrumbs__link">
-                      <a
-                        href="#"
-                        aria-label="Вернуться на Real estate in UAE"
-                        title="Real estate in UAE"
-                        class="breadcrumbs__item link active active-noColor active-line"
-                        >Real estate in UAE</a
-                      >
-                    </li>
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Real estate in UAE"
+                          title="Real estate in UAE"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Real estate in UAE</a
+                        >
+                      </li>
 
-                    <li class="breadcrumbs__link">
-                      <span class="breadcrumbs__item"
-                        >6 floor AstraHills Apartments</span
-                      >
-                    </li>
-                  </ul>
+                      <li class="breadcrumbs__link">
+                        <span class="breadcrumbs__item"
+                          >6 floor AstraHills Apartments</span
+                        >
+                      </li>
+                    </ul>
 
-                  <a
-                    href="#"
-                    aria-label="Вернуться на Home"
-                    title="Home"
-                    class="breadcrumbs__media"
-                  >
-                    <span class="breadcrumbs__circle">
-                      <div class="icon icon--full">
-                        <svg>
-                          <use xlink:href="#arrow-circle-icon"></use>
-                        </svg>
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__media"
+                    >
+                      <span class="breadcrumbs__circle">
+                        <span class="icon icon--full">
+                          <svg>
+                            <use xlink:href="#arrow-circle-icon"></use>
+                          </svg>
+                        </span>
+                      </span>
+
+                      <span>Home</span>
+                    </a>
+                  </div>
+
+                  <div class="tablet-none">
+                    <div class="lg-show">
+                      <div class="object-top__header-btns">
+                        <div class="share list-popup relative relative-top">
+                          <div class="share__btns">
+                            <button
+                              class="button button--bg-gray-200 button--cub button--cub-sm"
+                            >
+                              <span class="icon icon--little">
+                                <svg>
+                                  <use xlink:href="#share-icon"></use>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+
+                          @@include('../modules/share-popup.html')
+                        </div>
                       </div>
-                    </span>
-
-                    <span>Home</span>
-                  </a>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="object-top__info">
@@ -112,6 +136,28 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="tablet-show">
+                    <div class="object-top__info-btns object-top__info-btns--full">
+                      <div class="share list-popup relative relative-top left-media">
+                        <div class="share__btns">
+                          <button
+                            class="button button--bg-gray-200 button--md2x"
+                          >
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#share-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2 medium-font">Share</p>
+                          </button>
+                        </div>
+
+                        @@include('../modules/share-popup.html')
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -119,33 +165,58 @@
                 <div class="object-bottom__content">
                   <div class="object-bottom__top">
                     <div class="object-bottom__top-footer">
-                      <div class="object-bottom__top-items">
+                      <div
+                        class="object-bottom__top-items object-bottom__top-items--reverse object-bottom__top-items--between-md"
+                      >
                         <div class="guide-item">
-                          <div class="guide-item__img">
-                            <picture>
-                              <source
-                                srcset="
-                                  /img/guide/one.webp   1x,
-                                  /img/guide/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/guide/one.webp"
-                                alt="фотография"
-                                loading="lazy"
-                              />
-                            </picture>
-                          </div>
+                          <a
+                            href="#"
+                            aria-label="Перейти к Guide"
+                            title="Guide"
+                            class="guide-item__header"
+                          >
+                            <p class="p2 bold-font text-secondary-100">Guide</p>
 
-                          <div class="guide-item__content">
-                            <p class="p1 medium-font text-secondary-300">
-                              Mohammed Bin Rashid City
-                            </p>
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#arrow-right-line-icon"></use>
+                              </svg>
+                            </span>
+                          </a>
 
-                            <p class="p2 text-dark-500">
-                              223 properties from 560,00 AED
-                            </p>
+                          <div class="guide-item__info">
+                            <div class="guide-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guide/one.webp   1x,
+                                    /img/guide/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guide/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="guide-item__content">
+                              <p class="p1 medium-font text-secondary-300">
+                                Mohammed Bin Rashid City
+                              </p>
+
+                              <p class="p2 text-dark-500">
+                                223 properties from 560,00 AED
+                              </p>
+                            </div>
                           </div>
+                        </div>
+
+                        <div class="tablet-show">
+                          <aside class="contact-aside">
+                            @@include('../modules/contact-form-aside.html')
+                          </aside>
                         </div>
 
                         <div class="params">
@@ -160,46 +231,73 @@
                               </div>
                             </div>
 
-                            <div class="params__item active-card dropdown dropdown--select dropdown-number" data-select="true">
+                            <div
+                              class="params__item active-card dropdown dropdown--select dropdown-number"
+                              data-select="true"
+                            >
                               <div class="params__item-header">
                                 <button type="button" class="dropdown__btn">
-                                  <p class="h6 dropdown__text text-uppercase"></p>
-                            
+                                  <p
+                                    class="h6 dropdown__text text-uppercase"
+                                  ></p>
+
                                   <span class="icon arrow">
                                     <svg>
-                                      <use xlink:href="#arrow-bottom-icon"></use>
+                                      <use
+                                        xlink:href="#arrow-bottom-icon"
+                                      ></use>
                                     </svg>
                                   </span>
                                 </button>
                               </div>
-                            
+
                               <div class="params__item-content">
                                 <p class="p3 medium-font">Floor</p>
                               </div>
-                            
-                              <div class="dropdown__content dropdown-number__content">
+
+                              <div
+                                class="dropdown__content dropdown-number__content"
+                              >
                                 <ul class="dropdown-number__list">
-                                  <li class="dropdown-number__link dropdown-item-close dropdown__item" data-value="1">
+                                  <li
+                                    class="dropdown-number__link dropdown-item-close dropdown__item"
+                                    data-value="1"
+                                  >
                                     <p class="h6">1</p>
                                   </li>
-                            
-                                  <li class="dropdown-number__link dropdown-item-close dropdown__item active" data-value="2">
+
+                                  <li
+                                    class="dropdown-number__link dropdown-item-close dropdown__item active"
+                                    data-value="2"
+                                  >
                                     <p class="h6">2</p>
                                   </li>
 
-                                  <li class="dropdown-number__link dropdown-item-close dropdown__item" data-value="3">
+                                  <li
+                                    class="dropdown-number__link dropdown-item-close dropdown__item"
+                                    data-value="3"
+                                  >
                                     <p class="h6">3</p>
                                   </li>
 
-                                  <li class="dropdown-number__link dropdown-item-close dropdown__item" data-value="4">
+                                  <li
+                                    class="dropdown-number__link dropdown-item-close dropdown__item"
+                                    data-value="4"
+                                  >
                                     <p class="h6">4</p>
                                   </li>
 
-                                  <li class="dropdown-number__link dropdown-item-close dropdown__item" data-value="5">
+                                  <li
+                                    class="dropdown-number__link dropdown-item-close dropdown__item"
+                                    data-value="5"
+                                  >
                                     <p class="h6">5</p>
                                   </li>
 
-                                  <li class="dropdown-number__link dropdown-item-close dropdown__item" data-value="6">
+                                  <li
+                                    class="dropdown-number__link dropdown-item-close dropdown__item"
+                                    data-value="6"
+                                  >
                                     <p class="h6">6</p>
                                   </li>
                                 </ul>
@@ -216,6 +314,14 @@
                               </div>
                             </div>
                           </div>
+                        </div>
+                      </div>
+
+                      <div class="tablet-none">
+                        <div class="md-desktop-show">
+                          <aside class="contact-aside">
+                            @@include('../modules/contact-form-aside.html')
+                          </aside>
                         </div>
                       </div>
                     </div>

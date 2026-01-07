@@ -1,3 +1,6 @@
+.catalogy-box {
+  overflow: hidden;
+}
 .catalogy-box__info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6,7 +9,26 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 28px;
+  gap: clamp(22px, -1.8832684825px + 2.3346303502vw, 28px);
+}
+.catalogy-box__content {
+  gap: clamp(20px, -59.6108949416px + 7.7821011673vw, 40px);
+}
+.catalogy-box__content--big {
+  gap: 40px;
+}
+@media (max-width: 1023px) {
+  .catalogy-box__content--big {
+    gap: 48px;
+  }
+}
+.catalogy-box__content--xl {
+  gap: clamp(48px, 0.233463035px + 4.6692607004vw, 60px);
+}
+@media (max-width: 767px) {
+  .catalogy-box__content--xl {
+    gap: 48px;
+  }
 }
 .catalogy-box__top {
   display: -webkit-box;
@@ -39,6 +61,9 @@
   grid-template-columns: repeat(6, 1fr);
   gap: 8px;
 }
+.catalogy-box__filter-item {
+  width: 100%;
+}
 .catalogy-box__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,7 +72,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 32px;
+  gap: clamp(20px, -27.766536965px + 4.6692607004vw, 32px);
 }
 .catalogy-box__swiper-box {
   min-width: 0;
@@ -81,6 +106,14 @@
 .catalogy-box[data-grid=tiles] .catalogy-box__items > *:not(.good-item) {
   grid-column: 1/-1;
 }
+.catalogy-box__top-item {
+  width: 100%;
+}
+@media (max-width: 1023px) {
+  .catalogy-box__filter {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 @media (max-width: 767px) {
   .catalogy-box[data-grid=tiles] .catalogy__items-blocks, .catalogy-box[data-grid=list] .catalogy__items-blocks {
     grid-template-columns: repeat(1, 1fr);
@@ -92,6 +125,24 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+  .catalogy-box .banner-status {
+    position: relative;
+    width: calc(100% + var(--container-inline-padding) * 2);
+    left: calc(var(--container-inline-padding) * -1);
+    border-radius: var(--radius-base);
+  }
+  .catalogy-box__filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .catalogy-box__item {
+    gap: clamp(12px, -19.8443579767px + 3.1128404669vw, 20px);
   }
 }
 

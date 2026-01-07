@@ -171,6 +171,14 @@ h6 {
   font-size: calculate-clamp(16px, 40px, 1279px, 767px);
 }
 
+.fz-48-26 {
+  font-size: calculate-clamp(26px, 48px, 1279px, 767px);
+}
+
+.fz-24-22 {
+  font-size: calculate-clamp(22px, 24px, 1279px, 767px);
+}
+
 body .main {
   .br-base {
     border-radius: var(--radius-base);
