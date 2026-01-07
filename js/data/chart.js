@@ -140,7 +140,7 @@ export const charts = {
             pointBackgroundColor: "#636899",
             pointBorderColor: "#FFFFFF",
             pointBorderWidth: 2,
-            pointRadius: 6,
+            pointRadius: 0,
             pointHoverRadius: 8,
             borderWidth: 2,
             tension: 0.4,

@@ -199,8 +199,8 @@ a.card-box {
   flex-direction: column;
   gap: 16px;
   align-items: center;
-  padding: 24px;
-  min-height: 148px;
+  padding: calculate-clamp(4px, 24px, 1280px, 1023px);
+  min-height: calculate-clamp(64px, 148px, 1280px, 1023px);
   background-color: var(--gray-color-200);
   border-radius: var(--radius-md);
 
@@ -226,6 +226,15 @@ a.card-box {
     display: flex;
     align-items: center;
     gap: 10px;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    min-height: auto;
+    flex-direction: row;
+
+    &__icon {
+      border-radius: var(--radius-base);
+    }
   }
 }
 

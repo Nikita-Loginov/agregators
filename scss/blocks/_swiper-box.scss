@@ -23,6 +23,18 @@
         }
       }
     }
+
+    &-tablet-inner {
+      @media (max-width: $tablet-breakpoint) {
+        &:not(:has(.swiper.swiper-disabled)) {
+          overflow: visible;
+
+          .swiper {
+            overflow: visible;
+          }
+        }
+      }
+    }
   }
 
   &__block {

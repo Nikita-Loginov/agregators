@@ -6,11 +6,11 @@
   &__box {
     background-color: var(--gray-color-200);
     border-radius: var(--radius-md);
-    padding: 4px 12px;
+    padding: calculate-clamp(2px, 4px, 1439px, 1023px) calculate-clamp(8px, 12px, 1439px, 1023px);
     display: flex;
     align-items: center;
-    gap: 8px;
-    min-height: 38px;
+    gap: calculate-clamp(4px, 8px, 1439px, 1023px);
+    min-height: calculate-clamp(32px, 38px, 1439px, 1023px);
 
     * {
       line-height: var(--line-height-tighter);

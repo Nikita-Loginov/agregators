@@ -1,4 +1,6 @@
 .object {
+  overflow: hidden;
+  
   &__inner {
     display: flex;
     flex-direction: column;
@@ -80,7 +82,7 @@
   &__block {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: calculate-clamp(16px, 20px, 767px, 480px);
     width: 100%;
   }
 
@@ -159,7 +161,13 @@
   &__top-footer-content {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: calculate-clamp(16px, 24px, 1439px, 1023px);
+  }
+
+  &__top-content-info {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(16px, 24px, 1439px, 1023px);
   }
 
   &__banners {
@@ -186,6 +194,14 @@
 
     .button {
       min-width: 210px;
+    }
+  }
+
+  &__item-property {
+    &:not(:has(.swiper-pagination.swiper-pagination-lock)) {
+      .pagination {
+        display: none;
+      }
     }
   }
 
@@ -223,14 +239,14 @@
   &__table-box {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: calculate-clamp(8px, 16px, 767px, 480px);
     width: 100%;
   }
 
   &__tables {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(20px, 32px, 1439px, 1023px);
     width: 100%;
   }
 
@@ -260,6 +276,46 @@
     &__top-item {
       gap: calculate-clamp(12px, 20px, 767px, 480px);
       flex-direction: column-reverse;
+      align-items: normal;
+
+      &--center {
+        align-items: normal;
+      }
+    }
+
+    &__tables {
+      gap: calculate-clamp(12px, 20px, 767px, 480px);
+    }
+
+    &__top-content-info {
+      gap: 32px;
+    }
+
+    &__top-content {
+      gap: 12px;
+    }
+
+    &__item--near {
+      background-color: var(--gray-color-200);
+      border-radius: var(--radius-md);
+      padding: 12px 4px;
+      text-align: center;
+      align-items: normal;
+
+      .object-bottom__items {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .card-complex {
+        background-color: var(--white-color);
+
+        &__icon {
+          background-color: var(--secondary-color-200);
+          color: var(--secondary-color-100);
+        }
+      }
     }
 
     &__top-footer {
@@ -271,6 +327,10 @@
       .contact-aside {
         width: 100%;
       }
+
+      &--reverse-media {
+        flex-direction: column-reverse;
+      }
     }
 
     &__top-items {
@@ -280,6 +340,25 @@
     &__items {
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
+    }
+
+    &__top-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    &__property-items {
+      display: flex;
+      gap: 12px;
+
+      .checkbox-box {
+        width: 100%;
+      }
     }
 
     &__info {

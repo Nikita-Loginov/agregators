@@ -8,6 +8,20 @@
     align-items: center;
     gap: 8px;
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    &--media-bg {
+      padding: 16px;
+      background-color: var(--gray-color-200);
+      border-radius: var(--radius-md);
+
+      .list-icon {
+        &__link {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
 }
 
 .list-popup {

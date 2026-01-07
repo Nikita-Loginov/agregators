@@ -228,7 +228,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
+  gap: clamp(20px, 4.015625px + 1.5625vw, 24px);
 }
 
 .comments-box {
@@ -239,7 +239,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
+  gap: clamp(20px, 4.015625px + 1.5625vw, 24px);
 }
 .comments-box__inner {
   display: -webkit-box;
@@ -249,7 +249,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
+  gap: clamp(20px, 4.015625px + 1.5625vw, 24px);
 }
 .comments-box__details {
   display: -webkit-box;
@@ -269,7 +269,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 .comments-box__forms, .comments-box__details {
   display: none;
@@ -298,7 +298,10 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 12px;
+  gap: clamp(8px, 4.6550522648px + 0.6968641115vw, 10px);
+  background-color: var(--gray-color-100);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
 }
 .comments-item__header {
   display: -webkit-box;
@@ -319,11 +322,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 4px;
-}
-.comments-item__tags:has(.comments-item__rating):has(.comments-item__author) > * {
-  border-bottom-left-radius: var(--radius-sm);
-  border-top-left-radius: var(--radius-sm);
+  width: 100%;
 }
 .comments-item__tag {
   display: -webkit-box;
@@ -332,25 +335,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  min-height: 36px;
-  gap: 6px;
-  padding: 4px 12px;
-  border-radius: var(--radius-xl);
-  background-color: var(--gray-color-300);
-}
-.comments-item__tag time {
-  color: var(--dark-color-500);
-}
-.comments-item__rating {
-  padding: 7px 16px;
-  gap: 4px;
-}
-.comments-item__rating .icon {
-  width: 16px;
-  height: 16px;
+  gap: 8px;
 }
 .comments-item__author > *:not(:last-child) {
   display: -webkit-box;
@@ -370,4 +355,9 @@
   right: 0;
   top: 0;
   color: var(--primary-color-100);
+}
+@media (max-width: 1023px) {
+  .comments-item {
+    padding: 16px;
+  }
 }

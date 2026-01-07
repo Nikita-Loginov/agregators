@@ -30,6 +30,12 @@
     background-color: var(--white-color);
     justify-content: space-between;
 
+    &:has(textarea) {
+     padding: 12px 16px;
+     min-height: 100px;
+     align-items: flex-start; 
+    }
+
     .icon {
       width: 24px;
       height: 24px;
@@ -105,7 +111,7 @@
     &:first-child {
       .input-box {
         &__info {
-          min-height: 52px;
+          min-height: calculate-clamp(40px, 52px, 1023px, 767px);
         }
       }
     }

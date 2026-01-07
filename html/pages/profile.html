@@ -17,51 +17,65 @@
           <div class="container">
             <div class="object__inner">
               <div class="object-top">
-                <div class="breadcrumbs">
-                  <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__link">
-                      <a
-                        href="#"
-                        aria-label="Вернуться на Home"
-                        title="Home"
-                        class="breadcrumbs__item link active active-noColor active-line"
-                        >Home</a
-                      >
-                    </li>
+                <div class="object-top__header">
+                  <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Home"
+                          title="Home"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Home</a
+                        >
+                      </li>
 
-                    <li class="breadcrumbs__link">
-                      <a
-                        href="#"
-                        aria-label="Вернуться на Real estate in UAE"
-                        title="Real estate in UAE"
-                        class="breadcrumbs__item link active active-noColor active-line"
-                        >Real estate in UAE</a
-                      >
-                    </li>
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Real estate in UAE"
+                          title="Real estate in UAE"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Real estate in UAE</a
+                        >
+                      </li>
 
-                    <li class="breadcrumbs__link">
-                      <span class="breadcrumbs__item"
-                        >Sky Hills Astra in Al Barsha</span
-                      >
-                    </li>
-                  </ul>
+                      <li class="breadcrumbs__link">
+                        <span class="breadcrumbs__item"
+                          >Sky Hills Astra in Al Barsha</span
+                        >
+                      </li>
+                    </ul>
 
-                  <a
-                    href="#"
-                    aria-label="Вернуться на Home"
-                    title="Home"
-                    class="breadcrumbs__media"
-                  >
-                    <span class="breadcrumbs__circle">
-                      <div class="icon icon--full">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__media"
+                    >
+                      <span class="breadcrumbs__circle">
+                        <div class="icon icon--full">
+                          <svg>
+                            <use xlink:href="#arrow-circle-icon"></use>
+                          </svg>
+                        </div>
+                      </span>
+
+                      <span>Home</span>
+                    </a>
+                  </div>
+
+                  <div class="lg-show">
+                    <button class="button button--noMassa text-primary-100">
+                      <span class="icon icon--little">
                         <svg>
-                          <use xlink:href="#arrow-circle-icon"></use>
+                          <use xlink:href="#flug-icon"></use>
                         </svg>
-                      </div>
-                    </span>
+                      </span>
 
-                    <span>Home</span>
-                  </a>
+                      <p class="p3 regular-font">Report this property</p>
+                    </button>
+                  </div>
                 </div>
 
                 <div class="object-top__info">
@@ -143,7 +157,7 @@
                       </div>
 
                       <div
-                        class="gallery-simple__tags gallery-simple__tags--info"
+                        class="gallery-simple__tags gallery-simple__tags--info lg-none"
                       >
                         <div class="badge badge--middle badge--white-color-170">
                           <span class="icon icon--little">
@@ -187,7 +201,7 @@
                       </div>
 
                       <div
-                        class="gallery-simple__tags gallery-simple__tags--decor"
+                        class="gallery-simple__tags gallery-simple__tags--decor md-desktop-none"
                       >
                         <div
                           class="badge badge--big badge--secondary-color-470"
@@ -213,6 +227,34 @@
                           <span class="p2">2</span>
                         </div>
                       </div>
+
+                      <div
+                        class="gallery-simple__tags gallery-simple__tags--decor md-desktop-show"
+                      >
+                        <div
+                          class="badge badge--big badge--secondary-color-470 br--rounded-xl"
+                        >
+                          <span class="icon icon--little">
+                            <svg>
+                              <use xlink:href="#img-icon"></use>
+                            </svg>
+                          </span>
+
+                          <span class="p4 medium-font">30</span>
+                        </div>
+
+                        <div
+                          class="badge badge--big badge--secondary-color-470 br--rounded-xl"
+                        >
+                          <span class="icon icon--little">
+                            <svg>
+                              <use xlink:href="#video-icon"></use>
+                            </svg>
+                          </span>
+
+                          <span class="p4 medium-font">2</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -226,7 +268,7 @@
                         <div class="object-bottom__top-line">
                           <div class="price">
                             <div class="price__top price__top--end">
-                              <p class="h3">
+                              <p class="h3 fz-40-16">
                                 From
 
                                 <span class="text-uppercase h2">1,102,500</span>
@@ -234,154 +276,236 @@
                                 <span class="text-uppercase h4">AED</span>
                               </p>
 
-                              <p class="p3 text-dark-500 medium-font">
+                              <p class="p3 text-dark-500 medium-font lg-none">
                                 11,529 AED / sqm
                               </p>
                             </div>
+
+                            <p class="p4 text-dark-500 medium-font lg-show">
+                              11,529 AED / sqm
+                            </p>
                           </div>
                         </div>
 
                         <div class="object-bottom__top-line">
-                          <button
-                            title="On the Map"
-                            class="button button--bg-gray-200 button--lg button--rounded-3xl modal-open"
-                            data-modal="mapModal"
-                          >
-                            <span class="icon icon--big">
-                              <svg>
-                                <use xlink:href="#map-icon"></use>
-                              </svg>
-                            </span>
+                          <div class="md-desktop-show">
+                            <div class="object-bottom__top-line-btns">
+                              <div
+                                class="share list-popup relative relative-top left-media"
+                              >
+                                <div class="share__btns">
+                                  <button
+                                    class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#share-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </button>
+                                </div>
 
-                            <p class="p2 medium-font">On the Map</p>
-                          </button>
+                                @@include('../modules/share-popup.html')
+                              </div>
+
+                              <button
+                                class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--favorite"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#heart-icon"></use>
+                                  </svg>
+                                </span>
+                              </button>
+
+                              <button
+                                class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--comparison"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#chart-icon"></use>
+                                  </svg>
+                                </span>
+                              </button>
+
+                              <button
+                                title="On the Map"
+                                class="button button--bg-secondary-200 modal-open"
+                                data-modal="mapModal"
+                              >
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#map-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">On the Map</p>
+                              </button>
+                            </div>
+                          </div>
+
+                          <div class="md-desktop-none">
+                            <button
+                              title="On the Map"
+                              class="button button--bg-gray-200 button--lg button--rounded-3xl modal-open"
+                              data-modal="mapModal"
+                            >
+                              <span class="icon icon--big">
+                                <svg>
+                                  <use xlink:href="#map-icon"></use>
+                                </svg>
+                              </span>
+
+                              <p class="p2 medium-font">On the Map</p>
+                            </button>
+                          </div>
                         </div>
                       </div>
 
-                      <div
-                        class="object-bottom__top-item object-bottom__top-item--center"
-                      >
-                        <div class="name-rating">
-                          <div class="name-rating__box">
+                      <div class="object-bottom__top-content-info">
+                        <div
+                          class="object-bottom__top-item object-bottom__top-item--center"
+                        >
+                          <div class="tablet-show">
+                            <button
+                              class="button button--noMassa text-primary-100"
+                            >
+                              <span class="icon icon--little">
+                                <svg>
+                                  <use xlink:href="#flug-icon"></use>
+                                </svg>
+                              </span>
+
+                              <p class="p3 regular-font">
+                                Report this property
+                              </p>
+                            </button>
+                          </div>
+
+                          <div class="name-rating">
+                            <div class="name-rating__box">
+                              <span class="icon icon--big text-primary-100">
+                                <svg>
+                                  <use xlink:href="#star-icon"></use>
+                                </svg>
+                              </span>
+
+                              <p class="p1 semibold-font text-dark-100">4,9</p>
+                            </div>
+
+                            <div class="name-rating__content">
+                              <p class="h4 text-secondary-300">
+                                SkyHills Astra
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="decor-el lg-none">
+                            <span class="icon icon--big text-secondary-300">
+                              <svg>
+                                <use xlink:href="#building-icon"></use>
+                              </svg>
+                            </span>
+
+                            <p class="p2 text-secondary-300">
+                              18 properties for sale
+                            </p>
+
                             <span class="icon icon--big text-primary-100">
                               <svg>
-                                <use xlink:href="#star-icon"></use>
+                                <use xlink:href="#arrow-down-line-icon"></use>
                               </svg>
                             </span>
-
-                            <p class="p1 semibold-font text-dark-100">4,9</p>
-                          </div>
-
-                          <div class="name-rating__content">
-                            <p class="h4 text-secondary-300">SkyHills Astra</p>
                           </div>
                         </div>
 
-                        <div class="decor-el">
-                          <span class="icon icon--big text-secondary-300">
-                            <svg>
-                              <use xlink:href="#building-icon"></use>
-                            </svg>
-                          </span>
+                        <div class="object-bottom__top-item">
+                          <div class="object-bottom__top-block">
+                            <div class="object-bottom__badges">
+                              <div
+                                class="badge-decor badge-decor--xl badge-decor--gray-100"
+                              >
+                                <span class="icon icon--big">
+                                  <svg>
+                                    <use xlink:href="#barrier-icon"></use>
+                                  </svg>
+                                </span>
 
-                          <p class="p2 text-secondary-300">
-                            18 properties for sale
-                          </p>
+                                <div class="badge-decor__content">
+                                  <p class="p2 medium-font">Q2 2026</p>
 
-                          <span class="icon icon--big text-primary-100">
-                            <svg>
-                              <use xlink:href="#arrow-down-line-icon"></use>
-                            </svg>
-                          </span>
-                        </div>
-                      </div>
+                                  <p class="p2">Delivery of the object</p>
+                                </div>
+                              </div>
 
-                      <div class="object-bottom__top-item">
-                        <div class="object-bottom__top-block">
-                          <div class="object-bottom__badges">
-                            <div
-                              class="badge-decor badge-decor--xl badge-decor--gray-100"
-                            >
-                              <span class="icon icon--big">
-                                <svg>
-                                  <use xlink:href="#barrier-icon"></use>
-                                </svg>
-                              </span>
+                              <div
+                                class="badge-decor badge-decor--xl badge-decor--gray-100"
+                              >
+                                <span class="icon icon--big">
+                                  <svg>
+                                    <use xlink:href="#ruler-icon"></use>
+                                  </svg>
+                                </span>
 
-                              <div class="badge-decor__content">
-                                <p class="p2 medium-font">Q2 2026</p>
+                                <div class="badge-decor__content">
+                                  <p class="p2 medium-font">60.11 sq.m.</p>
 
-                                <p class="p2">Delivery of the object</p>
+                                  <p class="p2">Living space, min.</p>
+                                </div>
+                              </div>
+
+                              <div
+                                class="badge-decor badge-decor--xl badge-decor--gray-100"
+                              >
+                                <span class="icon icon--big">
+                                  <svg>
+                                    <use xlink:href="#chart-pie-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <div class="badge-decor__content">
+                                  <p class="p2 medium-font">60 / 40</p>
+
+                                  <p class="p2">Payment plan</p>
+                                </div>
                               </div>
                             </div>
 
-                            <div
-                              class="badge-decor badge-decor--xl badge-decor--gray-100"
-                            >
-                              <span class="icon icon--big">
-                                <svg>
-                                  <use xlink:href="#ruler-icon"></use>
-                                </svg>
-                              </span>
+                            <ul class="list-icon list-icon--media-bg">
+                              <li class="list-icon__link">
+                                <span class="icon icon--big">
+                                  <svg>
+                                    <use xlink:href="#train-icon"></use>
+                                  </svg>
+                                </span>
 
-                              <div class="badge-decor__content">
-                                <p class="p2 medium-font">60.11 sq.m.</p>
+                                <div class="text-dots text-dots--media-no-dots">
+                                  <p class="p2">
+                                    <span>Mall of the Emirates</span>
 
-                                <p class="p2">Living space, min.</p>
-                              </div>
-                            </div>
+                                    <span class="medium-font">700 m</span>
+                                  </p>
 
-                            <div
-                              class="badge-decor badge-decor--xl badge-decor--gray-100"
-                            >
-                              <span class="icon icon--big">
-                                <svg>
-                                  <use xlink:href="#chart-pie-icon"></use>
-                                </svg>
-                              </span>
+                                  <p class="p2">
+                                    <span>Dubai Internet City</span>
 
-                              <div class="badge-decor__content">
-                                <p class="p2 medium-font">60 / 40</p>
+                                    <span class="medium-font">1 200 m</span>
+                                  </p>
 
-                                <p class="p2">Payment plan</p>
-                              </div>
-                            </div>
+                                  <p class="p2">
+                                    <span>Al Khail (formerly Nakheel)</span>
+
+                                    <span class="medium-font">9 000 m</span>
+                                  </p>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
-
-                          <ul class="list-icon">
-                            <li class="list-icon__link">
-                              <span class="icon icon--big">
-                                <svg>
-                                  <use xlink:href="#train-icon"></use>
-                                </svg>
-                              </span>
-
-                              <div class="text-dots">
-                                <p class="p2">
-                                  <span>Mall of the Emirates</span>
-
-                                  <span class="medium-font">700 m</span>
-                                </p>
-
-                                <p class="p2">
-                                  <span>Dubai Internet City</span>
-
-                                  <span class="medium-font">1 200 m</span>
-                                </p>
-
-                                <p class="p2">
-                                  <span>Al Khail (formerly Nakheel)</span>
-
-                                  <span class="medium-font">9 000 m</span>
-                                </p>
-                              </div>
-                            </li>
-                          </ul>
                         </div>
                       </div>
                     </div>
 
-                    <div class="object-bottom__top-btns">
+                    <div class="object-bottom__top-btns tablet-none">
                       <button
                         class="button button--lg button--bg-primary-100 button--rounded-3xl modal-open"
                         type="button"
@@ -414,89 +538,166 @@
                       </a>
                     </div>
 
-                    <div class="object-bottom__top-footer">
+                    <div
+                      class="object-bottom__top-footer object-bottom__top-footer--reverse-media"
+                    >
                       <div class="object-bottom__top-items">
                         <div class="guide-item">
-                          <div class="guide-item__img">
-                            <picture>
-                              <source
-                                srcset="
-                                  /img/guide/one.webp   1x,
-                                  /img/guide/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/guide/one.webp"
-                                alt="фотография"
-                                loading="lazy"
-                              />
-                            </picture>
-                          </div>
+                          <a
+                            href="#"
+                            aria-label="Перейти к Guide"
+                            title="Guide"
+                            class="guide-item__header"
+                          >
+                            <p class="p2 bold-font text-secondary-100">Guide</p>
 
-                          <div class="guide-item__content">
-                            <p class="p1 medium-font text-secondary-300">
-                              Mohammed Bin Rashid City
-                            </p>
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#arrow-right-line-icon"></use>
+                              </svg>
+                            </span>
+                          </a>
 
-                            <p class="p2 text-dark-500">
-                              223 properties from 560,00 AED
-                            </p>
+                          <div class="guide-item__info">
+                            <div class="guide-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guide/one.webp   1x,
+                                    /img/guide/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guide/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="guide-item__content">
+                              <p class="p1 medium-font text-secondary-300">
+                                Mohammed Bin Rashid City
+                              </p>
+
+                              <p class="p2 text-dark-500">
+                                223 properties from 560,00 AED
+                              </p>
+                            </div>
                           </div>
                         </div>
 
                         <div class="guide-item">
-                          <div class="guide-item__img">
-                            <picture>
-                              <source
-                                srcset="
-                                  /img/guide/one.webp   1x,
-                                  /img/guide/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/guide/one.webp"
-                                alt="фотография"
-                                loading="lazy"
-                              />
-                            </picture>
-                          </div>
+                          <a
+                            href="#"
+                            aria-label="Перейти к Guide"
+                            title="Guide"
+                            class="guide-item__header"
+                          >
+                            <p class="p2 bold-font text-secondary-100">Guide</p>
 
-                          <div class="guide-item__content">
-                            <p class="p1 medium-font text-secondary-300">
-                              Emaar Properties
-                            </p>
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#arrow-right-line-icon"></use>
+                              </svg>
+                            </span>
+                          </a>
 
-                            <div class="guide-item__footer">
-                              <p class="p2 text-dark-500">Developer</p>
+                          <div class="guide-item__info">
+                            <div class="guide-item__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guide/one.webp   1x,
+                                    /img/guide/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guide/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
 
-                              <div class="guide-item__budges">
-                                <div
-                                  class="badge badge--xl badge--secondary-color-200"
-                                >
-                                  <span class="icon icon--little">
-                                    <svg>
-                                      <use xlink:href="#checks-icon"></use>
-                                    </svg>
-                                  </span>
+                            <div class="guide-item__content">
+                              <p class="p1 medium-font text-secondary-300">
+                                Emaar Properties
+                              </p>
 
-                                  <span class="p3 regular-font">Verified</span>
-                                </div>
+                              <div class="guide-item__footer">
+                                <p class="p2 text-dark-500">Developer</p>
 
-                                <div
-                                  class="badge badge--xl badge--secondary-color-200"
-                                >
-                                  <span class="icon icon--little">
-                                    <svg>
-                                      <use xlink:href="#star-icon"></use>
-                                    </svg>
-                                  </span>
+                                <div class="guide-item__budges">
+                                  <div
+                                    class="badge badge--xl badge--secondary-color-200"
+                                  >
+                                    <span class="icon icon--little">
+                                      <svg>
+                                        <use xlink:href="#checks-icon"></use>
+                                      </svg>
+                                    </span>
 
-                                  <span class="p3 regular-font">Top 10</span>
+                                    <span class="p3 regular-font"
+                                      >Verified</span
+                                    >
+                                  </div>
+
+                                  <div
+                                    class="badge badge--xl badge--secondary-color-200"
+                                  >
+                                    <span class="icon icon--little">
+                                      <svg>
+                                        <use xlink:href="#star-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <span class="p3 regular-font">Top 10</span>
+                                  </div>
                                 </div>
                               </div>
                             </div>
                           </div>
                         </div>
+                      </div>
+
+                      <div class="object-bottom__top-btns tablet-show">
+                        <button
+                          class="button button--lg button--bg-primary-100 button--rounded-md modal-open"
+                          type="button"
+                          data-modal="requestModal"
+                        >
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#building-icon"></use>
+                            </svg>
+                          </span>
+
+                          <p class="p4 medium-font">Request Objects</p>
+                        </button>
+
+                        <a
+                          href="/img/article/one.webp"
+                          download=""
+                          data-modal="successModal"
+                          aria-label="Скачать файл"
+                          class="button button--lg button--bg-primary-200 button--rounded-md modal-open"
+                          type="button"
+                        >
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#dowload-icon"></use>
+                            </svg>
+                          </span>
+
+                          <p class="p4 medium-font">Download Brochure</p>
+                        </a>
+                      </div>
+
+                      <div class="md-desktop-show">
+                        <aside class="contact-aside">
+                          @@include('../modules/contact-form-aside.html')
+                        </aside>
                       </div>
                     </div>
                   </div>
@@ -510,33 +711,39 @@
                         data-block="more-items"
                         data-max="1"
                       >
-                        <p class="p1">
-                          A wonderful serenity has taken possession of my entire
-                          soul, like these sweet mornings of spring which I
-                          enjoy with my whole heart. I am alone, and feel the
-                          charm of existence in this spot, which was created for
-                          the bliss of souls like mine. I am so happy, my dear
-                          friend, so absorbed in the exquisite sense of mere
-                          tranquil existence, that I neglect my talents. I
-                          should be incapable of drawing a single stroke at the
-                          present moment; and yet I feel that I never was a
-                          greater artist than now. When, while the lovely valley
-                          teems with vapour around me, and the meridian
-                        </p>
+                        <div class="more-block__item">
+                          <p class="p1">
+                            A wonderful serenity has taken possession of my
+                            entire soul, like these sweet mornings of spring
+                            which I enjoy with my whole heart. I am alone, and
+                            feel the charm of existence in this spot, which was
+                            created for the bliss of souls like mine. I am so
+                            happy, my dear friend, so absorbed in the exquisite
+                            sense of mere tranquil existence, that I neglect my
+                            talents. I should be incapable of drawing a single
+                            stroke at the present moment; and yet I feel that I
+                            never was a greater artist than now. When, while the
+                            lovely valley teems with vapour around me, and the
+                            meridian
+                          </p>
+                        </div>
 
-                        <p class="p1">
-                          A wonderful serenity has taken possession of my entire
-                          soul, like these sweet mornings of spring which I
-                          enjoy with my whole heart. I am alone, and feel the
-                          charm of existence in this spot, which was created for
-                          the bliss of souls like mine. I am so happy, my dear
-                          friend, so absorbed in the exquisite sense of mere
-                          tranquil existence, that I neglect my talents. I
-                          should be incapable of drawing a single stroke at the
-                          present moment; and yet I feel that I never was a
-                          greater artist than now. When, while the lovely valley
-                          teems with vapour around me, and the meridian
-                        </p>
+                        <div class="more-block__item">
+                          <p class="p1">
+                            A wonderful serenity has taken possession of my
+                            entire soul, like these sweet mornings of spring
+                            which I enjoy with my whole heart. I am alone, and
+                            feel the charm of existence in this spot, which was
+                            created for the bliss of souls like mine. I am so
+                            happy, my dear friend, so absorbed in the exquisite
+                            sense of mere tranquil existence, that I neglect my
+                            talents. I should be incapable of drawing a single
+                            stroke at the present moment; and yet I feel that I
+                            never was a greater artist than now. When, while the
+                            lovely valley teems with vapour around me, and the
+                            meridian
+                          </p>
+                        </div>
                       </div>
 
                       <div
@@ -569,7 +776,7 @@
 
                   <div class="object-bottom__item">
                     <div class="scheme-block">
-                      <div class="scheme-plan">
+                      <div class="scheme-plan tablet-none">
                         <div class="scheme-plan__img">
                           <picture>
                             <source
@@ -683,14 +890,55 @@
                           </a>
                         </div>
                       </div>
+
+                      <div class="scheme-plan-simple tablet-show">
+                        <div class="scheme-plan-simple__content">
+                          <div class="scheme-plan-simple__item">
+                            <p class="h6-add semibold-font">Visual Scheme</p>
+
+                            <a
+                              href="#"
+                              aria-label="Перейти на страницу плана"
+                              title="Open"
+                              class="button button--bg-primary-100 br-el--rounded-md"
+                            >
+                              <p class="p2 medium-font">Open</p>
+
+                              <span class="icon" style="rotate: -45deg">
+                                <svg>
+                                  <use
+                                    xlink:href="#arrow-right-line-icon"
+                                  ></use>
+                                </svg>
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+
+                        <div class="scheme-plan-simple__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/plan/one.webp   1x,
+                                /img/plan/one2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/plan/one.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+                      </div>
                     </div>
                   </div>
 
-                  <div class="object-bottom__item">
+                  <div class="object-bottom__item object-bottom__item-property">
                     <h2 class="h4">Properties in SkyHills Astra</h2>
 
                     <div class="object-bottom__property">
-                      <div class="checkbox-box">
+                      <div class="checkbox-box tablet-none">
                         <label class="check">
                           <div class="check__info">
                             <input type="radio" checked name="propertie" />
@@ -714,73 +962,123 @@
 
                       <div class="object-bottom__property-items">
                         <div
-                          class="select-box select-box--words select-box--noMax"
-                          data-placeholder="All blocks"
+                          class="object-bottom__property-item tablet-none"
+                          data-loader-relative
                         >
-                          <select id="select101">
-                            <option value="">All blocks</option>
-                            <option value="1">some info 1</option>
-                            <option value="2">some info 2</option>
-                            <option value="3">some info 3</option>
-                            <option value="4">some info 4</option>
-                          </select>
+                          <div class="loader" data-loader-box>
+                            <span></span>
+                          </div>
+
+                          <div
+                            class="select-box select-box--words select-box--noMax"
+                            data-placeholder="All blocks"
+                            data-loading="true"
+                          >
+                            <select id="select101">
+                              <option value="">All blocks</option>
+                              <option value="1">some info 1</option>
+                              <option value="2">some info 2</option>
+                              <option value="3">some info 3</option>
+                              <option value="4">some info 4</option>
+                            </select>
+                          </div>
                         </div>
 
                         <div
-                          class="select-box select-box--words select-box--noMax"
-                          data-placeholder="Living space"
+                          class="object-bottom__property-item tablet-none"
+                          data-loader-relative
                         >
-                          <select id="select4">
-                            <option value="">Living space</option>
-                            <option value="1">some info 1</option>
-                            <option value="2">some info 2</option>
-                            <option value="3">some info 3</option>
-                          </select>
+                          <div class="loader" data-loader-box>
+                            <span></span>
+                          </div>
+
+                          <div
+                            class="select-box select-box--words select-box--noMax"
+                            data-placeholder="Living space"
+                            data-loading="true"
+                          >
+                            <select id="select4">
+                              <option value="">Living space</option>
+                              <option value="1">some info 1</option>
+                              <option value="2">some info 2</option>
+                              <option value="3">some info 3</option>
+                            </select>
+                          </div>
                         </div>
 
                         <div
-                          class="select-box select-box--noMax select-box--words select-box--check"
-                          data-placeholder="Beds & Baths"
+                          class="object-bottom__property-item tablet-none"
+                          data-loader-relative
                         >
-                          <select id="select3" multiple>
-                            <option value="">Beds & Baths</option>
-                            <option value="beds-studio" data-group="beds">
-                              Studio
-                            </option>
-                            <option value="beds-1" data-group="beds">1</option>
-                            <option value="beds-2" data-group="beds">2</option>
-                            <option value="beds-3" data-group="beds">3</option>
-                            <option value="beds-4" data-group="beds">4</option>
-                            <option value="beds-5" data-group="beds">5</option>
-                            <option value="beds-6" data-group="beds">6</option>
-                            <option value="beds-7" data-group="beds">7</option>
-                            <option value="beds-8" data-group="beds">8</option>
-                            <option value="beds-9" data-group="beds">9</option>
-                            <option value="beds-10" data-group="beds">
-                              10+
-                            </option>
-                            <option value="baths-1" data-group="baths">
-                              1
-                            </option>
-                            <option value="baths-2" data-group="baths">
-                              2
-                            </option>
-                            <option value="baths-3" data-group="baths">
-                              3
-                            </option>
-                            <option value="baths-4" data-group="baths">
-                              4
-                            </option>
-                            <option value="baths-5" data-group="baths">
-                              5
-                            </option>
-                            <option value="baths-6" data-group="baths">
-                              6+
-                            </option>
-                          </select>
+                          <div class="loader" data-loader-box>
+                            <span></span>
+                          </div>
+
+                          <div
+                            class="select-box select-box--noMax select-box--words select-box--check"
+                            data-placeholder="Beds & Baths"
+                            data-loading="true"
+                          >
+                            <select id="select3" multiple>
+                              <option value="">Beds & Baths</option>
+                              <option value="beds-studio" data-group="beds">
+                                Studio
+                              </option>
+                              <option value="beds-1" data-group="beds">
+                                1
+                              </option>
+                              <option value="beds-2" data-group="beds">
+                                2
+                              </option>
+                              <option value="beds-3" data-group="beds">
+                                3
+                              </option>
+                              <option value="beds-4" data-group="beds">
+                                4
+                              </option>
+                              <option value="beds-5" data-group="beds">
+                                5
+                              </option>
+                              <option value="beds-6" data-group="beds">
+                                6
+                              </option>
+                              <option value="beds-7" data-group="beds">
+                                7
+                              </option>
+                              <option value="beds-8" data-group="beds">
+                                8
+                              </option>
+                              <option value="beds-9" data-group="beds">
+                                9
+                              </option>
+                              <option value="beds-10" data-group="beds">
+                                10+
+                              </option>
+                              <option value="baths-1" data-group="baths">
+                                1
+                              </option>
+                              <option value="baths-2" data-group="baths">
+                                2
+                              </option>
+                              <option value="baths-3" data-group="baths">
+                                3
+                              </option>
+                              <option value="baths-4" data-group="baths">
+                                4
+                              </option>
+                              <option value="baths-5" data-group="baths">
+                                5
+                              </option>
+                              <option value="baths-6" data-group="baths">
+                                6+
+                              </option>
+                            </select>
+                          </div>
                         </div>
 
-                        <div class="dropdown dropdown--price input-box">
+                        <div
+                          class="dropdown dropdown--price input-box tablet-none"
+                        >
                           <button
                             class="input-box__info dropdown__btn"
                             type="button"
@@ -843,7 +1141,7 @@
 
                         <button
                           type="button"
-                          class="button button--lg button--bg-primary-200 button--rounded-md"
+                          class="button button--lg button--bg-primary-200 button--rounded-md tablet-none"
                         >
                           <p class="p2 medium-font">Search</p>
 
@@ -852,6 +1150,42 @@
                               <use xlink:href="#search-icon"></use>
                             </svg>
                           </span>
+                        </button>
+
+                        <div class="checkbox-box tablet-show">
+                          <label class="check">
+                            <div class="check__info">
+                              <input type="radio" checked name="propertie-2" />
+
+                              <div class="check__info-content">
+                                <span class="p2">Developer</span>
+                              </div>
+                            </div>
+                          </label>
+
+                          <label class="check">
+                            <div class="check__info">
+                              <input type="radio" name="propertie-2" />
+
+                              <div class="check__info-content">
+                                <span class="p2">Agencies</span>
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+
+                        <button
+                          type="button"
+                          class="button button--bg-gray-300 button--lg button--rounded-md modal-open tablet-show"
+                          data-modal="filterModal"
+                        >
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#filter-second-icon"></use>
+                            </svg>
+                          </span>
+
+                          <p class="p3 medium-font">Filters</p>
                         </button>
                       </div>
 
@@ -1403,143 +1737,150 @@
                     </div>
                   </div>
 
-                  <div class="object-bottom__item" data-block="more-relative">
+                  <div class="object-bottom__item">
                     <h2 class="h4">Parameters</h2>
 
-                    <div class="object-bottom__footer">
+                    <div
+                      class="object-bottom__footer tablet-none"
+                      data-block="more-relative"
+                    >
                       <div
-                        class="list-info list-info--one more-block more-block--two more-block--grid"
+                        class="list-info list-info--one more-block"
                         data-block="more-items"
-                        data-max="2"
+                        data-max="1"
                       >
-                        <ul class="list-info__box list-info__box--two">
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">City</p>
-                            </span>
+                        <div class="more-block__item">
+                          <ul class="list-info__box list-info__box--two">
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">City</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">Dubai</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2 text-uppercase">ID</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">8658439</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">District</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">Dubai Hills</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">To sea</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">900 m</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Address</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">
-                                36FX+87V - Al Barsha - Al Barsha South - Dubai -
-                                UAE
-                              </p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">To airport</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">3,200 m</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Completion date</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">Q2 2026</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">To downtown</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">450 m</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Type</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">Development</p>
-                            </div>
-                          </li>
-
-                          <li class="list-info__link list-info__link--row-two">
-                            <span class="list-info__key">
-                              <p class="p2">DLD permit</p>
-                            </span>
-
-                            <div class="list-info__mean">
-                              <div class="list-info__img">
-                                <picture>
-                                  <source
-                                    srcset="
-                                      /img/gr/one.webp   1x,
-                                      /img/gr/one2x.webp 2x
-                                    "
-                                  />
-                                  <img
-                                    src="/img/gr/one.webp"
-                                    alt="фотография"
-                                    loading="lazy"
-                                  />
-                                </picture>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Dubai</p>
                               </div>
-                            </div>
-                          </li>
+                            </li>
 
-                          <li class="list-info__link">
-                            <span class="list-info__key">
-                              <p class="p2">Apartments</p>
-                            </span>
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2 text-uppercase">ID</p>
+                              </span>
 
-                            <div class="list-info__mean">
-                              <p class="p2 medium-font">238</p>
-                            </div>
-                          </li>
-                        </ul>
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">8658439</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">District</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Dubai Hills</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">To sea</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">900 m</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Address</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">
+                                  36FX+87V - Al Barsha - Al Barsha South - Dubai
+                                  - UAE
+                                </p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">To airport</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">3,200 m</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Completion date</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Q2 2026</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">To downtown</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">450 m</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Type</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Development</p>
+                              </div>
+                            </li>
+
+                            <li
+                              class="list-info__link list-info__link--row-two"
+                            >
+                              <span class="list-info__key">
+                                <p class="p2">DLD permit</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <div class="list-info__img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/gr/one.webp   1x,
+                                        /img/gr/one2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/gr/one.webp"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Apartments</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">238</p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
                       </div>
 
                       <div
@@ -1556,17 +1897,252 @@
                             More
                           </p>
 
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#arrow-line-down-icon"></use>
-                            </svg>
-                          </span>
+                          <div
+                            class="button--circle button--circle-3xs button--bg-gray-600"
+                          >
+                            <span class="icon icon--sm">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div
+                      class="object-bottom__footer tablet-show"
+                      data-block="more-relative"
+                    >
+                      <div
+                        class="list-info more-block"
+                        data-block="more-items"
+                        data-max="2"
+                        data-media-init="767"
+                        data-media-max="1"
+                      >
+                        <div class="more-block__item">
+                          <ul class="list-info__box">
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2 text-uppercase">ID</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">59867345</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Block</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Astra</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Layout</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">ST-08b</p>
+
+                                <a
+                                  href="#"
+                                  aria-label="Перейти на страницу ST-08b"
+                                  title="ST-08b"
+                                  class="icon"
+                                >
+                                  <svg>
+                                    <use xlink:href="#external-icon"></use>
+                                  </svg>
+                                </a>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Floor</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">12</p>
+
+                                <a
+                                  href="#"
+                                  aria-label="Перейти на страницу ST-08b"
+                                  title="ST-08b"
+                                  class="icon"
+                                >
+                                  <svg>
+                                    <use xlink:href="#external-icon"></use>
+                                  </svg>
+                                </a>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Type</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Apartment</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Address</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">
+                                  Alton - Town Square - Dubai - UAE
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="more-block__item">
+                          <ul class="list-info__box">
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2 text-uppercase">ID</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">59867345</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Block</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Astra</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Layout</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">ST-08b</p>
+
+                                <a
+                                  href="#"
+                                  aria-label="Перейти на страницу ST-08b"
+                                  title="ST-08b"
+                                  class="icon"
+                                >
+                                  <svg>
+                                    <use xlink:href="#external-icon"></use>
+                                  </svg>
+                                </a>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Floor</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">12</p>
+
+                                <a
+                                  href="#"
+                                  aria-label="Перейти на страницу ST-08b"
+                                  title="ST-08b"
+                                  class="icon"
+                                >
+                                  <svg>
+                                    <use xlink:href="#external-icon"></use>
+                                  </svg>
+                                </a>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Type</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">Apartment</p>
+                              </div>
+                            </li>
+
+                            <li class="list-info__link">
+                              <span class="list-info__key">
+                                <p class="p2">Address</p>
+                              </span>
+
+                              <div class="list-info__mean">
+                                <p class="p2 medium-font">
+                                  Alton - Town Square - Dubai - UAE
+                                </p>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                      <div
+                        class="object-bottom__item-content"
+                        data-block="more-footer"
+                      >
+                        <button
+                          class="btn-decor"
+                          data-block="more-btn"
+                          aria-label="Посмотреть больше"
+                          type="button"
+                        >
+                          <p class="p3 medium-font" data-block="more-btn-text">
+                            More
+                          </p>
+
+                          <div
+                            class="button--circle button--circle-3xs button--bg-gray-600"
+                          >
+                            <span class="icon icon--sm">
+                              <svg>
+                                <use xlink:href="#arrow-line-down-icon"></use>
+                              </svg>
+                            </span>
+                          </div>
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="object-bottom__item" data-block="more-relative">
+                  <div class="object-bottom__item tablet-show">
+                    <button
+                      class="button button--bg-primary-100 modal-open br-el--rounded-3xl"
+                      data-modal="requestModal"
+                      style="width: 100%; min-height: 48px"
+                    >
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#email-icon"></use>
+                        </svg>
+                      </span>
+
+                      <p class="p1 medium-font">Contact seller</p>
+                    </button>
+                  </div>
+
+                  <div class="object-bottom__item">
                     <h2 class="h4">Residential Floor Plans</h2>
 
                     <div class="floor">
@@ -1628,7 +2204,7 @@
                             </div>
                           </div>
 
-                          <p class="p1 semibold-font">
+                          <p class="p1 semibold-font tablet-none">
                             Apartments, 3 beds, 105 sq.m.
                           </p>
                         </div>
@@ -1687,6 +2263,13 @@
                               </div>
                             </div>
                           </div>
+
+                          <p
+                            class="p1 semibold-font tablet-show"
+                            style="justify-content: center"
+                          >
+                            Apartments, 3 beds, 105 sq.m.
+                          </p>
 
                           <div class="floor__item">
                             <div class="floor__item-content">
@@ -1766,7 +2349,7 @@
                               </div>
 
                               <button
-                                class="button button--lg button--bg-primary-100 modal-open"
+                                class="button button--lg button--bg-primary-100 modal-open tablet-none"
                                 type="button"
                                 data-modal="requestModal"
                               >
@@ -1813,6 +2396,20 @@
                           </button>
                         </div>
                       </div>
+
+                      <button
+                        class="button button--lg button--bg-primary-100 modal-open tablet-show"
+                        type="button"
+                        data-modal="requestModal"
+                      >
+                        <p class="p2 medium-font">Get all floor plans</p>
+
+                        <span class="icon" style="rotate: -45deg">
+                          <svg>
+                            <use xlink:href="#arrow-right-line-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
                     </div>
                   </div>
 
@@ -1821,6 +2418,21 @@
                       <header class="banner-content__header">
                         <div class="banner-content__header-top">
                           <p class="h5 semibold-font">Download the brochure</p>
+
+                          <div class="banner-content__header-img tablet-show">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/banner/two.webp   1x,
+                                  /img/banner/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/banner/two.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
                         </div>
 
                         <p class="p2">
@@ -1834,7 +2446,7 @@
                         <a
                           href="/img/goods/four.webp"
                           download=""
-                          class="button button--noBg button--xl button--rounded-3xl modal-open button--noBg-primary-color-100 button--border-small"
+                          class="button button--noBg button--xl modal-open button--noBg-primary-color-100 button--border-small br-el--rounded-3xl"
                           data-modal="successModal"
                         >
                           <p class="p2 semibold-font">Download</p>
@@ -1867,255 +2479,169 @@
                     <h2 class="h4">Residential Floor Plans</h2>
 
                     <div
-                      class="object-bottom__tables more-block more-block--two"
+                      class="object-bottom__tables more-block"
                       data-block="more-items"
                       data-max="2"
                     >
-                      <div class="object-bottom__table-box">
-                        <p class="h6">Studio</p>
+                      <div class="more-block__item">
+                        <div class="object-bottom__table-box">
+                          <p class="h6">Studio</p>
 
-                        <div class="table-grid table-grid--five">
-                          <div class="table-grid__header">
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Type</p>
-                              </div>
+                          <div
+                            class="table-grid table-grid--five table-grid--media-two-head"
+                          >
+                            <div class="table-grid__header">
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Type</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Area (sq.m.)</p>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Area (sq.m.)</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Price (AED)</p>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Price (AED)</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Available</p>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Available</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Floor plan</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="table-grid__items">
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2">Type A</p>
-
-                                <a
-                                  href="#"
-                                  aria-label="Перейти на страницу Type A"
-                                  title="Type A"
-                                  class="icon"
-                                >
-                                  <svg>
-                                    <use xlink:href="#external-icon"></use>
-                                  </svg>
-                                </a>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">54</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">25M</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">1</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <div class="table-grid__cell-btns">
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
-                                  >
-                                    <p class="p3 text-uppercase">2D</p>
-                                  </button>
-
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
-                                  >
-                                    <p class="p3 text-uppercase">3D</p>
-                                  </button>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Floor plan</p>
                                 </div>
                               </div>
                             </div>
 
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2">Type B</p>
-                              </div>
+                            <div class="table-grid__items">
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2">Type A</p>
 
-                              <div class="table-grid__cell">
-                                <p class="p2">54</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">25M</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">1</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <div class="table-grid__cell-btns">
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Type A"
+                                    title="Type A"
+                                    class="icon"
                                   >
-                                    <p class="p3 text-uppercase">2D</p>
-                                  </button>
+                                    <svg>
+                                      <use xlink:href="#external-icon"></use>
+                                    </svg>
+                                  </a>
+                                </div>
 
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
-                                  >
-                                    <p class="p3 text-uppercase">3D</p>
-                                  </button>
+                                <div class="table-grid__cell tablet-show">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">54</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">25M</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">1</p>
+                                </div>
+
+                                <div class="table-grid__cell tablet-none">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
 
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2">Type C</p>
-                              </div>
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2">Type B</p>
 
-                              <div class="table-grid__cell">
-                                <p class="p2">54</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">25M</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">1</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <div class="table-grid__cell-btns">
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Type Back"
+                                    title="Type B"
+                                    class="icon"
                                   >
-                                    <p class="p3 text-uppercase">2D</p>
-                                  </button>
-
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
-                                  >
-                                    <p class="p3 text-uppercase">3D</p>
-                                  </button>
+                                    <svg>
+                                      <use xlink:href="#external-icon"></use>
+                                    </svg>
+                                  </a>
                                 </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
 
-                      <div class="object-bottom__table-box">
-                        <p class="h6">1 Bedroom</p>
+                                <div class="table-grid__cell tablet-show">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
 
-                        <div class="table-grid table-grid--five">
-                          <div class="table-grid__header">
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Type</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Area (sq.m.)</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Price (AED)</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Available</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Floor plan</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="table-grid__items">
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2">Type B</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">54</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">25M</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">1</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <div class="table-grid__cell-btns">
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
-                                  >
-                                    <p class="p3">Open</p>
-                                  </button>
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
                                 </div>
-                              </div>
-                            </div>
 
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2">Type B</p>
+                                <div class="table-grid__cell">
+                                  <p class="p2">54</p>
+                                </div>
 
-                                <a
-                                  href="#"
-                                  aria-label="Перейти на страницу Type B"
-                                  title="Type B"
-                                  class="icon"
-                                >
-                                  <svg>
-                                    <use xlink:href="#external-icon"></use>
-                                  </svg>
-                                </a>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2">25M</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2">54</p>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2">1</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2">25M</p>
-                              </div>
+                                <div class="table-grid__cell tablet-none">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
 
-                              <div class="table-grid__cell">
-                                <p class="p2">1</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <div class="table-grid__cell-btns">
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
-                                  >
-                                    <p class="p3">Open</p>
-                                  </button>
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2123,100 +2649,331 @@
                         </div>
                       </div>
 
-                      <div class="object-bottom__table-box">
-                        <p class="h6">1 Bedroom</p>
+                      <div class="more-block__item">
+                        <div class="object-bottom__table-box">
+                          <p class="h6">1 Bedroom</p>
 
-                        <div class="table-grid table-grid--five">
-                          <div class="table-grid__header">
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Type</p>
-                              </div>
+                          <div
+                            class="table-grid table-grid--five table-grid--media-two-head"
+                          >
+                            <div class="table-grid__header">
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Type</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Area (sq.m.)</p>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Area (sq.m.)</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Price (AED)</p>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Price (AED)</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Available</p>
-                              </div>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Available</p>
+                                </div>
 
-                              <div class="table-grid__cell">
-                                <p class="p2 semibold-font">Floor plan</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="table-grid__items">
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2">Type B</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">54</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">25M</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">1</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <div class="table-grid__cell-btns">
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
-                                  >
-                                    <p class="p3">Open</p>
-                                  </button>
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Floor plan</p>
                                 </div>
                               </div>
                             </div>
 
-                            <div class="table-grid__row">
-                              <div class="table-grid__cell">
-                                <p class="p2">Type B</p>
+                            <div class="table-grid__items">
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2">Type A</p>
 
-                                <a
-                                  href="#"
-                                  aria-label="Перейти на страницу Type B"
-                                  title="Type B"
-                                  class="icon"
-                                >
-                                  <svg>
-                                    <use xlink:href="#external-icon"></use>
-                                  </svg>
-                                </a>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">54</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">25M</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <p class="p2">1</p>
-                              </div>
-
-                              <div class="table-grid__cell">
-                                <div class="table-grid__cell-btns">
-                                  <button
-                                    class="button button--sm button--bg-secondary-200 modal-open"
-                                    data-modal="floorModal"
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Type A"
+                                    title="Type A"
+                                    class="icon"
                                   >
-                                    <p class="p3">Open</p>
-                                  </button>
+                                    <svg>
+                                      <use xlink:href="#external-icon"></use>
+                                    </svg>
+                                  </a>
+                                </div>
+
+                                <div class="table-grid__cell tablet-show">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">54</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">25M</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">1</p>
+                                </div>
+
+                                <div class="table-grid__cell tablet-none">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2">Type B</p>
+
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Type Back"
+                                    title="Type B"
+                                    class="icon"
+                                  >
+                                    <svg>
+                                      <use xlink:href="#external-icon"></use>
+                                    </svg>
+                                  </a>
+                                </div>
+
+                                <div class="table-grid__cell tablet-show">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">54</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">25M</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">1</p>
+                                </div>
+
+                                <div class="table-grid__cell tablet-none">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="more-block__item">
+                        <div class="object-bottom__table-box">
+                          <p class="h6">1 Bedroom</p>
+
+                          <div
+                            class="table-grid table-grid--five table-grid--media-two-head"
+                          >
+                            <div class="table-grid__header">
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Type</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Area (sq.m.)</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Price (AED)</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Available</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2 semibold-font">Floor plan</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="table-grid__items">
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2">Type A</p>
+
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Type A"
+                                    title="Type A"
+                                    class="icon"
+                                  >
+                                    <svg>
+                                      <use xlink:href="#external-icon"></use>
+                                    </svg>
+                                  </a>
+                                </div>
+
+                                <div class="table-grid__cell tablet-show">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">54</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">25M</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">1</p>
+                                </div>
+
+                                <div class="table-grid__cell tablet-none">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="table-grid__row">
+                                <div class="table-grid__cell">
+                                  <p class="p2">Type B</p>
+
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Type Back"
+                                    title="Type B"
+                                    class="icon"
+                                  >
+                                    <svg>
+                                      <use xlink:href="#external-icon"></use>
+                                    </svg>
+                                  </a>
+                                </div>
+
+                                <div class="table-grid__cell tablet-show">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">54</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">25M</p>
+                                </div>
+
+                                <div class="table-grid__cell">
+                                  <p class="p2">1</p>
+                                </div>
+
+                                <div class="table-grid__cell tablet-none">
+                                  <div class="table-grid__cell-btns">
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">2D</p>
+                                    </button>
+
+                                    <button
+                                      class="button button--sm button--bg-secondary-200 modal-open"
+                                      data-modal="floorModal"
+                                    >
+                                      <p class="p3 text-uppercase">3D</p>
+                                    </button>
+                                  </div>
                                 </div>
                               </div>
                             </div>
@@ -2251,6 +3008,22 @@
                     </div>
                   </div>
 
+                  <div class="object-bottom__item tablet-show">
+                    <button
+                      class="button button--bg-primary-100 modal-open br-el--rounded-3xl"
+                      data-modal="requestModal"
+                      style="width: 100%; min-height: 48px"
+                    >
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#email-icon"></use>
+                        </svg>
+                      </span>
+
+                      <p class="p1 medium-font">Contact seller</p>
+                    </button>
+                  </div>
+
                   <div
                     class="object-bottom__item tabs-box"
                     data-tab-category="payment"
@@ -2258,68 +3031,94 @@
                     <h2 class="h4">Payment Plan</h2>
 
                     <div class="object-bottom__block">
-                      <div class="checkbox-box tab-btns">
-                        <label class="check tab-btn" data-btn-tab="payment-all">
-                          <div class="check__info">
-                            <input type="radio" checked name="payment" />
+                      <div class="tablet-none">
+                        <div class="checkbox-box tab-btns">
+                          <label
+                            class="check tab-btn"
+                            data-btn-tab="payment-all"
+                          >
+                            <div class="check__info">
+                              <input type="radio" checked name="payment" />
 
-                            <div class="check__info-content">
-                              <span class="p2">All</span>
+                              <div class="check__info-content">
+                                <span class="p2">All</span>
+                              </div>
                             </div>
-                          </div>
-                        </label>
+                          </label>
 
-                        <label
-                          class="check tab-btn"
-                          data-btn-tab="payment-1bed"
+                          <label
+                            class="check tab-btn"
+                            data-btn-tab="payment-1bed"
+                          >
+                            <div class="check__info">
+                              <input type="radio" name="payment" />
+
+                              <div class="check__info-content">
+                                <span class="p2">1 bed</span>
+                              </div>
+                            </div>
+                          </label>
+
+                          <label
+                            class="check tab-btn"
+                            data-btn-tab="payment-2bed"
+                          >
+                            <div class="check__info">
+                              <input type="radio" name="payment" />
+
+                              <div class="check__info-content">
+                                <span class="p2">2 beds</span>
+                              </div>
+                            </div>
+                          </label>
+
+                          <label
+                            class="check tab-btn"
+                            data-btn-tab="payment-3bed"
+                          >
+                            <div class="check__info">
+                              <input type="radio" name="payment" />
+
+                              <div class="check__info-content">
+                                <span class="p2">3 beds</span>
+                              </div>
+                            </div>
+                          </label>
+
+                          <label
+                            class="check tab-btn"
+                            data-btn-tab="payment-4bed"
+                          >
+                            <div class="check__info">
+                              <input type="radio" name="payment" />
+
+                              <div class="check__info-content">
+                                <span class="p2">4+ beds</span>
+                              </div>
+                            </div>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="tablet-show" data-loader-relative>
+                        <div class="loader" data-loader-box>
+                          <span></span>
+                        </div>
+
+                        <div
+                          class="select-box select-box--words select-box--noMax"
+                          data-placeholder="All types"
+                          data-loading="true"
+                          style="width: 100%"
                         >
-                          <div class="check__info">
-                            <input type="radio" name="payment" />
-
-                            <div class="check__info-content">
-                              <span class="p2">1 bed</span>
-                            </div>
-                          </div>
-                        </label>
-
-                        <label
-                          class="check tab-btn"
-                          data-btn-tab="payment-2bed"
-                        >
-                          <div class="check__info">
-                            <input type="radio" name="payment" />
-
-                            <div class="check__info-content">
-                              <span class="p2">2 beds</span>
-                            </div>
-                          </div>
-                        </label>
-
-                        <label
-                          class="check tab-btn"
-                          data-btn-tab="payment-3bed"
-                        >
-                          <div class="check__info">
-                            <input type="radio" name="payment" />
-
-                            <div class="check__info-content">
-                              <span class="p2">3 beds</span>
-                            </div>
-                          </div>
-                        </label>
-
-                        <label
-                          class="check tab-btn"
-                          data-btn-tab="payment-4bed"
-                        >
-                          <div class="check__info">
-                            <input type="radio" name="payment" />
-
-                            <div class="check__info-content">
-                              <span class="p2">4+ beds</span>
-                            </div>
-                          </div>
-                        </label>
+                          <select id="select456">
+                            <option value="">All types</option>
+                            <option value="1">some info 1</option>
+                            <option value="2">some info 2</option>
+                            <option value="3">some info 3</option>
+                            <option value="4">some info 4</option>
+                          </select>
+                        </div>
                       </div>
 
                       <div
@@ -2574,7 +3373,10 @@
                     </div>
                   </div>
 
-                  <div class="object-bottom__item" data-block="more-relative">
+                  <div
+                    class="object-bottom__item object-bottom__item--near"
+                    data-block="more-relative"
+                  >
                     <h2 class="h4">Near the residential complex</h2>
 
                     <div class="object-bottom__footer">
@@ -2582,6 +3384,8 @@
                         class="object-bottom__items object-bottom__items--four more-block more-block--eight"
                         data-block="more-items"
                         data-max="8"
+                        data-media-init="767"
+                        data-media-max="3"
                       >
                         <div class="more-block__item">
                           <div class="card-complex">
@@ -2909,12 +3713,31 @@
                         data-block="more-footer"
                       >
                         <button
-                          class="button button--bg-secondary-300 button--rounded-md"
+                          class="button button--bg-secondary-300 button--rounded-md tablet-none"
                           data-block="more-btn"
                           aria-label="Посмотреть больше"
                           type="button"
                           data-more-text="Show all 16"
                           data-less-text="View less 8"
+                        >
+                          <p class="p2 medium-font" data-block="more-btn-text">
+                            Show all 16
+                          </p>
+
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#arrow-line-down-icon"></use>
+                            </svg>
+                          </span>
+                        </button>
+
+                        <button
+                          class="button button--bg-secondary-300 button--rounded-md tablet-show"
+                          data-block="more-btn"
+                          aria-label="Посмотреть больше"
+                          type="button"
+                          data-more-text="Show all 16"
+                          data-less-text="View less 3"
                         >
                           <p class="p2 medium-font" data-block="more-btn-text">
                             Show all 16
@@ -2938,6 +3761,8 @@
                         class="text-boxs more-block more-block--two"
                         data-block="more-items"
                         data-max="2"
+                        data-media-init="767"
+                        data-media-max="1"
                       >
                         <div class="more-block__item">
                           <div class="text-boxs__item">
@@ -3223,56 +4048,47 @@
                     </div>
 
                     <div class="object-bottom__block">
-                      <div class="checkbox-box">
+                      <div class="checkbox-box tablet-none">
                         <label class="check">
                           <div class="check__info">
-                            <input type="radio" checked name="price-change" />
+                            <input type="radio" checked name="propertie" />
 
                             <div class="check__info-content">
-                              <span class="p2">All</span>
+                              <span class="p2">Developer</span>
                             </div>
                           </div>
                         </label>
 
                         <label class="check">
                           <div class="check__info">
-                            <input type="radio" name="price-change" />
+                            <input type="radio" name="propertie" />
 
                             <div class="check__info-content">
-                              <span class="p2">1 bed</span>
+                              <span class="p2">Agencies</span>
                             </div>
                           </div>
                         </label>
+                      </div>
 
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" name="price-change" />
+                      <div class="tablet-show" data-loader-relative>
+                        <div class="loader" data-loader-box>
+                          <span></span>
+                        </div>
 
-                            <div class="check__info-content">
-                              <span class="p2">2 beds</span>
-                            </div>
-                          </div>
-                        </label>
-
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" name="price-change" />
-
-                            <div class="check__info-content">
-                              <span class="p2">3 beds</span>
-                            </div>
-                          </div>
-                        </label>
-
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" name="price-change" />
-
-                            <div class="check__info-content">
-                              <span class="p2">4+ beds</span>
-                            </div>
-                          </div>
-                        </label>
+                        <div
+                          class="select-box select-box--words select-box--noMax"
+                          data-placeholder="All types"
+                          data-loading="true"
+                          style="width: 100%"
+                        >
+                          <select id="select458">
+                            <option value="">All types</option>
+                            <option value="1">some info 1</option>
+                            <option value="2">some info 2</option>
+                            <option value="3">some info 3</option>
+                            <option value="4">some info 4</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
 
@@ -3281,16 +4097,38 @@
                     </div>
                   </div>
 
+                  <div class="object-bottom__item tablet-show">
+                    <button
+                      class="button button--bg-primary-100 modal-open br-el--rounded-3xl"
+                      data-modal="requestModal"
+                      style="width: 100%; min-height: 48px"
+                    >
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#email-icon"></use>
+                        </svg>
+                      </span>
+
+                      <p class="p1 medium-font">Contact seller</p>
+                    </button>
+                  </div>
+
                   @@include('../components/comment-rating.html')
 
-                  <div class="object-bottom__item" data-block="more-relative">
+                  <div class="object-bottom__item">
                     <h2 class="h4">Popular Questions</h2>
 
                     @@include('../modules/accordeon.html')
                   </div>
 
+                  <div class="object-bottom__item tablet-show">
+                    <div class="contact-aside" style="width: 100%">
+                      @@include('../modules/contact-form-aside.html')
+                    </div>
+                  </div>
+
                   <div
-                    class="object-bottom__item swiper-box swiper-box--pagination-bottom also-section"
+                    class="object-bottom__item swiper-box swiper-box--pagination-bottom swiper-box--visible-tablet-inner also-section"
                   >
                     <h2 class="h4">Similar Property</h2>
 
@@ -3632,114 +4470,6 @@
                               </div>
                             </div>
                           </div>
-
-                          <div class="swiper-slide">
-                            <div
-                              class="good-item good-item--column good-item--noShadow"
-                            >
-                              <div class="good-item__swiper-box">
-                                <div class="good-item__img-box">
-                                  <div class="good-item__decor">
-                                    <!-- prettier-ignore -->
-
-                                    @@include('../good-item/badges.html',
-                                    {"complete": true, "check" : true})
-                                  </div>
-
-                                  <div class="swiper swiper--good-img">
-                                    <div class="swiper-wrapper">
-                                      <!-- prettier-ignore -->
-
-                                      @@loop('../good-item/slides-imgs.html', [
-                                      {"img": '/img/goods/one'},
-                                      {"img": '/img/goods/two'}
-                                      ])
-                                    </div>
-
-                                    <div class="good-item__decors-img">
-                                      @@include('../swiper/arrows-absolute.html')
-                                      @@include('../swiper/swiper-pagination-absolute.html')
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="good-item__content">
-                                <header class="good-item__header">
-                                  <div class="good-item__top-box">
-                                    <div class="good-item__top">
-                                      <p class="h5 bold-font good-item__title">
-                                        761,000
-
-                                        <span class="text-uppercase p2"
-                                          >AED</span
-                                        >
-                                      </p>
-                                    </div>
-
-                                    <div class="good-item__logo">
-                                      <picture>
-                                        <source
-                                          srcset="
-                                            /img/seller/seller.png 1x,
-                                            /img/seller/seller.png 2x
-                                          "
-                                        />
-                                        <img
-                                          src="/img/seller/seller.png"
-                                          alt="фотография"
-                                          loading="lazy"
-                                        />
-                                      </picture>
-                                    </div>
-                                  </div>
-
-                                  <p
-                                    class="p3 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                                  >
-                                    Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                                  </p>
-
-                                  <div class="good-item__tags">
-                                    <!-- prettier-ignore -->
-
-                                    @@loop('../components/tag.html', [ 
-                                    { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                    { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                    { "text": "1 floor", "icon": "#bed-icon" },
-                                    { "text": "Q2 2026", "icon": "#bed-icon" } ])
-                                  </div>
-
-                                  <ul class="list-icon">
-                                    <!-- prettier-ignore -->
-                                    @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "" }])
-                                  </ul>
-                                </header>
-
-                                <footer class="good-item__footer">
-                                  <div class="good-item__btns">
-                                    <!-- prettier-ignore -->
-
-                                    @@include('../btns/contact-btn.html', {"text" :
-                                    "Contact Seller", "classAddText" : "p3 medium-font"})
-    
-                                    @@include('../btns/favorite-btn.html', {"classAdd" :
-                                    "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
-    
-                                    @@include('../btns/comparison-btn.html', {"classAdd" :
-                                    "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
-                                  </div>
-
-                                  <div class="good-item__logo">
-                                    <img
-                                      src="/img/seller/seller.png"
-                                      alt="логотип селера"
-                                    />
-                                  </div>
-                                </footer>
-                              </div>
-                            </div>
-                          </div>
                         </div>
 
                         <div
@@ -3814,11 +4544,14 @@
       @@include('../modules/footer.html', {"inner" : ''})
       @@include('../modals/features.html') @@include('../modals/success.html')
       @@include('../modals/request.html') @@include('../modals/floor.html')
-      @@include('../modals/map.html')
+      @@include('../modals/map.html') @@include('../modals/filter.html')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"
+      defer
+    ></script>
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"

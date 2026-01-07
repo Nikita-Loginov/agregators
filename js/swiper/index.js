@@ -100,29 +100,53 @@ export const SWIPERS = {
         },
         360: {
           slidesPerView: 1.2,
-        }
+        },
       },
     },
     events: {
-      init: function(swiper) {
+      init: function (swiper) {
         checkIfDisabledSwiper(swiper);
       },
-      update: function(swiper) {
+      update: function (swiper) {
         checkIfDisabledSwiper(swiper);
       },
-      resize: function(swiper) {
+      resize: function (swiper) {
         checkIfDisabledSwiper(swiper);
-      }
-    }
+      },
+    },
   },
   ALSO_CARDS_THREE: {
     selector: ".also-section .swiper--also",
     breakpoint: 122300000000,
     options: {
-      slidesPerView: 3,
-      spaceBetween: 14,
+      slidesPerView: 1.2,
+      spaceBetween: 12,
       pagination: {
         el: ".also-section .swiper-pagination--also",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 14,
+        },
+        767: {
+          slidesPerView: 2.4,
+          spaceBetween: 12,
+        },
+        600: {
+          slidesPerView: 1.7,
+        }
+      },
+    },
+    events: {
+      init: function (swiper) {
+        checkIfDisabledSwiper(swiper);
+      },
+      update: function (swiper) {
+        checkIfDisabledSwiper(swiper);
+      },
+      resize: function (swiper) {
+        checkIfDisabledSwiper(swiper);
       },
     },
   },
@@ -165,11 +189,32 @@ export const SWIPERS = {
     breakpoint: 122300000000,
 
     options: {
-      slidesPerView: 3,
-      spaceBetween: 14,
+      slidesPerView: 1.1,
+      spaceBetween: 12,
       mousewheel: MOUSE_WHEEL_CONFIG,
       pagination: {
         el: ".object-bottom__property-swiper-box .swiper-pagination",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 14,
+        },
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+      },
+    },
+    events: {
+      init: function (swiper) {
+        checkIfDisabledSwiper(swiper);
+      },
+      update: function (swiper) {
+        checkIfDisabledSwiper(swiper);
+      },
+      resize: function (swiper) {
+        checkIfDisabledSwiper(swiper);
       },
     },
   },
@@ -267,4 +312,3 @@ export const SWIPERS = {
     },
   },
 };
-

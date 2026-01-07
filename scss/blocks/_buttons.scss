@@ -59,8 +59,8 @@
   }
 
   &--xl {
-    min-height: 52px;
-    padding: 12px 32px;
+    min-height: calculate-clamp(40px, 52px, 1023px, 767px);
+    padding: calculate-clamp(4px, 12px, 1023px, 767px) calculate-clamp(10px, 32px, 1023px, 767px);
     font-size: var(--font-size-base);
   }
 

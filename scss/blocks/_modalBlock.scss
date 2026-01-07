@@ -280,19 +280,25 @@
       max-width: 640px;
       display: flex;
       flex-direction: column;
-      gap: 28px;
+      gap: calculate-clamp(16px, 28px, 1023px, 767px);
     }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: calculate-clamp(16px, 28px, 1023px, 767px);
   }
 }
 
 .featuresModal {
   &__items {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(20px, 40px, 1023px, 767px);
+  }
+
+  .modalBlock__inner {
     display: flex;
     flex-direction: column;
     gap: calculate-clamp(20px, 40px, 1023px, 767px);

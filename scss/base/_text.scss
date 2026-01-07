@@ -167,6 +167,10 @@ h6 {
   color: var(--green-color-600);
 }
 
+.fz-40-16 {
+  font-size: calculate-clamp(16px, 40px, 1279px, 767px);
+}
+
 body .main {
   .br-base {
     border-radius: var(--radius-base);
@@ -175,4 +179,8 @@ body .main {
 
 .accent-color {
   color: var(--primary-color-100);
+}
+
+.text-center {
+  text-align: center;
 }

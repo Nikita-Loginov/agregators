@@ -51,11 +51,21 @@ export const checkIfDisabledSwiper = (swiper) => {
   const slides = swiper.slides;
   const slidesPerView = swiper.params.slidesPerView;
 
-  if (slides.length <= slidesPerView) {
-    wrapper.classList.add("swiper-disabled");
-    swiper.enabled = false;
-  } else {
-    wrapper.classList.remove("swiper-disabled");
-    swiper.enabled = true;
-  }
+  setTimeout(() => {
+    if (slides.length <= slidesPerView) {
+      wrapper.classList.add("swiper-disabled");
+      swiper.enabled = false;
+  
+      if (swiper.pagination) {
+        swiper.pagination.update();
+      }
+    } else {
+      wrapper.classList.remove("swiper-disabled");
+      swiper.enabled = true;
+
+      if (swiper.pagination) {
+        swiper.pagination.update();
+      }
+    }
+  }, 10);
 };

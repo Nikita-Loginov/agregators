@@ -36,7 +36,7 @@
     align-items: center;
     justify-content: center;
     padding: 8px;
-    min-height: 320px;
+    min-height: calculate-clamp(280px, 320px, 1279px, 1023px);
   }
 
   &__img {
