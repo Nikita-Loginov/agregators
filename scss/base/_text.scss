@@ -3,8 +3,9 @@ h1 {
   font-weight: var(--weight-font-xl);
   font-size: var(--font-size-3xl);
 
-  @media (max-width: 767px) {
+  @media (max-width: $lg-breakpoint) {
     line-height: var(--line-height-relaxed);
+    font-weight: var(--weight-font-lg);
   }
 }
 
@@ -13,8 +14,9 @@ h2 {
   font-weight: var(--weight-font-xl);
   font-size: var(--font-size-2xl);
 
-  @media (max-width: 767px) {
+  @media (max-width: $lg-breakpoint) {
     line-height: var(--line-height-relaxed);
+    font-weight: var(--weight-font-lg);
   }
 }
 
@@ -23,8 +25,9 @@ h3 {
   font-weight: var(--weight-font-xl);
   font-size: var(--font-size-xl);
 
-  @media (max-width: 767px) {
+  @media (max-width: $lg-breakpoint) {
     line-height: var(--line-height-relaxed);
+    font-weight: var(--weight-font-lg);
   }
 }
 
@@ -34,8 +37,9 @@ h4 {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-base);
 
-  @media (max-width: 767px) {
+  @media (max-width: $lg-breakpoint) {
     line-height: var(--line-height-relaxed);
+    font-weight: var(--weight-font-lg);
   }
 }
 
@@ -45,7 +49,7 @@ h5 {
   font-size: var(--font-size-md);
   line-height: var(--line-height-relaxed);
 
-  @media (max-width: 767px) {
+  @media (max-width: $lg-breakpoint) {
     line-height: var(--line-height-relaxed);
   }
 }
@@ -56,7 +60,7 @@ h6 {
   font-size: var(--font-size-base);
   line-height: var(--line-height-loose);
 
-  @media (max-width: 767px) {
+  @media (max-width: $lg-breakpoint) {
     line-height: var(--line-height-relaxed);
   }
 }
@@ -66,7 +70,7 @@ h6 {
   font-size: var(--font-size-base2);
   line-height: var(--line-height-loose);
 
-  @media (max-width: 767px) {
+  @media (max-width: $lg-breakpoint) {
     line-height: var(--line-height-relaxed);
   }
 }
@@ -168,15 +172,43 @@ h6 {
 }
 
 .fz-40-16 {
-  font-size: calculate-clamp(16px, 40px, 1279px, 767px);
+  font-size: calculate-clamp(
+    16px,
+    40px,
+    $md-desktop-breakpoint,
+    $lg-breakpoint
+  );
 }
 
 .fz-48-26 {
-  font-size: calculate-clamp(26px, 48px, 1279px, 767px);
+  font-size: calculate-clamp(
+    26px,
+    48px,
+    $md-desktop-breakpoint,
+    $lg-breakpoint
+  );
 }
 
 .fz-24-22 {
-  font-size: calculate-clamp(22px, 24px, 1279px, 767px);
+  font-size: calculate-clamp(
+    22px,
+    24px,
+    $md-desktop-breakpoint,
+    $lg-breakpoint
+  );
+}
+
+.fz60-22 {
+  font-size: calculate-clamp(
+    28px,
+    60px,
+    $md-desktop-breakpoint,
+    $lg-breakpoint
+  );
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: calculate-clamp(22px, 28px, $lg-breakpoint, $mobile-breakpoint);
+  }
 }
 
 body .main {
@@ -191,4 +223,12 @@ body .main {
 
 .text-center {
   text-align: center;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.no-wrap {
+  white-space: nowrap;
 }

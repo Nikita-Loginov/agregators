@@ -60,7 +60,7 @@
 
   &--xl {
     min-height: calculate-clamp(40px, 52px, 1023px, 767px);
-    padding: calculate-clamp(4px, 12px, 1023px, 767px) calculate-clamp(10px, 32px, 1023px, 767px);
+    padding: calculate-clamp(2px, 4px, 1023px, 767px) calculate-clamp(10px, 32px, 1023px, 767px);
     font-size: var(--font-size-base);
   }
 
@@ -337,6 +337,22 @@
 
   &--bg-primary-500 {
     background-color: var(--primary-color-500);
+    color: var(--white-color);
+
+    &:hover {
+      background-color: var(--primary-color-100);
+      color: var(--white-color);
+    }
+
+    &:active {
+      color: var(--white-color);
+      background-color: var(--primary-color-600);
+      border-color: var(--primary-color-100);
+    }
+  }
+
+  &--bg-primary-600 {
+    background-color: var(--primary-color-600);
     color: var(--white-color);
 
     &:hover {

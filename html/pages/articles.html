@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Articles", "links" :
-  ["./css/articles.css"] })
+  ["./css/articles.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
 
-      <main class="main main--detail">
+      <main class="main main--detail main--detail--middle">
         <div class="top-page">
           <div class="container">
             <div class="top-page__inner">
@@ -44,545 +45,626 @@
                   <span>Home</span>
                 </a>
               </div>
+
+              <div class="top-page__header">
+                <h1 class="h2">Articles</h1>
+
+                <div class="top-page__details">
+                  <div
+                    class="top-page__item"
+                    data-loader-relative
+                  >
+                    <div class="loader" data-loader-box>
+                      <span></span>
+                    </div>
+
+                    <div
+                      class="select-box select-box--noMax select-box--noMin select-box--words"
+                      data-placeholder="Tags"
+                      data-loading="true"
+                    >
+                      <select id="select5">
+                        <option value="">Tags</option>
+                        <option value="1">Tags 1</option>
+                        <option value="2">Tags 2</option>
+                        <option value="3">Tags 3</option>
+                        <option value="4">Tags 4</option>
+                        <option value="5">Tags 5</option>
+                        <option value="6">Tags 6</option>
+                        <option value="7">Tags 7</option>
+                        <option value="8">Tags 8</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div
+                    class="top-page__item"
+                    data-loader-relative
+                  >
+                    <div class="loader" data-loader-box>
+                      <span></span>
+                    </div>
+
+                    <div
+                      class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
+                      data-icon="search"
+                      data-loading="true"
+                      
+                    >
+                      <select
+                        id="search-select"
+                        data-placeholder="Find the topic"
+                        multiple
+                        data-search="true"
+                      >
+                        <option value="">Find the topic</option>
+
+                        <option
+                          value="1"
+                          data-desc="Buying property"
+                          data-short-desc="Buying property"
+                        >
+                          Buying property
+                        </option>
+
+                        <option
+                          value="4"
+                          data-short-desc="For foreign nationals"
+                        >
+                          For foreign nationals
+                        </option>
+
+                        <option
+                          value="4"
+                          data-short-desc="For foreign nationals"
+                        >
+                          For foreign nationals
+                        </option>
+
+                        <option
+                          value="5"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Holidays
+                        </option>
+
+                        <option
+                          value="6"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Legal issues
+                        </option>
+
+                        <option
+                          value="7"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Living in UAE
+                        </option>
+
+                        <option
+                          value="8"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Mortgage
+                        </option>
+
+                        <option
+                          value="9"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Personal stories
+                        </option>
+
+                        <option
+                          value="10"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Other
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="main__sections">
-          <section class="articles">
+          <section class="catalogy-box">
             <div class="container">
-              <div class="topBox topBox--middle">
-                <header class="topBox__header">
-                  <h1 class="h2">Articles</h1>
-
-                  <div class="topBox__header-content">
-                    <div
-                      class="dropdown dropdown--select input-box"
-                      style="min-width: 200px"
-                    >
-                      <button
-                        class="dropdown__toggle input-box__info"
-                        type="button"
-                      >
-                        <p class="dropdown__active p2"></p>
-
-                        <span class="icon arrow">
-                          <svg>
-                            <use xlink:href="#arrow-bottom-icon"></use>
-                          </svg>
-                        </span>
-                      </button>
-
-                      <div class="dropdown__content">
-                        <ul class="dropdown__list">
-                          <li class="dropdown__link">
-                            <span
-                              class="dropdown__item active dropdown-item-close"
+              <div class="catalogy-box__inner detail-block">
+                <div class="catalogy-box__content catalogy-box__content--2xl topBox">
+                  <div class="catalogy-box__content-item">
+                    <div class="catalogy-box__info">
+                      <div class="catalogy-box__items catalogy-box__items--big">
+                        <div class="article-item">
+                          <div class="article-item___img-box">
+                            <a
+                              href="#"
+                              title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                              aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                              class="article-item__img-block"
                             >
-                              <span class="p2">Tags 1</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 2</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 3</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 4</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 5</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 6</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Tags 7</span>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="input-box" style="min-width: 280px">
-                      <label class="input-box__content">
-                        <div class="input-box__info">
-                          <input
-                            type="search"
-                            placeholder="Find the topic"
-                            name="search"
-                          />
-
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#search-icon"></use>
-                            </svg>
-                          </span>
-                        </div>
-                      </label>
-
-                      <p class="input-box__errors p4"></p>
-                    </div>
-                  </div>
-                </header>
-
-                <div class="articles__inner detail-block">
-                  <div class="articles__content">
-                    <div class="goods-items-block">
-                      <div class="goods-items-block__boxs">
-                        <div class="good-item good-item--midlle">
-                          <div class="good-item__img-box">
-                            <div class="good-item__img">
                               <picture>
                                 <source
                                   srcset="
-                                    /img/goods/one.webp   1x,
-                                    /img/goods/one2x.webp 2x
+                                    /img/articles/one.webp   1x,
+                                    /img/articles/one2x.webp 2x
                                   "
                                 />
                                 <img
-                                  src="/img/goods/one.webp"
-                                  alt="фотография Apartment"
+                                  src="/img/articles/one.webp"
+                                  alt="фотография"
                                   loading="lazy"
                                 />
                               </picture>
-                            </div>
+                            </a>
                           </div>
 
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
+                          <div class="article-item__content">
+                            <div class="article-item__block">
+                              <a
+                                href="#"
+                                title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                                aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                                class="h6 text-secondary-100"
+                              >
                                 The UAE Golden Visa: All the Straightforward
                                 Answers You Need
-                              </p>
-                            </header>
+                              </a>
+                            </div>
 
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                            <div class="article-item__block">
+                              <div class="article-item__badges">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#calendar-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
+                                  <time
+                                    class="p3 medium-font"
+                                    datetime="2025-07-07"
+                                    >07.07.2025</time
+                                  >
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#time-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
+                                  <p class="p3 medium-font">
+                                    Reading time: 5 minutes
+                                  </p>
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#eye-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
+                                  <p class="p3 medium-font">5621</p>
                                 </div>
                               </div>
 
-                              <div class="good-item__tags">
+                              <div class="article-item__tags">
                                 <div
                                   class="tag tag--circle tag--circle-small tag--secondary-200"
                                 >
-                                  <span class="icon">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#label-icon"></use>
                                     </svg>
                                   </span>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Real Estate</p>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Buying</p>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Dubai</p>
                                 </div>
                               </div>
+                            </div>
 
+                            <div class="article-item__block">
                               <div class="textbox">
-                                <p class="p2">
+                                <p
+                                  class="p2 ellipsis-text ellipsis-text--three"
+                                >
                                   It’s no wonder the UAE continues topping the
                                   charts for relocation hotspots in 2025. The
                                   region is rolling out the red carpet with
                                   sky-high safety ratings—Numbeo calls it number
-                                  one—plus zero personal.
+                                  one—plus zero personal. It’s no wonder the UAE
+                                  continues topping the charts for relocation
+                                  hotspots in 2025. The region is rolling out
+                                  the red carpet with sky-high safety
+                                  ratings—Numbeo calls it number one—plus zero
+                                  personal.
                                 </p>
                               </div>
                             </div>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
+                            <div class="article-item__block">
+                              <div class="article-item__btns">
                                 <a
                                   href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--secondary"
+                                  title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  class="button button--bg-secondary-200"
                                 >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
+                                  <p class="p2 medium-font">Read the article</p>
                                 </a>
                               </div>
-                            </footer>
+                            </div>
                           </div>
                         </div>
 
-                        <div class="good-item good-item--midlle">
-                          <div class="good-item__img-box">
-                            <div class="good-item__img">
+                        <div class="article-item">
+                          <div class="article-item___img-box">
+                            <a
+                              href="#"
+                              title="Freelancer visa"
+                              aria-label="Перейти на чтение статьи : Freelancer visa"
+                              class="article-item__img-block"
+                            >
                               <picture>
                                 <source
                                   srcset="
-                                    /img/goods/one.webp   1x,
-                                    /img/goods/one2x.webp 2x
+                                    /img/articles/two.webp   1x,
+                                    /img/articles/two2x.webp 2x
                                   "
                                 />
                                 <img
-                                  src="/img/goods/one.webp"
-                                  alt="фотография Apartment"
+                                  src="/img/articles/two.webp"
+                                  alt="фотография"
                                   loading="lazy"
                                 />
                               </picture>
-                            </div>
+                            </a>
                           </div>
 
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
+                          <div class="article-item__content">
+                            <div class="article-item__block">
+                              <a
+                                href="#"
+                                title="Freelancer visa"
+                                aria-label="Перейти на чтение статьи : Freelancer visa"
+                                class="h6 text-secondary-100"
+                              >
                                 Freelancer visa
-                              </p>
-                            </header>
+                              </a>
+                            </div>
 
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                            <div class="article-item__block">
+                              <div class="article-item__badges">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#calendar-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
+                                  <time
+                                    class="p3 medium-font"
+                                    datetime="2025-07-07"
+                                    >07.07.2025</time
+                                  >
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#time-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
+                                  <p class="p3 medium-font">
+                                    Reading time: less than a minute
+                                  </p>
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#eye-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
+                                  <p class="p3 medium-font">5621</p>
                                 </div>
                               </div>
 
-                              <div class="good-item__tags">
+                              <div class="article-item__tags">
                                 <div
                                   class="tag tag--circle tag--circle-small tag--secondary-200"
                                 >
-                                  <span class="icon">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#label-icon"></use>
                                     </svg>
                                   </span>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Real Estate</p>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Buying</p>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Dubai</p>
                                 </div>
                               </div>
+                            </div>
 
+                            <div class="article-item__block">
                               <div class="textbox">
-                                <p class="p2">
+                                <p class="p2 ellipsis-text ellipsis-text--four">
                                   There is no separate visa for freelancers in
                                   the United Arab Emirates; however, remote
                                   specialists can legally work by obtaining one
                                   of two categories of residence permit – the
                                   Green Visa or the Virtual Work Permit. The
                                   Green Visa is issued for 5 years, does not
-                                  require a
+                                  require a There is no separate visa for
+                                  freelancers in the United Arab Emirates;
+                                  however, remote specialists can legally work
+                                  by obtaining one of two categories of
+                                  residence permit – the Green Visa or the
+                                  Virtual Work Permit. The Green Visa is issued
+                                  for 5 years, does not require a
                                 </p>
                               </div>
                             </div>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
+                            <div class="article-item__block">
+                              <div class="article-item__btns">
                                 <a
                                   href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--secondary"
+                                  title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  class="button button--bg-secondary-200"
                                 >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
+                                  <p class="p2 medium-font">Read the article</p>
                                 </a>
                               </div>
-                            </footer>
+                            </div>
                           </div>
                         </div>
 
-                        <div class="good-item good-item--midlle">
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
+                        <div class="article-item article-item--noImgBox">
+                          <div class="article-item__content">
+                            <div class="article-item__block">
+                              <a
+                                href="#"
+                                title="UAE Property Sales: H1 2025 — Record-Breaking, Red-Hot Market Action"
+                                aria-label="Перейти на чтение статьи : UAE Property Sales: H1 2025 — Record-Breaking, Red-Hot Market Action"
+                                class="h6 text-secondary-100"
+                              >
                                 UAE Property Sales: H1 2025 — Record-Breaking,
                                 Red-Hot Market Action
-                              </p>
-                            </header>
+                              </a>
+                            </div>
 
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                            <div class="article-item__block">
+                              <div class="article-item__badges">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#calendar-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
+                                  <time
+                                    class="p3 medium-font"
+                                    datetime="2025-07-07"
+                                    >07.07.2025</time
+                                  >
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#time-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
+                                  <p class="p3 medium-font">
+                                    Reading time: 12 minutes
+                                  </p>
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#eye-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
+                                  <p class="p3 medium-font">5621</p>
                                 </div>
                               </div>
 
-                              <div class="good-item__tags">
+                              <div class="article-item__tags">
                                 <div
                                   class="tag tag--circle tag--circle-small tag--secondary-200"
                                 >
-                                  <span class="icon">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#label-icon"></use>
                                     </svg>
                                   </span>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Real Estate</p>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Buying</p>
                                 </div>
 
-                                <div class="tag tag--small tag--noBg">
+                                <div
+                                  class="tag tag--xs tag--noBg tag--border-gray-600"
+                                >
                                   <p class="p3 medium-font">Dubai</p>
                                 </div>
                               </div>
+                            </div>
 
+                            <div class="article-item__block">
                               <div class="textbox">
-                                <p class="p2">
-                                  There is no separate visa for freelancers in
-                                  the United Arab Emirates; however, remote
-                                  specialists can legally work by obtaining one
-                                  of two categories of residence permit – the
-                                  Green Visa or the Virtual Work Permit. The
-                                  Green Visa is issued for 5 years, does not
-                                  require a
+                                <p class="p2 ellipsis-text ellipsis-text--four">
+                                  Now here’s a market that knows how to make a
+                                  splash. First half of 2025, and the UAE
+                                  property sector turns up the heat across the
+                                  board. In Dubai, over 98,000 property deals
+                                  get inked — that’s a roaring 22.6% above
+                                  numbers from early 2024, painting the town red
+                                  with AED 326.7 billion ($89 billion) in total
+                                  value. Square metre prices? Now here’s a
+                                  market that knows how to make a splash. First
+                                  half of 2025, and the UAE property sector
+                                  turns up the heat across the board. In Dubai,
+                                  over 98,000 property deals get inked — that’s
+                                  a roaring 22.6% above numbers from early 2024,
+                                  painting the town red with AED 326.7 billion
+                                  ($89 billion) in total value. Square metre
+                                  prices?
                                 </p>
                               </div>
                             </div>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
+                            <div class="article-item__block">
+                              <div class="article-item__btns">
                                 <a
                                   href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--secondary"
+                                  title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  class="button button--bg-secondary-200"
                                 >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
+                                  <p class="p2 medium-font">Read the article</p>
                                 </a>
                               </div>
-                            </footer>
+                            </div>
                           </div>
                         </div>
 
                         <div
-                          class="good-item good-item--midlle good-item--secondary-200"
+                          class="article-item article-item--secondary-bg-200"
                         >
-                          <div class="good-item__img-box">
-                            <div class="good-item__img">
+                          <div class="article-item___img-box">
+                            <a
+                              href="#"
+                              title="Affiliate content"
+                              aria-label="Перейти на чтение статьи : Affiliate content"
+                              class="article-item__img-block"
+                            >
                               <picture>
                                 <source
                                   srcset="
-                                    /img/goods/one.webp   1x,
-                                    /img/goods/one2x.webp 2x
+                                    /img/articles/three.webp   1x,
+                                    /img/articles/three2x.webp 2x
                                   "
                                 />
                                 <img
-                                  src="/img/goods/one.webp"
-                                  alt="фотография Apartment"
+                                  src="/img/articles/three.webp"
+                                  alt="фотография"
                                   loading="lazy"
                                 />
                               </picture>
-                            </div>
+                            </a>
                           </div>
 
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <p class="h6 text-secondary-100 medium-font">
+                          <div class="article-item__content">
+                            <div class="article-item__block">
+                              <a
+                                href="#"
+                                title="Freelancer visa"
+                                aria-label="Перейти на чтение статьи : Freelancer visa"
+                                class="h6 text-secondary-100"
+                              >
                                 Affiliate content
-                              </p>
-                            </header>
+                              </a>
+                            </div>
 
-                            <div class="good-item__content-info">
-                              <div class="good-item__badges">
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                            <div class="article-item__block">
+                              <div class="article-item__badges">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#calendar-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <time
-                                      class="p3 medium-font"
-                                      datetime="2024-09-18"
-                                      >18.09.2024</time
-                                    >
-                                  </div>
+                                  <time
+                                    class="p3 medium-font"
+                                    datetime="2025-07-07"
+                                    >07.07.2025</time
+                                  >
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#time-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">
-                                      Reading time: 5 minutes
-                                    </p>
-                                  </div>
+                                  <p class="p3 medium-font">
+                                    Reading time: 5 minutes
+                                  </p>
                                 </div>
 
-                                <div class="badge-decor badge-decor--big">
-                                  <span class="icon">
+                                <div class="decor-el decor-el--small">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#eye-icon"></use>
                                     </svg>
                                   </span>
 
-                                  <div class="badge-decor__content">
-                                    <p class="p3 medium-font">5621</p>
-                                  </div>
+                                  <p class="p3 medium-font">5621</p>
                                 </div>
                               </div>
 
-                              <div class="good-item__tags">
+                              <div class="article-item__tags">
                                 <div
                                   class="tag tag--circle tag--circle-small tag--secondary-100"
                                 >
-                                  <span class="icon">
+                                  <span class="icon icon--little">
                                     <svg>
                                       <use xlink:href="#label-icon"></use>
                                     </svg>
@@ -590,98 +672,376 @@
                                 </div>
 
                                 <div
-                                  class="tag tag--small tag--noBg tag--border-gray-500"
+                                  class="tag tag--xs tag--noBg tag--border-gray-500"
                                 >
                                   <p class="p3 medium-font">Real Estate</p>
                                 </div>
 
                                 <div
-                                  class="tag tag--small tag--noBg tag--border-gray-500"
+                                  class="tag tag--xs tag--noBg tag--border-gray-500"
                                 >
                                   <p class="p3 medium-font">Buying</p>
                                 </div>
 
                                 <div
-                                  class="tag tag--small tag--noBg tag--border-gray-500"
+                                  class="tag tag--xs tag--noBg tag--border-gray-500"
                                 >
                                   <p class="p3 medium-font">Dubai</p>
                                 </div>
                               </div>
+                            </div>
 
+                            <div class="article-item__block">
                               <div class="textbox">
-                                <p class="p2">
+                                <p class="p2 ellipsis-text ellipsis-text--four">
                                   There is no separate visa for freelancers in
                                   the United Arab Emirates; however, remote
                                   specialists can legally work by obtaining one
                                   of two categories of residence permit – the
                                   Green Visa or the Virtual Work Permit. The
                                   Green Visa is issued for 5 years, does not
-                                  require a
+                                  require a There is no separate visa for
+                                  freelancers in the United Arab Emirates;
+                                  however, remote specialists can legally work
+                                  by obtaining one of two categories of
+                                  residence permit – the Green Visa or the
+                                  Virtual Work Permit. The Green Visa is issued
+                                  for 5 years, does not require a
                                 </p>
                               </div>
                             </div>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
+                            <div class="article-item__block">
+                              <div class="article-item__btns">
                                 <a
                                   href="#"
-                                  title="Read the article"
-                                  aria-label="Перейти к чтению статьи"
-                                  class="button button--blueviolet"
+                                  title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                                  class="button button--bg-secondary-300"
                                 >
-                                  <span class="p2 medium-font"
-                                    >Read the article</span
-                                  >
+                                  <p class="p2 medium-font">Read the article</p>
                                 </a>
                               </div>
-                            </footer>
+                            </div>
                           </div>
                         </div>
                       </div>
-
-                      @@include('../modules/pagination.html')
                     </div>
 
-                    @@include('../modules/newsletter.html')
+                    @@include('../modules/pagination.html', {"details": "true"})
+                  </div>
 
-                    <div class="text-block">
-                      <h2 class="h4">Text Block</h2>
+                  <div class="catalogy-box__content-item md-desktop-show">
+                    <div class="quick">
+                      <div class="quick__item" data-block="more-relative">
+                        <div class="quick__title">
+                          <p class="semibold-font p2">By type of property</p>
+                        </div>
+                    
+                        <div class="quick__info">
+                          <div
+                            class="quick__items quick__items--two-grid more-block"
+                            data-block="more-items"
+                            data-max="6"
+                          >
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Properties in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Apartments in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+                    
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+                    
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Ajman</span>
+                    
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                          </div>
+                    
+                          <footer class="quick__footer" data-block="more-footer">
+                            <button
+                              class="btn-decor"
+                              data-block="more-btn"
+                              aria-label="Посмотреть больше"
+                              type="button"
+                            >
+                              <p class="p2 medium-font" data-block="more-btn-text">More</p>
+                    
+                              <div class="button--circle button--circle-3xs button--bg-gray-600">
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-down-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </button>
+                          </footer>
+                        </div>
+                      </div>
 
-                      <div class="textbox">
-                        <p class="p1">
-                          A wonderful serenity has taken possession of my entire
-                          soul, like these sweet mornings of spring which I
-                          enjoy with my whole heart. I am alone, and feel the
-                          charm of existence in this spot, which was created for
-                          the bliss of souls like mine. I am so happy, my dear
-                          friend, so absorbed in the exquisite sense of mere
-                          tranquil existence, that I neglect my talents. I
-                          should be incapable of drawing a single stroke at the
-                          present moment; and yet I feel that I never was a
-                          greater artist than now. When, while the lovely valley
-                          teems with vapour around me, and the meridian
-                        </p>
-
-                        <p class="p1">
-                          A wonderful serenity has taken possession of my entire
-                          soul, like these sweet mornings of spring which I
-                          enjoy with my whole heart. I am alone, and feel the
-                          charm of existence in this spot, which was created for
-                          the bliss of souls like mine. I am so happy, my dear
-                          friend, so absorbed in the exquisite sense of mere
-                          tranquil existence, that I neglect my talents. I
-                          should be incapable of drawing a single stroke at the
-                          present moment; and yet I feel that I never was a
-                          greater artist than now. When, while the lovely valley
-                          teems with vapour around me, and the meridian
-                        </p>
+                      <div class="quick__item" data-block="more-relative">
+                        <div class="quick__title">
+                          <p class="semibold-font p2">By popular keywords</p>
+                        </div>
+                    
+                        <div class="quick__info">
+                          <div
+                            class="quick__items quick__items--two-grid more-block"
+                            data-block="more-items"
+                            data-max="2"
+                          >
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Properties in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Apartments in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+                    
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+                    
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+                    
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+                    
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Ajman</span>
+                    
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                          </div>
+                    
+                          <footer class="quick__footer" data-block="more-footer">
+                            <button
+                              class="btn-decor"
+                              data-block="more-btn"
+                              aria-label="Посмотреть больше"
+                              type="button"
+                            >
+                              <p class="p2 medium-font" data-block="more-btn-text">More</p>
+                    
+                              <div class="button--circle button--circle-3xs button--bg-gray-600">
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use xlink:href="#arrow-line-down-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </button>
+                          </footer>
+                        </div>
                       </div>
                     </div>
                   </div>
 
-                  <div class="detail-block__banners">
-                    @@include('../modules/quick.html')
-                  </div>
+                  @@include('../modules/newsletter.html')
+
+                  @@include('../modules/text-block.html')
+                </div>
+
+                <div class="catalogy-box__banners md-desktop-none">
+                  @@include('../modules/quick.html')
                 </div>
               </div>
             </div>
@@ -689,10 +1049,11 @@
         </div>
       </main>
 
-      @@include('../modules/footer.html') @@include('../modals/request.html')
-      
+      @@include('../modules/footer.html', {"inner" : ""})
+      @@include('../modals/request.html')
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
     <script src="/js/articles.js" type="module"></script>
   </body>
 </html>

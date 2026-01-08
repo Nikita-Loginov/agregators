@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "guides", "links" :
-  ["./css/guides.css"] })
+  ["./css/guides.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
 
-      <main class="main main--detail">
+      <main class="main main--detail main--detail--middle">
         <div class="top-page">
           <div class="container">
             <div class="top-page__inner">
@@ -44,115 +45,134 @@
                   <span>Home</span>
                 </a>
               </div>
+
+              <div class="top-page__header">
+                <h1 class="h2">Guides</h1>
+
+                <div class="top-page__details top-page__details--sort">
+                  <div class="top-page__item" data-loader-relative>
+                    <div class="loader" data-loader-box>
+                      <span></span>
+                    </div>
+
+                    <div
+                      class="select-box select-box--middle select-box--words with-icon select-box--noMassa-media"
+                      data-icon="sort"
+                      data-loading="true"
+                    >
+                      <select id="select5">
+                        <option value="">Sort by</option>
+                        <option value="1">Popular</option>
+                        <option value="2">Price up</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="top-page__item" data-loader-relative>
+                    <div class="loader" data-loader-box>
+                      <span></span>
+                    </div>
+
+                    <div
+                      class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
+                      data-icon="search"
+                      data-loading="true"
+                    >
+                      <select
+                        id="search-select"
+                        data-placeholder="Find the guide"
+                        multiple
+                        data-search="true"
+                      >
+                        <option value="">Find the guide</option>
+
+                        <option
+                          value="1"
+                          data-desc="Buying property"
+                          data-short-desc="Buying property"
+                        >
+                          Buying property
+                        </option>
+
+                        <option
+                          value="4"
+                          data-short-desc="For foreign nationals"
+                        >
+                          For foreign nationals
+                        </option>
+
+                        <option
+                          value="4"
+                          data-short-desc="For foreign nationals"
+                        >
+                          For foreign nationals
+                        </option>
+
+                        <option
+                          value="5"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Holidays
+                        </option>
+
+                        <option
+                          value="6"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Legal issues
+                        </option>
+
+                        <option
+                          value="7"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Living in UAE
+                        </option>
+
+                        <option
+                          value="8"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Mortgage
+                        </option>
+
+                        <option
+                          value="9"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Personal stories
+                        </option>
+
+                        <option
+                          value="10"
+                          data-short-desc="For foreign nationals"
+                        >
+                          Other
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="main__sections">
-          <section class="guides">
+          <section class="catalogy-box">
             <div class="container">
-              <div class="topBox topBox--middle">
-                <header class="topBox__header">
-                  <h1 class="h2">Guides</h1>
-
-                  <div class="topBox__header-content">
-                    <div
-                      class="dropdown dropdown--select input-box"
-                      style="min-width: 190px"
-                    >
-                      <button
-                        class="dropdown__toggle input-box__info"
-                        type="button"
-                      >
-                        <p class="dropdown__active p2"></p>
-
-                        <span class="icon arrow">
-                          <svg>
-                            <use xlink:href="#arrow-bottom-icon"></use>
-                          </svg>
-                        </span>
-                      </button>
-
-                      <div class="dropdown__content">
-                        <ul class="dropdown__list">
-                          <li class="dropdown__link">
-                            <span
-                              class="dropdown__item active dropdown-item-close"
-                            >
-                              <span class="p2">Sort 1</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Sort 2</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Sort 3</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Sort 4</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Sort 5</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Sort 6</span>
-                            </span>
-                          </li>
-
-                          <li class="dropdown__link">
-                            <span class="dropdown__item dropdown-item-close">
-                              <span class="p2">Sort 7</span>
-                            </span>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div class="input-box" style="min-width: 286px">
-                      <label class="input-box__content">
-                        <div class="input-box__info">
-                          <input
-                            type="search"
-                            placeholder="Find the guide"
-                            name="search"
-                          />
-
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#search-icon"></use>
-                            </svg>
-                          </span>
-                        </div>
-                      </label>
-
-                      <p class="input-box__errors p4"></p>
-                    </div>
-                  </div>
-                </header>
-
-                <div class="guides__inner">
-                  <div class="guides__content">
-                    <div class="goods-items-block">
-                      <div class="goods-items-block__boxs goods-items-block__boxs--grid">
+              <div class="catalogy-box__inner">
+                <div
+                  class="catalogy-box__content catalogy-box__content--2xl topBox"
+                >
+                  <div class="catalogy-box__content-item">
+                    <div class="catalogy-box__info">
+                      <div class="goods-items goods-items--big">
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Business Bay"
                           title="Business Bay"
-                          class="card-box"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -165,7 +185,7 @@
                                 />
                                 <img
                                   src="/img/guides/one.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -177,20 +197,21 @@
                           >
                             <p class="h6-add semibold-font">Business Bay</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
 
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
-                          title="Business Bay"
-                          class="card-box"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Yas Island"
+                          title="Yas Island"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -203,7 +224,7 @@
                                 />
                                 <img
                                   src="/img/guides/two.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -215,20 +236,21 @@
                           >
                             <p class="h6-add semibold-font">Yas Island</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
 
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
-                          title="Business Bay"
-                          class="card-box"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Downtown Dubai"
+                          title="Downtown Dubai"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -241,7 +263,7 @@
                                 />
                                 <img
                                   src="/img/guides/three.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -253,20 +275,21 @@
                           >
                             <p class="h6-add semibold-font">Downtown Dubai</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
 
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
-                          title="Business Bay"
-                          class="card-box"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Saadiyat Island"
+                          title="Saadiyat Island"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -279,7 +302,7 @@
                                 />
                                 <img
                                   src="/img/guides/four.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -291,20 +314,21 @@
                           >
                             <p class="h6-add semibold-font">Saadiyat Island</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
 
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Business Bay"
                           title="Business Bay"
-                          class="card-box"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -317,7 +341,7 @@
                                 />
                                 <img
                                   src="/img/guides/one.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -329,20 +353,21 @@
                           >
                             <p class="h6-add semibold-font">Business Bay</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
 
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
-                          title="Business Bay"
-                          class="card-box"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Yas Island"
+                          title="Yas Island"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -355,7 +380,7 @@
                                 />
                                 <img
                                   src="/img/guides/two.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -367,20 +392,21 @@
                           >
                             <p class="h6-add semibold-font">Yas Island</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
 
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
-                          title="Business Bay"
-                          class="card-box"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Downtown Dubai"
+                          title="Downtown Dubai"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -393,7 +419,7 @@
                                 />
                                 <img
                                   src="/img/guides/three.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -405,20 +431,21 @@
                           >
                             <p class="h6-add semibold-font">Downtown Dubai</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
 
                         <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к гайду"
-                          title="Business Bay"
-                          class="card-box"
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Saadiyat Island"
+                          title="Saadiyat Island"
+                          class="card-box card-box--noBorder"
                         >
                           <div class="card-box__img-box">
                             <div class="card-box__img">
@@ -431,7 +458,7 @@
                                 />
                                 <img
                                   src="/img/guides/four.webp"
-                                  alt="фотография гайда"
+                                  alt="фотография автора"
                                   loading="lazy"
                                 />
                               </picture>
@@ -443,18 +470,175 @@
                           >
                             <p class="h6-add semibold-font">Saadiyat Island</p>
 
-                            <p
-                              class="p3 medium-font"
-                              style="color: var(--secondary-color-100)"
-                            >
-                              4414 <span class="regular-font">properties</span>
-                            </p>
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Business Bay"
+                          title="Business Bay"
+                          class="card-box card-box--noBorder"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/one.webp   1x,
+                                    /img/guides/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/one.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Business Bay</p>
+
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Yas Island"
+                          title="Yas Island"
+                          class="card-box card-box--noBorder"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/two.webp   1x,
+                                    /img/guides/two2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/two.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Yas Island</p>
+
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Downtown Dubai"
+                          title="Downtown Dubai"
+                          class="card-box card-box--noBorder"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/three.webp   1x,
+                                    /img/guides/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/three.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Downtown Dubai</p>
+
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/guide.html"
+                          aria-label="Перейти к гайду: Saadiyat Island"
+                          title="Saadiyat Island"
+                          class="card-box card-box--noBorder"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/guides/four.webp   1x,
+                                    /img/guides/four2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/guides/four.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box__content card-box__content--gray-200"
+                          >
+                            <p class="h6-add semibold-font">Saadiyat Island</p>
+
+                            <div class="card-box__content-item">
+                              <p class="p3 text-secondary-100 medium-font">
+                                4414
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
                           </div>
                         </a>
                       </div>
-
-                      @@include('../modules/pagination.html')
                     </div>
+
+                    @@include('../modules/pagination.html', {"details": "true"})
                   </div>
                 </div>
               </div>
@@ -463,9 +647,11 @@
         </div>
       </main>
 
-      @@include('../modules/footer.html') @@include('../modals/request.html')
-      @@include('../modals/success.html')
+      @@include('../modules/footer.html', {"inner": ""})
+      @@include('../modals/request.html') @@include('../modals/success.html')
       @@include('../modals/successRequest.html')
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
   </body>
 </html>

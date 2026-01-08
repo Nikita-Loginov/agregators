@@ -1,0 +1,119 @@
+.article-item {
+  --radius-card: var(--radius-xl);
+
+  display: flex;
+  // grid-template-columns: 40% auto;
+  border-radius: var(--radius-card);
+  background-color: var(--white-color);
+  min-height: 280px;
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+
+  &--noImgBox {
+    display: flex;
+    flex-direction: column;
+    padding: calculate-clamp(12px, 16px, 1280px, 1023px)
+      calculate-clamp(12px, 16px, 1280px, 1023px);
+    border: 1px solid var(--gray-color-600);
+    min-height: 0;
+  }
+
+  &--secondary-bg-200 {
+    background-color: var(--secondary-color-200);
+  }
+
+  &___img-box {
+    position: relative;
+    max-width: 360px;
+    height: 100%;
+    aspect-ratio: 360 / 316;
+    width: 100%;
+  }
+
+  &__img-block {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &:not(.article-item--noImgBox) {
+    .article-item {
+      &__content {
+        padding: calculate-clamp(12px, 16px, 1280px, 1023px)
+          calculate-clamp(12px, 16px, 1280px, 1023px);
+        border: 1px solid var(--gray-color-600);
+        flex: 1;
+        border-radius: 0 var(--radius-card) var(--radius-card) 0;
+      }
+    }
+  }
+
+  &__block,
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__badges,
+  &__tags,
+  &__btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__badges {
+    gap: 12px;
+  }
+
+  &__tags {
+    gap: 4px;
+  }
+
+  &__btns {
+    gap: 8px;
+  }
+
+  @mixin columnOrTabletItem {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    
+
+    &___img-box {
+      max-width: 100%;
+      aspect-ratio: 328 / 220;
+    }
+
+    &__btns {
+      display: grid;
+    }
+
+    &:not(.article-item--noImgBox) {
+      .article-item {
+        &__content {
+          border-radius: 0 0 var(--radius-card) var(--radius-card);
+        }
+      }
+    }
+  }
+
+  &--column {
+    @include columnOrTabletItem;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    --radius-card: var(--radius-md);
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    @include columnOrTabletItem;
+  }
+}

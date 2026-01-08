@@ -6,7 +6,7 @@
     <div class="wrapper">
       @@include('../modules/header.html')
 
-      <main class="main main--detail">
+      <main class="main main--detail main--detail--middle">
         <div class="top-page">
           <div class="container">
             <div class="top-page__inner">
@@ -44,24 +44,24 @@
                   <span>Home</span>
                 </a>
               </div>
+
+              <div class="top-page__header">
+                <h1 class="h2">Authors</h1>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="main__sections">
-          <section class="authors">
+          <section class="catalogy-box">
             <div class="container">
-              <div class="topBox topBox--middle">
-                <header class="topBox__header">
-                  <h1 class="h2">Authors</h1>
-                </header>
-
-                <div class="authors__inner detail-block">
-                  <div class="authors__content">
-                    <div class="goods-items-block">
-                      <div
-                        class="goods-items-block__boxs goods-items-block__boxs--grid"
-                      >
+              <div class="catalogy-box__inner detail-block">
+                <div
+                  class="catalogy-box__content catalogy-box__content--2xl topBox"
+                >
+                  <div class="catalogy-box__content-item">
+                    <div class="catalogy-box__info">
+                      <div class="goods-items">
                         <a
                           href="/author-detail.html"
                           aria-label="Перейти к автору"
@@ -101,192 +101,8 @@
                           <div class="card-box__content">
                             <p class="h6-add semibold-font">Antonio Fagundes</p>
 
-                            <p class="p3" style="color: var(--dark-color-500)">
+                            <p class="p3 text-dark-500">
                               Executive Director - Research
-                            </p>
-                          </div>
-                        </a>
-
-                        <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к автору"
-                          title="James A. Robinson"
-                          class="card-box"
-                        >
-                          <div class="card-box__img-box">
-                            <div class="card-box__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/persons/two.webp   1x,
-                                    /img/persons/two2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/persons/two.webp"
-                                  alt="фотография автора"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-
-                            <div class="card-box__img-content">
-                              <div class="card-box__img-item">
-                                <span class="icon">
-                                  <svg>
-                                    <use xlink:href="#pen-icon"></use>
-                                  </svg>
-                                </span>
-
-                                <p class="p3">75 articles</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="card-box__content">
-                            <p class="h6-add semibold-font">
-                              James A. Robinson
-                            </p>
-
-                            <p class="p3" style="color: var(--dark-color-500)">
-                              Journalist
-                            </p>
-                          </div>
-                        </a>
-
-                        <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к автору"
-                          title="Claudia Goldin"
-                          class="card-box"
-                        >
-                          <div class="card-box__img-box">
-                            <div class="card-box__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/persons/three.webp   1x,
-                                    /img/persons/three2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/persons/three.webp"
-                                  alt="фотография автора"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-
-                            <div class="card-box__img-content">
-                              <div class="card-box__img-item">
-                                <span class="icon">
-                                  <svg>
-                                    <use xlink:href="#pen-icon"></use>
-                                  </svg>
-                                </span>
-
-                                <p class="p3">75 articles</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="card-box__content">
-                            <p class="h6-add semibold-font">Claudia Goldin</p>
-
-                            <p class="p3" style="color: var(--dark-color-500)">
-                              Editor
-                            </p>
-                          </div>
-                        </a>
-
-                        <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к автору"
-                          title="Claudia Goldin"
-                          class="card-box"
-                        >
-                          <div class="card-box__img-box">
-                            <div class="card-box__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/persons/three.webp   1x,
-                                    /img/persons/three2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/persons/three.webp"
-                                  alt="фотография автора"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-
-                            <div class="card-box__img-content">
-                              <div class="card-box__img-item">
-                                <span class="icon">
-                                  <svg>
-                                    <use xlink:href="#pen-icon"></use>
-                                  </svg>
-                                </span>
-
-                                <p class="p3">75 articles</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="card-box__content">
-                            <p class="h6-add semibold-font">Claudia Goldin</p>
-
-                            <p class="p3" style="color: var(--dark-color-500)">
-                              Editor
-                            </p>
-                          </div>
-                        </a>
-
-                        <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к автору"
-                          title="James A. Robinson"
-                          class="card-box"
-                        >
-                          <div class="card-box__img-box">
-                            <div class="card-box__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/persons/two.webp   1x,
-                                    /img/persons/two2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/persons/two.webp"
-                                  alt="фотография автора"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-
-                            <div class="card-box__img-content">
-                              <div class="card-box__img-item">
-                                <span class="icon">
-                                  <svg>
-                                    <use xlink:href="#pen-icon"></use>
-                                  </svg>
-                                </span>
-
-                                <p class="p3">75 articles</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="card-box__content">
-                            <p class="h6-add semibold-font">
-                              James A. Robinson
-                            </p>
-
-                            <p class="p3" style="color: var(--dark-color-500)">
-                              Journalist
                             </p>
                           </div>
                         </a>
@@ -302,12 +118,145 @@
                               <picture>
                                 <source
                                   srcset="
-                                    /img/persons/one.webp   1x,
-                                    /img/persons/one2x.webp 2x
+                                    /img/persons/two.webp   1x,
+                                    /img/persons/two2x.webp 2x
                                   "
                                 />
                                 <img
-                                  src="/img/persons/one.webp"
+                                  src="/img/persons/two.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="card-box__img-content">
+                              <div class="card-box__img-item">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#pen-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3">75 articles</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-box__content">
+                            <p class="h6-add semibold-font">
+                              James A. Robinson
+                            </p>
+
+                            <p class="p3 text-dark-500">Journalist</p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к автору"
+                          title="Antonio Fagundes"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/persons/three.webp   1x,
+                                    /img/persons/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/persons/three.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="card-box__img-content">
+                              <div class="card-box__img-item">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#pen-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3">816 articles</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-box__content">
+                            <p class="h6-add semibold-font">Claudia Goldin</p>
+
+                            <p class="p3 text-dark-500">Editor</p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к автору"
+                          title="Antonio Fagundes"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/persons/empty.webp   1x,
+                                    /img/persons/empty2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/persons/empty.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="card-box__img-content">
+                              <div class="card-box__img-item">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#pen-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3">11 articles</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-box__content">
+                            <p class="h6-add semibold-font">Samantha Kellogg</p>
+
+                            <p class="p3 text-dark-500">
+                              Freelance correspondent
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к автору"
+                          title="Antonio Fagundes"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/persons/five.webp   1x,
+                                    /img/persons/five2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/persons/five.webp"
                                   alt="фотография автора"
                                   loading="lazy"
                                 />
@@ -330,7 +279,7 @@
                           <div class="card-box__content">
                             <p class="h6-add semibold-font">Antonio Fagundes</p>
 
-                            <p class="p3" style="color: var(--dark-color-500)">
+                            <p class="p3 text-dark-500">
                               Executive Director - Research
                             </p>
                           </div>
@@ -340,51 +289,6 @@
                           href="/author-detail.html"
                           aria-label="Перейти к автору"
                           title="Antonio Fagundes"
-                          class="card-box"
-                        >
-                          <div class="card-box__img-box">
-                            <div class="card-box__img">
-                              <picture>
-                                <source
-                                  srcset="
-                                    /img/persons/one.webp   1x,
-                                    /img/persons/one2x.webp 2x
-                                  "
-                                />
-                                <img
-                                  src="/img/persons/one.webp"
-                                  alt="фотография автора"
-                                  loading="lazy"
-                                />
-                              </picture>
-                            </div>
-
-                            <div class="card-box__img-content">
-                              <div class="card-box__img-item">
-                                <span class="icon">
-                                  <svg>
-                                    <use xlink:href="#pen-icon"></use>
-                                  </svg>
-                                </span>
-
-                                <p class="p3">27 articles</p>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="card-box__content">
-                            <p class="h6-add semibold-font">Antonio Fagundes</p>
-
-                            <p class="p3" style="color: var(--dark-color-500)">
-                              Executive Director - Research
-                            </p>
-                          </div>
-                        </a>
-
-                        <a
-                          href="/author-detail.html"
-                          aria-label="Перейти к автору"
-                          title="James A. Robinson"
                           class="card-box"
                         >
                           <div class="card-box__img-box">
@@ -422,16 +326,14 @@
                               James A. Robinson
                             </p>
 
-                            <p class="p3" style="color: var(--dark-color-500)">
-                              Journalist
-                            </p>
+                            <p class="p3 text-dark-500">Journalist</p>
                           </div>
                         </a>
 
                         <a
                           href="/author-detail.html"
                           aria-label="Перейти к автору"
-                          title="Claudia Goldin"
+                          title="Antonio Fagundes"
                           class="card-box"
                         >
                           <div class="card-box__img-box">
@@ -459,7 +361,7 @@
                                   </svg>
                                 </span>
 
-                                <p class="p3">75 articles</p>
+                                <p class="p3">816 articles</p>
                               </div>
                             </div>
                           </div>
@@ -467,22 +369,436 @@
                           <div class="card-box__content">
                             <p class="h6-add semibold-font">Claudia Goldin</p>
 
-                            <p class="p3" style="color: var(--dark-color-500)">
-                              Editor
+                            <p class="p3 text-dark-500">Editor</p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к автору"
+                          title="Antonio Fagundes"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/persons/two.webp   1x,
+                                    /img/persons/two2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/persons/two.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="card-box__img-content">
+                              <div class="card-box__img-item">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#pen-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3">75 articles</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-box__content">
+                            <p class="h6-add semibold-font">
+                              James A. Robinson
                             </p>
+
+                            <p class="p3 text-dark-500">Journalist</p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="/author-detail.html"
+                          aria-label="Перейти к автору"
+                          title="Antonio Fagundes"
+                          class="card-box"
+                        >
+                          <div class="card-box__img-box">
+                            <div class="card-box__img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/persons/three.webp   1x,
+                                    /img/persons/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/persons/three.webp"
+                                  alt="фотография автора"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="card-box__img-content">
+                              <div class="card-box__img-item">
+                                <span class="icon">
+                                  <svg>
+                                    <use xlink:href="#pen-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3">816 articles</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-box__content">
+                            <p class="h6-add semibold-font">Claudia Goldin</p>
+
+                            <p class="p3 text-dark-500">Editor</p>
                           </div>
                         </a>
                       </div>
-
-                      @@include('../modules/pagination.html')
                     </div>
 
-                    @@include('../modules/newsletter.html')
+                    @@include('../modules/pagination.html', {"details": "true"})
                   </div>
 
-                  <div class="detail-block__banners">
-                    @@include('../modules/quick.html')
+                  <div class="catalogy-box__content-item md-desktop-show">
+                    <div class="quick">
+                      <div class="quick__item" data-block="more-relative">
+                        <div class="quick__title">
+                          <p class="semibold-font p2">By type of property</p>
+                        </div>
+
+                        <div class="quick__info">
+                          <div
+                            class="quick__items quick__items--two-grid more-block"
+                            data-block="more-items"
+                            data-max="6"
+                          >
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Properties in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Apartments in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Ajman</span>
+
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <footer
+                            class="quick__footer"
+                            data-block="more-footer"
+                          >
+                            <button
+                              class="btn-decor"
+                              data-block="more-btn"
+                              aria-label="Посмотреть больше"
+                              type="button"
+                            >
+                              <p
+                                class="p2 medium-font"
+                                data-block="more-btn-text"
+                              >
+                                More
+                              </p>
+
+                              <div
+                                class="button--circle button--circle-3xs button--bg-gray-600"
+                              >
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use
+                                      xlink:href="#arrow-line-down-icon"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </button>
+                          </footer>
+                        </div>
+                      </div>
+
+                      <div class="quick__item" data-block="more-relative">
+                        <div class="quick__title">
+                          <p class="semibold-font p2">By popular keywords</p>
+                        </div>
+
+                        <div class="quick__info">
+                          <div
+                            class="quick__items quick__items--two-grid more-block"
+                            data-block="more-items"
+                            data-max="2"
+                          >
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Properties in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Apartments in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Bungalows in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Dubai"
+                                title="Dubai"
+                                class="quick__block link"
+                              >
+                                <span class="p3">New apartments in UAE</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Abu Dhabi"
+                                title="Abu Dhabi"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Abu Dhabi</span>
+
+                                <span class="p3 quick__mean">29,130</span>
+                              </a>
+                            </div>
+
+                            <div class="more-block__item">
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу Ajman"
+                                title="Ajman"
+                                class="quick__block link"
+                              >
+                                <span class="p3">Ajman</span>
+
+                                <span class="p3 quick__mean">260</span>
+                              </a>
+                            </div>
+                          </div>
+
+                          <footer
+                            class="quick__footer"
+                            data-block="more-footer"
+                          >
+                            <button
+                              class="btn-decor"
+                              data-block="more-btn"
+                              aria-label="Посмотреть больше"
+                              type="button"
+                            >
+                              <p
+                                class="p2 medium-font"
+                                data-block="more-btn-text"
+                              >
+                                More
+                              </p>
+
+                              <div
+                                class="button--circle button--circle-3xs button--bg-gray-600"
+                              >
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use
+                                      xlink:href="#arrow-line-down-icon"
+                                    ></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </button>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
                   </div>
+
+                  @@include('../modules/newsletter.html')
+                </div>
+
+                <div class="catalogy-box__banners md-desktop-none">
+                  @@include('../modules/quick.html')
                 </div>
               </div>
             </div>
@@ -490,7 +806,7 @@
         </div>
       </main>
 
-      @@include('../modules/footer.html') @@include('../modals/request.html')
+      @@include('../modules/footer.html', {"inner" : ""}) @@include('../modals/request.html')
       @@include('../modals/success.html')
       @@include('../modals/successRequest.html')
     </div>

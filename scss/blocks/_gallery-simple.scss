@@ -6,6 +6,16 @@
 
   --gap-small-items: 8px;
 
+  &--big {
+    height: calculate-clamp(414px, 608px, 1439px, 1023px);;
+
+    .gallery-simple {
+      &__item {
+        border-radius: var(--radius-md);
+      }
+    }
+  }
+
   &__swiper-big,
   &__swiper-small {
     height: 100%;
@@ -118,6 +128,16 @@
     position: relative;
     width: calc(100% + (var(--container-inline-padding) * 2));
     left: calc(var(--container-inline-padding) * -1);
+
+    &--big {
+      height: calculate-clamp(270px, 414px, 767px, 480px);
+  
+      .gallery-simple {
+        &__item {
+          border-radius: 0;
+        }
+      }
+    }
 
     &__item {
       border-radius: 0;

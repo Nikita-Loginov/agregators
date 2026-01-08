@@ -50,6 +50,17 @@
     }
   }
 
+  &--border-item {
+    .table-grid {
+      &__cell {
+        &:not(:last-child) {
+          border-right: 1px solid var(--gray-color-600);
+        }
+       
+      }
+    }
+  }
+
   &__header {
     background-color: var(--gray-color-200);
     border-radius: var(--radius-base);

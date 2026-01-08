@@ -107,6 +107,13 @@
     }
   }
 
+  &--noMin {
+    .ts-control,
+    .ts-dropdown {
+      min-width: 100% !important;
+    }
+  }
+
   &--search {
     @mixin search-icon {
       content: "";
@@ -251,6 +258,34 @@
       display: flex;
       gap: 16px 8px;
       flex-wrap: wrap;
+    }
+  }
+
+  &--noMassa-media {
+    @media (max-width: $mobile-breakpoint) {
+      .ts-control {
+        padding: 0 !important;
+        background-color: transparent !important;
+        border-radius: 0 !important;
+        border: none !important;
+        gap: 4px;
+        min-height: 0;
+
+        &:after {
+          display: none;
+        }
+
+        p,
+        .ts-item {
+          color: var(--secondary-color-100);
+        }
+
+        input {
+          &::placeholder {
+            color: var(--secondary-color-100);
+          }
+        }
+      }
     }
   }
 }

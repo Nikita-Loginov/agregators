@@ -55,9 +55,13 @@ a.card-detail {
   flex-direction: column;
   border: 1px solid var(--gray-color-600);
 
+  &--noBorder {
+    border: none;
+  }
+
   &__img-box {
     width: 100%;
-    height: 220px;
+    aspect-ratio: 292 / 220;
     position: relative;
     overflow: hidden;
     background-color: var(--gray-color-600);
@@ -122,6 +126,12 @@ a.card-detail {
       background-color: var(--gray-color-200);
     }
   }
+
+  &__content-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
 }
 
 a.card-box {
@@ -142,7 +152,6 @@ a.card-box {
 .card-simple {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   gap: 4px;
   background-color: var(--gray-color-100);
@@ -177,6 +186,11 @@ a.card-box {
     svg {
       width: 100%;
       height: 100%;
+    }
+
+    &--big {
+      width: calculate-clamp(28px, 48px, 1023px, 767px);
+      height: calculate-clamp(28px, 48px, 1023px, 767px);
     }
   }
 
@@ -213,7 +227,7 @@ a.card-box {
     flex-shrink: 0;
     border-radius: 50%;
     background-color: var(--white-color);
-    color: var(--secondary-color-100)
+    color: var(--secondary-color-100);
   }
 
   &__content {
@@ -284,5 +298,52 @@ a.card-box {
         font-size: 18px;
       }
     }
+  }
+}
+
+.card-dev {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-color-600);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+
+  &__img-box {
+    padding: 20px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    
+  }
+
+  &__img-block {
+    height: 174px;
+    width: 100%;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    background-color: var(--gray-color-100);
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-radius: var(--radius-md);
+  }
+
+  &__content-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 }

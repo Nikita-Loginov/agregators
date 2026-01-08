@@ -69,6 +69,15 @@
     }
   }
 
+  &--full-static {
+    width: 100%;
+    justify-content: center;
+  }
+
+  &--big {
+    gap: 32px;
+  }
+
   .icon {
     width: 12px;
     height: 12px;

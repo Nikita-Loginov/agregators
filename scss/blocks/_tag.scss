@@ -10,8 +10,8 @@
 
   &--big {
     border-radius: var(--radius-2xl);
-    padding: 4px 16px;
-    min-height: 42px;
+    padding: calculate-clamp(2px, 4px, 1280px, 1023px) calculate-clamp(8px, 16px, 1280px, 1023px);
+    min-height: calculate-clamp(30px, 42px, 1280px, 1023px);
   }
 
   &--small-radius {
@@ -22,6 +22,12 @@
     min-height: 28px;
     padding: 2px 8px;
     border-radius: var(--radius-sm);
+  }
+
+  &--xs {
+    min-height: 26px;
+    padding: 1px 12px;
+    border-radius: var(--radius-2xl);
   }
 
   &--gray-200 {
@@ -57,6 +63,11 @@
     color: var(--white-color);
   }
 
+  &--dark-600 {
+    background-color: var(--dark-color-600);
+    color: var(--white-color);
+  }
+
   &--secondary-100 {
     background-color: var(--secondary-color-100);
     color: var(--secondary-color-200);
@@ -79,6 +90,10 @@
 
   &--border-gray-500 {
     border-color: var(--gray-color-500);
+  }
+
+  &--border-gray-600 {
+    border-color: var(--gray-color-600);
   }
 
   &--circle {

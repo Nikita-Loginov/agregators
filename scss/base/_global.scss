@@ -80,6 +80,10 @@ body {
     &-big {
       gap: calculate-clamp(32px, 40px, 1439px, 1023px);
     }
+
+    &--middle {
+      gap: calculate-clamp(24px, 32px, 1439px, 1023px);
+    }
   }
 
   &--noPaddingAdd {
@@ -291,14 +295,6 @@ body .wrapper {
   }
 }
 
-.top-page {
-  &__inner {
-    display: flex;
-    flex-direction: column;
-    gap: calculate-clamp(12px, 16px, 1280px, 1023px);
-  }
-}
-
 [data-block="more-btn"].more {
   .icon {
     rotate: -180deg;
@@ -347,6 +343,22 @@ body .wrapper {
   }
 }
 
+.goods-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: calculate-clamp(12px, 24px, 1280px, 1023px) calculate-clamp(12px, 14px, 1280px, 1023px);
+
+  &--big {
+    gap: calculate-clamp(12px, 24px, 1280px, 1023px);
+  }
+
+  @media (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
 .banners-section {
   &__inner {
     display: flex;
@@ -391,6 +403,11 @@ body .wrapper {
   &--three {
     line-clamp: 3;
     -webkit-line-clamp: 3;
+  }
+
+  &--four {
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
   }
 }
 

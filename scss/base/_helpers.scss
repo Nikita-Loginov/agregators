@@ -24,6 +24,36 @@
   border: 0;
 }
 
+@mixin columnOrMeidaBannerPromo {
+  min-height: 490px;
+
+  &__logo {
+    display: none;
+  }
+
+  &__footer {
+    flex-direction: column;
+    align-items: normal;
+    margin-top: auto;
+
+    .banner-promo__logo {
+      display: flex;
+    }
+  }
+
+  &__content {
+    gap: 24px;
+    flex: 1;
+  }
+
+  &__items {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 $xl-desktop-breakpoint: 1550px;
 $desktop-breakpoint: 1439px;
 $md-desktop-breakpoint: 1279px;

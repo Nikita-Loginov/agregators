@@ -1,39 +1,59 @@
 .newsletter {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: calculate-clamp(20px, 32px, 1280px, 1023px);
   width: 100%;
-  padding: 28px 32px;
+  padding: calculate-clamp(24px, 28px, 1280px, 1023px)
+    calculate-clamp(24px, 32px, 1280px, 1023px);
   border-radius: var(--radius-xl);
   background-color: var(--gray-color-200);
 
   &--row {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   align-items: center;
-   gap: 28px;
+    @media (min-width: calc($lg-breakpoint + 1px)) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      gap: 28px;
 
-   .newsletter {
-    &__tags {
-      gap: 12px;
+      .newsletter {
+        &__tags {
+          gap: 12px;
+        }
+
+        &__header {
+          gap: 16px;
+        }
+      }
     }
 
-    &__header {
-      gap: 16px;
+    @media (max-width: calc($lg-breakpoint)) {
+      .newsletter {
+        &__header {
+          display: contents;
+
+          .form {
+            order: 10000;
+          }
+        }
+      }
     }
-   }
   }
 
   &__header,
   &__footer {
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: calculate-clamp(20px, 28px, 1280px, 1023px);
   }
 
   &__tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: calculate-clamp(20px, 24px, 767px, 480px)
+      calculate-clamp(12px, 24px, 767px, 480px);
   }
 }

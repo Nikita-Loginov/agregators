@@ -3,60 +3,64 @@
     <p class="h3">Why should you subscribe to our newsletter?</p>
 
     <div class="newsletter__tags">
-      <div class="tag tag--big tag--dark-100">
+      <div class="tag tag--big tag--dark-100 br-el--rounded-base">
         <p class="p2 medium-font">1 email per week</p>
       </div>
 
-      <div class="tag tag--big tag--dark-200">
+      <div class="tag tag--big tag--dark-200 br-el--rounded-base">
         <p class="p2 medium-font">Selection of exclusive objects</p>
       </div>
 
-      <div class="tag tag--big tag--dark-300">
+      <div class="tag tag--big tag--dark-300 br-el--rounded-base">
         <p class="p2 medium-font">Tips and tricks</p>
       </div>
 
-      <div class="tag tag--big tag--dark-400">
+      <div class="tag tag--big tag--dark-400 br-el--rounded-base">
         <p class="p2 medium-font">Analytics from our experts</p>
       </div>
 
-      <div class="tag tag--big tag--dark-500">
+      <div class="tag tag--big tag--dark-500 br-el--rounded-base">
         <p class="p2 medium-font">Access to closed online seminars</p>
+      </div>
+
+      <div class="tag tag--big tag--dark-600 br-el--rounded-base">
+        <p class="p2 medium-font">Special selected offers</p>
       </div>
     </div>
   </header>
 
   <footer class="newsletter__footer">
-    <form action="" class="form" novalidate>
+    <form  class="form" novalidate>
       <label class="special-input form__item">
         <div class="special-input__info">
           <input
             type="email"
             placeholder="Enter your email"
+            name="email"
             required
-            pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,4}"
-            data-title="Пожалуйста, введите корректный email (пример: user@example.com)"
-            data-empty="Ведите минимум один символ"
-            aria-errormessage="email-errors"
           />
         </div>
 
         <div class="special-input__details">
           <button
-            class="button button--xl button--red button--bg-rad modal-open"
+            class="button button--xl button--bg-primary-600 br-el--rounded-3xl modal-open"
             type="submit"
             data-modal="successRequestModal"
           >
             <p class="p2 semibold-font">Subscribe</p>
 
-            <span class="icon">
-              <svg>
-                <use xlink:href="#arrow-line-icon"></use>
-              </svg>
-            </span>
+            <div class="lg-none">
+              <span class="icon">
+                <svg>
+                  <use xlink:href="#arrow-line-icon"></use>
+                </svg>
+              </span>
+            </div>
+           
           </button>
         </div>
 
-        <div class="special-input__errors form__errors" id="email-errors"></div>
+        <div class="special-input__errors form__errors"></div>
       </label>
     </form>
   </footer>

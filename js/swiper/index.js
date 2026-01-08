@@ -1,4 +1,8 @@
-import { toggleVideoSwiper, checkIfDisabledSwiper, setTableCountItems } from "./functions.js";
+import {
+  toggleVideoSwiper,
+  checkIfDisabledSwiper,
+  setTableCountItems,
+} from "./functions.js";
 
 export const MOUSE_WHEEL_CONFIG = {
   enabled: true,
@@ -161,6 +165,11 @@ export const SWIPERS = {
       pagination: {
         el: ".gallery .swiper--gallery-big .swiper-pagination",
       },
+
+      navigation: {
+        nextEl: ".gallery .arrow-swiper.next",
+        prevEl: ".gallery .arrow-swiper.prev",
+      },
     },
     events: {
       slideChange: (swiper) => {
@@ -239,17 +248,17 @@ export const SWIPERS = {
         },
         768: {
           slidesPerView: 2,
-        }
-      }
+        },
+      },
     },
 
     events: {
       init: (swiper) => {
-        setTableCountItems(swiper)
+        setTableCountItems(swiper);
       },
       resize: (swiper) => {
         setTableCountItems(swiper);
-      }
+      },
     },
   },
   RESULT_CARD: {
@@ -263,8 +272,6 @@ export const SWIPERS = {
         el: ".result-block .swiper--result .swiper-pagination",
       },
       breakpoints: {
-        
-
         900: {
           slidesPerView: 5,
         },
@@ -326,6 +333,35 @@ export const SWIPERS = {
         renderCustom: function (swiper, current, total) {
           return `<span class="current-slide">${current}</span>/<span class="total-slides">${total}</span>`;
         },
+      },
+    },
+  },
+  DEV: {
+    selector: ".object-bottom__item-dev .swiper--dev",
+    breakpoint: 122300000000,
+
+    options: {
+      slidesPerView: 1.2,
+      spaceBetween: 12,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      pagination: {
+        el: ".object-bottom__item-dev .swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".object-bottom__item-dev .arrow-swiper.next",
+        prevEl: ".object-bottom__item-dev .arrow-swiper.prev",
+      },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 23,
+        },
+        767: {
+          slidesPerView: 3,
+        },
+        481: {
+          slidesPerView: 2.1,
+        }
       },
     },
   },
