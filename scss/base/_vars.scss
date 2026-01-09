@@ -46,6 +46,7 @@ html {
 
   --blue-color-100: #4d6bfe33;
   --blue-color-200: #4d6bfeb3;
+  --blue-color-300: #4498ff;
 
   --font-main: "Roboto", sans-serif;
 
@@ -99,6 +100,8 @@ html {
   --calback-header-height: 138px;
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1280px, 767px)};
+  --gap-blocks-small: #{calculate-clamp(48px, 60px, 1280px, 767px)};
+  --gap-blocks-xs: #{calculate-clamp(32px, 60px, 1280px, 767px)};
 }
 
 @media (max-width: $lg-breakpoint) {
@@ -110,6 +113,8 @@ html {
 @media (max-width: $tablet-breakpoint) {
   html {
     --calback-header-height: 72px;
+    
+    --gap-blocks-xs: #{calculate-clamp(24px, 32px, 767px, 480px)};
   }
 }
 
@@ -118,4 +123,3 @@ html {
     --calback-header-height: 63px;
   }
 }
-

@@ -6,11 +6,39 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 10px;
+  gap: 30px;
 }
 .allPages__develop {
   font-size: calculate-clamp(16px, 40px);
   line-height: line-height(16px, 16px);
+}
+.allPages__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+}
+.allPages__decor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--secondary-color-100);
+  color: var(--white-color);
+  border-radius: var(--radius-md);
+  padding: 2px 20px;
 }
 .allPages__list {
   display: -webkit-box;

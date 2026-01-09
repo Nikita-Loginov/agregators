@@ -23,6 +23,14 @@
     &--sort {
       --gap-details: 24px;
     }
+
+    &--one {
+      grid-template-columns: auto;
+
+      @media (min-width: calc($md-desktop-breakpoint)) {
+        grid-template-columns: 280px;
+      }
+    }
   }
 
   @media (max-width: $tablet-breakpoint) {

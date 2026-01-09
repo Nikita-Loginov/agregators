@@ -16,4 +16,14 @@
       line-height: var(--line-height-tighter);
     }
   }
+
+  &--small {
+    .name-rating {
+      &__box {
+        min-height: calculate-clamp(20px, 26px, 767px, 480px);
+        padding: calculate-clamp(0px, 2px, 767px, 480px) 6px;
+        gap: 4px;
+      }
+    }
+  }
 }

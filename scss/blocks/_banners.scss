@@ -85,7 +85,8 @@
     background-color: var(--secondary-color-300);
 
     .banner-content {
-      &__header {
+      &__header,
+      &__info {
         color: var(--white-color);
       }
     }

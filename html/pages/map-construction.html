@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Карта construction", "links" :
+  ["./css/map.css", "./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
+  "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"]
+  })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html', {"full" : "true"})
+
+      <main class="main main--noPaddingAdd main--noLastPadding">
+        <section class="map sibebar-open" data-block="sibebar-box">
+          <div class="map__inner">
+            <div class="map__info">
+              <div
+                class="companies-filter companies-filter--map companies-filter--bg companies-filter--six"
+              >
+                <div class="companies-filter__item tablet-show">
+                  <button
+                    class="button button--cub button--bg-secondary-300 button--cub-md-add modal-open"
+                    data-modal="filterConstructionModal"
+                  >
+                    <div class="button__block">
+                      <span class="icon">
+                        <svg>
+                          <use xlink:href="#filter-second-icon"></use>
+                        </svg>
+                      </span>
+
+                      <p class="p4 text-secondary-200 button__decor-item">4</p>
+                    </div>
+                  </button>
+                </div>
+
+                <div
+                  class="companies-filter__item tablet-none"
+                  data-loader-relative
+                >
+                  <div class="loader" data-loader-box>
+                    <span></span>
+                  </div>
+
+                  <div
+                    class="select-box select-box--noMax select-box--words select-box--noMin"
+                    data-loading="true"
+                  >
+                    <select id="select5">
+                      <option value="">Speciality services</option>
+                      <option value="1">some info 1</option>
+                      <option value="2">some info 2</option>
+                      <option value="3">some info 3</option>
+                      <option value="4">some info 4</option>
+                      <option value="5">some info 5</option>
+                      <option value="6">some info 6</option>
+                      <option value="7">some info 7</option>
+                      <option value="8">some info 8</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="input-box tablet-none">
+                  <label class="input-box__content">
+                    <div class="input-box__info">
+                      <input
+                        type="text"
+                        name="Keywords"
+                        placeholder="Keywords"
+                        required
+                      />
+                    </div>
+                  </label>
+
+                  <p class="input-box__errors p4 form__errors"></p>
+                </div>
+
+                <div class="companies-filter__item" data-loader-relative>
+                  <div class="loader" data-loader-box>
+                    <span></span>
+                  </div>
+
+                  <div
+                    class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
+                    data-icon="city"
+                    data-loading="true"
+                  >
+                    <select
+                      id="search-select"
+                      data-placeholder="City, district, region"
+                      multiple
+                      data-search="true"
+                    >
+                      <option value="">City, district, region</option>
+                      <option
+                        value="1"
+                        data-type="city"
+                        data-tag="City"
+                        data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                        data-short-desc="Dubai, UAE"
+                      >
+                        Dubai
+                      </option>
+                      <option
+                        value="2"
+                        data-type="city"
+                        data-tag="City"
+                        data-desc="Central Business District, Moscow city, Russia"
+                        data-short-desc="Moscow, Russia"
+                      >
+                        Moscow
+                      </option>
+                      <option
+                        value="3"
+                        data-type="city"
+                        data-tag="City"
+                        data-desc="Manhattan borough, New York city, USA"
+                        data-short-desc="New York, USA"
+                      >
+                        New York
+                      </option>
+                      <option
+                        value="4"
+                        data-type="country"
+                        data-tag="Country"
+                        data-desc="Federal republic in Central Europe with rich history and culture"
+                        data-short-desc="Germany"
+                      >
+                        Germany
+                      </option>
+                      <option
+                        value="5"
+                        data-type="country"
+                        data-tag="Country"
+                        data-desc="Island nation in East Asia known for technology and traditions"
+                        data-short-desc="Japan"
+                      >
+                        Japan
+                      </option>
+                      <option
+                        value="6"
+                        data-type="region"
+                        data-tag="Region"
+                        data-desc="Southeastern region of France on the Mediterranean coast"
+                        data-short-desc="Provence, France"
+                      >
+                        Provence
+                      </option>
+                      <option
+                        value="7"
+                        data-type="region"
+                        data-tag="Region"
+                        data-desc="Northern Italian region known for cuisine and automotive industry"
+                        data-short-desc="Emilia-Romagna, Italy"
+                      >
+                        Emilia-Romagna
+                      </option>
+                      <option
+                        value="8"
+                        data-type="district"
+                        data-tag="District"
+                        data-desc="Historic central district of London with government buildings"
+                        data-short-desc="Westminster, London"
+                      >
+                        Westminster
+                      </option>
+                      <option
+                        value="9"
+                        data-type="district"
+                        data-tag="District"
+                        data-desc="Fashionable district in central Paris with luxury boutiques"
+                        data-short-desc="Champs-Élysées, Paris"
+                      >
+                        Champs-Élysées
+                      </option>
+                    </select>
+                  </div>
+                </div>
+
+                <button
+                  class="button button--lg button--bg-gray-300 button--rounded-md lg-none"
+                >
+                  <span class="p2 medium-font">Reset search</span>
+                </button>
+
+                <button
+                  class="button button--lg button--bg-primary-100 button--rounded-md lg-none"
+                >
+                  <span class="p2 medium-font">Search</span>
+
+                  <span class="icon">
+                    <svg>
+                      <use xlink:href="#search-icon"></use>
+                    </svg>
+                  </span>
+                </button>
+
+                <div class="companies-filter__item tablet-none">
+                  <div class="checkbox-box">
+                    <label class="check">
+                      <a
+                        href="/catalogy.html"
+                        aria-label="Перейти на страницу каталога"
+                        title="List"
+                        class="check__info"
+                      >
+                        <div class="check__info-content">
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#rows-icon"></use>
+                            </svg>
+                          </span>
+
+                          <span class="p2 lg-none">List</span>
+                        </div>
+                      </a>
+                    </label>
+
+                    <label class="check">
+                      <div class="check__info">
+                        <input type="radio" checked name="map" />
+
+                        <div class="check__info-content">
+                          <span class="icon">
+                            <svg>
+                              <use xlink:href="#map-icon"></use>
+                            </svg>
+                          </span>
+
+                          <span class="p2 lg-none">Map</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="companies-filter__item tablet-show">
+                  <button
+                    class="button button--cub button--bg-primary-100 button--cub-md-add"
+                  >
+                    <span class="icon">
+                      <svg>
+                        <use xlink:href="#search-icon"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="map__content">
+              <aside
+                class="map-sibebar sibebar open"
+                data-block="sibebar-box__block"
+              >
+                <div class="map-sibebar__top">
+                  <h1 class="h4">Construction companies</h1>
+
+                  <div class="tablet-show">
+                    <div class="map-sibebar__btns">
+                      <button
+                        type="button"
+                        class="button button--cub button--bg-gray-200 button--cub-sm"
+                        data-block="sibebar-box__close"
+                      >
+                        <span class="icon icon--little text-dark-100">
+                          <svg>
+                            <use xlink:href="#arrow-bottom-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+
+                      <button
+                        type="button"
+                        class="button button--cub button--bg-gray-200 button--cub-sm modal-open"
+                        data-modal="selectedItemsConstructionModal"
+                      >
+                        <span
+                          class="icon icon--little text-dark-100"
+                          style="rotate: -180deg"
+                        >
+                          <svg>
+                            <use xlink:href="#arrow-bottom-icon"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <button
+                    class="close tablet-none"
+                    data-block="sibebar-box__close"
+                  >
+                    <span class="icon icon--little">
+                      <svg>
+                        <use xlink:href="#close-icon"></use>
+                      </svg>
+                    </span>
+                  </button>
+                </div>
+
+                <div class="map-sibebar__swiper-box">
+                  <div class="swiper swiper--goods swiper--goods-small">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="companie-card">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="companie-card companie-card--empty">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <svg>
+                                <use xlink:href="#crane-icon"></use>
+                              </svg>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <svg>
+                                  <use xlink:href="#crane-icon"></use>
+                                </svg>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="companie-card">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="companie-card">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="companie-card">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="companie-card">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="companie-card">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="companie-card">
+                          <div
+                            class="companie-card__img-box companie-card__img-box--small"
+                          >
+                            <div class="companie-card__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__content">
+                            <div class="companie-card__header">
+                              <div class="companie-card__header-img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="companie-card__header-content">
+                                <div class="companie-card__header-info">
+                                  <div class="companie-card__header-item">
+                                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <svg>
+                                        <use
+                                          xlink:href="#shield-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+
+                                  <div
+                                    class="companie-card__badges md-desktop-show"
+                                  >
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-dark-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#house-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-200">
+                                        958 properties
+                                      </p>
+                                    </div>
+
+                                    <div
+                                      class="badge badge--gray-color-200 badge--xs"
+                                    >
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p4 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div
+                                  class="companie-card__header-info md-desktop-none"
+                                >
+                                  <div class="name-rating name-rating--small">
+                                    <div class="name-rating__box">
+                                      <span
+                                        class="icon icon--little text-primary-100"
+                                      >
+                                        <svg>
+                                          <use xlink:href="#star-icon"></use>
+                                        </svg>
+                                      </span>
+
+                                      <p class="p3 medium-font text-dark-100">
+                                        4,9
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__footer md-desktop-none">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon text-secondary-100">
+                                  <svg>
+                                    <use xlink:href="#house-icon"></use>
+                                  </svg>
+                                </span>
+
+                                <p class="p3 medium-font">1071</p>
+
+                                <p class="p3">properties</p>
+                              </div>
+
+                              <div class="companie-card__btns">
+                                <a
+                                  href="#"
+                                  title="See all"
+                                  aria-label="Перейти на страницу всех проектов"
+                                  class="button button--bg-secondary-200"
+                                >
+                                  <span class="p3 medium-font">See all</span>
+
+                                  <span class="icon icon--little">
+                                    <svg>
+                                      <use xlink:href=" #arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="map-sibebar__pagination desktop-none">
+                  @@include('../modules/pagination.html', {"details": "false"})
+                </div>
+              </aside>
+
+              <div class="map__cart">
+                <div class="map" id="map"></div>
+
+                <div class="map__details">
+                  <p class="p2 medium-font lg-show text-dark-100">
+                    Property for sale in Abu-Dhabi
+                  </p>
+
+                  <div class="breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                      <li class="breadcrumbs__link">
+                        <a
+                          href="#"
+                          aria-label="Вернуться на Home"
+                          title="Home"
+                          class="breadcrumbs__item link active active-noColor active-line"
+                          >Home</a
+                        >
+                      </li>
+
+                      <li class="breadcrumbs__link">
+                        <span class="breadcrumbs__item"
+                          >Property for sale in Abu-Dhabi</span
+                        >
+                      </li>
+                    </ul>
+
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__media"
+                    >
+                      <span class="breadcrumbs__circle">
+                        <span class="icon icon--full">
+                          <svg>
+                            <use xlink:href="#arrow-circle-icon"></use>
+                          </svg>
+                        </span>
+                      </span>
+
+                      <span>Home</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      @@include('../modules/footer.html') @@include('../modals/filterConstruction.html')
+      @@include('../modals/selectedItemsConstruction.html')
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/map.js" type="module"></script>
+  </body>
+</html>

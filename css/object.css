@@ -1264,6 +1264,11 @@
 .name-rating__box * {
   line-height: var(--line-height-tighter);
 }
+.name-rating--small .name-rating__box {
+  min-height: clamp(20px, 9.9651567944px + 2.0905923345vw, 26px);
+  padding: clamp(0px, -3.3449477352px + 0.6968641115vw, 2px) 6px;
+  gap: 4px;
+}
 
 .links-section__inner {
   display: -webkit-box;

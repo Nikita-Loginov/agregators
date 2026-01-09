@@ -7,8 +7,7 @@
     background-color: var(--white-color);
     padding: 4px;
     border-radius: var(--radius-md);
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 4px;
   }
 
@@ -18,6 +17,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 4px;
+    width: 100%;
     height: 100%;
     border-radius: var(--radius-base);
     cursor: pointer;
@@ -35,6 +35,28 @@
       color: var(--white-color);
       background-color: var(--secondary-color-100);
     }
+  }
+
+  &--secondary-bg-active-200 {
+    .tabs-box {
+      &__btn {
+        &.active {
+          background-color: var(--secondary-color-200);
+          color: var(--secondary-color-300);
+        }
+
+        &:hover {
+          color: var(--white-color);
+          background-color: var(--secondary-color-300);
+        }
+      }
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
   }
 
   &__header,

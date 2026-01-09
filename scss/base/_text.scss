@@ -198,6 +198,24 @@ h6 {
   );
 }
 
+.fz-28-16 {
+  font-size: calculate-clamp(
+    16px,
+    28px,
+    $md-desktop-breakpoint,
+    $mobile-breakpoint
+  );
+}
+
+.fz-24-16 {
+  font-size: calculate-clamp(
+    16px,
+    24px,
+    $md-desktop-breakpoint,
+    $tablet-breakpoint
+  );
+}
+
 .fz60-22 {
   font-size: calculate-clamp(
     28px,

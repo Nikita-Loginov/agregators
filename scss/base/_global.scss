@@ -72,6 +72,18 @@ body {
     }
   }
 
+  &--small {
+    section {
+      &:not(:last-child) {
+        margin-bottom: var(--gap-blocks-small);
+
+        &.gap-section-xs {
+          margin-bottom: var(--gap-blocks-xs);
+        }
+      }
+    }
+  }
+
   &--detail {
     display: flex;
     flex-direction: column;
@@ -105,6 +117,7 @@ body {
       }
     }
   }
+  
 }
 
 .container {
@@ -346,7 +359,8 @@ body .wrapper {
 .goods-items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: calculate-clamp(12px, 24px, 1280px, 1023px) calculate-clamp(12px, 14px, 1280px, 1023px);
+  gap: calculate-clamp(12px, 24px, 1280px, 1023px)
+    calculate-clamp(12px, 14px, 1280px, 1023px);
 
   &--big {
     gap: calculate-clamp(12px, 24px, 1280px, 1023px);
@@ -359,11 +373,16 @@ body .wrapper {
   }
 }
 
-.banners-section {
+.banners-section,
+.decors-section {
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 32px;
+
+    @media (max-width: $tablet-breakpoint) {
+      gap: calculate-clamp(24px, 32px, 767px, 480px);
+    }
   }
 }
 

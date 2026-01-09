@@ -28,6 +28,14 @@
       }
     }
   }
+
+  &[data-icon="city"] {
+    .ts-control {
+      &:before {
+        background-image: url(/img/icons/pin.svg);
+      }
+    }
+  }
 }
 
 .select-box {
@@ -89,6 +97,10 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='5' viewBox='0 0 9 5' fill='none'%3E%3Cpath d='M8.5 0.5L4.5 4.5L0.5 0.5' stroke='%23111928' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
       background-position: center;
       transition: all 0.5s;
+    }
+
+    &:hover {
+      border-color: var(--dark-color-600);
     }
   }
 
@@ -328,7 +340,7 @@ body {
     padding: 4px;
     max-width: 200px;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
 
     .ts-option {
       padding: 4px 8px;

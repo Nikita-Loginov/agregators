@@ -23,10 +23,14 @@
         flex-direction: column;
         gap: 16px;
       }
-    }
 
-    @media (max-width: $tablet-breakpoint) {
-
+      &-small {
+        & > .swiper-wrapper {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+        }
+      }
     }
   }
 
@@ -34,5 +38,11 @@
     display: flex;
     align-items: center;
     gap: 16px;
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    .companie-card {
+      @include companieCardMediaOrSmall;
+    }
   }
 }

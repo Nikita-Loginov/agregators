@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Companies construction",
+  "links" : ["./css/companies.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"]
+  })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html', {"details": "true"})
+
+      <main class="main main--small main--detail main--detail-big">
+        <div class="top-page tablet-none">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Companies</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="breadcrumbs__circle">
+                    <span class="icon icon--full">
+                      <svg>
+                        <use xlink:href="#arrow-circle-icon"></use>
+                      </svg>
+                    </span>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+
+              <div class="top-page__header">
+                <h1 class="h2">Companies</h1>
+
+                <div class="top-page__details top-page__details--one">
+                  <a
+                    href="#"
+                    title="Register your company"
+                    aria-label="Перейти на страницу Register your company"
+                    class="button button--bg-secondary-200 button--rounded-md button--lg"
+                  >
+                    <span class="p2 medium-font">Register your company</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <div class="companies">
+            <div class="container">
+              <div class="companies__inner detail-block">
+                <div class="companies__info">
+                  <section class="companies-info">
+                    <div class="companies-info__inner">
+                      <div class="companies-info__top">
+                        <h2 class="h2 tablet-show">Companies</h2>
+
+                        <div class="companies-info__header">
+                          <div
+                            class="tabs-box tabs-box--secondary-bg-active-200"
+                          >
+                            <div class="tabs-box__btns">
+                              <div class="tabs-box__btn active">
+                                <div class="tabs-box__header">
+                                  <div class="tabs-box__icon">
+                                    <span class="icon icon--full">
+                                      <svg>
+                                        <use xlink:href="#crane-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-box__content">
+                                  <p class="p1 medium-font">
+                                    Construction companies
+                                  </p>
+                                </div>
+                              </div>
+
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу agencies"
+                                title="Real estate agencies"
+                                class="tabs-box__btn"
+                              >
+                                <div class="tabs-box__header">
+                                  <div class="tabs-box__icon">
+                                    <span class="icon icon--full">
+                                      <svg>
+                                        <use xlink:href="#building-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-box__content">
+                                  <p class="p1">Real estate agencies</p>
+                                </div>
+                              </a>
+
+                              <a
+                                href="#"
+                                aria-label="Перейти на страницу agents"
+                                title="Real estate agents"
+                                class="tabs-box__btn"
+                              >
+                                <div class="tabs-box__header">
+                                  <div class="tabs-box__icon">
+                                    <span class="icon icon--full">
+                                      <svg>
+                                        <use
+                                          xlink:href="#user-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-box__content">
+                                  <p class="p1">Real estate agents</p>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="companies-info__header">
+                          <div class="companies-filter companies-filter--sort">
+                            <div
+                              class="companies-filter__item"
+                              data-loader-relative
+                            >
+                              <div class="loader" data-loader-box>
+                                <span></span>
+                              </div>
+
+                              <div
+                                class="select-box select-box--noMax select-box--words select-box--noMin"
+                                data-loading="true"
+                              >
+                                <select id="select5">
+                                  <option value="">Speciality services</option>
+                                  <option value="1">some info 1</option>
+                                  <option value="2">some info 2</option>
+                                  <option value="3">some info 3</option>
+                                  <option value="4">some info 4</option>
+                                  <option value="5">some info 5</option>
+                                  <option value="6">some info 6</option>
+                                  <option value="7">some info 7</option>
+                                  <option value="8">some info 8</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="input-box">
+                              <label class="input-box__content">
+                                <div class="input-box__info">
+                                  <input
+                                    type="text"
+                                    name="Keywords"
+                                    placeholder="Keywords"
+                                    required
+                                  />
+                                </div>
+                              </label>
+
+                              <p class="input-box__errors p4 form__errors"></p>
+                            </div>
+
+                            <div
+                              class="companies-filter__item"
+                              data-loader-relative
+                            >
+                              <div class="loader" data-loader-box>
+                                <span></span>
+                              </div>
+
+                              <div
+                                class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
+                                data-icon="city"
+                                data-loading="true"
+                              >
+                                <select
+                                  id="search-select"
+                                  data-placeholder="City, district, region"
+                                  multiple
+                                  data-search="true"
+                                >
+                                  <option value="">
+                                    City, district, region
+                                  </option>
+                                  <option
+                                    value="1"
+                                    data-type="city"
+                                    data-tag="City"
+                                    data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                                    data-short-desc="Dubai, UAE"
+                                  >
+                                    Dubai
+                                  </option>
+                                  <option
+                                    value="2"
+                                    data-type="city"
+                                    data-tag="City"
+                                    data-desc="Central Business District, Moscow city, Russia"
+                                    data-short-desc="Moscow, Russia"
+                                  >
+                                    Moscow
+                                  </option>
+                                  <option
+                                    value="3"
+                                    data-type="city"
+                                    data-tag="City"
+                                    data-desc="Manhattan borough, New York city, USA"
+                                    data-short-desc="New York, USA"
+                                  >
+                                    New York
+                                  </option>
+                                  <option
+                                    value="4"
+                                    data-type="country"
+                                    data-tag="Country"
+                                    data-desc="Federal republic in Central Europe with rich history and culture"
+                                    data-short-desc="Germany"
+                                  >
+                                    Germany
+                                  </option>
+                                  <option
+                                    value="5"
+                                    data-type="country"
+                                    data-tag="Country"
+                                    data-desc="Island nation in East Asia known for technology and traditions"
+                                    data-short-desc="Japan"
+                                  >
+                                    Japan
+                                  </option>
+                                  <option
+                                    value="6"
+                                    data-type="region"
+                                    data-tag="Region"
+                                    data-desc="Southeastern region of France on the Mediterranean coast"
+                                    data-short-desc="Provence, France"
+                                  >
+                                    Provence
+                                  </option>
+                                  <option
+                                    value="7"
+                                    data-type="region"
+                                    data-tag="Region"
+                                    data-desc="Northern Italian region known for cuisine and automotive industry"
+                                    data-short-desc="Emilia-Romagna, Italy"
+                                  >
+                                    Emilia-Romagna
+                                  </option>
+                                  <option
+                                    value="8"
+                                    data-type="district"
+                                    data-tag="District"
+                                    data-desc="Historic central district of London with government buildings"
+                                    data-short-desc="Westminster, London"
+                                  >
+                                    Westminster
+                                  </option>
+                                  <option
+                                    value="9"
+                                    data-type="district"
+                                    data-tag="District"
+                                    data-desc="Fashionable district in central Paris with luxury boutiques"
+                                    data-short-desc="Champs-Élysées, Paris"
+                                  >
+                                    Champs-Élysées
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <button
+                              class="button button--lg button--bg-primary-100 button--rounded-md"
+                            >
+                              <span class="p2 medium-font">Search</span>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#search-icon"></use>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+
+                          <div class="companies-info__sort">
+                            <div
+                              class="companies-info__sort-item"
+                              data-loader-relative
+                            >
+                              <div class="loader" data-loader-box>
+                                <span></span>
+                              </div>
+
+                              <div
+                                class="select-box select-box--words with-icon select-box--noMassa-media select-box--noMax select-box--noMin"
+                                data-icon="sort"
+                                data-loading="true"
+                              >
+                                <select id="select6">
+                                  <option value="">Sorted</option>
+                                  <option value="1">
+                                    Number of properties
+                                  </option>
+                                  <option value="2">Price up</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <a
+                              href="Перейти на страницу карты"
+                              title="On the Map"
+                              class="button button--bg-secondary-200 button--rounded-md button--lg"
+                            >
+                              <span class="icon icon--big">
+                                <svg>
+                                  <use xlink:href="#map-icon"></use>
+                                </svg>
+                              </span>
+
+                              <p class="p2 medium-font">On the Map</p>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="companies-info__content">
+                        <div class="companies-info__items">
+                          <div class="companie-card">
+                            <div class="companie-card__img-box">
+                              <div class="companie-card__img-block">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__content">
+                              <div class="companie-card__header">
+                                <div class="companie-card__header-img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/companie/one.webp   1x,
+                                        /img/companie/one2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/companie/one.webp"
+                                      alt="фотография компании"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+
+                                <div class="companie-card__header-content">
+                                  <div class="companie-card__header-info">
+                                    <div class="companie-card__header-item">
+                                      <p class="h5 fz-28-16">
+                                        Emaar Properties
+                                      </p>
+
+                                      <span
+                                        class="icon"
+                                        style="color: var(--blue-color-300)"
+                                      >
+                                        <svg>
+                                          <use
+                                            xlink:href="#shield-check-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </div>
+
+                                    <p class="p4 tablet-show">
+                                      Founded in 1997
+                                    </p>
+                                  </div>
+
+                                  <div class="companie-card__header-info">
+                                    <div class="name-rating name-rating--small">
+                                      <div class="name-rating__box">
+                                        <span
+                                          class="icon icon--little text-primary-100"
+                                        >
+                                          <svg>
+                                            <use xlink:href="#star-icon"></use>
+                                          </svg>
+                                        </span>
+
+                                        <p class="p3 medium-font text-dark-100">
+                                          4,9
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
+                                <p class="p3 medium-font tablet-none">
+                                  Founded in 1997
+                                </p>
+
+                                <div class="textbox">
+                                  <p
+                                    class="p3 ellipsis-text ellipsis-text--three"
+                                  >
+                                    Emaar Properties PJSC, a Dubai-based Public
+                                    Joint Stock Company listed on the Dubai
+                                    Financial Market, is a global property
+                                    developer and provider of premier
+                                    lifestyles. Emaar has been shaping
+                                    landscapes and lives in the Emaar Properties
+                                    PJSC, a Dubai-based Public Joint Stock
+                                    Company listed on the Dubai Financial
+                                    Market, is a global property developer and
+                                    provider of premier lifestyles. Emaar has
+                                    been shaping landscapes and lives in the
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__footer">
+                                <div class="companie-card__btns">
+                                  <a
+                                    href="#"
+                                    title="See all 147 projects"
+                                    aria-label="Перейти на страницу всех проектов"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >See all 147 projects</span
+                                    >
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="companie-card companie-card--empty">
+                            <div class="companie-card__img-box">
+                              <div class="companie-card__img-block">
+                                <svg>
+                                  <use xlink:href="#crane-icon"></use>
+                                </svg>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__content">
+                              <div class="companie-card__header">
+                                <div class="companie-card__header-img">
+                                  <svg>
+                                    <use xlink:href="#crane-icon"></use>
+                                  </svg>
+                                </div>
+
+                                <div class="companie-card__header-content">
+                                  <div class="companie-card__header-info">
+                                    <div class="companie-card__header-item">
+                                      <p class="h5 fz-28-16">Sobha Group</p>
+                                    </div>
+
+                                    <p class="p4 tablet-show">Founded in 1997</p>
+                                  </div>
+
+                                  <div class="companie-card__header-info">
+                                    <div class="name-rating name-rating--small">
+                                      <div class="name-rating__box">
+                                        <span
+                                          class="icon icon--little text-primary-100"
+                                        >
+                                          <svg>
+                                            <use xlink:href="#star-icon"></use>
+                                          </svg>
+                                        </span>
+
+                                        <p class="p3 medium-font text-dark-100">
+                                          4
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
+                                <p class="p3 medium-font tablet-none">
+                                  Founded in 1997
+                                </p>
+
+                                <div class="textbox">
+                                  <p
+                                    class="p3 ellipsis-text ellipsis-text--three"
+                                  >
+                                    Emaar Properties PJSC, a Dubai-based Public
+                                    Joint Stock Company listed on the Dubai
+                                    Financial Market, is a global property
+                                    developer and provider of premier
+                                    lifestyles. Emaar has been shaping
+                                    landscapes and lives in the Emaar Properties
+                                    PJSC, a Dubai-based Public Joint Stock
+                                    Company listed on the Dubai Financial
+                                    Market, is a global property developer and
+                                    provider of premier lifestyles. Emaar has
+                                    been shaping landscapes and lives in the
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__footer">
+                                <div class="companie-card__btns">
+                                  <a
+                                    href="#"
+                                    title="See all 147 projects"
+                                    aria-label="Перейти на страницу всех проектов"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >See all 147 projects</span
+                                    >
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="companie-card">
+                            <div class="companie-card__img-box">
+                              <div class="companie-card__img-block">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/two.webp   1x,
+                                      /img/companie/two2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/two.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__content">
+                              <div class="companie-card__header">
+                                <div class="companie-card__header-img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/companie/two.webp   1x,
+                                        /img/companie/two2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/companie/two.webp"
+                                      alt="фотография компании"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+
+                                <div class="companie-card__header-content">
+                                  <div class="companie-card__header-info">
+                                    <div class="companie-card__header-item">
+                                      <p class="h5 fz-28-16">
+                                        Damac Properties
+                                      </p>
+
+                                      <span
+                                        class="icon"
+                                        style="color: var(--blue-color-300)"
+                                      >
+                                        <svg>
+                                          <use
+                                            xlink:href="#shield-check-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </div>
+
+                                    <p class="p4 tablet-show">Founded in 1997</p>
+                                  </div>
+
+                                  <div class="companie-card__header-info">
+                                    <div class="name-rating name-rating--small">
+                                      <div class="name-rating__box">
+                                        <span
+                                          class="icon icon--little text-primary-100"
+                                        >
+                                          <svg>
+                                            <use xlink:href="#star-icon"></use>
+                                          </svg>
+                                        </span>
+
+                                        <p class="p3 medium-font text-dark-100">
+                                          4,6
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
+                                <p class="p3 medium-font tablet-none">
+                                  Founded in 1997
+                                </p>
+
+                                <div class="textbox">
+                                  <p
+                                    class="p3 ellipsis-text ellipsis-text--three"
+                                  >
+                                    Emaar Properties PJSC, a Dubai-based Public
+                                    Joint Stock Company listed on the Dubai
+                                    Financial Market, is a global property
+                                    developer and provider of premier
+                                    lifestyles. Emaar has been shaping
+                                    landscapes and lives in the Emaar Properties
+                                    PJSC, a Dubai-based Public Joint Stock
+                                    Company listed on the Dubai Financial
+                                    Market, is a global property developer and
+                                    provider of premier lifestyles. Emaar has
+                                    been shaping landscapes and lives in the
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__footer">
+                                <div class="companie-card__btns">
+                                  <a
+                                    href="#"
+                                    title="See all 147 projects"
+                                    aria-label="Перейти на страницу всех проектов"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >See all 147 projects</span
+                                    >
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        @@include('../modules/pagination.html', {"details":
+                        "true"})
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="banners-section gap-section-xs">
+                    <div class="banners-section__inner">
+                      <div class="md-desktop-show">
+                        @@include('../modules/newsletter-second.html',
+                        {"classAddHead" : "h6 bold-font"})
+                      </div>
+
+                      <div
+                        class="banner-content banner-content--absolute-img banner-content--secondary-bg-300"
+                      >
+                        <div class="banner-content__content">
+                          <header class="banner-content__header">
+                            <div class="banner-content__header-top">
+                              <p class="h3">Want to sell your properties?</p>
+                            </div>
+                          </header>
+
+                          <div class="banner-content__info">
+                            <div class="textbox">
+                              <p class="p2">
+                                List your property with us and reach thousands
+                                of potential buyers. Professional photography,
+                                virtual tours, and dedicated support included.
+                              </p>
+                            </div>
+                          </div>
+
+                          <footer class="banner-content__footer">
+                            <button
+                              type="button"
+                              aria-label="Открыть модальное окно"
+                              class="button button--bg-primary-100 button--xl modal-open br-el--rounded-3xl"
+                              data-modal="requestModal"
+                            >
+                              <p class="p2 semibold-font">Get Started</p>
+
+                              <span class="icon" style="rotate: -45deg">
+                                <svg>
+                                  <use
+                                    xlink:href="#arrow-right-line-icon"
+                                  ></use>
+                                </svg>
+                              </span>
+                            </button>
+                          </footer>
+                        </div>
+
+                        <div
+                          class="banner-content__img banner-content__img--big banner-content__img--filter-inherit"
+                        >
+                          <picture>
+                            <source
+                              srcset="
+                                /img/banner/six.webp   1x,
+                                /img/banner/six2x.webp 2x
+                              "
+                            />
+                            <img src="/img/banner/six.webp" alt="фотография" />
+                          </picture>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="decors-section">
+                    <div class="decors-section__inner">
+                      @@include('../modules/text-block.html')
+                    </div>
+                  </section>
+                </div>
+
+                <div class="companies__banners">
+                  @@include('../modules/quick.html')
+
+                  <div class="companies__sticky">
+                    @@include('../modules/newsletter-second.html',
+                    {"classAddHead" : "p1 bold-font"})
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+      @@include('../modals/request.html')
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+      defer
+    ></script>
+    <script src="/js/companies.js" type="module"></script>
+  </body>
+</html>

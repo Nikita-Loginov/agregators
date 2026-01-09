@@ -29,6 +29,12 @@
     border-radius: var(--radius-xl);
   }
 
+  &--xs {
+    min-height: 20px;
+    padding: 0 6px;
+    border-radius: var(--radius-md);
+  }
+
   &--middle {
     min-height: 26px;
     padding: 2px 12px;

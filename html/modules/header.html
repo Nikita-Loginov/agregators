@@ -1,7 +1,7 @@
 @@include('../sprites/sptite.html') @@include('../sprites/languages.html')
 @@include('../sprites/ai.html')
 
-<header class="header header-scroll">
+<header class="header header-scroll  @@if(typeof details !== 'undefined' && details === 'true'){header--details}">
   <div class="header-top">
     <div
       class="container @@if(typeof full !== 'undefined' && full === 'true'){container--full}"
@@ -902,4 +902,38 @@
       </div>
     </div>
   </div>
+
+  @@if(typeof details !== 'undefined' && details === 'true'){
+  <div class="header-details">
+    <ul class="header-details__list">
+      <li class="header-details__link">
+        <a
+          href="#"
+          aria-label="Вернуться на Home"
+          title="Home"
+          class="header-details__item text-secondary-100"
+        >
+          <span class="icon icon--sm" style="rotate: -180deg">
+            <svg>
+              <use xlink:href="#arrow-icon"></use>
+            </svg>
+          </span>
+
+          <p class="p3">Home</p>
+        </a>
+      </li>
+    </ul>
+
+    <div class="header-details__btns">
+      <a
+        href="#"
+        title="Register your company"
+        aria-label="Перейти на страницу Register your company"
+        class="button button--bg-secondary-200 button--rounded-md button--lg"
+      >
+        <span class="p2 medium-font">Register your company</span>
+      </a>
+    </div>
+  </div>
+  }
 </header>

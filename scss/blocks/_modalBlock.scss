@@ -86,7 +86,7 @@
       border-radius: var(--radius-base);
 
       @media (max-width: $tablet-breakpoint) {
-        box-shadow: 0px 5px 12px 0px #0000001A;
+        box-shadow: 0px 5px 12px 0px #0000001a;
         background-color: var(--white-color);
       }
     }
@@ -154,7 +154,7 @@
   @media (max-width: $tablet-breakpoint) {
     &:not(.modalBlock--media-fit) {
       padding: 0;
-      
+
       .modalBlock {
         &__inner {
           height: 100%;
@@ -329,7 +329,7 @@
   }
 }
 
-.filterModal {
+.filterModalBox {
   &__inner {
     padding: 4px;
     max-width: 1150px;
@@ -356,6 +356,7 @@
     max-height: 80vh;
     overflow-x: hidden;
     overflow-y: auto;
+    height: 100%;
 
     @media (max-width: $tablet-breakpoint) {
       max-height: calc(100dvh - 100px);
@@ -397,6 +398,11 @@
           }
         }
 
+        &-one {
+          display: flex;
+          flex-direction: column;
+        }
+
         &-twelve {
           grid-template-columns: repeat(12, 1fr);
 
@@ -421,6 +427,11 @@
 
     @media (max-width: $tablet-breakpoint) {
       grid-template-columns: repeat(2, 1fr);
+
+      &--media-one {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &--tablet-two {
@@ -754,16 +765,15 @@
       &__content {
         height: 100%;
       }
-      
+
       &__inner {
         gap: 6px;
       }
-     
     }
 
     .tab-item {
       height: 100%;
-      flex:1;
+      flex: 1;
     }
 
     &__map {
@@ -798,8 +808,9 @@
   }
 }
 
-.selectedItemsModal {
+.selectedItemsModalBox {
   transition: all 1s;
+
   &__inner {
     display: flex;
     flex-direction: column;

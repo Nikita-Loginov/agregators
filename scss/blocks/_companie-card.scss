@@ -1,0 +1,175 @@
+.companie-card {
+  display: flex;
+  border: 1px solid var(--gray-color-600);
+  border-radius: var(--radius-xl);
+  background-color: var(--white-color);
+
+  &--empty {
+    .companie-card {
+      &__img-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--dark-color-700);
+
+        img,
+        svg {
+          width: 120px;
+          aspect-ratio: 1 / 1;
+        }
+      }
+
+      &__img-box {
+        .companie-card {
+          &__img-block {
+            img,
+            svg {
+              width: 80px;
+            }
+          }
+        }
+      }
+
+      &__header-img {
+        img,
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+
+  &__img-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: calculate-clamp(20px, 25px, 1280px, 1023px) 25px;
+    max-width: 250px;
+    width: 100%;
+    border-right: 1px solid var(--gray-color-600);
+
+    &--small {
+      padding: 15px;
+      max-width: 150px;
+
+      .companie-card {
+        &__img-block {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  &__img-block {
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    width: 200px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--gray-color-100);
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  &__header-img {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background-color: var(--gray-color-200);
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__header-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__header-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__btns {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__badges {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    p {
+      line-height: 1;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    @include companieCardMediaOrSmall;
+  }
+
+  @media (max-width: 360px) {
+    &__header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}

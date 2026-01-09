@@ -24,6 +24,13 @@
   border: 0;
 }
 
+$xl-desktop-breakpoint: 1550px;
+$desktop-breakpoint: 1439px;
+$md-desktop-breakpoint: 1279px;
+$lg-breakpoint: 1023px;
+$tablet-breakpoint: 767px;
+$mobile-breakpoint: 479px;
+
 @mixin columnOrMeidaBannerPromo {
   min-height: 490px;
 
@@ -54,9 +61,29 @@
   }
 }
 
-$xl-desktop-breakpoint: 1550px;
-$desktop-breakpoint: 1439px;
-$md-desktop-breakpoint: 1279px;
-$lg-breakpoint: 1023px;
-$tablet-breakpoint: 767px;
-$mobile-breakpoint: 479px;
+@mixin companieCardMediaOrSmall {
+  flex-direction: column;
+  gap: 16px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+
+  &__content,
+  &__img-box {
+    padding: 0;
+  }
+
+  &__img-box {
+    display: none;
+  }
+
+  &__header-img {
+    display: flex;
+  }
+
+  &__btns {
+    display: grid;
+    width: 100%;
+  }
+}
+
+

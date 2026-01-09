@@ -18,6 +18,16 @@
     }
   }
 
+  &--gray-100 {
+    .input-box {
+      &__info {
+        background-color: var(--gray-color-100);
+        border-color: var(--gray-color-300);
+        color: var(--dark-color-500);
+      }
+    }
+  }
+
   &__info {
     display: flex;
     align-items: center;

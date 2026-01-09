@@ -1,0 +1,60 @@
+<div class="newsletter-second">
+  <div class="newsletter-second__top">
+    <div class="newsletter-second__icon">
+      <span
+        class="icon @@if (typeof classAddIcon !== 'undefined') {@@classAddIcon}"
+      >
+        <svg>
+          <use xlink:href="#email-icon"></use>
+        </svg>
+      </span>
+    </div>
+
+    <div class="newsletter-second__top-content">
+      <p
+        class="@@if (typeof classAddHead !== 'undefined') {@@classAddHead}"
+      >
+        Subscribe to our newsletter
+      </p>
+
+      <div class="textbox">
+        <p class="p3">Get the latest property listings and market insights</p>
+      </div>
+    </div>
+  </div>
+
+  <form class="newsletter-second__content form" novalidate>
+    <div class="newsletter-second__inputs">
+      <div class="input-box input-box--gray-100 form__item">
+        <label class="input-box__content">
+          <div class="input-box__info">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </label>
+
+        <p class="input-box__errors p4 form__errors"></p>
+      </div>
+    </div>
+
+    <div class="newsletter-second__btns">
+      <button
+        class="button button--bg-primary-100 button--mdx1 button--rounded-md modal-open"
+        type="submit"
+        data-modal="successRequestModal"
+      >
+        <p class="p3 medium-font">Subscribe</p>
+
+        <span class="icon lg-none" style="rotate: -45deg">
+          <svg>
+            <use xlink:href="#arrow-right-line-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </form>
+</div>
