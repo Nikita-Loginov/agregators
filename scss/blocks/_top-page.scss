@@ -1,6 +1,14 @@
 .top-page {
   --gap-details: #{calculate-clamp(8px, 32px, 1280px, 1023px)};
 
+  &--big {
+    .top-page {
+      &__inner {
+        gap: calculate-clamp(12px, 32px, 1280px, 1023px);
+      }
+    }
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;

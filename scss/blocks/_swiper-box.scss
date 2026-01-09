@@ -3,6 +3,14 @@
     .swiper-wrapper {
       padding-bottom: 20px;
     }
+    
+    &-big {
+      .swiper-wrapper {
+        padding-bottom: 40px;
+      }
+    }
+
+    
 
     &:has(.swiper-pagination.swiper-pagination-lock) {
       .swiper-wrapper {

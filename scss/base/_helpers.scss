@@ -83,6 +83,10 @@ $mobile-breakpoint: 479px;
   &__btns {
     display: grid;
     width: 100%;
+
+    &--two {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 

@@ -316,6 +316,16 @@
   flex-direction: column;
   gap: 10px;
 
+  &--small {
+    gap: 8px;
+
+    .list-simple {
+      &__item {
+        gap: 8px;
+      }
+    }
+  }
+
   &__item {
     display: flex;
     align-items: center;

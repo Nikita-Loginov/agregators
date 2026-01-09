@@ -129,32 +129,21 @@
 .badge-detail {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
   padding: 4px 16px 4px 4px;
-  border-radius: var(--radius-5xl);
-  background-color: var(--secondary-color-200);
+  border-radius: var(--radius-md);
+  background-color: var(--gray-color-200);
   transition: all 0.3s;
 
-  &--white {
+  &--white-bg {
     background-color: var(--white-color);
   }
 
-  &--big {
-    .badge-detail {
-      gap: 16px;
-
-      &__icon {
-        width: 60px;
-        height: 60px;
-      }
-    }
-  }
-
   &__icon {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     flex-shrink: 0;
-    border-radius: 50%;
+    border-radius: var(--radius-base);
     overflow: hidden;
     transition: all 0.3s;
 
@@ -176,11 +165,11 @@
     cursor: pointer;
 
     &:hover {
-      border-radius: var(--radius-xl);
+      border-radius: var(--radius-5xl);
 
       .badge-detail {
         &__icon {
-          border-radius: var(--radius-md);
+          border-radius: 50%;
         }
       }
     }

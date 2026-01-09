@@ -55,6 +55,14 @@ a.card-detail {
   flex-direction: column;
   border: 1px solid var(--gray-color-600);
 
+  &--big {
+    .card-box {
+      &__content {
+        padding: 12px 20px;
+      }
+    }
+  }
+
   &--noBorder {
     border: none;
   }
@@ -64,7 +72,10 @@ a.card-detail {
     aspect-ratio: 292 / 220;
     position: relative;
     overflow: hidden;
-    background-color: var(--gray-color-600);
+    background-color: var(--gray-color-200);
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__img {
@@ -121,6 +132,7 @@ a.card-detail {
     flex-direction: column;
     gap: 2px;
     padding: 12px;
+    flex: 1;
 
     &--gray-200 {
       background-color: var(--gray-color-200);
@@ -131,6 +143,106 @@ a.card-detail {
     display: flex;
     align-items: center;
     gap: 4px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  &__btns {
+    display: grid;
+    gap: 8px;
+    margin-top: auto;
+
+    &--two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__badges {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &--empty {
+    .card-box {
+      &__img {
+        width: 120px;
+        height: 120px;
+      }
+    }
+  }
+
+  &--empty.card-box--media {
+    @media (max-width: $tablet-breakpoint) {
+      .card-box {
+        &__img {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img,
+          svg {
+            width: 36px;
+            height: 36px;
+          }
+        }
+      }
+    }
+  }
+
+  &--media {
+    @media (max-width: $tablet-breakpoint) {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      background-color: var(--white-color);
+
+      .card-box {
+        &__img-box {
+          position: static;
+          aspect-ratio: unset;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 16px;
+          background-color: transparent;
+        }
+
+        &__img-content {
+          position: static;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 4px;
+        }
+
+        &__img {
+          width: 60px;
+          height: 60px;
+          border-radius: var(--radius-sm);
+          overflow: hidden;
+          background-color: var(--gray-color-100);
+        }
+
+        &__content {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 360px) {
+    &__btns {
+      display: flex;
+      flex-direction: column;
+      align-items: normal;
+    }
   }
 }
 
@@ -143,6 +255,18 @@ a.card-box {
       &__img {
         img {
           scale: 1.2;
+        }
+      }
+    }
+  }
+
+  &--empty {
+    &:hover {
+      .card-box {
+        &__img {
+          img {
+            scale: 1;
+          }
         }
       }
     }
@@ -317,7 +441,6 @@ a.card-box {
     flex-direction: column;
     gap: 10px;
     position: relative;
-    
   }
 
   &__img-block {
@@ -345,5 +468,64 @@ a.card-box {
     display: flex;
     align-items: center;
     gap: 4px;
+  }
+}
+
+.card-team {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border: 1px solid var(--gray-color-200);
+  background-color: var(--gray-color-100);
+  padding: 4px 4px 16px 4px;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+
+  &--empty {
+    .card-team {
+      &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 90px;
+          height: 90px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    aspect-ratio: 292 / 240;
+    background-color: var(--gray-color-200);
+    max-height: 300px;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    flex: 1;
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
   }
 }

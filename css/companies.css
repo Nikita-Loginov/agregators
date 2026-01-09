@@ -100,6 +100,17 @@ body.scrollBottom .companies__sticky {
           flex-direction: column;
   gap: 24px;
 }
+.companies-info__items--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  width: 100%;
+  gap: 17px;
+}
+@media (max-width: 1023px) {
+  .companies-info__items--grid {
+    gap: 16px 24px;
+  }
+}
 @media (max-width: 479px) {
   .companies-info__sort-item {
     max-width: clamp(160px, 69.6864111498px + 18.8153310105vw, 214px);
@@ -182,5 +193,10 @@ body.scrollBottom .companies__sticky {
 .name-rating--small .name-rating__box {
   min-height: clamp(20px, 9.9651567944px + 2.0905923345vw, 26px);
   padding: clamp(0px, -3.3449477352px + 0.6968641115vw, 2px) 6px;
+  gap: 4px;
+}
+.name-rating--big .name-rating__box {
+  min-height: clamp(26px, -10.7944250871px + 7.6655052265vw, 48px);
+  padding: clamp(2px, -4.6898954704px + 1.393728223vw, 6px) 8px;
   gap: 4px;
 }

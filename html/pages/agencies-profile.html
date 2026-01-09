@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Agencies profile", "links" :
+  ["./css/companies-info.css","./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
+  "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"]
+  })
+  <body class="white-page">
+    <div class="wrapper">
+      @@include('../modules/header.html', {"details": "true"})
+
+      <main class="main main--small main--detail main--detail-middle">
+        <div class="top-page top-page--big">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Companies"
+                      title="Companies"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Companies</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Emaar Properties</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="breadcrumbs__circle">
+                    <span class="icon icon--full">
+                      <svg>
+                        <use xlink:href="#arrow-circle-icon"></use>
+                      </svg>
+                    </span>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+
+              <!-- <div class="top-page__header">
+                <h1 class="h2">Fam Properties</h1>
+
+                <div class="name-rating name-rating--big">
+                  <div class="name-rating__box">
+                    <span class="icon text-primary-100">
+                      <svg>
+                        <use xlink:href="#star-icon"></use>
+                      </svg>
+                    </span>
+
+                    <p class="p2 semibold-font text-dark-100">4,9</p>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <div class="companies-detail">
+            <div class="container">
+              <div class="companies-detail__inner detail-block">
+                <div class="companies-detail__info">
+                  <section class="companies-detail__item">
+                    <div class="companies-detail__item-inner">
+                      <h2 class="h5">Offices</h2>
+
+                      <div class="companies-detail__item-boxs">
+                        <a
+                          href="#"
+                          aria-label="GH32+7RF - Al Muqta - Al Muqta 1 - Emirate of Umm Al Quwain - UAE"
+                          title="GH32+7RF - Al Muqta - Al Muqta 1 - Emirate of Umm Al Quwain - UAE"
+                          class="badge-detail isHover"
+                        >
+                          <div class="badge-detail__icon">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/decor/one.webp   1x,
+                                  /img/decor/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/decor/one.webp"
+                                alt="фотография города"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="badge-detail__content">
+                            <p class="p1 medium-font">
+                              GH32+7RF - Al Muqta - Al Muqta 1 - Emirate of Umm
+                              Al Quwain - UAE
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="#"
+                          aria-label="Behind Mashreq Bank - Sheikh Zayed Rd - Al Quoz - Al Quoz 4 - Dubai - UAE"
+                          title="Behind Mashreq Bank - Sheikh Zayed Rd - Al Quoz - Al Quoz 4 - Dubai - UAE"
+                          class="badge-detail isHover"
+                        >
+                          <div class="badge-detail__icon">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/decor/two.webp   1x,
+                                  /img/decor/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/decor/two.webp"
+                                alt="фотография города"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="badge-detail__content">
+                            <p class="p1 medium-font">
+                              Behind Mashreq Bank - Sheikh Zayed Rd - Al Quoz -
+                              Al Quoz 4 - Dubai - UAE
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="#"
+                          aria-label="2X3R+45 - The Palm Jebel Ali - Dubai - UAE"
+                          title="2X3R+45 - The Palm Jebel Ali - Dubai - UAE"
+                          class="badge-detail isHover"
+                        >
+                          <div class="badge-detail__icon">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/decor/three.webp   1x,
+                                  /img/decor/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/decor/three.webp"
+                                alt="фотография города"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="badge-detail__content">
+                            <p class="p1 medium-font">
+                              2X3R+45 - The Palm Jebel Ali - Dubai - UAE
+                            </p>
+                          </div>
+                        </a>
+
+                        <a
+                          href="#"
+                          aria-label="Burj Khalifa District, P.O.BOX 215088"
+                          title="Burj Khalifa District, P.O.BOX 215088"
+                          class="badge-detail isHover"
+                        >
+                          <div class="badge-detail__icon">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/decor/four.webp   1x,
+                                  /img/decor/four2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/decor/four.webp"
+                                alt="фотография города"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="badge-detail__content">
+                            <p class="p1 medium-font">
+                              Burj Khalifa District, P.O.BOX 215088
+                            </p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="companies-detail__item">
+                    <div class="companies-detail__item-inner">
+                      <h2 class="h5">About</h2>
+
+                      <div class="text-block" data-block="more-relative">
+                        <div
+                          class="textbox more-block"
+                          data-block="more-items"
+                          data-max="1"
+                        >
+                          <div class="more-block__item">
+                            <p class="p1">
+                              We are a tech-driven real estate agency and assist
+                              value-seeking investors, landlords, and tenants
+                              achieve superior results by offering guidance that
+                              is based on both integrity and solid market
+                              fundamentals. As a member of the fäm Group and
+                              with annual revenues in excess of AED 1.8 Billion,
+                              fäm Properties is one of UAE’s leading real estate
+                              companies. We are focused on providing objective,
+                              real-time insight to our clients. At the same
+                              time, rather than being a generalist, we focus
+                              into key regions in the UAE, giving our agents
+                              even deeper focus and
+                            </p>
+                          </div>
+
+                          <div class="more-block__item">
+                            <p class="p1">
+                              A wonderful serenity has taken possession of my
+                              entire soul, like these sweet mornings of spring
+                              which I enjoy with my whole heart. I am alone, and
+                              feel the charm of existence in this spot, which
+                              was created for the bliss of souls like mine. I am
+                              so happy, my dear friend, so absorbed in the
+                              exquisite sense of mere tranquil existence, that I
+                              neglect my talents. I should be incapable of
+                              drawing a single stroke at the present moment; and
+                              yet I feel that I never was a greater artist than
+                              now. When, while the lovely valley teems with
+                              vapour around me, and the meridian
+                            </p>
+                          </div>
+                        </div>
+
+                        <div
+                          class="object-bottom__item-content"
+                          data-block="more-footer"
+                        >
+                          <button
+                            class="btn-decor"
+                            data-block="more-btn"
+                            aria-label="Посмотреть больше"
+                            type="button"
+                            data-more-text="Read more"
+                            data-less-text="Read less"
+                          >
+                            <p
+                              class="p2 medium-font"
+                              data-block="more-btn-text"
+                            >
+                              Read more
+                            </p>
+
+                            <div
+                              class="button--circle button--circle-3xs button--bg-gray-600"
+                            >
+                              <span class="icon icon--sm">
+                                <svg>
+                                  <use xlink:href="#arrow-line-down-icon"></use>
+                                </svg>
+                              </span>
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section
+                    class="companies-detail__item swiper-box swiper-box--pagination-bottom swiper-box--pagination-bottom-big swiper-box--employees"
+                  >
+                    <div class="companies-detail__item-inner">
+                      <h2 class="h5">Employees</h2>
+
+                      <div class="companies-detail__item-swiper">
+                        <div class="swiper swiper--employees">
+                          <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                              <div class="card-team">
+                                <div class="card-team__img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/persons/five.webp   1x,
+                                        /img/persons/five2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/persons/five.webp"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+
+                                <div class="card-team__content">
+                                  <div class="card-team__info">
+                                    <p class="p1 semibold-font text-dark-100">
+                                      Aiym Tursynova
+                                    </p>
+
+                                    <p class="p3 text-dark-500">Realtor</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div class="card-team">
+                                <div class="card-team__img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/persons/six.webp   1x,
+                                        /img/persons/six2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/persons/six.webp"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+
+                                <div class="card-team__content">
+                                  <div class="card-team__info">
+                                    <p class="p1 semibold-font text-dark-100">
+                                      Anafiy Murtazaev
+                                    </p>
+
+                                    <p class="p3 text-dark-500">
+                                      Property Advisor
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                              <div class="card-team card-team--empty">
+                                <div class="card-team__img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/persons/empty.svg 1x,
+                                        /img/persons/empty.svg 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/persons/empty.svg"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+
+                                <div class="card-team__content">
+                                  <div class="card-team__info">
+                                    <p class="p1 semibold-font text-dark-100">
+                                      Anafiy Murtazaev
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card-team">
+                                  <div class="card-team__img">
+                                    <picture>
+                                      <source
+                                        srcset="
+                                          /img/persons/six.webp   1x,
+                                          /img/persons/six2x.webp 2x
+                                        "
+                                      />
+                                      <img
+                                        src="/img/persons/six.webp"
+                                        alt="фотография"
+                                        loading="lazy"
+                                      />
+                                    </picture>
+                                  </div>
+  
+                                  <div class="card-team__content">
+                                    <div class="card-team__info">
+                                      <p class="p1 semibold-font text-dark-100">
+                                        Anafiy Murtazaev
+                                      </p>
+  
+                                      <p class="p3 text-dark-500">
+                                        Property Advisor
+                                      </p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="swiper-pagination"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="companies-detail__item">
+                    <div class="companies-detail__item-inner">
+                      @@include('../components/comment-rating.html')
+                    </div>
+                  </section>
+                </div>
+
+                <div class="detail-block__banners"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+      @@include('../modals/request.html')
+    </div>
+
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+      defer
+    ></script>
+    <script src="/js/companies-info.js" type="module"></script>
+  </body>
+</html>

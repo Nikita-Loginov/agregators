@@ -203,6 +203,9 @@
     display: grid;
     width: 100%;
   }
+  .map-sibebar .companie-card__btns--two {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .filter {
@@ -435,5 +438,10 @@ body.scrollBottom .filter {
 .name-rating--small .name-rating__box {
   min-height: clamp(20px, 9.9651567944px + 2.0905923345vw, 26px);
   padding: clamp(0px, -3.3449477352px + 0.6968641115vw, 2px) 6px;
+  gap: 4px;
+}
+.name-rating--big .name-rating__box {
+  min-height: clamp(26px, -10.7944250871px + 7.6655052265vw, 48px);
+  padding: clamp(2px, -4.6898954704px + 1.393728223vw, 6px) 8px;
   gap: 4px;
 }

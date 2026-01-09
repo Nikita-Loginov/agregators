@@ -6,7 +6,8 @@
   &__box {
     background-color: var(--gray-color-200);
     border-radius: var(--radius-md);
-    padding: calculate-clamp(2px, 4px, 1439px, 1023px) calculate-clamp(8px, 12px, 1439px, 1023px);
+    padding: calculate-clamp(2px, 4px, 1439px, 1023px)
+      calculate-clamp(8px, 12px, 1439px, 1023px);
     display: flex;
     align-items: center;
     gap: calculate-clamp(4px, 8px, 1439px, 1023px);
@@ -22,6 +23,16 @@
       &__box {
         min-height: calculate-clamp(20px, 26px, 767px, 480px);
         padding: calculate-clamp(0px, 2px, 767px, 480px) 6px;
+        gap: 4px;
+      }
+    }
+  }
+
+  &--big {
+    .name-rating {
+      &__box {
+        min-height: calculate-clamp(26px, 48px, 767px, 480px);
+        padding: calculate-clamp(2px, 6px, 767px, 480px) 8px;
         gap: 4px;
       }
     }

@@ -5,16 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Избранное</title>
+  <title>Companies agencies</title>
 
   <link rel="stylesheet" href="/css/page.css" />
 
   
-  <link rel="stylesheet" href="./css/favorite.css" />
-  
-  <link rel="stylesheet" href="./css/lib/swiper.min.css" />
+  <link rel="stylesheet" href="./css/companies.css" />
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css" />
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" />
   
 </head>
 
@@ -1834,7 +1834,7 @@
 </svg>
 
 
-<header class="header header-scroll  ">
+<header class="header header-scroll  header--details">
   <div class="header-top">
     <div
       class="container "
@@ -2737,11 +2737,43 @@
   </div>
 
   
+  <div class="header-details">
+    <ul class="header-details__list">
+      <li class="header-details__link">
+        <a
+          href="#"
+          aria-label="Вернуться на Home"
+          title="Home"
+          class="header-details__item text-secondary-100"
+        >
+          <span class="icon icon--sm" style="rotate: -180deg">
+            <svg>
+              <use xlink:href="#arrow-icon"></use>
+            </svg>
+          </span>
+
+          <p class="p3">Home</p>
+        </a>
+      </li>
+    </ul>
+
+    <div class="header-details__btns">
+      <a
+        href="#"
+        title="Register your company"
+        aria-label="Перейти на страницу Register your company"
+        class="button button--bg-secondary-200 button--rounded-md button--lg"
+      >
+        <span class="p2 medium-font">Register your company</span>
+      </a>
+    </div>
+  </div>
+  
 </header>
 
 
-      <main class="main main--detail main--detail-big">
-        <div class="top-page">
+      <main class="main main--small main--detail main--detail-big">
+        <div class="top-page tablet-none">
           <div class="container">
             <div class="top-page__inner">
               <div class="breadcrumbs">
@@ -2757,7 +2789,7 @@
                   </li>
 
                   <li class="breadcrumbs__link">
-                    <span class="breadcrumbs__item">Featured Properties</span>
+                    <span class="breadcrumbs__item">Companies</span>
                   </li>
                 </ul>
 
@@ -2779,909 +2811,800 @@
                 </a>
               </div>
 
-              <h1 class="h2">Favorite Properties</h1>
+              <div class="top-page__header">
+                <h1 class="h2">Companies</h1>
+
+                <div class="top-page__details top-page__details--one">
+                  <a
+                    href="#"
+                    title="Register your company"
+                    aria-label="Перейти на страницу Register your company"
+                    class="button button--bg-secondary-200 button--rounded-md button--lg"
+                  >
+                    <span class="p2 medium-font">Register your company</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="main__sections">
-          <section
-            class="catalogy-box"
-            data-block="grid-relative"
-            data-grid="list"
-          >
+          <div class="companies">
             <div class="container">
-              <div class="catalogy-box__inner detail-block">
-                <div class="catalogy-box__content topBox">
-                  <div class="catalogy-box__info">
-                    <div class="catalogy-box__top">
-                      <div class="catalogy-box__top-item" style="max-width: 151px; width: 100%;" data-loader-relative>
-                        <div class="loader" data-loader-box>
-                          <span></span>
-                        </div>
-
-                        <div
-                          class="select-box select-box--noMax select-box--words with-icon select-box--noMassa-media"
-                          data-icon="sort"
-                          data-placeholder="Sorted"
-                          data-loading="true"
-                        >
-                          <select id="select5">
-                            <option value="">Sorted</option>
-                            <option value="1">Popular</option>
-                            <option value="2">Price up</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <a
-                        class="button button--bg-secondary-200 catalogy-box__map-btn"
-                        href="/map.html"
-                        aria-label="Перейти на страницу карты"
-                        title="Map"
-                      >
-                        <span class="icon">
-                          <svg>
-                            <use xlink:href="#map-icon"></use>
-                          </svg>
-                        </span>
-
-                        <span class="p2 medium-font" style="line-height: 1"
-                          >Map</span
-                        >
-                      </a>
-
-                      <div class="checkbox-box">
-  <label class="check">
-    <div class="check__info">
-      <input
-        type="radio"
-        checked
-        name="grid"
-        data-check="list"
-        data-block="grid-check"
-      />
-
-      <div class="check__info-content">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#rows-icon"></use>
-          </svg>
-        </span>
-
-        <span class="p2">List</span>
-      </div>
-    </div>
-  </label>
-
-  <label class="check">
-    <div class="check__info">
-      <input
-        type="radio"
-        name="grid"
-        data-check="tiles"
-        data-block="grid-check"
-      />
-
-      <div class="check__info-content">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#table-icon"></use>
-          </svg>
-        </span>
-
-        <span class="p2">Tiles</span>
-      </div>
-    </div>
-  </label>
-
-  <label class="check">
-    <a
-      href="/map.html"
-      aria-label="Перейти на страницу карты"
-      title="Map"
-      class="check__info"
-    >
-      <div class="check__info-content">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#map-icon"></use>
-          </svg>
-        </span>
-
-        <span class="p2">Map</span>
-      </div>
-    </a>
-  </label>
-</div>
-
-                    </div>
-
-                    <div class="catalogy-box__items">
-                      <div class="good-item">
-                        <div class="good-item__swiper-box">
-                          <div class="good-item__img-box">
-                            <div class="good-item__decor">
-                              <!-- prettier-ignore -->
-
-                              
-<div class="badge badge--blue">
-  <span class="icon icon--little">
-    <svg>
-      <use xlink:href="#shield-icon"></use>
-    </svg>
-  </span>
-
-  <div class="badge__content">
-    <p class="p4 medium-font">CompleteTrust</p>
-  </div>
-</div>
- 
-<div class="badge">
-  <span class="icon icon--little">
-    <svg>
-      <use xlink:href="#checks-icon"></use>
-    </svg>
-  </span>
-</div>
-
-
-                            </div>
-
-                            <div class="swiper swiper--good-img">
-                              <div class="swiper-wrapper">
-                                <!-- prettier-ignore -->
-
-                                <div class="swiper-slide">
-  <div class="good-item__img-item">
-    <div class="good-item__img">
-      <picture>
-        <source srcset="/img/goods/one.webp 1x, /img/goods/one2x.webp 2x" />
-
-        <img
-          src="/img/goods/one.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
-      </picture>
-    </div>
-  </div>
-</div>
-<div class="swiper-slide">
-  <div class="good-item__img-item">
-    <div class="good-item__img">
-      <picture>
-        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
-
-        <img
-          src="/img/goods/two.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
-      </picture>
-    </div>
-  </div>
-</div>
-
-                              </div>
-
-                              <div class="good-item__decors-img">
-                                <div class="arrows-swiper arrows-swiper--absolute">
-  <button
-    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
-    type="button"
-  >
-    <span class="icon">
-      <svg>
-        <use xlink:href="#arrow-line-icon"></use>
-      </svg>
-    </span>
-  </button>
-
-  <button
-    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
-    type="button"
-  >
-    <span class="icon">
-      <svg>
-        <use xlink:href="#arrow-line-icon"></use>
-      </svg>
-    </span>
-  </button>
-</div>
-
-                                <div class="swiper-pagination swiper-pagination--absolute"></div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="good-item__content">
-                          <header class="good-item__header">
-                            <div class="good-item__top-box">
-                              <div class="good-item__top">
-                                <p class="h5 semibold-font good-item__title">
-                                  761,000
-
-                                  <span class="text-uppercase p1">AED</span>
-                                </p>
-
-                                <p class="p1 bold-font text-secondary-300">
-                                  Apartment
-                                </p>
-                              </div>
-
-                              <div class="good-item__logo">
-                                <picture>
-                                  <source
-                                    srcset="
-                                      /img/seller/seller.png 1x,
-                                      /img/seller/seller.png 2x
-                                    "
-                                  />
-                                  <img
-                                    src="/img/seller/seller.png"
-                                    alt="фотография"
-                                    loading="lazy"
-                                  />
-                                </picture>
-                              </div>
-                            </div>
-
-                            <p
-                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                            >
-                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                            </p>
-
-                            <div class="good-item__tags">
-                              <!-- prettier-ignore -->
-
-                              <div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">1 floor</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">60.11 sq.m.</p>
-</div>
-                            </div>
-
-                            <ul class="list-icon">
-                              <!-- prettier-ignore -->
-                              <li class="list-icon__link">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#geo-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">Mohammed Bin Rashid City, Dubai</p>
-</li>
-
-                            </ul>
-                          </header>
-
-                          <footer class="good-item__footer">
-                            <div class="good-item__btns">
-                              <!-- prettier-ignore -->
-
-                              <button
-  class="button button--bg-secondary-200  "
-  type="button"
->
-  <span class="icon @@classAddIcon">
-    <svg>
-      <use xlink:href="#email-icon"></use>
-    </svg>
-  </span>
-
-  <span class="p3 medium-font">Contact Seller</span>
-</button>
-
-  
-                                  <button
-  aria-label="Добавить в избранное"
-  class="button button--favorite button--bg-gray-200 button--cub button--cub-md-add "
->
-  <span class="icon ">
-    <svg>
-      <use xlink:href="#heart-icon"></use>
-    </svg>
-  </span>
-</button>
-
-  
-                                  <button
-  aria-label="Добавить в сравнение"
-  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add "
->
-  <span class="icon ">
-    <svg>
-      <use xlink:href="#chart-icon"></use>
-    </svg>
-  </span>
-</button>
-
-                            </div>
-
-                            <div class="good-item__logo">
-                              <img
-                                src="/img/seller/seller.png"
-                                alt="логотип селера"
-                              />
-                            </div>
-                          </footer>
-                        </div>
-                      </div>
-
-                      <div class="good-item">
-                        <div class="good-item__swiper-box">
-                          <div class="good-item__img-box">
-                            <div class="good-item__decor">
-                              <!-- prettier-ignore -->
-
-                              
-<div class="badge badge--blue">
-  <span class="icon icon--little">
-    <svg>
-      <use xlink:href="#shield-icon"></use>
-    </svg>
-  </span>
-
-  <div class="badge__content">
-    <p class="p4 medium-font">CompleteTrust</p>
-  </div>
-</div>
- 
-<div class="badge">
-  <span class="icon icon--little">
-    <svg>
-      <use xlink:href="#checks-icon"></use>
-    </svg>
-  </span>
-</div>
-
-
-                            </div>
-
-                            <div class="swiper swiper--good-img">
-                              <div class="swiper-wrapper">
-                                <!-- prettier-ignore -->
-
-                                <div class="swiper-slide">
-  <div class="good-item__img-item">
-    <div class="good-item__img">
-      <picture>
-        <source srcset="/img/decor/one.webp 1x, /img/decor/one2x.webp 2x" />
-
-        <img
-          src="/img/decor/one.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
-      </picture>
-    </div>
-  </div>
-</div>
-<div class="swiper-slide">
-  <div class="good-item__img-item">
-    <div class="good-item__img">
-      <picture>
-        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
-
-        <img
-          src="/img/goods/two.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
-      </picture>
-    </div>
-  </div>
-</div>
-
-                              </div>
-
-                              <div class="good-item__decors-img">
-                                <div class="arrows-swiper arrows-swiper--absolute">
-  <button
-    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
-    type="button"
-  >
-    <span class="icon">
-      <svg>
-        <use xlink:href="#arrow-line-icon"></use>
-      </svg>
-    </span>
-  </button>
-
-  <button
-    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
-    type="button"
-  >
-    <span class="icon">
-      <svg>
-        <use xlink:href="#arrow-line-icon"></use>
-      </svg>
-    </span>
-  </button>
-</div>
-
-                                <div class="swiper-pagination swiper-pagination--absolute"></div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="good-item__content">
-                          <header class="good-item__header">
-                            <div class="good-item__top-box">
-                              <div class="good-item__top">
-                                <p class="h5 semibold-font good-item__title">
-                                  761,000
-
-                                  <span class="text-uppercase p1">AED</span>
-                                </p>
-
-                                <p class="p1 bold-font text-secondary-300">
-                                  Apartment
-                                </p>
-                              </div>
-
-                              <div class="good-item__logo">
-                                <picture>
-                                  <source
-                                    srcset="
-                                      /img/seller/seller.png 1x,
-                                      /img/seller/seller.png 2x
-                                    "
-                                  />
-                                  <img
-                                    src="/img/seller/seller.png"
-                                    alt="фотография"
-                                    loading="lazy"
-                                  />
-                                </picture>
-                              </div>
-                            </div>
-
-                            <p
-                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                            >
-                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                            </p>
-
-                            <div class="good-item__tags">
-                              <!-- prettier-ignore -->
-
-                              <div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">1 floor</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">60.11 sq.m.</p>
-</div>
-                            </div>
-
-                            <ul class="list-icon">
-                              <!-- prettier-ignore -->
-                              <li class="list-icon__link">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#geo-icon"></use>
-    </svg>
-  </span>
-
-  <p class="p2">Mohammed Bin Rashid City, Dubai</p>
-</li>
-
-
-                              <li class="list-icon__link">
-                                <span class="icon icon--big">
-                                  <svg>
-                                    <use xlink:href="#train-icon"></use>
-                                  </svg>
-                                </span>
-
-                                <div class="text-dots">
-                                  <p class="p3">
-                                    <span>Mall of the Emirates</span>
-
-                                    <span class="medium-font">700 m</span>
-                                  </p>
-
-                                  <p class="p3">
-                                    <span>Dubai Internet City</span>
-
-                                    <span class="medium-font">1 200 m</span>
-                                  </p>
-
-                                  <p class="p3">
-                                    <span>Al Khail (formerly Nakheel)</span>
-
-                                    <span class="medium-font">9 000 m</span>
+              <div class="companies__inner detail-block">
+                <div class="companies__info">
+                  <section class="companies-info">
+                    <div class="companies-info__inner">
+                      <div class="companies-info__top">
+                        <h2 class="h2 tablet-show">Companies</h2>
+
+                        <div class="companies-info__header">
+                          <div
+                            class="tabs-box tabs-box--secondary-bg-active-200"
+                          >
+                            <div class="tabs-box__btns">
+                              <a
+                                href="/construction.html"
+                                aria-label="Перейти на страницу construction"
+                                title=" Construction companies"
+                                class="tabs-box__btn"
+                              >
+                                <div class="tabs-box__header">
+                                  <div class="tabs-box__icon">
+                                    <span class="icon icon--full">
+                                      <svg>
+                                        <use xlink:href="#crane-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <div class="tabs-box__content">
+                                  <p class="p1 medium-font">
+                                    Construction companies
                                   </p>
                                 </div>
-                              </li>
-                            </ul>
-                          </header>
+                              </a>
 
-                          <footer class="good-item__footer">
-                            <div class="good-item__btns">
-                              <!-- prettier-ignore -->
+                              <div class="tabs-box__btn active">
+                                <div class="tabs-box__header">
+                                  <div class="tabs-box__icon">
+                                    <span class="icon icon--full">
+                                      <svg>
+                                        <use xlink:href="#building-icon"></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
 
-                              <button
-  class="button button--bg-secondary-200  "
-  type="button"
->
-  <span class="icon @@classAddIcon">
-    <svg>
-      <use xlink:href="#email-icon"></use>
-    </svg>
-  </span>
-
-  <span class="p3 medium-font">Contact Seller</span>
-</button>
-
-  
-                                  <button
-  aria-label="Добавить в избранное"
-  class="button button--favorite button--bg-gray-200 button--cub button--cub-md-add "
->
-  <span class="icon ">
-    <svg>
-      <use xlink:href="#heart-icon"></use>
-    </svg>
-  </span>
-</button>
-
-  
-                                  <button
-  aria-label="Добавить в сравнение"
-  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add "
->
-  <span class="icon ">
-    <svg>
-      <use xlink:href="#chart-icon"></use>
-    </svg>
-  </span>
-</button>
-
-                            </div>
-
-                            <div class="good-item__logo">
-                              <img
-                                src="/img/seller/seller.png"
-                                alt="логотип селера"
-                              />
-                            </div>
-                          </footer>
-                        </div>
-                      </div>
-
-                      <div class="good-item">
-                        <div class="good-item__swiper-box">
-                          <div class="good-item__img-box">
-                            <div class="good-item__decor">
-                              <!-- prettier-ignore -->
-
-                              
-<div class="badge badge--blue">
-  <span class="icon icon--little">
-    <svg>
-      <use xlink:href="#shield-icon"></use>
-    </svg>
-  </span>
-
-  <div class="badge__content">
-    <p class="p4 medium-font">CompleteTrust</p>
-  </div>
-</div>
- 
-<div class="badge">
-  <span class="icon icon--little">
-    <svg>
-      <use xlink:href="#checks-icon"></use>
-    </svg>
-  </span>
-</div>
-
-
-                            </div>
-
-                            <div class="swiper swiper--good-img">
-                              <div class="swiper-wrapper">
-                                <!-- prettier-ignore -->
-
-                                <div class="swiper-slide">
-  <div class="good-item__img-item">
-    <div class="good-item__img">
-      <picture>
-        <source srcset="/img/decor/two.webp 1x, /img/decor/two2x.webp 2x" />
-
-        <img
-          src="/img/decor/two.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
-      </picture>
-    </div>
-  </div>
-</div>
-<div class="swiper-slide">
-  <div class="good-item__img-item">
-    <div class="good-item__img">
-      <picture>
-        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
-
-        <img
-          src="/img/goods/two.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
-      </picture>
-    </div>
-  </div>
-</div>
-
+                                <div class="tabs-box__content">
+                                  <p class="p1">Real estate agencies</p>
+                                </div>
                               </div>
 
-                              <div class="good-item__decors-img">
-                                <div class="arrows-swiper arrows-swiper--absolute">
-  <button
-    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
-    type="button"
-  >
-    <span class="icon">
-      <svg>
-        <use xlink:href="#arrow-line-icon"></use>
-      </svg>
-    </span>
-  </button>
+                              <a
+                                href="/agents.html"
+                                aria-label="Перейти на страницу agents"
+                                title="Real estate agents"
+                                class="tabs-box__btn"
+                              >
+                                <div class="tabs-box__header">
+                                  <div class="tabs-box__icon">
+                                    <span class="icon icon--full">
+                                      <svg>
+                                        <use
+                                          xlink:href="#user-check-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </div>
 
-  <button
-    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
-    type="button"
-  >
-    <span class="icon">
-      <svg>
-        <use xlink:href="#arrow-line-icon"></use>
-      </svg>
-    </span>
-  </button>
-</div>
-
-                                <div class="swiper-pagination swiper-pagination--absolute"></div>
-
-                              </div>
+                                <div class="tabs-box__content">
+                                  <p class="p1">Real estate agents</p>
+                                </div>
+                              </a>
                             </div>
                           </div>
                         </div>
 
-                        <div class="good-item__content">
-                          <header class="good-item__header">
-                            <div class="good-item__top-box">
-                              <div class="good-item__top">
-                                <!-- <p class="h5 semibold-font good-item__title">
-                                  761,000
-
-                                  <span class="text-uppercase p1">AED</span>
-                                </p> -->
-
-                                <p class="p1 bold-font text-secondary-300">
-                                  Apartment
-                                </p>
+                        <div class="companies-info__header">
+                          <div class="companies-filter companies-filter--sort">
+                            <div
+                              class="companies-filter__item"
+                              data-loader-relative
+                            >
+                              <div class="loader" data-loader-box>
+                                <span></span>
                               </div>
 
-                              <div class="good-item__logo">
+                              <div
+                                class="select-box select-box--noMax select-box--words select-box--noMin"
+                                data-loading="true"
+                              >
+                                <select id="select5">
+                                  <option value="">Speciality services</option>
+                                  <option value="1">some info 1</option>
+                                  <option value="2">some info 2</option>
+                                  <option value="3">some info 3</option>
+                                  <option value="4">some info 4</option>
+                                  <option value="5">some info 5</option>
+                                  <option value="6">some info 6</option>
+                                  <option value="7">some info 7</option>
+                                  <option value="8">some info 8</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <div class="input-box">
+                              <label class="input-box__content">
+                                <div class="input-box__info">
+                                  <input
+                                    type="text"
+                                    name="Keywords"
+                                    placeholder="Keywords"
+                                    required
+                                  />
+                                </div>
+                              </label>
+
+                              <p class="input-box__errors p4 form__errors"></p>
+                            </div>
+
+                            <div
+                              class="companies-filter__item"
+                              data-loader-relative
+                            >
+                              <div class="loader" data-loader-box>
+                                <span></span>
+                              </div>
+
+                              <div
+                                class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
+                                data-icon="city"
+                                data-loading="true"
+                              >
+                                <select
+                                  id="search-select"
+                                  data-placeholder="City, district, region"
+                                  multiple
+                                  data-search="true"
+                                >
+                                  <option value="">
+                                    City, district, region
+                                  </option>
+                                  <option
+                                    value="1"
+                                    data-type="city"
+                                    data-tag="City"
+                                    data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                                    data-short-desc="Dubai, UAE"
+                                  >
+                                    Dubai
+                                  </option>
+                                  <option
+                                    value="2"
+                                    data-type="city"
+                                    data-tag="City"
+                                    data-desc="Central Business District, Moscow city, Russia"
+                                    data-short-desc="Moscow, Russia"
+                                  >
+                                    Moscow
+                                  </option>
+                                  <option
+                                    value="3"
+                                    data-type="city"
+                                    data-tag="City"
+                                    data-desc="Manhattan borough, New York city, USA"
+                                    data-short-desc="New York, USA"
+                                  >
+                                    New York
+                                  </option>
+                                  <option
+                                    value="4"
+                                    data-type="country"
+                                    data-tag="Country"
+                                    data-desc="Federal republic in Central Europe with rich history and culture"
+                                    data-short-desc="Germany"
+                                  >
+                                    Germany
+                                  </option>
+                                  <option
+                                    value="5"
+                                    data-type="country"
+                                    data-tag="Country"
+                                    data-desc="Island nation in East Asia known for technology and traditions"
+                                    data-short-desc="Japan"
+                                  >
+                                    Japan
+                                  </option>
+                                  <option
+                                    value="6"
+                                    data-type="region"
+                                    data-tag="Region"
+                                    data-desc="Southeastern region of France on the Mediterranean coast"
+                                    data-short-desc="Provence, France"
+                                  >
+                                    Provence
+                                  </option>
+                                  <option
+                                    value="7"
+                                    data-type="region"
+                                    data-tag="Region"
+                                    data-desc="Northern Italian region known for cuisine and automotive industry"
+                                    data-short-desc="Emilia-Romagna, Italy"
+                                  >
+                                    Emilia-Romagna
+                                  </option>
+                                  <option
+                                    value="8"
+                                    data-type="district"
+                                    data-tag="District"
+                                    data-desc="Historic central district of London with government buildings"
+                                    data-short-desc="Westminster, London"
+                                  >
+                                    Westminster
+                                  </option>
+                                  <option
+                                    value="9"
+                                    data-type="district"
+                                    data-tag="District"
+                                    data-desc="Fashionable district in central Paris with luxury boutiques"
+                                    data-short-desc="Champs-Élysées, Paris"
+                                  >
+                                    Champs-Élysées
+                                  </option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <button
+                              class="button button--lg button--bg-primary-100 button--rounded-md"
+                            >
+                              <span class="p2 medium-font">Search</span>
+
+                              <span class="icon">
+                                <svg>
+                                  <use xlink:href="#search-icon"></use>
+                                </svg>
+                              </span>
+                            </button>
+                          </div>
+
+                          <div class="companies-info__sort">
+                            <div
+                              class="companies-info__sort-item"
+                              data-loader-relative
+                            >
+                              <div class="loader" data-loader-box>
+                                <span></span>
+                              </div>
+
+                              <div
+                                class="select-box select-box--words with-icon select-box--noMassa-media select-box--noMax select-box--noMin"
+                                data-icon="sort"
+                                data-loading="true"
+                              >
+                                <select id="select6">
+                                  <option value="">Sorted</option>
+                                  <option value="1">
+                                    Number of properties
+                                  </option>
+                                  <option value="2">Price up</option>
+                                </select>
+                              </div>
+                            </div>
+
+                            <a
+                              href="Перейти на страницу карты"
+                              title="On the Map"
+                              class="button button--bg-secondary-200 button--rounded-md button--lg"
+                            >
+                              <span class="icon icon--big">
+                                <svg>
+                                  <use xlink:href="#map-icon"></use>
+                                </svg>
+                              </span>
+
+                              <p class="p2 medium-font">On the Map</p>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="companies-info__content">
+                        <div class="companies-info__items">
+                          <div class="companie-card">
+                            <div class="companie-card__img-box">
+                              <div class="companie-card__img-block">
                                 <picture>
                                   <source
                                     srcset="
-                                      /img/seller/seller.png 1x,
-                                      /img/seller/seller.png 2x
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
                                     "
                                   />
                                   <img
-                                    src="/img/seller/seller.png"
-                                    alt="фотография"
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
                                     loading="lazy"
                                   />
                                 </picture>
                               </div>
                             </div>
 
-                            <p
-                              class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                            >
-                              Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                            </p>
+                            <div class="companie-card__content">
+                              <div class="companie-card__header">
+                                <div class="companie-card__header-img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/companie/one.webp   1x,
+                                        /img/companie/one2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/companie/one.webp"
+                                      alt="фотография компании"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
 
-                            <div class="good-item__tags">
-                              <!-- prettier-ignore -->
+                                <div class="companie-card__header-content">
+                                  <div class="companie-card__header-info">
+                                    <div class="companie-card__header-item">
+                                      <p class="h5 fz-28-16">
+                                        Emaar Properties
+                                      </p>
 
-                              <div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
+                                      <span
+                                        class="icon"
+                                        style="color: var(--blue-color-300)"
+                                      >
+                                        <svg>
+                                          <use
+                                            xlink:href="#shield-check-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
+                                    <p class="p4 tablet-show">
+                                      Founded in 1997
+                                    </p>
+                                  </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
+                                  <div class="companie-card__header-info">
+                                    <div class="name-rating name-rating--small">
+                                      <div class="name-rating__box">
+                                        <span
+                                          class="icon icon--little text-primary-100"
+                                        >
+                                          <svg>
+                                            <use xlink:href="#star-icon"></use>
+                                          </svg>
+                                        </span>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
+                                        <p class="p3 medium-font text-dark-100">
+                                          4,9
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#bed-icon"></use>
-    </svg>
-  </span>
+                              <div
+                                class="companie-card__badges companie-card__badges--big-gap"
+                              >
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                >
+                                  <p class="p3 medium-font text-dark-200">
+                                    Founded in 1997
+                                  </p>
+                                </div>
 
-  <p class="p2">60.11 sq.m.</p>
-</div>
-                            </div>
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                >
+                                  <p class="p3 medium-font text-secondary-100">
+                                    6.222
+                                  </p>
 
-                            <ul class="list-icon">
-                              <!-- prettier-ignore -->
-                              <li class="list-icon__link">
-  <span class="icon icon--big">
-    <svg>
-      <use xlink:href="#geo-icon"></use>
-    </svg>
-  </span>
+                                  <p class="p3 regular-font text-dark-200">
+                                    properties in
+                                  </p>
 
-  <p class="p2">Mohammed Bin Rashid City, Dubai</p>
-</li>
+                                  <p class="p3 medium-font text-secondary-100">
+                                    2
+                                  </p>
 
-                            </ul>
-                          </header>
+                                  <p class="p3 regular-font text-dark-200">
+                                    cities
+                                  </p>
+                                </div>
+                              </div>
 
-                          <footer class="good-item__footer">
-                            <div class="good-item__btns">
-                              <!-- prettier-ignore -->
+                              <div class="companie-card__info">
+                                <div class="textbox">
+                                  <p
+                                    class="p3 ellipsis-text ellipsis-text--three"
+                                  >
+                                    We are a tech-driven real estate agency and
+                                    assist value-seeking investors, landlords,
+                                    and tenants achieve superior results by
+                                    offering guidance that is based on both
+                                    integrity and solid market fundamentals. As
+                                    a member of We are a tech-driven real estate
+                                    agency and assist value-seeking investors,
+                                    landlords, and tenants achieve superior
+                                    results by offering guidance that is based
+                                    on both integrity and solid market
+                                    fundamentals. As a member of
+                                  </p>
+                                </div>
+                              </div>
 
-                              <button
-  class="button button--bg-secondary-200  "
-  type="button"
->
-  <span class="icon @@classAddIcon">
-    <svg>
-      <use xlink:href="#email-icon"></use>
-    </svg>
-  </span>
-
-  <span class="p3 medium-font">Contact Seller</span>
-</button>
-
-  
+                              <div class="companie-card__footer">
+                                <div
+                                  class="companie-card__btns companie-card__btns--two"
+                                >
                                   <button
-  aria-label="Добавить в избранное"
-  class="button button--favorite button--bg-gray-200 button--cub button--cub-md-add "
->
-  <span class="icon ">
-    <svg>
-      <use xlink:href="#heart-icon"></use>
-    </svg>
-  </span>
-</button>
+                                    class="button button--bg-secondary-300"
+                                    type="button"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
 
-  
+                                    <p class="p3 medium-font">Contact Seller</p>
+                                  </button>
+
+                                  <a
+                                    href="#"
+                                    title="See All Properties"
+                                    aria-label="Перейти на страницу всех проектов"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="companie-card companie-card--empty">
+                            <div class="companie-card__img-box">
+                              <div class="companie-card__img-block">
+                                <svg>
+                                  <use xlink:href="#crane-icon"></use>
+                                </svg>
+                              </div>
+                            </div>
+
+                            <div class="companie-card__content">
+                              <div class="companie-card__header">
+                                <div class="companie-card__header-img">
+                                  <svg>
+                                    <use xlink:href="#crane-icon"></use>
+                                  </svg>
+                                </div>
+
+                                <div class="companie-card__header-content">
+                                  <div class="companie-card__header-info">
+                                    <div class="companie-card__header-item">
+                                      <p class="h5 fz-28-16">
+                                        Metropolitan Premium Properties
+                                      </p>
+                                    </div>
+
+                                    <p class="p4 tablet-show">
+                                      Founded in 1997
+                                    </p>
+                                  </div>
+
+                                  <div class="companie-card__header-info">
+                                    <div class="name-rating name-rating--small">
+                                      <div class="name-rating__box">
+                                        <span
+                                          class="icon icon--little text-primary-100"
+                                        >
+                                          <svg>
+                                            <use xlink:href="#star-icon"></use>
+                                          </svg>
+                                        </span>
+
+                                        <p class="p3 medium-font text-dark-100">
+                                          4,9
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="companie-card__badges companie-card__badges--big-gap"
+                              >
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                >
+                                  <p class="p3 medium-font text-dark-200">
+                                    Founded in 1997
+                                  </p>
+                                </div>
+
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                >
+                                  <p class="p3 medium-font text-secondary-100">
+                                    6.222
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    properties in
+                                  </p>
+
+                                  <p class="p3 medium-font text-secondary-100">
+                                    2
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    cities
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
+                                <div class="textbox">
+                                  <p
+                                    class="p3 ellipsis-text ellipsis-text--three"
+                                  >
+                                    We are a tech-driven real estate agency and
+                                    assist value-seeking investors, landlords,
+                                    and tenants achieve superior results by
+                                    offering guidance that is based on both
+                                    integrity and solid market fundamentals. As
+                                    a member of We are a tech-driven real estate
+                                    agency and assist value-seeking investors,
+                                    landlords, and tenants achieve superior
+                                    results by offering guidance that is based
+                                    on both integrity and solid market
+                                    fundamentals. As a member of
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__footer">
+                                <div
+                                  class="companie-card__btns companie-card__btns--two"
+                                >
                                   <button
-  aria-label="Добавить в сравнение"
-  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add "
->
-  <span class="icon ">
-    <svg>
-      <use xlink:href="#chart-icon"></use>
-    </svg>
-  </span>
-</button>
+                                    class="button button--bg-secondary-300"
+                                    type="button"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
 
+                                    <p class="p3 medium-font">Contact Seller</p>
+                                  </button>
+
+                                  <a
+                                    href="#"
+                                    title="See All Properties"
+                                    aria-label="Перейти на страницу всех проектов"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="companie-card">
+                            <div class="companie-card__img-box">
+                              <div class="companie-card__img-block">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/companie/one.webp"
+                                    alt="фотография компании"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
                             </div>
 
-                            <div class="good-item__logo">
-                              <img
-                                src="/img/seller/seller.png"
-                                alt="логотип селера"
-                              />
+                            <div class="companie-card__content">
+                              <div class="companie-card__header">
+                                <div class="companie-card__header-img">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/companie/one.webp   1x,
+                                        /img/companie/one2x.webp 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/companie/one.webp"
+                                      alt="фотография компании"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+
+                                <div class="companie-card__header-content">
+                                  <div class="companie-card__header-info">
+                                    <div class="companie-card__header-item">
+                                      <p class="h5 fz-28-16">
+                                        Emaar Properties
+                                      </p>
+
+                                      <span
+                                        class="icon"
+                                        style="color: var(--blue-color-300)"
+                                      >
+                                        <svg>
+                                          <use
+                                            xlink:href="#shield-check-icon"
+                                          ></use>
+                                        </svg>
+                                      </span>
+                                    </div>
+
+                                    <p class="p4 tablet-show">
+                                      Founded in 1997
+                                    </p>
+                                  </div>
+
+                                  <div class="companie-card__header-info">
+                                    <div class="name-rating name-rating--small">
+                                      <div class="name-rating__box">
+                                        <span
+                                          class="icon icon--little text-primary-100"
+                                        >
+                                          <svg>
+                                            <use xlink:href="#star-icon"></use>
+                                          </svg>
+                                        </span>
+
+                                        <p class="p3 medium-font text-dark-100">
+                                          4,9
+                                        </p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <div
+                                class="companie-card__badges companie-card__badges--big-gap"
+                              >
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                >
+                                  <p class="p3 medium-font text-dark-200">
+                                    Founded in 1997
+                                  </p>
+                                </div>
+
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                >
+                                  <p class="p3 medium-font text-secondary-100">
+                                    6.222
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    properties in
+                                  </p>
+
+                                  <p class="p3 medium-font text-secondary-100">
+                                    2
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    cities
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
+                                <div class="textbox">
+                                  <p
+                                    class="p3 ellipsis-text ellipsis-text--three"
+                                  >
+                                    We are a tech-driven real estate agency and
+                                    assist value-seeking investors, landlords,
+                                    and tenants achieve superior results by
+                                    offering guidance that is based on both
+                                    integrity and solid market fundamentals. As
+                                    a member of We are a tech-driven real estate
+                                    agency and assist value-seeking investors,
+                                    landlords, and tenants achieve superior
+                                    results by offering guidance that is based
+                                    on both integrity and solid market
+                                    fundamentals. As a member of
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__footer">
+                                <div
+                                  class="companie-card__btns companie-card__btns--two"
+                                >
+                                  <button
+                                    class="button button--bg-secondary-300"
+                                    type="button"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p3 medium-font">Contact Seller</p>
+                                  </button>
+
+                                  <a
+                                    href="#"
+                                    title="See All Properties"
+                                    aria-label="Перейти на страницу всех проектов"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
                             </div>
-                          </footer>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </div>
 
-                  <div class="pagination">
+                        <div class="pagination">
   <div class="pagination-box">
     <button
       class="button button--cub button--rounded-md button--noBg button--noBg-gray-color-300 button--border-small"
@@ -3784,88 +3707,1273 @@
   </div>
 
   
+  <div class="pagination__details">
+    <button
+      type="button"
+      aria-label="Перейти к след странице"
+      class="button button--noBg button--noMassa p2"
+    >
+      Go to
+    </button>
+
+    <div class="input-box input-box--gray input-box--little">
+      <label class="input-box__content">
+        <div class="input-box__info">
+          <input type="text" placeholder="page" name="page" />
+        </div>
+      </label>
+    </div>
+  </div>
+  
 </div>
 
-
-                  <div class="empty">
-                    <div class="empty__content">
-                      <p class="h2">
-                        You haven't added any items to your favorites list yet.
-                      </p>
-
-                      <a
-                        href="#"
-                        aria-label="Перейти на страницу Contact Seller"
-                        title="Contact Seller"
-                        class="button button--bg-primary-100 button--xl button--rounded-3xl"
-                      >
-                        <span class="p2 semibold-font"
-                          >Find Your Favorites</span
-                        >
-
-                        <span class="icon icon--big" style="rotate: -45deg">
-                          <svg>
-                            <use xlink:href="#arrow-line-icon"></use>
-                          </svg>
-                        </span>
-                      </a>
+                      </div>
                     </div>
+                  </section>
 
-                    <div class="empty__img">
-                        <picture>
-                            <source srcset="/img/empty/one.webp 1x, /img/empty/one2x.webp 2x">
-                            <img src="/img/empty/one.webp" alt="фотография" loading='lazy'>
-                        </picture>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="catalogy-box__banners">
-                  <div class="banner-news">
-  <header class="banner-news__header">
-    <p class="h6 fz-24-22">Subscribe to our newsletter</p>
-
-    <div class="textbox">
-      <p class="p2">
-        You'll receive one email per week with exclusive offers and insights
-        from our experts.
-      </p>
+                  <section class="banners-section gap-section-xs">
+                    <div class="banners-section__inner">
+                      <div class="md-desktop-show">
+                        <div class="newsletter-second">
+  <div class="newsletter-second__top">
+    <div class="newsletter-second__icon">
+      <span
+        class="icon "
+      >
+        <svg>
+          <use xlink:href="#email-icon"></use>
+        </svg>
+      </span>
     </div>
-  </header>
 
-  <div class="banner-news__content">
-    <div class="banner-news__img">
-      <picture>
-        <source
-          srcset="/img/banner-news/one.webp 1x, /img/banner-news/one2x.webp 2x"
-        />
-        <img src="/img/banner-news/one.webp" alt="фотография" />
-      </picture>
+    <div class="newsletter-second__top-content">
+      <p
+        class="h6 bold-font"
+      >
+        Subscribe to our newsletter
+      </p>
+
+      <div class="textbox">
+        <p class="p3">Get the latest property listings and market insights</p>
+      </div>
     </div>
   </div>
 
-  <footer class="banner-news__footer">
-    <a
-      href="#"
-      aria-label="Перейти на страницу Contact Seller"
-      title="Contact Seller"
-      class="button button--bg-primary-100 button--lg button--rounded-3xl"
-    >
-      <span>Subscribe</span>
+  <form class="newsletter-second__content form" novalidate>
+    <div class="newsletter-second__inputs">
+      <div class="input-box input-box--gray-100 form__item">
+        <label class="input-box__content">
+          <div class="input-box__info">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </label>
 
-      <span class="icon icon--big">
-        <svg>
-          <use xlink:href="#arrow-line-icon"></use>
-        </svg>
-      </span>
-    </a>
-  </footer>
+        <p class="input-box__errors p4 form__errors"></p>
+      </div>
+    </div>
+
+    <div class="newsletter-second__btns">
+      <button
+        class="button button--bg-primary-100 button--mdx1 button--rounded-md modal-open"
+        type="submit"
+        data-modal="successRequestModal"
+      >
+        <p class="p3 medium-font">Subscribe</p>
+
+        <span class="icon lg-none" style="rotate: -45deg">
+          <svg>
+            <use xlink:href="#arrow-right-line-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </form>
 </div>
 
+                      </div>
+
+                      <div
+                        class="banner-content banner-content--absolute-img banner-content--secondary-bg-300"
+                      >
+                        <div class="banner-content__content">
+                          <header class="banner-content__header">
+                            <div class="banner-content__header-top">
+                              <p class="h3">Want to sell your properties?</p>
+                            </div>
+                          </header>
+
+                          <div class="banner-content__info">
+                            <div class="textbox">
+                              <p class="p2">
+                                List your property with us and reach thousands
+                                of potential buyers. Professional photography,
+                                virtual tours, and dedicated support included.
+                              </p>
+                            </div>
+                          </div>
+
+                          <footer class="banner-content__footer">
+                            <button
+                              type="button"
+                              aria-label="Открыть модальное окно"
+                              class="button button--bg-primary-100 button--xl modal-open br-el--rounded-3xl"
+                              data-modal="requestModal"
+                            >
+                              <p class="p2 semibold-font">Get Started</p>
+
+                              <span class="icon" style="rotate: -45deg">
+                                <svg>
+                                  <use
+                                    xlink:href="#arrow-right-line-icon"
+                                  ></use>
+                                </svg>
+                              </span>
+                            </button>
+                          </footer>
+                        </div>
+
+                        <div
+                          class="banner-content__img banner-content__img--big banner-content__img--filter-inherit"
+                        >
+                          <picture>
+                            <source
+                              srcset="
+                                /img/banner/six.webp   1x,
+                                /img/banner/six2x.webp 2x
+                              "
+                            />
+                            <img src="/img/banner/six.webp" alt="фотография" />
+                          </picture>
+                        </div>
+                      </div>
+
+                      <div
+                        class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg md-desktop-show"
+                        data-width="1023"
+                      >
+                        <div
+                          class="accordeon__item quick__item quick__item--noGap-lg"
+                          data-block="more-relative"
+                        >
+                          <div class="accordeon__question" role="button">
+                            <div class="quick__title">
+                              <p class="semibold-font p2">
+                                By type of property
+                              </p>
+
+                              <div class="accordeon__item-arrow lg-show">
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use xlink:href="#arrow-bottom-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="accordeon__answer"
+                            data-padding-top="2000"
+                          >
+                            <div class="quick__info">
+                              <div
+                                class="quick__items more-block"
+                                data-block="more-items"
+                                data-max="6"
+                              >
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <footer
+                                class="quick__footer"
+                                data-block="more-footer"
+                              >
+                                <button
+                                  class="btn-decor"
+                                  data-block="more-btn"
+                                  aria-label="Посмотреть больше"
+                                  type="button"
+                                >
+                                  <p
+                                    class="p2 medium-font"
+                                    data-block="more-btn-text"
+                                  >
+                                    More
+                                  </p>
+
+                                  <div
+                                    class="button--circle button--circle-3xs button--bg-gray-600"
+                                  >
+                                    <span class="icon icon--sm">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-down-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </button>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="accordeon__item quick__item quick__item--noGap-lg"
+                          data-block="more-relative"
+                        >
+                          <div class="accordeon__question" role="button">
+                            <div class="quick__title">
+                              <p class="semibold-font p2">By price</p>
+
+                              <div class="accordeon__item-arrow lg-show">
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use xlink:href="#arrow-bottom-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="accordeon__answer"
+                            data-padding-top="2000"
+                          >
+                            <div class="quick__info">
+                              <div
+                                class="quick__items more-block"
+                                data-block="more-items"
+                                data-max="3"
+                              >
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <footer
+                                class="quick__footer"
+                                data-block="more-footer"
+                              >
+                                <button
+                                  class="btn-decor"
+                                  data-block="more-btn"
+                                  aria-label="Посмотреть больше"
+                                  type="button"
+                                >
+                                  <p
+                                    class="p2 medium-font"
+                                    data-block="more-btn-text"
+                                  >
+                                    More
+                                  </p>
+
+                                  <div
+                                    class="button--circle button--circle-3xs button--bg-gray-600"
+                                  >
+                                    <span class="icon icon--sm">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-down-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </button>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="accordeon__item quick__item quick__item--noGap-lg"
+                          data-block="more-relative"
+                        >
+                          <div class="accordeon__question" role="button">
+                            <div class="quick__title">
+                              <p class="semibold-font p2">
+                                By number of bedrooms
+                              </p>
+
+                              <div class="accordeon__item-arrow lg-show">
+                                <span class="icon icon--sm">
+                                  <svg>
+                                    <use xlink:href="#arrow-bottom-icon"></use>
+                                  </svg>
+                                </span>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="accordeon__answer"
+                            data-padding-top="2000"
+                          >
+                            <div class="quick__info">
+                              <div
+                                class="quick__items more-block"
+                                data-block="more-items"
+                                data-max="3"
+                              >
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments by the sea"
+                                    title="Apartments by the sea"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments by the sea</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу 4 bedrooms apartments"
+                                    title="4 bedrooms apartments"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >4 bedrooms apartments</span
+                                    >
+                                    <span class="p3 quick__mean">29,130</span>
+                                  </a>
+                                </div>
+
+                                <div class="more-block__item">
+                                  <a
+                                    href="#"
+                                    aria-label="Перейти на страницу Apartments from 150,000 $"
+                                    title="Apartments from 150,000 $"
+                                    class="quick__block link"
+                                  >
+                                    <span class="p3"
+                                      >Apartments from 150,000 $</span
+                                    >
+                                    <span class="p3 quick__mean">260</span>
+                                  </a>
+                                </div>
+                              </div>
+
+                              <footer
+                                class="quick__footer"
+                                data-block="more-footer"
+                              >
+                                <button
+                                  class="btn-decor"
+                                  data-block="more-btn"
+                                  aria-label="Посмотреть больше"
+                                  type="button"
+                                >
+                                  <p
+                                    class="p2 medium-font"
+                                    data-block="more-btn-text"
+                                  >
+                                    More
+                                  </p>
+
+                                  <div
+                                    class="button--circle button--circle-3xs button--bg-gray-600"
+                                  >
+                                    <span class="icon icon--sm">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-line-down-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </div>
+                                </button>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="decors-section">
+                    <div class="decors-section__inner">
+                      <div class="text-block">
+  <h2 class="h4">Text Block</h2>
+
+  <div class="textbox">
+    <p class="p1">
+      A wonderful serenity has taken possession of my entire soul, like these
+      sweet mornings of spring which I enjoy with my whole heart. I am alone,
+      and feel the charm of existence in this spot, which was created for the
+      bliss of souls like mine. I am so happy, my dear friend, so absorbed in
+      the exquisite sense of mere tranquil existence, that I neglect my talents.
+      I should be incapable of drawing a single stroke at the present moment;
+      and yet I feel that I never was a greater artist than now. When, while the
+      lovely valley teems with vapour around me, and the meridian
+    </p>
+  </div>
+</div>
+
+                    </div>
+                  </section>
+                </div>
+
+                <div class="companies__banners">
+                  <div class="quick">
+  <div class="quick__item" data-block="more-relative">
+    <div class="quick__title">
+      <p class="semibold-font p2">Popular Regions</p>
+    </div>
+
+    <div class="quick__info">
+      <div
+        class="quick__items quick__items--one-grid more-block"
+        data-block="more-items"
+        data-max="6"
+      >
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="quick__footer" data-block="more-footer">
+        <button
+          class="btn-decor"
+          data-block="more-btn"
+          aria-label="Посмотреть больше"
+          type="button"
+        >
+          <p class="p2 medium-font" data-block="more-btn-text">More</p>
+
+          <div class="button--circle button--circle-3xs button--bg-gray-600">
+            <span class="icon icon--sm">
+              <svg>
+                <use xlink:href="#arrow-line-down-icon"></use>
+              </svg>
+            </span>
+          </div>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="quick__item" data-block="more-relative">
+    <div class="quick__title">
+      <p class="semibold-font p2">By type of property</p>
+    </div>
+
+    <div class="quick__info">
+      <div
+        class="quick__items quick__items--one-grid more-block"
+        data-block="more-items"
+        data-max="4"
+      >
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="quick__footer" data-block="more-footer">
+        <button
+          class="btn-decor"
+          data-block="more-btn"
+          aria-label="Посмотреть больше"
+          type="button"
+        >
+          <p class="p2 medium-font" data-block="more-btn-text">More</p>
+
+          <div class="button--circle button--circle-3xs button--bg-gray-600">
+            <span class="icon icon--sm">
+              <svg>
+                <use xlink:href="#arrow-line-down-icon"></use>
+              </svg>
+            </span>
+          </div>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+  <div class="quick__item" data-block="more-relative">
+    <div class="quick__title">
+      <p class="semibold-font p2">By popular keywords</p>
+    </div>
+
+    <div class="quick__info">
+      <div
+        class="quick__items quick__items--one-grid more-block"
+        data-block="more-items"
+        data-max="8"
+      >
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Dubai"
+            title="Dubai"
+            class="quick__block link"
+          >
+            <span class="p3">Dubai</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Abu Dhabi"
+            title="Abu Dhabi"
+            class="quick__block link"
+          >
+            <span class="p3">Abu Dhabi</span>
+
+            <span class="p3 quick__mean">29,130</span>
+          </a>
+        </div>
+
+        <div class="more-block__item">
+          <a
+            href="#"
+            aria-label="Перейти на страницу Ajman"
+            title="Ajman"
+            class="quick__block link"
+          >
+            <span class="p3">Ajman</span>
+
+            <span class="p3 quick__mean">260</span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="quick__footer" data-block="more-footer">
+        <button
+          class="btn-decor"
+          data-block="more-btn"
+          aria-label="Посмотреть больше"
+          type="button"
+        >
+          <p class="p2 medium-font" data-block="more-btn-text">More</p>
+
+          <div class="button--circle button--circle-3xs button--bg-gray-600">
+            <span class="icon icon--sm">
+              <svg>
+                <use xlink:href="#arrow-line-down-icon"></use>
+              </svg>
+            </span>
+          </div>
+        </button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+
+                  <div class="companies__sticky">
+                    <div class="newsletter-second">
+  <div class="newsletter-second__top">
+    <div class="newsletter-second__icon">
+      <span
+        class="icon "
+      >
+        <svg>
+          <use xlink:href="#email-icon"></use>
+        </svg>
+      </span>
+    </div>
+
+    <div class="newsletter-second__top-content">
+      <p
+        class="p1 bold-font"
+      >
+        Subscribe to our newsletter
+      </p>
+
+      <div class="textbox">
+        <p class="p3">Get the latest property listings and market insights</p>
+      </div>
+    </div>
+  </div>
+
+  <form class="newsletter-second__content form" novalidate>
+    <div class="newsletter-second__inputs">
+      <div class="input-box input-box--gray-100 form__item">
+        <label class="input-box__content">
+          <div class="input-box__info">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+          </div>
+        </label>
+
+        <p class="input-box__errors p4 form__errors"></p>
+      </div>
+    </div>
+
+    <div class="newsletter-second__btns">
+      <button
+        class="button button--bg-primary-100 button--mdx1 button--rounded-md modal-open"
+        type="submit"
+        data-modal="successRequestModal"
+      >
+        <p class="p3 medium-font">Subscribe</p>
+
+        <span class="icon lg-none" style="rotate: -45deg">
+          <svg>
+            <use xlink:href="#arrow-right-line-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </form>
+</div>
+
+                  </div>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </div>
       </main>
 
@@ -5160,10 +6268,113 @@
 <script src="/js/lib/imask.min.js" type="module"></script>
 <script src="/js/page.js" type="module"></script>
 
+      <div class="modalBlock requestModal modalBlock--media-fit">
+  <div class="modalBlock__inner">
+    <header class="modalBlock__head modalBlock__head--static">
+      <p class="h4">Request</p>
+
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon icon--little">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </header>
+
+    <div class="requestModal__content">
+      <p class="p2 medium-font">
+        Fill out the form and we will answer your question as soon as possible.
+      </p>
+
+      <form class="reques-form form" novalidate>
+        <div class="reques-form__content">
+          <div class="reques-form__inputs">
+            <div class="input-box input-box--xl input-box--gray form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <input type="text" name="name" placeholder="Name" required />
+                </div>
+              </label>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+
+            <div
+              class="input-box input-box--xl input-box--gray form__item input-tel-wrapper"
+            >
+              <div class="input-box__content">
+                <div class="input-box__info popup-select">
+                  <input type="tel" name="tel" placeholder="Phone" required />
+                </div>
+              </div>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+
+            <div class="input-box input-box--xl input-box--gray form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+              </label>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+
+            <div
+              class="input-box input-box--big input-box--xl input-box--gray form__item"
+            >
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <textarea
+                    name="message"
+                    placeholder="Describe your request (optional)"
+                  ></textarea>
+                </div>
+              </label>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+          </div>
+        </div>
+
+        <footer class="reques-form__footer">
+          <p class="p4">
+            By clicking the send button you agree to the terms of use of the
+            site
+          </p>
+
+          <button
+            class="button button--bg-primary-100 button--xl modal-open"
+            data-modal="successRequestModal"
+            type="submit"
+            style="border-radius: var(--radius-md)"
+          >
+            <p class="p2 semibold-font">Send</p>
+          </button>
+        </footer>
+      </form>
+    </div>
+  </div>
+</div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
-    <script src="/js/lib/swiper.min.js"></script>
-    <script src="/js/favorite.js" type="module"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+      defer
+    ></script>
+    <script src="/js/companies.js" type="module"></script>
   </body>
 </html>

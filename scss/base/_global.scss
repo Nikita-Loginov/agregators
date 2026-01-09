@@ -330,6 +330,12 @@ body .wrapper {
     );
   gap: var(--gap-detail);
 
+  &__banners {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
   @media (max-width: $md-desktop-breakpoint) {
     --gap-detail: 48px;
 
@@ -379,6 +385,7 @@ body .wrapper {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    width: 100%;
 
     @media (max-width: $tablet-breakpoint) {
       gap: calculate-clamp(24px, 32px, 767px, 480px);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('../modules/head.html', { "title" : "Companies construction",
-  "links" : ["./css/companies.css",
+  @@include('../modules/head.html', { "title" : "Companies agencies", "links" :
+  ["./css/companies.css",
   "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
   "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"]
   })
@@ -81,7 +81,12 @@
                             class="tabs-box tabs-box--secondary-bg-active-200"
                           >
                             <div class="tabs-box__btns">
-                              <div class="tabs-box__btn active">
+                              <a
+                                href="/construction.html"
+                                aria-label="Перейти на страницу construction"
+                                title=" Construction companies"
+                                class="tabs-box__btn"
+                              >
                                 <div class="tabs-box__header">
                                   <div class="tabs-box__icon">
                                     <span class="icon icon--full">
@@ -97,14 +102,9 @@
                                     Construction companies
                                   </p>
                                 </div>
-                              </div>
+                              </a>
 
-                              <a
-                                href="/agencies.html"
-                                aria-label="Перейти на страницу agencies"
-                                title="Real estate agencies"
-                                class="tabs-box__btn"
-                              >
+                              <div class="tabs-box__btn active">
                                 <div class="tabs-box__header">
                                   <div class="tabs-box__icon">
                                     <span class="icon icon--full">
@@ -118,7 +118,7 @@
                                 <div class="tabs-box__content">
                                   <p class="p1">Real estate agencies</p>
                                 </div>
-                              </a>
+                              </div>
 
                               <a
                                 href="/agents.html"
@@ -433,41 +433,92 @@
                                 </div>
                               </div>
 
-                              <div class="companie-card__info">
-                                <p class="p3 medium-font tablet-none">
-                                  Founded in 1997
-                                </p>
+                              <div
+                                class="companie-card__badges companie-card__badges--big-gap"
+                              >
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                >
+                                  <p class="p3 medium-font text-dark-200">
+                                    Founded in 1997
+                                  </p>
+                                </div>
 
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                >
+                                  <p class="p3 medium-font text-secondary-100">
+                                    6.222
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    properties in
+                                  </p>
+
+                                  <p class="p3 medium-font text-secondary-100">
+                                    2
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    cities
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
                                 <div class="textbox">
                                   <p
                                     class="p3 ellipsis-text ellipsis-text--three"
                                   >
-                                    Emaar Properties PJSC, a Dubai-based Public
-                                    Joint Stock Company listed on the Dubai
-                                    Financial Market, is a global property
-                                    developer and provider of premier
-                                    lifestyles. Emaar has been shaping
-                                    landscapes and lives in the Emaar Properties
-                                    PJSC, a Dubai-based Public Joint Stock
-                                    Company listed on the Dubai Financial
-                                    Market, is a global property developer and
-                                    provider of premier lifestyles. Emaar has
-                                    been shaping landscapes and lives in the
+                                    We are a tech-driven real estate agency and
+                                    assist value-seeking investors, landlords,
+                                    and tenants achieve superior results by
+                                    offering guidance that is based on both
+                                    integrity and solid market fundamentals. As
+                                    a member of We are a tech-driven real estate
+                                    agency and assist value-seeking investors,
+                                    landlords, and tenants achieve superior
+                                    results by offering guidance that is based
+                                    on both integrity and solid market
+                                    fundamentals. As a member of
                                   </p>
                                 </div>
                               </div>
 
                               <div class="companie-card__footer">
-                                <div class="companie-card__btns">
+                                <div
+                                  class="companie-card__btns companie-card__btns--two"
+                                >
+                                  <button
+                                    class="button button--bg-secondary-300"
+                                    type="button"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p3 medium-font">Contact Seller</p>
+                                  </button>
+
                                   <a
                                     href="#"
-                                    title="See all 147 projects"
+                                    title="See All Properties"
                                     aria-label="Перейти на страницу всех проектов"
                                     class="button button--bg-secondary-200"
                                   >
                                     <span class="p3 medium-font"
-                                      >See all 147 projects</span
+                                      >All Properties</span
                                     >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
                                   </a>
                                 </div>
                               </div>
@@ -494,7 +545,9 @@
                                 <div class="companie-card__header-content">
                                   <div class="companie-card__header-info">
                                     <div class="companie-card__header-item">
-                                      <p class="h5 fz-28-16">Sobha Group</p>
+                                      <p class="h5 fz-28-16">
+                                        Metropolitan Premium Properties
+                                      </p>
                                     </div>
 
                                     <p class="p4 tablet-show">
@@ -514,7 +567,7 @@
                                         </span>
 
                                         <p class="p3 medium-font text-dark-100">
-                                          4
+                                          4,9
                                         </p>
                                       </div>
                                     </div>
@@ -522,41 +575,92 @@
                                 </div>
                               </div>
 
-                              <div class="companie-card__info">
-                                <p class="p3 medium-font tablet-none">
-                                  Founded in 1997
-                                </p>
+                              <div
+                                class="companie-card__badges companie-card__badges--big-gap"
+                              >
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                >
+                                  <p class="p3 medium-font text-dark-200">
+                                    Founded in 1997
+                                  </p>
+                                </div>
 
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                >
+                                  <p class="p3 medium-font text-secondary-100">
+                                    6.222
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    properties in
+                                  </p>
+
+                                  <p class="p3 medium-font text-secondary-100">
+                                    2
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    cities
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
                                 <div class="textbox">
                                   <p
                                     class="p3 ellipsis-text ellipsis-text--three"
                                   >
-                                    Emaar Properties PJSC, a Dubai-based Public
-                                    Joint Stock Company listed on the Dubai
-                                    Financial Market, is a global property
-                                    developer and provider of premier
-                                    lifestyles. Emaar has been shaping
-                                    landscapes and lives in the Emaar Properties
-                                    PJSC, a Dubai-based Public Joint Stock
-                                    Company listed on the Dubai Financial
-                                    Market, is a global property developer and
-                                    provider of premier lifestyles. Emaar has
-                                    been shaping landscapes and lives in the
+                                    We are a tech-driven real estate agency and
+                                    assist value-seeking investors, landlords,
+                                    and tenants achieve superior results by
+                                    offering guidance that is based on both
+                                    integrity and solid market fundamentals. As
+                                    a member of We are a tech-driven real estate
+                                    agency and assist value-seeking investors,
+                                    landlords, and tenants achieve superior
+                                    results by offering guidance that is based
+                                    on both integrity and solid market
+                                    fundamentals. As a member of
                                   </p>
                                 </div>
                               </div>
 
                               <div class="companie-card__footer">
-                                <div class="companie-card__btns">
+                                <div
+                                  class="companie-card__btns companie-card__btns--two"
+                                >
+                                  <button
+                                    class="button button--bg-secondary-300"
+                                    type="button"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p3 medium-font">Contact Seller</p>
+                                  </button>
+
                                   <a
                                     href="#"
-                                    title="See all 147 projects"
+                                    title="See All Properties"
                                     aria-label="Перейти на страницу всех проектов"
                                     class="button button--bg-secondary-200"
                                   >
                                     <span class="p3 medium-font"
-                                      >See all 147 projects</span
+                                      >All Properties</span
                                     >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
                                   </a>
                                 </div>
                               </div>
@@ -569,12 +673,12 @@
                                 <picture>
                                   <source
                                     srcset="
-                                      /img/companie/two.webp   1x,
-                                      /img/companie/two2x.webp 2x
+                                      /img/companie/one.webp   1x,
+                                      /img/companie/one2x.webp 2x
                                     "
                                   />
                                   <img
-                                    src="/img/companie/two.webp"
+                                    src="/img/companie/one.webp"
                                     alt="фотография компании"
                                     loading="lazy"
                                   />
@@ -588,12 +692,12 @@
                                   <picture>
                                     <source
                                       srcset="
-                                        /img/companie/two.webp   1x,
-                                        /img/companie/two2x.webp 2x
+                                        /img/companie/one.webp   1x,
+                                        /img/companie/one2x.webp 2x
                                       "
                                     />
                                     <img
-                                      src="/img/companie/two.webp"
+                                      src="/img/companie/one.webp"
                                       alt="фотография компании"
                                       loading="lazy"
                                     />
@@ -604,7 +708,7 @@
                                   <div class="companie-card__header-info">
                                     <div class="companie-card__header-item">
                                       <p class="h5 fz-28-16">
-                                        Damac Properties
+                                        Emaar Properties
                                       </p>
 
                                       <span
@@ -636,7 +740,7 @@
                                         </span>
 
                                         <p class="p3 medium-font text-dark-100">
-                                          4,6
+                                          4,9
                                         </p>
                                       </div>
                                     </div>
@@ -644,41 +748,92 @@
                                 </div>
                               </div>
 
-                              <div class="companie-card__info">
-                                <p class="p3 medium-font tablet-none">
-                                  Founded in 1997
-                                </p>
+                              <div
+                                class="companie-card__badges companie-card__badges--big-gap"
+                              >
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                >
+                                  <p class="p3 medium-font text-dark-200">
+                                    Founded in 1997
+                                  </p>
+                                </div>
 
+                                <div
+                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                >
+                                  <p class="p3 medium-font text-secondary-100">
+                                    6.222
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    properties in
+                                  </p>
+
+                                  <p class="p3 medium-font text-secondary-100">
+                                    2
+                                  </p>
+
+                                  <p class="p3 regular-font text-dark-200">
+                                    cities
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="companie-card__info">
                                 <div class="textbox">
                                   <p
                                     class="p3 ellipsis-text ellipsis-text--three"
                                   >
-                                    Emaar Properties PJSC, a Dubai-based Public
-                                    Joint Stock Company listed on the Dubai
-                                    Financial Market, is a global property
-                                    developer and provider of premier
-                                    lifestyles. Emaar has been shaping
-                                    landscapes and lives in the Emaar Properties
-                                    PJSC, a Dubai-based Public Joint Stock
-                                    Company listed on the Dubai Financial
-                                    Market, is a global property developer and
-                                    provider of premier lifestyles. Emaar has
-                                    been shaping landscapes and lives in the
+                                    We are a tech-driven real estate agency and
+                                    assist value-seeking investors, landlords,
+                                    and tenants achieve superior results by
+                                    offering guidance that is based on both
+                                    integrity and solid market fundamentals. As
+                                    a member of We are a tech-driven real estate
+                                    agency and assist value-seeking investors,
+                                    landlords, and tenants achieve superior
+                                    results by offering guidance that is based
+                                    on both integrity and solid market
+                                    fundamentals. As a member of
                                   </p>
                                 </div>
                               </div>
 
                               <div class="companie-card__footer">
-                                <div class="companie-card__btns">
+                                <div
+                                  class="companie-card__btns companie-card__btns--two"
+                                >
+                                  <button
+                                    class="button button--bg-secondary-300"
+                                    type="button"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <p class="p3 medium-font">Contact Seller</p>
+                                  </button>
+
                                   <a
                                     href="#"
-                                    title="See all 147 projects"
+                                    title="See All Properties"
                                     aria-label="Перейти на страницу всех проектов"
                                     class="button button--bg-secondary-200"
                                   >
                                     <span class="p3 medium-font"
-                                      >See all 147 projects</span
+                                      >All Properties</span
                                     >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
                                   </a>
                                 </div>
                               </div>

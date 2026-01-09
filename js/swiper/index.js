@@ -365,4 +365,29 @@ export const SWIPERS = {
       },
     },
   },
+  EMPLOYEES: {
+    selector: ".swiper-box--employees .swiper--employees",
+    breakpoint: 122300000000,
+
+    options: {
+      slidesPerView: 3,
+      spaceBetween: 14,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      pagination: {
+        el: ".swiper-box--employees .swiper-pagination",
+      },
+      // breakpoints: {
+      //   1024: {
+      //     slidesPerView: 3,
+      //     spaceBetween: 23,
+      //   },
+      //   767: {
+      //     slidesPerView: 3,
+      //   },
+      //   481: {
+      //     slidesPerView: 2.1,
+      //   }
+      // },
+    },
+  }
 };

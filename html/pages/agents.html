@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('../modules/head.html', { "title" : "Companies construction",
-  "links" : ["./css/companies.css",
+  @@include('../modules/head.html', { "title" : "Companies agents", "links" :
+  ["./css/companies.css",
   "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
   "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"]
   })
@@ -81,7 +81,12 @@
                             class="tabs-box tabs-box--secondary-bg-active-200"
                           >
                             <div class="tabs-box__btns">
-                              <div class="tabs-box__btn active">
+                              <a
+                                href="/construction.html"
+                                aria-label="Перейти на страницу construction"
+                                title=" Construction companies"
+                                class="tabs-box__btn"
+                              >
                                 <div class="tabs-box__header">
                                   <div class="tabs-box__icon">
                                     <span class="icon icon--full">
@@ -97,7 +102,7 @@
                                     Construction companies
                                   </p>
                                 </div>
-                              </div>
+                              </a>
 
                               <a
                                 href="/agencies.html"
@@ -120,12 +125,7 @@
                                 </div>
                               </a>
 
-                              <a
-                                href="/agents.html"
-                                aria-label="Перейти на страницу agents"
-                                title="Real estate agents"
-                                class="tabs-box__btn"
-                              >
+                              <div class="tabs-box__btn active">
                                 <div class="tabs-box__header">
                                   <div class="tabs-box__icon">
                                     <span class="icon icon--full">
@@ -141,7 +141,7 @@
                                 <div class="tabs-box__content">
                                   <p class="p1">Real estate agents</p>
                                 </div>
-                              </a>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -333,140 +333,223 @@
                               </div>
                             </div>
 
-                            <a
-                              href="Перейти на страницу карты"
-                              title="On the Map"
-                              class="button button--bg-secondary-200 button--rounded-md button--lg"
+                            <label
+                              class="check-simple check-simple--center lg-none"
                             >
-                              <span class="icon icon--big">
-                                <svg>
-                                  <use xlink:href="#map-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="check-simple__content">
+                                <div class="check-simple__custom">
+                                  <input type="checkbox" />
 
-                              <p class="p2 medium-font">On the Map</p>
-                            </a>
+                                  <span></span>
+                                </div>
+
+                                <div class="check-simple__info">
+                                  <p class="p2 regular-font">
+                                    Hide agents without properties
+                                  </p>
+                                </div>
+                              </div>
+
+                              <div class="check-simple__errors p4"></div>
+                            </label>
                           </div>
                         </div>
                       </div>
 
                       <div class="companies-info__content">
-                        <div class="companies-info__items">
-                          <div class="companie-card">
-                            <div class="companie-card__img-box">
-                              <div class="companie-card__img-block">
+                        <div
+                          class="companies-info__items companies-info__items--grid"
+                        >
+                          <div class="card-box card-box--big card-box--media">
+                            <div class="card-box__img-box">
+                              <div class="card-box__img">
                                 <picture>
                                   <source
                                     srcset="
-                                      /img/companie/one.webp   1x,
-                                      /img/companie/one2x.webp 2x
+                                      /img/persons/one.webp   1x,
+                                      /img/persons/one2x.webp 2x
                                     "
                                   />
                                   <img
-                                    src="/img/companie/one.webp"
-                                    alt="фотография компании"
+                                    src="/img/persons/one.webp"
+                                    alt="фотография автора"
                                     loading="lazy"
                                   />
                                 </picture>
                               </div>
-                            </div>
 
-                            <div class="companie-card__content">
-                              <div class="companie-card__header">
-                                <div class="companie-card__header-img">
-                                  <picture>
-                                    <source
-                                      srcset="
-                                        /img/companie/one.webp   1x,
-                                        /img/companie/one2x.webp 2x
-                                      "
-                                    />
-                                    <img
-                                      src="/img/companie/one.webp"
-                                      alt="фотография компании"
-                                      loading="lazy"
-                                    />
-                                  </picture>
-                                </div>
-
-                                <div class="companie-card__header-content">
-                                  <div class="companie-card__header-info">
-                                    <div class="companie-card__header-item">
-                                      <p class="h5 fz-28-16">
-                                        Emaar Properties
-                                      </p>
-
-                                      <span
-                                        class="icon"
-                                        style="color: var(--blue-color-300)"
-                                      >
-                                        <svg>
-                                          <use
-                                            xlink:href="#shield-check-icon"
-                                          ></use>
-                                        </svg>
-                                      </span>
-                                    </div>
-
-                                    <p class="p4 tablet-show">
-                                      Founded in 1997
-                                    </p>
-                                  </div>
-
-                                  <div class="companie-card__header-info">
-                                    <div class="name-rating name-rating--small">
-                                      <div class="name-rating__box">
-                                        <span
-                                          class="icon icon--little text-primary-100"
-                                        >
-                                          <svg>
-                                            <use xlink:href="#star-icon"></use>
-                                          </svg>
-                                        </span>
-
-                                        <p class="p3 medium-font text-dark-100">
-                                          4,9
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="companie-card__info">
-                                <p class="p3 medium-font tablet-none">
-                                  Founded in 1997
+                              <div class="card-box__img-content">
+                                <p class="h6-add semibold-font tablet-show">
+                                  Aiym Tursynova
                                 </p>
 
-                                <div class="textbox">
-                                  <p
-                                    class="p3 ellipsis-text ellipsis-text--three"
+                                <div class="card-box__badges tablet-show">
+                                  <div
+                                    class="badge badge--gray-100 badge--xl br-el--rounded-base"
                                   >
-                                    Emaar Properties PJSC, a Dubai-based Public
-                                    Joint Stock Company listed on the Dubai
-                                    Financial Market, is a global property
-                                    developer and provider of premier
-                                    lifestyles. Emaar has been shaping
-                                    landscapes and lives in the Emaar Properties
-                                    PJSC, a Dubai-based Public Joint Stock
-                                    Company listed on the Dubai Financial
-                                    Market, is a global property developer and
-                                    provider of premier lifestyles. Emaar has
-                                    been shaping landscapes and lives in the
-                                  </p>
+                                    <p
+                                      class="p3 medium-font text-secondary-100"
+                                    >
+                                      1
+                                    </p>
+
+                                    <p class="p3 medium-font text-dark-200">
+                                      property
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="card-box__img-item tablet-none">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#house-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">1 property</p>
                                 </div>
                               </div>
+                            </div>
 
-                              <div class="companie-card__footer">
-                                <div class="companie-card__btns">
+                            <div class="card-box__content">
+                              <div class="card-box__info">
+                                <p class="h6-add semibold-font tablet-none">
+                                  Aiym Tursynova
+                                </p>
+
+                                <ul class="list-simple list-simple--small">
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Company</p>
+
+                                    <p class="p3 text-secondary-100">
+                                      Primal Alliance Real Estate
+                                    </p>
+                                  </li>
+
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Position</p>
+
+                                    <p class="p3">Property Advisor</p>
+                                  </li>
+                                </ul>
+
+                                <div class="card-box__btns">
                                   <a
-                                    href="#"
-                                    title="See all 147 projects"
-                                    aria-label="Перейти на страницу всех проектов"
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
                                     class="button button--bg-secondary-200"
                                   >
                                     <span class="p3 medium-font"
-                                      >See all 147 projects</span
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box card-box--empty card-box--big card-box--media"
+                          >
+                            <div class="card-box__img-box">
+                              <div class="card-box__img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/persons/empty.svg 1x,
+                                      /img/persons/empty.svg 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/persons/empty.svg"
+                                    alt="фотография автора"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="card-box__img-content">
+                                <p class="h6-add semibold-font tablet-show">
+                                  Aiym Tursynova
+                                </p>
+
+                                <div class="card-box__badges tablet-show">
+                                  <div
+                                    class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                  >
+                                    <p
+                                      class="p3 medium-font text-secondary-100"
+                                    >
+                                      12
+                                    </p>
+
+                                    <p class="p3 medium-font text-dark-200">
+                                      property
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="card-box__img-item tablet-none">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#house-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">12 property</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card-box__content">
+                              <div class="card-box__info">
+                                <p class="h6-add semibold-font tablet-none">
+                                  Mohammad Sweid
+                                </p>
+
+                                <ul class="list-simple list-simple--small">
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Company</p>
+
+                                    <p class="p3 text-secondary-100">
+                                      Al Zohar Properties - F.Z.C
+                                    </p>
+                                  </li>
+
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Position</p>
+
+                                    <p class="p3">Executive Manager</p>
+                                  </li>
+                                </ul>
+
+                                <div class="card-box__btns card-box__btns--two">
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
+                                    class="button button--bg-secondary-300"
+                                  >
+                                    <span class="p3 medium-font">Contact</span>
+                                  </a>
+
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >All Properties</span
                                     >
                                   </a>
                                 </div>
@@ -474,88 +557,91 @@
                             </div>
                           </div>
 
-                          <div class="companie-card companie-card--empty">
-                            <div class="companie-card__img-box">
-                              <div class="companie-card__img-block">
-                                <svg>
-                                  <use xlink:href="#crane-icon"></use>
-                                </svg>
+                          <div class="card-box card-box--big card-box--media">
+                            <div class="card-box__img-box">
+                              <div class="card-box__img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/persons/two.webp   1x,
+                                      /img/persons/two2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/persons/two.webp"
+                                    alt="фотография автора"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="card-box__img-content">
+                                <p class="h6-add semibold-font tablet-show">
+                                  Anafiy Murtazaev
+                                </p>
+
+                                <div class="card-box__badges tablet-show">
+                                  <div
+                                    class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                  >
+                                    <p
+                                      class="p3 medium-font text-secondary-100"
+                                    >
+                                      0
+                                    </p>
+
+                                    <p class="p3 medium-font text-dark-200">
+                                      property
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="card-box__img-item tablet-none">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#house-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">0 property</p>
+                                </div>
                               </div>
                             </div>
 
-                            <div class="companie-card__content">
-                              <div class="companie-card__header">
-                                <div class="companie-card__header-img">
-                                  <svg>
-                                    <use xlink:href="#crane-icon"></use>
-                                  </svg>
-                                </div>
-
-                                <div class="companie-card__header-content">
-                                  <div class="companie-card__header-info">
-                                    <div class="companie-card__header-item">
-                                      <p class="h5 fz-28-16">Sobha Group</p>
-                                    </div>
-
-                                    <p class="p4 tablet-show">
-                                      Founded in 1997
-                                    </p>
-                                  </div>
-
-                                  <div class="companie-card__header-info">
-                                    <div class="name-rating name-rating--small">
-                                      <div class="name-rating__box">
-                                        <span
-                                          class="icon icon--little text-primary-100"
-                                        >
-                                          <svg>
-                                            <use xlink:href="#star-icon"></use>
-                                          </svg>
-                                        </span>
-
-                                        <p class="p3 medium-font text-dark-100">
-                                          4
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="companie-card__info">
-                                <p class="p3 medium-font tablet-none">
-                                  Founded in 1997
+                            <div class="card-box__content">
+                              <div class="card-box__info">
+                                <p class="h6-add semibold-font tablet-none">
+                                  Aiym Tursynova
                                 </p>
 
-                                <div class="textbox">
-                                  <p
-                                    class="p3 ellipsis-text ellipsis-text--three"
-                                  >
-                                    Emaar Properties PJSC, a Dubai-based Public
-                                    Joint Stock Company listed on the Dubai
-                                    Financial Market, is a global property
-                                    developer and provider of premier
-                                    lifestyles. Emaar has been shaping
-                                    landscapes and lives in the Emaar Properties
-                                    PJSC, a Dubai-based Public Joint Stock
-                                    Company listed on the Dubai Financial
-                                    Market, is a global property developer and
-                                    provider of premier lifestyles. Emaar has
-                                    been shaping landscapes and lives in the
-                                  </p>
-                                </div>
-                              </div>
+                                <ul class="list-simple list-simple--small">
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Company</p>
 
-                              <div class="companie-card__footer">
-                                <div class="companie-card__btns">
+                                    <p class="p3 text-secondary-100">
+                                      Private person
+                                    </p>
+                                  </li>
+                                </ul>
+
+                                <div class="card-box__btns card-box__btns--two">
                                   <a
-                                    href="#"
-                                    title="See all 147 projects"
-                                    aria-label="Перейти на страницу всех проектов"
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
+                                    class="button button--bg-secondary-300"
+                                  >
+                                    <span class="p3 medium-font">Contact</span>
+                                  </a>
+
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
                                     class="button button--bg-secondary-200"
                                   >
                                     <span class="p3 medium-font"
-                                      >See all 147 projects</span
+                                      >All Properties</span
                                     >
                                   </a>
                                 </div>
@@ -563,121 +649,320 @@
                             </div>
                           </div>
 
-                          <div class="companie-card">
-                            <div class="companie-card__img-box">
-                              <div class="companie-card__img-block">
+                          <div class="card-box card-box--big card-box--media">
+                            <div class="card-box__img-box">
+                              <div class="card-box__img">
                                 <picture>
                                   <source
                                     srcset="
-                                      /img/companie/two.webp   1x,
-                                      /img/companie/two2x.webp 2x
+                                      /img/persons/two.webp   1x,
+                                      /img/persons/two2x.webp 2x
                                     "
                                   />
                                   <img
-                                    src="/img/companie/two.webp"
-                                    alt="фотография компании"
+                                    src="/img/persons/two.webp"
+                                    alt="фотография автора"
                                     loading="lazy"
                                   />
                                 </picture>
                               </div>
-                            </div>
 
-                            <div class="companie-card__content">
-                              <div class="companie-card__header">
-                                <div class="companie-card__header-img">
-                                  <picture>
-                                    <source
-                                      srcset="
-                                        /img/companie/two.webp   1x,
-                                        /img/companie/two2x.webp 2x
-                                      "
-                                    />
-                                    <img
-                                      src="/img/companie/two.webp"
-                                      alt="фотография компании"
-                                      loading="lazy"
-                                    />
-                                  </picture>
-                                </div>
-
-                                <div class="companie-card__header-content">
-                                  <div class="companie-card__header-info">
-                                    <div class="companie-card__header-item">
-                                      <p class="h5 fz-28-16">
-                                        Damac Properties
-                                      </p>
-
-                                      <span
-                                        class="icon"
-                                        style="color: var(--blue-color-300)"
-                                      >
-                                        <svg>
-                                          <use
-                                            xlink:href="#shield-check-icon"
-                                          ></use>
-                                        </svg>
-                                      </span>
-                                    </div>
-
-                                    <p class="p4 tablet-show">
-                                      Founded in 1997
-                                    </p>
-                                  </div>
-
-                                  <div class="companie-card__header-info">
-                                    <div class="name-rating name-rating--small">
-                                      <div class="name-rating__box">
-                                        <span
-                                          class="icon icon--little text-primary-100"
-                                        >
-                                          <svg>
-                                            <use xlink:href="#star-icon"></use>
-                                          </svg>
-                                        </span>
-
-                                        <p class="p3 medium-font text-dark-100">
-                                          4,6
-                                        </p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div class="companie-card__info">
-                                <p class="p3 medium-font tablet-none">
-                                  Founded in 1997
+                              <div class="card-box__img-content">
+                                <p class="h6-add semibold-font tablet-show">
+                                  Anafiy Murtazaev
                                 </p>
 
-                                <div class="textbox">
-                                  <p
-                                    class="p3 ellipsis-text ellipsis-text--three"
+                                <div class="card-box__badges tablet-show">
+                                  <div
+                                    class="badge badge--gray-100 badge--xl br-el--rounded-base"
                                   >
-                                    Emaar Properties PJSC, a Dubai-based Public
-                                    Joint Stock Company listed on the Dubai
-                                    Financial Market, is a global property
-                                    developer and provider of premier
-                                    lifestyles. Emaar has been shaping
-                                    landscapes and lives in the Emaar Properties
-                                    PJSC, a Dubai-based Public Joint Stock
-                                    Company listed on the Dubai Financial
-                                    Market, is a global property developer and
-                                    provider of premier lifestyles. Emaar has
-                                    been shaping landscapes and lives in the
-                                  </p>
+                                    <p
+                                      class="p3 medium-font text-secondary-100"
+                                    >
+                                      0
+                                    </p>
+
+                                    <p class="p3 medium-font text-dark-200">
+                                      property
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="card-box__img-item tablet-none">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#house-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">0 property</p>
                                 </div>
                               </div>
+                            </div>
 
-                              <div class="companie-card__footer">
-                                <div class="companie-card__btns">
+                            <div class="card-box__content">
+                              <div class="card-box__info">
+                                <p class="h6-add semibold-font tablet-none">
+                                  Aiym Tursynova
+                                </p>
+
+                                <ul class="list-simple list-simple--small">
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Company</p>
+
+                                    <p class="p3 text-secondary-100">
+                                      Private person
+                                    </p>
+                                  </li>
+                                </ul>
+
+                                <div class="card-box__btns">
                                   <a
-                                    href="#"
-                                    title="See all 147 projects"
-                                    aria-label="Перейти на страницу всех проектов"
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
                                     class="button button--bg-secondary-200"
                                   >
                                     <span class="p3 medium-font"
-                                      >See all 147 projects</span
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </a>
+
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
+                                    class="button button--bg-secondary-300"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <span class="p3 medium-font"
+                                      >Contact Specialist</span
+                                    >
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-box card-box--big card-box--media">
+                            <div class="card-box__img-box">
+                              <div class="card-box__img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/persons/one.webp   1x,
+                                      /img/persons/one2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/persons/one.webp"
+                                    alt="фотография автора"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="card-box__img-content">
+                                <p class="h6-add semibold-font tablet-show">
+                                  Aiym Tursynova
+                                </p>
+
+                                <div class="card-box__badges tablet-show">
+                                  <div
+                                    class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                  >
+                                    <p
+                                      class="p3 medium-font text-secondary-100"
+                                    >
+                                      1
+                                    </p>
+
+                                    <p class="p3 medium-font text-dark-200">
+                                      property
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="card-box__img-item tablet-none">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#house-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">1 property</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card-box__content">
+                              <div class="card-box__info">
+                                <p class="h6-add semibold-font tablet-none">
+                                  Aiym Tursynova
+                                </p>
+
+                                <ul class="list-simple list-simple--small">
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Company</p>
+
+                                    <p class="p3 text-secondary-100">
+                                      Primal Alliance Real Estate
+                                    </p>
+                                  </li>
+
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Position</p>
+
+                                    <p class="p3">Property Advisor</p>
+                                  </li>
+                                </ul>
+
+                                <div class="card-box__btns">
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="card-box card-box--empty card-box--big card-box--media"
+                          >
+                            <div class="card-box__img-box">
+                              <div class="card-box__img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/persons/empty.svg 1x,
+                                      /img/persons/empty.svg 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/persons/empty.svg"
+                                    alt="фотография автора"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="card-box__img-content">
+                                <p class="h6-add semibold-font tablet-show">
+                                  Aiym Tursynova
+                                </p>
+
+                                <div class="card-box__badges tablet-show">
+                                  <div
+                                    class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                  >
+                                    <p
+                                      class="p3 medium-font text-secondary-100"
+                                    >
+                                      12
+                                    </p>
+
+                                    <p class="p3 medium-font text-dark-200">
+                                      property
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="card-box__img-item tablet-none">
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#house-icon"></use>
+                                    </svg>
+                                  </span>
+
+                                  <p class="p3">12 property</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card-box__content">
+                              <div class="card-box__info">
+                                <p class="h6-add semibold-font tablet-none">
+                                  Mohammad Sweid
+                                </p>
+
+                                <ul class="list-simple list-simple--small">
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Company</p>
+
+                                    <p class="p3 text-secondary-100">
+                                      Al Zohar Properties - F.Z.C
+                                    </p>
+                                  </li>
+
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Position</p>
+
+                                    <p class="p3">Executive Manager</p>
+                                  </li>
+                                </ul>
+
+                                <div class="card-box__btns">
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <svg>
+                                        <use
+                                          xlink:href="#arrow-right-line-icon"
+                                        ></use>
+                                      </svg>
+                                    </span>
+                                  </a>
+
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Antonio Fagundes"
+                                    class="button button--bg-secondary-300"
+                                  >
+                                    <span class="icon">
+                                      <svg>
+                                        <use xlink:href="#email-icon"></use>
+                                      </svg>
+                                    </span>
+
+                                    <span class="p3 medium-font"
+                                      >Contact Specialist</span
                                     >
                                   </a>
                                 </div>
@@ -692,70 +977,15 @@
                     </div>
                   </section>
 
-                  <section class="banners-section gap-section-xs">
+                  <section
+                    class="banners-section gap-section-xs md-desktop-show"
+                  >
                     <div class="banners-section__inner">
-                      <div class="md-desktop-show">
-                        @@include('../modules/newsletter-second.html',
-                        {"classAddHead" : "h6 bold-font"})
-                      </div>
+                      @@include('../modules/newsletter-second.html',
+                      {"classAddHead" : "h6 bold-font"})
 
                       <div
-                        class="banner-content banner-content--absolute-img banner-content--secondary-bg-300"
-                      >
-                        <div class="banner-content__content">
-                          <header class="banner-content__header">
-                            <div class="banner-content__header-top">
-                              <p class="h3">Want to sell your properties?</p>
-                            </div>
-                          </header>
-
-                          <div class="banner-content__info">
-                            <div class="textbox">
-                              <p class="p2">
-                                List your property with us and reach thousands
-                                of potential buyers. Professional photography,
-                                virtual tours, and dedicated support included.
-                              </p>
-                            </div>
-                          </div>
-
-                          <footer class="banner-content__footer">
-                            <button
-                              type="button"
-                              aria-label="Открыть модальное окно"
-                              class="button button--bg-primary-100 button--xl modal-open br-el--rounded-3xl"
-                              data-modal="requestModal"
-                            >
-                              <p class="p2 semibold-font">Get Started</p>
-
-                              <span class="icon" style="rotate: -45deg">
-                                <svg>
-                                  <use
-                                    xlink:href="#arrow-right-line-icon"
-                                  ></use>
-                                </svg>
-                              </span>
-                            </button>
-                          </footer>
-                        </div>
-
-                        <div
-                          class="banner-content__img banner-content__img--big banner-content__img--filter-inherit"
-                        >
-                          <picture>
-                            <source
-                              srcset="
-                                /img/banner/six.webp   1x,
-                                /img/banner/six2x.webp 2x
-                              "
-                            />
-                            <img src="/img/banner/six.webp" alt="фотография" />
-                          </picture>
-                        </div>
-                      </div>
-
-                      <div
-                        class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg md-desktop-show"
+                        class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg"
                         data-width="1023"
                       >
                         <div
