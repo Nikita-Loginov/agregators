@@ -1,0 +1,84 @@
+.property {
+  &__inner,
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(20px, 32px, 1023px, 767px);
+  }
+
+  &__content,
+  &__filter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__filter {
+    .button {
+      width: 100%;
+    }
+  }
+
+  &__filter-sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  &__filter-sort-item {
+    &:has(.select-box) {
+      width: 151px;
+    }
+  }
+
+  @media (min-width: $tablet-breakpoint) {
+    &__swiper-box .swiper-wrapper--propperty {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    &[data-grid="tiles"] {
+      .property__swiper-box .swiper-wrapper--propperty {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 24px 14px;
+
+        & > *:not(.swiper-slide) {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+
+    .swiper-wrapper--propperty > .swiper-slide {
+      display: none;
+      width: 100%;
+
+      &:nth-child(-n + 3) {
+        display: flex;
+      }
+
+      .good-item {
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width:  $tablet-breakpoint) {
+    .swiper--property {
+      overflow: visible;
+    }
+
+    .swiper-pagination--property {
+      width: 100%;
+    }
+  }
+}

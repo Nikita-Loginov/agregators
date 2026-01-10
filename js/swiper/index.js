@@ -370,24 +370,43 @@ export const SWIPERS = {
     breakpoint: 122300000000,
 
     options: {
-      slidesPerView: 3,
-      spaceBetween: 14,
+      slidesPerView: 1.2,
+      spaceBetween: 8,
       mousewheel: MOUSE_WHEEL_CONFIG,
       pagination: {
         el: ".swiper-box--employees .swiper-pagination",
       },
-      // breakpoints: {
-      //   1024: {
-      //     slidesPerView: 3,
-      //     spaceBetween: 23,
-      //   },
-      //   767: {
-      //     slidesPerView: 3,
-      //   },
-      //   481: {
-      //     slidesPerView: 2.1,
-      //   }
-      // },
+      breakpoints: {
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 14,
+        },
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        600: {
+          slidesPerView: 2.3,
+        }
+      },
+    },
+  },
+  COMPANY_PROPERTY: {
+    selector: ".companies-detail .swiper--property",
+    breakpoint: 767,
+    options: {
+      slidesPerView: 1.1,
+      spaceBetween: 12,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      pagination: {
+        el: ".companies-detail .swiper-pagination--property",
+      },
+      breakpoints: {
+        600: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+      },
     },
   }
 };

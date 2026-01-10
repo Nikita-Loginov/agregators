@@ -373,13 +373,18 @@ body.scrollBottom .filter {
   grid-template-columns: var(--item-width) var(--item-width) var(--item-width);
   grid-auto-columns: auto;
   grid-auto-flow: column;
-  gap: 8px;
+  gap: var(--gap-items);
 }
 .companies-filter--bg {
   padding: 8px 0;
 }
 .companies-filter--six {
   --count-items: 6;
+}
+.companies-filter--property {
+  --gap-items: 8px;
+  --item-width: calc((100% / 5) + 12px);
+  grid-template-columns: repeat(4, 20%) auto;
 }
 @media (max-width: 1023px) {
   .companies-filter--map {

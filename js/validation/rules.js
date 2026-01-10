@@ -58,8 +58,8 @@ export const validationRules = {
   },
 
   message: {
-    required: false,
+    required: true,
 
-    hint: "Опишите ваш запрос в свободной форме (необязательно)",
+    hint: "Опишите ваш запрос в свободной форме",
   },
 };

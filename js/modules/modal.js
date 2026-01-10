@@ -8,6 +8,8 @@ const openModal = (e) => {
   const nameModal = modalBtn.dataset.modal;
   if (!nameModal) return;
 
+  
+
   const modalBlock = document.querySelector(`.${nameModal}`);
 
   if (!modalBlock) return;

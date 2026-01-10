@@ -105,3 +105,94 @@ export const hideUnnecessaryButtons = () => {
     }
   });
 };
+
+export const initClampText = () => {
+  const items = document.querySelectorAll('[data-block="clamp-relative"]');
+
+  items.forEach((item) => {
+    const text = item.querySelector('[data-block="clamp-text"]');
+    const footer = item.querySelector('[data-block="clamp-footer"]');
+
+    if (!text || !footer) return;
+
+    const maxLines = parseInt(text.dataset.max, 10) || 1;
+    text.style.setProperty("--lines", maxLines);
+
+    updateClampState(text, footer);
+  });
+};
+
+export const clampTextToggle = (
+  e,
+  { moreText = "больше", lessText = "меньше" } = {}
+) => {
+  const btn = e.target.closest('[data-block="clamp-btn"]');
+  if (!btn) return;
+
+  const item = btn.closest('[data-block="clamp-relative"]');
+  if (!item) return;
+
+  const text = item.querySelector('[data-block="clamp-text"]');
+  const footer = item.querySelector('[data-block="clamp-footer"]');
+  if (!text || !footer) return;
+
+  const btnTextEl = btn.querySelector('[data-block="clamp-btn-text"]');
+
+  const isOpen = text.classList.toggle("is-open");
+  text.classList.toggle("is-clamped", !isOpen);
+
+  const moreTextFromAttr = btn.getAttribute("data-more-text") || moreText;
+  const lessTextFromAttr = btn.getAttribute("data-less-text") || lessText;
+
+  if (btnTextEl) {
+    btnTextEl.textContent = isOpen ? lessTextFromAttr : moreTextFromAttr;
+  }
+};
+
+const updateClampState = (text, footer) => {
+  const btn = footer.querySelector('[data-block="clamp-btn"]');
+  const btnText = btn?.querySelector('[data-block="clamp-btn-text"]');
+
+  text.classList.remove("is-open");
+
+  text.classList.add("is-clamped");
+
+  const isClamped = text.scrollHeight - text.clientHeight > 1;
+
+  if (!isClamped) {
+    text.classList.remove("is-clamped");
+    footer.classList.remove("visible");
+
+    if (btnText) {
+      btnText.textContent = btn.getAttribute("data-more-text") || "больше";
+    }
+
+    return;
+  }
+
+  footer.classList.add("visible");
+
+  if (btnText) {
+    btnText.textContent = btn.getAttribute("data-more-text") || "больше";
+  }
+};
+
+export const handleMoreContentResize = () => {
+  const clampItems = document.querySelectorAll('[data-block="clamp-relative"]');
+
+  clampItems.forEach((item) => {
+    const text = item.querySelector('[data-block="clamp-text"]');
+    const footer = item.querySelector('[data-block="clamp-footer"]');
+
+    if (!text || !footer) return;
+
+    const maxLines = parseInt(text.dataset.max, 10) || 1;
+    text.style.setProperty("--lines", maxLines);
+
+    const wasOpen = text.classList.contains("is-open");
+
+    // if (!wasOpen) {
+    updateClampState(text, footer);
+    // }
+  });
+};

@@ -4,10 +4,13 @@
     width: 100%;
   }
 
+  &__info {
+  }
+
   &__item-inner {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(20px, 32px, 1023px, 767px);
   }
 
   &__item-boxs {
@@ -19,5 +22,43 @@
   &__item-swiper {
     min-width: 0;
     width: 100%;
+  }
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  &__top-inner {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    width: 100%;
+  }
+
+  &__top-block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    overflow: hidden;
+
+    &__top {
+      gap: 20px;
+    }
+
+    &__top-inner {
+      flex-direction: column;
+      gap: var(--gap-blocks-small);
+      align-items: normal;
+
+      .contact-aside {
+        width: 100%;
+      }
+    }
   }
 }

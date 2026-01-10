@@ -229,6 +229,19 @@ h6 {
   }
 }
 
+.fz18-14 {
+  font-size: calculate-clamp(
+    16px,
+    18px,
+    $md-desktop-breakpoint,
+    $lg-breakpoint
+  );
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: calculate-clamp(14px, 16px, $lg-breakpoint, $mobile-breakpoint);
+  }
+}
+
 body .main {
   .br-base {
     border-radius: var(--radius-base);

@@ -5,6 +5,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    gap: 8px;
     cursor: pointer;
   }
 
@@ -88,6 +89,12 @@
     color: var(--primary-color-500);
     padding: 0 15px;
     display: none;
+
+    &--bg {
+      background-color: var(--white-color);
+      border-radius: var(--radius-base);
+      width: fit-content;
+    }
   }
 
   &.error {

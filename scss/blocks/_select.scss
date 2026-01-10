@@ -300,6 +300,18 @@
       }
     }
   }
+
+  &__errors {
+    font-size: var(--font-size-3xs);
+    color: var(--primary-color-500);
+    padding: 0 15px;
+
+    &--bg {
+      background-color: var(--white-color);
+      border-radius: var(--radius-base);
+      width: fit-content;
+    }
+  }
 }
 
 .select-box--words

@@ -49,6 +49,10 @@
       flex-direction: column;
       align-items: normal;
       gap: 8px;
+
+      &--row {
+        flex-direction: row;
+      }
     }
 
     &__details {

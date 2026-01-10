@@ -16,11 +16,7 @@ export const validators = {
   },
 
   select(field) {
-    const realSelect = field
-      .closest(".custom-select")
-      ?.querySelector(".real-select");
-
-    return !!realSelect?.value;
+    return !!field.value && field.value.trim() !== "";
   },
 
   checkbox(field) {

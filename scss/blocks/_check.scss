@@ -114,6 +114,12 @@
     flex-direction: column;
     gap: 6px;
     color: var(--primary-color-500);
+
+    &--bg {
+      background-color: var(--white-color);
+      border-radius: var(--radius-base);
+      width: fit-content;
+    }
   }
 }
 

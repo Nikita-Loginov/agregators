@@ -3,7 +3,7 @@ import { validators } from "./validators.js";
 import { classAction } from "../modules/classActions.js";
 
 export const validateFormField = (formItem) => {
-  const field = formItem.querySelector("input, textarea, .selected-option");
+  const field = formItem.querySelector("input, textarea, select, .selected-option");
   const errorBox = formItem.querySelector(".form__errors");
   const name = field.name;
 
