@@ -240,6 +240,10 @@
     flex-direction: column;
     gap: 28px;
     align-items: center;
+
+    &--small {
+      gap: 6px;
+    }
   }
 
   &__header,

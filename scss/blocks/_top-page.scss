@@ -26,7 +26,7 @@
     display: grid;
     grid-template-columns: 200px 280px;
     align-items: center;
-    gap:  var(--gap-details);
+    gap: var(--gap-details);
 
     &--sort {
       --gap-details: 24px;
@@ -41,9 +41,23 @@
     }
   }
 
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  @media (max-width: $md-desktop-breakpoint) {
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     --small-select: 90px;
-    
+
     &__header {
       display: flex;
       flex-direction: column;
@@ -56,7 +70,9 @@
     }
 
     &__details {
-      grid-template-columns: var(--small-select) calc(100% - var(--small-select) - var(--gap-details));
+      grid-template-columns: var(--small-select) calc(
+          100% - var(--small-select) - var(--gap-details)
+        );
 
       &--sort {
         display: flex;

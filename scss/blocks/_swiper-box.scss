@@ -6,7 +6,7 @@
 
     &-big {
       .swiper-wrapper {
-        padding-bottom: calculate-clamp(20px, 40px, 1023px, 767px);
+        padding-bottom: calculate-clamp(20px, 32px, 1023px, 767px);
       }
     }
 
@@ -20,20 +20,27 @@
   &--pagination-bottom {
     @include paddingBottomPagination;
 
-    &-tablet {
+    &-tablet,
+    &-full {
       .swiper-wrapper {
         padding-bottom: 0px;
       }
-  
+
       &-big {
         .swiper-wrapper {
           padding-bottom: 0;
         }
       }
+    }
 
+    &-tablet {
       @media (max-width: $tablet-breakpoint) {
         @include paddingBottomPagination;
       }
+    }
+
+    &-full {
+      @include paddingBottomPagination;
     }
   }
 

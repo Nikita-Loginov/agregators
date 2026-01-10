@@ -11,6 +11,20 @@ export const MOUSE_WHEEL_CONFIG = {
   eventsTarget: "container",
 };
 
+const BREAKPOINTS_DEATAIL_BLOCK = {
+  1024: {
+    slidesPerView: 3,
+    spaceBetween: 14,
+  },
+  767: {
+    slidesPerView: 3,
+    spaceBetween: 16,
+  },
+  600: {
+    slidesPerView: 2.3,
+  },
+};
+
 export const TABLE_OPTIONS = {
   slidesPerView: 1,
   spaceBetween: 16,
@@ -361,7 +375,7 @@ export const SWIPERS = {
         },
         481: {
           slidesPerView: 2.1,
-        }
+        },
       },
     },
   },
@@ -377,17 +391,7 @@ export const SWIPERS = {
         el: ".swiper-box--employees .swiper-pagination",
       },
       breakpoints: {
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 14,
-        },
-        767: {
-          slidesPerView: 3,
-          spaceBetween: 16,
-        },
-        600: {
-          slidesPerView: 2.3,
-        }
+       ...BREAKPOINTS_DEATAIL_BLOCK
       },
     },
   },
@@ -406,6 +410,22 @@ export const SWIPERS = {
           slidesPerView: 2,
           spaceBetween: 16,
         },
+      },
+    },
+  },
+  DETAIL: {
+    selector: ".swiper-box--detail .swiper--detail",
+    breakpoint: 122300000000,
+
+    options: {
+      slidesPerView: 1.2,
+      spaceBetween: 8,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      pagination: {
+        el: ".swiper-box--detail .swiper-pagination",
+      },
+      breakpoints: {
+       ...BREAKPOINTS_DEATAIL_BLOCK
       },
     },
   }

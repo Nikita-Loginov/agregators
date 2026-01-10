@@ -22,6 +22,9 @@ const swipers = [
   {
     ...SWIPERS.COMPANY_PROPERTY,
   },
+  {
+    ...SWIPERS.DETAIL
+  }
 ];
 
 const handleGlobalClick = (e) => {

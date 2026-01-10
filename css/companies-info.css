@@ -420,3 +420,191 @@
     grid-column: span 3;
   }
 }
+
+.masonry-simple {
+  width: 100%;
+  --gap-items-box: 14px;
+}
+.masonry-simple__items-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-items-box);
+}
+.masonry-simple__items-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 12px;
+}
+.masonry-simple__item {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1023px) and (min-width: 767px) {
+  .masonry-simple {
+    --gap-items-box: 8px;
+  }
+  .masonry-simple__items-row {
+    display: contents;
+  }
+  .masonry-simple__items-box {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .masonry-simple__item {
+    height: auto;
+  }
+  .masonry-simple__item--media-lg {
+    grid-column: span 4;
+  }
+  .masonry-simple__item--media-md {
+    grid-column: span 3;
+  }
+  .masonry-simple__item--media-xs {
+    grid-column: span 2;
+  }
+  .masonry-simple__item--media-xl {
+    grid-column: span 5;
+  }
+  .masonry-simple__item--media-full {
+    grid-column: 1/-1;
+  }
+}
+@media (max-width: 767px) {
+  .masonry-simple {
+    --gap-items-box: 8px;
+  }
+  .masonry-simple__items-row {
+    display: contents;
+  }
+  .masonry-simple__items-row:nth-child(3n+1) .masonry-simple__item:first-child {
+    grid-column: 1/-1;
+  }
+  .masonry-simple__items-row:nth-child(3n+2) .masonry-simple__item:nth-child(2) {
+    grid-column: 1/-1;
+  }
+  .masonry-simple__items-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 360px) {
+  .masonry-simple__items-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.slogan {
+  background-color: var(--gray-color-100);
+  padding: 32px;
+  border-radius: var(--radius-xl);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+.slogan__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+.slogan__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.slogan-img {
+  background-color: var(--secondary-color-200);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  width: 100%;
+}
+.slogan-img__img-box {
+  width: 100%;
+  height: 302px;
+  position: relative;
+  overflow: hidden;
+}
+.slogan-img__img-main {
+  height: 100%;
+  width: 100%;
+}
+.slogan-img__img-main img,
+.slogan-img__img-main svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.slogan-img__content {
+  position: absolute;
+  z-index: 2px;
+  top: 8px;
+  right: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+.slogan-img__logo {
+  aspect-ratio: 1/1;
+  width: 78px;
+  border: 4px solid var(--white-color);
+  border-radius: var(--radius-base);
+  overflow: hidden;
+}
+.slogan-img__logo img,
+.slogan-img__logo svg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 1279px) {
+  .slogan-img__img-box {
+    height: clamp(196px, -404.4181184669px + 125.0871080139vw, 555px);
+  }
+  .slogan-img__logo {
+    width: clamp(68px, 17.8257839721px + 10.4529616725vw, 98px);
+  }
+}
+@media (max-width: 767px) {
+  .slogan-img {
+    background-color: var(--white-color-170);
+    border-radius: var(--radius-md);
+  }
+}

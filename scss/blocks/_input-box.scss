@@ -176,12 +176,15 @@
   }
 
   &__info {
+    width: 100%;
+    
     input {
       background-color: transparent;
       cursor: pointer;
       font-size: var(--font-size-xs);
       color: var(--dark-color-200);
       transition: all 0.5s;
+      width: 100%;
 
       &::placeholder {
         font-size: var(--font-size-xs);

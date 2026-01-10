@@ -417,6 +417,29 @@
   gap: 32px;
   width: 100%;
 
+  @mixin resetBanner {
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  @mixin linkBg {
+    background-color: var(--gray-color-100);
+    border-radius: var(--radius-base);
+    padding: 4px calculate-clamp(8px, 12px, 1280px, 1023px);
+  }
+
+  &--noBg {
+    @include resetBanner;
+
+    .banner-profile {
+      &__content {
+        padding: 0;
+      }
+    }
+  }
+
   &__img-box {
     background-color: var(--white-color);
     max-width: 280px;
@@ -456,6 +479,24 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media (min-width: $md-desktop-breakpoint)  {
+      &--two {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px 32px;
+      }
+    }
+
+   
+
+    &--bg-links {
+      .banner-profile {
+        &__link {
+          @include linkBg;
+        }
+      }
+    }
   }
 
   &__link {
@@ -493,9 +534,7 @@
 
   @media (max-width: $lg-breakpoint) and (min-width: $tablet-breakpoint) {
     &__link {
-      background-color: var(--gray-color-100);
-      border-radius: var(--radius-base);
-      padding: 4px 8px;
+      @include linkBg;
     }
 
     &__list {
@@ -504,10 +543,7 @@
   }
 
   @media (max-width: $lg-breakpoint) {
-    padding: 0;
-    border-radius: 0;
-    background-color: transparent;
-    border: none;
+    @include resetBanner;
 
     &__img-box {
       display: none;
@@ -600,4 +636,8 @@
       }
     }
   }
+}
+
+.banner {
+  
 }
