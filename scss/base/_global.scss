@@ -1,5 +1,9 @@
 html {
   scroll-behavior: smooth;
+  
+  // &:has(body.open-modal) {
+  //   // overflow: hidden;
+  // }
 }
 
 html,
@@ -171,6 +175,12 @@ body .wrapper {
       width: var(--icon-xs);
       height: var(--icon-xs);
       font-size: var(--icon-xs);
+    }
+
+    &--lg {
+      width: var(--icon-lg);
+      height: var(--icon-lg);
+      font-size: var(--icon-lg);
     }
 
     &--full {
@@ -817,4 +827,31 @@ body .wrapper {
 
 [data-block="clamp-footer"].visible {
   display: block;
+}
+
+.custom-scrolbar {
+  // scrollbar-width: thin; 
+  // scrollbar-color: var(--dark-color-500) var(--gray-color-300);
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--gray-color-300);
+    border-radius: var(--radius-sm);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: var(--radius-sm);
+    background-color: var(--dark-color-500);
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: var(--dark-color-600);
+  }
+
+  &::-webkit-scrollbar-corner {
+    background-color: transparent;
+  }
 }

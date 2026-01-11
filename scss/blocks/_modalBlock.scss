@@ -119,11 +119,22 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 2px 8px;
+    padding: 2px calculate-clamp(8px, 12px, 1023px, 767px);
     min-height: 32px;
     border-radius: var(--radius-sm);
     transition: all 0.5s;
-    width: fit-content;
+    color: var(--dark-color-200);
+
+    &-info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    &-text {
+      color: var(--dark-color-600);
+    }
 
     &:hover {
       background-color: var(--gray-color-200);
@@ -132,18 +143,41 @@
     &.active,
     &:active {
       background-color: var(--secondary-color-200);
-    }
 
-    .icon {
-      width: 28px;
-      height: 28px;
-
-      img,
-      svg {
-        width: 100%;
-        height: 100%;
+      .modalBlock__btn {
+        &-text {
+          color: var(--dark-color-400);
+        }
       }
     }
+  }
+
+  &--active-secondary-color-100 {
+    .modalBlock {
+      &__btn {
+        &.active,
+        &:active {
+          color: var(--secondary-color-100);
+        }
+      }
+    }
+  }
+
+  &__items-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__items-head {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    background-color: var(--gray-color-200);
+    padding: 2px calculate-clamp(8px, 12px, 1023px, 767px);
+    min-height: 32px;
+    border-radius: var(--radius-sm);
   }
 
   &__swiper-box {
@@ -169,7 +203,7 @@
 .languagesModal {
   &__items {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 8px 28px;
   }
 }
@@ -184,15 +218,6 @@
       color: var(--dark-color-600);
       transition: all 0.5s;
     }
-
-    &__btn {
-      &.active,
-      &:active {
-        .modalBlock__btn-text {
-          color: var(--dark-color-400);
-        }
-      }
-    }
   }
 
   &__items {
@@ -202,35 +227,17 @@
   }
 }
 
-.modalSecond {
-  padding: 0;
-
-  &__inner {
-    width: 100%;
-    height: 100%;
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 20px 16px;
-    border-radius: 0;
-  }
-
-  &__header,
-  &__header-block {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  &__content {
-    overflow-x: hidden;
-    overflow-y: auto;
-  }
-}
-
 .modalContent {
+  &--small {
+    .modalContent {
+      &__inner {
+        padding: 20px calculate-clamp(20px, 32px, 1023px, 767px);
+        border-radius: var(--radius-md);
+      }
+    }
+   
+  }
+
   &__inner {
     width: fit-content;
     max-width: 90vw;
@@ -248,10 +255,27 @@
 
   &__header,
   &__footer,
-  &__content {
+  &__content,
+  &__info {
     display: flex;
     flex-direction: column;
+   
+  }
+
+  &__header,
+  &__footer,
+  &__content {
     gap: 20px;
+  }
+
+  &__info {
+    gap: 12px;
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
   .modal-close {
@@ -874,4 +898,62 @@
   &__footer {
     margin-top: auto;
   }
+}
+
+body .wrapper {
+  .modalSecond {
+    padding: 0 0 0 0;
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+    z-index: 999;
+    height: calc(100dvh - var(--header-height, var(--calback-header-height)));
+    overflow: hidden;
+    top: var(--header-height, var(--calback-header-height));
+
+    &__inner {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding: 0;
+      border-radius: 0;
+      background-color: var(--white-color);
+    }
+
+    &__header,
+    &__header-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    &__header {
+      padding: 12px var(--container-inline-padding);
+      background-color: var(--gray-color-100);
+      border-bottom: 1px solid var(--gray-color-300);
+    }
+
+    &__content {
+      padding: 0 var(--container-inline-padding) 12px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__items {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+}
+
+body.scrollBottom .wrapper .modalSecond {
+  top: 0;
+  height: 100dvh;
 }

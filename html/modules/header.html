@@ -1,7 +1,9 @@
 @@include('../sprites/sptite.html') @@include('../sprites/languages.html')
 @@include('../sprites/ai.html')
 
-<header class="header header-scroll  @@if(typeof details !== 'undefined' && details === 'true'){header--details}">
+<header
+  class="header header-scroll @@if(typeof details !== 'undefined' && details === 'true'){header--details}"
+>
   <div class="header-top">
     <div
       class="container @@if(typeof full !== 'undefined' && full === 'true'){container--full}"
@@ -444,9 +446,8 @@
               <div class="menu__items">
                 <button
                   class="button button--bg-gray-200 button--md button--rounded-3xl modal-open menu__item-big"
-                  data-modal="languagesModal"
+                  data-modal="languagesMobileModal"
                   aria-label="Открыть модальное окно с выбором языка"
-                  data-close-menu
                 >
                   <div class="button__block">
                     <span class="icon">
@@ -467,9 +468,8 @@
 
                 <button
                   class="button button--bg-gray-200 button--md button--rounded-3xl modal-open menu__item-big"
-                  data-modal="currenciesModal"
+                  data-modal="currenciesMobileModal"
                   aria-label="Открыть модальное окно с выбором валюты"
-                  data-close-menu
                 >
                   <div class="button__block">
                     <span class="icon">
@@ -813,14 +813,13 @@
               </li>
 
               <li class="menu__link">
-                <a
-                  href="#"
-                  aria-label="Перейти на страницу Buy"
-                  title="Buy"
-                  class="link p2 medium-font"
-                  data-close-menu
-                  >Buy</a
+                <button
+                  type="button"
+                  class="link p2 medium-font modal-open"
+                  data-modal="subMenuMobileModal"
                 >
+                  Buy
+                </button>
               </li>
 
               <li class="menu__link">
@@ -857,24 +856,22 @@
               </li>
 
               <li class="menu__link">
-                <a
-                  href="#"
-                  aria-label="Перейти на страницу Companies"
-                  title="Companies"
-                  class="link p2 medium-font"
-                  data-close-menu
-                  >Companies</a
+                <button
+                  type="button"
+                  class="link p2 medium-font modal-open"
+                  data-modal="subMenuMobileModal"
                 >
+                  Companies
+                </button>
               </li>
             </ul>
 
             <footer class="menu__footer">
               <div class="menu__btns">
-                <a
-                  href="#"
-                  aria-label="Перейти на страницу All projects"
-                  title="All projects"
-                  class="button button--bg-primary-100 button--rounded-md"
+                <button
+                  type="button"
+                  class="button button--bg-primary-100 button--rounded-md modal-open"
+                  data-modal="allProjectsMobileModal"
                 >
                   <span class="p3">All projects</span>
 
@@ -883,7 +880,7 @@
                       <use xlink:href="#arrow-line-icon"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </footer>
           </div>

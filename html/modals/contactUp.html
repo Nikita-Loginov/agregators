@@ -1,29 +1,32 @@
-<div class="modalBlock contactModal modalBox modalBlock--media-fit">
-  <div class="modalBlock__inner marketModal__inner" style="max-width: 410px">
-    <header class="modalBlock__head modalBlock__head--static">
-      <div class="modalBlock__head-block" style="margin-left: auto">
-        <button
-          class="button button--cub button--bg-secondary-200 button--cub-md-add modal-close"
-          type="button"
-          aria-label="Закрыть модалку"
-        >
-          <span class="icon">
-            <svg>
-              <use xlink:href="#close-icon"></use>
-            </svg>
-          </span>
-        </button>
+<div
+  class="modalBlock modalContent contactUpModal modalContent--small modalBlock--media-fit"
+>
+  <div
+    class="modalBlock__inner modalContent__inner "
+    style="max-width: 410px"
+  >
+    <div class="modalBlock__head" style="margin-left: auto">
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon text-dark-100">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <div class="modalContent__content">
+      <div class="modalContent__header">
+        <p class="h5 text-dark-100 text-center">Contact Us</p>
       </div>
-    </header>
 
-    <div class="modalBlock__content">
-      <form class="contact-form form" novalidate>
-        <div class="contact-form__head">
-          <p class="h6 text-secondary-300">Contact specialist</p>
-        </div>
-
-        <div class="contact-form__content">
-          <div class="contact-form__inputs">
+      <form class="modalContent__info form" novalidate>
+        <div class="form__content">
+          <div class="form__inputs">
             <div class="input-box form__item">
               <label class="input-box__content">
                 <div class="input-box__info">
@@ -47,32 +50,6 @@
               </label>
 
               <p class="input-box__errors p4 form__errors"></p>
-            </div>
-
-            <div class="form__item" data-loader-relative>
-              <div class="loader" data-loader-box>
-                <span></span>
-              </div>
-
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-loading="true"
-              >
-                <select
-                  id="service-select"
-                  data-placeholder="Service"
-                  name="select"
-                  required
-                >
-                  <option value="">Service</option>
-                  <option value="1">Services 1</option>
-                  <option value="2">Services 2</option>
-                  <option value="3">Services 3</option>
-                  <option value="4">Services 4</option>
-                </select>
-
-                <div class="form__errors p4 select-box__errors"></div>
-              </div>
             </div>
 
             <div class="input-box form__item input-tel-wrapper">
@@ -136,20 +113,21 @@
           </label>
         </div>
 
-        <div class="contact-form__footer">
-          <div class="contact-form__btns">
+        <div class="form__footer">
+          <div class="form__btns">
             <button
-              class="button button--bg-primary-100 modal-open"
+              class="button button--bg-primary-100 br-el--rounded-md modal-open"
               type="submit"
-              data-modal="successRequestModal"
+              data-modal="successThirdModal"
+              style="min-height: 48px"
             >
-              <p class="p2 medium-font">Send</p>
-
               <span class="icon">
                 <svg>
-                  <use xlink:href="#arrow-right-line-icon"></use>
+                  <use xlink:href="#email-icon"></use>
                 </svg>
               </span>
+
+              <p class="p2 medium-font">Send Email</p>
             </button>
           </div>
         </div>

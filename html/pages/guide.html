@@ -3,7 +3,7 @@
   @@include('../modules/head.html', { "title" : "Профиль гайда", "links" :
   ["./css/object.css", "./css/lib/swiper.min.css",
   "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"]
+   ]
   })
   <body class="white-page">
     <div class="wrapper">
@@ -1309,24 +1309,22 @@
                                 </div>
 
                                 <div class="banner-promo__btns">
-                                  <a
-                                    href="#"
-                                    aria-label="Перейти на страницу Contact Seller"
-                                    title="Contact Seller"
-                                    class="button button--bg-primary-100 button--lg button--rounded-3xl"
+                                  <button
+                                  
+                                  title="Contact Seller"
+                                  class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
+                                  data-modal="contactUpModal"
+                                >
+                                  <span class="p2 medium-font"
+                                    >Contact Seller</span
                                   >
-                                    <span class="p2 medium-font"
-                                      >Contact Seller</span
-                                    >
 
-                                    <span class="icon">
-                                      <svg>
-                                        <use
-                                          xlink:href="#arrow-line-icon"
-                                        ></use>
-                                      </svg>
-                                    </span>
-                                  </a>
+                                  <span class="icon">
+                                    <svg>
+                                      <use xlink:href="#arrow-line-icon"></use>
+                                    </svg>
+                                  </span>
+                                </button>
                                 </div>
                               </div>
                             </div>

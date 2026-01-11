@@ -2,9 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Companies agents", "links" :
   ["./css/companies.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
-  "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"]
-  })
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css", ] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html', {"details": "true"})
@@ -532,15 +530,14 @@
                                   </li>
                                 </ul>
 
-                                <div class="card-box__btns card-box__btns--two">
-                                  <a
-                                    href="/author-detail.html"
-                                    aria-label="Перейти к автору"
+                                <div class="card-box__btns">
+                                  <button
                                     title="Antonio Fagundes"
-                                    class="button button--bg-secondary-300"
+                                    class="button modal-open button--bg-secondary-300"
+                                    data-modal="contactUpModal"
                                   >
                                     <span class="p3 medium-font">Contact</span>
-                                  </a>
+                                  </button>
 
                                   <a
                                     href="/author-detail.html"
@@ -624,15 +621,14 @@
                                   </li>
                                 </ul>
 
-                                <div class="card-box__btns card-box__btns--two">
-                                  <a
-                                    href="/author-detail.html"
-                                    aria-label="Перейти к автору"
+                                <div class="card-box__btns">
+                                  <button
                                     title="Antonio Fagundes"
-                                    class="button button--bg-secondary-300"
+                                    class="button modal-open button--bg-secondary-300"
+                                    data-modal="contactUpModal"
                                   >
                                     <span class="p3 medium-font">Contact</span>
-                                  </a>
+                                  </button>
 
                                   <a
                                     href="/author-detail.html"
@@ -736,11 +732,10 @@
                                     </span>
                                   </a>
 
-                                  <a
-                                    href="/author-detail.html"
-                                    aria-label="Перейти к автору"
+                                  <button
                                     title="Antonio Fagundes"
-                                    class="button button--bg-secondary-300"
+                                    class="button button--bg-secondary-300 modal-open"
+                                    data-modal="contactUpModal"
                                   >
                                     <span class="icon">
                                       <svg>
@@ -751,7 +746,7 @@
                                     <span class="p3 medium-font"
                                       >Contact Specialist</span
                                     >
-                                  </a>
+                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -949,11 +944,10 @@
                                     </span>
                                   </a>
 
-                                  <a
-                                    href="/author-detail.html"
-                                    aria-label="Перейти к автору"
+                                  <button
                                     title="Antonio Fagundes"
-                                    class="button button--bg-secondary-300"
+                                    class="button button--bg-secondary-300 modal-open"
+                                    data-modal="contactUpModal"
                                   >
                                     <span class="icon">
                                       <svg>
@@ -964,7 +958,7 @@
                                     <span class="p3 medium-font"
                                       >Contact Specialist</span
                                     >
-                                  </a>
+                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -1588,10 +1582,7 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
-      defer
-    ></script>
+
     <script src="/js/companies.js" type="module"></script>
   </body>
 </html>

@@ -1,0 +1,64 @@
+.succesBox {
+  &__inner {
+    padding: calculate-clamp(16px, 32px, 480px, 375px);;
+    max-width: 360px;
+    min-height: calculate-clamp(300px, 540px, 480px, 375px);
+  }
+
+  &__content,
+  &__info,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &__content,
+  &__info {
+    flex:1;
+  }
+
+  &__info {
+    justify-content: center;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 63px;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--secondary-color-100);
+    color: var(--white-color);
+
+    &--primary-500 {
+      background-color: var(--primary-color-500);
+      color: var(--white-color);
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__btns {
+    display: grid;
+    gap: 8px;
+
+    &--two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 375px) {    
+    &__btns {
+      display: flex;
+      flex-direction: column;
+     
+    }
+  }
+}

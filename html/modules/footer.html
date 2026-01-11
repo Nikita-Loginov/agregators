@@ -1,7 +1,4 @@
-<div class="fixed-block">
-  @@include('../modules/cookies.html')
-</div>
-
+<div class="fixed-block">@@include('../modules/cookies.html')</div>
 
 @@if (typeof inner !== 'undefined' && inner !== 'true') {
 <footer class="footer">
@@ -620,7 +617,20 @@
   </div>
 </footer>
 } @@include('../modals/languages.html') @@include('../modals/currencies.html')
-@@include('../modals/success.html') @@include('../modals/successSecond.html') @@include('../modals/successRequest.html')
+@@include('../modals/success.html') @@include('../modals/wrong.html')
+@@include('../modals/successSecond.html')
+@@include('../modals/wrongSecond.html')
+@@include('../modals/successThird.html')
+@@include('../modals/successRequest.html')
+@@include('../modals/modalSeconds/languages-mobile.html')
+@@include('../modals/modalSeconds/currencies-mobile.html')
+@@include('../modals/modalSeconds/allProjects.html')
+@@include('../modals/modalSeconds/subMenu.html')
+@@include('../modals/contactUp.html')
 
 <script src="/js/lib/imask.min.js" type="module"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+  defer
+></script>
 <script src="/js/page.js" type="module"></script>

@@ -1,3 +1,5 @@
+import { closeAllModals } from "./modal.js";
+
 const toggleMenu = (e) => {
   const { target } = e;
 
@@ -5,9 +7,17 @@ const toggleMenu = (e) => {
 
   const menu = target.closest(".menu");
 
+  const openMenus = document.querySelectorAll(".menu.open");
+
+  if (openMenus.length > 0) {
+    closeAllModals()
+  }
+
   menu.classList.toggle("open");
   document.body.classList.toggle("open-modal");
   document.body.classList.toggle("open-decor");
+
+ 
 };
 
 const closeMenuOnItemClick = (e) => {
@@ -37,9 +47,16 @@ const closeMenuOnOutsideClick = (e) => {
   const { target } = e;
 
   const openMenus = document.querySelectorAll(".menu.open");
+  if (openMenus.length === 0) return;
 
   openMenus.forEach((menu) => {
-    if (!menu.contains(target) && !target.closest(".menu__burger")) {
+    const isClickInsideMenu = menu.contains(target);
+    const isClickOnBurger = target.closest(".menu__burger");
+    const isClickOnModal = target.closest(".modalSecond");
+    const isClickOnHeader = target.closest("header");
+
+    if (!isClickInsideMenu && !isClickOnBurger && !isClickOnModal && !isClickOnHeader) {
+      closeAllModals();
       closeMenu(menu);
     }
   });

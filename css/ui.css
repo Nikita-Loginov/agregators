@@ -32,7 +32,7 @@
   overflow: hidden;
 }
 .accordeon__item.active .accordeon__answer {
-  padding: 10px 0 0 0;
+  padding: 10px 0 0 0 !important;
 }
 .accordeon__item.active .ui__box {
   padding-block: 10px;

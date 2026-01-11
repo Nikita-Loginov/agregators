@@ -89,6 +89,7 @@ html {
   --icon-sm: 16px;
   --icon-base: 20px;
   --icon-md: 24px;
+  --icon-lg: 28px;
 
   --container-inline-padding: #{calculate-clamp(16px, 40px, 1024px, 767px)};
   --container-inline-full-padding: #{calculate-clamp(16px, 20px, 1024px, 767px)};

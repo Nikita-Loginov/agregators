@@ -26,7 +26,7 @@
     overflow: hidden;
     &.active {
       .accordeon__answer {
-        padding: 10px 0 0 0;
+        padding: 10px 0 0 0 !important;
       }
 
       .ui__box {

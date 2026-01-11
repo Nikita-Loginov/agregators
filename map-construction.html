@@ -7,6 +7,7 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>Карта construction</title>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
   <link rel="stylesheet" href="/css/page.css" />
 
   
@@ -78,11 +79,13 @@
     />
   </symbol>
 
-  <symbol id="star-icon" viewBox="0 0 24 24" fill="none">
+  <symbol id="star-icon" viewBox="0 0 21 20" fill="none">
     <path
       xmlns="http://www.w3.org/2000/svg"
-      d="M2.33496 10.3363C2.02171 10.0466 2.19187 9.5229 2.61557 9.47267L8.61914 8.76058C8.79182 8.7401 8.94182 8.63166 9.01465 8.47376L11.5469 2.98397C11.7256 2.59654 12.2764 2.59646 12.4551 2.9839L14.9873 8.47364C15.0601 8.63155 15.2092 8.74028 15.3818 8.76075L21.3857 9.47267C21.8094 9.5229 21.9791 10.0468 21.6659 10.3364L17.2278 14.4414C17.1001 14.5595 17.0433 14.7352 17.0772 14.9058L18.255 20.8355C18.3382 21.2539 17.8928 21.5782 17.5205 21.3698L12.2451 18.4161C12.0934 18.3312 11.9091 18.3316 11.7573 18.4165L6.48144 21.369C6.10913 21.5774 5.66294 21.2539 5.74609 20.8354L6.92414 14.9061C6.95803 14.7356 6.90134 14.5594 6.77367 14.4414L2.33496 10.3363Z"
-      fill="currentColor"
+      d="M0.661743 8.14292C0.348493 7.85324 0.518651 7.32954 0.942348 7.27931L6.94592 6.56722C7.11861 6.54674 7.2686 6.4383 7.34143 6.2804L9.87366 0.790614C10.0524 0.403178 10.6032 0.403104 10.7819 0.79054L13.3141 6.28029C13.3869 6.43819 13.5359 6.54692 13.7086 6.56739L19.7125 7.27931C20.1362 7.32954 20.3059 7.85339 19.9927 8.14308L15.5545 12.2481C15.4269 12.3661 15.37 12.5419 15.4039 12.7124L16.5818 18.6421C16.6649 19.0606 16.2196 19.3848 15.8473 19.1764L10.5719 16.2228C10.4202 16.1378 10.2358 16.1382 10.0841 16.2232L4.80822 19.1757C4.43591 19.3841 3.98972 19.0606 4.07288 18.6421L5.25093 12.7128C5.28482 12.5422 5.22812 12.3661 5.10045 12.248L0.661743 8.14292Z"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
     />
   </symbol>
 
@@ -749,16 +752,6 @@
       xmlns="http://www.w3.org/2000/svg"
       d="M0.5 10.5L10.5 0.5M10.5 0.5H2.5M10.5 0.5V8.5"
       stroke="white"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    />
-  </symbol>
-
-  <symbol id="star-icon" viewBox="0 0 21 21" fill="none">
-    <path
-      d="M0.661133 8.14292C0.347883 7.85324 0.518041 7.32954 0.941738 7.27931L6.94531 6.56722C7.118 6.54674 7.26799 6.4383 7.34082 6.2804L9.87305 0.790614C10.0518 0.403178 10.6025 0.403104 10.7813 0.79054L13.3135 6.28029C13.3863 6.43819 13.5353 6.54692 13.708 6.56739L19.7119 7.27931C20.1356 7.32954 20.3053 7.85339 19.992 8.14308L15.5539 12.2481C15.4263 12.3661 15.3694 12.5419 15.4033 12.7124L16.5812 18.6421C16.6643 19.0606 16.219 19.3848 15.8467 19.1764L10.5713 16.2228C10.4196 16.1378 10.2352 16.1382 10.0835 16.2232L4.80761 19.1757C4.4353 19.3841 3.98911 19.0606 4.07227 18.6421L5.25032 12.7128C5.28421 12.5422 5.22751 12.3661 5.09984 12.248L0.661133 8.14292Z"
-      fill="currentColor"
-      stroke="currentColor"
       stroke-linecap="round"
       stroke-linejoin="round"
     />
@@ -1840,7 +1833,9 @@
 </svg>
 
 
-<header class="header header-scroll  ">
+<header
+  class="header header-scroll "
+>
   <div class="header-top">
     <div
       class="container container--full"
@@ -2283,9 +2278,8 @@
               <div class="menu__items">
                 <button
                   class="button button--bg-gray-200 button--md button--rounded-3xl modal-open menu__item-big"
-                  data-modal="languagesModal"
+                  data-modal="languagesMobileModal"
                   aria-label="Открыть модальное окно с выбором языка"
-                  data-close-menu
                 >
                   <div class="button__block">
                     <span class="icon">
@@ -2306,9 +2300,8 @@
 
                 <button
                   class="button button--bg-gray-200 button--md button--rounded-3xl modal-open menu__item-big"
-                  data-modal="currenciesModal"
+                  data-modal="currenciesMobileModal"
                   aria-label="Открыть модальное окно с выбором валюты"
-                  data-close-menu
                 >
                   <div class="button__block">
                     <span class="icon">
@@ -2652,14 +2645,13 @@
               </li>
 
               <li class="menu__link">
-                <a
-                  href="#"
-                  aria-label="Перейти на страницу Buy"
-                  title="Buy"
-                  class="link p2 medium-font"
-                  data-close-menu
-                  >Buy</a
+                <button
+                  type="button"
+                  class="link p2 medium-font modal-open"
+                  data-modal="subMenuMobileModal"
                 >
+                  Buy
+                </button>
               </li>
 
               <li class="menu__link">
@@ -2696,24 +2688,22 @@
               </li>
 
               <li class="menu__link">
-                <a
-                  href="#"
-                  aria-label="Перейти на страницу Companies"
-                  title="Companies"
-                  class="link p2 medium-font"
-                  data-close-menu
-                  >Companies</a
+                <button
+                  type="button"
+                  class="link p2 medium-font modal-open"
+                  data-modal="subMenuMobileModal"
                 >
+                  Companies
+                </button>
               </li>
             </ul>
 
             <footer class="menu__footer">
               <div class="menu__btns">
-                <a
-                  href="#"
-                  aria-label="Перейти на страницу All projects"
-                  title="All projects"
-                  class="button button--bg-primary-100 button--rounded-md"
+                <button
+                  type="button"
+                  class="button button--bg-primary-100 button--rounded-md modal-open"
+                  data-modal="allProjectsMobileModal"
                 >
                   <span class="p3">All projects</span>
 
@@ -2722,7 +2712,7 @@
                       <use xlink:href="#arrow-line-icon"></use>
                     </svg>
                   </span>
-                </a>
+                </button>
               </div>
             </footer>
           </div>
@@ -4381,8 +4371,7 @@
         </section>
       </main>
 
-      <div class="fixed-block">
-  <div
+      <div class="fixed-block"><div
   class="cookies"
   data-storage-key="cookies-agregators"
   data-storage-type="localstorage"
@@ -4425,11 +4414,9 @@
     </div>
   </div>
 </div>
-
 </div>
 
-
- <div class="modalBlock languagesModal ">
+ <div class="modalBlock languagesModal modalBlock--media-fit">
   <div class="modalBlock__inner">
     <header class="modalBlock__head">
       <button
@@ -4437,7 +4424,7 @@
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon">
+        <span class="icon icon--little text-dark-100">
           <svg>
             <use xlink:href="#close-icon"></use>
           </svg>
@@ -4455,7 +4442,7 @@
             class="languagesModal__item modalBlock__btn active"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#rus-lang"></use>
               </svg>
@@ -4469,7 +4456,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#kasax-lang"></use>
               </svg>
@@ -4483,7 +4470,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#esti-lang"></use>
               </svg>
@@ -4497,7 +4484,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#français-lang"></use>
               </svg>
@@ -4511,7 +4498,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#español-lang"></use>
               </svg>
@@ -4525,7 +4512,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#rus-lang"></use>
               </svg>
@@ -4539,7 +4526,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#kasax-lang"></use>
               </svg>
@@ -4553,7 +4540,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#esti-lang"></use>
               </svg>
@@ -4567,7 +4554,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#français-lang"></use>
               </svg>
@@ -4581,7 +4568,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#español-lang"></use>
               </svg>
@@ -4595,7 +4582,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#rus-lang"></use>
               </svg>
@@ -4609,7 +4596,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#kasax-lang"></use>
               </svg>
@@ -4623,7 +4610,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#esti-lang"></use>
               </svg>
@@ -4637,7 +4624,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#français-lang"></use>
               </svg>
@@ -4651,7 +4638,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#español-lang"></use>
               </svg>
@@ -4665,7 +4652,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#rus-lang"></use>
               </svg>
@@ -4679,7 +4666,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#kasax-lang"></use>
               </svg>
@@ -4693,7 +4680,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#esti-lang"></use>
               </svg>
@@ -4707,7 +4694,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#français-lang"></use>
               </svg>
@@ -4721,7 +4708,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#español-lang"></use>
               </svg>
@@ -4735,7 +4722,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#rus-lang"></use>
               </svg>
@@ -4749,7 +4736,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#kasax-lang"></use>
               </svg>
@@ -4763,7 +4750,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#esti-lang"></use>
               </svg>
@@ -4777,7 +4764,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#français-lang"></use>
               </svg>
@@ -4791,7 +4778,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#español-lang"></use>
               </svg>
@@ -4805,7 +4792,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#rus-lang"></use>
               </svg>
@@ -4819,7 +4806,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#kasax-lang"></use>
               </svg>
@@ -4833,7 +4820,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#esti-lang"></use>
               </svg>
@@ -4847,7 +4834,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#français-lang"></use>
               </svg>
@@ -4861,7 +4848,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#español-lang"></use>
               </svg>
@@ -4875,7 +4862,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#rus-lang"></use>
               </svg>
@@ -4889,7 +4876,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#kasax-lang"></use>
               </svg>
@@ -4903,7 +4890,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#esti-lang"></use>
               </svg>
@@ -4917,7 +4904,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#français-lang"></use>
               </svg>
@@ -4931,7 +4918,7 @@
             class="languagesModal__item modalBlock__btn"
             type="button"
           >
-            <span class="icon">
+            <span class="icon icon--lg">
               <svg>
                 <use xlink:href="#español-lang"></use>
               </svg>
@@ -4944,7 +4931,7 @@
     </div>
   </div>
 </div>
- <div class="modalBlock currenciesModal">
+ <div class="modalBlock currenciesModal modalBlock--media-fit">
   <div class="modalBlock__inner">
     <header class="modalBlock__head">
       <button
@@ -4966,31 +4953,31 @@
 
         <div class="currenciesModal__items">
           <button class="currenciesModal__item modalBlock__btn active">
-            <span class="p2">USD</span>
+            <span class="p2 text-uppercase">USD</span>
 
             <span class="p3 modalBlock__btn-text">United States dollar</span>
           </button>
 
           <button class="currenciesModal__item modalBlock__btn">
-            <span class="p2">EUR</span>
+            <span class="p2 text-uppercase">EUR</span>
 
             <span class="p3 modalBlock__btn-text">Euro</span>
           </button>
 
           <button class="currenciesModal__item modalBlock__btn">
-            <span class="p2">GBP</span>
+            <span class="p2 text-uppercase">GBP</span>
 
             <span class="p3 modalBlock__btn-text">Great Britain Pound</span>
           </button>
 
           <button class="currenciesModal__item modalBlock__btn">
-            <span class="p2">RUB</span>
+            <span class="p2 text-uppercase">RUB</span>
 
             <span class="p3 modalBlock__btn-text">Russian Ruble</span>
           </button>
 
           <button class="currenciesModal__item modalBlock__btn">
-            <span class="p2">AED</span>
+            <span class="p2 text-uppercase">AED</span>
 
             <span class="p3 modalBlock__btn-text">UAE Dirham</span>
           </button>
@@ -5029,7 +5016,58 @@
   </div>
 </div>
  <div
-  class="modalBlock modalContent successSecondModal modalBlock--media-fit"
+  class="modalBlock modalContent wrongModal modalBlock--media-fit"
+>
+  <div
+    class="modalBlock__inner modalContent__inner modalContent__inner--small"
+    style="max-width: 410px"
+  >
+    <div class="modalBlock__head" style="margin-left: auto">
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon text-dark-100">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <div class="modalContent__content">
+      <div class="modalContent__info">
+        <div class="modalContent__block">
+          <span class="icon icon--lg text-primary-500">
+            <svg>
+              <use xlink:href="#info-icon"></use>
+            </svg>
+          </span>
+
+          <p class="h5 text-primary-500">Something Went Wrong</p>
+        </div>
+
+        <div class="textbox">
+          <p class="p2 text-dark-500">
+            We were unable to process your newsletter subscription due to a
+            technical error. Our team has been notified, and we're working to
+            fix it. Please try again in a few minutes.
+          </p>
+        </div>
+      </div>
+
+      <div class="modalContent__footer">
+        <button class="button button--bg-primary-100 modal-close">
+          <p class="p2 medium-font">Close</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modalBlock modalContent successSecondModal modalContent--small modalBlock--media-fit"
 >
   <div class="modalBlock__inner modalContent__inner modalContent__inner--small" style="max-width: 410px">
     <div class="modalBlock__head " style="margin-left: auto;">
@@ -5047,7 +5085,7 @@
     </div>
 
     <div class="modalContent__content">
-      <div class="modalContent__content">
+      <div class="modalContent__info">
         <p class="h5">Thanks for subscribing!</p>
 
         <div class="textbox">
@@ -5067,7 +5105,133 @@
     </div>
   </div>
 </div>
- <div class="modalBlock modalContent successRequestModal modalBlock--media-fit">
+
+<div
+  class="modalBlock modalContent succesBox wrongThirdModal modalBlock--media-fit"
+>
+  <div class="modalBlock__inner succesBox__inner modalContent__inner">
+    <div class="modalBlock__head" style="margin-left: auto">
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon text-dark-100">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <div class="succesBox__content">
+      <div class="succesBox__info">
+        <div class="succesBox__icon succesBox__icon--primary-500">
+          <span class="icon icon--big">
+            <svg>
+              <use xlink:href="#info-icon"></use>
+            </svg>
+          </span>
+        </div>
+
+        <div class="succesBox__details">
+          <p class="h5 text-primary-500">Something Went Wrong</p>
+
+          <div class="textbox text-dark-500">
+            <p class="p2">
+              We were unable to send your invoice due to a technical error. Our
+              team has been notified, and we're working to fix it. Please try
+              again.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="succesBox__footer">
+        <div class="succesBox__btns succesBox__btns--two">
+          <button class="button button--bg-primary-200 modal-close">
+            <span class="icon icon--sm">
+              <svg>
+                <use xlink:href="#close-icon"></use>
+              </svg>
+            </span>
+
+            <p class="p2 medium-font">Close</p>
+          </button>
+
+          <button class="button button--bg-primary-100 modal-close">
+            <span class="icon icon--sm">
+              <svg>
+                <use xlink:href="#undo-icon"></use>
+              </svg>
+            </span>
+
+            <p class="p2 medium-font">Try again</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modalBlock modalContent succesBox successThirdModal modalBlock--media-fit"
+>
+  <div class="modalBlock__inner succesBox__inner modalContent__inner">
+    <div class="modalBlock__head" style="margin-left: auto">
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon text-dark-100">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <div class="succesBox__content">
+      <div class="succesBox__info">
+        <div class="succesBox__icon">
+          <span class="icon icon--big">
+            <svg>
+              <use xlink:href="#checks-icon"></use>
+            </svg>
+          </span>
+        </div>
+
+        <div class="succesBox__details">
+          <p class="h5 text-dark-100">Thank you, $Name!</p>
+
+          <div class="textbox text-dark-500">
+            <p class="p2">
+              Your message has been sent successfully. We will reply  to your
+              email shortly.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="succesBox__footer">
+        <div class="succesBox__btns">
+          <button class="button button--bg-secondary-200 modal-close">
+            <span class="icon icon--sm">
+              <svg>
+                <use xlink:href="#close-icon"></use>
+              </svg>
+            </span>
+
+            <p class="p2 medium-font">Close</p>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modalBlock modalContent successRequestModal modalBlock--media-fit">
   <div class="modalBlock__inner modalContent__inner">
     <header class="modalContent__header">
       <p class="h4">Request sent</p>
@@ -5091,8 +5255,793 @@
   </div>
 </div>
 
+<div class="modalBlock languagesMobileModal modalSecond">
+  <div class="modalSecond__inner">
+    <div class="modalSecond__header">
+      <div class="modalSecond__header-block">
+        <button
+          class="button button--cub button--cub-md-add button--bg-secondary-200 modal-close"
+        >
+          <span class="icon icon--little" style="rotate: -180deg">
+            <svg>
+              <use xlink:href="#arrow-line-icon"></use>
+            </svg>
+          </span>
+        </button>
+
+        <p class="h4 semibold-font text-dark-100">Languages</p>
+      </div>
+
+      <div class="modalSecond__header-block">
+        <span class="icon icon--big text-secondary-300">
+          <svg>
+            <use xlink:href="#lang-icon"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <div class="modalSecond__content custom-scrolbar">
+      <div class="modalSecond__items" role="listbox" aria-label="Список доступных стран">
+        <button
+          class="modalBlock__btn active modal-close"
+          aria-label="Выбрать язык Русский"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#rus-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Русский</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Қазақ"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#kasax-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Қазақ</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Eesti"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#esti-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Eesti</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Français"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#français-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Français</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Español"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#español-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Español</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Русский"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#rus-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Русский</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Қазақ"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#kasax-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Қазақ</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Eesti"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#esti-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Eesti</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Français"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#français-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Français</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Español"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#español-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Español</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Русский"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#rus-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Русский</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Қазақ"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#kasax-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Қазақ</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Eesti"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#esti-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Eesti</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Français"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#français-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Français</span>
+        </button>
+
+        <button
+          class="modalBlock__btn modal-close"
+          aria-label="Выбрать язык Español"
+          type="button"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#español-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p2">Español</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modalBlock currenciesMobileModal modalSecond">
+  <div class="modalSecond__inner">
+    <div class="modalSecond__header">
+      <div class="modalSecond__header-block">
+        <button
+          class="button button--cub button--cub-md-add button--bg-secondary-200 modal-close"
+        >
+          <span class="icon icon--little" style="rotate: -180deg">
+            <svg>
+              <use xlink:href="#arrow-line-icon"></use>
+            </svg>
+          </span>
+        </button>
+
+        <p class="h4 semibold-font text-dark-100">Currencies</p>
+      </div>
+
+      <div class="modalSecond__header-block">
+        <span class="icon icon--big text-dark-100">
+          <svg>
+            <use xlink:href="#currency-icon"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <div class="modalSecond__content custom-scrolbar">
+      <div class="modalSecond__items" role="listbox" aria-label="Список доступных валют">
+        <button class="modalBlock__btn modal-close" type="button">
+          <div class="modalBlock__btn-info">
+            <span class="p2 text-uppercase">USD</span>
+
+            <span class="p3 modalBlock__btn-text">United States dollar</span>
+          </div>
+        </button>
+
+        <button class="modalBlock__btn modal-close" type="button">
+          <div class="modalBlock__btn-info">
+            <span class="p2 text-uppercase">EUR</span>
+
+            <span class="p3 modalBlock__btn-text">Euro</span>
+          </div>
+        </button>
+
+        <button class="modalBlock__btn modal-close" type="button">
+          <div class="modalBlock__btn-info">
+            <span class="p2 text-uppercase">GBP</span>
+
+            <span class="p3 modalBlock__btn-text">Great Britain Pound</span>
+          </div>
+        </button>
+
+        <button class="modalBlock__btn active modal-close" type="button">
+          <div class="modalBlock__btn-info">
+            <span class="p2 text-uppercase">RUB</span>
+
+            <span class="p3 modalBlock__btn-text">Russian Ruble</span>
+          </div>
+        </button>
+
+        <button class="modalBlock__btn modal-close" type="button">
+          <div class="modalBlock__btn-info">
+            <span class="p2 text-uppercase">AED</span>
+
+            <span class="p3 modalBlock__btn-text">UAE Dirham</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modalBlock allProjectsMobileModal modalSecond">
+  <div class="modalSecond__inner">
+    <div class="modalSecond__header">
+      <div class="modalSecond__header-block">
+        <button
+          class="button button--cub button--cub-md-add button--bg-secondary-200 modal-close"
+        >
+          <span class="icon icon--little" style="rotate: -180deg">
+            <svg>
+              <use xlink:href="#arrow-line-icon"></use>
+            </svg>
+          </span>
+        </button>
+
+        <p class="h4 semibold-font text-dark-100">All Projects</p>
+      </div>
+
+      <div class="modalSecond__header-block">
+        <span class="icon icon--big text-dark-100">
+          <svg>
+            <use xlink:href="#star-icon"></use>
+          </svg>
+        </span>
+      </div>
+    </div>
+
+    <div class="modalSecond__content custom-scrolbar">
+      <div class="modalBlock__items-block">
+        <div class="modalBlock__items-head">
+          <p class="p3 medium-font">Southern Europe</p>
+        </div>
+
+        <ul class="modalSecond__items" aria-label="Список доступных проектов">
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn  modal-close"
+              aria-label="Перейти на страницу проектов в России"
+              title="Russian"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#rus-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Russian</span>
+            </a>
+          </li>
+
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Қазақ"
+              type="button"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#kasax-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Қазақ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="modalBlock__items-block">
+        <div class="modalBlock__items-head">
+          <p class="p3 medium-font">North America</p>
+        </div>
+
+        <ul class="modalSecond__items" aria-label="Список доступных проектов">
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Eesti"
+              title="Eesti"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#esti-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Eesti</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="modalBlock__items-block">
+        <div class="modalBlock__items-head">
+          <p class="p3 medium-font">Asia</p>
+        </div>
+
+        <ul class="modalSecond__items" aria-label="Список доступных проектов">
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Français"
+              title="Français"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#français-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Français</span>
+            </a>
+          </li>
+
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Español"
+              title="Español"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#español-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Español</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="modalBlock__items-block">
+        <div class="modalBlock__items-head">
+          <p class="p3 medium-font">Southern Europe</p>
+        </div>
+
+        <ul class="modalSecond__items" aria-label="Список доступных проектов">
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn  modal-close"
+              aria-label="Перейти на страницу проектов в России"
+              title="Russian"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#rus-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Russian</span>
+            </a>
+          </li>
+
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Қазақ"
+              type="button"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#kasax-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Қазақ</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="modalBlock__items-block">
+        <div class="modalBlock__items-head">
+          <p class="p3 medium-font">North America</p>
+        </div>
+
+        <ul class="modalSecond__items" aria-label="Список доступных проектов">
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Eesti"
+              title="Eesti"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#esti-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Eesti</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="modalBlock__items-block">
+        <div class="modalBlock__items-head">
+          <p class="p3 medium-font">Asia</p>
+        </div>
+
+        <ul class="modalSecond__items" aria-label="Список доступных проектов">
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Français"
+              title="Français"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#français-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Français</span>
+            </a>
+          </li>
+
+          <li class="modalSecond__items-box">
+            <a
+              href="/catalogy.html"
+              class="modalBlock__btn modal-close"
+              aria-label="Перейти на страницу проектов в Español"
+              title="Español"
+            >
+              <span class="icon icon--lg">
+                <svg>
+                  <use xlink:href="#español-lang"></use>
+                </svg>
+              </span>
+
+              <span class="p2">Español</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modalBlock subMenuMobileModal modalSecond modalBlock--active-secondary-color-100"
+>
+  <div class="modalSecond__inner">
+    <div class="modalSecond__header">
+      <div class="modalSecond__header-block">
+        <button
+          class="button button--cub button--cub-md-add button--bg-secondary-200 modal-close"
+        >
+          <span class="icon icon--little" style="rotate: -180deg">
+            <svg>
+              <use xlink:href="#arrow-line-icon"></use>
+            </svg>
+          </span>
+        </button>
+
+        <p class="h4 semibold-font text-dark-100">Buy</p>
+      </div>
+    </div>
+
+    <div class="modalSecond__content custom-scrolbar">
+      <ul class="modalSecond__items modalBlock--active-secondary-color-100">
+        <li class="modalSecond__items-block">
+          <a
+            href="/catalogy.html"
+            aria-label="Перейти на страницу Apartments"
+            title="Apartments"
+            class="modalBlock__btn"
+          >
+            Apartments
+          </a>
+        </li>
+
+        <li class="modalSecond__items-block">
+          <a
+            href="/catalogy.html"
+            aria-label="Перейти на страницу Apartments"
+            title="Villas"
+            class="modalBlock__btn active"
+          >
+            Villas
+          </a>
+        </li>
+
+        <li class="modalSecond__items-block">
+          <a
+            href="/catalogy.html"
+            aria-label="Перейти на страницу Penthouses"
+            title="Penthouses"
+            class="modalBlock__btn"
+          >
+            Penthouses
+          </a>
+        </li>
+
+        <li class="modalSecond__items-block">
+          <a
+            href="/catalogy.html"
+            aria-label="Перейти на страницу Starships"
+            title="Starships"
+            class="modalBlock__btn"
+          >
+            Starships
+          </a>
+        </li>
+
+        <li class="modalSecond__items-block">
+          <a
+            href="/catalogy.html"
+            aria-label="Перейти на страницу Islands"
+            title="Islands"
+            class="modalBlock__btn"
+          >
+            Islands
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modalBlock modalContent contactUpModal modalContent--small modalBlock--media-fit"
+>
+  <div
+    class="modalBlock__inner modalContent__inner "
+    style="max-width: 410px"
+  >
+    <div class="modalBlock__head" style="margin-left: auto">
+      <button
+        class="modalBlock__close modal-close"
+        type="button"
+        aria-label="Закрыть модалку"
+      >
+        <span class="icon text-dark-100">
+          <svg>
+            <use xlink:href="#close-icon"></use>
+          </svg>
+        </span>
+      </button>
+    </div>
+
+    <div class="modalContent__content">
+      <div class="modalContent__header">
+        <p class="h5 text-dark-100 text-center">Contact Us</p>
+      </div>
+
+      <form class="modalContent__info form" novalidate>
+        <div class="form__content">
+          <div class="form__inputs">
+            <div class="input-box form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <input type="text" name="name" placeholder="Name*" required />
+                </div>
+              </label>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+
+            <div class="input-box form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email*"
+                    required
+                  />
+                </div>
+              </label>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+
+            <div class="input-box form__item input-tel-wrapper">
+              <div class="input-box__content">
+                <div class="input-box__info popup-select">
+                  <input type="tel" name="tel" placeholder="Phone*" required />
+                </div>
+              </div>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+
+            <div class="input-box form__item">
+              <label class="input-box__content">
+                <div class="input-box__info">
+                  <textarea
+                    name="message"
+                    placeholder="Type text here*"
+                    required
+                  ></textarea>
+                </div>
+              </label>
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>
+          </div>
+
+          <label class="check-simple form__item">
+            <div class="check-simple__content">
+              <div class="check-simple__custom">
+                <input type="checkbox" required name="policy" />
+
+                <span></span>
+              </div>
+
+              <div class="check-simple__info">
+                <p class="p3">
+                  You agree to the
+                  <a
+                    title="privacy policy"
+                    href="#"
+                    aria-label="Перейти на privacy policy"
+                    class="text-underline text-secondary-100"
+                    >privacy policy</a
+                  >
+                  and
+                  <a
+                    href="#"
+                    title="personal data"
+                    aria-label="Перейти на consent to the processing of personal data"
+                    class="text-underline text-secondary-100"
+                    >consent to the processing of personal data</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="check-simple__errors check-simple__errors--bg p4 form__errors"
+            ></div>
+          </label>
+        </div>
+
+        <div class="form__footer">
+          <div class="form__btns">
+            <button
+              class="button button--bg-primary-100 br-el--rounded-md modal-open"
+              type="submit"
+              data-modal="successThirdModal"
+              style="min-height: 48px"
+            >
+              <span class="icon">
+                <svg>
+                  <use xlink:href="#email-icon"></use>
+                </svg>
+              </span>
+
+              <p class="p2 medium-font">Send Email</p>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 <script src="/js/lib/imask.min.js" type="module"></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
+  defer
+></script>
 <script src="/js/page.js" type="module"></script>
  <div class="modalBlock filterConstructionModal filterModalBox">
   <div class="modalBlock__inner filterModalBox__inner">

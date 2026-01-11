@@ -8,8 +8,6 @@ const openModal = (e) => {
   const nameModal = modalBtn.dataset.modal;
   if (!nameModal) return;
 
-  
-
   const modalBlock = document.querySelector(`.${nameModal}`);
 
   if (!modalBlock) return;
@@ -104,6 +102,19 @@ const closeModal = (e) => {
     modalRelative.classList.remove("open");
 
     if (document.querySelector(".modalBlock.open")) return;
+    document.body.classList.remove("open-modal");
+    document.documentElement.classList.remove("open-modal");
+  }
+};
+
+export const closeAllModals = () => {
+  const openModals = document.querySelectorAll(".modalBlock.open");
+  
+  openModals.forEach((modal) => {
+    modal.classList.remove("open");
+  });
+  
+  if (document.querySelectorAll(".modalBlock.open").length === 0) {
     document.body.classList.remove("open-modal");
     document.documentElement.classList.remove("open-modal");
   }
