@@ -255,6 +255,10 @@ h6 {
   }
 }
 
+.lh100 {
+  line-height: var(--line-height-tighter);
+}
+
 body .main {
   .br-base {
     border-radius: var(--radius-base);

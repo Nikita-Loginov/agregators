@@ -104,7 +104,12 @@
       &:after {
         pointer-events: all;
       }
-  }}
+    }
+
+    & > .list-popup__btn.link {
+      @include hover-link;
+    }
+  }
 
   &:hover > .list-popup__box {
     opacity: 1;

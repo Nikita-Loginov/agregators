@@ -1850,7 +1850,7 @@
             data-modal="languagesModal"
             aria-label="Открыть модальное окно с выбором языка"
           >
-            <div class="button__block text-secondary-300">
+            <div class="button__block">
               <div class="icon">
                 <span class="kit-icon language"></span>
               </div>
@@ -1858,7 +1858,7 @@
               <p class="p4 medium-font header-top__media">Language</p>
             </div>
 
-            <p class="p4 medium-font text-secondary-300">ru</p>
+            <p class="p4 lh100 medium-font">ru</p>
           </button>
 
           <button
@@ -1866,7 +1866,7 @@
             data-modal="currenciesModal"
             aria-label="Открыть модальное окно с выбором валюты"
           >
-            <div class="button__block text-dark-100">
+            <div class="button__block">
               <div class="icon">
                 <span class="kit-icon coin"></span>
               </div>
@@ -1874,7 +1874,7 @@
               <p class="p4 medium-font header-top__media">Currency</p>
             </div>
 
-            <p class="p4 medium-font text-secondary-300">usd</p>
+            <p class="p4 lh100 medium-font">usd</p>
           </button>
 
           <div class="dropdown lg-show">
@@ -2048,7 +2048,7 @@
           </ul>
 
           <ul class="header-top__menu">
-            <li class="header-top__link list-popup relative relative-top">
+            <li class="header-top__link list-popup relative relative-top relative-top">
               <a
                 href="#projects-badge"
                 title="All projects"
@@ -2393,7 +2393,7 @@
                 >
               </li>
 
-              <li class="menu__link list-popup relative">
+              <li class="menu__link list-popup relative relative-top">
                 <a
                   href="#Buy-badge"
                   aria-label="Перейти на страницу Buy"
@@ -2500,7 +2500,7 @@
                 >
               </li>
 
-              <li class="menu__link list-popup relative">
+              <li class="menu__link list-popup relative relative-top">
                 <a
                   href="#Companies-badge"
                   aria-label="Перейти на страницу Companies"
@@ -5932,8 +5932,8 @@
 
 
 <div class="modals">
-  <div class="modalBlock languagesModal modalBlock--media-fit">
-  <div class="modalBlock__inner">
+  <div class="modalBlock languagesModal modalBlock--media-fit modalBlockGrid">
+  <div class="modalBlock__inner modalBlockGrid__inner">
     <header class="modalBlock__head">
       <button
         class="modalBlock__close modal-close"
@@ -5952,7 +5952,7 @@
       <div class="modalBlock__block">
         <p class="h6">Languages</p>
 
-        <div class="modalBlock__items-grid">
+        <div class="modalBlockGrid__items-grid">
           <a
             href="/"
             title="Выбрать язык Русский"
@@ -6431,8 +6431,8 @@
     </div>
   </div>
 </div>
- <div class="modalBlock currenciesModal modalBlock--media-fit">
-  <div class="modalBlock__inner">
+ <div class="modalBlock currenciesModal modalBlock--media-fit modalBlockGrid">
+  <div class="modalBlock__inner modalBlockGrid__inner">
     <header class="modalBlock__head">
       <button
         class="modalBlock__close modal-close"
@@ -6451,7 +6451,7 @@
       <div class="modalBlock__block">
         <p class="h6">Currencies</p>
 
-        <div class="modalBlock__items-grid">
+        <div class="modalBlockGrid__items-grid">
           <button class="currenciesModal__item modalBlock__btn active">
             <span class="p2 text-uppercase">USD</span>
 

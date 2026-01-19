@@ -131,7 +131,7 @@
           align-items: center;
   gap: var(--gap-details);
 }
-@media (max-width: 1439px) {
+@media (max-width: 1439px) and (min-width: 767px) {
   .filter__items {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -139,6 +139,9 @@
   }
   .filter__item:not(:has(.button)) {
     width: 100%;
+  }
+  .filter__item:has(.select-box--search) {
+    max-width: 390px;
   }
 }
 @media (max-width: 767px) {

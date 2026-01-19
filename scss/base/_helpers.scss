@@ -61,6 +61,19 @@ $mobile-breakpoint: 479px;
   }
 }
 
+@mixin hover-link {
+  color: var(--link-color-active);
+
+  &.active-noColor {
+    color: inherit;
+  }
+
+  &:before {
+    transform-origin: left;
+    scale: 1;
+  }
+}
+
 @mixin companieCardMediaOrSmall {
   flex-direction: column;
   gap: 16px;

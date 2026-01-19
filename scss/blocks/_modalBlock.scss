@@ -185,12 +185,28 @@
     min-width: 0;
   }
 
+  @media (max-width: $tablet-breakpoint) {
+    &:not(.modalBlock--media-fit) {
+      padding: 0;
+
+      .modalBlock {
+        &__inner {
+          height: 100%;
+          max-height: 100dvh;
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}
+
+.modalBlockGrid {
   &__inner {
-    &:not(:has(.modalBlock__items-grid :nth-child(10))) {
+    &:not(:has(.modalBlockGrid__items-grid :nth-child(10))) {
       max-width: 233px;
     }
 
-    &:has(.modalBlock__items-grid :nth-child(10)) {
+    &:has(.modalBlockGrid__items-grid :nth-child(10)) {
       .modalBlock {
         &__btn-text {
           overflow: hidden;
@@ -218,20 +234,6 @@
 
     &:not(:has(:nth-child(10))) {
       grid-template-columns: repeat(1, 1fr);
-    }
-  }
-
-  @media (max-width: $tablet-breakpoint) {
-    &:not(.modalBlock--media-fit) {
-      padding: 0;
-
-      .modalBlock {
-        &__inner {
-          height: 100%;
-          max-height: 100dvh;
-          border-radius: 0;
-        }
-      }
     }
   }
 }

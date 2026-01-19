@@ -9,6 +9,7 @@ import { initModal, checkStartOpen } from "./modules/modal.js";
 import { checkScrollY } from "./modules/header.js";
 import { initMenu } from "./modules/menu.js";
 import { initFormValidation } from "./modules/validate.js";
+import { clearAllFormErrors } from "./validation/index.js";
 import { initRatingStars } from "./modules/rating.js";
 import { initSelects } from "./modules/select.js";
 import { onChangeInput } from "./modules/functions.js";
@@ -24,6 +25,7 @@ const handleGlobalEvents = (e) => {
   initMenu(e);
   initRatingStars(e);
   initStorage(e);
+  clearAllFormErrors(e);
 };
 
 const serVars = () => {

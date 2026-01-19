@@ -235,7 +235,7 @@ const createUpdateCounter = (self, hasWordsClass) => () => {
     item.style.display = "inline-flex";
     const w = item.offsetWidth;
 
-    if (used + w + 85 > available) {
+    if (used + w + 90 > available) {
       item.style.display = "none";
       hidden++;
     } else {

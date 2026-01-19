@@ -13,6 +13,8 @@
 
 
 
+
+
   &.active {
     color: var(--link-color-active);
   }
@@ -29,16 +31,7 @@
   }
 
   &:hover {
-    color: var(--link-color-active);
-
-    &.active-noColor {
-      color: inherit;
-    }
-
-    &:before {
-      transform-origin: left;
-      scale: 1;
-    }
+   @include hover-link;
   }
 
   &.hover-no-line {

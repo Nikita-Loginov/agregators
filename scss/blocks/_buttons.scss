@@ -508,11 +508,25 @@
 
     &-gray-color-600 {
       border-color: var(--gray-color-600);
+      color: var(--secondary-color-300);
+
+      &:hover {
+        border-color: var(--secondary-color-100);
+        color: var(--secondary-color-400);
+      }
+
+      &:active {
+        border-color: var(--secondary-color-100);
+        background-color: var(--secondary-color-100);
+        color: var(--white-color);
+      }
     }
 
     &-dark-color-600 {
       border-color: var(--dark-color-600);
       color: var(--dark-color-600);
+
+     
     }
 
     &-dark-color-700 {
