@@ -3,14 +3,12 @@ let fixedMenu = null;
 
 export const toggleDropdown = (e) => {
   const target = e.target;
- 
 
   if (activeDropdown && activeDropdown.contains(target)) {
     if (!target.closest(".dropdown-item-close")) {
       return;
     }
   }
-
 
   if (target.closest(".dropdown-item-close")) {
     const itemElement = target.closest(".dropdown__item");

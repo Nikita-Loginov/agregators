@@ -12,8 +12,14 @@
     transform: translateY(-100%);
   }
 
+  &.scrollTop:not(.scrollVisible) {
+    .header-main {
+      // padding-block: 8px;
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
-    padding: 19px var(--container-inline-padding);
+    padding: 15px var(--container-inline-padding);
     background-color: var(--white-color);
     border-bottom-left-radius: var(--radius-md);
     border-bottom-right-radius: var(--radius-md);
@@ -95,6 +101,7 @@
     padding: 4px var(--paddig-inline);
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 5px;
 
     .button {
@@ -128,7 +135,7 @@
     padding: 2px var(--paddig-inline);
     background-color: var(--gray-color-300);
     color: var(--dark-color-200);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-xl);
   }
 
   @media (max-width: $lg-breakpoint) {
@@ -181,10 +188,11 @@
 }
 
 .header-main {
-  padding: calculate-clamp(19px, 27px, 1500px, 1023px) 0;
+  padding: calculate-clamp(19px, 24px, 1500px, 1023px) 0;
   background-color: var(--white-color);
   border-top: 1px solid var(--gray-color-200);
   border-bottom: 1px solid var(--gray-color-200);
+  transition: all .3s;
 
   &__inner {
     display: flex;
@@ -195,17 +203,6 @@
 
   &__person {
     display: none;
-
-    .icon {
-      width: 24px;
-      height: 24px;
-
-      img,
-      svg {
-        width: 100%;
-        height: 100px;
-      }
-    }
   }
 
   @media (max-width: $lg-breakpoint) {
@@ -217,6 +214,7 @@
   @media (max-width: $tablet-breakpoint) {
     border: none;
     background-color: transparent;
+    padding: 0;
 
     &__person {
       display: flex;

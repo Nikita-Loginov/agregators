@@ -54,7 +54,7 @@ export const getPositionsElementsScroll = (options) => {
   };
 };
 
-export function isTouchDevice() {
+export const isTouchDevice = () => {
   return (
     window.matchMedia("(pointer: coarse)").matches ||
     "ontouchstart" in window ||

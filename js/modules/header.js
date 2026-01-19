@@ -1,6 +1,7 @@
 const CONFIG = {
   CLASS_SCROLL_TOP: "scrollTop",
   CLASS_SCROLL_BOTTOM: "scrollBottom",
+  CLASS_SCROLL_VISIBLE: "scrollVisible",
   SCROLL_START_MORE: 80,
   SCROLL_THRESHOLD: 5,
 };
@@ -27,7 +28,10 @@ export const checkScrollY = () => {
 
   if (!header.classList.contains("header-scroll")) return;
 
+ 
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  const isHeaderVisible = scrollTop <= CONFIG.SCROLL_START_MORE;
 
   if (Math.abs(scrollTop - lastScrollTop) < CONFIG.SCROLL_THRESHOLD) return;
 
@@ -36,6 +40,8 @@ export const checkScrollY = () => {
 
   DOM.HEADER.classList.toggle(CONFIG.CLASS_SCROLL_BOTTOM, isScrollingDown);
   DOM.HEADER.classList.toggle(CONFIG.CLASS_SCROLL_TOP, !isScrollingDown);
+
+  DOM.HEADER.classList.toggle(CONFIG.CLASS_SCROLL_VISIBLE, isHeaderVisible);
 
   document.body.classList.toggle(CONFIG.CLASS_SCROLL_BOTTOM, isScrollingDown);
   document.body.classList.toggle(CONFIG.CLASS_SCROLL_TOP, !isScrollingDown);

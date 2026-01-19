@@ -185,6 +185,42 @@
     min-width: 0;
   }
 
+  &__inner {
+    &:not(:has(.modalBlock__items-grid :nth-child(10))) {
+      max-width: 233px;
+    }
+
+    &:has(.modalBlock__items-grid :nth-child(10)) {
+      .modalBlock {
+        &__btn-text {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -moz-box;
+          -moz-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          line-clamp: 1;
+          box-orient: vertical;
+        }
+      }
+    }
+  }
+
+  &__items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 8px 28px;
+
+    &:has(:nth-child(10)) {
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    }
+
+    &:not(:has(:nth-child(10))) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     &:not(.modalBlock--media-fit) {
       padding: 0;
@@ -201,29 +237,14 @@
 }
 
 .languagesModal {
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 8px 28px;
-  }
 }
 
 .currenciesModal {
   .modalBlock {
-    &__inner {
-      max-width: 233px;
-    }
-
     &__btn-text {
       color: var(--dark-color-600);
       transition: all 0.5s;
     }
-  }
-
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 8px;
   }
 }
 
@@ -235,7 +256,6 @@
         border-radius: var(--radius-md);
       }
     }
-   
   }
 
   &__inner {
@@ -259,7 +279,6 @@
   &__info {
     display: flex;
     flex-direction: column;
-   
   }
 
   &__header,

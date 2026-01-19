@@ -10,14 +10,17 @@ const toggleMenu = (e) => {
   const openMenus = document.querySelectorAll(".menu.open");
 
   if (openMenus.length > 0) {
-    closeAllModals()
+
+    closeAllModals();
   }
 
   menu.classList.toggle("open");
-  document.body.classList.toggle("open-modal");
-  document.body.classList.toggle("open-decor");
 
- 
+  if (menu.classList.contains("open")) {
+    document.body.classList.add("open-menu", "open-decor");
+  } else {
+    document.body.classList.remove("open-menu", "open-decor");
+  }
 };
 
 const closeMenuOnItemClick = (e) => {
@@ -39,7 +42,7 @@ const closeMenu = (menu) => {
   if (!menu) return;
 
   menu.classList.remove("open");
-  document.body.classList.remove("open-modal");
+  document.body.classList.remove("open-menu");
   document.body.classList.remove("open-decor");
 };
 
@@ -55,7 +58,12 @@ const closeMenuOnOutsideClick = (e) => {
     const isClickOnModal = target.closest(".modalSecond");
     const isClickOnHeader = target.closest("header");
 
-    if (!isClickInsideMenu && !isClickOnBurger && !isClickOnModal && !isClickOnHeader) {
+    if (
+      !isClickInsideMenu &&
+      !isClickOnBurger &&
+      !isClickOnModal &&
+      !isClickOnHeader
+    ) {
       closeAllModals();
       closeMenu(menu);
     }

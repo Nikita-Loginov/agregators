@@ -1,0 +1,92 @@
+.tooltip {
+  --tooltip-bg: var(--dark-color-200);
+  --tooltip-color: var(--white-color);
+  --tooltip-max-width: 240px;
+  --tooltip-padding-y: 4px;
+  --tooltip-padding-x: 14px;
+  --tooltip-min-height: 30px;
+  --tooltip-radius: var(--radius-md);
+  --tooltip-font-size: var(--font-size-2xs);
+  --tooltip-gap: 8px;
+  --tooltip-arrow-width: 16px;
+  --tooltip-arrow-height: 12px;
+
+  position: fixed;
+  max-width: var(--tooltip-max-width);
+  min-height: var(--tooltip-min-height);
+  padding: var(--tooltip-padding-y) var(--tooltip-padding-x);
+  background-color: var(--tooltip-bg);
+  color: var(--tooltip-color);
+  font-size: var(--tooltip-font-size);
+  border-radius: var(--tooltip-radius);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &.visible {
+    opacity: 1;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+
+  &.top {
+    transform: translate(-50%, calc(-100% - var(--tooltip-gap)));
+
+    &::after {
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      border-left: calc(var(--tooltip-arrow-width) / 2) solid transparent;
+      border-right: calc(var(--tooltip-arrow-width) / 2) solid transparent;
+      border-top: var(--tooltip-arrow-height) solid var(--tooltip-bg);
+    }
+  }
+
+  &.bottom {
+    transform: translate(-50%, var(--tooltip-gap));
+
+    &::after {
+      left: 50%;
+      bottom: 100%;
+      transform: translateX(-50%);
+      border-left: calc(var(--tooltip-arrow-width) / 2) solid transparent;
+      border-right: calc(var(--tooltip-arrow-width) / 2) solid transparent;
+      border-bottom: var(--tooltip-arrow-height) solid var(--tooltip-bg);
+    }
+  }
+
+  &.left {
+    transform: translate(calc(-100% - var(--tooltip-gap)), -50%);
+
+    &::after {
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      border-top: calc(var(--tooltip-arrow-height) / 2) solid transparent;
+      border-bottom: calc(var(--tooltip-arrow-height) / 2) solid transparent;
+      border-left: var(--tooltip-arrow-width) solid var(--tooltip-bg);
+    }
+  }
+
+  &.right {
+    transform: translate(var(--tooltip-gap), -50%);
+
+    &::after {
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      border-top: calc(var(--tooltip-arrow-height) / 2) solid transparent;
+      border-bottom: calc(var(--tooltip-arrow-height) / 2) solid transparent;
+      border-right: var(--tooltip-arrow-width) solid var(--tooltip-bg);
+    }
+  }
+}

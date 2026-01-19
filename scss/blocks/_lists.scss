@@ -43,6 +43,7 @@
       width: 100%;
       bottom: calc(var(--top-padding) * -2);
       height: calc(var(--top-padding) * 2);
+      pointer-events: none;
     }
   }
 
@@ -91,7 +92,19 @@
       box-shadow: 0px 4px 12px 0px #0d0a2c0f;
       border-color: var(--gray-color-200);
     }
+
+    &--white-second {
+      background-color: var(--white-color);
+      border-color: var(--gray-color-300);
+    }
   }
+
+  &:hover {
+    &.relative {
+      &:after {
+        pointer-events: all;
+      }
+  }}
 
   &:hover > .list-popup__box {
     opacity: 1;

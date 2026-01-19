@@ -1,7 +1,10 @@
 import { getHeightHeader } from "./modules/header.js";
 import { setVar } from "./utils/setVar.js";
 import { toggleDropdown, firstActiveText } from "./modules/dropdown.js";
-import { toggleAccordeonItems, initAccordeonActiveItems } from "./modules/accordeon.js";
+import {
+  toggleAccordeonItems,
+  initAccordeonActiveItems,
+} from "./modules/accordeon.js";
 import { initModal, checkStartOpen } from "./modules/modal.js";
 import { checkScrollY } from "./modules/header.js";
 import { initMenu } from "./modules/menu.js";
@@ -10,6 +13,7 @@ import { initRatingStars } from "./modules/rating.js";
 import { initSelects } from "./modules/select.js";
 import { onChangeInput } from "./modules/functions.js";
 import { checkStorage, initStorage } from "./modules/localStorage.js";
+import { initTooltip } from "./modules/tooltip/tooltip.js";
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -43,7 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
   serVars();
   firstActiveText();
   initSelects();
-  initAccordeonActiveItems()
+  initAccordeonActiveItems();
+  initTooltip();
 
   document.addEventListener("click", handleGlobalEvents);
   document.addEventListener("input", onChangeInput);
@@ -55,4 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("resize", serVars);
-document.addEventListener("scroll", checkScrollY);
+document.addEventListener("scroll", () => {
+  checkScrollY();
+  // serVars();
+});

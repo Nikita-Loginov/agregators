@@ -20,7 +20,8 @@ body {
   line-height: var(--line-height-tighter);
   overflow-x: hidden;
 
-  &.open-modal {
+  &.open-modal,
+  &.open-menu {
     overflow: hidden;
   }
 
@@ -47,6 +48,12 @@ body {
 
   &.white-page {
     background-color: #fff;
+  }
+
+  &:has(.modalSecond.open) {
+    &:before {
+      background-color: var(--gray-color-100);
+    }
   }
 }
 
