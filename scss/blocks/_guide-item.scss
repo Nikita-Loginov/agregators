@@ -11,6 +11,10 @@
     background-color: var(--secondary-color-200);
     padding: 4px 8px;
     border-radius: var(--radius-base);
+
+    .icon {
+      color: var(--secondary-color-100);
+    }
   }
 
   &__info {

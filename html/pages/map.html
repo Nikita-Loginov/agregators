@@ -24,11 +24,9 @@
                         data-modal="filterModal"
                       >
                         <div class="button__block">
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#filter-second-icon"></use>
-                            </svg>
-                          </span>
+                          <div class="icon">
+                            <span class="kit-icon filter-icon"></span>
+                          </div>
 
                           <p class="p4 text-secondary-100 button__decor-item">
                             4
@@ -235,22 +233,22 @@
                           type="button"
                         >
                           <div class="check">
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#check-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon icon--sm">
+                              <span class="kit-icon check-big"></span>
+                            </div>
                           </div>
+
                           <p class="p2">Price</p>
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
+
+                          <div class="icon icon--big arrow">
+                            <span class="kit-icon caret-up-md"></span>
+                          </div>
                         </button>
+
                         <div class="dropdown__content popup price-popup">
                           <div class="price-popup__content">
                             <p class="p2 semibold-font">Price range, AED</p>
+
                             <div class="price-popup__items">
                               <div class="input-box">
                                 <label class="input-box__content">
@@ -315,11 +313,9 @@
                         type="button"
                         class="button button--bg-gray-200 button--cub button--cub-lg button--rounded-base"
                       >
-                        <span class="icon icon--big">
-                          <svg>
-                            <use xlink:href="#filter-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon">
+                          <span class="kit-icon slider"></span>
+                        </div>
                       </button>
 
                       <div class="dropdown__content">
@@ -367,11 +363,9 @@
                             class="check__info"
                           >
                             <div class="check__info-content">
-                              <span class="icon">
-                                <svg>
-                                  <use xlink:href="#rows-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="icon">
+                                <span class="kit-icon rows"></span>
+                              </div>
 
                               <span class="p2 lg-none">List</span>
                             </div>
@@ -386,11 +380,9 @@
                             class="check__info"
                           >
                             <div class="check__info-content">
-                              <span class="icon">
-                                <svg>
-                                  <use xlink:href="#table-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="icon">
+                                <span class="kit-icon table"></span>
+                              </div>
 
                               <span class="p2 lg-none">Tiles</span>
                             </div>
@@ -402,11 +394,9 @@
                             <input type="radio" checked name="map" />
 
                             <div class="check__info-content">
-                              <span class="icon">
-                                <svg>
-                                  <use xlink:href="#map-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="icon">
+                                <span class="kit-icon map"></span>
+                              </div>
 
                               <span class="p2 lg-none">Map</span>
                             </div>
@@ -419,11 +409,9 @@
                       <button
                         class="button button--cub button--bg-primary-100 button--cub-md-add"
                       >
-                        <span class="icon">
-                          <svg>
-                            <use xlink:href="#search-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon">
+                          <span class="kit-icon search-magnifying-glass"></span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -446,11 +434,9 @@
                         class="button button--cub button--bg-gray-200 button--cub-sm"
                         data-block="sibebar-box__close"
                       >
-                        <span class="icon icon--little text-dark-100">
-                          <svg>
-                            <use xlink:href="#arrow-bottom-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon icon--little text-dark-100">
+                          <span class="kit-icon chevron-down"></span>
+                        </div>
                       </button>
 
                       <button
@@ -458,14 +444,9 @@
                         class="button button--cub button--bg-gray-200 button--cub-sm modal-open"
                         data-modal="selectedItemsModal"
                       >
-                        <span
-                          class="icon icon--little text-dark-100"
-                          style="rotate: -180deg"
-                        >
-                          <svg>
-                            <use xlink:href="#arrow-bottom-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon icon--little text-dark-100">
+                          <span class="kit-icon chevron-up"></span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -474,11 +455,9 @@
                     class="close tablet-none"
                     data-block="sibebar-box__close"
                   >
-                    <span class="icon icon--little">
-                      <svg>
-                        <use xlink:href="#close-icon"></use>
-                      </svg>
-                    </span>
+                    <div class="icon" style="rotate: 45deg">
+                      <span class="kit-icon close-md"></span>
+                    </div>
                   </button>
                 </div>
 
@@ -567,10 +546,10 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2 Baths", "icon": "#bed-icon" },
-                                  { "text": "Q4 2026", "icon": "#bed-icon" },
-                                  { "text": "2 Beds", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2 Baths", "icon": "bath" },
+                                  { "text": "Q4 2026", "icon": "barrier" },
+                                  { "text": "2 Beds", "icon": "bed" },
+                                  { "text": "65 sq.m.", "icon": "ruler" } ])
                                 </div>
                               </div>
 
@@ -579,16 +558,16 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2", "icon": "bed" },
+                                  { "text": "2", "icon": "ruler" },
+                                  { "text": "65 sq.m.", "icon": "bath" } ])
                                 </div>
                               </div>
 
                               <div class="desktop-none">
                                 <ul class="list-icon">
                                   <!-- prettier-ignore -->
-                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                 </ul>
                               </div>
                             </header>
@@ -696,10 +675,10 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2 Baths", "icon": "#bed-icon" },
-                                  { "text": "Q4 2026", "icon": "#bed-icon" },
-                                  { "text": "2 Beds", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2 Baths", "icon": "bath" },
+                                  { "text": "Q4 2026", "icon": "barrier" },
+                                  { "text": "2 Beds", "icon": "bed" },
+                                  { "text": "65 sq.m.", "icon": "ruler" } ])
                                 </div>
                               </div>
 
@@ -708,16 +687,16 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2", "icon": "bed" },
+                                  { "text": "2", "icon": "ruler" },
+                                  { "text": "65 sq.m.", "icon": "bath" } ])
                                 </div>
                               </div>
 
                               <div class="desktop-none">
                                 <ul class="list-icon">
                                   <!-- prettier-ignore -->
-                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                 </ul>
                               </div>
                             </header>
@@ -825,10 +804,10 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2 Baths", "icon": "#bed-icon" },
-                                  { "text": "Q4 2026", "icon": "#bed-icon" },
-                                  { "text": "2 Beds", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2 Baths", "icon": "bath" },
+                                  { "text": "Q4 2026", "icon": "barrier" },
+                                  { "text": "2 Beds", "icon": "bed" },
+                                  { "text": "65 sq.m.", "icon": "ruler" } ])
                                 </div>
                               </div>
 
@@ -837,16 +816,16 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2", "icon": "bed" },
+                                  { "text": "2", "icon": "ruler" },
+                                  { "text": "65 sq.m.", "icon": "bath" } ])
                                 </div>
                               </div>
 
                               <div class="desktop-none">
                                 <ul class="list-icon">
                                   <!-- prettier-ignore -->
-                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                 </ul>
                               </div>
                             </header>
@@ -954,10 +933,10 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2 Baths", "icon": "#bed-icon" },
-                                  { "text": "Q4 2026", "icon": "#bed-icon" },
-                                  { "text": "2 Beds", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2 Baths", "icon": "bath" },
+                                  { "text": "Q4 2026", "icon": "barrier" },
+                                  { "text": "2 Beds", "icon": "bed" },
+                                  { "text": "65 sq.m.", "icon": "ruler" } ])
                                 </div>
                               </div>
 
@@ -966,16 +945,16 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "2", "icon": "#bed-icon" },
-                                  { "text": "65 sq.m.", "icon": "#bed-icon" } ])
+                                  { "text": "2", "icon": "bed" },
+                                  { "text": "2", "icon": "ruler" },
+                                  { "text": "65 sq.m.", "icon": "bath" } ])
                                 </div>
                               </div>
 
                               <div class="desktop-none">
                                 <ul class="list-icon">
                                   <!-- prettier-ignore -->
-                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                 </ul>
                               </div>
                             </header>
@@ -1042,12 +1021,8 @@
                       title="Home"
                       class="breadcrumbs__media"
                     >
-                      <span class="breadcrumbs__circle">
-                        <span class="icon icon--full">
-                          <svg>
-                            <use xlink:href="#arrow-circle-icon"></use>
-                          </svg>
-                        </span>
+                      <span class="icon" style="rotate: 90deg">
+                        <span class="kit-icon arrow-circle-down"></span>
                       </span>
 
                       <span>Home</span>

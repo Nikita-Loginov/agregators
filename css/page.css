@@ -974,7 +974,7 @@ body.scrollBottom .detail-block__sticky-banner {
   background-color: transparent;
 }
 
-.map {
+.map:not(.kit-icon) {
   width: 100%;
   height: 100%;
   position: relative;
@@ -1677,6 +1677,15 @@ body .wrapper .br-el--rounded-3xl {
 }
 .kit-icon.close-md::before {
   content: "\e959";
+}
+.kit-icon.image::before {
+  content: "\e95b";
+}
+.kit-icon.play-circle::before {
+  content: "\e95d";
+}
+.kit-icon.more-vertical::before {
+  content: "\e95c";
 }
 
 .header {
@@ -10037,6 +10046,9 @@ body .ts-dropdown-content {
   background-color: var(--secondary-color-200);
   padding: 4px 8px;
   border-radius: var(--radius-base);
+}
+.guide-item__header .icon {
+  color: var(--secondary-color-100);
 }
 .guide-item__info {
   padding: 4px 16px 4px 4px;

@@ -58,10 +58,8 @@ const renderStatusSuccess = (statusBox) => {
     "beforeend",
     `<div class="banner-status banner-status--center success">
                       <div class="banner-status__icon">
-                        <span class="icon">
-                          <svg>
-                            <use xlink:href="#checks-icon"></use>
-                          </svg>
+                        <span class="icon icon--big">
+                          <span class="kit-icon check-big"></span>
                         </span>
                       </div>
 
@@ -79,10 +77,8 @@ const renderStatusError = (statusBox) => {
     "beforeend",
     `       <div class="banner-status banner-status--small error">
                       <div class="banner-status__icon">
-                        <span class="icon">
-                          <svg>
-                            <use xlink:href="#close-icon"></use>
-                          </svg>
+                        <span class="icon icon--big">
+                          <span class="kit-icon close-md"></span>
                         </span>
                       </div>
 

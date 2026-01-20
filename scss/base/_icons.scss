@@ -306,4 +306,14 @@
   &.close-md::before {
     content: "\e959";
   }
+
+  &.image::before {
+    content: "\e95b";
+  }
+  &.play-circle::before {
+    content: "\e95d";
+  }
+  &.more-vertical::before {
+    content: "\e95c";
+  }
 }
