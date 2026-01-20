@@ -1,5 +1,5 @@
-@@include('../sprites/sptite.html') @@include('../sprites/languages.html')
-@@include('../sprites/ai.html')
+@@include('../sprites/socials.html') 
+@@include('../sprites/languages.html') @@include('../sprites/ai.html')
 
 <header
   class="header header-scroll @@if(typeof details !== 'undefined' && details === 'true'){header--details}"
@@ -25,6 +25,7 @@
             class="button button--xs button--noBg button--noBg-gray-color-600 button--border-small button--rounded-lg text-uppercase modal-open"
             data-modal="languagesModal"
             aria-label="Открыть модальное окно с выбором языка"
+            data-tooltip="Открыть модальное окно с выбором языка"
           >
             <div class="button__block">
               <div class="icon">
@@ -41,6 +42,7 @@
             class="button button--xs button--noBg button--noBg-gray-color-600 button--border-small button--rounded-lg text-uppercase modal-open"
             data-modal="currenciesModal"
             aria-label="Открыть модальное окно с выбором валюты"
+            data-tooltip="Открыть модальное окно с выбором валюты"
           >
             <div class="button__block">
               <div class="icon">
@@ -58,11 +60,9 @@
               class="button button--cub button--cub-sm button--bg-secondary-200"
               type="button"
             >
-              <span class="icon">
-                <svg>
-                  <use xlink:href="#more-vertical-icon"></use>
-                </svg>
-              </span>
+              <div class="icon">
+                <span class="kit-icon chart-bar-vertical"></span>
+              </div>
             </button>
 
             <div class="dropdown__content popup right">
@@ -75,11 +75,9 @@
                     class="button button--noMassa link text-secondary-300"
                   >
                     <div class="button__block">
-                      <span class="icon icon--little">
-                        <svg>
-                          <use xlink:href="#view-icon"></use>
-                        </svg>
-                      </span>
+                      <div class="icon">
+                        <span class="kit-icon archive"></span>
+                      </div>
 
                       <p class="p3">Previously viewed</p>
                     </div>
@@ -96,11 +94,9 @@
                     class="button button--noMassa link text-secondary-300"
                   >
                     <div class="button__block">
-                      <span class="icon icon--little">
-                        <svg>
-                          <use xlink:href="#comparison-icon"></use>
-                        </svg>
-                      </span>
+                      <div class="icon icon--little">
+                        <span class="kit-icon chart-bar-vertical"></span>
+                      </div>
 
                       <p class="p3">Comparison</p>
                     </div>
@@ -117,11 +113,9 @@
                     class="button button--noMassa link text-secondary-300"
                   >
                     <div class="button__block">
-                      <span class="icon icon--little">
-                        <svg>
-                          <use xlink:href="#star-icon"></use>
-                        </svg>
-                      </span>
+                      <div class="icon icon--little">
+                        <span class="kit-icon star"></span>
+                      </div>
 
                       <p class="p3">Favorites</p>
                     </div>
@@ -144,11 +138,9 @@
                 class="button button--noMassa text-secondary-300 link-simple"
               >
                 <div class="button__block">
-                  <span class="icon icon--little">
-                    <svg>
-                      <use xlink:href="#view-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon icon--little">
+                    <span class="kit-icon archive"></span>
+                  </div>
 
                   <p class="p3">Previously viewed</p>
                 </div>
@@ -165,11 +157,9 @@
                 class="button text-secondary-300 button--noMassa link-simple"
               >
                 <div class="button__block">
-                  <span class="icon icon--little">
-                    <svg>
-                      <use xlink:href="#comparison-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon icon--little">
+                    <span class="kit-icon chart-bar-vertical"></span>
+                  </div>
 
                   <p class="p3">Comparison</p>
                 </div>
@@ -186,11 +176,9 @@
                 class="button text-secondary-300 button--noMassa link-simple"
               >
                 <div class="button__block">
-                  <span class="icon icon--little">
-                    <svg>
-                      <use xlink:href="#star-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon icon--little">
+                    <span class="kit-icon star"></span>
+                  </div>
 
                   <p class="p3">Favorites</p>
                 </div>
@@ -211,11 +199,9 @@
                 "
               >
                 <div class="button__block">
-                  <span class="icon icon--little">
-                    <svg>
-                      <use xlink:href="#user-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon icon--little">
+                    <span class="kit-icon user"></span>
+                  </div>
 
                   <p class="p3">Sign in</p>
                 </div>
@@ -224,18 +210,18 @@
           </ul>
 
           <ul class="header-top__menu">
-            <li class="header-top__link list-popup relative relative-top relative-top">
+            <li
+              class="header-top__link list-popup relative relative-top relative-top"
+            >
               <a
                 href="#projects-badge"
                 title="All projects"
                 class="button button--noMassa list-popup__btn text-secondary-300"
                 aria-label="Посмотреть все проекты"
               >
-                <span class="icon icon--little">
-                  <svg>
-                    <use xlink:href="#dots-icon"></use>
-                  </svg>
-                </span>
+                <div class="icon icon--little">
+                  <span class="kit-icon more-grid-small"></span>
+                </div>
 
                 <p class="p3">All projects</p>
               </a>
@@ -453,21 +439,17 @@
                   data-modal="languagesMobileModal"
                   aria-label="Открыть модальное окно с выбором языка"
                 >
-                  <div class="button__block button__block--big">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="#lang-icon"></use>
-                      </svg>
-                    </span>
+                  <div
+                    class="button__block button__block--big text-secondary-300"
+                  >
+                    <div class="icon">
+                      <span class="kit-icon language"></span>
+                    </div>
 
-                    <p class="p1 header-top__media text-secondary-300">
-                      Language
-                    </p>
+                    <p class="p1 header-top__media">Language</p>
                   </div>
 
-                  <p class="p2 medium-font text-secondary-300 text-uppercase">
-                    ru
-                  </p>
+                  <p class="p2 medium-font text-uppercase">ru</p>
                 </button>
 
                 <button
@@ -475,21 +457,17 @@
                   data-modal="currenciesMobileModal"
                   aria-label="Открыть модальное окно с выбором валюты"
                 >
-                  <div class="button__block button__block--big">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="#currency-icon"></use>
-                      </svg>
-                    </span>
+                  <div
+                    class="button__block button__block--big text-secondary-300"
+                  >
+                    <div class="icon">
+                      <span class="kit-icon coin"></span>
+                    </div>
 
-                    <p class="p1 header-top__media text-secondary-300">
-                      Currency
-                    </p>
+                    <p class="p1 header-top__media">Currency</p>
                   </div>
 
-                  <p class="p2 medium-font text-secondary-300 text-uppercase">
-                    usd
-                  </p>
+                  <p class="p2 medium-font text-uppercase">usd</p>
                 </button>
               </div>
             </div>
@@ -504,16 +482,14 @@
                   data-close-menu
                 >
                   <div class="button__block button__block--big">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="#view-icon"></use>
-                      </svg>
-                    </span>
+                    <div class="icon">
+                      <span class="kit-icon archive"></span>
+                    </div>
 
-                    <p class="p1 text-secondary-300">Previously viewed</p>
+                    <p class="p1">Previously viewed</p>
                   </div>
 
-                  <p class="p2 medium-font text-secondary-300">192</p>
+                  <p class="p2 medium-font">192</p>
                 </a>
 
                 <a
@@ -524,16 +500,14 @@
                   data-close-menu
                 >
                   <div class="button__block button__block--big">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="#comparison-icon"></use>
-                      </svg>
-                    </span>
+                    <div class="icon">
+                      <span class="kit-icon chart-bar-vertical"></span>
+                    </div>
 
-                    <p class="p1 text-secondary-300">Comparison</p>
+                    <p class="p1">Comparison</p>
                   </div>
 
-                  <p class="p2 medium-font text-secondary-300">3</p>
+                  <p class="p2 medium-font">3</p>
                 </a>
 
                 <a
@@ -544,16 +518,14 @@
                   data-close-menu
                 >
                   <div class="button__block button__block--big">
-                    <span class="icon">
-                      <svg>
-                        <use xlink:href="#star-icon"></use>
-                      </svg>
-                    </span>
+                    <div class="icon">
+                      <span class="kit-icon star"></span>
+                    </div>
 
-                    <p class="p1 text-secondary-300">Favorites</p>
+                    <p class="p1">Favorites</p>
                   </div>
 
-                  <p class="p2 medium-font text-secondary-300">3</p>
+                  <p class="p2 medium-font">3</p>
                 </a>
               </div>
             </div>
@@ -635,11 +607,9 @@
                           </ul>
                         </div>
 
-                        <span class="icon icon--sm">
-                          <svg>
-                            <use xlink:href="#arrow-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon" style="rotate: 90deg">
+                          <span class="kit-icon caret-up-md"></span>
+                        </div>
                       </div>
                     </li>
                   </ul>
@@ -742,11 +712,9 @@
                           </ul>
                         </div>
 
-                        <span class="icon icon--sm">
-                          <svg>
-                            <use xlink:href="#arrow-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon" style="rotate: 90deg">
+                          <span class="kit-icon caret-up-md"></span>
+                        </div>
                       </div>
                     </li>
 
@@ -792,11 +760,9 @@
                           </ul>
                         </div>
 
-                        <span class="icon icon--sm">
-                          <svg>
-                            <use xlink:href="#arrow-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon" style="rotate: 90deg">
+                          <span class="kit-icon caret-up-md"></span>
+                        </div>
                       </div>
                     </li>
                   </ul>
@@ -828,17 +794,13 @@
 
                 <button
                   type="button"
-                  class="button button--noMassa p1 medium-font modal-open button--cub button--cub--xs"
+                  class="button button--noMassa modal-open"
                   data-modal="subMenuMobileModal"
+                  data-tooltip="Открыть меню"
                 >
-                  <span
-                    class="icon icon--sm text-dark-600"
-                    style="rotate: -180deg"
-                  >
-                    <svg>
-                      <use xlink:href="#arrow-left-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon icon--big" style="rotate: 90deg">
+                    <span class="kit-icon caret-up-md"></span>
+                  </div>
                 </button>
               </li>
 
@@ -896,11 +858,9 @@
                 >
                   <span class="p3">All projects</span>
 
-                  <span class="icon">
-                    <svg>
-                      <use xlink:href="#arrow-line-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon">
+                    <span class="kit-icon arrow-right-md"></span>
+                  </div>
                 </button>
               </div>
             </footer>
@@ -931,11 +891,9 @@
           title="Home"
           class="header-details__item text-secondary-100"
         >
-          <span class="icon icon--sm" style="rotate: -180deg">
-            <svg>
-              <use xlink:href="#arrow-icon"></use>
-            </svg>
-          </span>
+          <div class="icon" style="rotate: 90deg">
+            <span class="kit-icon caret-up-md"></span>
+          </div>
 
           <p class="p3">Home</p>
         </a>

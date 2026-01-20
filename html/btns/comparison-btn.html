@@ -2,9 +2,7 @@
   aria-label="Добавить в сравнение"
   class="button button--comparison @@classAdd"
 >
-  <span class="icon @@classAddIcon">
-    <svg>
-      <use xlink:href="#chart-icon"></use>
-    </svg>
-  </span>
+  <div class="icon @@if (typeof classAddIcon !== 'undefined') {@@classAddIcon}">
+    <span class="kit-icon chart-bar-vertical"></span>
+  </div>
 </button>

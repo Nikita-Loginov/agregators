@@ -24,7 +24,7 @@
 
   &--xs {
     min-height: 24px;
-    padding: 0px 8px;
+    padding: 1px 8px;
     font-size: var(--font-size-3xs);
   }
 
@@ -504,6 +504,11 @@
 
     &-gray-color-300 {
       border-color: var(--gray-color-300);
+
+      &:hover {
+        border-color: var(--secondary-color-100);
+        color: var(--secondary-color-400);
+      }
     }
 
     &-gray-color-600 {

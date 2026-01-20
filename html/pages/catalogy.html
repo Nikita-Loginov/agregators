@@ -26,15 +26,11 @@
                         data-modal="filterModal"
                       >
                         <div class="button__block">
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#filter-second-icon"></use>
-                            </svg>
-                          </span>
+                          <div class="icon">
+                            <span class="kit-icon filter-icon"></span>
+                          </div>
 
-                          <p class="p4 text-secondary-100 button__decor-item">
-                            4
-                          </p>
+                          <p class="p4 button__decor-item">4</p>
                         </div>
                       </button>
                     </div>
@@ -231,22 +227,22 @@
                           type="button"
                         >
                           <div class="check">
-                            <span class="icon">
-                              <svg>
-                                <use xlink:href="#check-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon icon--sm">
+                              <span class="kit-icon check-big"></span>
+                            </div>
                           </div>
+
                           <p class="p2">Price</p>
-                          <span class="icon arrow">
-                            <svg>
-                              <use xlink:href="#arrow-bottom-icon"></use>
-                            </svg>
-                          </span>
+
+                          <div class="icon icon--big arrow">
+                            <span class="kit-icon caret-up-md"></span>
+                          </div>
                         </button>
+
                         <div class="dropdown__content popup price-popup">
                           <div class="price-popup__content">
                             <p class="p2 semibold-font">Price range, AED</p>
+
                             <div class="price-popup__items">
                               <div class="input-box">
                                 <label class="input-box__content">
@@ -318,11 +314,9 @@
                         type="button"
                         class="button button--lg button--rounded-md button--bg-primary-100"
                       >
-                        <span class="icon">
-                          <svg>
-                            <use xlink:href="#search-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon">
+                          <span class="kit-icon search-magnifying-glass"></span>
+                        </div>
 
                         <p class="p2 medium-font">Search</p>
                       </button>
@@ -332,11 +326,9 @@
                       <button
                         class="button button--cub button--bg-primary-100 button--cub-md-add"
                       >
-                        <span class="icon">
-                          <svg>
-                            <use xlink:href="#search-icon"></use>
-                          </svg>
-                        </span>
+                        <div class="icon">
+                          <span class="kit-icon search-magnifying-glass"></span>
+                        </div>
                       </button>
                     </div>
                   </div>
@@ -398,13 +390,10 @@
                     title="Home"
                     class="breadcrumbs__media"
                   >
-                    <span class="breadcrumbs__circle">
-                      <div class="icon icon--full">
-                        <svg>
-                          <use xlink:href="#arrow-circle-icon"></use>
-                        </svg>
-                      </div>
+                    <span class="icon" style="rotate: 90deg">
+                      <span class="kit-icon arrow-circle-down"></span>
                     </span>
+
                     <span>Home</span>
                   </a>
                 </div>
@@ -446,11 +435,9 @@
                           aria-label="Перейти на страницу карты"
                           title="Map"
                         >
-                          <span class="icon">
-                            <svg>
-                              <use xlink:href="#map-icon"></use>
-                            </svg>
-                          </span>
+                          <div class="icon">
+                            <span class="kit-icon map"></span>
+                          </div>
 
                           <span class="p2 medium-font" style="line-height: 1"
                             >Map</span
@@ -531,16 +518,16 @@
                                 <!-- prettier-ignore -->
 
                                 @@loop('../components/tag.html', [ 
-                                                                { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                                                { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                                                { "text": "1 floor", "icon": "#bed-icon" },
-                                                                { "text": "Q2 2026", "icon": "#bed-icon" },
-                                                                { "text": "60.11 sq.m.", "icon": "#bed-icon" } ])
+                                                                { "text": "2 Bedrooms", "icon": "bed" },
+                                                                { "text": "2 Bathrooms", "icon": "bath" },
+                                                                { "text": "1 floor", "icon": "floor-plan" },
+                                                                { "text": "Q2 2026", "icon": "barrier" },
+                                                                { "text": "60.11 sq.m.", "icon": "ruler" } ])
                               </div>
 
                               <ul class="list-icon">
                                 <!-- prettier-ignore -->
-                                @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                               </ul>
                             </header>
 
@@ -549,7 +536,7 @@
                                 <!-- prettier-ignore -->
 
                                 @@include('../btns/contact-btn.html', {"text" :
-                                                                "Contact Seller", "classAddText" : "p2 medium-font"})
+                                                                "Contact Seller", "classAddText" : "p3 medium-font"})
                                 
                                                                 @@include('../btns/favorite-btn.html', {"classAdd" :
                                                                 "button--bg-gray-200 button--cub button--cub-md-add active", "classAddIcon" : ""})
@@ -599,13 +586,11 @@
 
                                 <ul class="list-icon">
                                   <li class="list-icon__link">
-                                    <span class="icon icon">
-                                      <svg>
-                                        <use xlink:href="#geo-icon"></use>
-                                      </svg>
-                                    </span>
+                                    <div class="icon">
+                                      <span class="kit-icon map-pin"></span>
+                                    </div>
 
-                                    <p class="p2">
+                                    <p class="p3">
                                       Mohammed Bin Rashid City, Dubai
                                     </p>
                                   </li>
@@ -658,7 +643,6 @@
 
                               <div class="banner-promo__btns">
                                 <button
-                                  
                                   title="Contact Seller"
                                   class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
                                   data-modal="contactUpModal"
@@ -667,11 +651,11 @@
                                     >Contact Seller</span
                                   >
 
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#arrow-line-icon"></use>
-                                    </svg>
-                                  </span>
+                                  <div class="icon icon--big">
+                                    <span
+                                      class="kit-icon arrow-right-md"
+                                    ></span>
+                                  </div>
                                 </button>
                               </div>
                             </div>
@@ -707,7 +691,10 @@
                     "false"})
                   </div>
 
-                  @@include('../modules/banner-news.html')
+                  <div class="md-desktop-show">
+                    @@include('../modules/newsletter-second.html',
+                    {"classAddHead" : "p1 bold-font"})
+                  </div>
 
                   <div
                     class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg"
@@ -722,11 +709,9 @@
                           <p class="semibold-font p2">By type of property</p>
 
                           <div class="accordeon__item-arrow lg-show">
-                            <span class="icon icon--sm">
-                              <svg>
-                                <use xlink:href="#arrow-bottom-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon icon--big">
+                              <span class="kit-icon caret-down-md"></span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -873,13 +858,9 @@
                               <div
                                 class="button--circle button--circle-3xs button--bg-gray-600"
                               >
-                                <span class="icon icon--sm">
-                                  <svg>
-                                    <use
-                                      xlink:href="#arrow-line-down-icon"
-                                    ></use>
-                                  </svg>
-                                </span>
+                                <div class="icon icon--big">
+                                  <span class="kit-icon caret-down-md"></span>
+                                </div>
                               </div>
                             </button>
                           </footer>
@@ -896,11 +877,9 @@
                           <p class="semibold-font p2">By price</p>
 
                           <div class="accordeon__item-arrow lg-show">
-                            <span class="icon icon--sm">
-                              <svg>
-                                <use xlink:href="#arrow-bottom-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon icon--big">
+                              <span class="kit-icon caret-down-md"></span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1047,13 +1026,9 @@
                               <div
                                 class="button--circle button--circle-3xs button--bg-gray-600"
                               >
-                                <span class="icon icon--sm">
-                                  <svg>
-                                    <use
-                                      xlink:href="#arrow-line-down-icon"
-                                    ></use>
-                                  </svg>
-                                </span>
+                                <div class="icon">
+                                  <span class="kit-icon arrow-down-sm"></span>
+                                </div>
                               </div>
                             </button>
                           </footer>
@@ -1070,11 +1045,9 @@
                           <p class="semibold-font p2">By number of bedrooms</p>
 
                           <div class="accordeon__item-arrow lg-show">
-                            <span class="icon icon--sm">
-                              <svg>
-                                <use xlink:href="#arrow-bottom-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon icon--big">
+                              <span class="kit-icon caret-down-md"></span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1221,13 +1194,9 @@
                               <div
                                 class="button--circle button--circle-3xs button--bg-gray-600"
                               >
-                                <span class="icon icon--sm">
-                                  <svg>
-                                    <use
-                                      xlink:href="#arrow-line-down-icon"
-                                    ></use>
-                                  </svg>
-                                </span>
+                                <div class="icon">
+                                  <span class="kit-icon arrow-down-sm"></span>
+                                </div>
                               </div>
                             </button>
                           </footer>
@@ -1257,13 +1226,9 @@
 
                                 <div class="pricing-card__block">
                                   <div class="pricing-card__rating green">
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use
-                                          xlink:href="#arrow-line-up-icon"
-                                        ></use>
-                                      </svg>
-                                    </span>
+                                    <div class="icon icon--little">
+                                      <span class="kit-icon arrow-up-md"></span>
+                                    </div>
 
                                     <p class="p2">5,7%</p>
                                   </div>
@@ -1285,13 +1250,9 @@
 
                                 <div class="pricing-card__block">
                                   <div class="pricing-card__rating green">
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use
-                                          xlink:href="#arrow-line-up-icon"
-                                        ></use>
-                                      </svg>
-                                    </span>
+                                    <div class="icon icon--little">
+                                      <span class="kit-icon arrow-up-md"></span>
+                                    </div>
 
                                     <p class="p2">5,7%</p>
                                   </div>
@@ -1311,13 +1272,11 @@
 
                                 <div class="pricing-card__block">
                                   <div class="pricing-card__rating red">
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use
-                                          xlink:href="#arrow-line-down-icon"
-                                        ></use>
-                                      </svg>
-                                    </span>
+                                    <div class="icon icon--little">
+                                      <span
+                                        class="kit-icon arrow-down-md"
+                                      ></span>
+                                    </div>
 
                                     <p class="p2">5,7%</p>
                                   </div>
@@ -1337,13 +1296,11 @@
 
                                 <div class="pricing-card__block">
                                   <div class="pricing-card__rating red">
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use
-                                          xlink:href="#arrow-line-down-icon"
-                                        ></use>
-                                      </svg>
-                                    </span>
+                                    <div class="icon icon--little">
+                                      <span
+                                        class="kit-icon arrow-down-md"
+                                      ></span>
+                                    </div>
 
                                     <p class="p2">5,7%</p>
                                   </div>
@@ -1363,13 +1320,11 @@
 
                                 <div class="pricing-card__block">
                                   <div class="pricing-card__rating red">
-                                    <span class="icon icon--little">
-                                      <svg>
-                                        <use
-                                          xlink:href="#arrow-line-down-icon"
-                                        ></use>
-                                      </svg>
-                                    </span>
+                                    <div class="icon icon--little">
+                                      <span
+                                        class="kit-icon arrow-down-md"
+                                      ></span>
+                                    </div>
 
                                     <p class="p2">5,7%</p>
                                   </div>
@@ -1487,13 +1442,11 @@
                                     class="button button--cub button--bg-secondary-200 button--cub-md-add"
                                   >
                                     <div class="button__block">
-                                      <span class="icon">
-                                        <svg>
-                                          <use
-                                            xlink:href="#filter-second-icon"
-                                          ></use>
-                                        </svg>
-                                      </span>
+                                      <div class="icon">
+                                        <span
+                                          class="kit-icon filter-icon"
+                                        ></span>
+                                      </div>
                                     </div>
                                   </button>
                                 </div>
@@ -1691,11 +1644,9 @@
                             >
                               <p class="p2 regular-font">Add to compare</p>
 
-                              <span class="icon icon--sm">
-                                <svg>
-                                  <use xlink:href="#close-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="icon" style="rotate: 45deg">
+                                <span class="kit-icon close-md"></span>
+                              </div>
                             </button>
 
                             <button
@@ -1705,11 +1656,9 @@
                             >
                               <p class="p2 regular-font">Dubai</p>
 
-                              <span class="icon icon--sm">
-                                <svg>
-                                  <use xlink:href="#close-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="icon">
+                                <span class="kit-icon close-md"></span>
+                              </div>
                             </button>
 
                             <button
@@ -1719,11 +1668,9 @@
                             >
                               <p class="p2 regular-font">Abu Dhabi</p>
 
-                              <span class="icon icon--sm">
-                                <svg>
-                                  <use xlink:href="#close-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="icon">
+                                <span class="kit-icon close-md"></span>
+                              </div>
                             </button>
                           </div>
                         </div>
@@ -1741,11 +1688,9 @@
                               Show detailed market insights
                             </p>
 
-                            <span class="icon icon--big" style="rotate: 45deg">
-                              <svg>
-                                <use xlink:href="#arrow-up-line-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon" style="rotate: 45deg">
+                              <span class="kit-icon arrow-up-md"></span>
+                            </div>
                           </button>
                         </div>
                       </div>
@@ -1972,13 +1917,9 @@
                               <div
                                 class="button--circle button--circle-3xs button--bg-gray-600"
                               >
-                                <span class="icon icon--sm">
-                                  <svg>
-                                    <use
-                                      xlink:href="#arrow-line-down-icon"
-                                    ></use>
-                                  </svg>
-                                </span>
+                                <div class="icon" style="rotate: 45deg">
+                                  <span class="kit-icon arrow-up-md"></span>
+                                </div>
                               </div>
                             </button>
                           </footer>
@@ -1997,7 +1938,10 @@
                 <div class="catalogy__banners">
                   @@include('../modules/quick.html')
 
-                  @@include('../modules/banner-news.html')
+                  <div class="catalogy__sticky-banner">
+                    @@include('../modules/newsletter-second.html',
+                    {"classAddHead" : "p1 bold-font"})
+                  </div>
                 </div>
               </div>
             </div>

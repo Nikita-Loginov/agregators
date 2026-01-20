@@ -1,5 +1,5 @@
 <div class="checkbox-box">
-  <label class="check">
+  <label class="check" data-tooltip="Посмотреть элементы списком">
     <div class="check__info">
       <input
         type="radio"
@@ -10,18 +10,16 @@
       />
 
       <div class="check__info-content">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#rows-icon"></use>
-          </svg>
-        </span>
+        <div class="icon">
+          <span class="kit-icon rows"></span>
+        </div>
 
         <span class="p2">List</span>
       </div>
     </div>
   </label>
 
-  <label class="check">
+  <label class="check" data-tooltip="Посмотреть элементы колонками">
     <div class="check__info">
       <input
         type="radio"
@@ -31,11 +29,9 @@
       />
 
       <div class="check__info-content">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#table-icon"></use>
-          </svg>
-        </span>
+        <div class="icon">
+          <span class="kit-icon table"></span>
+        </div>
 
         <span class="p2">Tiles</span>
       </div>
@@ -46,15 +42,13 @@
     <a
       href="/map.html"
       aria-label="Перейти на страницу карты"
-      title="Map"
+      title="Перейти на страницу карты"
       class="check__info"
     >
       <div class="check__info-content">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#map-icon"></use>
-          </svg>
-        </span>
+        <div class="icon">
+          <span class="kit-icon map"></span>
+        </div>
 
         <span class="p2">Map</span>
       </div>

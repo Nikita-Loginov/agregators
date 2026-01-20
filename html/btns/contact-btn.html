@@ -3,11 +3,9 @@
   type="button"
   data-modal="contactUpModal"
 >
-  <span class="icon @@classAddIcon">
-    <svg>
-      <use xlink:href="#email-icon"></use>
-    </svg>
-  </span>
+  <div class="icon @@if (typeof classAddIcon !== 'undefined') {@@classAddIcon}">
+    <span class="kit-icon mail"></span>
+  </div>
 
   <span class="@@classAddText">@@text</span>
 </button>

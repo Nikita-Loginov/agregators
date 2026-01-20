@@ -104,19 +104,19 @@
     display: none;
   }
 
+  &__sticky-banner {
+    position: sticky;
+    top: calc(
+      var(--header-height, --calback-header-height) + var(--filter-height) +
+        10px
+    );
+    transition: all 0.3s;
+  }
+
   &__banners {
     display: flex;
     flex-direction: column;
     gap: calculate-clamp(20px, 32px, 1023px, 480px);
-
-    .banner-news {
-      display: flex;
-      position: sticky;
-      top: calc(
-        var(--header-height, --calback-header-height) + var(--filter-height) +
-          10px
-      );
-    }
   }
 
   &__map {
@@ -163,7 +163,6 @@
 
     .banner-news {
       display: flex;
-
     }
   }
 
@@ -318,11 +317,8 @@
 
 body.scrollBottom {
   .catalogy {
-    &__banners {
-      .banner-news {
-        position: sticky;
-        top: calc(var(--filter-height) + 10px);
-      }
+    &__sticky-banner {
+      top: calc(var(--filter-height) + 10px);
     }
   }
 }

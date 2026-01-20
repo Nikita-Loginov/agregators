@@ -47,12 +47,8 @@
     }
   }
 
-  &.relative-top {
-    .list-popup {
-      &__box {
-        top: calc(100% + var(--top-padding));
-      }
-    }
+  &.relative-top > .list-popup__box {
+    top: calc(100% + var(--top-padding));
   }
 
   &__box {

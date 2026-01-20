@@ -154,6 +154,7 @@ body .wrapper {
     font-size: var(--icon-base);
     width: var(--icon-base);
     height: var(--icon-base);
+    // background-color: red;
 
     svg,
     img {
@@ -164,6 +165,16 @@ body .wrapper {
     .kit-icon {
       font-size: 100%;
       color: currentColor;
+      // width: 100%;
+      // height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:before {
+        font-size: 100%;
+        color: currentColor;
+      }
     }
 
     &--big {

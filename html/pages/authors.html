@@ -206,7 +206,7 @@
                               <picture>
                                 <source
                                   srcset="
-                                    /img/persons/empty.svg   1x,
+                                    /img/persons/empty.svg 1x,
                                     /img/persons/empty.svg 2x
                                   "
                                 />
@@ -617,13 +617,9 @@
                               <div
                                 class="button--circle button--circle-3xs button--bg-gray-600"
                               >
-                                <span class="icon icon--sm">
-                                  <svg>
-                                    <use
-                                      xlink:href="#arrow-line-down-icon"
-                                    ></use>
-                                  </svg>
-                                </span>
+                                <div class="icon">
+                                  <span class="kit-icon arrow-down-sm"></span>
+                                </div>
                               </div>
                             </button>
                           </footer>
@@ -779,13 +775,9 @@
                               <div
                                 class="button--circle button--circle-3xs button--bg-gray-600"
                               >
-                                <span class="icon icon--sm">
-                                  <svg>
-                                    <use
-                                      xlink:href="#arrow-line-down-icon"
-                                    ></use>
-                                  </svg>
-                                </span>
+                                <div class="icon">
+                                  <span class="kit-icon arrow-down-sm"></span>
+                                </div>
                               </div>
                             </button>
                           </footer>
@@ -806,8 +798,8 @@
         </div>
       </main>
 
-      @@include('../modules/footer.html', {"inner" : ""}) @@include('../modals/request.html')
-      @@include('../modals/success.html')
+      @@include('../modules/footer.html', {"inner" : ""})
+      @@include('../modals/request.html') @@include('../modals/success.html')
       @@include('../modals/successRequest.html')
     </div>
 
