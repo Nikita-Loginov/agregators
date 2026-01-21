@@ -13,9 +13,15 @@
         color: var(--dark-color-700);
 
         img,
-        svg {
+        svg,
+        * {
           width: 120px;
+          font-size: 120px;
           aspect-ratio: 1 / 1;
+
+          &:before {
+            font-size: 100%;
+          }
         }
       }
 
@@ -23,18 +29,28 @@
         .companie-card {
           &__img-block {
             img,
-            svg {
+            svg,
+            * {
               width: 80px;
+              font-size: 80px;
+
+              &:before {
+                font-size: 100%;
+              }
             }
           }
         }
       }
 
       &__header-img {
+       
+
         img,
-        svg {
-          width: 30px;
-          height: 30px;
+        svg,
+        * {
+          width: 36px;
+          height: 36px;
+          font-size: 36px;
         }
       }
     }
@@ -74,6 +90,10 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
+
+      // &:before {
+      //   font-size: 100%;
+      // }
     }
   }
 
@@ -98,6 +118,8 @@
     align-items: center;
     justify-content: center;
     width: 60px;
+    align-items: center;
+    justify-content: center;
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
     border-radius: var(--radius-sm);
@@ -105,10 +127,16 @@
     background-color: var(--gray-color-200);
 
     img,
-    svg {
+    svg,
+    * {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      font-size: 36px;
+
+      &:before {
+        font-size: 100%;
+      }
     }
   }
 

@@ -2,9 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Agencies profile", "links" :
   ["./css/companies-info.css","./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
-   ]
-  })
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css", ] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -47,12 +45,8 @@
                     title="Companies"
                     class="breadcrumbs__media"
                   >
-                    <span class="breadcrumbs__circle">
-                      <span class="icon icon--full">
-                        <svg>
-                          <use xlink:href="#arrow-circle-icon"></use>
-                        </svg>
-                      </span>
+                    <span class="icon" style="rotate: 90deg">
+                      <span class="kit-icon arrow-circle-down"></span>
                     </span>
 
                     <span>Companies</span>
@@ -63,9 +57,7 @@
                   <div class="md-desktop-show">
                     <button class="button button--noMassa text-primary-100">
                       <span class="icon icon--little">
-                        <svg>
-                          <use xlink:href="#flug-icon"></use>
-                        </svg>
+                        <span class="kit-icon flag"></span>
                       </span>
 
                       <p class="p3 regular-font">Report this agencie</p>
@@ -80,9 +72,7 @@
                 <div class="name-rating name-rating--big">
                   <div class="name-rating__box">
                     <span class="icon text-primary-100">
-                      <svg>
-                        <use xlink:href="#star-icon"></use>
-                      </svg>
+                      <span class="kit-icon star"></span>
                     </span>
 
                     <p class="p2 semibold-font text-dark-100">4,9</p>
@@ -92,7 +82,7 @@
 
               <div class="top-page__content tablet-show">
                 <div
-                  class="banner-photo banner-photo--big banner-photo--cub-img"
+                  class="banner-photo banner-photo--secondary-bg-200 banner-photo--big banner-photo--cub-img"
                 >
                   <div class="banner-photo__img">
                     <picture>
@@ -210,12 +200,10 @@
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
                                       >
-                                        <span class="icon icon--sm">
-                                          <svg>
-                                            <use
-                                              xlink:href="#arrow-bottom-icon"
-                                            ></use>
-                                          </svg>
+                                        <span class="icon">
+                                          <span
+                                            class="kit-icon caret-down-md"
+                                          ></span>
                                         </span>
                                       </span>
                                     </button>
@@ -251,12 +239,10 @@
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
                                       >
-                                        <span class="icon icon--sm">
-                                          <svg>
-                                            <use
-                                              xlink:href="#arrow-bottom-icon"
-                                            ></use>
-                                          </svg>
+                                        <span class="icon">
+                                          <span
+                                            class="kit-icon caret-down-md"
+                                          ></span>
                                         </span>
                                       </span>
                                     </button>
@@ -292,12 +278,10 @@
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
                                       >
-                                        <span class="icon icon--sm">
-                                          <svg>
-                                            <use
-                                              xlink:href="#arrow-bottom-icon"
-                                            ></use>
-                                          </svg>
+                                        <span class="icon">
+                                          <span
+                                            class="kit-icon caret-down-md"
+                                          ></span>
                                         </span>
                                       </span>
                                     </button>
@@ -337,12 +321,10 @@
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
                                       >
-                                        <span class="icon icon--sm">
-                                          <svg>
-                                            <use
-                                              xlink:href="#arrow-bottom-icon"
-                                            ></use>
-                                          </svg>
+                                        <span class="icon">
+                                          <span
+                                            class="kit-icon caret-down-md"
+                                          ></span>
                                         </span>
                                       </span>
                                     </button>
@@ -362,11 +344,9 @@
                                   </p>
 
                                   <span class="icon" style="rotate: -45deg">
-                                    <svg>
-                                      <use
-                                        xlink:href="#arrow-right-line-icon"
-                                      ></use>
-                                    </svg>
+                                    <span
+                                      class="kit-icon arrow-right-md"
+                                    ></span>
                                   </span>
                                 </button>
                               </div>
@@ -377,9 +357,7 @@
                         <div class="tablet-show">
                           <button class="button button--noMassa">
                             <span class="icon icon--little text-secondary-300">
-                              <svg>
-                                <use xlink:href="#flug-icon"></use>
-                              </svg>
+                              <span class="kit-icon flag"></span>
                             </span>
 
                             <p class="p3 regular-font text-secondary-300">
@@ -398,9 +376,7 @@
                           <p class="p3 medium-font">Contact specialist</p>
 
                           <span class="icon" style="rotate: -45deg">
-                            <svg>
-                              <use xlink:href="#arrow-right-line-icon"></use>
-                            </svg>
+                            <span class="kit-icon arrow-right-md"></span>
                           </span>
                         </button>
                       </div>
@@ -474,10 +450,8 @@
                             <div
                               class="button--circle button--circle-3xs button--bg-gray-600"
                             >
-                              <span class="icon icon--sm">
-                                <svg>
-                                  <use xlink:href="#arrow-line-down-icon"></use>
-                                </svg>
+                              <span class="icon">
+                                <span class="kit-icon arrow-down-md"></span>
                               </span>
                             </div>
                           </button>
@@ -668,7 +642,10 @@
                   >
                     <div class="property__inner">
                       <div class="property__head">
-                        <h2 class="h5">All company's properties <span class="text-secondary-100">25</span></h2>
+                        <h2 class="h5">
+                          All company's properties
+                          <span class="text-secondary-100">25</span>
+                        </h2>
 
                         <div class="tablet-show">
                           <button
@@ -677,10 +654,8 @@
                             data-modal="filterModal"
                           >
                             <span class="icon">
-                              <svg>
-                                <use xlink:href="#filter-second-icon"></use>
-                              </svg>
-                            </span>
+                              <span class="kit-icon filter-icon"></span
+                            ></span>
 
                             <p class="p3 medium-font">Filters</p>
                           </button>
@@ -755,28 +730,26 @@
                                   type="button"
                                 >
                                   <div class="check">
-                                    <span class="icon">
-                                      <svg>
-                                        <use xlink:href="#check-icon"></use>
-                                      </svg>
-                                    </span>
+                                    <div class="icon icon--sm">
+                                      <span class="kit-icon check-big"></span>
+                                    </div>
                                   </div>
+
                                   <p class="p2">Price</p>
-                                  <span class="icon arrow">
-                                    <svg>
-                                      <use
-                                        xlink:href="#arrow-bottom-icon"
-                                      ></use>
-                                    </svg>
-                                  </span>
+
+                                  <div class="icon icon--big arrow">
+                                    <span class="kit-icon caret-up-md"></span>
+                                  </div>
                                 </button>
+
                                 <div
-                                  class="dropdown__content popup price-popup"
+                                  class="dropdown__content popup price-popup left"
                                 >
                                   <div class="price-popup__content">
                                     <p class="p2 semibold-font">
                                       Price range, AED
                                     </p>
+
                                     <div class="price-popup__items">
                                       <div class="input-box">
                                         <label class="input-box__content">
@@ -929,9 +902,9 @@
                                 <p class="p2 medium-font">Search</p>
 
                                 <span class="icon icon--big">
-                                  <svg>
-                                    <use xlink:href="#search-icon"></use>
-                                  </svg>
+                                  <span
+                                    class="kit-icon search-magnifying-glass"
+                                  ></span>
                                 </span>
                               </button>
                             </div>
@@ -960,7 +933,10 @@
                             </div>
 
                             <div class="checkbox-box">
-                              <label class="check">
+                              <label
+                                class="check"
+                                data-tooltip="Посмотреть элементы списком"
+                              >
                                 <div class="check__info">
                                   <input
                                     type="radio"
@@ -972,9 +948,7 @@
 
                                   <div class="check__info-content">
                                     <span class="icon">
-                                      <svg>
-                                        <use xlink:href="#rows-icon"></use>
-                                      </svg>
+                                      <span class="kit-icon rows"></span>
                                     </span>
 
                                     <span class="p2">List</span>
@@ -982,7 +956,10 @@
                                 </div>
                               </label>
 
-                              <label class="check">
+                              <label
+                                class="check"
+                                data-tooltip="Посмотреть элементы колонками"
+                              >
                                 <div class="check__info">
                                   <input
                                     type="radio"
@@ -993,33 +970,12 @@
 
                                   <div class="check__info-content">
                                     <span class="icon">
-                                      <svg>
-                                        <use xlink:href="#table-icon"></use>
-                                      </svg>
+                                      <span class="kit-icon table"></span>
                                     </span>
 
                                     <span class="p2">Tiles</span>
                                   </div>
                                 </div>
-                              </label>
-
-                              <label class="check">
-                                <a
-                                  href="/map.html"
-                                  aria-label="Перейти на страницу карты"
-                                  title="Map"
-                                  class="check__info"
-                                >
-                                  <div class="check__info-content">
-                                    <span class="icon">
-                                      <svg>
-                                        <use xlink:href="#map-icon"></use>
-                                      </svg>
-                                    </span>
-
-                                    <span class="p2">Map</span>
-                                  </div>
-                                </a>
                               </label>
                             </div>
                           </div>
@@ -1041,7 +997,7 @@
                                           <!-- prettier-ignore -->
 
                                           @@include('../good-item/badges.html',
-                                    {"complete": true, "check" : true})
+         {"complete": true, "check" : true})
                                         </div>
 
                                         <div class="swiper swiper--good-img">
@@ -1049,8 +1005,8 @@
                                             <!-- prettier-ignore -->
 
                                             @@loop('../good-item/slides-imgs.html', [
-                                      {"img": '/img/goods/one'},
-                                      {"img": '/img/goods/two'}
+           {"img": '/img/goods/one'},
+           {"img": '/img/goods/two'}
                                       ])
                                           </div>
 
@@ -1111,15 +1067,15 @@
                                           <!-- prettier-ignore -->
 
                                           @@loop('../components/tag.html', [ 
-                                    { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                    { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                    { "text": "1 floor", "icon": "#bed-icon" },
-                                    { "text": "Q2 2026", "icon": "#bed-icon" } ])
+         { "text": "2 Bedrooms", "icon": "bed", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "2 Bathrooms", "icon": "bath", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "1 floor", "icon": "floor-plan", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "Q2 2026", "icon": "barrier", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" } ])
                                         </div>
 
                                         <ul class="list-icon">
                                           <!-- prettier-ignore -->
-                                          @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "" }])
+                                          @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                         </ul>
                                       </header>
 
@@ -1158,7 +1114,7 @@
                                           <!-- prettier-ignore -->
 
                                           @@include('../good-item/badges.html',
-                                    {"complete": true, "check" : true})
+         {"complete": true, "check" : true})
                                         </div>
 
                                         <div class="swiper swiper--good-img">
@@ -1166,8 +1122,8 @@
                                             <!-- prettier-ignore -->
 
                                             @@loop('../good-item/slides-imgs.html', [
-                                      {"img": '/img/goods/one'},
-                                      {"img": '/img/goods/two'}
+           {"img": '/img/goods/one'},
+           {"img": '/img/goods/two'}
                                       ])
                                           </div>
 
@@ -1228,10 +1184,10 @@
                                           <!-- prettier-ignore -->
 
                                           @@loop('../components/tag.html', [ 
-                                    { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                    { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                    { "text": "1 floor", "icon": "#bed-icon" },
-                                    { "text": "Q2 2026", "icon": "#bed-icon" } ])
+         { "text": "2 Bedrooms", "icon": "bed", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "2 Bathrooms", "icon": "bath", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "1 floor", "icon": "floor-plan", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "Q2 2026", "icon": "barrier", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" } ])
                                         </div>
                                       </header>
 
@@ -1270,7 +1226,7 @@
                                           <!-- prettier-ignore -->
 
                                           @@include('../good-item/badges.html',
-                                    {"complete": true, "check" : true})
+         {"complete": true, "check" : true})
                                         </div>
 
                                         <div class="swiper swiper--good-img">
@@ -1278,8 +1234,8 @@
                                             <!-- prettier-ignore -->
 
                                             @@loop('../good-item/slides-imgs.html', [
-                                      {"img": '/img/goods/one'},
-                                      {"img": '/img/goods/two'}
+           {"img": '/img/goods/one'},
+           {"img": '/img/goods/two'}
                                       ])
                                           </div>
 
@@ -1340,15 +1296,15 @@
                                           <!-- prettier-ignore -->
 
                                           @@loop('../components/tag.html', [ 
-                                    { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                    { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                    { "text": "1 floor", "icon": "#bed-icon" },
-                                    { "text": "Q2 2026", "icon": "#bed-icon" } ])
+         { "text": "2 Bedrooms", "icon": "bed", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "2 Bathrooms", "icon": "bath", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "1 floor", "icon": "floor-plan", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+         { "text": "Q2 2026", "icon": "barrier", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" } ])
                                         </div>
 
                                         <ul class="list-icon">
                                           <!-- prettier-ignore -->
-                                          @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "" }])
+                                          @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                         </ul>
                                       </header>
 
@@ -1409,9 +1365,7 @@
                     <div class="contact-aside__footer">
                       <button type="button" class="chips">
                         <span class="icon icon--little">
-                          <svg>
-                            <use xlink:href="#flug-icon"></use>
-                          </svg>
+                          <span class="kit-icon flag"></span>
                         </span>
 
                         <p class="p3">Report specialist</p>
@@ -1432,7 +1386,7 @@
 
     <script src="/js/lib/swiper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
-     
+
     <script src="/js/companies-info.js" type="module"></script>
   </body>
 </html>

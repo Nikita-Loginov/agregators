@@ -3723,13 +3723,6 @@ body .wrapper .br-el--rounded-3xl {
   background-color: var(--secondary-color-100);
   margin-left: auto;
 }
-.check-switch__box:hover {
-  background-color: var(--secondary-color-200);
-}
-.check-switch__box:hover .check-switch__decor {
-  -webkit-animation: left-right 0.5s;
-          animation: left-right 0.5s;
-}
 .check-switch__box:has(input:checked) {
   background-color: var(--secondary-color-200);
 }
@@ -3754,6 +3747,17 @@ body .wrapper .br-el--rounded-3xl {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4px;
+}
+
+label.check-switch {
+  cursor: pointer;
+}
+label.check-switch:hover .check-switch__box {
+  background-color: var(--secondary-color-200);
+}
+label.check-switch:hover .check-switch__decor {
+  -webkit-animation: left-right 0.5s;
+          animation: left-right 0.5s;
 }
 
 @-webkit-keyframes left-right {
@@ -5987,11 +5991,12 @@ body .wrapper .br-el--rounded-3xl {
 }
 
 .banner-photo {
-  background-color: var(--gray-color-100);
+  border: 3px solid var(--gray-color-200);
   border-radius: var(--radius-xl);
   overflow: hidden;
   width: 100%;
-  height: clamp(200px, -99.609375px + 39.0625vw, 300px);
+  min-height: 100px;
+  height: clamp(220px, 86.2020905923px + 27.8745644599vw, 300px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6001,6 +6006,11 @@ body .wrapper .br-el--rounded-3xl {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 20px;
+}
+.banner-photo--secondary-bg-200 {
+  background-color: var(--secondary-color-200);
+  border-color: var(--secondary-color-200);
 }
 .banner-photo--big {
   height: clamp(232px, 28.265625px + 26.5625vw, 300px);
@@ -6021,8 +6031,6 @@ body .wrapper .br-el--rounded-3xl {
 @media (max-width: 767px) {
   .banner-photo {
     border-radius: var(--radius-md);
-    height: clamp(100px, -67.2473867596px + 34.8432055749vw, 200px);
-    background-color: var(--secondary-color-200);
   }
   .banner-photo--big {
     height: clamp(232px, 28.265625px + 26.5625vw, 300px);
@@ -6522,18 +6530,34 @@ body .wrapper .br-el--rounded-3xl {
   color: var(--dark-color-700);
 }
 .companie-card--empty .companie-card__img-block img,
-.companie-card--empty .companie-card__img-block svg {
+.companie-card--empty .companie-card__img-block svg,
+.companie-card--empty .companie-card__img-block * {
   width: 120px;
+  font-size: 120px;
   aspect-ratio: 1/1;
 }
+.companie-card--empty .companie-card__img-block img:before,
+.companie-card--empty .companie-card__img-block svg:before,
+.companie-card--empty .companie-card__img-block *:before {
+  font-size: 100%;
+}
 .companie-card--empty .companie-card__img-box .companie-card__img-block img,
-.companie-card--empty .companie-card__img-box .companie-card__img-block svg {
+.companie-card--empty .companie-card__img-box .companie-card__img-block svg,
+.companie-card--empty .companie-card__img-box .companie-card__img-block * {
   width: 80px;
+  font-size: 80px;
+}
+.companie-card--empty .companie-card__img-box .companie-card__img-block img:before,
+.companie-card--empty .companie-card__img-box .companie-card__img-block svg:before,
+.companie-card--empty .companie-card__img-box .companie-card__img-block *:before {
+  font-size: 100%;
 }
 .companie-card--empty .companie-card__header-img img,
-.companie-card--empty .companie-card__header-img svg {
-  width: 30px;
-  height: 30px;
+.companie-card--empty .companie-card__header-img svg,
+.companie-card--empty .companie-card__header-img * {
+  width: 36px;
+  height: 36px;
+  font-size: 36px;
 }
 .companie-card__img-box {
   position: relative;
@@ -6606,6 +6630,8 @@ body .wrapper .br-el--rounded-3xl {
       -ms-flex-pack: center;
           justify-content: center;
   width: 60px;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 1/1;
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -6614,11 +6640,18 @@ body .wrapper .br-el--rounded-3xl {
   background-color: var(--gray-color-200);
 }
 .companie-card__header-img img,
-.companie-card__header-img svg {
+.companie-card__header-img svg,
+.companie-card__header-img * {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  font-size: 36px;
+}
+.companie-card__header-img img:before,
+.companie-card__header-img svg:before,
+.companie-card__header-img *:before {
+  font-size: 100%;
 }
 .companie-card__header-content {
   display: -webkit-box;

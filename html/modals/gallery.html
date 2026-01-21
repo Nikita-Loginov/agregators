@@ -10,6 +10,10 @@
             <input type="radio" checked name="gallery-popup" />
 
             <div class="check__info-content">
+              <div class="icon icon--big">
+                <span class="kit-icon image"></span>
+              </div>
+
               <span class="p2">Photos (27)</span>
             </div>
           </div>
@@ -20,6 +24,10 @@
             <input type="radio" name="gallery-popup" />
 
             <div class="check__info-content">
+              <div class="icon icon--big">
+                <span class="kit-icon play-circle"></span>
+              </div>
+
               <span class="p2">Videos (2)</span>
             </div>
           </div>
@@ -33,11 +41,9 @@
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon icon--little" style="color: var(--white-color)">
-          <svg>
-            <use xlink:href="#close-icon"></use>
-          </svg>
-        </span>
+        <div class="icon icon--big" style="color: var(--white-color)">
+          <span class="kit-icon close-md"></span>
+        </div>
       </button>
     </header>
 
@@ -52,11 +58,9 @@
             class="button button--bg-gray-300 button--circle arrow-swiper prev"
             type="button"
           >
-            <span class="icon icon--big">
-              <svg>
-                <use xlink:href="#arrow-line-icon"></use>
-              </svg>
-            </span>
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-left-lg"></span>
+            </div>
           </button>
 
           <div class="galleryModal__swiper-block">
@@ -195,11 +199,9 @@
             class="button button--bg-gray-300 button--circle arrow-swiper next"
             type="button"
           >
-            <span class="icon icon--little">
-              <svg>
-                <use xlink:href="#arrow-line-icon"></use>
-              </svg>
-            </span>
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-right-lg"></span>
+            </div>
           </button>
         </div>
 
@@ -341,10 +343,8 @@
                   class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper prev"
                   type="button"
                 >
-                  <span class="icon icon--little" style="rotate: -180deg">
-                    <svg>
-                      <use xlink:href="#arrow-left-icon"></use>
-                    </svg>
+                  <span class="icon icon--little">
+                    <span class="kit-icon chevron-left"></span>
                   </span>
                 </button>
 
@@ -353,9 +353,7 @@
                   type="button"
                 >
                   <span class="icon icon--little" style="rotate: -180deg">
-                    <svg>
-                      <use xlink:href="#arrow-left-icon"></use>
-                    </svg>
+                    <span class="kit-icon chevron-left"></span>
                   </span>
                 </button>
               </div>
@@ -374,11 +372,9 @@
             class="button button--bg-gray-300 button--circle arrow-swiper prev"
             type="button"
           >
-            <span class="icon icon--big">
-              <svg>
-                <use xlink:href="#arrow-line-icon"></use>
-              </svg>
-            </span>
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-left-lg"></span>
+            </div>
           </button>
 
           <div class="galleryModal__swiper-block">
@@ -417,11 +413,9 @@
             class="button button--bg-gray-300 button--circle arrow-swiper next"
             type="button"
           >
-            <span class="icon icon--little">
-              <svg>
-                <use xlink:href="#arrow-line-icon"></use>
-              </svg>
-            </span>
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-right-lg"></span>
+            </div>
           </button>
         </div>
 
@@ -463,22 +457,18 @@
                   class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper prev"
                   type="button"
                 >
-                  <span class="icon icon--little" style="rotate: -180deg">
-                    <svg>
-                      <use xlink:href="#arrow-left-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon icon--big">
+                    <span class="kit-icon arrow-left-md"></span>
+                  </div>
                 </button>
 
                 <button
                   class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper next"
                   type="button"
                 >
-                  <span class="icon icon--little" style="rotate: -180deg">
-                    <svg>
-                      <use xlink:href="#arrow-left-icon"></use>
-                    </svg>
-                  </span>
+                  <div class="icon icon--big">
+                    <span class="kit-icon arrow-right-md"></span>
+                  </div>
                 </button>
               </div>
             </div>
@@ -487,17 +477,17 @@
       </div>
     </div>
 
-    <div class="arrows-swiper arrows-swiper--bg galleryModal__arrows-main lg-show">
+    <div
+      class="arrows-swiper arrows-swiper--bg galleryModal__arrows-main lg-show"
+    >
       <button
         class="arrow-swiper prev"
         type="button"
         aria-label="Посмотреть прошлый слайд"
       >
-        <span class="icon icon--big">
-          <svg>
-            <use xlink:href="#arrow-line-icon"></use>
-          </svg>
-        </span>
+        <div class="icon icon--big">
+          <span class="kit-icon arrow-left-md"></span>
+        </div>
       </button>
 
       <button
@@ -505,11 +495,9 @@
         type="button"
         aria-label="Посмотреть прошлый слайд"
       >
-        <span class="icon icon--big">
-          <svg>
-            <use xlink:href="#arrow-line-icon"></use>
-          </svg>
-        </span>
+        <div class="icon icon--big">
+          <span class="kit-icon arrow-right-md"></span>
+        </div>
       </button>
     </div>
   </div>

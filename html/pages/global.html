@@ -4,9 +4,23 @@
   </svg>
 </span>
 
-<div class="icon">
-  <span class="kit-icon house"></span>
+<div class="icon icon--big">
+  <span class="kit-icon arrow-right-md"></span>
 </div>
+
+<!-- edit-pencil-line-01 -->
+
+{ "text": "2 Bedrooms", "icon": "bed", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" }
+
+{ "text": "2 Bathrooms", "icon": "bath", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" }
+
+{ "text": "1 floor", "icon": "floor-plan", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" }
+
+{ "text": "Q2 2026", "icon": "barrier", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" }
+
+{ "text": "65 sq.m.", "icon": "ruler", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" }
+
+{ "text": "2 Bedrooms", "icon": "bed", "classAddIcon" : "icon--big", "classAddTagText" : "p2" }
 
 
 <div class="input-box">
@@ -26,13 +40,13 @@
 </div>
 
 <!-- @@loop('../components/tag.html', [ 
-                                { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                { "text": "1 floor", "icon": "#bed-icon" },
-                                { "text": "Q2 2026", "icon": "#bed-icon" },
-                                { "text": "60.11 sq.m.", "icon": "#bed-icon" } ]) -->
+     { "text": "2 Bedrooms", "icon": "bed", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+     { "text": "2 Bathrooms", "icon": "bath", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+     { "text": "1 floor", "icon": "floor-plan", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+     { "text": "Q2 2026", "icon": "barrier", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+     { "text": "60.11 sq.m.", "icon": "#bed-icon" } ]) -->
 
-<!-- @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }]) -->
+<!-- @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }]) -->
 
 <!-- <div class="good-item__btns">
                                   @@include('../btns/contact-btn.html', {"text" :
@@ -52,7 +66,7 @@
         <!-- prettier-ignore -->
 
         @@include('../good-item/badges.html',
-                                        {"complete": true, "check" : true})
+             {"complete": true, "check" : true})
       </div>
 
       <div class="swiper swiper--good-img">
@@ -60,8 +74,8 @@
           <!-- prettier-ignore -->
 
           @@loop('../good-item/slides-imgs.html', [
-                                          {"img": '/img/goods/one'},
-                                          {"img": '/img/goods/two'}
+               {"img": '/img/goods/one'},
+               {"img": '/img/goods/two'}
                                           ])
         </div>
 
@@ -106,16 +120,16 @@
         <!-- prettier-ignore -->
 
         @@loop('../components/tag.html', [ 
-                                        { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                        { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                        { "text": "1 floor", "icon": "#bed-icon" },
-                                        { "text": "Q2 2026", "icon": "#bed-icon" },
-                                        { "text": "60.11 sq.m.", "icon": "#bed-icon" } ])
+             { "text": "2 Bedrooms", "icon": "bed", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+             { "text": "2 Bathrooms", "icon": "bath", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+             { "text": "1 floor", "icon": "floor-plan", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+             { "text": "Q2 2026", "icon": "barrier", "classAddTag" : "tag--small", "classAddIcon" : "icon--big" },
+             { "text": "60.11 sq.m.", "icon": "#bed-icon" } ])
       </div>
 
       <ul class="list-icon">
         <!-- prettier-ignore -->
-        @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+        @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
       </ul>
     </header>
 
@@ -244,7 +258,7 @@
 
                   <ul class="list-icon">
                     <!-- prettier-ignore -->
-                    @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                    @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                   </ul>
                 </header>
 
@@ -335,7 +349,7 @@
 
                   <ul class="list-icon">
                     <!-- prettier-ignore -->
-                    @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                    @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                   </ul>
                 </header>
 
@@ -426,7 +440,7 @@
 
                   <ul class="list-icon">
                     <!-- prettier-ignore -->
-                    @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                    @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                   </ul>
                 </header>
 
@@ -517,7 +531,7 @@
 
                   <ul class="list-icon">
                     <!-- prettier-ignore -->
-                    @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                    @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                   </ul>
                 </header>
 
@@ -608,7 +622,7 @@
 
                   <ul class="list-icon">
                     <!-- prettier-ignore -->
-                    @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                    @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                   </ul>
                 </header>
 
@@ -699,7 +713,7 @@
 
                   <ul class="list-icon">
                     <!-- prettier-ignore -->
-                    @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                    @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                   </ul>
                 </header>
 

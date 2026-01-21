@@ -2,9 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Профиль гайда", "links" :
   ["./css/object.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css",
-   ]
-  })
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css", ] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -48,12 +46,8 @@
                       title="Home"
                       class="breadcrumbs__media"
                     >
-                      <span class="breadcrumbs__circle">
-                        <span class="icon icon--full">
-                          <svg>
-                            <use xlink:href="#arrow-circle-icon"></use>
-                          </svg>
-                        </span>
+                      <span class="icon" style="rotate: 90deg">
+                        <span class="kit-icon arrow-circle-down"></span>
                       </span>
 
                       <span>Home</span>
@@ -144,9 +138,7 @@
                             type="button"
                           >
                             <span class="icon icon--big">
-                              <svg>
-                                <use xlink:href="#arrow-right-line-icon"></use>
-                              </svg>
+                              <span class="kit-icon arrow-left-lg"></span>
                             </span>
                           </button>
 
@@ -155,9 +147,7 @@
                             type="button"
                           >
                             <span class="icon icon--big">
-                              <svg>
-                                <use xlink:href="#arrow-right-line-icon"></use>
-                              </svg>
+                              <span class="kit-icon arrow-right-lg"></span>
                             </span>
                           </button>
                         </div>
@@ -176,7 +166,9 @@
               >
                 <div class="object-bottom__content">
                   <div class="object-bottom__top">
-                    <div class="object-bottom__top-content object-bottom__top-content-info--small">
+                    <div
+                      class="object-bottom__top-content object-bottom__top-content-info--small"
+                    >
                       <div
                         class="object-bottom__top-content-info object-bottom__top-content-info--small object-bottom__top-content-info--inner"
                       >
@@ -186,21 +178,17 @@
                           </h1>
 
                           <div class="decor-el lg-none no-wrap">
-                            <span class="icon icon--big text-secondary-300">
-                              <svg>
-                                <use xlink:href="#building-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon icon--big text-secondary-300">
+                              <span class="kit-icon building-01"></span>
+                            </div>
 
                             <p class="p2 text-secondary-300 text-underline">
                               4414 properties for sale
                             </p>
 
-                            <span class="icon icon--big text-primary-100">
-                              <svg>
-                                <use xlink:href="#arrow-down-line-icon"></use>
-                              </svg>
-                            </span>
+                            <div class="icon icon--big text-primary-100">
+                              <span class="kit-icon arrow-down-md"></span>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -225,9 +213,7 @@
                                 class="badge-decor badge-decor--xl badge-decor--gray-100"
                               >
                                 <span class="icon icon--big">
-                                  <svg>
-                                    <use xlink:href="#ruler-icon"></use>
-                                  </svg>
+                                  <span class="kit-icon ruler"></span>
                                 </span>
 
                                 <div class="badge-decor__content">
@@ -241,9 +227,7 @@
                                 class="badge-decor badge-decor--xl badge-decor--gray-100"
                               >
                                 <span class="icon icon--big">
-                                  <svg>
-                                    <use xlink:href="#building-icon"></use>
-                                  </svg>
+                                  <span class="kit-icon building-04"></span>
                                 </span>
 
                                 <div class="badge-decor__content">
@@ -388,10 +372,8 @@
                             type="button"
                             aria-label="Посомтреть прошлый слайд"
                           >
-                            <span class="icon icon--sm">
-                              <svg>
-                                <use xlink:href="#arrow-icon"></use>
-                              </svg>
+                            <span class="icon icon--little">
+                              <span class="kit-icon chevron-left"></span>
                             </span>
                           </button>
 
@@ -402,10 +384,8 @@
                             type="button"
                             aria-label="Посомтреть прошлый слайд"
                           >
-                            <span class="icon icon--sm">
-                              <svg>
-                                <use xlink:href="#arrow-icon"></use>
-                              </svg>
+                            <span class="icon icon--little">
+                              <span class="kit-icon chevron-right"></span>
                             </span>
                           </button>
                         </div>
@@ -612,8 +592,8 @@
                             class="button--circle button--circle-3xs button--bg-gray-600"
                           >
                             <div class="icon">
-                                  <span class="kit-icon arrow-down-md"></span>
-                                </div>
+                              <span class="kit-icon arrow-down-md"></span>
+                            </div>
                           </div>
                         </button>
                       </div>
@@ -692,23 +672,19 @@
                       <p class="p2 medium-font">See all</p>
 
                       <span class="icon">
-                        <svg>
-                          <use xlink:href="#arrow-right-line-icon"></use>
-                        </svg>
+                        <span class="kit-icon arrow-right-lg"></span>
                       </span>
                     </button>
 
                     <button
                       class="button button--bg-secondary-200 button--rounded-2xl modal-open tablet-show"
-                      style="width: 100%;"
+                      style="width: 100%"
                       data-modal="featuresModal"
                     >
                       <p class="p2 medium-font">See all</p>
 
                       <span class="icon">
-                        <svg>
-                          <use xlink:href="#arrow-right-line-icon"></use>
-                        </svg>
+                        <span class="kit-icon arrow-right-lg"></span>
                       </span>
                     </button>
                   </div>
@@ -846,19 +822,16 @@
                               type="button"
                             >
                               <div class="check">
-                                <span class="icon">
-                                  <svg>
-                                    <use xlink:href="#check-icon"></use>
-                                  </svg>
-                                </span>
+                                <div class="icon icon--sm">
+                                  <span class="kit-icon check-big"></span>
+                                </div>
                               </div>
+
                               <p class="p2">Price</p>
 
-                              <span class="icon arrow">
-                                <svg>
-                                  <use xlink:href="#arrow-bottom-icon"></use>
-                                </svg>
-                              </span>
+                              <div class="icon icon--big arrow">
+                                <span class="kit-icon caret-up-md"></span>
+                              </div>
                             </button>
 
                             <div
@@ -874,11 +847,12 @@
                                         <div class="decor p2">Min</div>
                                         <input
                                           placeholder="0"
-                                          type="number"
+                                          type="text"
                                           name="price_min"
                                           min="0"
                                           max="10000"
                                           data-type="price_min"
+                                          data-input-number
                                         />
                                       </div>
                                     </label>
@@ -889,11 +863,12 @@
                                         <div class="decor p2">Max</div>
                                         <input
                                           placeholder="∞"
-                                          type="number"
+                                          type="text"
                                           name="price_max"
                                           min="0"
                                           max="10000"
                                           data-type="price_max"
+                                          data-input-number
                                         />
                                       </div>
                                     </label>
@@ -910,9 +885,9 @@
                             <p class="p2 medium-font">Search</p>
 
                             <span class="icon icon--big">
-                              <svg>
-                                <use xlink:href="#search-icon"></use>
-                              </svg>
+                              <span
+                                class="kit-icon search-magnifying-glass"
+                              ></span>
                             </span>
                           </button>
                         </div>
@@ -948,9 +923,7 @@
                               data-modal="filterModal"
                             >
                               <span class="icon">
-                                <svg>
-                                  <use xlink:href="#filter-second-icon"></use>
-                                </svg>
+                                <span class="kit-icon filter-icon"></span>
                               </span>
 
                               <p class="p3 medium-font">Filters</p>
@@ -964,9 +937,7 @@
                               class="button button--bg-secondary-200 button--lg button--rounded-md"
                             >
                               <span class="icon">
-                                <svg>
-                                  <use xlink:href="#map-icon"></use>
-                                </svg>
+                                <span class="kit-icon map"></span>
                               </span>
 
                               <p class="p3 medium-font">Map</p>
@@ -986,7 +957,7 @@
                                   <!-- prettier-ignore -->
 
                                   @@include('../good-item/badges.html',
-                                                                      {"complete": true, "check" : true})
+                                           {"complete": true, "check" : true})
                                 </div>
 
                                 <div class="swiper swiper--good-img">
@@ -994,8 +965,8 @@
                                     <!-- prettier-ignore -->
 
                                     @@loop('../good-item/slides-imgs.html', [
-                                                                        {"img": '/img/goods/one'},
-                                                                        {"img": '/img/goods/two'}
+                                             {"img": '/img/goods/one'},
+                                             {"img": '/img/goods/two'}
                                                                         ])
                                   </div>
 
@@ -1051,16 +1022,16 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                                                      { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                                                      { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                                                      { "text": "1 floor", "icon": "#bed-icon" },
-                                                                      { "text": "Q2 2026", "icon": "#bed-icon" },
-                                                                      { "text": "60.11 sq.m.", "icon": "#bed-icon" } ])
+                                           { "text": "2 Bedrooms", "icon": "bed",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "2 Bathrooms", "icon": "bath",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "1 floor", "icon": "floor-plan",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "Q2 2026", "icon": "barrier",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "60.11 sq.m.", "icon": "ruler", "classAddTagText" : "p2" } ])
                                 </div>
 
                                 <ul class="list-icon">
                                   <!-- prettier-ignore -->
-                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                 </ul>
                               </header>
 
@@ -1095,7 +1066,7 @@
                                   <!-- prettier-ignore -->
 
                                   @@include('../good-item/badges.html',
-                                                                      {"complete": true, "check" : true})
+                                           {"complete": true, "check" : true})
                                 </div>
 
                                 <div class="swiper swiper--good-img">
@@ -1103,8 +1074,8 @@
                                     <!-- prettier-ignore -->
 
                                     @@loop('../good-item/slides-imgs.html', [
-                                                                        {"img": '/img/decor/two'},
-                                                                        {"img": '/img/goods/two'}
+                                             {"img": '/img/decor/two'},
+                                             {"img": '/img/goods/two'}
                                                                         ])
                                   </div>
 
@@ -1151,24 +1122,22 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                                                      { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                                                      { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                                                      { "text": "1 floor", "icon": "#bed-icon" },
-                                                                      { "text": "Q2 2026", "icon": "#bed-icon" },
-                                                                      { "text": "60.11 sq.m.", "icon": "#bed-icon" } ])
+                                           { "text": "2 Bedrooms", "icon": "bed",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "2 Bathrooms", "icon": "bath",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "1 floor", "icon": "floor-plan",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "Q2 2026", "icon": "barrier",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "60.11 sq.m.", "icon": "ruler", "classAddIcon" : "icon--big", "classAddTagText" : "p2" } ])
                                 </div>
 
                                 <ul class="list-icon">
                                   <!-- prettier-ignore -->
-                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
 
                                   <li
                                     class="list-icon__link list-icon__link--start"
                                   >
                                     <span class="icon icon--big">
-                                      <svg>
-                                        <use xlink:href="#train-icon"></use>
-                                      </svg>
+                                      <span class="kit-icon train"></span>
                                     </span>
 
                                     <div class="text-dots">
@@ -1249,13 +1218,11 @@
 
                                   <ul class="list-icon">
                                     <li class="list-icon__link">
-                                      <span class="icon icon">
-                                        <svg>
-                                          <use xlink:href="#geo-icon"></use>
-                                        </svg>
-                                      </span>
+                                      <div class="icon">
+                                        <span class="kit-icon map-pin"></span>
+                                      </div>
 
-                                      <p class="p2">
+                                      <p class="p3">
                                         Mohammed Bin Rashid City, Dubai
                                       </p>
                                     </li>
@@ -1308,21 +1275,20 @@
 
                                 <div class="banner-promo__btns">
                                   <button
-                                  
-                                  title="Contact Seller"
-                                  class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
-                                  data-modal="contactUpModal"
-                                >
-                                  <span class="p2 medium-font"
-                                    >Contact Seller</span
+                                    title="Contact Seller"
+                                    class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
+                                    data-modal="contactUpModal"
                                   >
+                                    <span class="p2 medium-font"
+                                      >Contact Seller</span
+                                    >
 
-                                  <span class="icon">
-                                    <svg>
-                                      <use xlink:href="#arrow-line-icon"></use>
-                                    </svg>
-                                  </span>
-                                </button>
+                                    <div class="icon icon--big">
+                                      <span
+                                        class="kit-icon arrow-right-md"
+                                      ></span>
+                                    </div>
+                                  </button>
                                 </div>
                               </div>
                             </div>
@@ -1335,7 +1301,7 @@
                                   <!-- prettier-ignore -->
 
                                   @@include('../good-item/badges.html',
-                                                                      {"complete": true, "check" : true})
+                                           {"complete": true, "check" : true})
                                 </div>
 
                                 <div class="swiper swiper--good-img">
@@ -1343,8 +1309,8 @@
                                     <!-- prettier-ignore -->
 
                                     @@loop('../good-item/slides-imgs.html', [
-                                                                        {"img": '/img/goods/one'},
-                                                                        {"img": '/img/goods/two'}
+                                             {"img": '/img/goods/one'},
+                                             {"img": '/img/goods/two'}
                                                                         ])
                                   </div>
 
@@ -1400,16 +1366,16 @@
                                   <!-- prettier-ignore -->
 
                                   @@loop('../components/tag.html', [ 
-                                                                      { "text": "2 Bedrooms", "icon": "#bed-icon" },
-                                                                      { "text": "2 Bathrooms", "icon": "#bed-icon" },
-                                                                      { "text": "1 floor", "icon": "#bed-icon" },
-                                                                      { "text": "Q2 2026", "icon": "#bed-icon" },
-                                                                      { "text": "60.11 sq.m.", "icon": "#bed-icon" } ])
+                                           { "text": "2 Bedrooms", "icon": "bed",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "2 Bathrooms", "icon": "bath",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "1 floor", "icon": "floor-plan",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "Q2 2026", "icon": "barrier",  "classAddIcon" : "icon--big", "classAddTagText" : "p2" },
+                                           { "text": "60.11 sq.m.", "icon": "ruler", "classAddIcon" : "icon--big", "classAddTagText" : "p2" } ])
                                 </div>
 
                                 <ul class="list-icon">
                                   <!-- prettier-ignore -->
-                                  @@loop("../components/list-icon-link.html", [{"icon": "geo-icon", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed Bin Rashid City, Dubai", "iconClassAdd" : "icon--big" }])
                                 </ul>
                               </header>
 
@@ -1607,9 +1573,7 @@
                             type="button"
                           >
                             <span class="icon icon--big">
-                              <svg>
-                                <use xlink:href="#arrow-right-line-icon"></use>
-                              </svg>
+                              <span class="kit-icon arrow-left-md"></span>
                             </span>
                           </button>
 
@@ -1618,9 +1582,7 @@
                             type="button"
                           >
                             <span class="icon icon--big">
-                              <svg>
-                                <use xlink:href="#arrow-right-line-icon"></use>
-                              </svg>
+                              <span class="kit-icon arrow-right-md"></span>
                             </span>
                           </button>
                         </div>

@@ -1,5 +1,4 @@
 .catalogy-box {
-
   &__info {
     display: flex;
     flex-direction: column;
@@ -94,15 +93,12 @@
     display: flex;
     flex-direction: column;
     gap: calculate-clamp(20px, 32px, 1023px, 480px);
+  }
 
-    .banner-news {
-      display: flex;
-      position: sticky;
-      top: calc(
-        var(--header-height, --calback-header-height) +
-          10px
-      );
-    }
+  &__sticky-banner {
+    position: sticky;
+    top: calc(var(--header-height, --calback-header-height) + 10px);
+    transition: all 0.3s;
   }
 
   &[data-grid="tiles"] {
@@ -114,7 +110,6 @@
       & > *:not(.good-item) {
         grid-column: 1 / -1;
       }
-
     }
   }
 
@@ -164,11 +159,8 @@
 
 body.scrollBottom {
   .catalogy-box {
-    &__banners {
-      .banner-news {
-        position: sticky;
-        top: 10px;
-      }
+    &__sticky-banner {
+      top: calc(10px);
     }
   }
 }

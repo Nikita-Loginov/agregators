@@ -884,7 +884,7 @@
               type="button"
             >
               <div class="icon">
-                <span class="kit-icon chart-bar-vertical"></span>
+                <span class="kit-icon more-vertical"></span>
               </div>
             </button>
 
@@ -898,7 +898,7 @@
                     class="button button--noMassa link text-secondary-300"
                   >
                     <div class="button__block">
-                      <div class="icon">
+                      <div class="icon icon--little">
                         <span class="kit-icon archive"></span>
                       </div>
 
@@ -1747,12 +1747,8 @@
                   title="Home"
                   class="breadcrumbs__media"
                 >
-                  <span class="breadcrumbs__circle">
-                    <span class="icon icon--full">
-                      <svg>
-                        <use xlink:href="#arrow-circle-icon"></use>
-                      </svg>
-                    </span>
+                  <span class="icon" style="rotate: 90deg">
+                    <span class="kit-icon arrow-circle-down"></span>
                   </span>
 
                   <span>Home</span>
@@ -1768,171 +1764,140 @@
           <section
             class="catalogy-box"
             data-block="grid-relative"
-            data-grid="list"
+            data-grid="tiles"
           >
             <div class="container">
               <div class="catalogy-box__inner">
-                <div class="catalogy-box__content catalogy-box__content--xl topBox">
-                  <div class="catalogy-box__info">
-                    <div class="catalogy-box__filter">
-                      <div
-                        class="catalogy-box__filter-item"
-                        data-loader-relative
-                      >
-                        <div class="loader" data-loader-box>
-                          <span></span>
-                        </div>
-
-                        <div
-                          class="select-box select-box--words select-box--noMax"
-                          data-placeholder="To airport"
-                          data-loading="true"
-                        >
-                          <select id="select20">
-                            <option value="">To airport</option>
-                            <option value="1">some info 1</option>
-                            <option value="2">some info 2</option>
-                            <option value="3">some info 3</option>
-                            <option value="4">some info 4</option>
-                          </select>
-                        </div>
+                <div
+                  class="catalogy-box__content catalogy-box__content--xl topBox"
+                >
+                  <div class="catalogy-box__filter">
+                    <div class="catalogy-box__filter-item" data-loader-relative>
+                      <div class="loader" data-loader-box>
+                        <span></span>
                       </div>
 
                       <div
-                        class="catalogy-box__filter-item"
-                        data-loader-relative
+                        class="select-box select-box--words select-box--noMax"
+                        data-placeholder="To airport"
+                        data-loading="true"
                       >
-                        <div class="loader" data-loader-box>
-                          <span></span>
-                        </div>
-
-                        <div
-                          class="select-box select-box--words select-box--noMax"
-                          data-placeholder="Property type"
-                          data-loading="true"
-                        >
-                          <select id="select50">
-                            <option value="">Property type</option>
-                            <option value="1">Apartment</option>
-                            <option value="2">Penthouse</option>
-                            <option value="3">Duplex</option>
-                            <option value="4">
-                              Hotel Apartment Hotel Apartment
-                            </option>
-                          </select>
-                        </div>
+                        <select id="select20">
+                          <option value="">To airport</option>
+                          <option value="1">some info 1</option>
+                          <option value="2">some info 2</option>
+                          <option value="3">some info 3</option>
+                          <option value="4">some info 4</option>
+                        </select>
                       </div>
-
-                      <div
-                        class="catalogy-box__filter-item"
-                        data-loader-relative
-                      >
-                        <div class="loader" data-loader-box>
-                          <span></span>
-                        </div>
-
-                        <div
-                          class="select-box select-box--words select-box--check select-box--noMax"
-                          data-placeholder="Beds & Baths"
-                          data-loading="true"
-                        >
-                          <select id="select3" multiple>
-                            <option value="">Beds & Baths</option>
-                            <option value="beds-studio" data-group="beds">
-                              Studio
-                            </option>
-                            <option value="beds-1" data-group="beds">1</option>
-                            <option value="beds-2" data-group="beds">2</option>
-                            <option value="beds-3" data-group="beds">3</option>
-                            <option value="beds-4" data-group="beds">4</option>
-                            <option value="beds-5" data-group="beds">5</option>
-                            <option value="beds-6" data-group="beds">6</option>
-                            <option value="beds-7" data-group="beds">7</option>
-                            <option value="beds-8" data-group="beds">8</option>
-                            <option value="beds-9" data-group="beds">9</option>
-                            <option value="beds-10" data-group="beds">
-                              10+
-                            </option>
-                            <option value="baths-1" data-group="baths">
-                              1
-                            </option>
-                            <option value="baths-2" data-group="baths">
-                              2
-                            </option>
-                            <option value="baths-3" data-group="baths">
-                              3
-                            </option>
-                            <option value="baths-4" data-group="baths">
-                              4
-                            </option>
-                            <option value="baths-5" data-group="baths">
-                              5
-                            </option>
-                            <option value="baths-6" data-group="baths">
-                              6+
-                            </option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div
-                        class="catalogy-box__filter-item"
-                        data-loader-relative
-                      >
-                        <div class="loader" data-loader-box>
-                          <span></span>
-                        </div>
-
-                        <div
-                          class="select-box select-box--words select-box--noMax"
-                          data-placeholder="Guide"
-                          data-loading="true"
-                        >
-                          <select id="select70">
-                            <option value="">Guide</option>
-                            <option value="1">some info 1</option>
-                            <option value="2">some info 2</option>
-                            <option value="3">some info 3</option>
-                            <option value="4">some info 4</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div
-                        class="catalogy-box__filter-item"
-                        data-loader-relative
-                      >
-                        <div class="loader" data-loader-box>
-                          <span></span>
-                        </div>
-
-                        <div
-                          class="select-box select-box--words select-box--noMax"
-                          data-placeholder="Living area"
-                          data-loading="true"
-                        >
-                          <select id="select120">
-                            <option value="">Living area</option>
-                            <option value="1">some info 1</option>
-                            <option value="2">some info 2</option>
-                            <option value="3">some info 3</option>
-                            <option value="4">some info 4</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <button
-                        class="button button--bg-primary-200 button--rounded-md button--lg"
-                      >
-                        <p class="p2 medium-font">Search</p>
-
-                        <span class="icon icon--big">
-                          <svg>
-                            <use xlink:href="#search-icon"></use>
-                          </svg>
-                        </span>
-                      </button>
                     </div>
+
+                    <div class="catalogy-box__filter-item" data-loader-relative>
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--words select-box--noMax"
+                        data-placeholder="Property type"
+                        data-loading="true"
+                      >
+                        <select id="select50">
+                          <option value="">Property type</option>
+                          <option value="1">Apartment</option>
+                          <option value="2">Penthouse</option>
+                          <option value="3">Duplex</option>
+                          <option value="4">
+                            Hotel Apartment Hotel Apartment
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="catalogy-box__filter-item" data-loader-relative>
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--words select-box--check select-box--noMax"
+                        data-placeholder="Beds & Baths"
+                        data-loading="true"
+                      >
+                        <select id="select3" multiple>
+                          <option value="">Beds & Baths</option>
+                          <option value="beds-studio" data-group="beds">
+                            Studio
+                          </option>
+                          <option value="beds-1" data-group="beds">1</option>
+                          <option value="beds-2" data-group="beds">2</option>
+                          <option value="beds-3" data-group="beds">3</option>
+                          <option value="beds-4" data-group="beds">4</option>
+                          <option value="beds-5" data-group="beds">5</option>
+                          <option value="beds-6" data-group="beds">6</option>
+                          <option value="beds-7" data-group="beds">7</option>
+                          <option value="beds-8" data-group="beds">8</option>
+                          <option value="beds-9" data-group="beds">9</option>
+                          <option value="beds-10" data-group="beds">10+</option>
+                          <option value="baths-1" data-group="baths">1</option>
+                          <option value="baths-2" data-group="baths">2</option>
+                          <option value="baths-3" data-group="baths">3</option>
+                          <option value="baths-4" data-group="baths">4</option>
+                          <option value="baths-5" data-group="baths">5</option>
+                          <option value="baths-6" data-group="baths">6+</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="catalogy-box__filter-item" data-loader-relative>
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--words select-box--noMax"
+                        data-placeholder="Guide"
+                        data-loading="true"
+                      >
+                        <select id="select70">
+                          <option value="">Guide</option>
+                          <option value="1">some info 1</option>
+                          <option value="2">some info 2</option>
+                          <option value="3">some info 3</option>
+                          <option value="4">some info 4</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <div class="catalogy-box__filter-item" data-loader-relative>
+                      <div class="loader" data-loader-box>
+                        <span></span>
+                      </div>
+
+                      <div
+                        class="select-box select-box--words select-box--noMax"
+                        data-placeholder="Living area"
+                        data-loading="true"
+                      >
+                        <select id="select120">
+                          <option value="">Living area</option>
+                          <option value="1">some info 1</option>
+                          <option value="2">some info 2</option>
+                          <option value="3">some info 3</option>
+                          <option value="4">some info 4</option>
+                        </select>
+                      </div>
+                    </div>
+
+                    <button
+                      class="button button--bg-primary-200 button--rounded-md button--lg"
+                    >
+                      <p class="p2 medium-font">Search</p>
+
+                      <span class="icon icon--big">
+                        <span class="kit-icon search-magnifying-glass"></span>
+                      </span>
+                    </button>
                   </div>
 
                   <div
@@ -2112,9 +2077,7 @@
                         title="Map"
                       >
                         <span class="icon">
-                          <svg>
-                            <use xlink:href="#map-icon"></use>
-                          </svg>
+                          <span class="kit-icon map"></span>
                         </span>
 
                         <span class="p2 medium-font" style="line-height: 1"
@@ -2315,36 +2278,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -2352,7 +2333,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -2541,36 +2522,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -2578,7 +2577,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -2767,36 +2766,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -2804,7 +2821,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -2993,36 +3010,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -3030,7 +3065,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -3219,36 +3254,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -3256,7 +3309,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -3445,36 +3498,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -3482,7 +3553,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -3671,36 +3742,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -3708,7 +3797,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -3897,36 +3986,54 @@
                             <div class="good-item__tags">
                               <!-- prettier-ignore -->
 
-                              <div class="tag">
+                              <div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bed"></span>
   </div>
 
-  <p class="p2">2 Bedrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bedrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon bath"></span>
   </div>
 
-  <p class="p2">2 Bathrooms</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">2 Bathrooms</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon floor-plan"></span>
   </div>
 
-  <p class="p2">1 floor</p>
-</div><div class="tag">
+  
+
+  
+    <p class="p3">1 floor</p>
+  
+
+  
+</div><div class="tag ">
   <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
+    <span class="kit-icon ruler"></span>
   </div>
 
-  <p class="p2">Q2 2026</p>
-</div><div class="tag">
-  <div class="icon icon--big">
-    <span class="kit-icon #bed-icon"></span>
-  </div>
+  
 
-  <p class="p2">60.11 sq.m.</p>
+  
+    <p class="p3">60.11 sq.m.</p>
+  
+
+  
 </div>
                             </div>
 
@@ -3934,7 +4041,7 @@
                               <!-- prettier-ignore -->
                               <li class="list-icon__link">
   <div class="icon icon--big">
-    <span class="kit-icon geo-icon"></span>
+    <span class="kit-icon map-pin"></span>
   </div>
 
   <p class="p2">Mohammed Bin Rashid City, Dubai</p>
@@ -4167,11 +4274,9 @@
 
     <div class="cookies__footer">
       <div class="cookies__icon">
-        <span class="icon icon--full">
-          <svg>
-            <use xlink:href="#cookies-icon"></use>
-          </svg>
-        </span>
+        <div class="icon icon--big">
+          <span class="kit-icon cookie"></span>
+        </div>
       </div>
 
       <div class="cookies__btns">
@@ -5447,9 +5552,7 @@
     </footer>
   </div>
 </div>
- <div
-  class="modalBlock modalContent wrongModal modalBlock--media-fit"
->
+ <div class="modalBlock modalContent wrongModal modalBlock--media-fit">
   <div
     class="modalBlock__inner modalContent__inner modalContent__inner--small"
     style="max-width: 410px"
@@ -5460,22 +5563,18 @@
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon text-dark-100">
-          <svg>
-            <use xlink:href="#close-icon"></use>
-          </svg>
-        </span>
+        <div class="icon text-dark-100">
+          <span class="kit-icon close-md"></span>
+        </div>
       </button>
     </div>
 
     <div class="modalContent__content">
       <div class="modalContent__info">
         <div class="modalContent__block">
-          <span class="icon icon--lg text-primary-500">
-            <svg>
-              <use xlink:href="#info-icon"></use>
-            </svg>
-          </span>
+          <div class="icon icon--lg text-primary-500">
+            <span class="kit-icon info"></span>
+          </div>
 
           <p class="h5 text-primary-500">Something Went Wrong</p>
         </div>
@@ -5501,18 +5600,19 @@
   <div
   class="modalBlock modalContent successSecondModal modalContent--small modalBlock--media-fit"
 >
-  <div class="modalBlock__inner modalContent__inner modalContent__inner--small" style="max-width: 410px">
-    <div class="modalBlock__head " style="margin-left: auto;">
+  <div
+    class="modalBlock__inner modalContent__inner modalContent__inner--small"
+    style="max-width: 410px"
+  >
+    <div class="modalBlock__head" style="margin-left: auto">
       <button
         class="modalBlock__close modal-close"
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon text-dark-100">
-          <svg>
-            <use xlink:href="#close-icon"></use>
-          </svg>
-        </span>
+        <div class="icon text-dark-100">
+          <span class="kit-icon close-md"></span>
+        </div>
       </button>
     </div>
 
@@ -5539,7 +5639,7 @@
 </div>
 
   <div
-  class="modalBlock modalContent succesBox wrongThirdModal modalBlock--media-fit"
+  class="modalBlock modalContent  succesBox wrongThirdModal modalBlock--media-fit"
 >
   <div class="modalBlock__inner succesBox__inner modalContent__inner">
     <div class="modalBlock__head" style="margin-left: auto">
@@ -5548,22 +5648,18 @@
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon text-dark-100">
-          <svg>
-            <use xlink:href="#close-icon"></use>
-          </svg>
-        </span>
+        <div class="icon text-dark-100">
+          <span class="kit-icon close-md"></span>
+        </div>
       </button>
     </div>
 
     <div class="succesBox__content">
       <div class="succesBox__info">
         <div class="succesBox__icon succesBox__icon--primary-500">
-          <span class="icon icon--big">
-            <svg>
-              <use xlink:href="#info-icon"></use>
-            </svg>
-          </span>
+          <div class="icon icon--lg">
+            <span class="kit-icon info"></span>
+          </div>
         </div>
 
         <div class="succesBox__details">
@@ -5582,20 +5678,16 @@
       <div class="succesBox__footer">
         <div class="succesBox__btns succesBox__btns--two">
           <button class="button button--bg-primary-200 modal-close">
-            <span class="icon icon--sm">
-              <svg>
-                <use xlink:href="#close-icon"></use>
-              </svg>
+            <span class="icon">
+              <span class="kit-icon close-md"></span>
             </span>
 
             <p class="p2 medium-font">Close</p>
           </button>
 
           <button class="button button--bg-primary-100 modal-close">
-            <span class="icon icon--sm">
-              <svg>
-                <use xlink:href="#undo-icon"></use>
-              </svg>
+            <span class="icon">
+              <span class="kit-icon undo"></span>
             </span>
 
             <p class="p2 medium-font">Try again</p>
@@ -5616,22 +5708,18 @@
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon text-dark-100">
-          <svg>
-            <use xlink:href="#close-icon"></use>
-          </svg>
-        </span>
+        <div class="icon text-dark-100">
+          <span class="kit-icon close-md"></span>
+        </div>
       </button>
     </div>
 
     <div class="succesBox__content">
       <div class="succesBox__info">
         <div class="succesBox__icon">
-          <span class="icon icon--big">
-            <svg>
-              <use xlink:href="#checks-icon"></use>
-            </svg>
-          </span>
+          <div class="icon icon--big">
+            <span class="kit-icon check-all-big"></span>
+          </div>
         </div>
 
         <div class="succesBox__details">
@@ -5649,11 +5737,9 @@
       <div class="succesBox__footer">
         <div class="succesBox__btns">
           <button class="button button--bg-secondary-200 modal-close">
-            <span class="icon icon--sm">
-              <svg>
-                <use xlink:href="#close-icon"></use>
-              </svg>
-            </span>
+            <div class="icon">
+              <span class="kit-icon close-md"></span>
+            </div>
 
             <p class="p2 medium-font">Close</p>
           </button>
@@ -5670,16 +5756,18 @@
     </header>
 
     <div class="modalContent__content">
-      <p class="p2 medium-font">Thank you for your request. We will contact you shortly.</p>
+      <p class="p2 medium-font">
+        Thank you for your request. We will contact you shortly.
+      </p>
     </div>
 
     <footer class="modalContent__footer">
-      <button class="button button--noBg button--noBg-dark-color-600 button--rounded-2xl button--mdx1 button--border-small modal-close">
-        <span class="icon">
-          <svg>
-            <use xlink:href="#close-big-icon"></use>
-          </svg>
-        </span>
+      <button
+        class="button button--noBg button--noBg-dark-color-600 button--rounded-2xl button--mdx1 button--border-small modal-close"
+      >
+        <div class="icon">
+          <span class="kit-icon close-md"></span>
+        </div>
 
         <p class="p2 regular-font">Close</p>
       </button>
@@ -5694,9 +5782,9 @@
         <button
           class="button button--cub button--cub-md-add button--bg-secondary-200 modal-close"
         >
-        <div class="icon">
-          <span class="kit-icon arrow-left-md"></span>
-        </div>
+          <div class="icon">
+            <span class="kit-icon arrow-left-md"></span>
+          </div>
         </button>
 
         <p class="h4 semibold-font text-dark-100">Languages</p>
@@ -5719,37 +5807,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn active  modal-close"
-        >
-          <span class="icon icon--lg">
-            <svg>
-              <use xlink:href="#rus-lang"></use>
-            </svg>
-          </span>
-
-          <span class="p1">Русский</span>
-        </a>
-
-        <a
-        href="/"
-        title="Выбрать язык Русский"
-        aria-label="Выбрать язык русский"
-        class="languagesModal__item modalBlock__btn  modal-close"
-      >
-        <span class="icon icon--lg">
-          <svg>
-            <use xlink:href="#rus-lang"></use>
-          </svg>
-        </span>
-
-        <span class="p1">Русский</span>
-      </a>
-
-      <a
-          href="/"
-          title="Выбрать язык Русский"
-          aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn active modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5764,7 +5822,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5779,7 +5837,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5794,7 +5852,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5809,7 +5867,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5824,7 +5882,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5839,7 +5897,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5854,7 +5912,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5869,7 +5927,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5884,7 +5942,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5899,7 +5957,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5914,7 +5972,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5929,7 +5987,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5944,7 +6002,7 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -5959,7 +6017,37 @@
           href="/"
           title="Выбрать язык Русский"
           aria-label="Выбрать язык русский"
-          class="languagesModal__item modalBlock__btn  modal-close"
+          class="languagesModal__item modalBlock__btn modal-close"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#rus-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p1">Русский</span>
+        </a>
+
+        <a
+          href="/"
+          title="Выбрать язык Русский"
+          aria-label="Выбрать язык русский"
+          class="languagesModal__item modalBlock__btn modal-close"
+        >
+          <span class="icon icon--lg">
+            <svg>
+              <use xlink:href="#rus-lang"></use>
+            </svg>
+          </span>
+
+          <span class="p1">Русский</span>
+        </a>
+
+        <a
+          href="/"
+          title="Выбрать язык Русский"
+          aria-label="Выбрать язык русский"
+          class="languagesModal__item modalBlock__btn modal-close"
         >
           <span class="icon icon--lg">
             <svg>
@@ -6301,11 +6389,9 @@
         <button
           class="button button--cub button--cub-md-add button--bg-secondary-200 modal-close"
         >
-          <span class="icon icon--little" style="rotate: -180deg">
-            <svg>
-              <use xlink:href="#arrow-line-icon"></use>
-            </svg>
-          </span>
+          <div class="icon">
+            <span class="kit-icon arrow-left-md"></span>
+          </div>
         </button>
 
         <p class="h4 semibold-font text-dark-100">Buy</p>
@@ -6376,21 +6462,16 @@
   <div
   class="modalBlock modalContent contactUpModal modalContent--small modalBlock--media-fit"
 >
-  <div
-    class="modalBlock__inner modalContent__inner "
-    style="max-width: 410px"
-  >
+  <div class="modalBlock__inner modalContent__inner" style="max-width: 410px">
     <div class="modalBlock__head" style="margin-left: auto">
       <button
-        class="modalBlock__close modal-close"
+        class="modalBlock__close modal-close text-dark-100"
         type="button"
         aria-label="Закрыть модалку"
       >
-        <span class="icon text-dark-100">
-          <svg>
-            <use xlink:href="#close-icon"></use>
-          </svg>
-        </span>
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
       </button>
     </div>
 

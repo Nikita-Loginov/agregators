@@ -183,14 +183,6 @@
       }
     }
 
-    &:hover {
-      background-color: var(--secondary-color-200);
-
-      .check-switch__decor {
-        animation: left-right 0.5s;
-      }
-    }
-
     &:has(input:checked) {
       background-color: var(--secondary-color-200);
     }
@@ -210,6 +202,22 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+  }
+}
+
+label.check-switch {
+  cursor: pointer;
+
+  &:hover {
+    .check-switch {
+      &__box {
+        background-color: var(--secondary-color-200);
+      }
+
+      &__decor {
+        animation: left-right 0.5s;
+      }
+    }
   }
 }
 

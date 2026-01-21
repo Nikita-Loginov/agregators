@@ -1,7 +1,15 @@
-<div class="tag">
+<div class="tag @@if (typeof classAddTag !== 'undefined') {@@classAddTag}">
   <div class="icon @@if (typeof classAddIcon !== 'undefined') {@@classAddIcon}">
     <span class="kit-icon @@icon"></span>
   </div>
 
-  <p class="p2">@@text</p>
+  @@if (typeof classAddTagText !== 'undefined') {
+    <p class="@@classAddTagText">@@text</p>
+  }
+
+  @@if (typeof classAddTagText === 'undefined') {
+    <p class="p3">@@text</p>
+  }
+
+  
 </div>

@@ -584,14 +584,21 @@
 }
 
 .banner-photo {
-  background-color: var(--gray-color-100);
+  border: 3px solid var(--gray-color-200);
   border-radius: var(--radius-xl);
   overflow: hidden;
   width: 100%;
-  height: calculate-clamp(200px, 300px, 1023px, 767px);
+  min-height: 100px;
+  height: calculate-clamp(220px, 300px, 767px, 480px);
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 20px;
+
+  &--secondary-bg-200 {
+    background-color: var(--secondary-color-200);
+    border-color: var(--secondary-color-200);
+  }
 
   &--big {
     height: calculate-clamp(232px, 300px, 1023px, 767px);
@@ -613,8 +620,7 @@
 
   @media (max-width: 767px) {
     border-radius: var(--radius-md);
-    height: calculate-clamp(100px, 200px, 767px, 480px);
-    background-color: var(--secondary-color-200);
+    // background-color: var(--secondary-color-200);
 
     &--big {
       height: calculate-clamp(232px, 300px, 1023px, 767px);

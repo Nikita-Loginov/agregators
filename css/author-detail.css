@@ -115,12 +115,11 @@
           flex-direction: column;
   gap: clamp(20px, 9.3922651934px + 2.2099447514vw, 32px);
 }
-.catalogy-box__banners .banner-news {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.catalogy-box__sticky-banner {
   position: sticky;
   top: calc(var(--header-height, --calback-header-height) + 10px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .catalogy-box[data-grid=tiles] .catalogy-box__items {
   display: grid;
@@ -170,7 +169,6 @@
   }
 }
 
-body.scrollBottom .catalogy-box__banners .banner-news {
-  position: sticky;
+body.scrollBottom .catalogy-box__sticky-banner {
   top: 10px;
 }
