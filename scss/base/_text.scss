@@ -9,6 +9,11 @@ h1 {
   }
 }
 
+.h1-mobile {
+  font-weight: var(--weight-font-xl);
+  font-size: 32px;
+}
+
 .h2,
 h2 {
   font-weight: var(--weight-font-xl);
@@ -113,6 +118,10 @@ h6 {
 
 .text-uppercase {
   text-transform: uppercase;
+}
+
+.text-white {
+  color: var(--white-color);
 }
 
 .text-secondary-100 {

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Login", "links" :
+  ["./css/auth.css"], "pageSimple" : "" }) @@include('../sprites/socials.html')
+
+  <body class="white-page">
+    <div class="wrapper">
+      <main class="main main--full">
+        <section class="auth">
+          <div class="container">
+            <div class="auth__inner">
+              <div class="auth__top">
+                <div class="auth__btns tablet-none">
+                  <a
+                    href="/"
+                    aria-label="Перейти на главную"
+                    title="Home"
+                    class="button button--2lg button--rounded-2xl button--bg-white-second"
+                  >
+                    <div class="button__block">
+                      <div class="icon icon--big">
+                        <span class="kit-icon house-01"></span>
+                      </div>
+
+                      <p class="p2 semibold-font">Home</p>
+                    </div>
+                  </a>
+
+                  <a
+                    href="/"
+                    aria-label="Перейти на главную"
+                    title="Home"
+                    class="button button--cub button--cub-2lg button--rounded-2xl button--bg-white-second"
+                  >
+                    <div class="button__block">
+                      <div class="icon icon--big">
+                        <span class="kit-icon close-md"></span>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+
+                <div class="auth__btns tablet-show">
+                  <a
+                    href="/"
+                    aria-label="Перейти на главную"
+                    title="Home"
+                    class="button button--cub button--rounded-base button--bg-gray-200"
+                  >
+                    <div class="button__block">
+                      <div class="icon icon--big">
+                        <span class="kit-icon close-md"></span>
+                      </div>
+                    </div>
+                  </a>
+
+                  <div class="auth__decor">
+                    <p class="p2 text-dark-500">Don’t have account?</p>
+
+                    <a
+                        href="/register.html"
+                        aria-label="Перейти на страницу регистрации"
+                        title="Sign Up"
+                        class="p2 medium-font text-secondary-100 text-underline"
+                        >Sign Up</a
+                      >
+                  </div>
+                </div>
+              </div>
+
+              <form novalidate class="form-auth form">
+                <div class="form-auth__header">
+                  <h1 class="h1-mobile">Login</h1>
+                </div>
+
+                <div class="form-auth__content">
+                  <div class="form-auth__inputs">
+                    <div class="input-box input-box--white form__item">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <div class="icon icon--big">
+                            <span class="kit-icon mail"></span>
+                          </div>
+
+                          <input
+                            type="email"
+                            name="email"
+                            placeholder="Email"
+                            required
+                          />
+                        </div>
+                      </label>
+
+                      <p class="input-box__errors p4 form__errors"></p>
+                    </div>
+
+                    <div class="input-box input-box--white form__item">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <div class="icon icon--big">
+                            <span class="kit-icon lock"></span>
+                          </div>
+
+                          <input
+                            type="password"
+                            name="password"
+                            placeholder="Password"
+                            required
+                          />
+                        </div>
+                      </label>
+
+                      <p class="input-box__errors p4 form__errors"></p>
+                    </div>
+                  </div>
+
+                  <div class="form-auth__decor">
+                    <p class="p2 text-dark-600">Or</p>
+                  </div>
+
+                  <div class="form-auth__info">
+                    <ul class="form-auth__socials">
+                      <li class="form-auth__social">
+                        <a
+                          href="#"
+                          aria-label="Зайти с помощью apple id"
+                          title="Вход через apple id"
+                          class="form-auth__social-item button button--bg-gray-200 button--rounded-sm"
+                        >
+                          <div class="icon icon--big">
+                            <svg>
+                              <use xlink:href="#apple-icon"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="form-auth__social">
+                        <a
+                          href="#"
+                          aria-label="Зайти с помощью facebook"
+                          title="Вход через facebook"
+                          class="form-auth__social-item button button--bg-gray-200 button--rounded-sm"
+                        >
+                          <div class="icon icon--big">
+                            <svg>
+                              <use xlink:href="#facebook-icon"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="form-auth__social">
+                        <a
+                          href="#"
+                          aria-label="Зайти с помощью twiter"
+                          title="Вход через twiter"
+                          class="form-auth__social-item button button--bg-gray-200 button--rounded-sm"
+                        >
+                          <div class="icon icon--big">
+                            <svg>
+                              <use xlink:href="#twiter-icon"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </li>
+
+                      <li class="form-auth__social">
+                        <a
+                          href="#"
+                          aria-label="Зайти с помощью vk"
+                          title="Вход через vk"
+                          class="form-auth__social-item button button--bg-gray-200 button--rounded-sm"
+                        >
+                          <div class="icon icon--big">
+                            <svg>
+                              <use xlink:href="#vk-icon"></use>
+                            </svg>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <div class="form-auth__decor tablet-none">
+                      <a
+                        href="/reset-password.html"
+                        aria-label="Перейти на страницу смены пароля"
+                        title="Forgot password"
+                        class="p3 medium-font text-secondary-100"
+                        >Forgot password</a
+                      >
+                    </div>
+
+                    <div class="form-auth__btns">
+                      <button
+                        style="min-height: 48px"
+                        class="button button--bg-primary-100 button--rounded-md"
+                        type="submit"
+                      >
+                        <p class="p2 medium-font">Login</p>
+                      </button>
+                    </div>
+
+                    <div class="form-auth__decor tablet-none">
+                      <p class="p3 text-dark-600">Don’t have account?</p>
+
+                      <a
+                        href="/register.html"
+                        aria-label="Перейти на страницу регистрации"
+                        title="Sign Up"
+                        class="p3 medium-font text-secondary-100 text-underline"
+                        >Sign Up</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </form>
+
+              <div class="auth__footer">
+                <p class="p3 text-white tablet-none">
+                  © Emirates.Estate 2025. All rights reserved.
+                </p>
+
+                <a
+                  href="/reset-password.html"
+                  aria-label="Перейти на страницу смены пароля"
+                  title="Forgot password"
+                  class="p3 medium-font text-secondary-100 tablet-show"
+                  >Forgot password</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="auth__img-box">
+            <picture>
+              <source srcset="/img/auth/one.webp 1x, /img/auth/one2x.webp 2x" />
+              <img src="/img/auth/one.webp" alt="фотография" />
+            </picture>
+          </div>
+        </section>
+      </main>
+
+      <div class="fixed-block">@@include('../modules/cookies.html')</div>
+
+      <script src="/js/page-simple.js" type="module"></script>
+    </div>
+  </body>
+</html>

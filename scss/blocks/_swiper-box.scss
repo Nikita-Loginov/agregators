@@ -18,6 +18,7 @@
   }
 
   &--pagination-bottom {
+
     @include paddingBottomPagination;
 
     &-tablet,
@@ -57,6 +58,18 @@
       }
     }
 
+    &-lg {
+      @media (max-width: $lg-breakpoint) {
+        &:not(:has(.swiper.swiper-disabled)) {
+          overflow: hidden;
+
+          .swiper {
+            overflow: visible;
+          }
+        }
+      }
+    }
+
     &-tablet-inner {
       @media (max-width: $tablet-breakpoint) {
         &:not(:has(.swiper.swiper-disabled)) {
@@ -85,6 +98,11 @@
       width: 100%;
       min-width: 0;
     }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
   }
 
   .swiper-slide {

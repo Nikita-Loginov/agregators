@@ -27,6 +27,12 @@ export const initImgsSwiperGoods = () => {
     };
 
     initSwiper(swiper, config);
+
+    if (config.mousewheel) {
+      swiper.addEventListener('wheel', (event) => {
+        event.stopPropagation();
+      }, { passive: false });
+    }
   });
 };
 

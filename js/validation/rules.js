@@ -62,4 +62,19 @@ export const validationRules = {
 
     hint: "Опишите ваш запрос в свободной форме",
   },
+
+  password: {
+    required: true,
+    minLength: 8,
+    maxLength: 32,
+    pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+  
+    message: {
+      required: "Введите пароль",
+      minLength: "Пароль должен быть не короче 8 символов",
+      pattern: "Пароль должен содержать буквы и цифры",
+    },
+  
+    hint: "Минимум 8 символов, включая буквы и цифры",
+  },
 };

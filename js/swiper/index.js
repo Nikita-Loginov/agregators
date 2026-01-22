@@ -25,6 +25,21 @@ const BREAKPOINTS_DEATAIL_BLOCK = {
   },
 };
 
+const BREAKPOINTS_CARDS_ITEMS = {
+  1280: {
+    slidesPerView: 4,
+  },
+  1024: {
+    slidesPerView: 3,
+  },
+  767: {
+    slidesPerView: 2.7,
+  },
+  600: {
+    slidesPerView: 2.1,
+  },
+};
+
 export const TABLE_OPTIONS = {
   slidesPerView: 1,
   spaceBetween: 16,
@@ -42,6 +57,27 @@ export const TABLE_OPTIONS = {
   touchAngle: 0,
   grabCursor: false,
   mousewheel: false,
+};
+
+export const CARDS_OPTIONS = {
+  mousewheel: MOUSE_WHEEL_CONFIG,
+  slidesPerView: 1.1,
+  spaceBetween: 16,
+  breakpoints: {
+    ...BREAKPOINTS_CARDS_ITEMS,
+  },
+};
+
+export const CARDS_EVENTS = {
+  init: function (swiper) {
+    checkIfDisabledSwiper(swiper);
+  },
+  update: function (swiper) {
+    checkIfDisabledSwiper(swiper);
+  },
+  resize: function (swiper) {
+    checkIfDisabledSwiper(swiper);
+  },
 };
 
 export const SWIPERS = {
@@ -391,7 +427,7 @@ export const SWIPERS = {
         el: ".swiper-box--employees .swiper-pagination",
       },
       breakpoints: {
-       ...BREAKPOINTS_DEATAIL_BLOCK
+        ...BREAKPOINTS_DEATAIL_BLOCK,
       },
     },
   },
@@ -425,8 +461,8 @@ export const SWIPERS = {
         el: ".swiper-box--detail .swiper-pagination",
       },
       breakpoints: {
-       ...BREAKPOINTS_DEATAIL_BLOCK
+        ...BREAKPOINTS_DEATAIL_BLOCK,
       },
     },
-  }
+  },
 };

@@ -3,12 +3,1927 @@
   @@include('../modules/head.html', { "title" : "Главная", "links" :
   ["./css/main.css", "./css/lib/swiper.min.css"] })
 
-  <body>
+  <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
 
       <main class="main">
-  
+        <section
+          class="projects swiper-box swiper-box--pagination-bottom swiper-box--visible-lg"
+        >
+          <div class="container">
+            <div class="topBox topBox--middle">
+              <div class="topBox__header">
+                <h2 class="h4">New Projects in the UAE</h2>
+              </div>
+
+              <div class="projects__inner">
+                <div class="projects__header">
+                  <div class="checkbox-box">
+                    <label
+                      class="check"
+                      data-tooltip="Посмотреть проекты Dubai"
+                    >
+                      <div class="check__info">
+                        <input type="radio" checked name="projects" />
+
+                        <div class="check__info-content">
+                          <span class="p2">Dubai</span>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label
+                      class="check"
+                      data-tooltip="Посмотреть проекты Abu Dhabi"
+                    >
+                      <div class="check__info">
+                        <input type="radio" name="projects" />
+
+                        <div class="check__info-content">
+                          <span class="p2">Abu Dhabi</span>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label
+                      class="check"
+                      data-tooltip="Посмотреть проекты Sharjah"
+                    >
+                      <div class="check__info">
+                        <input type="radio" name="projects" />
+
+                        <div class="check__info-content">
+                          <span class="p2">Sharjah</span>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label
+                      class="check"
+                      data-tooltip="Посмотреть проекты Ajman"
+                    >
+                      <div class="check__info">
+                        <input type="radio" name="projects" />
+
+                        <div class="check__info-content">
+                          <span class="p2">Ajman</span>
+                        </div>
+                      </div>
+                    </label>
+
+                    <label
+                      class="check lg-none"
+                      data-tooltip="Посмотреть проекты Ras Al Khaimah"
+                    >
+                      <div class="check__info">
+                        <input type="radio" name="projects" />
+
+                        <div class="check__info-content">
+                          <span class="p2">Ras Al Khaimah</span>
+                        </div>
+                      </div>
+                    </label>
+                  </div>
+
+                  <div class="projects__header-info">
+                    <a
+                      href="#"
+                      aria-label="Show all new projects in Dubai"
+                      title="All new projects in Dubai"
+                      class="button button--bg-secondary-200 button--lg button--rounded-md"
+                    >
+                      <div class="button__block">
+                        <p class="p2">All new projects in Dubai</p>
+
+                        <div class="icon icon--big" style="rotate: -45deg">
+                          <span class="kit-icon arrow-right-md"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+
+                <div class="projects__content" data-loader-relative>
+                  <div class="loader-items" data-loader-box>
+                    <div class="loader loader--good">
+                      <span></span>
+                    </div>
+
+                    <div class="loader loader--good">
+                      <span></span>
+                    </div>
+
+                    <div class="loader loader--good">
+                      <span></span>
+                    </div>
+
+                    <div class="loader loader--good">
+                      <span></span>
+                    </div>
+                  </div>
+
+                  <div class="swiper-box__block" data-loading="true">
+                    <div class="swiper swiper--projects">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div
+                            class="good-item good-item--column good-item--noShadow"
+                          >
+                            <div class="good-item__swiper-box">
+                              <div class="good-item__img-box">
+                                <div class="good-item__decor">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../good-item/badges.html',
+                                  {"complete": true, "check" : true})
+                                </div>
+
+                                <div class="swiper swiper--good-img">
+                                  <div class="swiper-wrapper">
+                                    <!-- prettier-ignore -->
+
+                                    @@loop('../good-item/slides-imgs.html', [
+                                        {"img": '/img/goods/six'},
+                                        {"img": '/img/goods/two'}
+                                  ])
+                                  </div>
+
+                                  <div class="good-item__decors-img">
+                                    @@include('../swiper/arrows-absolute.html')
+                                    @@include('../swiper/swiper-pagination-absolute.html')
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <header class="good-item__header">
+                                <div class="good-item__top-box">
+                                  <div class="good-item__top">
+                                    <p class="p1 bold-font good-item__title">
+                                      <span class="medium-font p2">from</span>
+
+                                      <span class="p1">220,761,000</span>
+
+                                      <span
+                                        class="text-uppercase p2 medium-font"
+                                        >AED</span
+                                      >
+                                    </p>
+                                  </div>
+
+                                  <div class="good-item__logo">
+                                    <picture>
+                                      <source
+                                        srcset="
+                                          /img/seller/seller.png 1x,
+                                          /img/seller/seller.png 2x
+                                        "
+                                      />
+                                      <img
+                                        src="/img/seller/seller.png"
+                                        alt="фотография"
+                                        loading="lazy"
+                                      />
+                                    </picture>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__top">
+                                  <p class="p1 text-secondary-300 bold-font">
+                                    Development
+                                  </p>
+
+                                  <p
+                                    class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                  >
+                                    SkyHills Astra in Al Barsha, Dubai, UAE №
+                                    574705
+                                  </p>
+                                </div>
+
+                                <ul class="list-icon">
+                                  <!-- prettier-ignore -->
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed City, Dubai, Dubai", "iconClassAdd" : "icon--big" }])
+                                </ul>
+
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                      { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                                </div>
+                              </header>
+
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                                @@include('../btns/favorite-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                                @@include('../btns/comparison-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div
+                            class="good-item good-item--column good-item--noShadow"
+                          >
+                            <div class="good-item__swiper-box">
+                              <div class="good-item__img-box">
+                                <div class="good-item__decor">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../good-item/badges.html',
+                                  {"complete": true, "check" : true})
+                                </div>
+
+                                <div class="swiper swiper--good-img">
+                                  <div class="swiper-wrapper">
+                                    <!-- prettier-ignore -->
+
+                                    @@loop('../good-item/slides-imgs.html', [
+                                        {"img": '/img/goods/one'},
+                                        {"img": '/img/goods/two'}
+                                  ])
+                                  </div>
+
+                                  <div class="good-item__decors-img">
+                                    @@include('../swiper/arrows-absolute.html')
+                                    @@include('../swiper/swiper-pagination-absolute.html')
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <header class="good-item__header">
+                                <div class="good-item__top-box">
+                                  <div class="good-item__top">
+                                    <p class="p1 bold-font good-item__title">
+                                      <span class="medium-font p2">from</span>
+
+                                      <span class="p1">220,761,000</span>
+
+                                      <span
+                                        class="text-uppercase p2 medium-font"
+                                        >AED</span
+                                      >
+                                    </p>
+                                  </div>
+
+                                  <div class="good-item__logo">
+                                    <picture>
+                                      <source
+                                        srcset="
+                                          /img/seller/seller.png 1x,
+                                          /img/seller/seller.png 2x
+                                        "
+                                      />
+                                      <img
+                                        src="/img/seller/seller.png"
+                                        alt="фотография"
+                                        loading="lazy"
+                                      />
+                                    </picture>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__top">
+                                  <p class="p1 text-secondary-300 bold-font">
+                                    Development
+                                  </p>
+
+                                  <p
+                                    class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                  >
+                                    SkyHills Astra in Al Barsha, Dubai, UAE №
+                                    574705
+                                  </p>
+                                </div>
+
+                                
+
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                      { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                                </div>
+                              </header>
+
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                                @@include('../btns/favorite-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                                @@include('../btns/comparison-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div
+                            class="good-item good-item--column good-item--noShadow"
+                          >
+                            <div class="good-item__swiper-box">
+                              <div class="good-item__img-box">
+                                <div class="good-item__decor">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../good-item/badges.html',
+                                  {"complete": true, "check" : true})
+                                </div>
+
+                                <div class="swiper swiper--good-img">
+                                  <div class="swiper-wrapper">
+                                    <!-- prettier-ignore -->
+
+                                    @@loop('../good-item/slides-imgs.html', [
+                                        {"img": '/img/goods/five'},
+                                        {"img": '/img/goods/two'}
+                                  ])
+                                  </div>
+
+                                  <div class="good-item__decors-img">
+                                    @@include('../swiper/arrows-absolute.html')
+                                    @@include('../swiper/swiper-pagination-absolute.html')
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <header class="good-item__header">
+                                <div class="good-item__top-box">
+                                  <div class="good-item__top">
+                                    <p class="p1 bold-font good-item__title">
+                                      <span class="medium-font p2">from</span>
+
+                                      <span class="p1">220,761,000</span>
+
+                                      <span
+                                        class="text-uppercase p2 medium-font"
+                                        >AED</span
+                                      >
+                                    </p>
+                                  </div>
+
+                                  <div class="good-item__logo">
+                                    <picture>
+                                      <source
+                                        srcset="
+                                          /img/seller/seller.png 1x,
+                                          /img/seller/seller.png 2x
+                                        "
+                                      />
+                                      <img
+                                        src="/img/seller/seller.png"
+                                        alt="фотография"
+                                        loading="lazy"
+                                      />
+                                    </picture>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__top">
+                                  <p class="p1 text-secondary-300 bold-font">
+                                    Development
+                                  </p>
+
+                                  <p
+                                    class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                  >
+                                    SkyHills Astra in Al Barsha, Dubai, UAE №
+                                    574705
+                                  </p>
+                                </div>
+
+                                <ul class="list-icon">
+                                  <!-- prettier-ignore -->
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed City, Dubai, Dubai", "iconClassAdd" : "icon--big" }])
+                                </ul>
+
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                      { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                                </div>
+                              </header>
+
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                                @@include('../btns/favorite-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                                @@include('../btns/comparison-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                          <div
+                            class="good-item good-item--column good-item--noShadow"
+                          >
+                            <div class="good-item__swiper-box">
+                              <div class="good-item__img-box">
+                                <div class="good-item__decor">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../good-item/badges.html',
+                                  {"complete": true, "check" : true})
+                                </div>
+
+                                <div class="swiper swiper--good-img">
+                                  <div class="swiper-wrapper">
+                                    <!-- prettier-ignore -->
+
+                                    @@loop('../good-item/slides-imgs.html', [
+                                        {"img": '/img/goods/one'},
+                                        {"img": '/img/goods/two'}
+                                  ])
+                                  </div>
+
+                                  <div class="good-item__decors-img">
+                                    @@include('../swiper/arrows-absolute.html')
+                                    @@include('../swiper/swiper-pagination-absolute.html')
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="good-item__content">
+                              <header class="good-item__header">
+                                <div class="good-item__top-box">
+                                  <div class="good-item__top">
+                                    <p class="p1 bold-font good-item__title">
+                                      <span class="medium-font p2">from</span>
+
+                                      <span class="p1">220,761,000</span>
+
+                                      <span
+                                        class="text-uppercase p2 medium-font"
+                                        >AED</span
+                                      >
+                                    </p>
+                                  </div>
+
+                                  <div class="good-item__logo">
+                                    <picture>
+                                      <source
+                                        srcset="
+                                          /img/seller/seller.png 1x,
+                                          /img/seller/seller.png 2x
+                                        "
+                                      />
+                                      <img
+                                        src="/img/seller/seller.png"
+                                        alt="фотография"
+                                        loading="lazy"
+                                      />
+                                    </picture>
+                                  </div>
+                                </div>
+
+                                <div class="good-item__top">
+                                  <p class="p1 text-secondary-300 bold-font">
+                                    Development
+                                  </p>
+
+                                  <p
+                                    class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                  >
+                                    SkyHills Astra in Al Barsha, Dubai, UAE №
+                                    574705
+                                  </p>
+                                </div>
+
+                                <ul class="list-icon">
+                                  <!-- prettier-ignore -->
+                                  @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed City, Dubai, Dubai", "iconClassAdd" : "icon--big" }])
+                                </ul>
+
+                                <div class="good-item__tags">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../components/tag.html', [ 
+                                      { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                                </div>
+                              </header>
+
+                              <footer class="good-item__footer">
+                                <div class="good-item__btns">
+                                  <!-- prettier-ignore -->
+
+                                  @@include('../btns/contact-btn.html', {"text" :
+                                "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                                @@include('../btns/favorite-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                                @@include('../btns/comparison-btn.html', {"classAdd" :
+                                "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <img
+                                    src="/img/seller/seller.png"
+                                    alt="логотип селера"
+                                  />
+                                </div>
+                              </footer>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper__detail">
+                        <div class="swiper-pagination"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="swiper-box swiper-box--offers swiper-box--pagination-bottom swiper-box--visible-lg"
+        >
+          <div class="container">
+            <div class="topBox topBox--middle">
+              <div class="topBox__header">
+                <h2 class="h4">Hot Offers</h2>
+              </div>
+
+              <div class="swiper-box__content" data-loader-relative>
+                <div class="loader-items" data-loader-box>
+                  <div class="loader loader--good">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--good">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--good">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--good">
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="swiper-box__block" data-loading="true">
+                  <div class="swiper swiper--offers">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div
+                          class="good-item good-item--column good-item--noShadow"
+                        >
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <!-- prettier-ignore -->
+
+                                @@include('../good-item/badges.html',
+                                {"complete": true, "check" : true})
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../good-item/slides-imgs.html', [
+                                      {"img": '/img/goods/six'},
+                                      {"img": '/img/goods/two'}
+                                ])
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  @@include('../swiper/arrows-absolute.html')
+                                  @@include('../swiper/swiper-pagination-absolute.html')
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p1 bold-font good-item__title">
+                                    <span class="medium-font p2">from</span>
+
+                                    <span class="p1">220,761,000</span>
+
+                                    <span class="text-uppercase p2 medium-font"
+                                      >AED</span
+                                    >
+                                  </p>
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/seller/seller.png 1x,
+                                        /img/seller/seller.png 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/seller/seller.png"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+                              </div>
+
+                              <div class="good-item__top">
+                                <p class="p1 text-secondary-300 bold-font">
+                                  Development
+                                </p>
+
+                                <p
+                                  class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  SkyHills Astra in Al Barsha, Dubai, UAE №
+                                  574705
+                                </p>
+                              </div>
+
+                              <ul class="list-icon">
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed City, Dubai, Dubai", "iconClassAdd" : "icon--big" }])
+                              </ul>
+
+                              <div class="good-item__tags">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../components/tag.html', [ 
+                                    { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                              </div>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
+                                @@include('../btns/contact-btn.html', {"text" :
+                              "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                              @@include('../btns/favorite-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                              @@include('../btns/comparison-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div
+                          class="good-item good-item--column good-item--noShadow"
+                        >
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <!-- prettier-ignore -->
+
+                                @@include('../good-item/badges.html',
+                                {"complete": true, "check" : true})
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../good-item/slides-imgs.html', [
+                                      {"img": '/img/goods/one'},
+                                      {"img": '/img/goods/two'}
+                                ])
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  @@include('../swiper/arrows-absolute.html')
+                                  @@include('../swiper/swiper-pagination-absolute.html')
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p1 bold-font good-item__title">
+                                    <span class="medium-font p2">from</span>
+
+                                    <span class="p1">220,761,000</span>
+
+                                    <span class="text-uppercase p2 medium-font"
+                                      >AED</span
+                                    >
+                                  </p>
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/seller/seller.png 1x,
+                                        /img/seller/seller.png 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/seller/seller.png"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+                              </div>
+
+                              <div class="good-item__top">
+                                <p class="p1 text-secondary-300 bold-font">
+                                  Development
+                                </p>
+
+                                <p
+                                  class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  SkyHills Astra in Al Barsha, Dubai, UAE №
+                                  574705
+                                </p>
+                              </div>
+
+                              <ul class="list-icon">
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed City, Dubai, Dubai", "iconClassAdd" : "icon--big" }])
+                              </ul>
+
+                              <div class="good-item__tags">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../components/tag.html', [ 
+                                    { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                              </div>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
+                                @@include('../btns/contact-btn.html', {"text" :
+                              "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                              @@include('../btns/favorite-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                              @@include('../btns/comparison-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div
+                          class="good-item good-item--column good-item--noShadow"
+                        >
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <!-- prettier-ignore -->
+
+                                @@include('../good-item/badges.html',
+                                {"complete": true, "check" : true})
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../good-item/slides-imgs.html', [
+                                      {"img": '/img/goods/five'},
+                                      {"img": '/img/goods/two'}
+                                ])
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  @@include('../swiper/arrows-absolute.html')
+                                  @@include('../swiper/swiper-pagination-absolute.html')
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p1 bold-font good-item__title">
+                                    <span class="medium-font p2">from</span>
+
+                                    <span class="p1">220,761,000</span>
+
+                                    <span class="text-uppercase p2 medium-font"
+                                      >AED</span
+                                    >
+                                  </p>
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/seller/seller.png 1x,
+                                        /img/seller/seller.png 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/seller/seller.png"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+                              </div>
+
+                              <div class="good-item__top">
+                                <p class="p1 text-secondary-300 bold-font">
+                                  Development
+                                </p>
+
+                                <p
+                                  class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  SkyHills Astra in Al Barsha, Dubai, UAE №
+                                  574705
+                                </p>
+                              </div>
+
+                              <ul class="list-icon">
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed City, Dubai, Dubai", "iconClassAdd" : "icon--big" }])
+                              </ul>
+
+                              <div class="good-item__tags">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../components/tag.html', [ 
+                                    { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                              </div>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
+                                @@include('../btns/contact-btn.html', {"text" :
+                              "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                              @@include('../btns/favorite-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                              @@include('../btns/comparison-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div
+                          class="good-item good-item--column good-item--noShadow"
+                        >
+                          <div class="good-item__swiper-box">
+                            <div class="good-item__img-box">
+                              <div class="good-item__decor">
+                                <!-- prettier-ignore -->
+
+                                @@include('../good-item/badges.html',
+                                {"complete": true, "check" : true})
+                              </div>
+
+                              <div class="swiper swiper--good-img">
+                                <div class="swiper-wrapper">
+                                  <!-- prettier-ignore -->
+
+                                  @@loop('../good-item/slides-imgs.html', [
+                                      {"img": '/img/goods/one'},
+                                      {"img": '/img/goods/two'}
+                                ])
+                                </div>
+
+                                <div class="good-item__decors-img">
+                                  @@include('../swiper/arrows-absolute.html')
+                                  @@include('../swiper/swiper-pagination-absolute.html')
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="good-item__content">
+                            <header class="good-item__header">
+                              <div class="good-item__top-box">
+                                <div class="good-item__top">
+                                  <p class="p1 bold-font good-item__title">
+                                    <span class="medium-font p2">from</span>
+
+                                    <span class="p1">220,761,000</span>
+
+                                    <span class="text-uppercase p2 medium-font"
+                                      >AED</span
+                                    >
+                                  </p>
+                                </div>
+
+                                <div class="good-item__logo">
+                                  <picture>
+                                    <source
+                                      srcset="
+                                        /img/seller/seller.png 1x,
+                                        /img/seller/seller.png 2x
+                                      "
+                                    />
+                                    <img
+                                      src="/img/seller/seller.png"
+                                      alt="фотография"
+                                      loading="lazy"
+                                    />
+                                  </picture>
+                                </div>
+                              </div>
+
+                              <div class="good-item__top">
+                                <p class="p1 text-secondary-300 bold-font">
+                                  Development
+                                </p>
+
+                                <p
+                                  class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+                                >
+                                  SkyHills Astra in Al Barsha, Dubai, UAE №
+                                  574705
+                                </p>
+                              </div>
+
+                              <ul class="list-icon">
+                                <!-- prettier-ignore -->
+                                @@loop("../components/list-icon-link.html", [{"icon": "map-pin", "text" : "Mohammed City, Dubai, Dubai", "iconClassAdd" : "icon--big" }])
+                              </ul>
+
+                              <div class="good-item__tags">
+                                <!-- prettier-ignore -->
+
+                                @@loop('../components/tag.html', [ 
+                                    { "text": "Q2 2026", "icon": "barrier", "classAddIcon" : "icon--big" } ])
+                              </div>
+                            </header>
+
+                            <footer class="good-item__footer">
+                              <div class="good-item__btns">
+                                <!-- prettier-ignore -->
+
+                                @@include('../btns/contact-btn.html', {"text" :
+                              "Contact Seller", "classAddText" : "p3 medium-font"})
+
+                              @@include('../btns/favorite-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+
+                              @@include('../btns/comparison-btn.html', {"classAdd" :
+                              "button--bg-gray-200 button--cub button--cub-md-add ", "classAddIcon" : ""})
+                              </div>
+
+                              <div class="good-item__logo">
+                                <img
+                                  src="/img/seller/seller.png"
+                                  alt="логотип селера"
+                                />
+                              </div>
+                            </footer>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper__detail">
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="quick-section">
+          <div class="container">
+            <div class="topBox topBox--small">
+              <div class="topBox__header">
+                <h2 class="h4">Popular Real Estate Searches</h2>
+              </div>
+
+              <div class="quick-section__inner full-el full-el--tablet">
+                <div class="quick quick--full-tablet">
+                  <div class="quick__item" data-block="more-relative">
+                    <div class="quick__title">
+                      <p class="semibold-font p2">By type of property</p>
+                    </div>
+
+                    <div class="quick__info">
+                      <div
+                        class="quick__items quick__items--four-grid more-block"
+                        data-block="more-items"
+                        data-max="6"
+                      >
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Dubai"
+                            title="Dubai"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Properties in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Abu Dhabi"
+                            title="Abu Dhabi"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Ajman"
+                            title="Ajman"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Dubai"
+                            title="Dubai"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Abu Dhabi"
+                            title="Abu Dhabi"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Abu Dhabi</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Ajman"
+                            title="Ajman"
+                            class="quick__block link"
+                          >
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Dubai"
+                            title="Dubai"
+                            class="quick__block link"
+                          >
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Abu Dhabi"
+                            title="Abu Dhabi"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Abu Dhabi</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Ajman"
+                            title="Ajman"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Ajman</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+                        </div>
+                      </div>
+
+                      <footer class="quick__footer" data-block="more-footer">
+                        <button
+                          class="btn-decor"
+                          data-block="more-btn"
+                          aria-label="Посмотреть больше"
+                          type="button"
+                        >
+                          <p class="p2 medium-font" data-block="more-btn-text">
+                            More
+                          </p>
+
+                          <div
+                            class="button--circle button--circle-3xs button--bg-gray-600"
+                          >
+                            <div class="icon">
+                              <span class="kit-icon arrow-down-sm"></span>
+                            </div>
+                          </div>
+                        </button>
+                      </footer>
+                    </div>
+                  </div>
+
+                  <div class="quick__item" data-block="more-relative">
+                    <div class="quick__title">
+                      <p class="semibold-font p2">By popular keywords</p>
+                    </div>
+
+                    <div class="quick__info">
+                      <div
+                        class="quick__items quick__items--four-grid more-block"
+                        data-block="more-items"
+                        data-max="2"
+                      >
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Dubai"
+                            title="Dubai"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Properties in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Abu Dhabi"
+                            title="Abu Dhabi"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Apartments in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Ajman"
+                            title="Ajman"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Dubai"
+                            title="Dubai"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Bungalows in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Abu Dhabi"
+                            title="Abu Dhabi"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Abu Dhabi</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Ajman"
+                            title="Ajman"
+                            class="quick__block link"
+                          >
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Dubai"
+                            title="Dubai"
+                            class="quick__block link"
+                          >
+                            <span class="p3">New apartments in UAE</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Abu Dhabi"
+                            title="Abu Dhabi"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Abu Dhabi</span>
+
+                            <span class="p3 quick__mean">29,130</span>
+                          </a>
+                        </div>
+
+                        <div class="more-block__item">
+                          <a
+                            href="#"
+                            aria-label="Перейти на страницу Ajman"
+                            title="Ajman"
+                            class="quick__block link"
+                          >
+                            <span class="p3">Ajman</span>
+
+                            <span class="p3 quick__mean">260</span>
+                          </a>
+                        </div>
+                      </div>
+
+                      <footer class="quick__footer" data-block="more-footer">
+                        <button
+                          class="btn-decor"
+                          data-block="more-btn"
+                          aria-label="Посмотреть больше"
+                          type="button"
+                        >
+                          <p class="p2 medium-font" data-block="more-btn-text">
+                            More
+                          </p>
+
+                          <div
+                            class="button--circle button--circle-3xs button--bg-gray-600"
+                          >
+                            <div class="icon">
+                              <span class="kit-icon arrow-down-sm"></span>
+                            </div>
+                          </div>
+                        </button>
+                      </footer>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="swiper-box swiper-box--dev swiper-box--visible-lg swiper-box--pagination-bottom swiper-box--pagination-bottom-big"
+        >
+          <div class="container">
+            <div class="topBox topBox--middle">
+              <div class="topBox__header">
+                <h2 class="h4">Explore Trusted Developers</h2>
+              </div>
+
+              <div class="swiper-box__content" data-loader-relative>
+                <div class="loader-items" data-loader-box>
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="swiper-box__block" data-loading="true">
+                  <div class="swiper swiper--dev">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="card-dev">
+                          <div class="card-dev__img-box">
+                            <div class="card-dev__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/dev/one.webp   1x,
+                                    /img/dev/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/dev/one.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="card-dev__content">
+                            <p class="p1 semibold-font">Sobha Group</p>
+
+                            <div class="card-dev__content-item">
+                              <p class="p3 medium-font text-secondary-100">
+                                494
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-dev">
+                          <div class="card-dev__img-box">
+                            <div class="card-dev__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/dev/two.webp   1x,
+                                    /img/dev/two2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/dev/two.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="card-dev__content">
+                            <p class="p1 semibold-font">Aldar Properties</p>
+
+                            <div class="card-dev__content-item">
+                              <p class="p3 medium-font text-secondary-100">
+                                330
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-dev">
+                          <div class="card-dev__img-box">
+                            <div class="card-dev__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/dev/three.webp   1x,
+                                    /img/dev/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/dev/three.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="card-dev__content">
+                            <p class="p1 semibold-font">Damac Properties</p>
+
+                            <div class="card-dev__content-item">
+                              <p class="p3 medium-font text-secondary-100">
+                                453
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-dev">
+                          <div class="card-dev__img-box">
+                            <div class="card-dev__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/dev/three.webp   1x,
+                                    /img/dev/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/dev/three.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="card-dev__content">
+                            <p class="p1 semibold-font">Damac Properties</p>
+
+                            <div class="card-dev__content-item">
+                              <p class="p3 medium-font text-secondary-100">
+                                453
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <div class="card-dev">
+                          <div class="card-dev__img-box">
+                            <div class="card-dev__img-block">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/dev/three.webp   1x,
+                                    /img/dev/three2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/dev/three.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div class="card-dev__content">
+                            <p class="p1 semibold-font">Damac Properties</p>
+
+                            <div class="card-dev__content-item">
+                              <p class="p3 medium-font text-secondary-100">
+                                453
+                              </p>
+
+                              <p class="p3 text-secondary-100">properties</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tablet-none">
+                      <div
+                        class="arrows-swiper arrows-swiper--big arrows-swiper--full-static"
+                      >
+                        <button
+                          class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper prev"
+                          type="button"
+                        >
+                          <span class="icon icon--big">
+                            <span class="kit-icon arrow-left-md"></span>
+                          </span>
+                        </button>
+
+                        <button
+                          class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper next"
+                          type="button"
+                        >
+                          <span class="icon icon--big">
+                            <span class="kit-icon arrow-right-md"></span>
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="tablet-show">
+                      <div class="swiper-pagination" style="width: 100%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="banners-section">
+          <div class="container">
+            <div class="banners-section__inner">
+              @@include('../modules/newsletter-row.html')
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="swiper-box swiper-box--articles swiper-box--pagination-bottom swiper-box--visible-lg"
+        >
+          <div class="container">
+            <div class="topBox topBox--middle">
+              <div class="topBox__header">
+                <h2 class="h4">Learn More About the UAE's Property</h2>
+              </div>
+
+              <div class="swiper-box__content" data-loader-relative>
+                <div class="loader-items" data-loader-box>
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+
+                  <div class="loader loader--dev">
+                    <span></span>
+                  </div>
+                </div>
+
+                <div class="swiper-box__block" data-loading="true">
+                  <div class="swiper swiper--articles">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Dubai Launches Ejari Rental Registration via
+                      WhatsApp in Major Digital Leap"
+                          title="Dubai Launches Ejari Rental Registration via
+                      WhatsApp in Major Digital Leap"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/one.webp   1x,
+                                  /img/gallery/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/one.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Dubai Launches Ejari Rental Registration via
+                              WhatsApp in Major Digital Leap
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4 text-dark-600"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Al Maktoum Airport Expansion "
+                          title="Al Maktoum Airport Expansion "
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/two.webp   1x,
+                                  /img/gallery/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/two.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Al Maktoum Airport Expansion 
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4 text-dark-600"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  How to move to Dubai: step-by-step guide to a smooth relocation"
+                          title="How to move to Dubai: step-by-step guide to a smooth relocation"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/three.webp   1x,
+                                  /img/gallery/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/three.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              How to move to Dubai: step-by-step guide to a smooth relocation
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4 text-dark-600"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Dubai Launches Ejari Rental Registration via
+                      WhatsApp in Major Digital Leap"
+                          title="Dubai Launches Ejari Rental Registration via
+                      WhatsApp in Major Digital Leap"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/one.webp   1x,
+                                  /img/gallery/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/one.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Dubai Launches Ejari Rental Registration via
+                              WhatsApp in Major Digital Leap
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4 text-dark-600"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  Al Maktoum Airport Expansion "
+                          title="Al Maktoum Airport Expansion "
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/two.webp   1x,
+                                  /img/gallery/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/two.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              Al Maktoum Airport Expansion 
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4 text-dark-600"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="swiper-slide">
+                        <a
+                          href="#"
+                          aria-label="Перейти на стаью  How to move to Dubai: step-by-step guide to a smooth relocation"
+                          title="How to move to Dubai: step-by-step guide to a smooth relocation"
+                          class="card-detail"
+                        >
+                          <div class="card-detail__img">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/gallery/three.webp   1x,
+                                  /img/gallery/three2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/three.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div class="card-detail__content">
+                            <p class="p1 medium-font ellipse-text">
+                              How to move to Dubai: step-by-step guide to a smooth relocation
+                            </p>
+
+                            <time
+                              datetime="2025-08-15"
+                              class="p4 text-dark-600"
+                            >
+                              15.08.2025
+                            </time>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+
+                    <div class="swiper__detail">
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
 
       @@include('../modules/footer.html', {"inner" : ""})

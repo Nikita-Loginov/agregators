@@ -24,4 +24,12 @@
   &--chart {
     min-height: calculate-clamp(130px, 400px, 1023px, 767px);
   }
+
+  &--good {
+    min-height: calculate-clamp(300px, 400px, 1023px, 767px);
+  }
+
+  &--dev {
+    min-height: calculate-clamp(294px, 300px, 1023px, 767px);
+  }
 }

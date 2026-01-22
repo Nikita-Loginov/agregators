@@ -1,4 +1,5 @@
 import { classAction } from "./classActions.js";
+import { hiddenLoader } from "./loader.js";
 
 const swiperInstances = {};
 
@@ -26,7 +27,6 @@ function initSwiper(config) {
   elements.forEach((element, index) => {
     const instanceKey = `${config.selector}--${index}`;
     swiperInstances[instanceKey] = new Swiper(element, swiperOptions);
-
   });
 
   return getSwipersBySelector(config.selector);
@@ -67,9 +67,23 @@ export function handleAllSliders() {
 
       if (!existingInstances.length) {
         initSwiper(config);
+
+        initHiddenLoader(config.selector);
       }
     } else {
       destroySwipersBySelector(config.selector);
     }
   });
 }
+
+const initHiddenLoader = (selectorSwiper) => {
+  if (!selectorSwiper) return;
+
+  const el = document.querySelector(selectorSwiper);
+
+  if (!el) return;
+
+  const loadingBox = el.closest("[data-loader-relative]");
+
+  if (loadingBox) hiddenLoader(loadingBox);
+};

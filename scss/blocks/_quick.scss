@@ -25,6 +25,16 @@
     }
   }
 
+  &--full {
+    &-tablet {
+      @media (max-width: $tablet-breakpoint) {
+        .quick__title {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
   &__title {
     min-height: 48px;
     padding: 10px var(--padding-left-title);
@@ -57,6 +67,15 @@
 
     &--two-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    &--four-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px calculate-clamp(8px, 16px, 1024px, 767px);
+
+      @media (max-width: $lg-breakpoint) {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
 
   }

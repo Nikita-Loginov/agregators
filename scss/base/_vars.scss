@@ -98,7 +98,7 @@ html {
     800px + calc(var(--container-inline-padding) * 2)
   );
 
-  --calback-header-height: 138px;
+  --calback-header-height: 116px;
 
   --gap-blocks: #{calculate-clamp(48px, 80px, 1280px, 767px)};
   --gap-blocks-small: #{calculate-clamp(48px, 60px, 1280px, 767px)};

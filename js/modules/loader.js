@@ -5,7 +5,7 @@ export const hiddenLoader = (box) => {
 
   const loader = relative.querySelector("[data-loader-box]");
 
-    if (loader) loader.remove();
+  if (loader) loader.remove();
 
   const loadingElenent = relative.querySelector("[data-loading]");
 

@@ -1,0 +1,23 @@
+.projects {
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @media (max-width: $tablet-breakpoint) {
+        &__header {
+            display: contents;
+        }
+
+        &__header-info {
+            order:99999;
+        }
+    }
+}
