@@ -204,6 +204,11 @@
     gap: 20px;
   }
 
+  &__block {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__decor {
     position: absolute;
     z-index: 2;

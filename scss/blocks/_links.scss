@@ -11,10 +11,6 @@
   background-color: transparent;
   transition: color var(--link-transition-color);
 
-
-
-
-
   &.active {
     color: var(--link-color-active);
   }
@@ -31,7 +27,7 @@
   }
 
   &:hover {
-   @include hover-link;
+    @include hover-link;
   }
 
   &.hover-no-line {

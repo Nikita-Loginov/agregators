@@ -36,9 +36,75 @@ export const openModalStep = (modalBtn, modals, modalBlock) => {
     initGallery(modalBtn, modalBlock);
   }
 
+  if (modalBlock.classList.contains("successDownload")) {
+    getDownloadFile(modalBtn, modalBlock);
+  }
+
   modalBlock.classList.add("open");
   document.body.classList.add("open-modal");
   document.documentElement.classList.add("open-modal");
+};
+
+const getDownloadFile = (btn, modalBlock) => {
+  if (!btn) return;
+
+  const downloadFilePath = btn.dataset.downloadFile;
+  
+  if (downloadFilePath) {
+    setDownloadFile(downloadFilePath, modalBlock);
+  } else {
+    const href = btn.getAttribute("href");
+
+    if (href) {
+      setDownloadFile(href, modalBlock);
+    }
+  }
+};
+
+const setDownloadFile = (filePath, modalBlock) => {
+  if (modalBlock.classList.contains("successModal") && modalBlock.classList.contains("successDownload")) {
+    const downloadFileBlock = modalBlock.querySelector(".successDownload__file");
+    
+    if (downloadFileBlock) {
+      downloadFileBlock.innerHTML = "";
+      
+      const fileExtension = filePath.split('.').pop().toLowerCase();
+      let fileHtml = '';
+      
+      if (['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(fileExtension)) {
+        fileHtml = `
+          <div class="successDownload__img">
+            <picture>
+              <source srcset="${filePath} 1x, ${filePath} 2x" />
+              <img src="${filePath}" alt="Downloaded file" />
+            </picture>
+          </div>
+        `;
+      } else if (['pdf', 'doc', 'docx', 'txt'].includes(fileExtension)) {
+        const fileName = filePath.split('/').pop();
+        fileHtml = `
+          <div class="successDownload__document">
+            <div class="icon icon--big">
+              <span class="kit-icon document"></span>
+            </div>
+            <p class="p2 regular-font">${fileName}</p>
+          </div>
+        `;
+      } else {
+        const fileName = filePath.split('/').pop();
+        fileHtml = `
+          <div class="successDownload__generic">
+            <div class="icon icon--big">
+              <span class="kit-icon download-file"></span>
+            </div>
+            <p class="p2 regular-font">${fileName}</p>
+          </div>
+        `;
+      }
+      
+      downloadFileBlock.insertAdjacentHTML("beforeend", fileHtml);
+    }
+  }
 };
 
 const getImgSrc = (btn, modalBlock) => {

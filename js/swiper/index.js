@@ -117,13 +117,23 @@ export const SWIPERS = {
     },
   },
   ARTICLE_CARDS: {
-    selector: ".article .swiper--articles",
+    selector: ".swiper-box--articles .swiper--articles",
     breakpoint: 122300000000,
     options: {
-      slidesPerView: 3,
-      spaceBetween: 32,
+      slidesPerView: 1.2,
+      spaceBetween: 12,
+      mousewheel: MOUSE_WHEEL_CONFIG,
       pagination: {
-        el: ".article .swiper-pagination",
+        el: ".swiper-box--articles .swiper-pagination",
+      },
+      breakpoints: {
+        767: {
+          slidesPerView: 3,
+          spaceBetween: 32,
+        },
+        600: {
+          slidesPerView: 2.1,
+        },
       },
     },
   },
@@ -465,4 +475,18 @@ export const SWIPERS = {
       },
     },
   },
+  GALLERY_CAPTION: {
+    selector: ".swiper--gallery-caption",
+    breakpoint: 122300000000,
+
+    options: {
+      slidesPerView: 1,
+      spaceBetween: 8,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      navigation: {
+        nextEl: ".swiper--gallery-caption .arrow-swiper.next",
+        prevEl: ".swiper--gallery-caption .arrow-swiper.prev",
+      },
+    },
+  }
 };

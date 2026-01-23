@@ -1,7 +1,7 @@
 .banner-ai {
-  display: flex;
+  display: none;
   align-items: center;
-  gap: 32px;
+  gap: calculate-clamp(20px, 32px, 1023px, 767px);
   justify-content: space-between;
 
   &__content {
@@ -22,14 +22,37 @@
     .button {
       width: fit-content;
 
-      &:nth-child(3),
-      &:nth-child(5) {
-        margin-left: auto;
-      }
+      @media (min-width: $lg-breakpoint) {
+        &:nth-child(3),
+        &:nth-child(5) {
+          margin-left: auto;
+        }
 
-      &:last-child {
-        margin-right: auto;
+        &:last-child {
+          margin-right: auto;
+        }
       }
+    }
+
+    .button {
+      padding-inline: calculate-clamp(16px, 32px, 1023px, 767px);
+    }
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__items {
+      gap: 12px 8px;
+      max-width: 432px;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    // display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &__items {
+      gap: 12px;
     }
   }
 }
@@ -37,8 +60,9 @@
 .banner-links {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 24px 28px;
+  gap: calculate-clamp(12px, 20px, 1023px, 767px);
+  padding: calculate-clamp(16px, 24px, 1023px, 767px)
+    calculate-clamp(20px, 28px, 1023px, 767px);
   border: 1px solid var(--gray-color-400);
   border-radius: var(--radius-2xl);
 
@@ -46,15 +70,20 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 20px;
+    gap: calculate-clamp(16px, 20px, 767px, 480px);
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding-inline: calculate-clamp(12px, 20px, 767px, 480px);
   }
 }
 
 .banner-add {
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding: 24px 32px;
+  gap: calculate-clamp(20px, 24px, 1023px, 767px);
+  padding: calculate-clamp(20px, 24px, 1023px, 767px)
+    calculate-clamp(28px, 32px, 1023px, 767px);
   background-color: var(--secondary-color-400);
   border-radius: var(--radius-xl);
 
@@ -66,6 +95,10 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: calculate-clamp(16px, 20px, 767px, 480px) var(--container-inline-padding);
   }
 }
 
@@ -480,15 +513,13 @@
     flex-direction: column;
     gap: 20px;
 
-    @media (min-width: $md-desktop-breakpoint)  {
+    @media (min-width: $md-desktop-breakpoint) {
       &--two {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 16px 32px;
       }
     }
-
-   
 
     &--bg-links {
       .banner-profile {
@@ -645,5 +676,4 @@
 }
 
 .banner {
-  
 }

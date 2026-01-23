@@ -1,27 +1,26 @@
 .attention {
   display: flex;
   align-items: center;
-  gap: 30px;
-  padding: 28px;
+  gap: calculate-clamp(12px, 30px, 1023px, 767px);
+  padding: calculate-clamp(16px, 30px, 1023px, 767px) calculate-clamp(16px, 28px, 1023px, 767px);
   background-color: var(--gray-color-200);
   border-radius: var(--radius-xl);
   overflow: hidden;
 
   &__icon {
-    width: 56px;
+    width: calculate-clamp(48px, 56px, 1023px, 767px);
     height: 56px;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--primary-color-100);
-    border-radius: 50%;
+    border-radius: var(--radius-md);
     overflow: hidden;
     color: var(--gray-color-200);
 
-    .icon {
-      width: 36px;
-      height: 36px;
+    @media (min-width: $lg-breakpoint) {
+      border-radius: 50%;
     }
   }
 
@@ -29,5 +28,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    align-items: stretch;
+
+    &__icon {
+      height: auto;
+    }
   }
 }

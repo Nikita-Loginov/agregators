@@ -1,7 +1,7 @@
 .more-details {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: calculate-clamp(7px, 12px, 1023px, 767px);
 
   &__items {
     & > *:not(:first-child) {

@@ -101,6 +101,13 @@
     display: none;
   }
 
+  &__form,
+  &__form-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
   @media (max-width: $lg-breakpoint) {
     &__inner {
       display: flex;

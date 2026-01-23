@@ -5,16 +5,57 @@
   <meta name="robots" content="noindex, nofollow" />
   <title>@@title</title>
 
+  <meta
+    name="description"
+    content="Properties for sale in UAE from trusted real estate agencies and developers. More than 59063 properties on Emirates.Estate. Buy property in United Arab Emirates: prices, interior photos, floorplans, maps, description and investment options."
+  />
+  <meta name="msapplication-TileColor" content="#ffffff" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="twitter:card" content="summary" />
+  <meta
+    property="twitter:title"
+    content="Property in UAE: Buying, Selling, Investing and Prices | Emirates.Estate"
+  />
+  <meta
+    property="twitter:description"
+    content="Properties for sale in UAE from trusted real estate agencies and developers. More than 59063 properties on Emirates.Estate. Buy property in United Arab Emirates: prices, interior photos, f"
+  />
+  <meta
+    property="twitter:image"
+    content="https://emirates.estate/uploads/images/2020-11/Emirates.Estate.png"
+  />
+  <meta
+    property="og:title"
+    content="Property in UAE: Buying, Selling, Investing and Prices | Emirates.Estate"
+  />
+  <meta property="og:site_name" content="Emirates.Estate" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://emirates.estate/" />
+  <meta property="og:locale" content="en_US" />
+  <meta
+    property="og:description"
+    content="Properties for sale in UAE from trusted real estate agencies and developers. More than 59063 properties on Emirates.Estate. Buy property in United Arab Emirates: prices, interior photos, floorplans, maps, description and investment options."
+  />
+
+  <meta
+    property="og:image"
+    content="https://emirates.estate/uploads/images/2020-11/Emirates.Estate.png"
+  />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="/img/favicon/site.webmanifest" />
+
   @@if (typeof pageSimple === 'undefined') {
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css">
-    <link rel="stylesheet" href="/css/page.css" />
-  }
-
-  @@if (typeof pageSimple !== 'undefined') { 
-    <link rel="stylesheet" href="/css/page-simple.css" />
-  }
-
-  @@for (link in links) {
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css"
+  />
+  <link rel="stylesheet" href="/css/page.css" />
+  } @@if (typeof pageSimple !== 'undefined') {
+  <link rel="stylesheet" href="/css/page-simple.css" />
+  } @@for (link in links) {
   <link rel="stylesheet" href="`+links[link]+`" />
   }
 </head>

@@ -39,6 +39,24 @@
     }
   }
 
+  &--noBg {
+    .input-box {
+      &__info {
+        background-color: transparent;
+      }
+    }
+  }
+
+  &--border {
+    &-gray-600 {
+      .input-box {
+        &__info {
+          border-color: var(--gray-color-600);
+        }
+      }
+    }
+  }
+
   &__info {
     display: flex;
     align-items: center;

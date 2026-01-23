@@ -365,6 +365,15 @@ body .wrapper {
       border-radius: var(--radius-2xl);
     }
 
+    &--rounded-3xl-md {
+      border-radius: calculate-clamp(
+        12px,
+        24px,
+        1023px,
+        767px
+      );
+    }
+
     &--rounded-3xl {
       border-radius: var(--radius-3xl);
     }

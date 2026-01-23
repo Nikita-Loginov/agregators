@@ -127,25 +127,56 @@
 }
 
 .badge-detail {
+  --badge-padding-x: 16px;
+  --badge-padding-y: 4px;
+  --badge-main-gap: #{calculate-clamp(12px, 16px, 1023px, 767px)};
+  --badge-icon-size: 60px;
+  --badge-content-gap: 2px;
+  --badge-transition: all 0.3s;
+  --badge-border-radius: var(--radius-md);
+  --badge-icon-border-radius: var(--radius-base);
+  --badge-hover-border-radius: var(--radius-5xl);
+  --badge-hover-icon-border-radius: 50%;
+  --badge-background-color: var(--gray-color-200);
+
   display: flex;
   align-items: center;
-  gap: calculate-clamp(12px, 16px, 1023px, 767px);
-  padding: 4px 16px 4px 4px;
-  border-radius: var(--radius-md);
-  background-color: var(--gray-color-200);
-  transition: all 0.3s;
+  gap: var(--badge-main-gap);
+  padding: var(--badge-padding-y) var(--badge-padding-x) var(--badge-padding-y)
+    4px;
+  border-radius: var(--badge-border-radius);
+  background-color: var(--badge-background-color);
+  transition: var(--badge-transition);
 
   &--white-bg {
-    background-color: var(--white-color);
+    --badge-background-color: var(--white-color);
+  }
+
+  &--secondary-bg-200 {
+    --badge-background-color: var(--secondary-color-200);
+    color: var(--dark-color-200);
+  }
+
+  &--circle-icon {
+    --badge-icon-border-radius: 50%;
+    --badge-border-radius: var(--radius-5xl);
+    --badge-hover-border-radius: var(--radius-xl);
+    --badge-hover-icon-border-radius: var(--radius-md);
+  }
+
+  &--small {
+    --badge-icon-size: 48px;
+    --badge-icon-size: 48px;
+    --badge-main-gap: 12px;
   }
 
   &__icon {
-    width: 60px;
-    height: 60px;
+    width: var(--badge-icon-size);
+    height: var(--badge-icon-size);
     flex-shrink: 0;
-    border-radius: var(--radius-base);
+    border-radius: var(--badge-icon-border-radius);
     overflow: hidden;
-    transition: all 0.3s;
+    transition: var(--badge-transition);
 
     img,
     svg {
@@ -158,18 +189,18 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: var(--badge-content-gap);
   }
 
   &.isHover {
     cursor: pointer;
 
     &:hover {
-      border-radius: var(--radius-5xl);
+      border-radius: var(--badge-hover-border-radius);
 
       .badge-detail {
         &__icon {
-          border-radius: 50%;
+          border-radius: var(--badge-hover-icon-border-radius);
         }
       }
     }

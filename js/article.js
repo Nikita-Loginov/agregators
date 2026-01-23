@@ -4,17 +4,46 @@ import {
 } from "./modules/moreContent.js";
 
 import { initComments } from "./modules/comments.js";
-import { SWIPERS } from "./swiper/index.js";
+import { SWIPERS, CARDS_OPTIONS } from "./swiper/index.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { initImgsSwiperGoods } from "./swiper/functions.js";
+import { getPaginationSwiper } from "./modules/functions.js";
 
 const swipers = [
   {
     ...SWIPERS.ARTICLE_CARDS,
   },
   {
-    ...SWIPERS.ALSO_CARDS,
+    selector: ".swiper-box--projects .swiper--projects",
+    breakpoint: 122300000000,
+    options: {
+      ...CARDS_OPTIONS,
+      pagination: {
+        el: getPaginationSwiper(
+          document.querySelector(
+            ".swiper-box--projects .swiper--projects .swiper__detail"
+          )
+        ).pagination,
+      },
+    },
   },
+  {
+    selector: ".swiper-box--property .swiper--property",
+    breakpoint: 122300000000,
+    options: {
+      ...CARDS_OPTIONS,
+      pagination: {
+        el: getPaginationSwiper(
+          document.querySelector(
+            ".swiper-box--property .swiper--property .swiper__detail"
+          )
+        ).pagination,
+      },
+    },
+  },
+  {
+    ...SWIPERS.GALLERY_CAPTION
+  }
 ];
 
 const handleGlobalClick = (e) => {

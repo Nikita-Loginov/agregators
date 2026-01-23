@@ -2,7 +2,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: calculate-clamp(28px, 40px, 1023px, 767px);
   }
 
   &__header {
@@ -34,12 +34,12 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 8px calculate-clamp(16px, 20px, 1023px, 767px);
   }
 
   &__top-img {
     width: 100%;
-    height: 400px;
+    height: calculate-clamp(368px, 400px, 1023px, 767px);
     border-radius: var(--radius-xl);
     overflow: hidden;
     background-color: var(--dark-color-700);
@@ -54,30 +54,41 @@
   &__items {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: calculate-clamp(32px, 40px, 1023px, 767px);
   }
 
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: calculate-clamp(12px, 20px, 1023px, 767px);
     align-items: flex-start;
 
     &--small {
       gap: 12px;
     }
+
+    &--big {
+      gap: calculate-clamp(12px, 20px, 767px, 480px);
+    }
   }
 
-  &__item-content,
-  &__item-header {
+  &__item-content {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
 
-  &__top-content {
-    max-width: 230px;
+  &__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     width: 100%;
+  }
+
+  &__top-content {
+    // max-width: 230px;
+    width: fit-content;
   }
 
   &__goods {
@@ -98,5 +109,59 @@
     display: flex;
     align-items: center;
     gap: 8px;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__header {
+      gap: 20px;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items {
+      gap: calculate-clamp(24px, 32px, 767px, 480px);
+    }
+
+    &__inner {
+      gap: calculate-clamp(24px, 28px, 767px, 480px);
+    }
+
+    &__footer {
+      flex-direction: column;
+      align-items: normal;
+    }
+
+    &__footer-detail {
+      margin: 0 auto;
+    }
+
+    .table-main {
+      &--article {
+        td:first-child {
+          width: 135px;
+        }
+      }
+
+      &__head {
+        border-radius: 0;
+
+        * {
+          border-radius: 0 !important;
+        }
+      }
+    }
+
+    .banner-add {
+      border-radius: 0;
+    }
+
+    &__top-details {
+      flex-direction: column;
+      align-items: normal;
+    }
+
+    &__top-img {
+      height: calculate-clamp(220px, 368px, 767px, 480px);
+    }
   }
 }

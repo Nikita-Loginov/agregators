@@ -1,0 +1,208 @@
+<div class="comments-box" data-block="comment-relative">
+  <header class="comments__header">
+    <h2 class="h5">Без рейтинга</h2>
+
+    <button
+      class="button button--bg-secondary-200"
+      type="button"
+      aria-label="Написать отзыв"
+      data-block="comment-btn"
+    >
+      <div class="icon">
+        <span class="kit-icon chat-circle-add"></span>
+      </div>
+
+      <p class="p2 medium-font">Add Сomment</p>
+    </button>
+  </header>
+
+  <div class="comments__content">
+    <div class="comments-box__inner">
+      <div class="comments-box__forms">
+        <form class="comments-form comments-form--rating form" novalidate>
+          <div class="comments-form__content">
+            <div class="comments-form__item">
+              <div class="comments-form__inputs">
+                <div class="input-box input-box--gray">
+                  <label class="input-box__content">
+                    <div class="input-box__info">
+                      <textarea
+                        placeholder="Write your comment"
+                        name="comment"
+                      ></textarea>
+                    </div>
+                  </label>
+
+                  <p class="input-box__errors p4"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="comments-form__item comments-form__item--grid-three">
+              <div class="comments-form__inputs">
+                <div class="input-box input-box--gray form__item">
+                  <label class="input-box__content">
+                    <div class="input-box__info">
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name*"
+                        required
+                      />
+                    </div>
+                  </label>
+
+                  <p
+                    class="input-box__errors form__errors p4"
+                    id="name-comment-errors"
+                  ></p>
+                </div>
+              </div>
+
+              <button
+                class="button button--bg-gray-300 button--lg"
+                type="reset"
+                data-block="comment-cancel"
+              >
+                <p class="p2 medium-font">Cancel</p>
+              </button>
+
+              <button
+                class="button button--bg-primary-100 button--lg disabled"
+                type="submit"
+                data-block="comment-post"
+              >
+                <p class="p2 medium-font">Post Comment</p>
+              </button>
+            </div>
+          </div>
+
+          <footer class="comments-form__footer">
+            <label class="check-simple form__item">
+              <div class="check-simple__content">
+                <div class="check-simple__custom">
+                  <input type="checkbox" name="policy" required />
+
+                  <span></span>
+                </div>
+
+                <div class="check-simple__info">
+                  <p class="p3">
+                    You agree to the
+                    <a
+                      title="privacy policy"
+                      href="#"
+                      aria-label="Перейти на privacy policy"
+                      class="link-secondary"
+                      >privacy policy</a
+                    >
+                    and
+                    <a
+                      href="#"
+                      title="personal data"
+                      aria-label="Перейти на consent to the processing of personal data"
+                      class="link-secondary"
+                      >consent to the processing of personal data</a
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="check-simple__errors p4 form__errors"
+                id="check-errors"
+              ></div>
+            </label>
+          </footer>
+        </form>
+      </div>
+
+      <div class="comments-box__details" data-block="comment-status"></div>
+
+      <div class="comments-box__items">
+        <div class="comments-item">
+          <header class="comments-item__header">
+            <div class="comments-item__tags">
+              <div class="comments-item__author comments-item__tag">
+                <p class="p2 semibold-font">David Lee</p>
+
+                <time
+                  class="p3 text-dark-500 regular-font"
+                  datetime="2025-07-07"
+                  >07.07.2025</time
+                >
+              </div>
+            </div>
+          </header>
+
+          <div class="comments-item__content">
+            <div class="textbox">
+              <p class="p3">
+                The breakdown of costs and the comparison between buying and
+                renting are very insightful. As someone considering property
+                investment in Dubai, this guide provides a clear picture of what
+                to expect financially.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments-item">
+          <header class="comments-item__header">
+            <div class="comments-item__tags">
+              <div class="comments-item__author comments-item__tag">
+                <p class="p2 semibold-font">David Lee</p>
+
+                <time
+                  class="p3 text-dark-500 regular-font"
+                  datetime="2025-07-07"
+                  >07.07.2025</time
+                >
+              </div>
+            </div>
+          </header>
+
+          <div class="comments-item__content">
+            <div class="textbox">
+              <p class="p3">
+                The breakdown of costs and the comparison between buying and
+                renting are very insightful. As someone considering property
+                investment in Dubai, this guide provides a clear picture of what
+                to expect financially.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="comments-item">
+          <header class="comments-item__header">
+            <div class="comments-item__tags">
+              <div class="comments-item__author comments-item__tag">
+                <p class="p2 semibold-font">David Lee</p>
+
+                <time
+                  class="p3 text-dark-500 regular-font"
+                  datetime="2025-07-07"
+                  >07.07.2025</time
+                >
+              </div>
+            </div>
+          </header>
+
+          <div class="comments-item__content">
+            <div class="textbox">
+              <p class="p3">
+                The breakdown of costs and the comparison between buying and
+                renting are very insightful. As someone considering property
+                investment in Dubai, this guide provides a clear picture of what
+                to expect financially.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @@include('../modules/pagination.html', {"details": "false"})
+  </div>
+</div>
