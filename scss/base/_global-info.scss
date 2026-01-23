@@ -539,7 +539,7 @@ body.scrollBottom {
       display: contents;
 
       &__back {
-        order:9999;
+        order: 9999;
         width: 100%;
 
         .button {
@@ -560,5 +560,61 @@ body.scrollBottom {
       width: 100%;
       height: 100%;
     }
+  }
+}
+
+.country-item {
+  --country-item-gap: 8px;
+  --country-item-min-height: 36px;
+  --country-item-padding-top-bottom: 8px;
+  --country-item-padding-left-right: 10px;
+  --country-item-flag-width: 20px;
+  --country-item-flag-height: 14px;
+  --country-item-name-font-size: 16px;
+  --country-item-dial-font-size: var(--font-size-2xs);
+  --country-item-border-radius: var(--radius-base);
+
+  --country-item-dial-color: var(--dark-color-500);
+  --country-item-color: var(--dark-color-500);
+  --country-item-hover-bg-color: var(--gray-color-200);
+  --country-item-hover-dial-color: var(--dark-color-200);
+
+  --country-item-active-bg-color: var(--secondary-color-200);
+  --country-item-active-color: var(--secondary-color-100);
+  --country-item-active-dial-color: var(--secondary-color-100);
+
+  display: flex;
+  align-items: center;
+  gap: var(--country-item-gap);
+  border-radius: var(--country-item-border-radius);
+  min-height: var(--country-item-min-height);
+  padding: var(--country-item-padding-top-bottom)
+    var(--country-item-padding-left-right);
+  color: var(--country-item-color);
+  cursor: pointer;
+
+  &:hover {
+    --country-item-dial-color: var(--country-item-hover-dial-color);
+    background-color: var(--country-item-hover-bg-color);
+  }
+
+  &.active {
+    background-color: var(--country-item-active-bg-color);
+    color: var(--country-item-active-color);
+    --country-item-dial-color: var(--country-item-active-dial-color);
+  }
+
+  &__flag {
+    width: var(--country-item-flag-width);
+    height: var(--country-item-flag-height);
+  }
+
+  &__name {
+    font-size: var(--country-item-name-font-size);
+  }
+
+  &__dial {
+    font-size: var(--country-item-dial-font-size);
+    color: var(--country-item-dial-color);
   }
 }

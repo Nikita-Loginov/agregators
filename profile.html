@@ -8775,8 +8775,6 @@
                         </div>
                       </div>
                     </label>
-
-                    <p class="input-box__errors p4 form__errors"></p>
                   </div>
                 </div>
               </form>
@@ -10738,11 +10736,13 @@
               <p class="input-box__errors p4 form__errors"></p>
             </div>
 
-            <div class="input-box form__item input-tel-wrapper">
-              <div class="input-box__content">
+            <div class="input-box form__item input-tel-wrapper dropdown-tel">
+              <div class="input-box__content dropdown">
                 <div class="input-box__info popup-select">
                   <input type="tel" name="tel" placeholder="Phone*" required />
                 </div>
+
+                <div class="dropdown__content"></div>
               </div>
 
               <p class="input-box__errors p4 form__errors"></p>
@@ -10824,11 +10824,12 @@
 
 </div>
 
-<script src="/js/lib/imask.min.js" type="module"></script>
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js"
   defer
 ></script>
+<script src="https://unpkg.com/libphonenumber-js@1.10.57/bundle/libphonenumber-js.min.js" defer></script>
+
 <script src="/js/page.js" type="module"></script>
 
       <div class="modalBlock featuresModal">
@@ -11450,18 +11451,18 @@
               <p class="input-box__errors p4 form__errors"></p>
             </div>
 
-            <div
-              class="input-box input-box--xl input-box--gray form__item input-tel-wrapper"
-            >
-              <div class="input-box__content">
+            <div class="input-box form__item nput-box--xl input-box--gray input-tel-wrapper dropdown-tel">
+              <div class="input-box__content dropdown">
                 <div class="input-box__info popup-select">
-                  <input type="tel" name="tel" placeholder="Phone" required />
+                  <input type="tel" name="tel" placeholder="Phone*" required />
                 </div>
+
+                <div class="dropdown__content"></div>
               </div>
 
               <p class="input-box__errors p4 form__errors"></p>
             </div>
-
+            
             <div class="input-box input-box--xl input-box--gray form__item">
               <label class="input-box__content">
                 <div class="input-box__info">

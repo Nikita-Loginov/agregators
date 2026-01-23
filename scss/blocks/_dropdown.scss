@@ -113,9 +113,10 @@
   }
 
   &--price {
-    &:has(.input-box [data-type="price_min"].has-value):has(
-        .input-box [data-type="price_max"].has-value
-      ) {
+    &:has(.input-box [data-type="price_min"].has-value),
+    &:has(
+      .input-box [data-type="price_max"].has-value
+    ) {
       .dropdown__btn {
         border-color: var(--secondary-color-100);
         color: var(--secondary-color-100);
@@ -128,6 +129,14 @@
         .arrow {
           margin-left: auto;
         }
+      }
+    }
+
+    
+
+    .dropdown__content {
+      .input-box__info {
+        padding: 8px;
       }
     }
 

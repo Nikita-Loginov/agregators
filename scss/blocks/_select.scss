@@ -188,6 +188,10 @@
     background-color: var(--secondary-color-100);
     border-radius: var(--radius-base);
     padding: 2px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 32px;
   }
 
   .city-option {
@@ -410,6 +414,10 @@ body {
         font-size: 16px;
       }
     }
+  }
+
+  .ts-dropdown.plugin-optgroup_columns .optgroup  {
+    border: none;
   }
 
   .ts-dropdown-content {

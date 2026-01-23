@@ -1,26 +1,25 @@
-.input-box {
-  .iti--separate-dial-code .iti__selected-flag {
-    background-color: transparent;
-  }
-
-  .iti__selected-dial-code {
-    display: none;
-  }
-
+.input-tel-wrapper {
   .iti__country-list {
-    background-color: var(--white-color);
-    border: 1px solid var(--gray-color-600);
-    border-radius: var(--radius-md);
-    padding: 4px;
-    max-height: 150px;
-    top: 30px;
-  }
-
-  .iti__divider {
     display: none;
   }
+}
 
-  .iti__divider ~ .iti__country {
-    display: none;
+.dropdown-tel {
+  .dropdown {
+    &__content {
+      overflow: hidden;
+      max-height: none;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }
+
+  .country-list {
+    max-height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
   }
 }

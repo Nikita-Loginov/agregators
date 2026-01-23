@@ -116,13 +116,19 @@
   }
 
   &.error {
-    .input-box {
-      &__errors {
-        display: flex;
-      }
-
-      &__info {
-        border-color: var(--primary-color-500);
+    > .input-box__errors {
+      display: flex;
+    }
+  
+    > .input-box__content > .input-box__info {
+      border-color: var(--primary-color-500);
+  
+      input {
+        color: var(--primary-color-500);
+  
+        &::placeholder {
+          color: var(--primary-color-500);
+        }
       }
     }
   }
@@ -156,6 +162,7 @@
         &__info {
           min-height: 36px;
           padding: 4px 12px;
+          font-size: var(--font-size-2xs);
         }
       }
     }

@@ -1,61 +1,123 @@
-import { allCountries, preferredCountries } from "../data/countries.js";
+import { allCountries } from "../data/countries.js";
 
 export function initPhoneMasks(form) {
   const inputs = form.querySelectorAll("input[name='tel']");
+  const { AsYouType } = window.libphonenumber;
 
-  if (!window.IMask || !window.intlTelInput) {
-    console.error("IMask или intlTelInput не загружены");
+  if (!window.intlTelInput) {
+    console.error("intlTelInput не загружен");
     return;
   }
 
-  const countriesMap = {};
-  allCountries.forEach((country) => {
-    countriesMap[country.code.toLowerCase()] = country;
-  });
-
   inputs.forEach((input) => {
     const iti = window.intlTelInput(input, {
-      initialCountry: "ru",
-      onlyCountries: allCountries.map(c => c.code.toLowerCase()),
-      preferredCountries: preferredCountries.filter(p =>
-        allCountries.some(c => c.code.toLowerCase() === p)
-      ),
-      separateDialCode: true,
+      initialCountry: "us",
+      separateDialCode: false,
+      nationalMode: false,
+      autoHideDialCode: false,
+      autoPlaceholder: "aggressive",
       utilsScript:
         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
     });
 
-    let maskInstance = null;
-    let currentCountry = null;
+    const wrapper = input.closest('.input-tel-wrapper');
 
-    const applyMask = () => {
-      const { iso2 } = iti.getSelectedCountryData();
-      const country = countriesMap[iso2];
+    if (!wrapper) return;
 
-      if (!country) return;
+    renderCountryDropdown(wrapper.querySelector(".dropdown__content"), iti);
 
-      currentCountry = country;
+    input.addEventListener("input", () => {
+      const country = iti.getSelectedCountryData().iso2.toUpperCase();
+      const formatter = new AsYouType(country);
+    
+      input.value = formatter.input(input.value.replace(/[^\d+]/g, ""));
+    });
 
-      if (maskInstance) {
-        maskInstance.destroy();
-      }
-
-      maskInstance = IMask(input, {
-        mask: country.mask,
-        lazy: true,
-        placeholderChar: "_",
-      });
-      
-
-      input.placeholder = country.placeholder;
-
-      input._validator = () => {
-        return maskInstance?.masked?.isComplete === true;
-      };
+    input._validator = () => {
+      if (!input.value.trim()) return false;
+      return iti.isValidNumber();
     };
 
-    input.addEventListener("countrychange", applyMask);
+    const updatePlaceholder = () => {
+      const placeholder = input.getAttribute("placeholder");
+      input.dataset.placeholder = placeholder;
+    };
 
-    applyMask();
+    input.addEventListener("countrychange", updatePlaceholder);
+
+    input._validator = () => {
+      if (!input.value.trim()) return false;
+
+      return iti.isValidNumber();
+    };
+
+    updatePlaceholder();
   });
 }
+
+const renderCountryDropdown = (dropdownContent, itiInstance) => {
+  dropdownContent.innerHTML = ""; 
+
+  const box = dropdownContent.closest('.input-box')
+  const telInput = box.querySelector("input[name='tel']");
+
+  const searchWrapper = document.createElement("div");
+  searchWrapper.className = "input-box input-box--little input-box--white iti-search";
+  searchWrapper.innerHTML = `
+    <label class="input-box__content">
+      <div class="input-box__info">
+        <input type="text" placeholder="Search country" />
+        <div class="icon">
+          <span class="kit-icon search-magnifying-glass"></span>
+        </div>
+      </div>
+    </label>
+  `;
+  dropdownContent.appendChild(searchWrapper);
+
+  const searchInput = searchWrapper.querySelector("input");
+
+  const list = document.createElement("ul");
+  list.className = "country-list";
+
+  allCountries.forEach(c => {
+    const li = document.createElement("li");
+
+    li.className = "country-item dropdown-item-close dropdown__item";
+    li.dataset.code = c.code.toLowerCase();
+
+    li.innerHTML = `
+      <span class="country-item__flag">${c.flag}</span>
+      <span class="country-item__name">${c.name}</span>
+      <span class="country-item__dial">${c.dialCode}</span>
+    `;
+
+    list.appendChild(li);
+
+    li.addEventListener("click", () => {
+      list.querySelectorAll(".country-item.active").forEach(el => el.classList.remove("active"));
+
+      li.classList.add("active");
+
+      itiInstance.setCountry(c.code.toLowerCase());
+
+      telInput.focus();
+    });
+  });
+
+  dropdownContent.appendChild(list);
+
+  searchInput.addEventListener("input", () => {
+    const val = searchInput.value.toLowerCase().trim();
+
+    Array.from(list.children).forEach(li => {
+      const name = li.querySelector(".country-item__name").textContent.toLowerCase();
+      const code = li.dataset.code;
+      const dial = li.querySelector(".country-item__dial").textContent;
+      
+      li.style.display = name.includes(val) || code.includes(val) || dial.includes(val) ? "" : "none";
+    });
+  });
+};
+
+

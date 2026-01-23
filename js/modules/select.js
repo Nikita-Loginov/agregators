@@ -281,6 +281,22 @@ const setupEventListeners = (self, isMultiple, hasWordsClass) => {
   return updateCounter;
 };
 
+const moveSelectedToTop = (tsInstance, select) => {
+  if (!select.dataset.selectedTop || select.dataset.selectedTop !== "true") return;
+
+  const items = Array.from(tsInstance.dropdown_content.children);
+
+  items.sort((a, b) => {
+    const aSelected = a.classList.contains("selected") ? 1 : 0;
+    const bSelected = b.classList.contains("selected") ? 1 : 0;
+    
+    return bSelected - aSelected; 
+  });
+
+  items.forEach((el) => tsInstance.dropdown_content.appendChild(el));
+};
+
+
 export const initSelects = () => {
   document.querySelectorAll("select").forEach((select) => {
     const isMultiple = select.hasAttribute("multiple");
@@ -361,9 +377,16 @@ export const initSelects = () => {
         }
       },
       onItemAdd: function () {
+        const self = this;
+
+        moveSelectedToTop(this, select);
+
         if (!isMultiple && this.isOpen) {
           setTimeout(() => this.close(), 100);
         }
+      },
+      onItemRemove: function () {
+        moveSelectedToTop(this, select);
       },
       onDropdownOpen: function () {
         const searchInput = this.dropdown?.querySelector("input");
