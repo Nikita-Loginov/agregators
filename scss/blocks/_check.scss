@@ -152,6 +152,10 @@
           opacity: 1;
         }
       }
+
+      &__content {
+        color: var(--secondary-color-100);
+      }
     }
   }
 
@@ -183,6 +187,8 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+    color: var(--dark-color-500);
+    transition: all .3s;
   }
 }
 

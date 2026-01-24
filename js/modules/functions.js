@@ -60,7 +60,7 @@ export const isTouchDevice = () => {
     "ontouchstart" in window ||
     navigator.maxTouchPoints > 0
   );
-}
+};
 
 export const initSwiper = (element, config = {}) => {
   if (!element) return;
@@ -101,6 +101,24 @@ export const onChangeInput = (e) => {
   if (input.type === "number" || input.closest("[data-input-number]")) {
     handleNumberInput(input);
   }
+};
+
+export const clearFormInputs = (form) => {
+  form.addEventListener("reset", () => {
+    setTimeout(() => {
+      const inputs = form.querySelectorAll("input, textarea");
+      
+      inputs.forEach((input) => {
+        const inputBox = input.closest(".input-box");
+
+        if (input.value.trim() === "") {
+          input.classList.remove("has-value");
+
+          if (inputBox) inputBox.classList.remove("has-value");
+        }
+      });
+    }, 0);
+  });
 };
 
 export const getHeightFilter = () => {

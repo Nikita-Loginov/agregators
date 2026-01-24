@@ -49,7 +49,7 @@ const getDownloadFile = (btn, modalBlock) => {
   if (!btn) return;
 
   const downloadFilePath = btn.dataset.downloadFile;
-  
+
   if (downloadFilePath) {
     setDownloadFile(downloadFilePath, modalBlock);
   } else {
@@ -62,16 +62,23 @@ const getDownloadFile = (btn, modalBlock) => {
 };
 
 const setDownloadFile = (filePath, modalBlock) => {
-  if (modalBlock.classList.contains("successModal") && modalBlock.classList.contains("successDownload")) {
-    const downloadFileBlock = modalBlock.querySelector(".successDownload__file");
-    
+  if (
+    modalBlock.classList.contains("successModal") &&
+    modalBlock.classList.contains("successDownload")
+  ) {
+    const downloadFileBlock = modalBlock.querySelector(
+      ".successDownload__file"
+    );
+
     if (downloadFileBlock) {
       downloadFileBlock.innerHTML = "";
-      
-      const fileExtension = filePath.split('.').pop().toLowerCase();
-      let fileHtml = '';
-      
-      if (['jpg', 'jpeg', 'png', 'gif', 'webp', 'svg'].includes(fileExtension)) {
+
+      const fileExtension = filePath.split(".").pop().toLowerCase();
+      let fileHtml = "";
+
+      if (
+        ["jpg", "jpeg", "png", "gif", "webp", "svg"].includes(fileExtension)
+      ) {
         fileHtml = `
           <div class="successDownload__img">
             <picture>
@@ -80,8 +87,8 @@ const setDownloadFile = (filePath, modalBlock) => {
             </picture>
           </div>
         `;
-      } else if (['pdf', 'doc', 'docx', 'txt'].includes(fileExtension)) {
-        const fileName = filePath.split('/').pop();
+      } else if (["pdf", "doc", "docx", "txt"].includes(fileExtension)) {
+        const fileName = filePath.split("/").pop();
         fileHtml = `
           <div class="successDownload__document">
             <div class="icon icon--big">
@@ -91,7 +98,7 @@ const setDownloadFile = (filePath, modalBlock) => {
           </div>
         `;
       } else {
-        const fileName = filePath.split('/').pop();
+        const fileName = filePath.split("/").pop();
         fileHtml = `
           <div class="successDownload__generic">
             <div class="icon icon--big">
@@ -101,7 +108,7 @@ const setDownloadFile = (filePath, modalBlock) => {
           </div>
         `;
       }
-      
+
       downloadFileBlock.insertAdjacentHTML("beforeend", fileHtml);
     }
   }
@@ -165,6 +172,9 @@ const closeModal = (e) => {
     e.target.closest(".modal-close")
   ) {
     const modalRelative = e.target.closest(".modalBlock");
+
+    clearFormOnModalClose(modalRelative);
+    
     modalRelative.classList.remove("open");
 
     if (document.querySelector(".modalBlock.open")) return;
@@ -175,11 +185,11 @@ const closeModal = (e) => {
 
 export const closeAllModals = () => {
   const openModals = document.querySelectorAll(".modalBlock.open");
-  
+
   openModals.forEach((modal) => {
     modal.classList.remove("open");
   });
-  
+
   if (document.querySelectorAll(".modalBlock.open").length === 0) {
     document.body.classList.remove("open-modal");
     document.documentElement.classList.remove("open-modal");
@@ -208,3 +218,28 @@ export function initModal(e) {
   openModal(e);
   closeModal(e);
 }
+
+export const clearFormOnModalClose = (modalBlock) => {
+  if (!modalBlock) return;
+
+  const form = modalBlock.querySelector("form");
+  if (!form) return;
+
+  form.reset();
+
+  const inputs = form.querySelectorAll("input, textarea");
+  
+  inputs.forEach((input) => {
+    const inputBox = input.closest(".input-box");
+    input.classList.remove("has-value");
+    if (inputBox) inputBox.classList.remove("has-value");
+  });
+
+  const selects = form.querySelectorAll("select");
+  selects.forEach((select) => {
+    if (select.tomselect) {
+      select.tomselect.clear(true);
+      select.tomselect.refreshOptions(false);
+    }
+  });
+};

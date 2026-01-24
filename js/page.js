@@ -15,6 +15,7 @@ import { initSelects } from "./modules/select.js";
 import { onChangeInput } from "./modules/functions.js";
 import { checkStorage, initStorage } from "./modules/localStorage.js";
 import { initTooltip } from "./modules/tooltip/tooltip.js";
+import { clearFormInputs } from "./modules/functions.js";
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -39,6 +40,8 @@ const initValidate = () => {
 
   forms.forEach((form) => {
     initFormValidation(form);
+
+    clearFormInputs(form)
   });
 };
 

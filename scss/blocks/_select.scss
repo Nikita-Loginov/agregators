@@ -416,11 +416,21 @@ body {
     }
   }
 
-  .ts-dropdown.plugin-optgroup_columns .optgroup  {
+  .ts-dropdown.plugin-optgroup_columns .optgroup {
     border: none;
   }
 
   .ts-dropdown-content {
     max-height: calc(36px * 7);
+
+    .ts-option.option[data-value=""] {
+      opacity: 0.6;
+    }
+  }
+
+  .plugin-optgroup_columns {
+    .ts-dropdown-content {
+      max-height: 316px;
+    }
   }
 }

@@ -64,13 +64,23 @@
     background-color: var(--white-color);
 
     &.left {
+      right: 0;
+      left: auto;
+    }
+
+    &.right {
       left: 0;
       right: auto;
     }
 
-    &.right {
-      right: 0;
-      left: auto;
+    &.bottom {
+      bottom: 100%;
+      top: auto;
+    }
+
+    .top {
+      top: 100%;
+      bottom: auto;
     }
   }
 
@@ -114,13 +124,10 @@
 
   &--price {
     &:has(.input-box [data-type="price_min"].has-value),
-    &:has(
-      .input-box [data-type="price_max"].has-value
-    ) {
+    &:has(.input-box [data-type="price_max"].has-value) {
       .dropdown__btn {
         border-color: var(--secondary-color-100);
         color: var(--secondary-color-100);
-        
 
         .check {
           display: flex;
@@ -131,8 +138,6 @@
         }
       }
     }
-
-    
 
     .dropdown__content {
       .input-box__info {

@@ -9,7 +9,7 @@ export const toggleDropdown = (e) => {
       closeDropdown(activeDropdown);
       return;
     }
-  
+
     if (!target.closest(".dropdown-item-close")) {
       return;
     }
@@ -78,6 +78,7 @@ const openFixedDropdown = (dropdown) => {
 };
 
 const openRegularDropdown = (dropdown) => {
+  const modalBlock = dropdown.closest(".modalBlock");
   const menu = dropdown.querySelector(".dropdown__content");
   if (!menu) return;
 
@@ -86,6 +87,13 @@ const openRegularDropdown = (dropdown) => {
 
   menu.style.opacity = "1";
   menu.style.visibility = "visible";
+
+  requestAnimationFrame(() => {
+    setDropdownPositionClass(dropdown, menu, {
+      useParent: modalBlock || null,
+      offset: 8,
+    });
+  });
 };
 
 const closeDropdown = (dropdown) => {
@@ -207,6 +215,47 @@ export const firstActiveText = () => {
       activeBox.textContent = text;
     }
   });
+};
+
+const setDropdownPositionClass = (dropdown, menu, options = {}) => {
+  const { useParent = false, offset = 8 } = options;
+
+  if (!menu) return;
+
+  menu.classList.remove("left", "right", "top", "bottom");
+
+  const menuRect = menu.getBoundingClientRect();
+
+  let bounds;
+
+  if (useParent) {
+    const parent = dropdown.parentElement;
+    bounds = parent.getBoundingClientRect();
+  } else {
+    bounds = {
+      top: 0,
+      left: 0,
+      right: window.innerWidth,
+      bottom: window.innerHeight,
+    };
+  }
+
+  const overflowRight = menuRect.right + offset > bounds.right;
+  const overflowLeft = menuRect.left - offset < bounds.left;
+  const overflowBottom = menuRect.bottom + offset > bounds.bottom;
+  const overflowTop = menuRect.top - offset < bounds.top;
+
+  if (overflowRight && !overflowLeft) {
+    menu.classList.add("left");
+  } else if (overflowLeft && !overflowRight) {
+    menu.classList.add("right");
+  }
+
+  if (overflowBottom && !overflowTop) {
+    menu.classList.add("top");
+  } else if (overflowTop && !overflowBottom) {
+    menu.classList.add("bottom");
+  }
 };
 
 window.addEventListener("resize", () => closeAllDropdowns());

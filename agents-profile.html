@@ -5326,7 +5326,7 @@
 </div>
 
   <div
-  class="modalBlock modalContent successSecondModal modalContent--small modalBlock--media-fit"
+  class="modalBlock modalContent successSecondModal modalContent--small"
 >
   <div
     class="modalBlock__inner modalContent__inner modalContent__inner--small"
@@ -5427,7 +5427,7 @@
 </div>
 
   <div
-  class="modalBlock modalContent succesBox successThirdModal modalBlock--media-fit"
+  class="modalBlock modalContent succesBox successThirdModal"
 >
   <div class="modalBlock__inner succesBox__inner modalContent__inner">
     <div class="modalBlock__head" style="margin-left: auto">
@@ -6188,9 +6188,9 @@
 </div>
 
   <div
-  class="modalBlock modalContent contactUpModal modalContent--small modalBlock--media-fit"
+  class="modalBlock modalContent contactUpModal  modalContent--small succesBox"
 >
-  <div class="modalBlock__inner modalContent__inner" style="max-width: 410px">
+  <div class="modalBlock__inner modalContent__inner succesBox__inner">
     <div class="modalBlock__head" style="margin-left: auto">
       <button
         class="modalBlock__close modal-close text-dark-100"
@@ -6307,11 +6307,9 @@
               data-modal="successThirdModal"
               style="min-height: 48px"
             >
-              <span class="icon">
-                <svg>
-                  <use xlink:href="#email-icon"></use>
-                </svg>
-              </span>
+              <div class="icon icon--big">
+                <span class="kit-icon mail"></span>
+              </div>
 
               <p class="p2 medium-font">Send Email</p>
             </button>
@@ -6591,8 +6589,8 @@
 
       <div class="modalBlock filterModal filterModalBox">
   <div class="modalBlock__inner filterModalBox__inner">
-    <div class="modalBlock__content">
-      <form class="filterModalBox__top">
+    <form class="modalBlock__content form" novalidate>
+      <div class="filterModalBox__top">
         <div class="filterModalBox__items">
           <div
             class="filterModalBox__items-box filterModalBox__items-box--bg lg-show"
@@ -6609,6 +6607,7 @@
                   data-placeholder="Enter location"
                   multiple
                   data-search="true"
+                  data-selected-top="true"
                 >
                   <option value="">Enter location</option>
                   <option
@@ -6764,7 +6763,7 @@
                   <p class="p2">Price</p>
 
                   <div class="icon icon--big arrow">
-                    <span class="kit-icon caret-up-md"></span>
+                    <span class="kit-icon caret-down-md"></span>
                   </div>
                 </button>
 
@@ -6860,6 +6859,7 @@
                   data-placeholder="Enter location"
                   multiple
                   data-search="true"
+                  data-selected-top="true"
                 >
                   <option value="">Enter location</option>
                   <option
@@ -7036,16 +7036,61 @@
                 </select>
               </div>
 
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="Living space"
-              >
-                <select id="select4">
-                  <option value="">Living space</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                </select>
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <div class="icon icon--sm">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+
+                  <p class="p2">Living space</p>
+
+                  <div class="icon icon--big arrow">
+                    <span class="kit-icon caret-down-md"></span>
+                  </div>
+                </button>
+
+                <div class="dropdown__content popup price-popup">
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Living space</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="text"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="text"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div
@@ -7072,28 +7117,118 @@
                 </select>
               </div>
 
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="Floor"
-              >
-                <select id="select7">
-                  <option value="">Floor</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                </select>
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <div class="icon icon--sm">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+
+                  <p class="p2">Floor</p>
+
+                  <div class="icon icon--big arrow">
+                    <span class="kit-icon caret-down-md"></span>
+                  </div>
+                </button>
+
+                <div class="dropdown__content popup price-popup">
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Floor</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="text"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="text"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="Land area"
-              >
-                <select id="select8">
-                  <option value="">Land area</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                </select>
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <div class="icon icon--sm">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+
+                  <p class="p2">Land area</p>
+
+                  <div class="icon icon--big arrow">
+                    <span class="kit-icon caret-down-md"></span>
+                  </div>
+                </button>
+
+                <div class="dropdown__content popup price-popup">
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Land area</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="text"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="text"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               <div
@@ -7108,16 +7243,14 @@
                 </select>
               </div>
 
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="ID"
-              >
-                <select id="select10">
-                  <option value="">ID</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                </select>
+              <div class="input-box">
+                <label class="input-box__content">
+                  <div class="input-box__info">
+                    <input type="text" name="id" placeholder="ID" />
+                  </div>
+                </label>
+
+                <p class="input-box__errors p4 form__errors"></p>
               </div>
             </div>
           </div>
@@ -7141,13 +7274,15 @@
                 </select>
               </div>
 
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="Construction stage"
-              >
-                <select id="select12">
+              <div class="select-box select-box--noMax">
+                <select
+                  id="select12"
+                  multiple
+                  data-placeholder="Construction stage"
+                  data-selected-top="true"
+                >
                   <option value="">Construction stage</option>
-                  <option value="1">some info 1</option>
+                  <option value="1">info 1</option>
                   <option value="2">some info 2</option>
                   <option value="3">some info 3</option>
                   <option value="4">some info 4</option>
@@ -7238,7 +7373,7 @@
                   <p class="p2">Price</p>
 
                   <div class="icon icon--big arrow">
-                    <span class="kit-icon caret-up-md"></span>
+                    <span class="kit-icon caret-down-md"></span>
                   </div>
                 </button>
 
@@ -7284,63 +7419,16 @@
                 </div>
               </div>
 
-              <div class="dropdown dropdown--price input-box">
-                <button class="input-box__info dropdown__btn" type="button">
-                  <div class="check">
-                    <div class="icon icon--sm">
-                      <span class="kit-icon check-big"></span>
-                    </div>
-                  </div>
-
-                  <p class="p2">Installment payment</p>
-
-                  <div class="icon icon--big arrow">
-                    <span class="kit-icon caret-up-md"></span>
-                  </div>
-                </button>
-
-                <div class="dropdown__content popup price-popup">
-                  <div class="price-popup__content">
-                    <p class="p2 semibold-font">Price range, AED</p>
-
-                    <div class="price-popup__items">
-                      <div class="input-box">
-                        <label class="input-box__content">
-                          <div class="input-box__info">
-                            <div class="decor p2">Min</div>
-                            <input
-                              placeholder="0"
-                              type="text"
-                              name="price_min"
-                              min="0"
-                              max="10000"
-                              data-type="price_min"
-                              data-input-number
-                            />
-                          </div>
-                        </label>
-                      </div>
-                      <div class="input-box">
-                        <label class="input-box__content">
-                          <div class="input-box__info">
-                            <div class="decor p2">Max</div>
-                            <input
-                              placeholder="∞"
-                              type="text"
-                              name="price_max"
-                              min="0"
-                              max="10000"
-                              data-type="price_max"
-                              data-input-number
-                            />
-                          </div>
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Installment payment"
+              >
+                <select id="select13211">
+                  <option value="">Installment payment</option>
+                  <option value="1">Yes</option>
+                  <option value="2">No</option>
+                </select>
               </div>
-
               <div class="dropdown dropdown--price input-box">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
@@ -7349,16 +7437,16 @@
                     </div>
                   </div>
 
-                  <p class="p2">Installment payment</p>
+                  <p class="p2">Rent income, %</p>
 
                   <div class="icon icon--big arrow">
-                    <span class="kit-icon caret-up-md"></span>
+                    <span class="kit-icon caret-down-md"></span>
                   </div>
                 </button>
 
                 <div class="dropdown__content popup price-popup">
                   <div class="price-popup__content">
-                    <p class="p2 semibold-font">Price range, AED</p>
+                    <p class="p2 semibold-font">Rent income, %</p>
 
                     <div class="price-popup__items">
                       <div class="input-box">
@@ -7406,43 +7494,175 @@
             <div
               class="filterModalBox__items-boxs filterModalBox__items-boxs--media-three"
             >
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="To the sea"
-              >
-                <select id="select18">
-                  <option value="">To the sea</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                  <option value="4">some info 4</option>
-                </select>
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <div class="icon icon--sm">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+
+                  <p class="p2">To the sea</p>
+
+                  <div class="icon icon--big arrow">
+                    <span class="kit-icon caret-down-md"></span>
+                  </div>
+                </button>
+
+                <div class="dropdown__content popup price-popup">
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">To the sea</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="text"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="text"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="To city center"
-              >
-                <select id="select19">
-                  <option value="">To city center</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                  <option value="4">some info 4</option>
-                </select>
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <div class="icon icon--sm">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+
+                  <p class="p2">To city center</p>
+
+                  <div class="icon icon--big arrow">
+                    <span class="kit-icon caret-down-md"></span>
+                  </div>
+                </button>
+
+                <div class="dropdown__content popup price-popup">
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">To city center</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="text"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="text"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div
-                class="select-box select-box--words select-box--noMax"
-                data-placeholder="To airport"
-              >
-                <select id="select20">
-                  <option value="">To airport</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                  <option value="4">some info 4</option>
-                </select>
+              <div class="dropdown dropdown--price input-box">
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <div class="icon icon--sm">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+
+                  <p class="p2">To airport</p>
+
+                  <div class="icon icon--big arrow">
+                    <span class="kit-icon caret-down-md"></span>
+                  </div>
+                </button>
+
+                <div class="dropdown__content popup price-popup">
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">To airport</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="text"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="text"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -7711,14 +7931,17 @@
             </div>
           </div>
         </div>
-      </form>
+      </div>
 
       <div class="filterModalBox__footer">
         <div class="filterModalBox__footer-box">
           <div
             class="filterModalBox__footer-btns filterModalBox__footer-btns--media-big"
           >
-            <button class="button button--noMassa text-secondary-300 lg-none">
+            <button
+              class="button button--noMassa text-secondary-300 lg-none"
+              type="reset"
+            >
               <div class="icon">
                 <span class="kit-icon undo"></span>
               </div>
@@ -7728,6 +7951,7 @@
 
             <button
               class="button button--noMassa lg-show modal-close text-dark-200"
+              type="reset"
             >
               <div class="icon">
                 <span class="kit-icon close-md"></span>
@@ -7736,7 +7960,10 @@
               <p class="p3 medium-font">Close</p>
             </button>
 
-            <button class="button button--noMassa text-primary-100 lg-show">
+            <button
+              class="button button--noMassa text-primary-100 lg-show"
+              type="reset"
+            >
               <div class="icon">
                 <span class="kit-icon undo"></span>
               </div>
@@ -7748,6 +7975,7 @@
           <div class="filterModalBox__footer-btns">
             <button
               class="button button--bg-gray-300 modal-close lg-none text-dark-200"
+              type="reset"
             >
               <div class="icon">
                 <span class="kit-icon close-md"></span>
@@ -7756,7 +7984,10 @@
               <p class="p2 medium-font">Close</p>
             </button>
 
-            <button class="button button--bg-primary-100 modal-close">
+            <button
+              class="button button--bg-primary-100 modal-close"
+              type="submit"
+            >
               <div class="icon">
                 <span class="kit-icon save"></span>
               </div>
@@ -7768,17 +7999,25 @@
 
         <div class="tablet-show">
           <div class="filterModalBox__footer-info">
-            <button type="button" class="button button--noMassa modal-close">
+            <button
+              type="button"
+              class="button button--noMassa modal-close"
+              type="submit"
+            >
               <p class="p3 medium-font text-secondary-100">Saved searches</p>
             </button>
 
-            <button type="button" class="button button--noMassa modal-close">
+            <button
+              type="button"
+              class="button button--noMassa modal-close"
+              type="submit"
+            >
               <p class="p3 medium-font text-secondary-100">Save search</p>
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 

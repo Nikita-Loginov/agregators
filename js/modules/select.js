@@ -1,7 +1,7 @@
 import { closeAllDropdowns } from "./dropdown.js";
 import { hiddenLoader } from "./loader.js";
 
-const collectOptionsData = (select) => {
+const collectOptionsData = (select, isMultiple) => {
   const groups = {};
   const optionsData = [];
 
@@ -10,20 +10,21 @@ const collectOptionsData = (select) => {
     const value = option.value;
     const text = option.textContent;
 
-    if (value) {
-      if (group) {
-        if (!groups[group]) {
-          groups[group] = {
-            label:
-              option.getAttribute("data-group-title") ||
-              group.charAt(0).toUpperCase() + group.slice(1),
-            options: [],
-          };
-        }
-        groups[group].options.push({ value, text });
-      } else {
-        optionsData.push({ value, text });
+    if (value === "" && isMultiple) return;
+
+    if (group) {
+      if (!groups[group]) {
+        groups[group] = {
+          label:
+            option.getAttribute("data-group-title") ||
+            group.charAt(0).toUpperCase() + group.slice(1),
+          options: [],
+        };
       }
+
+      groups[group].options.push({ value, text });
+    } else {
+      optionsData.push({ value, text });
     }
   });
 
@@ -282,20 +283,20 @@ const setupEventListeners = (self, isMultiple, hasWordsClass) => {
 };
 
 const moveSelectedToTop = (tsInstance, select) => {
-  if (!select.dataset.selectedTop || select.dataset.selectedTop !== "true") return;
+  if (!select.dataset.selectedTop || select.dataset.selectedTop !== "true")
+    return;
 
   const items = Array.from(tsInstance.dropdown_content.children);
 
   items.sort((a, b) => {
     const aSelected = a.classList.contains("selected") ? 1 : 0;
     const bSelected = b.classList.contains("selected") ? 1 : 0;
-    
-    return bSelected - aSelected; 
+
+    return bSelected - aSelected;
   });
 
   items.forEach((el) => tsInstance.dropdown_content.appendChild(el));
 };
-
 
 export const initSelects = () => {
   document.querySelectorAll("select").forEach((select) => {
@@ -307,7 +308,7 @@ export const initSelects = () => {
       ? "body"
       : null;
 
-    const { groups, optionsData } = collectOptionsData(select);
+    const { groups, optionsData } = collectOptionsData(select, isMultiple);
     const { allOptions, optgroups } = prepareTomSelectOptions(
       groups,
       optionsData
@@ -339,6 +340,7 @@ export const initSelects = () => {
       searchField: hasSearch ? ["text"] : false,
       hideSelected: false,
       dropdownParent: dropdownTarget,
+
       plugins,
       optgroups,
       options: allOptions,
@@ -376,8 +378,14 @@ export const initSelects = () => {
           setTimeout(updateCounter, 0);
         }
       },
-      onItemAdd: function () {
+      onItemAdd: function (value) {
         const self = this;
+
+        if (value === "") {
+          this.clear(true);
+          this.close();
+          return;
+        }
 
         moveSelectedToTop(this, select);
 
@@ -407,5 +415,16 @@ export const initSelects = () => {
         }
       },
     });
+
+    const form = select.closest("form");
+
+    if (form) {
+      form.addEventListener("reset", () => {
+        setTimeout(() => {
+          ts.clear(true);
+          ts.refreshOptions(false);
+        }, 0);
+      });
+    }
   });
 };
