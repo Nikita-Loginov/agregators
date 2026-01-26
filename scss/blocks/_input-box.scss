@@ -116,17 +116,137 @@
     }
   }
 
+  &__icon {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+
+  &__states {
+    --color-content-states: var(--primary-color-500);
+
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 8px;
+  }
+
+  &__states-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    white-space: nowrap;
+    color: var(--color-content-states);
+  }
+
+  &__states-line {
+    background-color: var(--gray-color-300);
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    width: 100%;
+    height: 6px;
+
+    div {
+      height: 100%;
+      width: 40%;
+      background-color: var(--color-content-states);
+      border-radius: var(--radius-sm);
+    }
+  }
+
+  &__states-content {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  &__states-items {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__states-item {
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: var(--dark-color-600);
+
+    &:before {
+      content:"";
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      border: 1px solid var(--dark-color-600);
+    }
+
+    &.success {
+      color: var(--green-color-100);
+
+      &:before {
+        border: none;
+        border-radius: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M2.66602 8.00004L5.96585 11.2999L13.0375 4.22888' stroke='%2326B539' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+      }
+    }
+  }
+
+  &.has-value {
+    .input-box {
+      &__states {
+        display: flex;
+      }
+    }
+  }
+
+  &.weak {
+    .input-box {
+      &__states {
+        --color-content-states: var(--primary-color-500);
+      }
+    }
+  }
+
+  &.medium {
+    .input-box {
+      &__states {
+        --color-content-states: var(--yellow-color-300);
+      }
+    }
+  }
+
+  &.strong {
+    .input-box {
+      &__states {
+        --color-content-states: var(--green-color-100);
+      }
+    }
+  }
+
+  &.success {
+    .input-box {
+      &__icon {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
   &.error {
     > .input-box__errors {
       display: flex;
     }
-  
+
     > .input-box__content > .input-box__info {
       border-color: var(--primary-color-500);
-  
+
       input {
         color: var(--primary-color-500);
-  
+
         &::placeholder {
           color: var(--primary-color-500);
         }

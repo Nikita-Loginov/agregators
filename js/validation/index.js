@@ -54,6 +54,11 @@ export const validateFormField = (formItem) => {
       message = rules.message?.required || "";
     }
 
+    if (valid && rule === "match") {
+      valid = validators.match(value, formItem.closest("form"), rules.match);
+      message = rules.message?.match || "";
+    }
+
     if (!valid) break;
   }
 

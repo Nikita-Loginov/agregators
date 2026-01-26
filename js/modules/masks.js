@@ -1,13 +1,16 @@
-import { allCountries } from "../data/countries.js";
+// import { allCountries } from "../data/countries.js";
 
-export function initPhoneMasks(form) {
+export async function initPhoneMasks(form) {
   const inputs = form.querySelectorAll("input[name='tel']");
-  const { AsYouType } = window.libphonenumber;
+ 
 
   if (!window.intlTelInput) {
     console.error("intlTelInput не загружен");
     return;
   }
+
+  const { allCountries } = await import("../data/countries.js");
+  const { AsYouType } = window.libphonenumber;
 
   inputs.forEach((input) => {
     const iti = window.intlTelInput(input, {

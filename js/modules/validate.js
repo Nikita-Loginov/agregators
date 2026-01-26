@@ -2,11 +2,16 @@ import { validateFormField } from "../validation/index.js";
 import { initPhoneMasks } from "./masks.js";
 import { openModalStep } from "./modal.js";
 import { classAction } from "../modules/classActions.js";
+import { initPasswordStrength } from "../validation/passwordStrength.js";
 
 export const initFormValidation = (form) => {
   if (!form) return;
 
   initPhoneMasks(form);
+
+  form.querySelectorAll(".form__item").forEach((item) => {
+    initPasswordStrength(item);
+  });
 
   form.addEventListener("input", onChange);
   form.addEventListener("change", onChange);

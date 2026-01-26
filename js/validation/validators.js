@@ -22,4 +22,10 @@ export const validators = {
   checkbox(field) {
     return field.checked === true;
   },
+
+  match(value, form, fieldName) {
+    const target = form.querySelector(`[name="${fieldName}"]`);
+    
+    return target ? value === target.value : false;
+  },
 };
