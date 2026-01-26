@@ -28,4 +28,8 @@ export const validators = {
     
     return target ? value === target.value : false;
   },
+
+  radio(form, name) {
+    return !!form.querySelector(`input[type="radio"][name="${name}"]:checked`);
+  },
 };

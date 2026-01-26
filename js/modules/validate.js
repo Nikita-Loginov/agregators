@@ -57,12 +57,16 @@ const onSubmit = (e) => {
       modalBlock
     );
   }
-
-  updateSubmit(form);
-  form.reset();
+  
+  if (!form.classList.contains("reset-none")) {
+    updateSubmit(form);
+    form.reset();
+  }
 
   form.querySelectorAll(".form__item").forEach((item) => {
-    const field = item.querySelector("input, textarea, select, .selected-option");
+    const field = item.querySelector(
+      "input, textarea, select, .selected-option"
+    );
     const errorBox = item.querySelector(".form__errors");
     if (errorBox) errorBox.textContent = "";
 

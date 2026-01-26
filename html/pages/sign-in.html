@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Authors", "links" :
+  ["./css/sign-in.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail main--detail--middle">
+        <div class="top-page">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Sign up"
+                      title="Sign up"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Sign up</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Step 1</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="icon" style="rotate: 90deg">
+                    <span class="kit-icon arrow-circle-down"></span>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="sign-in">
+            <div class="container">
+              <h2 class="h2">Пока что не проверять</h2>
+
+              <div class="sign-in__inner" data-sign-box>
+                <form class="sign-in__content form reset-none" novalidate>
+                  <div class="sign-in__header">
+                    <h1 class="h2">Create your account</h1>
+
+                    <div class="textbox">
+                      <p class="p1">Choose how you plan to use the platform</p>
+                    </div>
+                  </div>
+
+                  <div class="sign-in__items">
+                    <label class="check-big sign-in-item form__item">
+                      <input
+                        type="radio"
+                        name="signType"
+                        data-sign-type="user"
+                        class="check-big__hidden"
+                      />
+
+                      <div class="sign-in-item__content">
+                        <div class="sign-in-item__header">
+                          <div class="sign-in-item__icon">
+                            <div class="icon icon--lg">
+                              <span class="kit-icon user"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sign-in-item__info">
+                          <p class="p1 semibold-font">User</p>
+
+                          <div class="textbox">
+                            <p class="p3">
+                              Search and buy properties for personal use
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="form__errors p4"
+                        style="color: var(--primary-color-500)"
+                      ></div>
+                    </label>
+
+                    <label class="check-big sign-in-item form__item">
+                      <input
+                        type="radio"
+                        name="signType"
+                        data-sign-type="company"
+                        class="check-big__hidden"
+                      />
+
+                      <div class="sign-in-item__content">
+                        <div class="sign-in-item__header">
+                          <div class="sign-in-item__icon">
+                            <div class="icon icon--lg">
+                              <span class="kit-icon building-04"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sign-in-item__info">
+                          <p class="p1 semibold-font">Company</p>
+
+                          <div class="textbox">
+                            <p class="p3">
+                              List properties and manage  your real estate
+                              business
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="form__errors p4"
+                        style="color: var(--primary-color-500)"
+                      ></div>
+                    </label>
+
+                    <label class="check-big sign-in-item form__item">
+                      <input
+                        type="radio"
+                        name="signType"
+                        data-sign-type="specialist"
+                        class="check-big__hidden"
+                      />
+
+                      <div class="sign-in-item__content">
+                        <div class="sign-in-item__header">
+                          <div class="sign-in-item__icon">
+                            <div class="icon icon--lg">
+                              <span class="kit-icon user-check"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="sign-in-item__info">
+                          <p class="p1 semibold-font">Specialist</p>
+
+                          <div class="textbox">
+                            <p class="p3">
+                              Provide professional real estate services
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="form__errors p4"
+                        style="color: var(--primary-color-500)"
+                      ></div>
+                    </label>
+                  </div>
+
+                  <div class="sign-in__footer">
+                    <div class="sign-in__btns">
+                      <button
+                        class="button button--lg button--bg-secondary-100 button--rounded-md"
+                        type="submit"
+                        style="padding-inline: 31px"
+                      >
+                        <p class="p2">Continue</p>
+
+                        <div class="icon icon--big">
+                          <span class="kit-icon chevron-right"></span>
+                        </div>
+                      </button>
+                    </div>
+
+                    <div class="sign-in__decor">
+                      <p class="p3">Already member?</p>
+
+                      <a
+                        href="/sign-in.html"
+                        aria-label="Перейти на страницу регистрации"
+                        title="Sign Up"
+                        class="p3 medium-font text-secondary-100"
+                        >Sign Up</a
+                      >
+                    </div>
+                  </div>
+                </form>
+
+                <form class="form-sign form reset-none" novalidate>
+                  <div class="form-sign__header">
+                    <div class="propgress">
+                      <div class="propgress__header">
+                        <p class="p3" data-propgress-number></p>
+                      </div>
+
+                      <div class="propgress__items" data-propgress-items></div>
+                    </div>
+
+                    <div class="form-sign__header-content">
+                      <p class="h4" data-sign-header></p>
+
+                      <div class="textbox" data-sign-textbox>
+                        <p class="p2"></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-sign__box">
+                    <div class="form-sign__inputs" data-sign-inputs></div>
+                  </div>
+
+                  <div class="form-sign__footer" data-sign-footer>
+                    <div class="form-sign__footer-content"></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ""})
+    </div>
+
+    <script src="/js/sign-in.js" type="module"></script>
+  </body>
+</html>

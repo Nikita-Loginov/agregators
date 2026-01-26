@@ -57,6 +57,17 @@ export const validationRules = {
     hint: "Без этого мы не сможем продолжить",
   },
 
+
+
+  signType: {
+    required: true,
+  
+    message: {
+      required: "Please choose one option",
+    },
+  },
+  
+
   message: {
     required: true,
 
@@ -68,27 +79,25 @@ export const validationRules = {
     minLength: 8,
     maxLength: 32,
     pattern: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,32}$/,
-  
+
     message: {
       required: "Введите пароль",
       minLength: "Пароль должен быть не короче 8 символов",
       pattern: "Пароль должен содержать минимум одну букву и одну цифру",
     },
-  
+
     hint: "8–32 символа, минимум одна буква и одна цифра",
   },
-  
 
   passwordConfirm: {
     required: true,
     match: "password",
-  
+
     message: {
       required: "Подтвердите пароль",
       match: "Пароли не совпадают",
     },
-  
+
     hint: "Пароль должен совпадать с введённым выше",
   },
-  
 };

@@ -12,6 +12,24 @@ export const validateFormField = (formItem) => {
   const rules = validationRules[name];
   if (!rules) return true;
 
+  if (field.type === "radio") {
+    const form = formItem.closest("form");
+    const valid = validators.radio(form, name);
+
+    const firstRadioItem = form
+      .querySelector(`input[type="radio"][name="${name}"]`)
+      ?.closest(".form__item");
+
+    if (firstRadioItem !== formItem) return valid;
+
+    errorBox.textContent = valid ? "" : rules.message?.required || "";
+
+    classAction(formItem, "error", valid ? "remove" : "add");
+    classAction(formItem, "success", valid ? "add" : "remove");
+
+    return valid;
+  }
+
   let valid = true;
   let message = "";
 
@@ -77,7 +95,7 @@ export const validateFormField = (formItem) => {
 };
 
 export const clearAllFormErrors = (e) => {
-  if (e.target.closest('form')) return;
+  if (e.target.closest("form")) return;
   const errorItems = document.querySelectorAll(
     ".form__item.error, .form__item [aria-invalid='true']"
   );
@@ -100,4 +118,3 @@ export const clearAllFormErrors = (e) => {
     formItem.classList.remove("error", "success");
   });
 };
-

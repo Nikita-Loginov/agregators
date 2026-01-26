@@ -1,6 +1,6 @@
 // import { allCountries } from "../data/countries.js";
 
-export async function initPhoneMasks(form) {
+export function initPhoneMasks(form) {
   const inputs = form.querySelectorAll("input[name='tel']");
  
 
@@ -9,7 +9,7 @@ export async function initPhoneMasks(form) {
     return;
   }
 
-  const { allCountries } = await import("../data/countries.js");
+ 
   const { AsYouType } = window.libphonenumber;
 
   inputs.forEach((input) => {
@@ -58,9 +58,10 @@ export async function initPhoneMasks(form) {
   });
 }
 
-const renderCountryDropdown = (dropdownContent, itiInstance) => {
+const renderCountryDropdown = async (dropdownContent, itiInstance) => {
   dropdownContent.innerHTML = ""; 
 
+  const { allCountries } = await import("../data/countries.js");
   const box = dropdownContent.closest('.input-box')
   const telInput = box.querySelector("input[name='tel']");
 
