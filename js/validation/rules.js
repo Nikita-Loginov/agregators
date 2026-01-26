@@ -57,16 +57,45 @@ export const validationRules = {
     hint: "Без этого мы не сможем продолжить",
   },
 
-
-
   signType: {
     required: true,
-  
+
     message: {
       required: "Please choose one option",
     },
   },
-  
+
+  company: {
+    required: true,
+
+    message: {
+      required: "Please choose company type",
+    },
+  },
+
+  companyName: {
+    required: true,
+    minLength: 2,
+
+    message: {
+      required: "Введите название компании",
+      minLength: "Название должно быть не короче 2 символов",
+    },
+
+    hint: "Например: Ozon или Wb",
+  },
+
+  contactPerson : {
+    required: true,
+    minLength: 2,
+
+    message: {
+      required: "Введите контакт компании",
+      minLength: "Контакт должен быть не короче 2 символов",
+    },
+
+    hint: "Например: example1 или example2",
+  },
 
   message: {
     required: true,

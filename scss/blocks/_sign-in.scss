@@ -8,7 +8,7 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(28px, 32px, 767px, 480px);
     max-width: 904px;
     width: 100%;
     margin: 0 auto;
@@ -23,23 +23,23 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 12px;
+    gap: calculate-clamp(8px, 12px, 1023px, 767px);
 
     .textbox {
-        color: var(--dark-color-600);
+      color: var(--dark-color-600);
     }
   }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: calculate-clamp(12px, 22px, 1023px, 767px);
   }
 
   &__footer {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(28px, 32px, 1023px, 767px);
     align-items: center;
   }
 
@@ -49,5 +49,12 @@
     gap: 12px;
     flex-wrap: wrap;
     color: var(--dark-color-600);
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__items {
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

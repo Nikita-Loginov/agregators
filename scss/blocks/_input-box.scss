@@ -103,6 +103,10 @@
     }
   }
 
+  &__label {
+    padding-left: calculate-clamp(12px, 16px, 1023px, 767px);
+  }
+
   &__errors {
     font-size: var(--font-size-3xs);
     color: var(--primary-color-500);

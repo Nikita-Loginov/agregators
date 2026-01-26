@@ -1,4 +1,6 @@
 import { signInState } from "./signIn.state.js";
+import { initPasswordStrength } from "../../validation/passwordStrength.js";
+import { initPhoneMasks } from "../masks.js";
 
 export const renderHeader = (form, step, totalSteps) => {
   renderProgress(form, step.step, totalSteps);
@@ -61,14 +63,17 @@ export const renderFooter = (footer, container) => {
   }
 
   if (hasButtons) {
+    const btnContStyle = !hasSocial ? `style="width: 100%"` : "";
+    const boxStyle = !hasSocial ? `style="width: 100%"` : "";
+
     footerContent.insertAdjacentHTML(
       "beforeend",
       `
-      <div class="form-sign__footer-btns">
+      <div class="form-sign__footer-btns" ${boxStyle}>
         <button type="button" data-back class="button button--noBg button--noMassa">
           Back
         </button>
-        <button type="submit" class="button button--lg button--rounded-md button--bg-secondary-100">
+        <button ${btnContStyle} type="submit" class="button button--lg button--rounded-md button--bg-secondary-100">
           <p class="p2 medium-font">Continue</p>
           <div class="icon icon--big">
             <span class="kit-icon chevron-right"></span>
@@ -119,13 +124,12 @@ export const renderProgress = (form, currentStep, totalSteps) => {
   for (let i = 0; i < totalSteps; i++) {
     const div = document.createElement("div");
     div.className = "propgress__item";
-    
+
     if (i < currentStep) div.classList.add("active");
 
     itemsContainer.appendChild(div);
   }
 };
-
 
 export const renderSocials = () => `
   <div class="form-sign__footer-socials">
@@ -158,31 +162,151 @@ export const renderBody = (form, step) => {
       const currentValue = signInState.formData[item.typeItem] ?? "";
 
       if (item.type === "input") {
-        inputs.insertAdjacentHTML(
-          "beforeend",
-          `
-          <div class="input-box input-box--white form__item">
-            <label class="input-box__content">
-              <p class="p3 medium-font">${item.head}</p>
-              <div class="input-box__info">
-                <input
-                  type="${item.typeInput}"
-                  name="${item.typeItem}"
-                  placeholder="${item.placeholder}"
-                  value="${currentValue}"
-                  required
-                />
+        inputs.classList.remove("form-sign__checks");
 
-                <div class="input-box__icon text-green-100">
-                  <div class="icon icon--big">
-                    <span class="kit-icon check-big"></span>
+        const isState = item.state;
+
+        const inputsCount = inputs.children.length;
+        const errorStyle = isState ? `style="display: none"` : "";
+
+        if (item.typeInput === "tel") {
+          inputs.insertAdjacentHTML(
+            "beforeend",
+            `<div class="input-box input-box--white form__item input-tel-wrapper dropdown-tel">
+              <div class="input-box__content dropdown">
+                <p class="p3 medium-font input-box__label">${item.head}</p>
+
+                <div class="input-box__info popup-select">
+                  <input
+                    type="${item.typeInput}"
+                    name="${item.typeItem}"
+                    placeholder="${item.placeholder}"
+                    value="${currentValue}"
+                    required
+                  />
+
+                  <div class="input-box__icon text-green-100">
+                    <div class="icon icon--big">
+                      <span class="kit-icon check-big"></span>
+                    </div>
                   </div>
                 </div>
+
+                <div class="dropdown__content"></div>
               </div>
-            </label>
-            <p class="input-box__errors p4 form__errors"></p>
-          </div>
-        `
+
+              <p class="input-box__errors p4 form__errors"></p>
+            </div>`
+          );
+
+          initPhoneMasks(form);
+        } else {
+          inputs.insertAdjacentHTML(
+            "beforeend",
+            `
+            <div class="input-box input-box--white form__item">
+              <label class="input-box__content">
+                <p class="p3 medium-font input-box__label">${item.head}</p>
+                <div class="input-box__info">
+                  <input
+                    type="${item.typeInput}"
+                    name="${item.typeItem}"
+                    placeholder="${item.placeholder}"
+                    value="${currentValue}"
+                    required
+                  />
+  
+                  <div class="input-box__icon text-green-100">
+                    <div class="icon icon--big">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+  
+              ${
+                isState
+                  ? `<div class="input-box__states">
+                <div class="input-box__states-header">
+                  <div class="input-box__states-line">
+                    <div class=""></div>
+                  </div>
+  
+                  <p class="input-box__states-status">Weak</p>
+                </div>
+  
+                <div class="input-box__states-content">
+                  <div class="input-box__states-items">
+                    <div class="input-box__states-item">
+                      <div class="input-box__states-icon">
+                        <p class="p4">8+ characters</p>
+                      </div>
+                    </div>
+  
+                    <div class="input-box__states-item">
+                      <div class="input-box__states-icon">
+                        <p class="p4">1 digit</p>
+                      </div>
+                    </div>
+  
+                    <div class="input-box__states-item">
+                      <div class="input-box__states-icon">
+                        <p class="p4">1 letter</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>`
+                  : ""
+              }
+  
+              <p class="input-box__errors p4 form__errors" ${errorStyle}></p>
+            </div>
+          `
+          );
+        }
+
+        if (isState) {
+          const addedElement = inputs.children[inputsCount];
+
+          initPasswordStrength(addedElement);
+        }
+      }
+
+      if (item.type === "radio") {
+        inputs.classList.add("form-sign__checks");
+
+        const currentValue = signInState.formData[item.name];
+        const isChecked = currentValue === item.typeItem;
+
+        inputs.insertAdjacentHTML(
+          "beforeend",
+          `<label class="check-big-item form__item">
+                      <input
+                       name="${item.name}"
+                        type="radio"
+                        class="check-big-item__hidden"
+                        value="${item.typeItem}"
+                        ${isChecked ? "checked" : ""}
+                      />
+
+                      <div class="check-big-item__content">
+                        <div class="check-big-item__radio"></div>
+
+                        <div class="check-big-item__info">
+                          <p class="p2 medium-font">${item.title}</p>
+
+                          <div class="textbox">
+                            ${item.text}
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="form__errors p4"
+                        style="color: var(--primary-color-500)"
+                      ></div>
+                    </label>`
         );
       }
     });

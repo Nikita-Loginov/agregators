@@ -1,7 +1,16 @@
 .sign-in-item {
-  padding: 32px;
+  padding: calculate-clamp(24px, 32px, 767px, 480px);
   background-color: var(--white-color);
   border-radius: var(--radius-2xl);
+
+  &:has(.check-big-item__hidden:checked) {
+    .sign-in-item {
+      &__icon {
+        color: var(--white-color);
+        background-color: var(--secondary-color-100);
+      }
+    }
+  }
 
   &__content {
     display: flex;
@@ -20,6 +29,7 @@
     border-radius: var(--radius-4xl);
     background-color: var(--gray-color-200);
     color: var(--dark-color-500);
+    transition: all 0.3s;
 
     * {
       width: 32px;
@@ -34,5 +44,23 @@
     align-items: center;
     text-align: center;
     gap: 16px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__content {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    &__icon {
+      height: 100%;
+    }
+
+    &__info {
+      align-items: flex-start;
+      gap: 0;
+      text-align: left;
+    }
   }
 }

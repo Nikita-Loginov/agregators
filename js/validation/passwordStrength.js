@@ -23,6 +23,7 @@ export const getPasswordStrength = (value) => {
 export const initPasswordStrength = (formItem) => {
   const input = formItem.querySelector('input[type="password"]');
   const states = formItem.querySelector(".input-box__states");
+  // console.log(formItem, states)
   if (!input || !states) return;
 
   const statusText = states.querySelector(".input-box__states-status");

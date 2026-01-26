@@ -3,13 +3,11 @@
 export function initPhoneMasks(form) {
   const inputs = form.querySelectorAll("input[name='tel']");
  
-
   if (!window.intlTelInput) {
     console.error("intlTelInput не загружен");
     return;
   }
 
- 
   const { AsYouType } = window.libphonenumber;
 
   inputs.forEach((input) => {

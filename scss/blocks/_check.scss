@@ -132,7 +132,7 @@
   background-color: var(--gray-color-200);
   align-items: center;
   min-height: 28px;
-  transition: all .3s;
+  transition: all 0.3s;
 
   &:hover {
     background-color: var(--gray-color-300) !important;
@@ -188,7 +188,7 @@
     flex-direction: column;
     gap: 4px;
     color: var(--dark-color-500);
-    transition: all .3s;
+    transition: all 0.3s;
   }
 }
 
@@ -254,21 +254,22 @@ label.check-switch {
   }
 }
 
-.check-big {
+.check-big-item {
   cursor: pointer;
-  border: 2px solid transparent;
-  transition: all .3s;
+  border: 2px solid var(--gray-color-600);
+  transition: all 0.3s;
 
   &__hidden {
     @include visually-hidden;
   }
 
-  &:has(.check-big__hidden:checked) {
+  &:has(.check-big-item__hidden:checked) {
     border-color: var(--secondary-color-100);
-    box-shadow: 0px 4px 12px 0px #0D0A2C0F;
+    box-shadow: 0px 4px 12px 0px #0d0a2c0f;
 
-    .check-big__radio {
+    .check-big-item__radio {
       border-color: var(--secondary-color-100);
+      border-width: 2px;
 
       &:before {
         opacity: 1;
@@ -278,9 +279,7 @@ label.check-switch {
 
   &:hover {
     border-color: var(--dark-color-600);
-    box-shadow: 0px 5px 12px 0px #0000001A;
-
-    
+    box-shadow: 0px 5px 12px 0px #0000001a;
   }
 
   &__radio {
@@ -288,21 +287,21 @@ label.check-switch {
     height: 16px;
     border-radius: 50%;
     flex-shrink: 0;
-    border: 2px solid var(--dark-color-600);
+    border: 1px solid var(--dark-color-600);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &:before {
-      content:"";
-      width: 50%;
-      aspect-ratio: 1 / 1;
+      content: "";
       border-radius: 50%;
+      width: 6px;
+      aspect-ratio: 1 / 1;
       border: 2px solid var(--secondary-color-100);
       opacity: 0;
-      transition: all .3s;
+      transition: all 0.3s;
     }
   }
 
@@ -321,8 +320,6 @@ label.check-switch {
 .check-big-item {
   padding: 12px;
   border-radius: var(--radius-md);
-  border: 2px solid var(--gray-color-600);
- 
 }
 
 @keyframes left-right {

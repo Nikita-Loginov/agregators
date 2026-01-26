@@ -17,11 +17,17 @@
     border-radius: var(--radius-sm);
     overflow: hidden;
     background-color: var(--gray-color-300);
-    height: 8px;
+    height: calculate-clamp(6px, 8px, 1023px, 767px);
     flex: 1;
 
     &.active {
       background-color: var(--secondary-color-100);
     }
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    flex-direction: row-reverse;
+    align-items: center;
+    white-space: nowrap;
   }
 }
