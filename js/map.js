@@ -5,6 +5,7 @@ import { setVar } from "./utils/setVar.js";
 import { initSimpleMap } from "./modules/map.js";
 import { lagerhauser } from "./data/lagerhauser.js";
 import { toggleSibebar } from "./modules/sibebar.js";
+import { initSharedFormSync } from "./modules/shared-form/sharedFormSync.js";
 
 const swipers = [
   {
@@ -40,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
   handleAllSliders();
 
   document.addEventListener("click", handleGlobalClick);
+
+  initSharedFormSync();
 });
 
 let resizeTimeout;

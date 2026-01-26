@@ -1777,7 +1777,7 @@
             ></div>
 
             <div class="catalogy__inner">
-              <form novalidate class="filter form">
+              <form novalidate class="filter form" data-form="filter">
                 <div class="filter__box">
                   <div class="filter__items">
                     <div class="filter__item tablet-show">
@@ -1811,6 +1811,7 @@
                           data-selected-top="true"
                           multiple
                           data-search="true"
+                          name="location-select"
                         >
                           <option value="">Enter location</option>
                           <option
@@ -1911,7 +1912,7 @@
                         class="select-box select-box--noMax select-box--words"
                         data-loading="true"
                       >
-                        <select id="select1">
+                        <select id="select1" name="type-of-deal">
                           <option value="">Type of deal</option>
                           <option value="1" selected>Buy</option>
                           <option value="2">Rent</option>
@@ -1923,7 +1924,7 @@
                       <div class="checkbox-box">
   <label class="check">
     <div class="check__info">
-      <input type="radio" checked name="category" />
+      <input type="radio" checked name="category" value="all" data-name="category"/>
 
       <div class="check__info-content">
         <span class="p2">All</span>
@@ -1933,7 +1934,7 @@
 
   <label class="check">
     <div class="check__info">
-      <input type="radio" name="category" />
+      <input type="radio" name="category" value="ready" data-name="category"/>
 
       <div class="check__info-content">
         <span class="p2">Ready</span>
@@ -1943,7 +1944,7 @@
 
   <label class="check">
     <div class="check__info">
-      <input type="radio" name="category" />
+      <input type="radio" name="category"  value="off-plan" data-name="category"/>
 
       <div class="check__info-content">
         <span class="p2">Off-Plan</span>
@@ -1962,8 +1963,9 @@
                       <div
                         class="select-box select-box--words"
                         data-loading="true"
+                        
                       >
-                        <select id="select2" data-placeholder="Property type">
+                        <select id="select2" data-placeholder="Property type" name="property-type">
                           <option value="">Property type</option>
                           <option value="1">Apartment</option>
                           <option value="2">Penthouse</option>
@@ -2028,7 +2030,7 @@
                           <p class="p2">Price</p>
 
                           <div class="icon icon--big arrow">
-                            <span class="kit-icon caret-up-md"></span>
+                            <span class="kit-icon caret-down-md"></span>
                           </div>
                         </button>
 
@@ -2078,7 +2080,7 @@
                     <div class="filter__item tablet-none">
                       <button
                         type="button"
-                        class="button button--bg-gray-300 button--lg button--rounded-md modal-open"
+                        class="button button--bg-gray-300 button--lg button--rounded-md modal-open no-wrap"
                         data-modal="filterModal"
                       >
                         <div class="button__block">
@@ -6978,6 +6980,7 @@
 
   <div
   class="modalBlock modalContent contactUpModal  modalContent--small succesBox"
+  data-outside-show="false"
 >
   <div class="modalBlock__inner modalContent__inner succesBox__inner">
     <div class="modalBlock__head" style="margin-left: auto">
@@ -7514,7 +7517,7 @@
 </div>
  <div class="modalBlock filterModal filterModalBox">
   <div class="modalBlock__inner filterModalBox__inner">
-    <form class="modalBlock__content form" novalidate>
+    <form class="modalBlock__content form" novalidate data-form="filter">
       <div class="filterModalBox__top">
         <div class="filterModalBox__items">
           <div
@@ -7533,6 +7536,8 @@
                   multiple
                   data-search="true"
                   data-selected-top="true"
+                  name="location-select"
+                  class="no-reset"
                 >
                   <option value="">Enter location</option>
                   <option
@@ -7623,19 +7628,17 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Type of deal"
               >
-                <select id="type-select">
+                <select id="type-select" name="type-of-deal" class="no-reset">
                   <option value="">Type of deal</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                  <option value="4">some info 4</option>
+                  <option value="1" selected>Buy</option>
+                  <option value="2">Rent</option>
                 </select>
               </div>
 
               <div class="checkbox-box">
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" checked name="category-2" />
+                    <input type="radio" checked name="category-1" data-name="category" value="all" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">All</span>
@@ -7645,7 +7648,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-2" />
+                    <input type="radio" name="category-1" data-name="category" value="ready" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Ready</span>
@@ -7655,7 +7658,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-2" />
+                    <input type="radio" name="category-1" data-name="category" value="off-plan" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Off-Plan</span>
@@ -7668,7 +7671,7 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Property type"
               >
-                <select id="select50">
+                <select id="select50" name="property-type" class="no-reset">
                   <option value="">Property type</option>
                   <option value="1">Apartment</option>
                   <option value="2">Penthouse</option>
@@ -7781,10 +7784,13 @@
               >
                 <select
                   id="search-select"
+                  data-reset="false"
                   data-placeholder="Enter location"
                   multiple
                   data-search="true"
                   data-selected-top="true"
+                  name="location-select"
+                  class="no-reset"
                 >
                   <option value="">Enter location</option>
                   <option
@@ -7875,19 +7881,17 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Type of deal"
               >
-                <select id="type-select">
+                <select id="type-select" name="type-of-deal" class="no-reset">
                   <option value="">Type of deal</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                  <option value="4">some info 4</option>
+                  <option value="1" selected>Buy</option>
+                  <option value="2">Rent</option>
                 </select>
               </div>
 
               <div class="checkbox-box">
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" checked name="category-1" />
+                    <input type="radio" checked name="category-2" data-name="category" value="all" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">All</span>
@@ -7897,7 +7901,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-1" />
+                    <input type="radio" name="category-2" data-name="category" value="ready" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Ready</span>
@@ -7907,7 +7911,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-1" />
+                    <input type="radio" name="category-2" data-name="category" value="off-plan" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Off-Plan</span>
@@ -7928,8 +7932,8 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Property type"
               >
-                <select id="select2">
-                  <option value="">Property type</option>
+                <select id="select2" name="property-type" class="no-reset">
+                  <option value="" name="property-type">Property type</option>
                   <option value="1">Apartment</option>
                   <option value="2">Penthouse</option>
                   <option value="3">Duplex</option>

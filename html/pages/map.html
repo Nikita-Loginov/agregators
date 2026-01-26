@@ -15,7 +15,7 @@
         <section class="map sibebar-open" data-block="sibebar-box">
           <div class="map__inner">
             <div class="map__info">
-              <div class="filter filter--big filter--bg">
+              <form class="filter filter--big filter--bg " data-form="filter">
                 <div class="filter__box">
                   <div class="filter__items">
                     <div class="filter__item tablet-show">
@@ -51,6 +51,7 @@
                           multiple
                           data-search="true"
                           data-selected-top="true"
+                          name="location-select"
                         >
                           <option value="">Enter location</option>
                           <option
@@ -151,7 +152,7 @@
                         class="select-box select-box--noMax select-box--words"
                         data-loading="true"
                       >
-                        <select id="select1">
+                        <select id="select1" name="type-of-deal">
                           <option value="">Type of deal</option>
                           <option value="1" selected>Buy</option>
                           <option value="2">Rent</option>
@@ -175,7 +176,7 @@
                         class="select-box select-box--words"
                         data-loading="true"
                       >
-                        <select id="select2" data-placeholder="Property type">
+                        <select id="select2" data-placeholder="Property type" name="property-type">
                           <option value="">Property type</option>
                           <option value="1">Apartment</option>
                           <option value="2">Penthouse</option>
@@ -418,7 +419,7 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
 
             <div class="map__content">

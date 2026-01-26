@@ -1,5 +1,7 @@
 import { closeAllDropdowns } from "./dropdown.js";
 import { hiddenLoader } from "./loader.js";
+import { syncElements } from "./shared-form/sharedFormSync.js";
+import { sharedFormState } from "./shared-form/sharedFormState.js";
 
 const collectOptionsData = (select, isMultiple) => {
   const groups = {};
@@ -417,6 +419,8 @@ export const initSelects = () => {
     });
 
     const form = select.closest("form");
+    const formName = form?.dataset?.form;
+    const fieldName = select.name;
 
     if (form) {
       form.addEventListener("reset", () => {
@@ -426,5 +430,19 @@ export const initSelects = () => {
         }, 0);
       });
     }
+
+    const emitSync = () => {
+      if (sharedFormState.isSyncing) return;
+      
+      setTimeout(() => {
+        
+        const value = ts.getValue();
+        // console.log(value)
+        syncElements(formName, fieldName, value, select);
+      }, 0);
+    };
+
+    ts.on("change", emitSync);
+    ts.on("item_remove", emitSync);
   });
 };

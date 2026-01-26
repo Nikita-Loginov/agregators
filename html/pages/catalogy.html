@@ -17,7 +17,7 @@
             ></div>
 
             <div class="catalogy__inner">
-              <form novalidate class="filter form">
+              <form novalidate class="filter form" data-form="filter">
                 <div class="filter__box">
                   <div class="filter__items">
                     <div class="filter__item tablet-show">
@@ -51,6 +51,7 @@
                           data-selected-top="true"
                           multiple
                           data-search="true"
+                          name="location-select"
                         >
                           <option value="">Enter location</option>
                           <option
@@ -151,7 +152,7 @@
                         class="select-box select-box--noMax select-box--words"
                         data-loading="true"
                       >
-                        <select id="select1">
+                        <select id="select1" name="type-of-deal">
                           <option value="">Type of deal</option>
                           <option value="1" selected>Buy</option>
                           <option value="2">Rent</option>
@@ -171,8 +172,9 @@
                       <div
                         class="select-box select-box--words"
                         data-loading="true"
+                        
                       >
-                        <select id="select2" data-placeholder="Property type">
+                        <select id="select2" data-placeholder="Property type" name="property-type">
                           <option value="">Property type</option>
                           <option value="1">Apartment</option>
                           <option value="2">Penthouse</option>
@@ -237,7 +239,7 @@
                           <p class="p2">Price</p>
 
                           <div class="icon icon--big arrow">
-                            <span class="kit-icon caret-up-md"></span>
+                            <span class="kit-icon caret-down-md"></span>
                           </div>
                         </button>
 
@@ -287,7 +289,7 @@
                     <div class="filter__item tablet-none">
                       <button
                         type="button"
-                        class="button button--bg-gray-300 button--lg button--rounded-md modal-open"
+                        class="button button--bg-gray-300 button--lg button--rounded-md modal-open no-wrap"
                         data-modal="filterModal"
                       >
                         <div class="button__block">

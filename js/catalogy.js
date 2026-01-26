@@ -15,6 +15,7 @@ import {
 } from "./modules/catalogy-grid.js";
 import { initCharts } from "./modules/chart.js";
 import { charts } from "./data/chart.js";
+import { initSharedFormSync } from "./modules/shared-form/sharedFormSync.js";
 
 const swipers = [
   {
@@ -50,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("click", handleGlobalClick);
 
   initCharts([{...charts.market}])
+  initSharedFormSync();
 });
 
 document.addEventListener("change", (e) => {

@@ -6189,6 +6189,7 @@
 
   <div
   class="modalBlock modalContent contactUpModal  modalContent--small succesBox"
+  data-outside-show="false"
 >
   <div class="modalBlock__inner modalContent__inner succesBox__inner">
     <div class="modalBlock__head" style="margin-left: auto">
@@ -6589,7 +6590,7 @@
 
       <div class="modalBlock filterModal filterModalBox">
   <div class="modalBlock__inner filterModalBox__inner">
-    <form class="modalBlock__content form" novalidate>
+    <form class="modalBlock__content form" novalidate data-form="filter">
       <div class="filterModalBox__top">
         <div class="filterModalBox__items">
           <div
@@ -6608,6 +6609,8 @@
                   multiple
                   data-search="true"
                   data-selected-top="true"
+                  name="location-select"
+                  class="no-reset"
                 >
                   <option value="">Enter location</option>
                   <option
@@ -6698,19 +6701,17 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Type of deal"
               >
-                <select id="type-select">
+                <select id="type-select" name="type-of-deal" class="no-reset">
                   <option value="">Type of deal</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                  <option value="4">some info 4</option>
+                  <option value="1" selected>Buy</option>
+                  <option value="2">Rent</option>
                 </select>
               </div>
 
               <div class="checkbox-box">
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" checked name="category-2" />
+                    <input type="radio" checked name="category-1" data-name="category" value="all" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">All</span>
@@ -6720,7 +6721,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-2" />
+                    <input type="radio" name="category-1" data-name="category" value="ready" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Ready</span>
@@ -6730,7 +6731,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-2" />
+                    <input type="radio" name="category-1" data-name="category" value="off-plan" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Off-Plan</span>
@@ -6743,7 +6744,7 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Property type"
               >
-                <select id="select50">
+                <select id="select50" name="property-type" class="no-reset">
                   <option value="">Property type</option>
                   <option value="1">Apartment</option>
                   <option value="2">Penthouse</option>
@@ -6856,10 +6857,13 @@
               >
                 <select
                   id="search-select"
+                  data-reset="false"
                   data-placeholder="Enter location"
                   multiple
                   data-search="true"
                   data-selected-top="true"
+                  name="location-select"
+                  class="no-reset"
                 >
                   <option value="">Enter location</option>
                   <option
@@ -6950,19 +6954,17 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Type of deal"
               >
-                <select id="type-select">
+                <select id="type-select" name="type-of-deal" class="no-reset">
                   <option value="">Type of deal</option>
-                  <option value="1">some info 1</option>
-                  <option value="2">some info 2</option>
-                  <option value="3">some info 3</option>
-                  <option value="4">some info 4</option>
+                  <option value="1" selected>Buy</option>
+                  <option value="2">Rent</option>
                 </select>
               </div>
 
               <div class="checkbox-box">
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" checked name="category-1" />
+                    <input type="radio" checked name="category-2" data-name="category" value="all" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">All</span>
@@ -6972,7 +6974,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-1" />
+                    <input type="radio" name="category-2" data-name="category" value="ready" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Ready</span>
@@ -6982,7 +6984,7 @@
 
                 <label class="check">
                   <div class="check__info">
-                    <input type="radio" name="category-1" />
+                    <input type="radio" name="category-2" data-name="category" value="off-plan" class="no-reset"/>
 
                     <div class="check__info-content">
                       <span class="p2">Off-Plan</span>
@@ -7003,8 +7005,8 @@
                 class="select-box select-box--words select-box--noMax"
                 data-placeholder="Property type"
               >
-                <select id="select2">
-                  <option value="">Property type</option>
+                <select id="select2" name="property-type" class="no-reset">
+                  <option value="" name="property-type">Property type</option>
                   <option value="1">Apartment</option>
                   <option value="2">Penthouse</option>
                   <option value="3">Duplex</option>

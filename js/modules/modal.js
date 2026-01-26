@@ -167,17 +167,24 @@ const setVideoSrc = (src, modalBlock) => {
 };
 
 const closeModal = (e) => {
-  if (
-    e.target.classList.contains("modalBlock") ||
-    e.target.closest(".modal-close")
-  ) {
-    const modalRelative = e.target.closest(".modalBlock");
+  const modalBlock = e.target.closest(".modalBlock");
+  if (!modalBlock) return;
 
-    clearFormOnModalClose(modalRelative);
-    
-    modalRelative.classList.remove("open");
+  const outsideShow = modalBlock.dataset.outsideShow !== "false";
+  const isClickOnOverlay = e.target === modalBlock;
+  const isClickOnCloseBtn = e.target.closest(".modal-close");
+
+  if (isClickOnOverlay && !outsideShow) {
+    return;
+  }
+
+  if (isClickOnOverlay || isClickOnCloseBtn) {
+    clearFormOnModalClose(modalBlock);
+
+    modalBlock.classList.remove("open");
 
     if (document.querySelector(".modalBlock.open")) return;
+
     document.body.classList.remove("open-modal");
     document.documentElement.classList.remove("open-modal");
   }
@@ -225,21 +232,20 @@ export const clearFormOnModalClose = (modalBlock) => {
   const form = modalBlock.querySelector("form");
   if (!form) return;
 
-  form.reset();
+  form.querySelectorAll("input, textarea, select").forEach((el) => {
+    if (el.classList.contains("no-reset")) return;
 
-  const inputs = form.querySelectorAll("input, textarea");
-  
-  inputs.forEach((input) => {
-    const inputBox = input.closest(".input-box");
-    input.classList.remove("has-value");
-    if (inputBox) inputBox.classList.remove("has-value");
-  });
-
-  const selects = form.querySelectorAll("select");
-  selects.forEach((select) => {
-    if (select.tomselect) {
-      select.tomselect.clear(true);
-      select.tomselect.refreshOptions(false);
+    if (el.tagName === "SELECT" && el.tomselect) {
+      el.tomselect.clear(true);
+      el.tomselect.refreshOptions(false);
+    } else if (el.type === "checkbox" || el.type === "radio") {
+      el.checked = false;
+    } else {
+      el.value = "";
     }
+
+    const inputBox = el.closest(".input-box");
+    el.classList.remove("has-value");
+    if (inputBox) inputBox.classList.remove("has-value");
   });
 };
