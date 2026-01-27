@@ -19,6 +19,7 @@
     background-color: var(--gray-color-300);
     height: calculate-clamp(6px, 8px, 1023px, 767px);
     flex: 1;
+    transition: all .3s;
 
     &.active {
       background-color: var(--secondary-color-100);

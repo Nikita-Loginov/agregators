@@ -85,29 +85,34 @@ export const onChangeInput = (e) => {
 
   if (input.tagName !== "INPUT") return;
 
-  const hasValue = input.value.trim() !== "";
-  const inputBox = input.closest(".input-box");
-
-  if (hasValue) {
-    input.classList.add("has-value");
-
-    if (inputBox) inputBox.classList.add("has-value");
-  } else {
-    input.classList.remove("has-value");
-
-    if (inputBox) inputBox.classList.remove("has-value");
-  }
+  toggleHasValue(input)
 
   if (input.type === "number" || input.closest("[data-input-number]")) {
     handleNumberInput(input);
   }
 };
 
+export const toggleHasValue = (input) => {
+  const inputBox = input.closest(".input-box");
+
+  let hasValue = false;
+
+  if (input.type === "checkbox" || input.type === "radio") {
+    hasValue = input.checked;
+  } else {
+    hasValue = input.value.trim() !== "";
+  }
+
+  input.classList.toggle("has-value", hasValue);
+  if (inputBox) inputBox.classList.toggle("has-value", hasValue);
+};
+
+
 export const clearFormInputs = (form) => {
   form.addEventListener("reset", () => {
     setTimeout(() => {
       const inputs = form.querySelectorAll("input, textarea");
-      
+
       inputs.forEach((input) => {
         const inputBox = input.closest(".input-box");
 

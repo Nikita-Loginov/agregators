@@ -1,5 +1,9 @@
 import { initGallery } from "./gallery.js";
 
+const CONFIG_MODAL = {
+  outsideHiddenModals: false, 
+}
+
 const openModal = (e) => {
   const modalBtn = e.target.closest(".modal-open");
 
@@ -170,7 +174,7 @@ const closeModal = (e) => {
   const modalBlock = e.target.closest(".modalBlock");
   if (!modalBlock) return;
 
-  const outsideShow = modalBlock.dataset.outsideShow !== "false";
+  const outsideShow = CONFIG_MODAL.outsideHiddenModals;
   const isClickOnOverlay = e.target === modalBlock;
   const isClickOnCloseBtn = e.target.closest(".modal-close");
 
@@ -179,7 +183,10 @@ const closeModal = (e) => {
   }
 
   if (isClickOnOverlay || isClickOnCloseBtn) {
-    clearFormOnModalClose(modalBlock);
+    if (modalBlock.dataset.reset !== "no-clear") {
+      // console.log('dasdsa')
+      clearFormOnModalClose(modalBlock);
+    }
 
     modalBlock.classList.remove("open");
 
@@ -232,20 +239,21 @@ export const clearFormOnModalClose = (modalBlock) => {
   const form = modalBlock.querySelector("form");
   if (!form) return;
 
-  form.querySelectorAll("input, textarea, select").forEach((el) => {
-    if (el.classList.contains("no-reset")) return;
+  form.reset();
 
-    if (el.tagName === "SELECT" && el.tomselect) {
-      el.tomselect.clear(true);
-      el.tomselect.refreshOptions(false);
-    } else if (el.type === "checkbox" || el.type === "radio") {
-      el.checked = false;
-    } else {
-      el.value = "";
-    }
+  const inputs = form.querySelectorAll("input, textarea");
 
-    const inputBox = el.closest(".input-box");
-    el.classList.remove("has-value");
+  inputs.forEach((input) => {
+    const inputBox = input.closest(".input-box");
+    input.classList.remove("has-value");
     if (inputBox) inputBox.classList.remove("has-value");
+  });
+
+  const selects = form.querySelectorAll("select");
+  selects.forEach((select) => {
+    if (select.tomselect) {
+      select.tomselect.clear(true);
+      select.tomselect.refreshOptions(false);
+    }
   });
 };

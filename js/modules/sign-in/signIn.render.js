@@ -1,6 +1,8 @@
 import { signInState } from "./signIn.state.js";
 import { initPasswordStrength } from "../../validation/passwordStrength.js";
 import { initPhoneMasks } from "../masks.js";
+import { toggleHasValue } from "../functions.js";
+import { validateFormField } from "../../validation/index.js";
 
 export const renderHeader = (form, step, totalSteps) => {
   renderProgress(form, step.step, totalSteps);
@@ -309,7 +311,54 @@ export const renderBody = (form, step) => {
                     </label>`
         );
       }
+
+      
     });
+
+    if (step.form.important) {
+      const checked = signInState.formData["important"] ? "checked" : "";
+
+      const {title, text, icon} = step.form.important;
+
+      inputs.insertAdjacentHTML('beforeend', `<div class="warning">
+                  <div class="warning__header">
+                    <div class="icon icon--lg text-yellow-300">
+                      <span class="kit-icon ${icon || 'wavy-warning'}"></span>
+                    </div>
+
+                    <p class="p2 medium-font">
+                      ${title}
+                    </p>
+                  </div>
+
+                  <div class="warning__content">
+                    <label class="check-simple check-simple--primary-100 check-simple--center form__item">
+                      <div class="check-simple__content" style="gap:20px;">
+                        <div class="check-simple__custom">
+                          <input type="checkbox" name="important" ${checked}/>
+
+                          <span></span>
+                        </div>
+
+                        <div class="check-simple__info">
+                           ${text.map((t) => `<p class="p3">${t}</p>`).join("")}
+                        </div>
+                      </div>
+
+                      <div class="check-simple__errors form__errors p4"></div>
+                    </label>
+                  </div>
+                </div>`)
+    }
+
+    const formItems = box.querySelectorAll('.form__item')
+
+    formItems.forEach((formItem) => {
+      const input = formItem.querySelector('input');
+
+      toggleHasValue(input);
+      validateFormField(formItem, { showError: false });
+    })
   } else {
     box.innerHTML = "";
     box.style.display = "none";
@@ -340,4 +389,36 @@ export const renderBody = (form, step) => {
 
     headerForm.after(infoBlock);
   }
+};
+
+export const renderBreadcrumbs = (form, step) => {
+  if (!form || !step.breadcrumbs) return;
+
+  const main = form.closest("main.main");
+
+  if (!main) return;
+
+  const breadcrumbsList = main.querySelector(".breadcrumbs__list");
+
+  if (!breadcrumbsList) return;
+
+  breadcrumbsList.innerHTML = "";
+
+  step.breadcrumbs.forEach((breadcrumb, index) => {
+    const last = step.breadcrumbs.length - 1 === index;
+    const classBreadcrumbItem = last
+      ? "breadcrumbs__item"
+      : "breadcrumbs__item link active active-noColor active-line";
+    
+
+      breadcrumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на ${breadcrumb}"
+                      title=${breadcrumb}
+                      class=${classBreadcrumbItem}
+                      >${breadcrumb}</a
+                    >
+                  </li>`)
+  });
 };

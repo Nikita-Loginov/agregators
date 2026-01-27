@@ -1,0 +1,22 @@
+.warning {
+  padding: 12px 20px;
+  border-radius: var(--radius-2xl);
+  border: 1px solid var(--yellow-color-300);
+  background-color: var(--yellow-color-310);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--primary-color-100);
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}

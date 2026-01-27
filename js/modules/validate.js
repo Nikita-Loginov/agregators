@@ -4,6 +4,10 @@ import { openModalStep } from "./modal.js";
 import { classAction } from "../modules/classActions.js";
 import { initPasswordStrength } from "../validation/passwordStrength.js";
 
+const CONFIG = {
+  showedErrorsInput: true,
+};
+
 export const initFormValidation = (form) => {
   if (!form) return;
 
@@ -22,7 +26,7 @@ const onChange = (e) => {
   const formItem = e.target.closest(".form__item");
   if (!formItem) return;
 
-  validateFormField(formItem);
+  validateFormField(formItem, { showError: CONFIG.showedErrorsInput });
   updateSubmit(e.target.closest("form"));
 };
 
@@ -30,10 +34,16 @@ const updateSubmit = (form) => {
   const btn = form.querySelector('[type="submit"]');
   if (!btn) return;
 
-  const valid = [...form.querySelectorAll(".form__item")].every(
-    validateFormField
+  const items = [...form.querySelectorAll(".form__item")];
+
+  const valid = items.every((item) =>
+    validateFormField(item, { showError: CONFIG.showedErrorsInput })
   );
-  classAction(btn, "disabled", valid ? "remove" : "add");
+
+  if (CONFIG.showedErrorsInput) {
+    classAction(btn, "disabled", valid ? "remove" : "add");
+  }
+  
 };
 
 export const isFormValid = (form) =>
@@ -57,7 +67,7 @@ const onSubmit = (e) => {
       modalBlock
     );
   }
-  
+
   if (!form.classList.contains("reset-none")) {
     updateSubmit(form);
     form.reset();

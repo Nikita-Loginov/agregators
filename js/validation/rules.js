@@ -57,6 +57,17 @@ export const validationRules = {
     hint: "Без этого мы не сможем продолжить",
   },
 
+  important: {
+    required: true,
+    type: "checkbox",
+
+    message: {
+      required: "Необходимо принять условия",
+    },
+
+    hint: "Без этого мы не сможем продолжить",
+  },
+
   signType: {
     required: true,
 
@@ -85,7 +96,7 @@ export const validationRules = {
     hint: "Например: Ozon или Wb",
   },
 
-  contactPerson : {
+  contactPerson: {
     required: true,
     minLength: 2,
 

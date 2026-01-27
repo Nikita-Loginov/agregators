@@ -4,6 +4,7 @@ import {
   renderHeader,
   renderBody,
   renderFooter,
+  renderBreadcrumbs,
 } from "./signIn.render.js";
 
 export const renderStep = (form) => {
@@ -12,5 +13,7 @@ export const renderStep = (form) => {
 
   renderHeader(form, step, steps.length + 1);
   renderBody(form, step);
+  
   renderFooter(step.footer, form.querySelector("[data-sign-footer]"));
+  renderBreadcrumbs(form, step)
 };

@@ -2,11 +2,13 @@ import { validationRules } from "./rules.js";
 import { validators } from "./validators.js";
 import { classAction } from "../modules/classActions.js";
 
-export const validateFormField = (formItem) => {
+export const validateFormField = (formItem, options = {}) => {
+  const { showError = true } = options;
+
   const field = formItem.querySelector(
     "input, textarea, select, .selected-option"
   );
-  const errorBox = formItem.querySelector(".form__errors");
+
   const name = field.name;
 
   const rules = validationRules[name];
@@ -22,10 +24,13 @@ export const validateFormField = (formItem) => {
 
     if (firstRadioItem !== formItem) return valid;
 
-    errorBox.textContent = valid ? "" : rules.message?.required || "";
-
-    classAction(formItem, "error", valid ? "remove" : "add");
-    classAction(formItem, "success", valid ? "add" : "remove");
+    applyValidationUI(
+      formItem,
+      field,
+      valid,
+      rules.message?.required || "",
+      showError
+    );
 
     return valid;
   }
@@ -84,14 +89,22 @@ export const validateFormField = (formItem) => {
     message = `${message}. ${rules.hint}`;
   }
 
-  errorBox.textContent = valid ? "" : message;
+  applyValidationUI(formItem, field, valid, message, showError);
 
-  classAction(formItem, "error", valid ? "remove" : "add");
+  return valid;
+};
+
+const applyValidationUI = (formItem, field, valid, message, showError) => {
+  const errorBox = formItem.querySelector(".form__errors");
+
+  if (showError && errorBox) {
+    errorBox.textContent = valid ? "" : message;
+    classAction(formItem, "error", !valid && showError ? "add" : "remove");
+  }
+
   classAction(formItem, "success", valid ? "add" : "remove");
 
   field.setAttribute("aria-invalid", String(!valid));
-
-  return valid;
 };
 
 export const clearAllFormErrors = (e) => {

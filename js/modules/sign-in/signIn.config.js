@@ -2,6 +2,7 @@ export const SIGN_IN_CONFIG = {
   user: [
     {
       step: 2,
+      breadcrumbs: ["Home", "Sign up", "User"],
       headerContent: {
         head: "Account & Security",
         text: ["Set up your login credentials"],
@@ -54,6 +55,7 @@ export const SIGN_IN_CONFIG = {
     },
     {
       step: 3,
+      breadcrumbs: ["Home", "Sign up", "User"],
       headerContent: {
         head: "Account Created",
         text: ["Your account has been successfully created."],
@@ -73,6 +75,7 @@ export const SIGN_IN_CONFIG = {
   company: [
     {
       step: 2,
+      breadcrumbs: ["Home", "Sign up", "Company"],
       headerContent: {
         head: "Select company type",
         text: ["This determines the features available to your account"],
@@ -98,6 +101,12 @@ export const SIGN_IN_CONFIG = {
             value: "",
           },
         ],
+        important: {
+          title: "Important: You can't change your company type later",
+          text: ["I understand that my choice of Agency is permanent and cannot be changed after account creation"],
+          icon : "wavy-warning",
+          value: "",
+        }
       },
       footer: {
         policy: false,
@@ -110,6 +119,7 @@ export const SIGN_IN_CONFIG = {
     },
     {
       step: 3,
+      breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
       headerContent: {
         head: "Account info",
         text: ["Set up your login credentials"],
@@ -161,6 +171,7 @@ export const SIGN_IN_CONFIG = {
     },
     {
       step: 4,
+      breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
       headerContent: {
         head: "Account password",
         text: ["Set up your login credentials"],
@@ -197,6 +208,7 @@ export const SIGN_IN_CONFIG = {
     },
     {
       step: 5,
+      breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
       headerContent: {
         head: "Account Created",
         text: ["Your account has been successfully created."],
@@ -216,6 +228,7 @@ export const SIGN_IN_CONFIG = {
   specialist: [
     {
       step: 2,
+      breadcrumbs: ["Home", "Sign up", "Specialist"],
       headerContent: {
         head: "Account & Security",
         text: ["Set up your login credentials"],
@@ -276,6 +289,7 @@ export const SIGN_IN_CONFIG = {
     },
     {
       step: 3,
+      breadcrumbs: ["Home", "Sign up", "Specialist"],
       headerContent: {
         head: "Account Created",
         text: ["Your account has been successfully created."],
