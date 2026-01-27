@@ -1,0 +1,29 @@
+.param {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  background-color: var(--secondary-color-200);
+  padding: 2px 2px 2px 8px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    gap: 4px;
+    color: var(--dark-color-500);
+    font-size: var(--font-size-3xs);
+  }
+
+  &__btns {
+    .button {
+        color: var(--secondary-color-100);
+    }
+  }
+}
