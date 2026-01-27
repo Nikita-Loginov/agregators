@@ -103,6 +103,12 @@
     gap: 12px;
   }
 
+  .input-box__info {
+    input {
+      font-size: var(--font-size-2xs);
+    }
+  }
+
   @media (max-width: $lg-breakpoint) {
     &__content {
       flex-direction: row;

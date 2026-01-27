@@ -16,6 +16,13 @@
     padding: 8px 0;
     backdrop-filter: blur(4px);
     background-color: #ffffffb2;
+
+    .filter {
+      &__details {
+        // opacity: 0;
+        // visibility: hidden;
+      }
+    }
   }
 
   &--bg {

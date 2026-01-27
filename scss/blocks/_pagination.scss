@@ -11,12 +11,12 @@
     gap: 12px;
 
     .input-box {
-      max-width: 65px;
+      max-width: 60px;
       width: 100%;
 
       &__info {
-        padding: 6px 12px;
-        font-size: var(--font-size-xs);
+        padding: calculate-clamp(2px, 6px, 1023px, 767px) 12px;
+        font-size: 16px;
       }
 
       &__content {
@@ -27,15 +27,17 @@
 
   @media (max-width: 767px) {
     width: 100%;
+    flex-direction: column-reverse;
+    gap: 16px;
 
     &__details {
-      display: none;
+      // display: none;
     }
 
     .button--circle {
       width: 36px;
       height: 36px;
-      border-radius: var(--radius-base);
+      // border-radius: var(--radius-base);
     }
   }
 }
@@ -70,7 +72,7 @@
       .button--cub {
         width: 36px;
         height: 36px;
-        border-radius: var(--radius-base);
+        // border-radius: var(--radius-base);
       }
     }
   }

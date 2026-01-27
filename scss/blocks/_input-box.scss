@@ -86,7 +86,7 @@
       resize: none;
 
       &::placeholder {
-        font-size: var(--font-size-xs);
+        font-size: 100%;
         color: var(--dark-color-500);
         font-weight: var(--weight-font-main);
       }
