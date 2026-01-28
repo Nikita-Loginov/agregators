@@ -548,6 +548,24 @@ body.scrollBottom {
       }
     }
   }
+
+  .done {
+    width: 63px;
+    height: 63px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--secondary-color-100);
+    color: var(--white-color);
+  
+    .icon {
+      width: 32px;
+      height: 32px;
+      font-size: 32px;
+    }
+  }
 }
 
 .successDownload {
@@ -618,3 +636,4 @@ body.scrollBottom {
     color: var(--country-item-dial-color);
   }
 }
+

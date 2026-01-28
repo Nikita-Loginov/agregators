@@ -129,8 +129,17 @@
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
       gap: 24px 14px;
 
+    
+
       & > *:not(.good-item) {
         grid-column: 1 / -1;
+      }
+
+      @media (max-width: $lg-breakpoint) {
+        .banner-promo {
+          grid-column: span 1;
+          @include columnOrMeidaBannerPromo;
+        }
       }
     }
   }

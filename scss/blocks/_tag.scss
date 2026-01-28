@@ -16,7 +16,7 @@
 
   &--lg {
     border-radius: var(--radius-2xl);
-    min-height: 36px;
+    min-height: calculate-clamp(32px, 36px, 1280px, 1023px);
     padding: 2px 16px;
   }
 

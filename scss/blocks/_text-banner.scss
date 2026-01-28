@@ -13,4 +13,10 @@
     flex-direction: column;
     gap: 4px;
   }
+  
+  @media (max-width: $lg-breakpoint) {
+    &__title {
+      font-size: var(--font-size-md);
+    }
+  }
 }

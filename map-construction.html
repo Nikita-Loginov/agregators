@@ -1777,8 +1777,9 @@
         <section class="map sibebar-open" data-block="sibebar-box">
           <div class="map__inner">
             <div class="map__info">
-              <div
+              <form
                 class="companies-filter companies-filter--map companies-filter--bg companies-filter--six"
+                novalidate
               >
                 <div class="companies-filter__item tablet-show">
                   <button
@@ -1940,6 +1941,7 @@
 
                 <button
                   class="button button--lg button--bg-gray-300 button--rounded-md lg-none"
+                  type="reset"
                 >
                   <span class="p2 medium-font">Reset search</span>
                 </button>
@@ -1998,7 +2000,7 @@
                     </span>
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
 
             <div class="map__content">
@@ -4989,9 +4991,9 @@
 
 <script src="/js/page.js" type="module"></script>
  <div class="modalBlock filterConstructionModal filterModalBox">
-  <div class="modalBlock__inner filterModalBox__inner">
+  <form class="modalBlock__inner filterModalBox__inner">
     <div class="modalBlock__content">
-      <form class="filterModalBox__top">
+      <div class="filterModalBox__top">
         <div class="filterModalBox__items">
           <div class="filterModalBox__items-box">
             <p class="h6">Find construction companies</p>
@@ -5141,19 +5143,17 @@
             </div>
           </div>
         </div>
-      </form>
+      </div>
 
       <div class="filterModalBox__footer">
         <div class="filterModalBox__footer-box">
           <div
             class="filterModalBox__footer-btns filterModalBox__footer-btns--media-big"
           >
-            <button class="button button--noMassa text-secondary-300 lg-none">
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#undo-icon"></use>
-                </svg>
-              </span>
+            <button class="button button--noMassa text-secondary-300 lg-none" type="reset">
+              <div class="icon">
+                <span class="kit-icon undo"></span>
+              </div>
 
               <p class="p2 medium-font">Clear filters</p>
             </button>
@@ -5161,21 +5161,17 @@
             <button
               class="button button--noMassa lg-show modal-close text-dark-200"
             >
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#close-icon"></use>
-                </svg>
-              </span>
+              <div class="icon">
+                <span class="kit-icon close-md"></span>
+              </div>
 
               <p class="p3 medium-font">Close</p>
             </button>
 
-            <button class="button button--noMassa text-primary-100 lg-show">
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#undo-icon"></use>
-                </svg>
-              </span>
+            <button class="button button--noMassa text-primary-100 lg-show" type="reset">
+              <div class="icon">
+                <span class="kit-icon undo"></span>
+              </div>
 
               <p class="p3 medium-font">Clear</p>
             </button>
@@ -5185,21 +5181,17 @@
             <button
               class="button button--bg-gray-300 modal-close lg-none text-dark-200"
             >
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#close-icon"></use>
-                </svg>
-              </span>
+              <div class="icon">
+                <span class="kit-icon close-md"></span>
+              </div>
 
               <p class="p2 medium-font">Close</p>
             </button>
 
             <button class="button button--bg-primary-100 modal-close">
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#save-icon"></use>
-                </svg>
-              </span>
+              <div class="icon">
+                <span class="kit-icon save"></span>
+              </div>
 
               <p class="p2 medium-font">Apply</p>
             </button>
@@ -5208,17 +5200,25 @@
 
         <div class="tablet-show">
           <div class="filterModalBox__footer-info">
-            <button type="button" class="button button--noMassa modal-close">
+            <button
+              type="button"
+              class="button button--noMassa modal-open"
+              data-modal="savedSearchModal"
+            >
               <p class="p3 medium-font text-secondary-100">Saved searches</p>
             </button>
 
-            <button type="button" class="button button--noMassa modal-close">
+            <button
+              type="button"
+              class="button button--noMassa modal-open"
+              data-modal="saveSearchModal"
+            >
               <p class="p3 medium-font text-secondary-100">Save search</p>
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>
 
@@ -5581,6 +5581,174 @@
   
 </div>
 
+      </div>
+    </div>
+  </div>
+</div>
+
+      
+      <div class="modalBlock saveSearchModal searchingBox modalBlock--media-fit">
+  <form class="modalBlock__inner form" novalidate>
+    <div class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+        style="margin-left: auto;"
+      >
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="searchingBox__content">
+      <div class="searchingBox__info">
+        <p class="h5">Save search</p>
+
+        <div class="textbox">
+          <p class="p2">
+            Enter a name for your search query or use the generated name.
+          </p>
+        </div>
+      </div>
+
+      <div class="searchingBox__footer">
+        <div class="input-box form__item input-box--border-dark-600">
+          <label class="input-box__content">
+            <div class="input-box__info">
+              <textarea name="message" placeholder="Type text here*" required>
+Apartments, Type of deal: Sale, Type of property: Apartment, Bedrooms: 2,3,4, Price, AED max.: 10000000, City, district, region: Dubai</textarea
+              >
+            </div>
+          </label>
+
+          <p class="input-box__errors p4 form__errors"></p>
+        </div>
+
+        <div class="searchingBox__btns">
+          <button class="button button--bg-secondary-300 modal-open" data-modal="searchSuccessModal" type="submit">
+            <div class="button__block">
+              <div class="icon">
+                <span class="kit-icon save"></span>
+              </div>
+
+              <p class="p1 medium-font" style="font-size: 16px">Save</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+      <div
+  class="modalBlock searchSuccessModal searchingBox modalBlock--media-fit"
+>
+  <form class="modalBlock__inner form" novalidate>
+    <div class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+        style="margin-left: auto"
+      >
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="searchingBox__content searchingBox__content--big">
+      <div class="searchingBox__info">
+        <div class="done">
+          <div class="icon">
+            <span class="kit-icon check-all-big"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="searchingBox__info">
+        <p class="h5">Search query saved</p>
+
+        <div class="textbox">
+          <p class="p2">
+            You can find it by clicking on the "Saved Searches" button.
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+      <div
+  class="modalBlock savedSearchModal searchingBox modalBlock--media-fit"
+>
+  <div class="modalBlock__inner" style="max-width: 640px">
+    <div class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+        style="margin-left: auto"
+      >
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="searchingBox__content">
+      <div class="searchingBox__info">
+        <p class="h5">Previous searches</p>
+      </div>
+
+      <div class="searchingBox__items">
+        <div class="search-item">
+          <div class="search-item__content">
+            <p class="p2">Apartments, 2 beds, 1 bath</p>
+          </div>
+
+          <div class="search-item__btns">
+            <button class="search-item__delete">
+              <div class="icon">
+                <span class="kit-icon trash-empty"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="search-item">
+          <div class="search-item__content">
+            <p class="p2">Villa, from 3,000,000 AED</p>
+          </div>
+
+          <div class="search-item__btns">
+            <button class="search-item__delete">
+              <div class="icon">
+                <span class="kit-icon trash-empty"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="search-item">
+          <div class="search-item__content">
+            <p class="p2">
+              Apartments, Type of deal: Sale, Type of property: Apartment,
+              Bedrooms: 2,3,4, Price, AED max.: 10000000, City, district,
+              region: Dubai
+            </p>
+          </div>
+
+          <div class="search-item__btns">
+            <button class="search-item__delete">
+              <div class="icon">
+                <span class="kit-icon trash-empty"></span>
+              </div>
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -15,8 +15,9 @@
         <section class="map sibebar-open" data-block="sibebar-box">
           <div class="map__inner">
             <div class="map__info">
-              <div
+              <form
                 class="companies-filter companies-filter--map companies-filter--bg companies-filter--six"
+                novalidate
               >
                 <div class="companies-filter__item tablet-show">
                   <button
@@ -178,6 +179,7 @@
 
                 <button
                   class="button button--lg button--bg-gray-300 button--rounded-md lg-none"
+                  type="reset"
                 >
                   <span class="p2 medium-font">Reset search</span>
                 </button>
@@ -236,7 +238,7 @@
                     </span>
                   </button>
                 </div>
-              </div>
+              </form>
             </div>
 
             <div class="map__content">
@@ -1408,6 +1410,10 @@
 
       @@include('../modules/footer.html') @@include('../modals/filterConstruction.html')
       @@include('../modals/selectedItemsConstruction.html')
+      
+      @@include('../modals/saveSearch.html')
+      @@include('../modals/searchSuccess.html')
+      @@include('../modals/savedSearch.html')
     </div>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>

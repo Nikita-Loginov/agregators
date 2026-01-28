@@ -317,7 +317,6 @@
           border-radius: 0;
           max-width: 100%;
           width: 100%;
-         
         }
 
         &__content {
@@ -354,7 +353,6 @@
           border-radius: 0;
           max-width: 100%;
           width: 100%;
-         
         }
 
         &__content {
@@ -1019,4 +1017,52 @@ body .wrapper {
 body.scrollBottom .wrapper .modalSecond {
   top: 0;
   height: 100dvh;
+}
+
+.searchingBox {
+  .modalBlock {
+    &__inner {
+      max-width: 410px;
+      padding: calculate-clamp(16px, 32px, 1023px, 767px) calculate-clamp(16px, 36px, 1023px, 767px);
+    }
+  }
+
+  &__content,
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__content {
+    &--big {
+      gap: 32px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__btns {
+    display: grid;
+    gap: 8px;
+  }
+
+  .input-box__info textarea {
+    min-height: 132px;
+    font-size: 16px;
+    line-height: var(--line-height-loosest);
+  }
+
+  .textbox {
+    color: var(--dark-color-500);
+  }
 }

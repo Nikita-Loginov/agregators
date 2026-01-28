@@ -26,6 +26,8 @@
     }
   }
 
+ 
+
   @media (max-width: 767px) {
     width: 100%;
     flex-direction: column-reverse;
@@ -57,6 +59,12 @@
     display: flex;
     align-items: center;
     gap: calculate-clamp(4px, 8px, 1024px, 767px);
+  }
+
+  &__link {
+    p {
+      font-size: 16px;
+    }
   }
 
   @media (max-width: 767px) {

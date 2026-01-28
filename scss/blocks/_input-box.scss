@@ -55,6 +55,14 @@
         }
       }
     }
+
+    &-dark-600 {
+      .input-box {
+        &__info {
+          border-color: var(--dark-color-600);
+        }
+      }
+    }
   }
 
   &__info {

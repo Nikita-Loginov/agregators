@@ -1,0 +1,54 @@
+<div class="modalBlock saveSearchModal searchingBox modalBlock--media-fit">
+  <form class="modalBlock__inner form" novalidate>
+    <div class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+        style="margin-left: auto;"
+      >
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="searchingBox__content">
+      <div class="searchingBox__info">
+        <p class="h5">Save search</p>
+
+        <div class="textbox">
+          <p class="p2">
+            Enter a name for your search query or use the generated name.
+          </p>
+        </div>
+      </div>
+
+      <div class="searchingBox__footer">
+        <div class="input-box form__item input-box--border-dark-600">
+          <label class="input-box__content">
+            <div class="input-box__info">
+              <textarea name="message" placeholder="Type text here*" required>
+Apartments, Type of deal: Sale, Type of property: Apartment, Bedrooms: 2,3,4, Price, AED max.: 10000000, City, district, region: Dubai</textarea
+              >
+            </div>
+          </label>
+
+          <p class="input-box__errors p4 form__errors"></p>
+        </div>
+
+        <div class="searchingBox__btns">
+          <button class="button button--bg-secondary-300 modal-open" data-modal="searchSuccessModal" type="submit">
+            <div class="button__block">
+              <div class="icon">
+                <span class="kit-icon save"></span>
+              </div>
+
+              <p class="p1 medium-font" style="font-size: 16px">Save</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

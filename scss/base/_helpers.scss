@@ -61,6 +61,11 @@ $mobile-breakpoint: 479px;
     flex-direction: column;
     align-items: flex-start;
   }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @mixin hover-link {

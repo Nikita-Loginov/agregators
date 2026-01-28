@@ -17,6 +17,7 @@
                     <div class="filter__item tablet-show">
                       <button
                         class="button button--cub button--bg-secondary-200 button--cub-md-add modal-open"
+                        type="button"
                         data-modal="filterModal"
                       >
                         <div class="button__block">
@@ -326,6 +327,7 @@
                     <div class="filter__item tablet-show">
                       <button
                         class="button button--cub button--bg-primary-100 button--cub-md-add"
+                        type="button"
                       >
                         <div class="icon">
                           <span class="kit-icon search-magnifying-glass"></span>
@@ -338,17 +340,22 @@
                 <div class="filter__details desktop-none">
                   <div class="filter__details-block">
                     <button
-                      type="submit"
+                      type="button"
                       aria-label="Saved searches"
-                      class="button button--noBg button--noMassa p3 medium-font"
+                      class="button button--noBg button--noMassa p3 medium-font text-secondary-300 modal-open"
+                      style="gap: 4px"
+                      data-modal="savedSearchModal"
                     >
                       Saved searches
+
+                      <span class="text-primary-100">3</span>
                     </button>
 
                     <button
-                      type="submit"
+                      type="button"
                       aria-label="Save search"
-                      class="button button--noBg button--noMassa p3 medium-font"
+                      class="button button--noBg button--noMassa p3 medium-font text-secondary-300 modal-open"
+                      data-modal="saveSearchModal"
                     >
                       Save search
                     </button>
@@ -357,7 +364,7 @@
                     <button
                       type="reset"
                       aria-label="Clear filters"
-                      class="button button--noBg button--noMassa p3 medium-font"
+                      class="button button--noBg button--noMassa p3 medium-font text-secondary-300"
                     >
                       Clear filters
                     </button>
@@ -523,7 +530,7 @@
                           href="/map.html"
                           aria-label="Перейти на страницу карты"
                           title="Map"
-                          style="padding-inline: 12px;"
+                          style="padding-inline: 12px"
                         >
                           <div class="icon">
                             <span class="kit-icon map"></span>
@@ -549,112 +556,7 @@
                         @@include('../good-item/good-item-one.html',
                         {"tag-class-text": "p2", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/four'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add active", "classAddBtnsIcon" : "", "tagBed" : true, "tagFloor" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
 
-                        <div class="banner-promo">
-                          <div class="banner-promo__img">
-                            <picture>
-                              <source
-                                media="(max-width: 767px)"
-                                srcset="
-                                  /img/banner/one-media.webp   1x,
-                                  /img/banner/one-media2x.webp 2x
-                                "
-                              />
-                              <source
-                                srcset="
-                                  /img/banner/one.webp   1x,
-                                  /img/banner/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/banner/one.webp"
-                                alt="фотография баннера"
-                                loading="lazy"
-                              />
-                            </picture>
-                          </div>
-
-                          <div class="banner-promo__content">
-                            <header class="banner-promo__header">
-                              <div class="banner-promo__block">
-                                <p class="h2">Urban Horizon</p>
-
-                                <ul class="list-icon">
-                                  <li class="list-icon__link">
-                                    <div class="icon">
-                                      <span class="kit-icon map-pin"></span>
-                                    </div>
-
-                                    <p class="p3">
-                                      Mohammed Bin Rashid City, Dubai
-                                    </p>
-                                  </li>
-                                </ul>
-                              </div>
-
-                              <div class="banner-promo__block">
-                                <div class="banner-promo__logo">
-                                  <img
-                                    src="/img/seller/sellertwo.png"
-                                    alt="логотип селера"
-                                  />
-                                </div>
-                              </div>
-                            </header>
-
-                            <p class="h5 semibold-font">from 590,000 AED</p>
-
-                            <div class="banner-promo__footer">
-                              <div class="banner-promo__footer-content">
-                                <div class="banner-promo__items">
-                                  <div class="card-text">
-                                    <p class="p2 medium-font">Q3 2027</p>
-
-                                    <p class="p4">Handover</p>
-                                  </div>
-
-                                  <div class="card-text">
-                                    <p class="p2 medium-font">
-                                      Studio, 1-4 beds
-                                    </p>
-
-                                    <p class="p4">Apartments</p>
-                                  </div>
-
-                                  <div class="card-text">
-                                    <p class="p2 medium-font">20/30/50</p>
-
-                                    <p class="p4">Payment plan</p>
-                                  </div>
-                                </div>
-
-                                <div class="banner-promo__logo">
-                                  <img
-                                    src="/img/seller/sellertwo.png"
-                                    alt="логотип селера"
-                                  />
-                                </div>
-                              </div>
-
-                              <div class="banner-promo__btns">
-                                <button
-                                  title="Contact Seller"
-                                  class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
-                                  data-modal="contactUpModal"
-                                >
-                                  <span class="p2 medium-font"
-                                    >Contact Seller</span
-                                  >
-
-                                  <div class="icon icon--big">
-                                    <span
-                                      class="kit-icon arrow-right-md"
-                                    ></span>
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+                        @@include('../modules/banner-promo.html')
 
                         <!-- prettier-ignore -->
                         @@include('../good-item/good-item-one.html',
@@ -670,7 +572,9 @@
 
                         <div class="text-banner">
                           <div class="text-banner__block">
-                            <p class="h6">Header. Optional.</p>
+                            <p class="h6 text-banner__title">
+                              Header. Optional.
+                            </p>
 
                             <div class="textbox">
                               <p class="p3">
@@ -702,7 +606,7 @@
                   </div>
 
                   <div
-                    class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg"
+                    class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg full-el full-el--tablet"
                     data-width="1023"
                   >
                     <div
@@ -1642,7 +1546,6 @@
 
                           <div
                             class="catalogy-content__filter-items catalogy-content__filter-items--flex"
-                            
                           >
                             <div class="select-custom" data-chart="select">
                               <button
@@ -1691,7 +1594,6 @@
                                       data-tag="City"
                                       data-desc="Central Business District, Moscow city, Russia"
                                       data-short-desc="Moscow, Russia"
-                                      
                                     >
                                       Moscow
                                     </option>
@@ -1701,7 +1603,6 @@
                                       data-tag="Country"
                                       data-desc="Federal republic in Central Europe with rich history and culture"
                                       data-short-desc="Germany"
-                                      
                                     >
                                       Germany
                                     </option>
@@ -1710,9 +1611,10 @@
                               </div>
                             </div>
 
-                            <div class="catalogy-content__filter-btns" data-chart="btns">
-                              
-                            </div>
+                            <div
+                              class="catalogy-content__filter-btns"
+                              data-chart="btns"
+                            ></div>
                           </div>
                         </div>
 
@@ -1972,7 +1874,8 @@
                   <div class="catalogy__top">
                     <h2 class="h4">Popular Questions</h2>
 
-                    @@include('../modules/accordeon.html', {"classAddAccordeon" : "accordeon--active-bg-gray-200"})
+                    @@include('../modules/accordeon.html', {"classAddAccordeon"
+                    : "accordeon--active-bg-gray-200"})
                   </div>
                 </div>
 
@@ -1991,6 +1894,9 @@
       </main>
       @@include('../modules/footer.html', {"inner" : ""})
       @@include('../modals/market.html') @@include('../modals/filter.html')
+      @@include('../modals/saveSearch.html')
+      @@include('../modals/searchSuccess.html')
+      @@include('../modals/savedSearch.html')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

@@ -1,7 +1,7 @@
 <div class="modalBlock filterConstructionModal filterModalBox">
-  <div class="modalBlock__inner filterModalBox__inner">
+  <form class="modalBlock__inner filterModalBox__inner">
     <div class="modalBlock__content">
-      <form class="filterModalBox__top">
+      <div class="filterModalBox__top">
         <div class="filterModalBox__items">
           <div class="filterModalBox__items-box">
             <p class="h6">Find construction companies</p>
@@ -151,19 +151,17 @@
             </div>
           </div>
         </div>
-      </form>
+      </div>
 
       <div class="filterModalBox__footer">
         <div class="filterModalBox__footer-box">
           <div
             class="filterModalBox__footer-btns filterModalBox__footer-btns--media-big"
           >
-            <button class="button button--noMassa text-secondary-300 lg-none">
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#undo-icon"></use>
-                </svg>
-              </span>
+            <button class="button button--noMassa text-secondary-300 lg-none" type="reset">
+              <div class="icon">
+                <span class="kit-icon undo"></span>
+              </div>
 
               <p class="p2 medium-font">Clear filters</p>
             </button>
@@ -171,21 +169,17 @@
             <button
               class="button button--noMassa lg-show modal-close text-dark-200"
             >
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#close-icon"></use>
-                </svg>
-              </span>
+              <div class="icon">
+                <span class="kit-icon close-md"></span>
+              </div>
 
               <p class="p3 medium-font">Close</p>
             </button>
 
-            <button class="button button--noMassa text-primary-100 lg-show">
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#undo-icon"></use>
-                </svg>
-              </span>
+            <button class="button button--noMassa text-primary-100 lg-show" type="reset">
+              <div class="icon">
+                <span class="kit-icon undo"></span>
+              </div>
 
               <p class="p3 medium-font">Clear</p>
             </button>
@@ -195,21 +189,17 @@
             <button
               class="button button--bg-gray-300 modal-close lg-none text-dark-200"
             >
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#close-icon"></use>
-                </svg>
-              </span>
+              <div class="icon">
+                <span class="kit-icon close-md"></span>
+              </div>
 
               <p class="p2 medium-font">Close</p>
             </button>
 
             <button class="button button--bg-primary-100 modal-close">
-              <span class="icon icon--little">
-                <svg>
-                  <use xlink:href="#save-icon"></use>
-                </svg>
-              </span>
+              <div class="icon">
+                <span class="kit-icon save"></span>
+              </div>
 
               <p class="p2 medium-font">Apply</p>
             </button>
@@ -218,16 +208,24 @@
 
         <div class="tablet-show">
           <div class="filterModalBox__footer-info">
-            <button type="button" class="button button--noMassa modal-close">
+            <button
+              type="button"
+              class="button button--noMassa modal-open"
+              data-modal="savedSearchModal"
+            >
               <p class="p3 medium-font text-secondary-100">Saved searches</p>
             </button>
 
-            <button type="button" class="button button--noMassa modal-close">
+            <button
+              type="button"
+              class="button button--noMassa modal-open"
+              data-modal="saveSearchModal"
+            >
               <p class="p3 medium-font text-secondary-100">Save search</p>
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   </div>
 </div>

@@ -313,6 +313,14 @@
     gap: 4px;
   }
 
+  @media (max-width: $lg-breakpoint) {
+    grid-template-columns: 49% auto;
+
+    &__swiper-box {
+      aspect-ratio: 126 / 100;
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     display: flex;
     flex-direction: column;
@@ -326,6 +334,8 @@
         }
       }
     }
+
+   
 
     &__decors-img {
       opacity: 1;

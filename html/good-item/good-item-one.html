@@ -39,7 +39,7 @@
           @@if (typeof price !== "undefined") {
           <div class="good-item__top">
             @@if (typeof price !== 'undefined') {
-            <p class="h5 semibold-font good-item__title">
+            <p class="h5 fz-28-22 semibold-font good-item__title">
               @@price
 
               <span class="text-uppercase p1">AED</span>
@@ -79,7 +79,7 @@
               @@name
             </a>
             } @@if (typeof typeItem !== 'undefined') {
-            <p class="@@typeItemClass">@@typeItem</p>
+            <p class="@@typeItemClass" style="font-size: 18px;">@@typeItem</p>
             }
           </div>
 
@@ -173,7 +173,7 @@
       <div class="good-item__btns">
         <!-- prettier-ignore -->
         @@include('../btns/contact-btn.html', {"text" :
-        "Contact Seller", "classAddText" : "p3 medium-font"})
+        "Contact Seller", "classAddText" : "p3 medium-font ellipsis-text ellipsis-text--two"})
         
         @@if (typeof favoriteBtn !== 'undefined' && favoriteBtn === true) {
             @@include('../btns/favorite-btn.html', {"classAdd" : "button--bg-gray-200  @@classAddBtns ", "classAddIcon" : "@@classAddBtnsIcon"})

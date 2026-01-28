@@ -1777,6 +1777,7 @@
                     <div class="filter__item tablet-show">
                       <button
                         class="button button--cub button--bg-secondary-200 button--cub-md-add modal-open"
+                        type="button"
                         data-modal="filterModal"
                       >
                         <div class="button__block">
@@ -2117,6 +2118,7 @@
                     <div class="filter__item tablet-show">
                       <button
                         class="button button--cub button--bg-primary-100 button--cub-md-add"
+                        type="button"
                       >
                         <div class="icon">
                           <span class="kit-icon search-magnifying-glass"></span>
@@ -2129,17 +2131,22 @@
                 <div class="filter__details desktop-none">
                   <div class="filter__details-block">
                     <button
-                      type="submit"
+                      type="button"
                       aria-label="Saved searches"
-                      class="button button--noBg button--noMassa p3 medium-font"
+                      class="button button--noBg button--noMassa p3 medium-font text-secondary-300 modal-open"
+                      style="gap: 4px"
+                      data-modal="savedSearchModal"
                     >
                       Saved searches
+
+                      <span class="text-primary-100">3</span>
                     </button>
 
                     <button
-                      type="submit"
+                      type="button"
                       aria-label="Save search"
-                      class="button button--noBg button--noMassa p3 medium-font"
+                      class="button button--noBg button--noMassa p3 medium-font text-secondary-300 modal-open"
+                      data-modal="saveSearchModal"
                     >
                       Save search
                     </button>
@@ -2148,7 +2155,7 @@
                     <button
                       type="reset"
                       aria-label="Clear filters"
-                      class="button button--noBg button--noMassa p3 medium-font"
+                      class="button button--noBg button--noMassa p3 medium-font text-secondary-300"
                     >
                       Clear filters
                     </button>
@@ -2314,7 +2321,7 @@
                           href="/map.html"
                           aria-label="Перейти на страницу карты"
                           title="Map"
-                          style="padding-inline: 12px;"
+                          style="padding-inline: 12px"
                         >
                           <div class="icon">
                             <span class="kit-icon map"></span>
@@ -2487,7 +2494,7 @@
           
           <div class="good-item__top">
             
-            <p class="h5 semibold-font good-item__title">
+            <p class="h5 fz-28-22 semibold-font good-item__title">
               761,000
 
               <span class="text-uppercase p1">AED</span>
@@ -2518,7 +2525,7 @@
         <div class="good-item__block">
           <div class="good-item__block-top">
              
-            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            <p class="p1 bold-font text-secondary-300" style="font-size: 18px;">Apartment</p>
             
           </div>
 
@@ -2630,7 +2637,7 @@
     <span class="kit-icon mail"></span>
   </div>
 
-  <span class="p3 medium-font">Contact Seller</span>
+  <span class="p3 medium-font ellipsis-text ellipsis-text--two">Contact Seller</span>
 </button>
 
         
@@ -2783,7 +2790,7 @@
               SkyHills Astra in Al Barsha, Dubai, UAE № 574705
             </a>
              
-            <p class="p1 bold-font text-secondary-300">Development</p>
+            <p class="p1 bold-font text-secondary-300" style="font-size: 18px;">Development</p>
             
           </div>
 
@@ -2869,7 +2876,7 @@
     <span class="kit-icon mail"></span>
   </div>
 
-  <span class="p3 medium-font">Contact Seller</span>
+  <span class="p3 medium-font ellipsis-text ellipsis-text--two">Contact Seller</span>
 </button>
 
         
@@ -3011,7 +3018,7 @@
           
           <div class="good-item__top">
             
-            <p class="h5 semibold-font good-item__title">
+            <p class="h5 fz-28-22 semibold-font good-item__title">
               761,000
 
               <span class="text-uppercase p1">AED</span>
@@ -3042,7 +3049,7 @@
         <div class="good-item__block">
           <div class="good-item__block-top">
              
-            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            <p class="p1 bold-font text-secondary-300" style="font-size: 18px;">Apartment</p>
             
           </div>
 
@@ -3145,7 +3152,7 @@
     <span class="kit-icon mail"></span>
   </div>
 
-  <span class="p3 medium-font">Contact Seller</span>
+  <span class="p3 medium-font ellipsis-text ellipsis-text--two">Contact Seller</span>
 </button>
 
         
@@ -3189,111 +3196,111 @@
 
 
                         <div class="banner-promo">
-                          <div class="banner-promo__img">
-                            <picture>
-                              <source
-                                media="(max-width: 767px)"
-                                srcset="
-                                  /img/banner/one-media.webp   1x,
-                                  /img/banner/one-media2x.webp 2x
-                                "
-                              />
-                              <source
-                                srcset="
-                                  /img/banner/one.webp   1x,
-                                  /img/banner/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/banner/one.webp"
-                                alt="фотография баннера"
-                                loading="lazy"
-                              />
-                            </picture>
-                          </div>
+    <div class="banner-promo__img">
+      <picture>
+        <source
+          media="(max-width: 767px)"
+          srcset="
+            /img/banner/one-media.webp   1x,
+            /img/banner/one-media2x.webp 2x
+          "
+        />
+        <source
+          srcset="
+            /img/banner/one.webp   1x,
+            /img/banner/one2x.webp 2x
+          "
+        />
+        <img
+          src="/img/banner/one.webp"
+          alt="фотография баннера"
+          loading="lazy"
+        />
+      </picture>
+    </div>
 
-                          <div class="banner-promo__content">
-                            <header class="banner-promo__header">
-                              <div class="banner-promo__block">
-                                <p class="h2">Urban Horizon</p>
+    <div class="banner-promo__content">
+      <header class="banner-promo__header">
+        <div class="banner-promo__block">
+          <p class="h2">Urban Horizon</p>
 
-                                <ul class="list-icon">
-                                  <li class="list-icon__link">
-                                    <div class="icon">
-                                      <span class="kit-icon map-pin"></span>
-                                    </div>
+          <ul class="list-icon">
+            <li class="list-icon__link">
+              <div class="icon">
+                <span class="kit-icon map-pin"></span>
+              </div>
 
-                                    <p class="p3">
-                                      Mohammed Bin Rashid City, Dubai
-                                    </p>
-                                  </li>
-                                </ul>
-                              </div>
+              <p class="p3">
+                Mohammed Bin Rashid City, Dubai
+              </p>
+            </li>
+          </ul>
+        </div>
 
-                              <div class="banner-promo__block">
-                                <div class="banner-promo__logo">
-                                  <img
-                                    src="/img/seller/sellertwo.png"
-                                    alt="логотип селера"
-                                  />
-                                </div>
-                              </div>
-                            </header>
+        <div class="banner-promo__block">
+          <div class="banner-promo__logo">
+            <img
+              src="/img/seller/sellertwo.png"
+              alt="логотип селера"
+            />
+          </div>
+        </div>
+      </header>
 
-                            <p class="h5 semibold-font">from 590,000 AED</p>
+      <p class="h5 semibold-font">from 590,000 AED</p>
 
-                            <div class="banner-promo__footer">
-                              <div class="banner-promo__footer-content">
-                                <div class="banner-promo__items">
-                                  <div class="card-text">
-                                    <p class="p2 medium-font">Q3 2027</p>
+      <div class="banner-promo__footer">
+        <div class="banner-promo__footer-content">
+          <div class="banner-promo__items">
+            <div class="card-text">
+              <p class="p2 medium-font">Q3 2027</p>
 
-                                    <p class="p4">Handover</p>
-                                  </div>
+              <p class="p4">Handover</p>
+            </div>
 
-                                  <div class="card-text">
-                                    <p class="p2 medium-font">
-                                      Studio, 1-4 beds
-                                    </p>
+            <div class="card-text">
+              <p class="p2 medium-font">
+                Studio, 1-4 beds
+              </p>
 
-                                    <p class="p4">Apartments</p>
-                                  </div>
+              <p class="p4">Apartments</p>
+            </div>
 
-                                  <div class="card-text">
-                                    <p class="p2 medium-font">20/30/50</p>
+            <div class="card-text">
+              <p class="p2 medium-font">20/30/50</p>
 
-                                    <p class="p4">Payment plan</p>
-                                  </div>
-                                </div>
+              <p class="p4">Payment plan</p>
+            </div>
+          </div>
 
-                                <div class="banner-promo__logo">
-                                  <img
-                                    src="/img/seller/sellertwo.png"
-                                    alt="логотип селера"
-                                  />
-                                </div>
-                              </div>
+          <div class="banner-promo__logo">
+            <img
+              src="/img/seller/sellertwo.png"
+              alt="логотип селера"
+            />
+          </div>
+        </div>
 
-                              <div class="banner-promo__btns">
-                                <button
-                                  title="Contact Seller"
-                                  class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
-                                  data-modal="contactUpModal"
-                                >
-                                  <span class="p2 medium-font"
-                                    >Contact Seller</span
-                                  >
+        <div class="banner-promo__btns">
+          <button
+            title="Contact Seller"
+            class="button button--bg-primary-100 button--lg button--rounded-3xl modal-open"
+            data-modal="contactUpModal"
+          >
+            <span class="p2 medium-font"
+              >Contact Seller</span
+            >
 
-                                  <div class="icon icon--big">
-                                    <span
-                                      class="kit-icon arrow-right-md"
-                                    ></span>
-                                  </div>
-                                </button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+            <div class="icon icon--big">
+              <span
+                class="kit-icon arrow-right-md"
+              ></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 
                         <!-- prettier-ignore -->
                         <div
@@ -3395,7 +3402,7 @@
           
           <div class="good-item__top">
             
-            <p class="h5 semibold-font good-item__title">
+            <p class="h5 fz-28-22 semibold-font good-item__title">
               761,000
 
               <span class="text-uppercase p1">AED</span>
@@ -3426,7 +3433,7 @@
         <div class="good-item__block">
           <div class="good-item__block-top">
              
-            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            <p class="p1 bold-font text-secondary-300" style="font-size: 18px;">Apartment</p>
             
           </div>
 
@@ -3538,7 +3545,7 @@
     <span class="kit-icon mail"></span>
   </div>
 
-  <span class="p3 medium-font">Contact Seller</span>
+  <span class="p3 medium-font ellipsis-text ellipsis-text--two">Contact Seller</span>
 </button>
 
         
@@ -3681,7 +3688,7 @@
           
           <div class="good-item__top">
             
-            <p class="h5 semibold-font good-item__title">
+            <p class="h5 fz-28-22 semibold-font good-item__title">
               761,000
 
               <span class="text-uppercase p1">AED</span>
@@ -3712,7 +3719,7 @@
         <div class="good-item__block">
           <div class="good-item__block-top">
              
-            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            <p class="p1 bold-font text-secondary-300" style="font-size: 18px;">Apartment</p>
             
           </div>
 
@@ -3824,7 +3831,7 @@
     <span class="kit-icon mail"></span>
   </div>
 
-  <span class="p3 medium-font">Contact Seller</span>
+  <span class="p3 medium-font ellipsis-text ellipsis-text--two">Contact Seller</span>
 </button>
 
         
@@ -3967,7 +3974,7 @@
           
           <div class="good-item__top">
             
-            <p class="h5 semibold-font good-item__title">
+            <p class="h5 fz-28-22 semibold-font good-item__title">
               761,000
 
               <span class="text-uppercase p1">AED</span>
@@ -3998,7 +4005,7 @@
         <div class="good-item__block">
           <div class="good-item__block-top">
              
-            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            <p class="p1 bold-font text-secondary-300" style="font-size: 18px;">Apartment</p>
             
           </div>
 
@@ -4110,7 +4117,7 @@
     <span class="kit-icon mail"></span>
   </div>
 
-  <span class="p3 medium-font">Contact Seller</span>
+  <span class="p3 medium-font ellipsis-text ellipsis-text--two">Contact Seller</span>
 </button>
 
         
@@ -4155,7 +4162,9 @@
 
                         <div class="text-banner">
                           <div class="text-banner__block">
-                            <p class="h6">Header. Optional.</p>
+                            <p class="h6 text-banner__title">
+                              Header. Optional.
+                            </p>
 
                             <div class="textbox">
                               <p class="p3">
@@ -4308,7 +4317,7 @@
                   </div>
 
                   <div class="md-desktop-show">
-                    <div class="newsletter-second">
+                    <form class="newsletter-second form" novalidate>
   <div class="newsletter-second__top">
     <div class="newsletter-second__icon">
       <div class="icon ">
@@ -4329,7 +4338,7 @@
     </div>
   </div>
 
-  <form class="newsletter-second__content form" novalidate>
+  <div class="newsletter-second__content">
     <div class="newsletter-second__inputs">
       <div class="input-box input-box--gray-100 form__item">
         <label class="input-box__content">
@@ -4360,13 +4369,13 @@
         </div>
       </button>
     </div>
-  </form>
-</div>
+  </div>
+</form>
 
                   </div>
 
                   <div
-                    class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg"
+                    class="quick accordeon accordeon--showMore accordeon--noMassa accordeon--lg full-el full-el--tablet"
                     data-width="1023"
                   >
                     <div
@@ -5306,7 +5315,6 @@
 
                           <div
                             class="catalogy-content__filter-items catalogy-content__filter-items--flex"
-                            
                           >
                             <div class="select-custom" data-chart="select">
                               <button
@@ -5355,7 +5363,6 @@
                                       data-tag="City"
                                       data-desc="Central Business District, Moscow city, Russia"
                                       data-short-desc="Moscow, Russia"
-                                      
                                     >
                                       Moscow
                                     </option>
@@ -5365,7 +5372,6 @@
                                       data-tag="Country"
                                       data-desc="Federal republic in Central Europe with rich history and culture"
                                       data-short-desc="Germany"
-                                      
                                     >
                                       Germany
                                     </option>
@@ -5374,9 +5380,10 @@
                               </div>
                             </div>
 
-                            <div class="catalogy-content__filter-btns" data-chart="btns">
-                              
-                            </div>
+                            <div
+                              class="catalogy-content__filter-btns"
+                              data-chart="btns"
+                            ></div>
                           </div>
                         </div>
 
@@ -6227,7 +6234,7 @@
 
 
                   <div class="catalogy__sticky-banner">
-                    <div class="newsletter-second">
+                    <form class="newsletter-second form" novalidate>
   <div class="newsletter-second__top">
     <div class="newsletter-second__icon">
       <div class="icon ">
@@ -6248,7 +6255,7 @@
     </div>
   </div>
 
-  <form class="newsletter-second__content form" novalidate>
+  <div class="newsletter-second__content">
     <div class="newsletter-second__inputs">
       <div class="input-box input-box--gray-100 form__item">
         <label class="input-box__content">
@@ -6279,8 +6286,8 @@
         </div>
       </button>
     </div>
-  </form>
-</div>
+  </div>
+</form>
 
                   </div>
                 </div>
@@ -10474,16 +10481,18 @@
           <div class="filterModalBox__footer-info">
             <button
               type="button"
-              class="button button--noMassa modal-close"
+              class="button button--noMassa modal-open"
               type="submit"
+              data-modal="savedSearchModal"
             >
               <p class="p3 medium-font text-secondary-100">Saved searches</p>
             </button>
 
             <button
               type="button"
-              class="button button--noMassa modal-close"
+              class="button button--noMassa modal-open"
               type="submit"
+              data-modal="saveSearchModal"
             >
               <p class="p3 medium-font text-secondary-100">Save search</p>
             </button>
@@ -10491,6 +10500,173 @@
         </div>
       </div>
     </form>
+  </div>
+</div>
+
+      <div class="modalBlock saveSearchModal searchingBox modalBlock--media-fit">
+  <form class="modalBlock__inner form" novalidate>
+    <div class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+        style="margin-left: auto;"
+      >
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="searchingBox__content">
+      <div class="searchingBox__info">
+        <p class="h5">Save search</p>
+
+        <div class="textbox">
+          <p class="p2">
+            Enter a name for your search query or use the generated name.
+          </p>
+        </div>
+      </div>
+
+      <div class="searchingBox__footer">
+        <div class="input-box form__item input-box--border-dark-600">
+          <label class="input-box__content">
+            <div class="input-box__info">
+              <textarea name="message" placeholder="Type text here*" required>
+Apartments, Type of deal: Sale, Type of property: Apartment, Bedrooms: 2,3,4, Price, AED max.: 10000000, City, district, region: Dubai</textarea
+              >
+            </div>
+          </label>
+
+          <p class="input-box__errors p4 form__errors"></p>
+        </div>
+
+        <div class="searchingBox__btns">
+          <button class="button button--bg-secondary-300 modal-open" data-modal="searchSuccessModal" type="submit">
+            <div class="button__block">
+              <div class="icon">
+                <span class="kit-icon save"></span>
+              </div>
+
+              <p class="p1 medium-font" style="font-size: 16px">Save</p>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+      <div
+  class="modalBlock searchSuccessModal searchingBox modalBlock--media-fit"
+>
+  <form class="modalBlock__inner form" novalidate>
+    <div class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+        style="margin-left: auto"
+      >
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="searchingBox__content searchingBox__content--big">
+      <div class="searchingBox__info">
+        <div class="done">
+          <div class="icon">
+            <span class="kit-icon check-all-big"></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="searchingBox__info">
+        <p class="h5">Search query saved</p>
+
+        <div class="textbox">
+          <p class="p2">
+            You can find it by clicking on the "Saved Searches" button.
+          </p>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+      <div
+  class="modalBlock savedSearchModal searchingBox modalBlock--media-fit"
+>
+  <div class="modalBlock__inner" style="max-width: 640px">
+    <div class="modalBlock__head">
+      <button
+        class="modalBlock__close modal-close text-dark-100"
+        type="button"
+        aria-label="Закрыть модалку"
+        style="margin-left: auto"
+      >
+        <div class="icon icon--big">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </div>
+
+    <div class="searchingBox__content">
+      <div class="searchingBox__info">
+        <p class="h5">Previous searches</p>
+      </div>
+
+      <div class="searchingBox__items">
+        <div class="search-item">
+          <div class="search-item__content">
+            <p class="p2">Apartments, 2 beds, 1 bath</p>
+          </div>
+
+          <div class="search-item__btns">
+            <button class="search-item__delete">
+              <div class="icon">
+                <span class="kit-icon trash-empty"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="search-item">
+          <div class="search-item__content">
+            <p class="p2">Villa, from 3,000,000 AED</p>
+          </div>
+
+          <div class="search-item__btns">
+            <button class="search-item__delete">
+              <div class="icon">
+                <span class="kit-icon trash-empty"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <div class="search-item">
+          <div class="search-item__content">
+            <p class="p2">
+              Apartments, Type of deal: Sale, Type of property: Apartment,
+              Bedrooms: 2,3,4, Price, AED max.: 10000000, City, district,
+              region: Dubai
+            </p>
+          </div>
+
+          <div class="search-item__btns">
+            <button class="search-item__delete">
+              <div class="icon">
+                <span class="kit-icon trash-empty"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
