@@ -5,25 +5,10 @@
   flex-direction: column;
   gap: 16px;
   position: sticky;
-  top: calc(var(--header-height, var(--calback-header-height)));
-  background-color: var(--gray-color-100);
   z-index: 100;
   transition: all 0.5s;
   text-wrap: nowrap;
-  z-index: 100;
-
-  &.filter--sticky {
-    padding: 8px 0;
-    backdrop-filter: blur(4px);
-    background-color: #ffffffb2;
-
-    .filter {
-      &__details {
-        // opacity: 0;
-        // visibility: hidden;
-      }
-    }
-  }
+  top: calc(var(--header-height, var(--calback-header-height)) + 10px);
 
   &--bg {
     padding: 8px 0;
@@ -84,6 +69,12 @@
     .ts-control {
       max-width: 100%;
     }
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 
   &__items,
@@ -167,9 +158,70 @@
   }
 }
 
+.filter-box {
+  transition: all 0.3s;
+  border-bottom: 1px solid transparent;
+  z-index: 100;
+  top: calc(var(--header-height, var(--calback-header-height)) + 10px);
+  position: sticky;
+
+  .container {
+    width: 100%;
+  }
+
+  &:has(.filter.filter--sticky) {
+  }
+}
+
 body.scrollBottom {
   .filter {
-    position: sticky;
     top: 0;
   }
+}
+
+body.scrollBottom,
+body.scrollTop:not(.scrollVisible) {
+  // @media (min-width: $tablet-breakpoint) {
+  .filter {
+    border-color: var(--gray-color-600);
+    backdrop-filter: blur(4px);
+    background-color: var(--white-color-170);
+    padding: 8px 0;
+
+    &__details,
+    &__info {
+      opacity: 0;
+      transition: all 0s;
+      position: absolute;
+      pointer-events: none;
+      visibility: hidden;
+    }
+
+    & > * {
+      max-width: var(--container-width);
+      margin: 0 auto;
+      padding-inline: var(--container-inline-padding);
+      width: 100%;
+    }
+
+    &__item {
+      .button,
+      .input-box__info,
+      .select-box .ts-control {
+        min-height: 40px;
+      }
+
+      .button,
+      .input-box__info,
+      .select-box .ts-control {
+        padding: 4px 16px;
+      }
+
+      .check__info .check__info-content {
+        padding-block: 2px;
+        min-height: 30px;
+      }
+    }
+  }
+  // }
 }

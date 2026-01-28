@@ -21,7 +21,7 @@
   &__header {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(4px, 16px, 767px, 480px);
+    gap: calculate-clamp(16px, 16px, 767px, 480px);
 
     &--small {
       gap: 8px;
@@ -229,6 +229,13 @@
     display: none;
   }
 
+  &__filter-btns {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
   &__filter {
     display: flex;
     flex-direction: column;
@@ -321,4 +328,24 @@ body.scrollBottom {
       top: calc(var(--filter-height) + 10px);
     }
   }
+}
+
+body.scrollBottom,
+body.scrollTop:not(.scrollVisible) {
+  // @media (min-width: $tablet-breakpoint) {
+    .catalogy {
+      .container {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      &__blocks,
+      &__header {
+        max-width: var(--container-width);
+        margin: 0 auto;
+        padding-inline: var(--container-inline-padding);
+        width: 100%;
+      }
+    }
+  // }
 }

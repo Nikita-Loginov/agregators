@@ -1770,12 +1770,6 @@
       <main class="main">
         <section class="catalogy" data-block="grid-relative" data-grid="list">
           <div class="container">
-            <div
-              class="decor-sticky"
-              data-sticky=".filter"
-              data-sticky-class="filter--sticky"
-            ></div>
-
             <div class="catalogy__inner">
               <form novalidate class="filter form" data-form="filter">
                 <div class="filter__box">
@@ -2161,7 +2155,7 @@
                   </div>
                 </div>
 
-                <div class="tablet-show">
+                <div class="tablet-show filter__info">
                   <div class="filter__itog">
                     <div class="param">
                       <div class="param__content">
@@ -2316,10 +2310,11 @@
                         </div>
 
                         <a
-                          class="button button--bg-secondary-200 catalogy__map-btn"
+                          class="button button--bg-secondary-200 catalogy__map-btn button--rounded-md"
                           href="/map.html"
                           aria-label="Перейти на страницу карты"
                           title="Map"
+                          style="padding-inline: 12px;"
                         >
                           <div class="icon">
                             <span class="kit-icon map"></span>
@@ -2391,13 +2386,18 @@
                       </div>
 
                       <div class="catalogy__items-blocks">
-                        <div class="good-item">
-                          <div class="good-item__swiper-box">
-                            <div class="good-item__img-box">
-                              <div class="good-item__decor">
-                                <!-- prettier-ignore -->
+                        <!-- prettier-ignore -->
 
-                                
+                        <div
+  class="good-item good-item--noShadow "
+>
+  <div class="good-item__swiper-box">
+    <div class="good-item__img-box">
+      <div class="good-item__decor">
+        <!-- prettier-ignore -->
+
+        
+            
 <div class="badge badge--blue">
   <div class="icon icon--little">
     <span class="kit-icon shield-check"></span>
@@ -2415,23 +2415,25 @@
 </div>
 
 
-                              </div>
+        
+      </div>
 
-                              <div class="swiper swiper--good-img">
-                                <div class="swiper-wrapper">
-                                  <!-- prettier-ignore -->
+      <a
+        href="#"
+        aria-label="Перейти на страницу объекта"
+        title="Тут какой-то title"
+        class="swiper swiper--good-img"
+      >
+        <div class="swiper-wrapper">
+          <!-- prettier-ignore -->
 
-                                  <div class="swiper-slide">
+          <div class="swiper-slide">
   <div class="good-item__img-item">
     <div class="good-item__img">
       <picture>
         <source srcset="/img/goods/one.webp 1x, /img/goods/one2x.webp 2x" />
 
-        <img
-          src="/img/goods/one.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
+        <img src="/img/goods/one.webp" alt="фотография Apartment" loading="lazy" />
       </picture>
     </div>
   </div>
@@ -2442,20 +2444,16 @@
       <picture>
         <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
 
-        <img
-          src="/img/goods/two.webp"
-          alt="фотография Apartment"
-          loading="lazy"
-        />
+        <img src="/img/goods/two.webp" alt="фотография Apartment" loading="lazy" />
       </picture>
     </div>
   </div>
 </div>
 
-                                </div>
+        </div>
 
-                                <div class="good-item__decors-img">
-                                  <div class="arrows-swiper arrows-swiper--absolute">
+        <div class="good-item__decors-img">
+          <div class="arrows-swiper arrows-swiper--absolute">
   <button
     class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
     type="button"
@@ -2475,120 +2473,137 @@
   </button>
 </div>
 
-                                  <div class="swiper-pagination swiper-pagination--absolute"></div>
+          <div class="swiper-pagination swiper-pagination--absolute"></div>
 
-                                </div>
-                              </div>
-                            </div>
-                          </div>
+        </div>
+      </a>
+    </div>
+  </div>
 
-                          <div class="good-item__content">
-                            <header class="good-item__header">
-                              <div class="good-item__top-box">
-                                <div class="good-item__top">
-                                  <p class="h5 semibold-font good-item__title">
-                                    761,000
+  <div class="good-item__content">
+    <div class="good-item__content-details">
+      <header class="good-item__header">
+        <div class="good-item__top-box">
+          
+          <div class="good-item__top">
+            
+            <p class="h5 semibold-font good-item__title">
+              761,000
 
-                                    <span class="text-uppercase p1">AED</span>
-                                  </p>
+              <span class="text-uppercase p1">AED</span>
+            </p>
+            
+          </div>
+          
 
-                                  <p class="p1 bold-font text-secondary-300">
-                                    Apartment
-                                  </p>
-                                </div>
+          <a
+            title="Название компании"
+            aria-label="Перейти на странцу компании"
+            class="good-item__logo"
+            href="#"
+          >
+            <picture>
+              <source
+                srcset="/img/seller/seller.png 1x, /img/seller/seller.png 2x"
+              />
+              <img
+                src="/img/seller/seller.png"
+                alt="фотография"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
 
-                                <div class="good-item__logo">
-                                  <picture>
-                                    <source
-                                      srcset="
-                                        /img/seller/seller.png 1x,
-                                        /img/seller/seller.png 2x
-                                      "
-                                    />
-                                    <img
-                                      src="/img/seller/seller.png"
-                                      alt="фотография"
-                                      loading="lazy"
-                                    />
-                                  </picture>
-                                </div>
-                              </div>
+        <div class="good-item__block">
+          <div class="good-item__block-top">
+             
+            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            
+          </div>
 
-                              <p
-                                class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
-                              >
-                                Apartment, 2 bedroom, 60.11 sq.m. № 3427
-                              </p>
+          
+          <a
+            title="Apartment, 2 bedroom, 60.11 sq.m. № 3427"
+            href="#"
+            aria-label="Перейти на страницу объекта"
+            class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+          >
+            Apartment, 2 bedroom, 60.11 sq.m. № 3427
+          </a>
+          
+        </div>
+      </header>
 
-                              <div class="good-item__tags">
-                                <!-- prettier-ignore -->
+      <div class="good-item__info">
+        <div class="good-item__tags">
+           <!-- prettier-ignore -->
 
-                                <div class="tag tag--small">
+          
+          <div class="tag tag--lg">
   <div class="icon icon--big">
     <span class="kit-icon bed"></span>
   </div>
 
   
-    <p class="p2">2 Bedrooms</p>
+  <p class="p2">2 Bedrooms</p>
+    
+</div>
   
-
-  
-
-  
-</div><div class="tag tag--small">
+          
+           <div class="tag tag--lg">
   <div class="icon icon--big">
     <span class="kit-icon bath"></span>
   </div>
 
   
-    <p class="p2">2 Bathrooms</p>
+  <p class="p2">2 Bathrooms</p>
+    
+</div>
   
-
-  
-
-  
-</div><div class="tag tag--small">
+          
+          
+          <div class="tag tag--lg">
   <div class="icon icon--big">
     <span class="kit-icon floor-plan"></span>
   </div>
 
   
-    <p class="p2">1 floor</p>
+  <p class="p2">1 floor</p>
+    
+</div>
   
-
-  
-
-  
-</div><div class="tag tag--small">
+          
+           <div class="tag tag--lg">
   <div class="icon icon--big">
     <span class="kit-icon barrier"></span>
   </div>
 
   
-    <p class="p2">Q2 2026</p>
+  <p class="p2">Q3 2026</p>
+    
+</div>
   
-
-  
-
-  
-</div><div class="tag tag--small">
+          
+          
+          <div class="tag tag--lg">
   <div class="icon icon--big">
     <span class="kit-icon ruler"></span>
   </div>
 
   
-    <p class="p2">65 sq.m.</p>
-  
-
-  
-
-  
+  <p class="p2">65 sq.m.</p>
+    
 </div>
-                              </div>
+ 
+          
+          
+        </div>
 
-                              <ul class="list-icon">
-                                <!-- prettier-ignore -->
-                                <li class="list-icon__link">
+        <ul class="list-icon">
+          <!-- prettier-ignore -->
+          
+                  <li class="list-icon__link">
   <div class="icon icon--big">
     <span class="kit-icon map-pin"></span>
   </div>
@@ -2596,14 +2611,17 @@
   <p class="p2 ">Mohammed Bin Rashid City, Dubai</p>
 </li>
 
-                              </ul>
-                            </header>
+              
+        </ul>
 
-                            <footer class="good-item__footer">
-                              <div class="good-item__btns">
-                                <!-- prettier-ignore -->
+        
+      </div>
+    </div>
 
-                                <button
+    <footer class="good-item__footer">
+      <div class="good-item__btns">
+        <!-- prettier-ignore -->
+        <button
   class="button button--bg-secondary-200 modal-open  "
   type="button"
   data-modal="contactUpModal"
@@ -2615,18 +2633,22 @@
   <span class="p3 medium-font">Contact Seller</span>
 </button>
 
-                                
-                                                                <button
+        
+        
+            <button
   aria-label="Добавить в избранное"
-  class="button button--favorite button--bg-gray-200 button--cub button--cub-md-add active"
+  
+  class="button button--favorite button--bg-gray-200  button--cub button--cub-md-add active "
 >
   <div class="icon ">
     <span class="kit-icon heart"></span>
   </div>
 </button>
 
-                                
-                                                                <button
+        
+        
+        
+            <button
   aria-label="Добавить в сравнение"
   class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add active"
 >
@@ -2635,17 +2657,536 @@
   </div>
 </button>
 
-                              </div>
+        
+      </div>
 
-                              <div class="good-item__logo">
-                                <img
-                                  src="/img/seller/seller.png"
-                                  alt="логотип селера"
-                                />
-                              </div>
-                            </footer>
-                          </div>
-                        </div>
+      <a
+        href="/"
+        title="Название компании"
+        aria-label="Перейти на странцу компании"
+        class="good-item__logo"
+      >
+        <img src="/img/seller/seller.png" alt="логотип селера" />
+      </a>
+    </footer>
+  </div>
+</div>
+
+
+                        <div
+  class="good-item good-item--noShadow good-item--nonePrice"
+>
+  <div class="good-item__swiper-box">
+    <div class="good-item__img-box">
+      <div class="good-item__decor">
+        <!-- prettier-ignore -->
+
+        
+      </div>
+
+      <a
+        href="#"
+        aria-label="Перейти на страницу объекта"
+        title="Тут какой-то title"
+        class="swiper swiper--good-img"
+      >
+        <div class="swiper-wrapper">
+          <!-- prettier-ignore -->
+
+          <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/three.webp 1x, /img/goods/three2x.webp 2x" />
+
+        <img src="/img/goods/three.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img src="/img/goods/two.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="good-item__decors-img">
+          <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-left-md"></span>
+    </div>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-right-md"></span>
+    </div>
+  </button>
+</div>
+
+          <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="good-item__content">
+    <div class="good-item__content-details">
+      <header class="good-item__header">
+        <div class="good-item__top-box">
+          
+
+          <a
+            title="Название компании"
+            aria-label="Перейти на странцу компании"
+            class="good-item__logo"
+            href="#"
+          >
+            <picture>
+              <source
+                srcset="/img/seller/seller.png 1x, /img/seller/seller.png 2x"
+              />
+              <img
+                src="/img/seller/seller.png"
+                alt="фотография"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <div class="good-item__block">
+          <div class="good-item__block-top">
+            
+            <a
+              title="SkyHills Astra in Al Barsha, Dubai, UAE № 574705"
+              href="#"
+              aria-label="Перейти на страницу объекта"
+              class="p1 text-secondary-100 semibold-font ellipsis-text ellipsis-text--one good-item__desc"
+            >
+              SkyHills Astra in Al Barsha, Dubai, UAE № 574705
+            </a>
+             
+            <p class="p1 bold-font text-secondary-300">Development</p>
+            
+          </div>
+
+          
+        </div>
+      </header>
+
+      <div class="good-item__info">
+        <div class="good-item__tags">
+           <!-- prettier-ignore -->
+
+           
+          
+           
+          
+           
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon barrier"></span>
+  </div>
+
+  
+  <p class="p2">Q3 2026</p>
+    
+</div>
+  
+          
+          
+          
+           <div class="tag tag--lg">
+  <div class="tag__block">
+    <p class="p2">Studio</p>
+
+    <p class="p2 medium-font">from 535,300 AED</p>
+  </div>
+</div>
+<div class="tag tag--lg">
+  <div class="tag__block">
+    <p class="p2">1 bedroom</p>
+
+    <p class="p2 medium-font">from 753,840 AED</p>
+  </div>
+</div>
+<div class="tag tag--lg">
+  <div class="tag__block">
+    <p class="p2">2 bedrooms</p>
+
+    <p class="p2 medium-font">from 1,360,000 AED</p>
+  </div>
+</div>
+
+          
+        </div>
+
+        <ul class="list-icon">
+          <!-- prettier-ignore -->
+          
+                  <li class="list-icon__link">
+  <div class="icon icon--big">
+    <span class="kit-icon map-pin"></span>
+  </div>
+
+  <p class="p2 ">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+              
+        </ul>
+
+        
+      </div>
+    </div>
+
+    <footer class="good-item__footer">
+      <div class="good-item__btns">
+        <!-- prettier-ignore -->
+        <button
+  class="button button--bg-secondary-200 modal-open  "
+  type="button"
+  data-modal="contactUpModal"
+>
+  <div class="icon ">
+    <span class="kit-icon mail"></span>
+  </div>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+        
+        
+            <button
+  aria-label="Добавить в избранное"
+  
+  class="button button--favorite button--bg-gray-200  button--cub button--cub-md-add  "
+>
+  <div class="icon ">
+    <span class="kit-icon heart"></span>
+  </div>
+</button>
+
+        
+        
+        
+            <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add "
+>
+  <div class="icon ">
+    <span class="kit-icon chart-bar-vertical"></span>
+  </div>
+</button>
+
+        
+      </div>
+
+      <a
+        href="/"
+        title="Название компании"
+        aria-label="Перейти на странцу компании"
+        class="good-item__logo"
+      >
+        <img src="/img/seller/seller.png" alt="логотип селера" />
+      </a>
+    </footer>
+  </div>
+</div>
+
+
+                        <div
+  class="good-item good-item--noShadow "
+>
+  <div class="good-item__swiper-box">
+    <div class="good-item__img-box">
+      <div class="good-item__decor">
+        <!-- prettier-ignore -->
+
+        
+            
+<div class="badge badge--blue">
+  <div class="icon icon--little">
+    <span class="kit-icon shield-check"></span>
+  </div>
+
+  <div class="badge__content">
+    <p class="p4 medium-font">CompleteTrust</p>
+  </div>
+</div>
+ 
+<div class="badge">
+  <div class="icon icon--little">
+    <span class="kit-icon check-all-big"></span>
+  </div>
+</div>
+
+
+        
+      </div>
+
+      <a
+        href="#"
+        aria-label="Перейти на страницу объекта"
+        title="Тут какой-то title"
+        class="swiper swiper--good-img"
+      >
+        <div class="swiper-wrapper">
+          <!-- prettier-ignore -->
+
+          <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/four.webp 1x, /img/goods/four2x.webp 2x" />
+
+        <img src="/img/goods/four.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img src="/img/goods/two.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="good-item__decors-img">
+          <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-left-md"></span>
+    </div>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-right-md"></span>
+    </div>
+  </button>
+</div>
+
+          <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="good-item__content">
+    <div class="good-item__content-details">
+      <header class="good-item__header">
+        <div class="good-item__top-box">
+          
+          <div class="good-item__top">
+            
+            <p class="h5 semibold-font good-item__title">
+              761,000
+
+              <span class="text-uppercase p1">AED</span>
+            </p>
+            
+          </div>
+          
+
+          <a
+            title="Название компании"
+            aria-label="Перейти на странцу компании"
+            class="good-item__logo"
+            href="#"
+          >
+            <picture>
+              <source
+                srcset="/img/seller/seller.png 1x, /img/seller/seller.png 2x"
+              />
+              <img
+                src="/img/seller/seller.png"
+                alt="фотография"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <div class="good-item__block">
+          <div class="good-item__block-top">
+             
+            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            
+          </div>
+
+          
+          <a
+            title="Apartment, 2 bedroom, 60.11 sq.m. № 3427"
+            href="#"
+            aria-label="Перейти на страницу объекта"
+            class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+          >
+            Apartment, 2 bedroom, 60.11 sq.m. № 3427
+          </a>
+          
+        </div>
+      </header>
+
+      <div class="good-item__info">
+        <div class="good-item__tags">
+           <!-- prettier-ignore -->
+
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon bed"></span>
+  </div>
+
+  
+  <p class="p2">2 Bedrooms</p>
+    
+</div>
+  
+          
+           
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon floor-plan"></span>
+  </div>
+
+  
+  <p class="p2">1 floor</p>
+    
+</div>
+  
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon barrier"></span>
+  </div>
+
+  
+  <p class="p2">Q3 2026</p>
+    
+</div>
+  
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon ruler"></span>
+  </div>
+
+  
+  <p class="p2">65 sq.m.</p>
+    
+</div>
+ 
+          
+          
+        </div>
+
+        <ul class="list-icon">
+          <!-- prettier-ignore -->
+          
+                  <li class="list-icon__link">
+  <div class="icon icon--big">
+    <span class="kit-icon map-pin"></span>
+  </div>
+
+  <p class="p2 ">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+              
+        </ul>
+
+        
+      </div>
+    </div>
+
+    <footer class="good-item__footer">
+      <div class="good-item__btns">
+        <!-- prettier-ignore -->
+        <button
+  class="button button--bg-secondary-200 modal-open  "
+  type="button"
+  data-modal="contactUpModal"
+>
+  <div class="icon ">
+    <span class="kit-icon mail"></span>
+  </div>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+        
+        
+            <button
+  aria-label="Добавить в избранное"
+  
+  class="button button--favorite button--bg-gray-200  button--cub button--cub-md-add active "
+>
+  <div class="icon ">
+    <span class="kit-icon heart"></span>
+  </div>
+</button>
+
+        
+        
+        
+            <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add active"
+>
+  <div class="icon ">
+    <span class="kit-icon chart-bar-vertical"></span>
+  </div>
+</button>
+
+        
+      </div>
+
+      <a
+        href="/"
+        title="Название компании"
+        aria-label="Перейти на странцу компании"
+        class="good-item__logo"
+      >
+        <img src="/img/seller/seller.png" alt="логотип селера" />
+      </a>
+    </footer>
+  </div>
+</div>
+
 
                         <div class="banner-promo">
                           <div class="banner-promo__img">
@@ -2753,6 +3294,864 @@
                             </div>
                           </div>
                         </div>
+
+                        <!-- prettier-ignore -->
+                        <div
+  class="good-item good-item--noShadow "
+>
+  <div class="good-item__swiper-box">
+    <div class="good-item__img-box">
+      <div class="good-item__decor">
+        <!-- prettier-ignore -->
+
+        
+            
+<div class="badge badge--blue">
+  <div class="icon icon--little">
+    <span class="kit-icon shield-check"></span>
+  </div>
+
+  <div class="badge__content">
+    <p class="p4 medium-font">CompleteTrust</p>
+  </div>
+</div>
+ 
+<div class="badge">
+  <div class="icon icon--little">
+    <span class="kit-icon check-all-big"></span>
+  </div>
+</div>
+
+
+        
+      </div>
+
+      <a
+        href="#"
+        aria-label="Перейти на страницу объекта"
+        title="Тут какой-то title"
+        class="swiper swiper--good-img"
+      >
+        <div class="swiper-wrapper">
+          <!-- prettier-ignore -->
+
+          <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/one.webp 1x, /img/goods/one2x.webp 2x" />
+
+        <img src="/img/goods/one.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img src="/img/goods/two.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="good-item__decors-img">
+          <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-left-md"></span>
+    </div>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-right-md"></span>
+    </div>
+  </button>
+</div>
+
+          <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="good-item__content">
+    <div class="good-item__content-details">
+      <header class="good-item__header">
+        <div class="good-item__top-box">
+          
+          <div class="good-item__top">
+            
+            <p class="h5 semibold-font good-item__title">
+              761,000
+
+              <span class="text-uppercase p1">AED</span>
+            </p>
+            
+          </div>
+          
+
+          <a
+            title="Название компании"
+            aria-label="Перейти на странцу компании"
+            class="good-item__logo"
+            href="#"
+          >
+            <picture>
+              <source
+                srcset="/img/seller/seller.png 1x, /img/seller/seller.png 2x"
+              />
+              <img
+                src="/img/seller/seller.png"
+                alt="фотография"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <div class="good-item__block">
+          <div class="good-item__block-top">
+             
+            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            
+          </div>
+
+          
+          <a
+            title="Apartment, 2 bedroom, 60.11 sq.m. № 3427"
+            href="#"
+            aria-label="Перейти на страницу объекта"
+            class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+          >
+            Apartment, 2 bedroom, 60.11 sq.m. № 3427
+          </a>
+          
+        </div>
+      </header>
+
+      <div class="good-item__info">
+        <div class="good-item__tags">
+           <!-- prettier-ignore -->
+
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon bed"></span>
+  </div>
+
+  
+  <p class="p2">2 Bedrooms</p>
+    
+</div>
+  
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon bath"></span>
+  </div>
+
+  
+  <p class="p2">2 Bathrooms</p>
+    
+</div>
+  
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon floor-plan"></span>
+  </div>
+
+  
+  <p class="p2">1 floor</p>
+    
+</div>
+  
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon barrier"></span>
+  </div>
+
+  
+  <p class="p2">Q3 2026</p>
+    
+</div>
+  
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon ruler"></span>
+  </div>
+
+  
+  <p class="p2">65 sq.m.</p>
+    
+</div>
+ 
+          
+          
+        </div>
+
+        <ul class="list-icon">
+          <!-- prettier-ignore -->
+          
+                  <li class="list-icon__link">
+  <div class="icon icon--big">
+    <span class="kit-icon map-pin"></span>
+  </div>
+
+  <p class="p2 ">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+              
+        </ul>
+
+        
+      </div>
+    </div>
+
+    <footer class="good-item__footer">
+      <div class="good-item__btns">
+        <!-- prettier-ignore -->
+        <button
+  class="button button--bg-secondary-200 modal-open  "
+  type="button"
+  data-modal="contactUpModal"
+>
+  <div class="icon ">
+    <span class="kit-icon mail"></span>
+  </div>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+        
+        
+            <button
+  aria-label="Добавить в избранное"
+  
+  class="button button--favorite button--bg-gray-200  button--cub button--cub-md-add active "
+>
+  <div class="icon ">
+    <span class="kit-icon heart"></span>
+  </div>
+</button>
+
+        
+        
+        
+            <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add active"
+>
+  <div class="icon ">
+    <span class="kit-icon chart-bar-vertical"></span>
+  </div>
+</button>
+
+        
+      </div>
+
+      <a
+        href="/"
+        title="Название компании"
+        aria-label="Перейти на странцу компании"
+        class="good-item__logo"
+      >
+        <img src="/img/seller/seller.png" alt="логотип селера" />
+      </a>
+    </footer>
+  </div>
+</div>
+
+
+                        <!-- prettier-ignore -->
+                        <div
+  class="good-item good-item--noShadow "
+>
+  <div class="good-item__swiper-box">
+    <div class="good-item__img-box">
+      <div class="good-item__decor">
+        <!-- prettier-ignore -->
+
+        
+            
+<div class="badge badge--blue">
+  <div class="icon icon--little">
+    <span class="kit-icon shield-check"></span>
+  </div>
+
+  <div class="badge__content">
+    <p class="p4 medium-font">CompleteTrust</p>
+  </div>
+</div>
+ 
+<div class="badge">
+  <div class="icon icon--little">
+    <span class="kit-icon check-all-big"></span>
+  </div>
+</div>
+
+
+        
+      </div>
+
+      <a
+        href="#"
+        aria-label="Перейти на страницу объекта"
+        title="Тут какой-то title"
+        class="swiper swiper--good-img"
+      >
+        <div class="swiper-wrapper">
+          <!-- prettier-ignore -->
+
+          <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/one.webp 1x, /img/goods/one2x.webp 2x" />
+
+        <img src="/img/goods/one.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img src="/img/goods/two.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="good-item__decors-img">
+          <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-left-md"></span>
+    </div>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-right-md"></span>
+    </div>
+  </button>
+</div>
+
+          <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="good-item__content">
+    <div class="good-item__content-details">
+      <header class="good-item__header">
+        <div class="good-item__top-box">
+          
+          <div class="good-item__top">
+            
+            <p class="h5 semibold-font good-item__title">
+              761,000
+
+              <span class="text-uppercase p1">AED</span>
+            </p>
+            
+          </div>
+          
+
+          <a
+            title="Название компании"
+            aria-label="Перейти на странцу компании"
+            class="good-item__logo"
+            href="#"
+          >
+            <picture>
+              <source
+                srcset="/img/seller/seller.png 1x, /img/seller/seller.png 2x"
+              />
+              <img
+                src="/img/seller/seller.png"
+                alt="фотография"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <div class="good-item__block">
+          <div class="good-item__block-top">
+             
+            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            
+          </div>
+
+          
+          <a
+            title="Apartment, 2 bedroom, 60.11 sq.m. № 3427"
+            href="#"
+            aria-label="Перейти на страницу объекта"
+            class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+          >
+            Apartment, 2 bedroom, 60.11 sq.m. № 3427
+          </a>
+          
+        </div>
+      </header>
+
+      <div class="good-item__info">
+        <div class="good-item__tags">
+           <!-- prettier-ignore -->
+
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon bed"></span>
+  </div>
+
+  
+  <p class="p2">2 Bedrooms</p>
+    
+</div>
+  
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon bath"></span>
+  </div>
+
+  
+  <p class="p2">2 Bathrooms</p>
+    
+</div>
+  
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon floor-plan"></span>
+  </div>
+
+  
+  <p class="p2">1 floor</p>
+    
+</div>
+  
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon barrier"></span>
+  </div>
+
+  
+  <p class="p2">Q3 2026</p>
+    
+</div>
+  
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon ruler"></span>
+  </div>
+
+  
+  <p class="p2">65 sq.m.</p>
+    
+</div>
+ 
+          
+          
+        </div>
+
+        <ul class="list-icon">
+          <!-- prettier-ignore -->
+          
+                  <li class="list-icon__link">
+  <div class="icon icon--big">
+    <span class="kit-icon map-pin"></span>
+  </div>
+
+  <p class="p2 ">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+              
+        </ul>
+
+        
+      </div>
+    </div>
+
+    <footer class="good-item__footer">
+      <div class="good-item__btns">
+        <!-- prettier-ignore -->
+        <button
+  class="button button--bg-secondary-200 modal-open  "
+  type="button"
+  data-modal="contactUpModal"
+>
+  <div class="icon ">
+    <span class="kit-icon mail"></span>
+  </div>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+        
+        
+            <button
+  aria-label="Добавить в избранное"
+  
+  class="button button--favorite button--bg-gray-200  button--cub button--cub-md-add active "
+>
+  <div class="icon ">
+    <span class="kit-icon heart"></span>
+  </div>
+</button>
+
+        
+        
+        
+            <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add active"
+>
+  <div class="icon ">
+    <span class="kit-icon chart-bar-vertical"></span>
+  </div>
+</button>
+
+        
+      </div>
+
+      <a
+        href="/"
+        title="Название компании"
+        aria-label="Перейти на странцу компании"
+        class="good-item__logo"
+      >
+        <img src="/img/seller/seller.png" alt="логотип селера" />
+      </a>
+    </footer>
+  </div>
+</div>
+
+
+                        <!-- prettier-ignore -->
+                        <div
+  class="good-item good-item--noShadow "
+>
+  <div class="good-item__swiper-box">
+    <div class="good-item__img-box">
+      <div class="good-item__decor">
+        <!-- prettier-ignore -->
+
+        
+            
+<div class="badge badge--blue">
+  <div class="icon icon--little">
+    <span class="kit-icon shield-check"></span>
+  </div>
+
+  <div class="badge__content">
+    <p class="p4 medium-font">CompleteTrust</p>
+  </div>
+</div>
+ 
+<div class="badge">
+  <div class="icon icon--little">
+    <span class="kit-icon check-all-big"></span>
+  </div>
+</div>
+
+
+        
+      </div>
+
+      <a
+        href="#"
+        aria-label="Перейти на страницу объекта"
+        title="Тут какой-то title"
+        class="swiper swiper--good-img"
+      >
+        <div class="swiper-wrapper">
+          <!-- prettier-ignore -->
+
+          <div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/one.webp 1x, /img/goods/one2x.webp 2x" />
+
+        <img src="/img/goods/one.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+<div class="swiper-slide">
+  <div class="good-item__img-item">
+    <div class="good-item__img">
+      <picture>
+        <source srcset="/img/goods/two.webp 1x, /img/goods/two2x.webp 2x" />
+
+        <img src="/img/goods/two.webp" alt="фотография Apartment" loading="lazy" />
+      </picture>
+    </div>
+  </div>
+</div>
+
+        </div>
+
+        <div class="good-item__decors-img">
+          <div class="arrows-swiper arrows-swiper--absolute">
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper prev"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-left-md"></span>
+    </div>
+  </button>
+
+  <button
+    class="button button--bg-white button--circle button--circle-sm arrow-swiper next"
+    type="button"
+  >
+    <div class="icon">
+      <span class="kit-icon arrow-right-md"></span>
+    </div>
+  </button>
+</div>
+
+          <div class="swiper-pagination swiper-pagination--absolute"></div>
+
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="good-item__content">
+    <div class="good-item__content-details">
+      <header class="good-item__header">
+        <div class="good-item__top-box">
+          
+          <div class="good-item__top">
+            
+            <p class="h5 semibold-font good-item__title">
+              761,000
+
+              <span class="text-uppercase p1">AED</span>
+            </p>
+            
+          </div>
+          
+
+          <a
+            title="Название компании"
+            aria-label="Перейти на странцу компании"
+            class="good-item__logo"
+            href="#"
+          >
+            <picture>
+              <source
+                srcset="/img/seller/seller.png 1x, /img/seller/seller.png 2x"
+              />
+              <img
+                src="/img/seller/seller.png"
+                alt="фотография"
+                loading="lazy"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <div class="good-item__block">
+          <div class="good-item__block-top">
+             
+            <p class="p1 bold-font text-secondary-300">Apartment</p>
+            
+          </div>
+
+          
+          <a
+            title="Apartment, 2 bedroom, 60.11 sq.m. № 3427"
+            href="#"
+            aria-label="Перейти на страницу объекта"
+            class="p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"
+          >
+            Apartment, 2 bedroom, 60.11 sq.m. № 3427
+          </a>
+          
+        </div>
+      </header>
+
+      <div class="good-item__info">
+        <div class="good-item__tags">
+           <!-- prettier-ignore -->
+
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon bed"></span>
+  </div>
+
+  
+  <p class="p2">2 Bedrooms</p>
+    
+</div>
+  
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon bath"></span>
+  </div>
+
+  
+  <p class="p2">2 Bathrooms</p>
+    
+</div>
+  
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon floor-plan"></span>
+  </div>
+
+  
+  <p class="p2">1 floor</p>
+    
+</div>
+  
+          
+           <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon barrier"></span>
+  </div>
+
+  
+  <p class="p2">Q3 2026</p>
+    
+</div>
+  
+          
+          
+          <div class="tag tag--lg">
+  <div class="icon icon--big">
+    <span class="kit-icon ruler"></span>
+  </div>
+
+  
+  <p class="p2">65 sq.m.</p>
+    
+</div>
+ 
+          
+          
+        </div>
+
+        <ul class="list-icon">
+          <!-- prettier-ignore -->
+          
+                  <li class="list-icon__link">
+  <div class="icon icon--big">
+    <span class="kit-icon map-pin"></span>
+  </div>
+
+  <p class="p2 ">Mohammed Bin Rashid City, Dubai</p>
+</li>
+
+              
+        </ul>
+
+        
+      </div>
+    </div>
+
+    <footer class="good-item__footer">
+      <div class="good-item__btns">
+        <!-- prettier-ignore -->
+        <button
+  class="button button--bg-secondary-200 modal-open  "
+  type="button"
+  data-modal="contactUpModal"
+>
+  <div class="icon ">
+    <span class="kit-icon mail"></span>
+  </div>
+
+  <span class="p3 medium-font">Contact Seller</span>
+</button>
+
+        
+        
+            <button
+  aria-label="Добавить в избранное"
+  
+  class="button button--favorite button--bg-gray-200  button--cub button--cub-md-add active "
+>
+  <div class="icon ">
+    <span class="kit-icon heart"></span>
+  </div>
+</button>
+
+        
+        
+        
+            <button
+  aria-label="Добавить в сравнение"
+  class="button button--comparison button--bg-gray-200 button--cub button--cub-md-add active"
+>
+  <div class="icon ">
+    <span class="kit-icon chart-bar-vertical"></span>
+  </div>
+</button>
+
+        
+      </div>
+
+      <a
+        href="/"
+        title="Название компании"
+        aria-label="Перейти на странцу компании"
+        class="good-item__logo"
+      >
+        <img src="/img/seller/seller.png" alt="логотип селера" />
+      </a>
+    </footer>
+  </div>
+</div>
+
 
                         <div class="text-banner">
                           <div class="text-banner__block">
@@ -3697,7 +5096,7 @@
                         </div>
                       </div>
 
-                      <div class="catalogy-content__item">
+                      <div class="catalogy-content__item" data-chart="relative">
                         <h2 class="h6">Real Estate Market Overview</h2>
 
                         <div class="catalogy-content__filter">
@@ -3907,45 +5306,81 @@
 
                           <div
                             class="catalogy-content__filter-items catalogy-content__filter-items--flex"
+                            
                           >
-                            <button
-                              class="button button--noBg button--dashed button--noBg-dark-color-700 button--rounded-2xl button--md"
-                              type="button"
-                            >
-                              <p class="p2 regular-font">Add to compare</p>
+                            <div class="select-custom" data-chart="select">
+                              <button
+                                class="button button--noBg button--dashed button--noBg-dark-color-700 button--rounded-2xl button--md select-custom__btn"
+                                type="button"
+                              >
+                                <p class="p2 regular-font">Add to compare</p>
 
-                              <div class="icon">
-                                <span class="kit-icon close-md"></span>
+                                <div class="icon" style="rotate: 45deg">
+                                  <span class="kit-icon close-md"></span>
+                                </div>
+                              </button>
+
+                              <div data-loader-relative>
+                                <div class="loader" data-loader-box>
+                                  <span></span>
+                                </div>
+
+                                <div
+                                  class="select-box select-box--search with-icon"
+                                  data-icon="search"
+                                  data-loading="true"
+                                >
+                                  <select
+                                    id="search-select"
+                                    data-placeholder="Enter location"
+                                    data-selected-top="true"
+                                    multiple
+                                    data-search="true"
+                                    name="location-select"
+                                  >
+                                    <option value="">Enter location</option>
+                                    <option
+                                      value="Dubai"
+                                      data-type="city"
+                                      data-tag="City"
+                                      data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                                      data-short-desc="Dubai, UAE"
+                                      selected
+                                    >
+                                      Dubai
+                                    </option>
+                                    <option
+                                      value="Moscow"
+                                      data-type="city"
+                                      data-tag="City"
+                                      data-desc="Central Business District, Moscow city, Russia"
+                                      data-short-desc="Moscow, Russia"
+                                      
+                                    >
+                                      Moscow
+                                    </option>
+                                    <option
+                                      value="Germany"
+                                      data-type="country"
+                                      data-tag="Country"
+                                      data-desc="Federal republic in Central Europe with rich history and culture"
+                                      data-short-desc="Germany"
+                                      
+                                    >
+                                      Germany
+                                    </option>
+                                  </select>
+                                </div>
                               </div>
-                            </button>
+                            </div>
 
-                            <button
-                              class="button button--bg-secondary-200 button--rounded-2xl button--md"
-                              type="button"
-                              aria-label="Скрыть пункт Dubai"
-                            >
-                              <p class="p2 regular-font">Dubai</p>
-
-                              <div class="icon">
-                                <span class="kit-icon close-md"></span>
-                              </div>
-                            </button>
-
-                            <button
-                              class="button button--bg-primary-200 button--rounded-2xl button--md"
-                              type="button"
-                              aria-label="Скрыть пункт Abu Dhabi"
-                            >
-                              <p class="p2 regular-font">Abu Dhabi</p>
-
-                              <div class="icon">
-                                <span class="kit-icon close-md"></span>
-                              </div>
-                            </button>
+                            <div class="catalogy-content__filter-btns" data-chart="btns">
+                              
+                            </div>
                           </div>
                         </div>
 
-                        <div class="chart-box">
+                        <div class="chart-box" data-chart="init-add">
   <div class="chart-box__block" data-loader-relative>
     <div class="loader loader--chart" data-loader-box>
       <span></span>
@@ -3954,8 +5389,8 @@
     <canvas id="chart-market" data-loading="true"></canvas>
   </div>
 
-  <div class="chart-box__content">
-    <div class="badge badge--gray-color-200 badge--middle" style="gap: 8px">
+  <div class="chart-box__content" data-chart="badges">
+    <!-- <div class="badge badge--gray-color-200 badge--middle" style="gap: 8px">
       <div class="dot dot--secondary-color-100"></div>
 
       <p
@@ -3975,7 +5410,7 @@
       >
         Abu Dhabi median price
       </p>
-    </div>
+    </div> -->
   </div>
 </div>
 
@@ -4234,7 +5669,7 @@
                   <div class="catalogy__top">
                     <h2 class="h4">Popular Questions</h2>
 
-                    <div class="accordeon" data-width="10000000">
+                    <div class="accordeon accordeon--active-bg-gray-200" data-width="10000000">
   <div class="accordeon__item">
     <button type="button" class="accordeon__question">
       <p class="p1 medium-font">Can foreigners buy real estate in Dubai?</p>

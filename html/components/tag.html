@@ -4,12 +4,14 @@
   </div>
 
   @@if (typeof classAddTagText !== 'undefined') {
-    <p class="@@classAddTagText">@@text</p>
-  }
+  <p class="@@classAddTagText">@@text</p>
+  } @@if (typeof classAddTagText === 'undefined') {
+  <p class="p3">@@text</p>
+  } @@if (typeof tagText !== 'undefined') {
+  <div class="tag__block">
+    <p class="p2 @@classAddTagText">@@text</p>
 
-  @@if (typeof classAddTagText === 'undefined') {
-    <p class="p3">@@text</p>
+    <p class="p2 medium-font">from 535,300 AED</p>
+  </div>
   }
-
-  
 </div>

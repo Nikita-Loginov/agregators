@@ -25,18 +25,20 @@ export const getHeightHeader = () => {
 
 export const checkScrollY = () => {
   const header = document.querySelector("header.header");
+  const headerHeight = getHeightHeader().replace('px', '');
 
   if (!header.classList.contains("header-scroll")) return;
 
+  const currentScrollStartMore = headerHeight ? headerHeight - 30 : CONFIG.SCROLL_START_MORE
  
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  const isHeaderVisible = scrollTop <= CONFIG.SCROLL_START_MORE;
+  const isHeaderVisible = scrollTop <= currentScrollStartMore;
 
   if (Math.abs(scrollTop - lastScrollTop) < CONFIG.SCROLL_THRESHOLD) return;
 
   const isScrollingDown =
-    scrollTop > lastScrollTop && scrollY > CONFIG.SCROLL_START_MORE;
+    scrollTop > lastScrollTop && scrollY > currentScrollStartMore;
 
   DOM.HEADER.classList.toggle(CONFIG.CLASS_SCROLL_BOTTOM, isScrollingDown);
   DOM.HEADER.classList.toggle(CONFIG.CLASS_SCROLL_TOP, !isScrollingDown);
@@ -45,6 +47,7 @@ export const checkScrollY = () => {
 
   document.body.classList.toggle(CONFIG.CLASS_SCROLL_BOTTOM, isScrollingDown);
   document.body.classList.toggle(CONFIG.CLASS_SCROLL_TOP, !isScrollingDown);
+  document.body.classList.toggle(CONFIG.CLASS_SCROLL_VISIBLE, isHeaderVisible);
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 };

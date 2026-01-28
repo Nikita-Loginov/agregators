@@ -418,6 +418,25 @@ export const initSelects = () => {
       },
     });
 
+    const selectCustom = select.closest('.select-custom');
+
+    if (selectCustom) {
+      const triggerButton = selectCustom.querySelector('.select-custom__btn');
+    
+      if (triggerButton) {
+        triggerButton.addEventListener('click', (e) => {
+          e.preventDefault();
+          e.stopPropagation();
+    
+          if (ts.isOpen) {
+            ts.close();
+          } else {
+            ts.open();
+          }
+        });
+      }
+    }
+
     const form = select.closest("form");
     const formName = form?.dataset?.form;
     const fieldName = select.name;

@@ -118,4 +118,10 @@
     width: 26px;
     height: 26px;
   }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
 }

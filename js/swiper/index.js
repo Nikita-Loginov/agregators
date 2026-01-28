@@ -184,6 +184,7 @@ export const SWIPERS = {
     options: {
       slidesPerView: 1.2,
       spaceBetween: 12,
+      mousewheel: MOUSE_WHEEL_CONFIG,
       pagination: {
         el: ".also-section .swiper-pagination--also",
       },

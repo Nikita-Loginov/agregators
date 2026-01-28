@@ -39,8 +39,24 @@
         }
       }
 
+      &__header {
+        gap: 2px;
+      }
+
       &__top {
         gap: 2px;
+      }
+
+      &__top-box {
+        align-items: center;
+      }
+
+      &__tags {
+        gap: 8px;
+      }
+
+      &__block {
+        gap: 0;
       }
 
       &__title {
@@ -66,6 +82,29 @@
         }
       }
     }
+  
+    .tag {
+      &--lg {
+        min-height: 28px;
+      }
+    }
+
+    .list-icon,
+    .tag {
+      .p2 {
+        font-size: var(--font-size-2xs);
+      }
+    }
+  }
+
+  &--nonePrice {
+    &.good-item {
+      &--column {
+       .good-item__header {
+        flex-direction: row-reverse;
+       }
+      }
+    }
   }
 
   &:hover {
@@ -85,6 +124,10 @@
     .good-item {
       &__content {
         padding: 12px;
+      }
+
+      &__info {
+        gap: 4px;
       }
     }
   }
@@ -113,10 +156,22 @@
     border-radius: 0 var(--radius-card) var(--radius-card) 0;
   }
 
-  &__header {
+  &__info {
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+
+  &__content-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     flex: 1;
   }
 
@@ -131,6 +186,12 @@
         display: none;
       }
     }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__top {
@@ -155,6 +216,13 @@
     display: flex;
     gap: 4px;
     flex-wrap: wrap;
+
+    .tag {
+      &--lg {
+        border-radius: var(--radius-sm);
+        padding-inline: 8px;
+      }
+    }
   }
 
   &__swiper-box {

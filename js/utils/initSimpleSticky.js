@@ -29,6 +29,7 @@ export const initSimpleSticky = () => {
   const checkSticky = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
+   
     stickyElements.forEach((item) => {
       const shouldBeSticky = scrollTop > item.triggerTop;
 
@@ -59,7 +60,7 @@ export const initSimpleSticky = () => {
     const recalculatePositions = () => {
       stickyElements.forEach((item) => {
         const triggerRect = item.trigger.getBoundingClientRect();
-        item.triggerTop = triggerRect.top + window.pageYOffset + 10;
+        item.triggerTop = triggerRect.top + window.pageYOffset + 0;
       });
 
       checkSticky();

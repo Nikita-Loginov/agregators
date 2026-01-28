@@ -16,6 +16,7 @@ import {
 import { initCharts } from "./modules/chart.js";
 import { charts } from "./data/chart.js";
 import { initSharedFormSync } from "./modules/shared-form/sharedFormSync.js";
+import { handleChartDeleteClick } from "./modules/chart.js";
 
 const swipers = [
   {
@@ -25,6 +26,7 @@ const swipers = [
 
 const handleGlobalClick = (e) => {
   initMoreBlocks(e);
+  handleChartDeleteClick(e);
 };
 
 const serVars = () => {
@@ -37,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initImgsSwiperGoods();
   hideUnnecessaryButtons();
   initGridSystem();
-  initSimpleSticky();
+  // initSimpleSticky();
   serVars();
 
   handleGridResize();
@@ -50,7 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("click", handleGlobalClick);
 
-  initCharts([{...charts.market}])
+  const chartsItems = [
+    {
+      ...charts.market,
+    },
+  ];
+
+  initCharts(chartsItems);
   initSharedFormSync();
 });
 

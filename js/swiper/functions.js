@@ -22,16 +22,54 @@ export const initImgsSwiperGoods = () => {
         ? {
             el: paginationEl,
             clickable: true,
+            // dynamicBullets: true,
+            // dynamicMainBullets: 6,
           }
         : false,
+      // on: {
+      //   init(swiper) {
+      //     limitPagination(swiper, 6);
+      //   },
+      //   slideChange(swiper) {
+      //     limitPagination(swiper, 6);
+      //   },
+      // },
     };
 
     initSwiper(swiper, config);
 
     if (config.mousewheel) {
-      swiper.addEventListener('wheel', (event) => {
-        event.stopPropagation();
-      }, { passive: false });
+      swiper.addEventListener(
+        "wheel",
+        (event) => {
+          event.stopPropagation();
+        },
+        { passive: false }
+      );
+    }
+  });
+};
+
+const limitPagination = (swiper, maxBullets = 6) => {
+  const bullets = swiper.pagination?.bullets;
+  if (!bullets || bullets.length <= maxBullets) return;
+
+  const activeIndex = swiper.realIndex;
+  const total = bullets.length;
+
+  let start = Math.max(activeIndex - Math.floor(maxBullets / 2), 0);
+  let end = start + maxBullets;
+
+  if (end > total) {
+    end = total;
+    start = end - maxBullets;
+  }
+
+  bullets.forEach((bullet, index) => {
+    if (index >= start && index < end) {
+      bullet.style.display = "inline-block";
+    } else {
+      bullet.style.display = "none";
     }
   });
 };
@@ -85,8 +123,7 @@ export const setTableCountItems = (swiper) => {
 
   const comparison = swiper.el.closest(".comparison");
 
-  if (comparison)
-    setVarElement(comparison, "--count-item-table", tableCount);
+  if (comparison) setVarElement(comparison, "--count-item-table", tableCount);
 
-  comparison.setAttribute('data-count', tableCount);
+  comparison.setAttribute("data-count", tableCount);
 };

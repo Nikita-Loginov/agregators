@@ -1,5 +1,5 @@
 .accordeon {
-  --padding-inline: 16px;
+  --padding-inline: #{calculate-clamp(12px, 16px, 1023px, 767px)};
 
   display: flex;
   flex-direction: column;
@@ -59,7 +59,7 @@
         background-color: var(--gray-color-200);
         width: 100%;
         border-radius: var(--radius-md);
-        padding: 12px var(--padding-inline);
+        padding: calculate-clamp(8px, 12px, 1023px, 767px) var(--padding-inline);
         transition: all 0.5s;
         text-align: left;
         color: var(--dark-color-200);
@@ -83,6 +83,26 @@
         transition: all 0.3s;
       }
     }
+
+    &.accordeon--active-bg-gray-200 {
+      .accordeon {
+        &__item {
+          &.active {
+            .accordeon {
+              &__question {
+                background-color: var(--gray-color-200);
+                color: var(--dark-color-200);
+              }
+
+              &__item-arrow {
+                background-color: var(--dark-color-200);
+              }
+            }
+          }
+        }
+       
+      }
+    }
   }
 
   &__answer {
@@ -91,7 +111,6 @@
     gap: 10px;
     max-height: 0;
     overflow: hidden;
-   
   }
 
   &__item-arrow {
