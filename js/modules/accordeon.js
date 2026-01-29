@@ -20,6 +20,8 @@ export function toggleAccordeonItems(e) {
 
       setHeightAnswer(relativeItem);
 
+      updateAccordeonButtonText(relativeItem);
+
       currentResizeHandler = () => setHeightAnswer(relativeItem);
       window.addEventListener("resize", currentResizeHandler);
 
@@ -28,6 +30,7 @@ export function toggleAccordeonItems(e) {
           classAction(prevActiveAccordeonItem, "active", "remove");
         }
         setHeightAnswer(prevActiveAccordeonItem);
+        updateAccordeonButtonText(prevActiveAccordeonItem);
       }
 
       prevActiveAccordeonItem = relativeItem;
@@ -70,6 +73,7 @@ export function initAccordeonActiveItems() {
     ) {
       classAction(item, "active", "add");
       setHeightAnswer(item);
+      updateAccordeonButtonText(item);
       prevActiveAccordeonItem = item;
     }
   });
@@ -81,6 +85,7 @@ function resetAccordeon() {
 
   accordeonItems.forEach((item) => {
     classAction(item, "active", "remove");
+    updateAccordeonButtonText(item);
 
     const itemAnswer = item.querySelector(".accordeon__answer");
 
@@ -112,121 +117,17 @@ function setHeightAnswer(item) {
   }
 }
 
-export const renderItems = (items, types, allMinWidthInner) => {
-  const boxs = document.querySelectorAll(".accordeon--render");
+function updateAccordeonButtonText(item) {
+  const question = item.querySelector(".accordeon__question");
+  if (!question) return;
 
-  boxs.forEach((box) => {
-    box.innerHTML = "";
-    let html;
+  const textEl = question.querySelector(".accordeon__btn-text");
+  if (!textEl) return;
 
-    if (allMinWidthInner && allMinWidthInner < window.innerWidth) {
-      html = renderAccordeonItem(items);
-    } else {
-      const typeFirst = types[0].name;
+  const textOpen = question.dataset.textOpen;
+  const textClose = question.dataset.textClose;
 
-      const relative = box.closest("section");
+  if (!textOpen || !textClose) return;
 
-      const tabsBox = relative.querySelector(".tabs-box");
-      const swiper = tabsBox.closest(".swiper");
-
-      const tabs = renderTabs(types);
-
-      const tabsSwiper = new Swiper(swiper, {
-        slidesPerView: "auto",
-        spaceBetween: 12,
-      });
-
-      tabsBox.innerHTML = "";
-
-      tabsBox.innerHTML = tabs;
-
-      const itemsFilter = items.filter((item) => item.type === typeFirst);
-
-      html = renderAccordeonItem(itemsFilter);
-    }
-
-    box.innerHTML = html;
-  });
-};
-
-const renderAccordeonItem = (items) => {
-  if (!items) return;
-
-  const html = [];
-
-  items.forEach((box) => {
-    const item = ` <div class="accordeon__item" id=${box?.id}>
-          <button type="button" class="accordeon__question">
-            <p class="semiBold-font lh120P">
-              ${box?.question}
-            </p>
-
-            <span class="circle-btn circle-btn--blue">
-              <span class="icon-plus"></span>
-            </span>
-          </button>
-
-          <div class="accordeon__answer" data-padding-top="12">
-             ${box?.content}
-          </div>
-        </div>`;
-
-    html.push(item);
-  });
-
-  return html.join("");
-};
-
-const renderTabs = (types) => {
-  if (!types) return;
-
-  const html = [];
-
-  types.forEach((type, index) => {
-    const item = `<div class="swiper-slide"><div role="button" data-type=${
-      type.name
-    } class="button ${index ? "button--gray" : ""}">${type.text}</div></div>`;
-
-    html.push(item);
-  });
-
-  return html.join("");
-};
-
-export const changeActiveTabs = (e, items) => {
-  const { target } = e;
-
-  if (!target.closest(".tabs-box")) return;
-
-  const btn = target.closest(".button");
-  const tabsBox = target.closest(".tabs-box");
-  const btns = tabsBox.querySelectorAll(".button");
-
-  if (!btns.length || !btn) return;
-
-  const type = btn.dataset.type;
-
-  if (!type) return;
-
-  const relative = target.closest("section");
-
-  const itemsBox = relative.querySelector(".accordeon--render");
-
-  if (!itemsBox) return;
-
-  const itemsFilter = items.filter((item) => item.type === type);
-
-  if (!itemsFilter.length) return;
-
-  itemsBox.innerHTML = "";
-
-  const accordeonItems = renderAccordeonItem(itemsFilter);
-
-  btns.forEach((btn) => {
-    btn.classList.add("button--gray");
-  });
-
-  btn.classList.remove("button--gray");
-
-  itemsBox.innerHTML = accordeonItems;
-};
+  textEl.textContent = item.classList.contains("active") ? textOpen : textClose;
+}

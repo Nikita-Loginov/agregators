@@ -1,13 +1,482 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Главная", "links" :
-  ["./css/main.css", "./css/lib/swiper.min.css"] })
+  ["./css/main.css", "./css/lib/swiper.min.css",
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
 
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
 
       <main class="main">
+        <section class="hero">
+          <div class="container">
+            <div class="hero__inner">
+              <div class="hero__content">
+                <div class="hero__head">
+                  <h1 class="h3">
+                    Apartments for sale directly from developers with
+                    <span class="text-primary-100">no extra fees!</span>
+                  </h1>
+                </div>
+
+                <div class="hero__info">
+                  <form novalidate class="form-hero form" data-form="hero-form">
+                    <div class="form-hero__head">
+                      <div class="form-hero__filter">
+                        <div
+                          class="form-hero__filter-item"
+                          data-loader-relative
+                        >
+                          <div class="loader" data-loader-box>
+                            <span></span>
+                          </div>
+
+                          <div
+                            class="select-box select-box--noMax select-box--search with-icon"
+                            data-icon="city"
+                            data-loading="true"
+                          >
+                            <select
+                              id="search-select"
+                              data-placeholder="Enter location"
+                              multiple
+                              data-search="true"
+                              data-selected-top="true"
+                              name="location-select"
+                              data-dropdown-outside
+                            >
+                              <option value="">Enter location</option>
+                              <option
+                                value="1"
+                                data-type="city"
+                                data-tag="City"
+                                data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                                data-short-desc="Dubai, UAE"
+                              >
+                                Dubai
+                              </option>
+                              <option
+                                value="2"
+                                data-type="city"
+                                data-tag="City"
+                                data-desc="Central Business District, Moscow city, Russia"
+                                data-short-desc="Moscow, Russia"
+                              >
+                                Moscow
+                              </option>
+                              <option
+                                value="3"
+                                data-type="city"
+                                data-tag="City"
+                                data-desc="Manhattan borough, New York city, USA"
+                                data-short-desc="New York, USA"
+                              >
+                                New York
+                              </option>
+                              <option
+                                value="4"
+                                data-type="country"
+                                data-tag="Country"
+                                data-desc="Federal republic in Central Europe with rich history and culture"
+                                data-short-desc="Germany"
+                              >
+                                Germany
+                              </option>
+                              <option
+                                value="5"
+                                data-type="country"
+                                data-tag="Country"
+                                data-desc="Island nation in East Asia known for technology and traditions"
+                                data-short-desc="Japan"
+                              >
+                                Japan
+                              </option>
+                              <option
+                                value="6"
+                                data-type="region"
+                                data-tag="Region"
+                                data-desc="Southeastern region of France on the Mediterranean coast"
+                                data-short-desc="Provence, France"
+                              >
+                                Provence
+                              </option>
+                              <option
+                                value="7"
+                                data-type="region"
+                                data-tag="Region"
+                                data-desc="Northern Italian region known for cuisine and automotive industry"
+                                data-short-desc="Emilia-Romagna, Italy"
+                              >
+                                Emilia-Romagna
+                              </option>
+                              <option
+                                value="8"
+                                data-type="district"
+                                data-tag="District"
+                                data-desc="Historic central district of London with government buildings"
+                                data-short-desc="Westminster, London"
+                              >
+                                Westminster
+                              </option>
+                              <option
+                                value="9"
+                                data-type="district"
+                                data-tag="District"
+                                data-desc="Fashionable district in central Paris with luxury boutiques"
+                                data-short-desc="Champs-Élysées, Paris"
+                              >
+                                Champs-Élysées
+                              </option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-hero__filter-item">
+                          <div class="checkbox-box">
+                            <label class="check">
+                              <div class="check__info">
+                                <input type="radio" checked name="type-deal" />
+
+                                <div class="p2 check__info-content">Buy</div>
+                              </div>
+                            </label>
+
+                            <label class="check">
+                              <div class="check__info">
+                                <input type="radio" name="type-deal" />
+
+                                <div class="p2 check__info-content">Rent</div>
+                              </div>
+                            </label>
+                          </div>
+                        </div>
+
+                        <div class="tablet-none">
+                          <div class="form-hero__filter-item">
+                            <button
+                              type="submit"
+                              class="button button--lg button--rounded-md button--bg-primary-100"
+                            >
+                              <p class="p2 medium-font">Search</p>
+
+                              <div class="icon icon--big">
+                                <span
+                                  class="kit-icon search-magnifying-glass"
+                                ></span>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+
+                        <div class="tablet-show">
+                          <div class="form-hero__block">
+                            <button
+                              type="submit"
+                              class="button button--noMassa button--noBg text-secondary-100 modal-open"
+                              data-modal="filterHeroModal"
+                            >
+                              <div class="icon">
+                                <span class="kit-icon filter-icon"></span>
+                              </div>
+
+                              <p class="p2 medium-font">More filters</p>
+                            </button>
+
+                            <button
+                              type="submit"
+                              class="button button--lg button--rounded-md button--bg-primary-100"
+                            >
+                              <p class="p2 medium-font">Search</p>
+
+                              <div class="icon">
+                                <span
+                                  class="kit-icon search-magnifying-glass"
+                                ></span>
+                              </div>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="accordeon accordeon--noMassa"
+                        data-width="100000"
+                      >
+                        <div class="accordeon__item">
+                          <div class="accordeon__answer" data-padding-top="20">
+                            <div class="form-hero__items">
+                              @@include('../components/checkboxs/checkbox-box-filter.html')
+
+                              <div class="form-hero__items-box">
+                                <div
+                                  class="select-box select-box--words select-box--noMax"
+                                  data-placeholder="Property type"
+                                  data-loader-relative
+                                >
+                                  <div class="loader" data-loader-box>
+                                    <span></span>
+                                  </div>
+
+                                  <select
+                                    id="select50"
+                                    name="property-type"
+                                    data-dropdown-outside=""
+                                    data-loading="true"
+                                    name="property-type"
+                                  >
+                                    <option value="">Property type</option>
+                                    <option value="1">Apartment</option>
+                                    <option value="2">Penthouse</option>
+                                    <option value="3">Duplex</option>
+                                    <option value="4">
+                                      Hotel Apartment Hotel Apartment
+                                    </option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div
+                                class="form-hero__items-box"
+                                data-loader-relative
+                              >
+                                <div class="loader" data-loader-box>
+                                  <span></span>
+                                </div>
+
+                                <div
+                                  class="select-box select-box--words select-box--check"
+                                  data-loading="true"
+                                >
+                                  <select
+                                    id="select3"
+                                    multiple
+                                    data-placeholder="Beds & Baths"
+                                    data-dropdown-outside=""
+                                  >
+                                    <option value="">Beds & Baths</option>
+                                    <option
+                                      value="beds-studio"
+                                      data-group="beds"
+                                    >
+                                      Studio
+                                    </option>
+                                    <option value="beds-1" data-group="beds">
+                                      1
+                                    </option>
+                                    <option value="beds-2" data-group="beds">
+                                      2
+                                    </option>
+                                    <option value="beds-3" data-group="beds">
+                                      3
+                                    </option>
+                                    <option value="beds-4" data-group="beds">
+                                      4
+                                    </option>
+                                    <option value="beds-5" data-group="beds">
+                                      5
+                                    </option>
+                                    <option value="beds-6" data-group="beds">
+                                      6
+                                    </option>
+                                    <option value="beds-7" data-group="beds">
+                                      7
+                                    </option>
+                                    <option value="beds-8" data-group="beds">
+                                      8
+                                    </option>
+                                    <option value="beds-9" data-group="beds">
+                                      9
+                                    </option>
+                                    <option value="beds-10" data-group="beds">
+                                      10+
+                                    </option>
+                                    <option value="baths-1" data-group="baths">
+                                      1
+                                    </option>
+                                    <option value="baths-2" data-group="baths">
+                                      2
+                                    </option>
+                                    <option value="baths-3" data-group="baths">
+                                      3
+                                    </option>
+                                    <option value="baths-4" data-group="baths">
+                                      4
+                                    </option>
+                                    <option value="baths-5" data-group="baths">
+                                      5
+                                    </option>
+                                    <option value="baths-6" data-group="baths">
+                                      6+
+                                    </option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <div
+                                class="form-hero__items-box"
+                                data-loader-relative
+                              >
+                                <div
+                                  class="dropdown dropdown--price input-box"
+                                  data-fixed-dropdown
+                                >
+                                  <button
+                                    class="input-box__info dropdown__btn"
+                                    type="button"
+                                  >
+                                    <div class="check">
+                                      <div class="icon icon--sm">
+                                        <span class="kit-icon check-big"></span>
+                                      </div>
+                                    </div>
+
+                                    <p class="p2">Price</p>
+
+                                    <div class="icon icon--big arrow">
+                                      <span
+                                        class="kit-icon caret-down-md"
+                                      ></span>
+                                    </div>
+                                  </button>
+
+                                  <div
+                                    class="dropdown__content popup price-popup"
+                                  >
+                                    <div class="price-popup__content">
+                                      <p class="p2 semibold-font">
+                                        Price range, AED
+                                      </p>
+
+                                      <div class="price-popup__items">
+                                        <div class="input-box">
+                                          <label class="input-box__content">
+                                            <div class="input-box__info">
+                                              <div class="decor p2">Min</div>
+                                              <input
+                                                placeholder="0"
+                                                type="text"
+                                                name="price_min"
+                                                min="0"
+                                                max="10000"
+                                                data-type="price_min"
+                                                data-input-number
+                                              />
+                                            </div>
+                                          </label>
+                                        </div>
+                                        <div class="input-box">
+                                          <label class="input-box__content">
+                                            <div class="input-box__info">
+                                              <div class="decor p2">Max</div>
+                                              <input
+                                                placeholder="∞"
+                                                type="text"
+                                                name="price_max"
+                                                min="0"
+                                                max="10000"
+                                                data-type="price_max"
+                                                data-input-number
+                                              />
+                                            </div>
+                                          </label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div
+                            class="accordeon__question"
+                            data-text-open="Less filters"
+                            data-text-close="Advanced filters"
+                          >
+                            <div class="form-hero__details">
+                              <button
+                                type="button"
+                                class="button button--noMassa button--noBg text-secondary-100 "
+                                
+                              >
+                                <p class="p3 medium-font accordeon__btn-text">
+                                  Advanced filters
+                                </p>
+
+                                <div
+                                  class="icon icon--little accordeon__item-arrow"
+                                >
+                                  <span class="kit-icon chevron-down"></span>
+                                </div>
+                              </button>
+
+                              <button
+                                type="reset"
+                                class="button button--noMassa button--noBg text-secondary-100 form-hero__more"
+                              >
+                                <p class="p3 medium-font">Clear filters</p>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-hero__bottom">
+                      <div class="ai-decor">
+                        <div class="ai-decor__info">
+                          <div class="ai-decor__icon">
+                            <span class="icon icon--little">
+                              <svg>
+                                <use xlink:href="#chatgpt-logo"></use>
+                              </svg>
+                            </span>
+                          </div>
+                        </div>
+
+                        <div class="ai-decor__info">
+                          <div class="ai-decor__item">
+                            <p class="p3 medium-font">AI Search</p>
+
+                            <p
+                              class="p3 medium-font text-gradient text-gradient--second"
+                            >
+                              Coming Soon
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <a
+                        href="/map.html"
+                        aria-label="Перейти на страницу карты объектов"
+                        title="View on map"
+                        class="button button--noMassa button--noBg text-secondary-100 tablet-none"
+                      >
+                        <div class="icon icon--big">
+                          <span class="kit-icon map"></span>
+                        </div>
+
+                        <p class="p3 medium-font">View on map</p>
+                      </a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="hero__img">
+                <picture>
+                  <source
+                    srcset="/img/hero/one.webp 1x, /img/hero/one2x.webp 2x"
+                  />
+                  <img src="/img/hero/one.webp" alt="фотография" />
+                </picture>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section
           class="projects swiper-box swiper-box--pagination-bottom swiper-box--visible-lg"
         >
@@ -1072,8 +1541,13 @@
       </main>
 
       @@include('../modules/footer.html', {"inner" : ""})
+      @@include('../modals/filterHero.html')
+      @@include('../modals/saveSearch.html')
+      @@include('../modals/searchSuccess.html')
+      @@include('../modals/savedSearch.html')
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/index.js" type="module"></script>
   </body>

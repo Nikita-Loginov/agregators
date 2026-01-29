@@ -1,0 +1,227 @@
+<div class="modalBlock filterHeroModal filterModalBox" data-reset="no-clear">
+  <form class="modalBlock__inner filterModalBox__inner" data-form="hero-form" >
+    <div class="modalBlock__content">
+      <div class="filterModalBox__top">
+        <div class="filterModalBox__items">
+          <div class="filterModalBox__items-box">
+            <p class="h6">
+              Find apartments for sale directly from developers with no extra
+              fees!
+            </p>
+
+            <div
+              class="filterModalBox__items-boxs filterModalBox__items-boxs--media-one"
+            >
+              @@include('../components/checkboxs/checkbox-box-filter.html')
+
+              <div
+                class="select-box select-box--words select-box--noMax"
+                data-placeholder="Property type"
+                data-loader-relative
+              >
+                <div class="loader" data-loader-box>
+                  <span></span>
+                </div>
+
+                <select
+                  id="select50"
+                  name="property-type"
+                  data-dropdown-outside=""
+                  data-loading="true"
+                  name="property-type"
+                >
+                  <option value="">Property type</option>
+                  <option value="1">Apartment</option>
+                  <option value="2">Penthouse</option>
+                  <option value="3">Duplex</option>
+                  <option value="4">Hotel Apartment Hotel Apartment</option>
+                </select>
+              </div>
+
+              <div class="filterModalBox__item" data-loader-relative>
+                <div class="loader" data-loader-box>
+                  <span></span>
+                </div>
+
+                <div
+                  class="select-box select-box--words select-box--noMax select-box--check"
+                  data-loading="true"
+                >
+                  <select
+                    id="select3"
+                    multiple
+                    data-placeholder="Beds & Baths"
+                    data-dropdown-outside=""
+                  >
+                    <option value="">Beds & Baths</option>
+                    <option value="beds-studio" data-group="beds">
+                      Studio
+                    </option>
+                    <option value="beds-1" data-group="beds">1</option>
+                    <option value="beds-2" data-group="beds">2</option>
+                    <option value="beds-3" data-group="beds">3</option>
+                    <option value="beds-4" data-group="beds">4</option>
+                    <option value="beds-5" data-group="beds">5</option>
+                    <option value="beds-6" data-group="beds">6</option>
+                    <option value="beds-7" data-group="beds">7</option>
+                    <option value="beds-8" data-group="beds">8</option>
+                    <option value="beds-9" data-group="beds">9</option>
+                    <option value="beds-10" data-group="beds">10+</option>
+                    <option value="baths-1" data-group="baths">1</option>
+                    <option value="baths-2" data-group="baths">2</option>
+                    <option value="baths-3" data-group="baths">3</option>
+                    <option value="baths-4" data-group="baths">4</option>
+                    <option value="baths-5" data-group="baths">5</option>
+                    <option value="baths-6" data-group="baths">6+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div
+                class="dropdown dropdown--price input-box"
+                data-fixed-dropdown
+              >
+                <button class="input-box__info dropdown__btn" type="button">
+                  <div class="check">
+                    <div class="icon icon--sm">
+                      <span class="kit-icon check-big"></span>
+                    </div>
+                  </div>
+
+                  <p class="p2">Price</p>
+
+                  <div class="icon icon--big arrow">
+                    <span class="kit-icon caret-down-md"></span>
+                  </div>
+                </button>
+
+                <div class="dropdown__content popup price-popup">
+                  <div class="price-popup__content">
+                    <p class="p2 semibold-font">Price range, AED</p>
+
+                    <div class="price-popup__items">
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Min</div>
+                            <input
+                              placeholder="0"
+                              type="text"
+                              name="price_min"
+                              min="0"
+                              max="10000"
+                              data-type="price_min"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                      <div class="input-box">
+                        <label class="input-box__content">
+                          <div class="input-box__info">
+                            <div class="decor p2">Max</div>
+                            <input
+                              placeholder="∞"
+                              type="text"
+                              name="price_max"
+                              min="0"
+                              max="10000"
+                              data-type="price_max"
+                              data-input-number
+                            />
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filterModalBox__footer">
+        <div class="filterModalBox__footer-box">
+          <div
+            class="filterModalBox__footer-btns filterModalBox__footer-btns--media-big"
+          >
+            <button
+              class="button button--noMassa text-secondary-300 lg-none"
+              type="reset"
+            >
+              <div class="icon">
+                <span class="kit-icon undo"></span>
+              </div>
+
+              <p class="p2 medium-font">Clear filters</p>
+            </button>
+
+            <button
+              class="button button--noMassa lg-show modal-close text-dark-200"
+              type="button"
+            >
+              <div class="icon">
+                <span class="kit-icon close-md"></span>
+              </div>
+
+              <p class="p3 medium-font">Close</p>
+            </button>
+
+            <button
+              class="button button--noMassa text-primary-100 lg-show"
+              type="reset"
+            >
+              <div class="icon">
+                <span class="kit-icon undo"></span>
+              </div>
+
+              <p class="p3 medium-font">Clear</p>
+            </button>
+          </div>
+
+          <div class="filterModalBox__footer-btns">
+            <button
+              class="button button--bg-gray-300 modal-close lg-none text-dark-200"
+              type="button"
+            >
+              <div class="icon">
+                <span class="kit-icon close-md"></span>
+              </div>
+
+              <p class="p2 medium-font">Close</p>
+            </button>
+
+            <button class="button button--bg-primary-100 modal-close">
+              <div class="icon">
+                <span class="kit-icon save"></span>
+              </div>
+
+              <p class="p2 medium-font">Apply</p>
+            </button>
+          </div>
+        </div>
+
+        <div class="desktop-show">
+          <div class="filterModalBox__footer-info">
+            <button
+              type="button"
+              class="button button--noMassa modal-open"
+              data-modal="savedSearchModal"
+            >
+              <p class="p3 medium-font text-secondary-100">Saved searches</p>
+            </button>
+
+            <button
+              type="button"
+              class="button button--noMassa modal-open"
+              data-modal="saveSearchModal"
+            >
+              <p class="p3 medium-font text-secondary-100">Save search</p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

@@ -300,6 +300,41 @@ const moveSelectedToTop = (tsInstance, select) => {
   items.forEach((el) => tsInstance.dropdown_content.appendChild(el));
 };
 
+const syncDropdownClassesFromSelect = (select, dropdown) => {
+  if (!select || !dropdown) return;
+
+  const selectBox = select.closest(".select-box");
+  if (!selectBox) return;
+
+  dropdown.classList.forEach((cls) => {
+    if (cls.startsWith("ts-dropdown--")) {
+      dropdown.classList.remove(cls);
+    }
+  });
+
+  selectBox.classList.forEach((cls) => {
+    if (cls.startsWith("select-box--")) {
+      const modifier = cls.replace("select-box--", "");
+      dropdown.classList.add(`ts-dropdown--${modifier}`);
+    }
+  });
+};
+
+const wrapDropdownWithSelectBox = (select, dropdown) => {
+  if (!dropdown || dropdown.closest(".select-box")) return;
+
+  const sourceBox = select.closest(".select-box");
+  if (!sourceBox) return;
+
+  const wrapper = document.createElement("div");
+  wrapper.className = sourceBox.className;
+
+  dropdown.parentNode.insertBefore(wrapper, dropdown);
+  wrapper.appendChild(dropdown);
+
+  return wrapper;
+};
+
 export const initSelects = () => {
   document.querySelectorAll("select").forEach((select) => {
     const isMultiple = select.hasAttribute("multiple");
@@ -403,6 +438,8 @@ export const initSelects = () => {
         if (searchInput) {
           setTimeout(() => searchInput.focus(), 100);
         }
+
+        wrapDropdownWithSelectBox(select, this.dropdown);
       },
       onDropdownClose: function () {
         // if (dropdownTarget === "body" && this.dropdown && !this.isOpen) {
@@ -418,16 +455,16 @@ export const initSelects = () => {
       },
     });
 
-    const selectCustom = select.closest('.select-custom');
+    const selectCustom = select.closest(".select-custom");
 
     if (selectCustom) {
-      const triggerButton = selectCustom.querySelector('.select-custom__btn');
-    
+      const triggerButton = selectCustom.querySelector(".select-custom__btn");
+
       if (triggerButton) {
-        triggerButton.addEventListener('click', (e) => {
+        triggerButton.addEventListener("click", (e) => {
           e.preventDefault();
           e.stopPropagation();
-    
+
           if (ts.isOpen) {
             ts.close();
           } else {
@@ -452,9 +489,8 @@ export const initSelects = () => {
 
     const emitSync = () => {
       if (sharedFormState.isSyncing) return;
-      
+
       setTimeout(() => {
-        
         const value = ts.getValue();
         // console.log(value)
         syncElements(formName, fieldName, value, select);

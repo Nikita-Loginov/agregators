@@ -1,0 +1,30 @@
+.ai-decor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-color-300);
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    color: var(--dark-color-700);
+  }
+}

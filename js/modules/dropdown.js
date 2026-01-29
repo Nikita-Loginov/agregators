@@ -4,7 +4,12 @@ let fixedMenu = null;
 export const toggleDropdown = (e) => {
   const target = e.target;
 
-  if (activeDropdown && activeDropdown.contains(target)) {
+  const isClickInsideActiveDropdown =
+    activeDropdown &&
+    (activeDropdown.contains(target) ||
+      (fixedMenu && fixedMenu.contains(target)));
+
+  if (isClickInsideActiveDropdown) {
     if (target.closest(".dropdown__btn, .dropdown__toggle")) {
       closeDropdown(activeDropdown);
       return;
@@ -64,17 +69,60 @@ const openFixedDropdown = (dropdown) => {
   const toggle =
     dropdown.querySelector(".dropdown__toggle") ||
     dropdown.querySelector(".dropdown__btn");
-  const rect = toggle.getBoundingClientRect();
+
+  if (!toggle) return;
+
+  const anchor = toggle.closest(".dropdown") || toggle;
+  const anchorRect = anchor.getBoundingClientRect();
+
+  const toggleRect = toggle.getBoundingClientRect();
 
   fixedMenu = menu;
+  document.body.appendChild(fixedMenu);
+
   fixedMenu.style.position = "fixed";
-  fixedMenu.style.top = rect.bottom + "px";
-  fixedMenu.style.left = rect.left + "px";
   fixedMenu.style.opacity = "1";
   fixedMenu.style.visibility = "visible";
   fixedMenu.style.zIndex = "9999";
 
-  document.body.appendChild(fixedMenu);
+  fixedMenu.style.minWidth = anchorRect.width + "px";
+  fixedMenu.style.width = "fit-content";
+
+  fixedMenu.style.top = "0px";
+  fixedMenu.style.left = "0px";
+  fixedMenu.style.maxHeight = "";
+  fixedMenu.style.overflow = "";
+
+  const menuRect = fixedMenu.getBoundingClientRect();
+  const viewportHeight = window.innerHeight;
+  const viewportWidth = window.innerWidth;
+
+  let top = toggleRect.bottom;
+  let left = toggleRect.left;
+
+  const spaceBottom = viewportHeight - toggleRect.bottom;
+  const spaceTop = toggleRect.top;
+
+  if (menuRect.height > spaceBottom && spaceTop > spaceBottom) {
+    top = toggleRect.top - menuRect.height;
+  }
+
+  const availableHeight = top < toggleRect.top ? spaceTop : spaceBottom;
+
+  if (menuRect.height > availableHeight) {
+    fixedMenu.style.maxHeight = availableHeight - 8 + "px";
+    fixedMenu.style.overflowY = "auto";
+  }
+
+  if (left + menuRect.width > viewportWidth) {
+    left = viewportWidth - menuRect.width - 8;
+  }
+
+  if (left < 8) left = 8;
+  if (top < 8) top = 8;
+
+  fixedMenu.style.top = top + "px";
+  fixedMenu.style.left = left + "px";
 };
 
 const openRegularDropdown = (dropdown) => {

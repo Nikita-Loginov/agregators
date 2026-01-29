@@ -101,6 +101,10 @@
   background-image: linear-gradient(266.69deg, #5900ff 0%, #d608ff 100%);
   background-clip: text;
   color: transparent;
+
+  &--second {
+    background-image: linear-gradient(180deg, #6a02ff 0%, #c507fe 100%);
+  }
 }
 
 .detail-block {
@@ -559,7 +563,7 @@ body.scrollBottom {
     border-radius: 50%;
     background-color: var(--secondary-color-100);
     color: var(--white-color);
-  
+
     .icon {
       width: 32px;
       height: 32px;
@@ -636,4 +640,3 @@ body.scrollBottom {
     color: var(--country-item-dial-color);
   }
 }
-
