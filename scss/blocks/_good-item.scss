@@ -1,5 +1,6 @@
 .good-item {
   --radius-card: var(--radius-lg);
+  --width-logo-card: 50px;
 
   display: grid;
   grid-template-columns: 40% auto;
@@ -200,7 +201,7 @@
   }
 
   &__logo {
-    width: 50px;
+    width: var(--width-logo-card);
     height: 40px;
     flex-shrink: 0;
 
@@ -241,6 +242,8 @@
     * {
       line-height: 1;
     }
+
+    
   }
 
   &__img-box {
@@ -295,6 +298,12 @@
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+
+    &--simple {
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 71% auto;
+    }
   }
 
   &__btns {

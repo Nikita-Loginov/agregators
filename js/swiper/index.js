@@ -371,6 +371,9 @@ export const SWIPERS = {
       spaceBetween: 8,
       mousewheel: MOUSE_WHEEL_CONFIG,
       breakpoints: {
+        600: {
+          slidesPerView: 1.8,
+        }, 
         360: {
           slidesPerView: 1.1,
         },

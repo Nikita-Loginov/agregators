@@ -54,7 +54,7 @@
 
   @media (max-width:$lg-breakpoint) {
     &__details {
-      left: 8px;
+      right: 8px;
       bottom: 8px;
       align-items: flex-start;
     }
@@ -136,8 +136,21 @@
       box-shadow: 0px -8px 8px 0px #A6AFC340;
       border-radius: var(--radius-md);
       max-height: 0;
+      z-index: 999;
+      gap: 8px;
       
-      overflow: hidden;
+      overflow: visible;
+
+      &:after {
+        position: absolute;
+        content:"";
+
+      }
+    }
+
+    &__details {
+      right: auto;
+      left: 8px;
     }
   }
 }

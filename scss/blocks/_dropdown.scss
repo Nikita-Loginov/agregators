@@ -153,10 +153,12 @@
   &--simple {
     .dropdown {
       &__content {
-        width: 144px;
+        width: fit-content;
+        max-width: 200px;
         left: 50%;
         padding: 8px;
         transform: translateX(-50%);
+        white-space: nowrap;
       }
     }
   }

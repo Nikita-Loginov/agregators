@@ -17,40 +17,75 @@
 
   &--big {
     .filter {
+      white-space: nowrap;
+
       &__item {
         width: 100%;
+
+        .button:not(.button--cub) {
+          width: 100%;
+        }
       }
 
       &__items {
-        grid-template-columns: calculate-clamp(250px, 650px, 1920px, 1600px) 91px auto 160px 160px 110px auto auto auto;
+        grid-template-columns: calculate-clamp(250px, 600px, 1920px, 1600px) 91px auto 160px 160px 110px 1fr 1fr auto 1fr;
         justify-content: flex-start;
 
         @media (max-width: $xl-desktop-breakpoint) {
-          display: flex;
+          grid-template-columns: calculate-clamp(250px, 600px, 1920px, 1600px) 91px auto 160px 160px 1fr auto 1fr;
 
-          .filter__item {
-            // .button {
-            //   width: 100%;
-            // }
+          // .filter__item {
+          //   // .button {
+          //   //   width: 100%;
+          //   // }
 
-            &:has(.button),
-            &:has(.checkbox-box) {
-              width: fit-content;
-            }
+          //   &:has(.button),
+          //   &:has(.checkbox-box) {
+          //     width: fit-content;
+          //   }
 
-            &:has(.select-box--search) {
-              width: calculate-clamp(170px, 250px, 1439px, 1023px);
-              flex-shrink: 0;
-            }
+          //   &:has(.select-box--search) {
+          //     width: calculate-clamp(170px, 250px, 1439px, 1023px);
+          //     flex-shrink: 0;
+          //   }
 
-            .button--cub {
-              width: calculate-clamp(40px, 48px, 1023px, 767px);
-            }
+          //   .button--cub {
+          //     width: calculate-clamp(40px, 48px, 1023px, 767px);
+          //   }
+          // }
+        }
+
+        @media (max-width: $desktop-breakpoint) and (min-width: $tablet-breakpoint) {
+          display: grid;
+          grid-template-columns: calculate-clamp(191px, 250px, 1440px, 1023px) calculate-clamp(76px, 91px, 1440px, 1023px) 1fr auto auto 1fr;
+
+          --font-size-xs: 14px;
+
+          .button,
+          .input-box__info,
+          .select-box .ts-control,
+          .checkbox-box {
+            min-height: 40px;
+          }
+
+          .button--cub {
+            width: 40px;
+            height: 40px;
+          }
+
+          .check__info-content {
+            min-height: 0;
+          }
+
+          .button,
+          .input-box__info,
+          .select-box .ts-control {
+            padding: 4px 16px;
           }
         }
 
         @media (max-width: $lg-breakpoint) {
-          --font-size-xs: 14px;
+
         }
 
         @media (max-width: $tablet-breakpoint) {

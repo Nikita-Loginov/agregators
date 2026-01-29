@@ -44,5 +44,27 @@
     .companie-card {
       @include companieCardMediaOrSmall;
     }
+
+    .good-item {
+      grid-template-columns: 40% auto;
+    }
+  }
+
+  @media (max-width: calc($lg-breakpoint + 1px)) {
+    .good-item {
+      grid-template-columns: 31% auto;
+
+      &__content {
+        padding: 8px 12px;
+      }
+
+      &__desc,
+      .tag .p3 {
+        font-size: var(--font-size-3xs);
+      }
+      &__top {
+        gap: 4px;
+      }
+    }
   }
 }
