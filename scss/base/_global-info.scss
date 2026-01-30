@@ -287,6 +287,10 @@ body.scrollBottom {
     border-radius: var(--radius-md);
   }
 
+  &__map--premium {
+    background-color: var(--primary-color-100);
+  }
+
   &__map--active {
     width: 34px;
     height: 34px;

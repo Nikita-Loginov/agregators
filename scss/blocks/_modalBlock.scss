@@ -977,6 +977,16 @@
       }
     }
   }
+
+  @media (max-width: calc($tablet-breakpoint)) {
+    .good-item {
+      grid-template-columns: 33% auto;
+    }
+
+    &__top {
+      gap: 2px;
+    }
+  }
 }
 
 body .wrapper {
