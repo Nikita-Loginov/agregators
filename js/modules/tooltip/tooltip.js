@@ -28,10 +28,10 @@ const showTooltip = (target) => {
 };
 
 const handleMouseOver = (e) => {
-  if (isTouchDevice()) return;
-
   const target = e.target.closest("[title], [data-tooltip]");
   if (!target || target === tooltipState.activeTarget) return;
+
+  if (!canShowTooltip(target)) return;
 
   showTooltip(target);
 };
@@ -45,9 +45,15 @@ const handleMouseOut = (e) => {
   removeTooltip();
 };
 
+const canShowTooltip = (target) => {
+  if (!isTouchDevice()) return true;
+
+  return target.dataset.tooltipTouch === "showed";
+};
+
 export const initTooltip = () => {
   document.addEventListener("mouseover", handleMouseOver);
   document.addEventListener("mouseout", handleMouseOut);
-  // window.addEventListener("scroll", removeTooltip);
+  window.addEventListener("scroll", removeTooltip);
   window.addEventListener("resize", removeTooltip);
 };

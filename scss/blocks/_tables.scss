@@ -1,5 +1,5 @@
 .table-grid {
-  --grid-template-columns: 60% repeat(3, calc(40% / 3));
+  --grid-template-columns: 60% repeat(3, 1fr);
   --gap-items: 4px;
   --gap-table: 4px;
 
@@ -56,8 +56,13 @@
         &:not(:last-child) {
           border-right: 1px solid var(--gray-color-600);
         }
-       
       }
+    }
+  }
+
+  &--bg-all {
+    .table-grid__row {
+      background-color: var(--gray-color-100);
     }
   }
 
@@ -77,6 +82,12 @@
     gap: var(--gap-items);
     border-radius: var(--radius-base);
     overflow: hidden;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-items);
   }
 
   &__cell {
@@ -174,7 +185,6 @@
   }
 
   &--media-two-head {
-    
     @media (max-width: $tablet-breakpoint) {
       .table-grid {
         &__header {

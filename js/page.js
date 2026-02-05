@@ -16,6 +16,7 @@ import { onChangeInput } from "./modules/functions.js";
 import { checkStorage, initStorage } from "./modules/localStorage.js";
 import { initTooltip } from "./modules/tooltip/tooltip.js";
 import { clearFormInputs } from "./modules/functions.js";
+import { handleKeyboardEffectsModal } from "./modules/modal.js";
 
 const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
@@ -57,6 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   document.addEventListener("click", handleGlobalEvents);
   document.addEventListener("input", onChangeInput);
+  document.addEventListener("keydown", handleKeyboardEffectsModal);
 
   if (!isTouchDevice) {
     document.addEventListener("mouseenter", initRatingStars, true);

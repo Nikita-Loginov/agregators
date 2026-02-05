@@ -1776,7 +1776,7 @@
       <main class="main">
         <section class="object">
           <div class="container">
-            <div class="object__inner">
+            <div class="object__inner object__inner--small">
               <div class="object-top">
                 <div class="object-top__header">
                   <div class="breadcrumbs">
@@ -1822,25 +1822,35 @@
                     </a>
                   </div>
 
-                  <div class="lg-show">
-                    <button class="button button--noMassa text-primary-100">
-                      <div class="icon icon--little">
-                        <span class="kit-icon flag"></span>
-                      </div>
+                  <div class="tablet-none">
+                    <div class="lg-show">
+                      <button class="button button--noMassa text-primary-100">
+                        <div class="icon icon--little">
+                          <span class="kit-icon flag"></span>
+                        </div>
 
-                      <p class="p3 regular-font">Report this property</p>
-                    </button>
+                        <p class="p3 regular-font">Report this property</p>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 <div class="object-top__info">
-                  <div class="gallery-simple gallery">
+                  <div
+                    class="gallery-simple gallery"
+                    data-gallery-relative-name="main-gallery"
+                  >
                     <div
                       class="gallery-simple__swiper-big gallery-simple__item"
                     >
                       <div class="swiper swiper--gallery-big">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-1"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1858,7 +1868,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="video-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/one.mp4"
@@ -1871,7 +1886,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1889,7 +1909,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-3"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -2029,7 +2054,10 @@
 
                         <div class="object-bottom__top-line">
                           <div class="md-desktop-show">
-                            <div class="object-bottom__top-line-btns">
+                            <div
+                              class="object-bottom__top-line-btns"
+                              style="width: 100%"
+                            >
                               <div
                                 class="share list-popup relative relative-top left-media"
                               >
@@ -2298,6 +2326,7 @@
                                 title="On the Map"
                                 class="button button--bg-secondary-200 modal-open"
                                 data-modal="mapModal"
+                                style="width: 100%"
                               >
                                 <div class="icon">
                                   <span class="kit-icon map"></span>
@@ -2927,7 +2956,9 @@
                     </div>
                   </div>
 
-                  <div class="object-bottom__item object-bottom__item-property">
+                  <div
+                    class="object-bottom__item object-bottom__item-property swiper-box--visible-tablet swiper-box--visible-tablet-inner"
+                  >
                     <h2 class="h4">Properties in SkyHills Astra</h2>
 
                     <div class="object-bottom__property">
@@ -7631,7 +7662,7 @@
                   </div>
 
                   <div
-                    class="object-bottom__item swiper-box swiper-box--pagination-bottom swiper-box--visible-tablet-inner also-section"
+                    class="object-bottom__item swiper-box swiper-box--pagination-bottom also-section swiper-box--visible-tablet swiper-box--visible-tablet-inner"
                   >
                     <h2 class="h4">Similar Property</h2>
 
@@ -8495,7 +8526,7 @@
                 </div>
 
                 <div class="object-bottom__banners">
-                  <aside class="contact-aside">
+                  <aside class="contact-aside object-bottom__sticky-banner">
                     <div class="contact-aside__items">
                       <div class="share list-popup relative relative-top">
                         <div class="share__btns">
@@ -13484,6 +13515,82 @@
         </div>
       </div>
     </form>
+  </div>
+</div>
+
+      <div class="modalBlock galleryModal" data-block="gallery-box">
+  <div class="modalBlock__inner galleryModal__inner tabs-box" data-tab-category="gallery">
+    <header class="modalBlock__head modalBlock__head--static">
+      <div class="checkbox-box tab-btns"></div>
+
+      <div class="swiper-pagination swiper-pagination--counter lg-show"></div>
+
+      <button class="modalBlock__close modal-close" type="button" aria-label="Закрыть модалку">
+        <div class="icon icon--big" style="color: var(--white-color)">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </header>
+
+    <div class="modalBlock__content">
+      <div class="galleryModal__box swiper-box" data-block-tab="gallery-all">
+        <div class="galleryModal__swiper-box galleryModal__swiper-box--big">
+          <button class="button button--bg-gray-300 button--circle arrow-swiper prev" type="button">
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-left-lg"></span>
+            </div>
+          </button>
+
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--big-gallery">
+              <div class="swiper-wrapper"></div>
+            </div>
+          </div>
+
+          <button class="button button--bg-gray-300 button--circle arrow-swiper next" type="button">
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-right-lg"></span>
+            </div>
+          </button>
+        </div>
+
+        <div class="galleryModal__swiper-box galleryModal__swiper-box--small">
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--small-gallery">
+              <div class="swiper-wrapper"></div>
+
+              <div class="arrows-swiper arrows-swiper--absolute arrows-swiper--absolute-full">
+                <button class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper prev" type="button">
+                  <div class="icon icon--big">
+                    <span class="kit-icon arrow-left-md"></span>
+                  </div>
+                </button>
+
+                <button class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper next" type="button">
+                  <div class="icon icon--big">
+                    <span class="kit-icon arrow-right-md"></span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrows-swiper arrows-swiper--bg galleryModal__arrows-main lg-show">
+      <button class="arrow-swiper prev" type="button" aria-label="Посмотреть прошлый слайд">
+        <div class="icon icon--big">
+          <span class="kit-icon arrow-left-md"></span>
+        </div>
+      </button>
+
+      <button class="arrow-swiper next" type="button" aria-label="Посмотреть следующий слайд">
+        <div class="icon icon--big">
+          <span class="kit-icon arrow-right-md"></span>
+        </div>
+      </button>
+    </div>
   </div>
 </div>
 

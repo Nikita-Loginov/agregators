@@ -1,5 +1,4 @@
 import { classAction } from "./classActions.js";
-import { initSwiperGallery } from "./gallery.js";
 
 const TAB__INFO = {
   nameTabBtn: "tab-btn",
@@ -113,17 +112,6 @@ function toggleClassesTabElements(elements) {
     }
 
     classAction(block, TAB__INFO.nameActiveClass, "add");
-
-    if (tabsBox.closest('[data-block="gallery-box"]')) {
-      const fisrtActiveSlide =
-        block.querySelector(".swiper--big-gallery .swiper-slide-active") ||
-        block.querySelector(".swiper--big-gallery .swiper-slide");
-
-      const name = fisrtActiveSlide.dataset.block;
-      const type = name.startsWith("img") ? "img" : "video";
-
-      initSwiperGallery(tabsBox.closest(".galleryModal"), type, name, true);
-    }
 
     if (functionTab) {
       functionTab();

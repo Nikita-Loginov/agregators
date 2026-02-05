@@ -18,7 +18,7 @@
     justify-content: space-between;
     gap: 4px;
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: var(--radius-base);
     cursor: pointer;
     transition: all 0.5s;
@@ -73,7 +73,7 @@
     gap: 4px;
   }
 
-  @media (max-width: 370px) {
+  @media (max-width: 359px) {
     &__btns {
       display: flex;
       flex-direction: column;

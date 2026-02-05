@@ -1,5 +1,28 @@
 const OFFSET = 8;
 
+const POSITIONS = {
+  top: {
+    space: (spaces) => spaces.top,
+    size: (ttRect) => ttRect.height,
+    className: "top",
+  },
+  bottom: {
+    space: (spaces) => spaces.bottom,
+    size: (ttRect) => ttRect.height,
+    className: "bottom",
+  },
+  left: {
+    space: (spaces) => spaces.left,
+    size: (ttRect) => ttRect.width,
+    className: "left",
+  },
+  right: {
+    space: (spaces) => spaces.right,
+    size: (ttRect) => ttRect.width,
+    className: "right",
+  },
+};
+
 export const positionTooltip = (target, tooltip) => {
   const rect = target.getBoundingClientRect();
   const ttRect = tooltip.getBoundingClientRect();
@@ -11,13 +34,9 @@ export const positionTooltip = (target, tooltip) => {
     right: window.innerWidth - rect.right,
   };
 
-  let position = "top";
 
-  if (spaces.top >= ttRect.height + OFFSET) position = "top";
-  else if (spaces.bottom >= ttRect.height + OFFSET) position = "bottom";
-  else if (spaces.right >= ttRect.width + OFFSET) position = "right";
-  else if (spaces.left >= ttRect.width + OFFSET) position = "left";
-
+  const position = getBestPosition(spaces, ttRect);
+  
   tooltip.classList.remove("top", "bottom", "left", "right");
   tooltip.classList.add(position);
 
@@ -45,4 +64,23 @@ export const positionTooltip = (target, tooltip) => {
 
   tooltip.style.top = `${top}px`;
   tooltip.style.left = `${left}px`;
+};
+
+const getBestPosition = (spaces, ttRect) => {
+  const entries = Object.entries(POSITIONS);
+
+  const fullyFits = entries.filter(([_, pos]) => {
+    return pos.space(spaces) >= pos.size(ttRect) + OFFSET;
+  });
+
+  if (fullyFits.length) {
+    return fullyFits[0][0];
+  }
+
+  return entries.reduce((best, current) => {
+    const [, bestPos] = best;
+    const [, currPos] = current;
+
+    return currPos.space(spaces) > bestPos.space(spaces) ? current : best;
+  })[0];
 };

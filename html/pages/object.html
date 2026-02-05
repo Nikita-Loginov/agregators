@@ -14,7 +14,7 @@
       <main class="main">
         <section class="object">
           <div class="container">
-            <div class="object__inner">
+            <div class="object__inner object__inner--small">
               <div class="object-top">
                 <div class="object-top__header">
                   <div class="breadcrumbs">
@@ -61,25 +61,33 @@
                     </a>
                   </div>
 
-                  <div class="lg-show">
-                    <button class="button button--noMassa text-primary-100">
-                      <div class="icon icon--little">
-                        <span class="kit-icon flag"></span>
-                      </div>
+                  <div class="tablet-none">
+                    <div class="lg-show">
+                      <button class="button button--noMassa text-primary-100">
+                        <div class="icon icon--little">
+                          <span class="kit-icon flag"></span>
+                        </div>
 
-                      <p class="p3 regular-font">Report this property</p>
-                    </button>
+                        <p class="p3 regular-font">Report this property</p>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 <div class="object-top__info">
-                  <div class="gallery-simple gallery">
+                  <div class="gallery-simple gallery" data-gallery-relative-name="main-gallery">
                     <div
                       class="gallery-simple__swiper-big gallery-simple__item"
+                      
                     >
                       <div class="swiper swiper--gallery-big">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-1"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -97,7 +105,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="video-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/two.mp4"
@@ -110,7 +123,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="video-gallery-1"
+                          >
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/one.mp4"
@@ -123,7 +141,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -141,7 +164,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-3"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -159,7 +187,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-4"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -177,7 +210,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-5"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -195,7 +233,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-6"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -213,7 +256,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-7"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -533,11 +581,13 @@
                                     </div>
 
                                     <div
-                                      class="table-grid table-grid--two table-grid--odd"
+                                      class="table-grid table-grid--two table-grid--odd table-grid--noGap"
                                     >
                                       <div class="table-grid__items">
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-11-10"
                                               >10.11.2025</time
                                             >
@@ -553,7 +603,9 @@
                                         </div>
 
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-09-23"
                                               >23.09.2025</time
                                             >
@@ -569,7 +621,9 @@
                                         </div>
 
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-09-06"
                                               >06.09.2025</time
                                             >
@@ -585,7 +639,9 @@
                                         </div>
 
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-08-17"
                                               >17.08.2025</time
                                             >
@@ -644,7 +700,7 @@
 
                         <div class="object-bottom__top-line">
                           <div class="md-desktop-show">
-                            <div class="object-bottom__top-line-btns">
+                            <div class="object-bottom__top-line-btns" style="width: 100%;">
                               <div
                                 class="share list-popup relative relative-top left-media"
                               >
@@ -673,6 +729,7 @@
 
                               <button
                                 class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--comparison"
+                               
                               >
                                 <div class="icon">
                                   <span
@@ -685,6 +742,7 @@
                                 title="On the Map"
                                 class="button button--bg-secondary-200 modal-open"
                                 data-modal="mapModal"
+                                style="width: 100%;"
                               >
                                 <div class="icon">
                                   <span class="kit-icon map"></span>
@@ -1265,7 +1323,7 @@
                       class="button button--bg-secondary-200 button--rounded-2xl modal-open full-btn-media"
                       data-modal="featuresModal"
                     >
-                      <p class="p2 medium-font">See all</p>
+                      <p class="p2-add medium-font">See all</p>
 
                       <div class="icon">
                         <span class="kit-icon arrow-right-lg"></span>
@@ -1284,16 +1342,12 @@
                               <p class="h6 medium-font">$ 7 592</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-show"
+                                class="tabs-box__dropdown tablet-show"
+                                data-tooltip="Цена квадратного метра в центре города"
+                                data-tooltip-touch="showed"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Цена квадратного метра в центре города
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -1304,16 +1358,11 @@
                               <p class="p2">Price per sq.m.</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-none"
+                                class="tabs-box__dropdown tablet-none"
+                                data-tooltip="Цена квадратного метра в центре города"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Цена квадратного метра в центре города
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -1326,16 +1375,12 @@
                               <p class="h6 medium-font">172</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-show"
+                                class="tabs-box__dropdown tablet-show"
+                                data-tooltip="177/240 Очень высокий"
+                                data-tooltip-touch="showed"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">177/240</p>
-
-                                  <p class="p2">Очень высокий</p>
                                 </div>
                               </div>
                             </div>
@@ -1346,16 +1391,11 @@
                               <p class="p2">Quality of Life Index</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-none"
+                                class="tabs-box__dropdown tablet-none"
+                                data-tooltip="177/240 Очень высокий"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">177/240</p>
-
-                                  <p class="p2">Очень высокий</p>
                                 </div>
                               </div>
                             </div>
@@ -1368,26 +1408,16 @@
                               <p class="h6 medium-font">61</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-show"
+                                class="tabs-box__dropdown tablet-show"
+                                data-tooltip=" Индекс стоимости проживания (без учета
+                                аренды) - это относительный показатель,
+                                учитывающий цены на потребительские товары,
+                                включая товары общего потребления,
+                                рестораны, транспорт и услуги. "
+                                data-tooltip-touch="showed"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Индекс стоимости проживания (без учета
-                                    аренды) - это относительный показатель,
-                                    учитывающий цены на потребительские товары,
-                                    включая товары общего потребления,
-                                    рестораны, транспорт и услуги. Индекс
-                                    стоимости проживания не включает в себя
-                                    расходны на жилье, такие как арендная плата
-                                    или ипотека. Если город имеет индекс
-                                    стоимости проживания равный 120, это значит,
-                                    что он на 20% дороже, чем Нью Йорк (без
-                                    учета аренды).
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -1398,26 +1428,15 @@
                               <p class="p2">Cost of living Index</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-none"
+                                class="tabs-box__dropdown tablet-none"
+                                data-tooltip=" Индекс стоимости проживания (без учета
+                                аренды) - это относительный показатель,
+                                учитывающий цены на потребительские товары,
+                                включая товары общего потребления,
+                                рестораны, транспорт и услуги."
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Индекс стоимости проживания (без учета
-                                    аренды) - это относительный показатель,
-                                    учитывающий цены на потребительские товары,
-                                    включая товары общего потребления,
-                                    рестораны, транспорт и услуги. Индекс
-                                    стоимости проживания не включает в себя
-                                    расходны на жилье, такие как арендная плата
-                                    или ипотека. Если город имеет индекс
-                                    стоимости проживания равный 120, это значит,
-                                    что он на 20% дороже, чем Нью Йорк (без
-                                    учета аренды).
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -1454,7 +1473,7 @@
                     </div>
 
                     <div class="object-bottom__item">
-                      <div class="table-grid tablet-none">
+                      <div class="table-grid tablet-none table-grid--bg-all">
                         <div class="table-grid__header table-grid__row">
                           <div class="table-grid__cell">
                             <p class="p2 semibold-font">Parameters</p>
@@ -1775,10 +1794,16 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="tablet-show">
+                    <aside class="contact-aside" style="width: 100%;">
+                      @@include('../modules/contact-form-aside.html')
+                    </aside>
+                  </div>
                 </div>
 
                 <div class="object-bottom__banners">
-                  <aside class="contact-aside">
+                  <aside class="contact-aside object-bottom__sticky-banner">
                     <div class="contact-aside__items">
                       <div class="share list-popup relative relative-top">
                         <div class="share__btns">

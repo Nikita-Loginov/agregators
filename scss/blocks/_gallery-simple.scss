@@ -2,12 +2,12 @@
   display: flex;
   justify-content: space-between;
   gap: 8px;
-  height: calculate-clamp(414px, 523px, 1439px, 1023px);;
+  height: calculate-clamp(414px, 523px, 1439px, 1023px);
 
   --gap-small-items: 8px;
 
   &--big {
-    height: calculate-clamp(414px, 608px, 1439px, 1023px);;
+    height: calculate-clamp(414px, 608px, 1439px, 1023px);
 
     .gallery-simple {
       &__item {
@@ -45,13 +45,12 @@
         overflow: hidden;
         cursor: pointer;
         border: 2px solid transparent;
-        transition: all .3s;
+        transition: all 0.3s;
 
         &:hover {
           border-color: var(--secondary-color-100);
         }
       }
-     
     }
   }
 
@@ -78,9 +77,15 @@
     }
   }
 
+  .swiper-slide {
+    &.modal-open {
+      cursor: pointer;
+    }
+  }
+
   &__details {
     position: absolute;
-    inset:12px;
+    inset: 12px;
     z-index: 10;
     display: flex;
     flex-direction: column;
@@ -131,7 +136,7 @@
 
     &--big {
       height: calculate-clamp(270px, 414px, 767px, 480px);
-  
+
       .gallery-simple {
         &__item {
           border-radius: 0;

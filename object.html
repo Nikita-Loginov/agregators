@@ -1776,7 +1776,7 @@
       <main class="main">
         <section class="object">
           <div class="container">
-            <div class="object__inner">
+            <div class="object__inner object__inner--small">
               <div class="object-top">
                 <div class="object-top__header">
                   <div class="breadcrumbs">
@@ -1823,25 +1823,33 @@
                     </a>
                   </div>
 
-                  <div class="lg-show">
-                    <button class="button button--noMassa text-primary-100">
-                      <div class="icon icon--little">
-                        <span class="kit-icon flag"></span>
-                      </div>
+                  <div class="tablet-none">
+                    <div class="lg-show">
+                      <button class="button button--noMassa text-primary-100">
+                        <div class="icon icon--little">
+                          <span class="kit-icon flag"></span>
+                        </div>
 
-                      <p class="p3 regular-font">Report this property</p>
-                    </button>
+                        <p class="p3 regular-font">Report this property</p>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 <div class="object-top__info">
-                  <div class="gallery-simple gallery">
+                  <div class="gallery-simple gallery" data-gallery-relative-name="main-gallery">
                     <div
                       class="gallery-simple__swiper-big gallery-simple__item"
+                      
                     >
                       <div class="swiper swiper--gallery-big">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-1"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1859,7 +1867,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="video-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/two.mp4"
@@ -1872,7 +1885,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="video-gallery-1"
+                          >
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/one.mp4"
@@ -1885,7 +1903,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1903,7 +1926,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-3"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1921,7 +1949,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-4"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1939,7 +1972,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-5"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1957,7 +1995,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-6"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -1975,7 +2018,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-7"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -2314,11 +2362,13 @@
                                     </div>
 
                                     <div
-                                      class="table-grid table-grid--two table-grid--odd"
+                                      class="table-grid table-grid--two table-grid--odd table-grid--noGap"
                                     >
                                       <div class="table-grid__items">
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-11-10"
                                               >10.11.2025</time
                                             >
@@ -2334,7 +2384,9 @@
                                         </div>
 
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-09-23"
                                               >23.09.2025</time
                                             >
@@ -2350,7 +2402,9 @@
                                         </div>
 
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-09-06"
                                               >06.09.2025</time
                                             >
@@ -2366,7 +2420,9 @@
                                         </div>
 
                                         <div class="table-grid__row">
-                                          <div class="table-grid__cell">
+                                          <div
+                                            class="table-grid__cell text-dark-500"
+                                          >
                                             <time datetime="2025-08-17"
                                               >17.08.2025</time
                                             >
@@ -2425,7 +2481,7 @@
 
                         <div class="object-bottom__top-line">
                           <div class="md-desktop-show">
-                            <div class="object-bottom__top-line-btns">
+                            <div class="object-bottom__top-line-btns" style="width: 100%;">
                               <div
                                 class="share list-popup relative relative-top left-media"
                               >
@@ -2682,6 +2738,7 @@
 
                               <button
                                 class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--comparison"
+                               
                               >
                                 <div class="icon">
                                   <span
@@ -2694,6 +2751,7 @@
                                 title="On the Map"
                                 class="button button--bg-secondary-200 modal-open"
                                 data-modal="mapModal"
+                                style="width: 100%;"
                               >
                                 <div class="icon">
                                   <span class="kit-icon map"></span>
@@ -3347,7 +3405,7 @@
                       class="button button--bg-secondary-200 button--rounded-2xl modal-open full-btn-media"
                       data-modal="featuresModal"
                     >
-                      <p class="p2 medium-font">See all</p>
+                      <p class="p2-add medium-font">See all</p>
 
                       <div class="icon">
                         <span class="kit-icon arrow-right-lg"></span>
@@ -3366,16 +3424,12 @@
                               <p class="h6 medium-font">$ 7 592</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-show"
+                                class="tabs-box__dropdown tablet-show"
+                                data-tooltip="Цена квадратного метра в центре города"
+                                data-tooltip-touch="showed"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Цена квадратного метра в центре города
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -3386,16 +3440,11 @@
                               <p class="p2">Price per sq.m.</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-none"
+                                class="tabs-box__dropdown tablet-none"
+                                data-tooltip="Цена квадратного метра в центре города"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Цена квадратного метра в центре города
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -3408,16 +3457,12 @@
                               <p class="h6 medium-font">172</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-show"
+                                class="tabs-box__dropdown tablet-show"
+                                data-tooltip="177/240 Очень высокий"
+                                data-tooltip-touch="showed"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">177/240</p>
-
-                                  <p class="p2">Очень высокий</p>
                                 </div>
                               </div>
                             </div>
@@ -3428,16 +3473,11 @@
                               <p class="p2">Quality of Life Index</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-none"
+                                class="tabs-box__dropdown tablet-none"
+                                data-tooltip="177/240 Очень высокий"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">177/240</p>
-
-                                  <p class="p2">Очень высокий</p>
                                 </div>
                               </div>
                             </div>
@@ -3450,26 +3490,16 @@
                               <p class="h6 medium-font">61</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-show"
+                                class="tabs-box__dropdown tablet-show"
+                                data-tooltip=" Индекс стоимости проживания (без учета
+                                аренды) - это относительный показатель,
+                                учитывающий цены на потребительские товары,
+                                включая товары общего потребления,
+                                рестораны, транспорт и услуги. "
+                                data-tooltip-touch="showed"
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Индекс стоимости проживания (без учета
-                                    аренды) - это относительный показатель,
-                                    учитывающий цены на потребительские товары,
-                                    включая товары общего потребления,
-                                    рестораны, транспорт и услуги. Индекс
-                                    стоимости проживания не включает в себя
-                                    расходны на жилье, такие как арендная плата
-                                    или ипотека. Если город имеет индекс
-                                    стоимости проживания равный 120, это значит,
-                                    что он на 20% дороже, чем Нью Йорк (без
-                                    учета аренды).
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -3480,26 +3510,15 @@
                               <p class="p2">Cost of living Index</p>
 
                               <div
-                                class="tabs-box__dropdown list-popup relative relative-top list-title tablet-none"
+                                class="tabs-box__dropdown tablet-none"
+                                data-tooltip=" Индекс стоимости проживания (без учета
+                                аренды) - это относительный показатель,
+                                учитывающий цены на потребительские товары,
+                                включая товары общего потребления,
+                                рестораны, транспорт и услуги."
                               >
                                 <div class="icon">
                                   <span class="kit-icon info"></span>
-                                </div>
-
-                                <div class="list-popup__box">
-                                  <p class="p2">
-                                    Индекс стоимости проживания (без учета
-                                    аренды) - это относительный показатель,
-                                    учитывающий цены на потребительские товары,
-                                    включая товары общего потребления,
-                                    рестораны, транспорт и услуги. Индекс
-                                    стоимости проживания не включает в себя
-                                    расходны на жилье, такие как арендная плата
-                                    или ипотека. Если город имеет индекс
-                                    стоимости проживания равный 120, это значит,
-                                    что он на 20% дороже, чем Нью Йорк (без
-                                    учета аренды).
-                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -3536,7 +3555,7 @@
                     </div>
 
                     <div class="object-bottom__item">
-                      <div class="table-grid tablet-none">
+                      <div class="table-grid tablet-none table-grid--bg-all">
                         <div class="table-grid__header table-grid__row">
                           <div class="table-grid__cell">
                             <p class="p2 semibold-font">Parameters</p>
@@ -3857,10 +3876,89 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="tablet-show">
+                    <aside class="contact-aside" style="width: 100%;">
+                      <div class="contact-form-aside">
+  <header class="contact-form-aside__header">
+    <div class="contact-form-aside__logo">
+      <picture>
+        <source srcset="/img/company/one.webp 1x, /img/company/one2x.webp 2x" />
+        <img src="/img/company/one.webp" alt="фотография" loading="lazy" />
+      </picture>
+    </div>
+
+    <p class="p3 text-secondary-300">Emaar Properties</p>
+  </header>
+
+  <div class="contact-form-aside__content">
+    <div class="person">
+      <div class="person__img">
+        <picture>
+          <source
+            srcset="/img/persons/one.webp 1x, /img/persons/one2x.webp 2x"
+          />
+          <img src="/img/persons/one.webp" alt="фотография" loading="lazy" />
+        </picture>
+      </div>
+
+      <div class="person__content">
+        <p class="p1 text-secondary-300 semibold-font">Elisabeth Nixon</p>
+
+        <p class="p4 text-dark-500">Emaar Properties Manager</p>
+      </div>
+    </div>
+
+    <div class="contact-form-aside__footer">
+      <a
+        href="mailto:test@gmail.com"
+        aria-label="Написать на почту test@gmail.com"
+        class="button button--bg-secondary-200"
+      >
+        <div class="icon">
+          <span class="kit-icon mail"></span>
+        </div>
+
+        <p class="p2 medium-font">Email</p>
+      </a>
+
+      <a
+        href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
+        aria-label="Поделиться статьей в WhatsApp"
+        title="WhatsApp"
+        class="button button--bg-green-400"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="icon">
+          <svg>
+            <use xlink:href="#whats-icon"></use>
+          </svg>
+        </span>
+
+        <p class="p2">WhatsApp</p>
+      </a>
+
+      <button
+        class="button button--bg-secondary-300 contact-form-aside__footer-item-big modal-open"
+        data-modal="contactUpModal"
+      >
+      <div class="icon">
+        <span class="kit-icon phone"></span>
+      </div>
+
+        <p class="p2 medium-font">Request Call</p>
+      </button>
+    </div>
+  </div>
+</div>
+
+                    </aside>
+                  </div>
                 </div>
 
                 <div class="object-bottom__banners">
-                  <aside class="contact-aside">
+                  <aside class="contact-aside object-bottom__sticky-banner">
                     <div class="contact-aside__items">
                       <div class="share list-popup relative relative-top">
                         <div class="share__btns">
@@ -8304,48 +8402,13 @@
   </div>
 </div>
  <div class="modalBlock galleryModal" data-block="gallery-box">
-  <div
-    class="modalBlock__inner galleryModal__inner tabs-box"
-    data-tab-category="gallery"
-  >
+  <div class="modalBlock__inner galleryModal__inner tabs-box" data-tab-category="gallery">
     <header class="modalBlock__head modalBlock__head--static">
-      <div class="checkbox-box tab-btns">
-        <label class="check tab-btn" data-btn-tab="gallery-imgs">
-          <div class="check__info">
-            <input type="radio" checked name="gallery-popup" />
-
-            <div class="check__info-content">
-              <div class="icon icon--big">
-                <span class="kit-icon image"></span>
-              </div>
-
-              <span class="p2">Photos (27)</span>
-            </div>
-          </div>
-        </label>
-
-        <label class="check tab-btn" data-btn-tab="gallery-videos">
-          <div class="check__info">
-            <input type="radio" name="gallery-popup" />
-
-            <div class="check__info-content">
-              <div class="icon icon--big">
-                <span class="kit-icon play-circle"></span>
-              </div>
-
-              <span class="p2">Videos (2)</span>
-            </div>
-          </div>
-        </label>
-      </div>
+      <div class="checkbox-box tab-btns"></div>
 
       <div class="swiper-pagination swiper-pagination--counter lg-show"></div>
 
-      <button
-        class="modalBlock__close modal-close"
-        type="button"
-        aria-label="Закрыть модалку"
-      >
+      <button class="modalBlock__close modal-close" type="button" aria-label="Закрыть модалку">
         <div class="icon icon--big" style="color: var(--white-color)">
           <span class="kit-icon close-md"></span>
         </div>
@@ -8353,16 +8416,9 @@
     </header>
 
     <div class="modalBlock__content">
-      <div
-        class="galleryModal__box galleryModal__box-imgs swiper-box tab-item active"
-        data-block-tab="gallery-imgs"
-        data-block-category="gallery"
-      >
+      <div class="galleryModal__box swiper-box" data-block-tab="gallery-all">
         <div class="galleryModal__swiper-box galleryModal__swiper-box--big">
-          <button
-            class="button button--bg-gray-300 button--circle arrow-swiper prev"
-            type="button"
-          >
+          <button class="button button--bg-gray-300 button--circle arrow-swiper prev" type="button">
             <div class="icon icon--big">
               <span class="kit-icon arrow-left-lg"></span>
             </div>
@@ -8370,140 +8426,11 @@
 
           <div class="galleryModal__swiper-block">
             <div class="swiper swiper--big-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" data-block="img-gallery-1">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/one.webp   1x,
-                          /img/decor/one2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/one.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide" data-block="img-gallery-2">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/two.webp   1x,
-                          /img/decor/two2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/two.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide" data-block="img-gallery-3">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/three.webp   1x,
-                          /img/decor/three2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/three.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide" data-block="img-gallery-4">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/object/one.webp   1x,
-                          /img/object/one2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/object/one.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide" data-block="img-gallery-5">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/four.webp   1x,
-                          /img/decor/four2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/four.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide" data-block="img-gallery-6">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/five.webp   1x,
-                          /img/decor/five2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/five.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide" data-block="img-gallery-7">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/six.webp   1x,
-                          /img/decor/six2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/six.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
+              <div class="swiper-wrapper"></div>
             </div>
           </div>
 
-          <button
-            class="button button--bg-gray-300 button--circle arrow-swiper next"
-            type="button"
-          >
+          <button class="button button--bg-gray-300 button--circle arrow-swiper next" type="button">
             <div class="icon icon--big">
               <span class="kit-icon arrow-right-lg"></span>
             </div>
@@ -8513,264 +8440,16 @@
         <div class="galleryModal__swiper-box galleryModal__swiper-box--small">
           <div class="galleryModal__swiper-block">
             <div class="swiper swiper--small-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/one.webp   1x,
-                          /img/decor/one2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/one.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
+              <div class="swiper-wrapper"></div>
 
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/two.webp   1x,
-                          /img/decor/two2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/two.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/three.webp   1x,
-                          /img/decor/three2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/three.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/object/one.webp   1x,
-                          /img/object/one2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/object/one.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/four.webp   1x,
-                          /img/decor/four2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/four.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/five.webp   1x,
-                          /img/decor/five2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/five.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/decor/six.webp   1x,
-                          /img/decor/six2x.webp 2x
-                        "
-                      />
-                      <img
-                        src="/img/decor/six.webp"
-                        alt="фотография"
-                        loading="lazy"
-                      />
-                    </picture>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="arrows-swiper arrows-swiper--absolute arrows-swiper--absolute-full"
-              >
-                <button
-                  class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper prev"
-                  type="button"
-                >
-                  <span class="icon icon--little">
-                    <span class="kit-icon chevron-left"></span>
-                  </span>
-                </button>
-
-                <button
-                  class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper next"
-                  type="button"
-                >
-                  <span class="icon icon--little" style="rotate: -180deg">
-                    <span class="kit-icon chevron-left"></span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="galleryModal__box galleryModal__box-videos tab-item swiper-box"
-        data-block-tab="gallery-videos"
-        data-block-category="gallery"
-      >
-        <div class="galleryModal__swiper-box galleryModal__swiper-box--big">
-          <button
-            class="button button--bg-gray-300 button--circle arrow-swiper prev"
-            type="button"
-          >
-            <div class="icon icon--big">
-              <span class="kit-icon arrow-left-lg"></span>
-            </div>
-          </button>
-
-          <div class="galleryModal__swiper-block">
-            <div class="swiper swiper--big-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" data-block="video-gallery-2">
-                  <div class="galleryModal__img">
-                    <video
-                      src="/videos/two.mp4"
-                      poster="/videos/posters/two.png"
-                      loop
-                      muted
-                      preload="metadata"
-                      playsinline
-                    ></video>
-                  </div>
-                </div>
-
-                <div class="swiper-slide" data-block="video-gallery-1">
-                  <div class="galleryModal__img">
-                    <video
-                      src="/videos/one.mp4"
-                      poster="/videos/posters/one.png"
-                      loop
-                      muted
-                      preload="metadata"
-                      playsinline
-                    ></video>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <button
-            class="button button--bg-gray-300 button--circle arrow-swiper next"
-            type="button"
-          >
-            <div class="icon icon--big">
-              <span class="kit-icon arrow-right-lg"></span>
-            </div>
-          </button>
-        </div>
-
-        <div class="galleryModal__swiper-box galleryModal__swiper-box--small">
-          <div class="galleryModal__swiper-block">
-            <div class="swiper swiper--small-gallery">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide" data-block="video-gallery-2">
-                  <div class="galleryModal__img">
-                    <video
-                      src="/videos/two.mp4"
-                      poster="/videos/posters/two.png"
-                      loop
-                      muted
-                      preload="metadata"
-                      playsinline
-                    ></video>
-                  </div>
-                </div>
-
-                <div class="swiper-slide">
-                  <div class="galleryModal__img">
-                    <video
-                      src="/videos/one.mp4"
-                      poster="/videos/posters/one.png"
-                      loop
-                      muted
-                      preload="metadata"
-                      playsinline
-                    ></video>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="arrows-swiper arrows-swiper--absolute arrows-swiper--absolute-full"
-              >
-                <button
-                  class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper prev"
-                  type="button"
-                >
+              <div class="arrows-swiper arrows-swiper--absolute arrows-swiper--absolute-full">
+                <button class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper prev" type="button">
                   <div class="icon icon--big">
                     <span class="kit-icon arrow-left-md"></span>
                   </div>
                 </button>
 
-                <button
-                  class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper next"
-                  type="button"
-                >
+                <button class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper next" type="button">
                   <div class="icon icon--big">
                     <span class="kit-icon arrow-right-md"></span>
                   </div>
@@ -8782,24 +8461,14 @@
       </div>
     </div>
 
-    <div
-      class="arrows-swiper arrows-swiper--bg galleryModal__arrows-main lg-show"
-    >
-      <button
-        class="arrow-swiper prev"
-        type="button"
-        aria-label="Посмотреть прошлый слайд"
-      >
+    <div class="arrows-swiper arrows-swiper--bg galleryModal__arrows-main lg-show">
+      <button class="arrow-swiper prev" type="button" aria-label="Посмотреть прошлый слайд">
         <div class="icon icon--big">
           <span class="kit-icon arrow-left-md"></span>
         </div>
       </button>
 
-      <button
-        class="arrow-swiper next"
-        type="button"
-        aria-label="Посмотреть прошлый слайд"
-      >
+      <button class="arrow-swiper next" type="button" aria-label="Посмотреть следующий слайд">
         <div class="icon icon--big">
           <span class="kit-icon arrow-right-md"></span>
         </div>
@@ -8902,10 +8571,10 @@
       <div class="modalBlock__block">
         <p class="p1 medium-font" style="text-align: center">Price history</p>
 
-        <div class="table-grid table-grid--two table-grid--odd">
+        <div class="table-grid table-grid--two table-grid--odd table-grid--noGap">
           <div class="table-grid__items">
             <div class="table-grid__row">
-              <div class="table-grid__cell">
+              <div class="table-grid__cell text-dark-500">
                 <time datetime="2025-11-10">10.11.2025</time>
               </div>
 
@@ -8915,7 +8584,7 @@
             </div>
 
             <div class="table-grid__row">
-              <div class="table-grid__cell">
+              <div class="table-grid__cell text-dark-500">
                 <time datetime="2025-09-23">23.09.2025</time>
               </div>
 
@@ -8925,7 +8594,7 @@
             </div>
 
             <div class="table-grid__row">
-              <div class="table-grid__cell">
+              <div class="table-grid__cell text-dark-500">
                 <time datetime="2025-09-06">06.09.2025</time>
               </div>
 
@@ -8935,7 +8604,7 @@
             </div>
 
             <div class="table-grid__row">
-              <div class="table-grid__cell">
+              <div class="table-grid__cell text-dark-500">
                 <time datetime="2025-08-17">17.08.2025</time>
               </div>
 
@@ -8945,7 +8614,7 @@
             </div>
 
             <div class="table-grid__row">
-              <div class="table-grid__cell">
+              <div class="table-grid__cell text-dark-500">
                 <time datetime="2025-07-31">31.07.2025</time>
               </div>
 

@@ -40,6 +40,7 @@
 
     .arrow-swiper {
       position: absolute;
+      transform: translateX(-50%);
 
       &.prev {
         top: 0;
@@ -68,8 +69,6 @@
       min-width: 70px;
     }
   }
-
-  
 
   &--full-static {
     width: 100%;

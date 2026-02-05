@@ -14,7 +14,7 @@
       <main class="main">
         <section class="object">
           <div class="container">
-            <div class="object__inner">
+            <div class="object__inner object__inner--small">
               <div class="object-top">
                 <div class="object-top__header">
                   <div class="breadcrumbs">
@@ -60,25 +60,35 @@
                     </a>
                   </div>
 
-                  <div class="lg-show">
-                    <button class="button button--noMassa text-primary-100">
-                      <div class="icon icon--little">
-                        <span class="kit-icon flag"></span>
-                      </div>
+                  <div class="tablet-none">
+                    <div class="lg-show">
+                      <button class="button button--noMassa text-primary-100">
+                        <div class="icon icon--little">
+                          <span class="kit-icon flag"></span>
+                        </div>
 
-                      <p class="p3 regular-font">Report this property</p>
-                    </button>
+                        <p class="p3 regular-font">Report this property</p>
+                      </button>
+                    </div>
                   </div>
                 </div>
 
                 <div class="object-top__info">
-                  <div class="gallery-simple gallery">
+                  <div
+                    class="gallery-simple gallery"
+                    data-gallery-relative-name="main-gallery"
+                  >
                     <div
                       class="gallery-simple__swiper-big gallery-simple__item"
                     >
                       <div class="swiper swiper--gallery-big">
                         <div class="swiper-wrapper">
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-1"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -96,7 +106,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="video-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/one.mp4"
@@ -109,7 +124,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-2"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -127,7 +147,12 @@
                             </div>
                           </div>
 
-                          <div class="swiper-slide">
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-3"
+                          >
                             <div class="gallery-simple__img-box">
                               <picture>
                                 <source
@@ -266,7 +291,10 @@
 
                         <div class="object-bottom__top-line">
                           <div class="md-desktop-show">
-                            <div class="object-bottom__top-line-btns">
+                            <div
+                              class="object-bottom__top-line-btns"
+                              style="width: 100%"
+                            >
                               <div
                                 class="share list-popup relative relative-top left-media"
                               >
@@ -307,6 +335,7 @@
                                 title="On the Map"
                                 class="button button--bg-secondary-200 modal-open"
                                 data-modal="mapModal"
+                                style="width: 100%"
                               >
                                 <div class="icon">
                                   <span class="kit-icon map"></span>
@@ -863,7 +892,9 @@
                     </div>
                   </div>
 
-                  <div class="object-bottom__item object-bottom__item-property">
+                  <div
+                    class="object-bottom__item object-bottom__item-property swiper-box--visible-tablet swiper-box--visible-tablet-inner"
+                  >
                     <h2 class="h4">Properties in SkyHills Astra</h2>
 
                     <div class="object-bottom__property">
@@ -3722,7 +3753,7 @@
                   </div>
 
                   <div
-                    class="object-bottom__item swiper-box swiper-box--pagination-bottom swiper-box--visible-tablet-inner also-section"
+                    class="object-bottom__item swiper-box swiper-box--pagination-bottom also-section swiper-box--visible-tablet swiper-box--visible-tablet-inner"
                   >
                     <h2 class="h4">Similar Property</h2>
 
@@ -3760,7 +3791,7 @@
                 </div>
 
                 <div class="object-bottom__banners">
-                  <aside class="contact-aside">
+                  <aside class="contact-aside object-bottom__sticky-banner">
                     <div class="contact-aside__items">
                       <div class="share list-popup relative relative-top">
                         <div class="share__btns">
@@ -3816,6 +3847,7 @@
       @@include('../modals/features.html') @@include('../modals/success.html')
       @@include('../modals/request.html') @@include('../modals/floor.html')
       @@include('../modals/map.html') @@include('../modals/filter.html')
+      @@include('../modals/gallery.html')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>

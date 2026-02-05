@@ -289,6 +289,10 @@
     gap: 4px;
   }
 
+  &__key {
+    color: var(--dark-color-500);
+  }
+
   &__img {
     width: 90px;
     aspect-ratio: 1 / 1;
@@ -315,6 +319,12 @@
 .list-price {
   .list-popup__box {
     padding: 12px 4px 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: auto;
+    max-width: 300px;
+    white-space: nowrap;
   }
 
   &__header {

@@ -1,8 +1,18 @@
-import { initGallery } from "./gallery.js";
+import { initGallery } from "./gallery/index.js";
 
 const CONFIG_MODAL = {
-  outsideHiddenModals: false, 
-}
+  outsideHiddenModals: false,
+  keyboard: {
+    escClose: true,
+  },
+};
+
+const keyboardEffects = {
+  Escape: {
+    enabled: () => CONFIG_MODAL.keyboard.escClose,
+    handler: (modal) => closeModalCore(modal),
+  },
+};
 
 const openModal = (e) => {
   const modalBtn = e.target.closest(".modal-open");
@@ -170,6 +180,21 @@ const setVideoSrc = (src, modalBlock) => {
   blockVideo.insertAdjacentHTML("beforeend", html);
 };
 
+export const closeModalCore = (modalBlock) => {
+  if (!modalBlock) return;
+
+  if (modalBlock.dataset.reset !== "no-clear") {
+    clearFormOnModalClose(modalBlock);
+  }
+
+  modalBlock.classList.remove("open");
+
+  if (!document.querySelector(".modalBlock.open")) {
+    document.body.classList.remove("open-modal");
+    document.documentElement.classList.remove("open-modal");
+  }
+};
+
 const closeModal = (e) => {
   const modalBlock = e.target.closest(".modalBlock");
   if (!modalBlock) return;
@@ -183,17 +208,7 @@ const closeModal = (e) => {
   }
 
   if (isClickOnOverlay || isClickOnCloseBtn) {
-    if (modalBlock.dataset.reset !== "no-clear") {
-      // console.log('dasdsa')
-      clearFormOnModalClose(modalBlock);
-    }
-
-    modalBlock.classList.remove("open");
-
-    if (document.querySelector(".modalBlock.open")) return;
-
-    document.body.classList.remove("open-modal");
-    document.documentElement.classList.remove("open-modal");
+    closeModalCore(modalBlock);
   }
 };
 
@@ -256,4 +271,17 @@ export const clearFormOnModalClose = (modalBlock) => {
       select.tomselect.refreshOptions(false);
     }
   });
+};
+
+export const handleKeyboardEffectsModal = (e) => {
+  const modal = document.querySelector(".modalBlock.open");
+  if (!modal) return;
+
+  const effect = keyboardEffects[e.key];
+  
+  if (!effect) return;
+
+  if (!effect.enabled(modal)) return;
+
+  effect.handler(modal);
 };

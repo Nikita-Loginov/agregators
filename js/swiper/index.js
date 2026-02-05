@@ -43,20 +43,20 @@ const BREAKPOINTS_CARDS_ITEMS = {
 export const TABLE_OPTIONS = {
   slidesPerView: 1,
   spaceBetween: 16,
-  // speed: 0,
-  // followFinger: false,
-  // touchReleaseOnEdges: true,
-  // allowTouchMove: false,
-  // simulateTouch: false,
-  // shortSwipes: false,
-  // longSwipes: false,
-  // allowSlidePrev: true,
-  // allowSlideNext: true,
-  // preventInteractionOnTransition: true,
-  // touchRatio: 0,
-  // touchAngle: 0,
-  // grabCursor: false,
-  // mousewheel: false,
+  speed: 0,
+  followFinger: false,
+  touchReleaseOnEdges: true,
+  allowTouchMove: false,
+  simulateTouch: false,
+  shortSwipes: false,
+  longSwipes: false,
+  allowSlidePrev: true,
+  allowSlideNext: true,
+  preventInteractionOnTransition: true,
+  touchRatio: 0,
+  touchAngle: 0,
+  grabCursor: false,
+  mousewheel: false,
 };
 
 export const CARDS_OPTIONS = {
@@ -227,6 +227,12 @@ export const SWIPERS = {
         el: ".gallery .swiper--gallery-big .swiper-pagination",
       },
 
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
+        pageUpDown: true,
+      },
+
       navigation: {
         nextEl: ".gallery .arrow-swiper.next",
         prevEl: ".gallery .arrow-swiper.prev",
@@ -250,6 +256,11 @@ export const SWIPERS = {
       navigation: {
         nextEl: ".gallery .swiper--gallery-small .arrow-swiper.next",
         prevEl: ".gallery .swiper--gallery-small .arrow-swiper.prev",
+      },
+
+      keyboard: {
+        enabled: true,
+        onlyInViewport: true,
       },
     },
   },
@@ -373,7 +384,7 @@ export const SWIPERS = {
       breakpoints: {
         600: {
           slidesPerView: 1.8,
-        }, 
+        },
         360: {
           slidesPerView: 1.1,
         },
@@ -492,5 +503,5 @@ export const SWIPERS = {
         prevEl: ".swiper--gallery-caption .arrow-swiper.prev",
       },
     },
-  }
+  },
 };
