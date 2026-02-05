@@ -40,6 +40,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+
+    .button {
+      padding-inline: 10px;
+    }
   }
 
   &__footer-item-big {

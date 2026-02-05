@@ -2,6 +2,7 @@
   class="button button--bg-secondary-200 modal-open  @@if (typeof classAdd !== 'undefined') {@@classAdd}"
   type="button"
   data-modal="contactUpModal"
+  data-validate-inputs='["name", "email", "tel", "message"]'
 >
   <div class="icon @@if (typeof classAddIcon !== 'undefined') {@@classAddIcon}">
     <span class="kit-icon mail"></span>

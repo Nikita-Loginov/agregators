@@ -43,7 +43,14 @@ export const validateFormField = (formItem, options = {}) => {
 
     const value = field.value || "";
 
-    if (rule === "required" && rules.required) {
+    const isRequired = field.hasAttribute("required");
+
+    if (!isRequired && value === "") {
+      applyValidationUI(formItem, field, true, "", showError);
+      return true;
+    }
+
+    if (rule === "required" && field.hasAttribute("required")) {
       if (rules.type === "checkbox") {
         valid = validators.checkbox(field);
       } else {

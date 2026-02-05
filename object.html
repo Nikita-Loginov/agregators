@@ -1837,10 +1837,12 @@
                 </div>
 
                 <div class="object-top__info">
-                  <div class="gallery-simple gallery" data-gallery-relative-name="main-gallery">
+                  <div
+                    class="gallery-simple gallery"
+                    data-gallery-relative-name="main-gallery"
+                  >
                     <div
                       class="gallery-simple__swiper-big gallery-simple__item"
-                      
                     >
                       <div class="swiper swiper--gallery-big">
                         <div class="swiper-wrapper">
@@ -2034,6 +2036,29 @@
                                 />
                                 <img
                                   src="/img/decor/six.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-8"
+                          >
+                            <div class="gallery-simple__img-box">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/decor/seven.webp   1x,
+                                    /img/decor/seven2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/decor/seven.webp"
                                   alt="фотография"
                                   loading="lazy"
                                 />
@@ -2291,6 +2316,29 @@
                               </picture>
                             </div>
                           </div>
+
+                          <div
+                          class="swiper-slide modal-open"
+                          data-modal="galleryModal"
+                          data-gallery-item
+                          data-block="img-gallery-8"
+                        >
+                          <div class="gallery-simple__img-box">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/decor/seven.webp   1x,
+                                  /img/decor/seven2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/decor/seven.webp"
+                                alt="фотография"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+                        </div>
                         </div>
 
                         <div class="arrows-swiper arrows-swiper--full">
@@ -2481,7 +2529,10 @@
 
                         <div class="object-bottom__top-line">
                           <div class="md-desktop-show">
-                            <div class="object-bottom__top-line-btns" style="width: 100%;">
+                            <div
+                              class="object-bottom__top-line-btns"
+                              style="width: 100%"
+                            >
                               <div
                                 class="share list-popup relative relative-top left-media"
                               >
@@ -2738,7 +2789,6 @@
 
                               <button
                                 class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--comparison"
-                               
                               >
                                 <div class="icon">
                                   <span
@@ -2751,7 +2801,7 @@
                                 title="On the Map"
                                 class="button button--bg-secondary-200 modal-open"
                                 data-modal="mapModal"
-                                style="width: 100%;"
+                                style="width: 100%"
                               >
                                 <div class="icon">
                                   <span class="kit-icon map"></span>
@@ -2980,25 +3030,24 @@
     </div>
 
     <div class="contact-form-aside__footer">
-      <a
-        href="mailto:test@gmail.com"
-        aria-label="Написать на почту test@gmail.com"
-        class="button button--bg-secondary-200"
+      <button
+        data-modal="contactUpModal"
+        class="button button--bg-secondary-200 modal-open"
+        data-validate-inputs='["name", "email", "message"]'
+        
       >
         <div class="icon">
           <span class="kit-icon mail"></span>
         </div>
 
         <p class="p2 medium-font">Email</p>
-      </a>
+      </button>
 
-      <a
-        href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
-        aria-label="Поделиться статьей в WhatsApp"
-        title="WhatsApp"
-        class="button button--bg-green-400"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        class="button button--bg-green-400 modal-open"
+        type="button"
+        data-modal="contactUpModal"
+        data-validate-inputs='["name", "tel", "message"]'
       >
         <span class="icon">
           <svg>
@@ -3006,16 +3055,17 @@
           </svg>
         </span>
 
-        <p class="p2">WhatsApp</p>
-      </a>
+        <p class="p2 medium-font">WhatsApp</p>
+      </button>
 
       <button
         class="button button--bg-secondary-300 contact-form-aside__footer-item-big modal-open"
         data-modal="contactUpModal"
+        data-validate-inputs='["name", "tel", "message"]'
       >
-      <div class="icon">
-        <span class="kit-icon phone"></span>
-      </div>
+        <div class="icon">
+          <span class="kit-icon phone"></span>
+        </div>
 
         <p class="p2 medium-font">Request Call</p>
       </button>
@@ -3878,7 +3928,7 @@
                   </div>
 
                   <div class="tablet-show">
-                    <aside class="contact-aside" style="width: 100%;">
+                    <aside class="contact-aside" style="width: 100%">
                       <div class="contact-form-aside">
   <header class="contact-form-aside__header">
     <div class="contact-form-aside__logo">
@@ -3910,25 +3960,24 @@
     </div>
 
     <div class="contact-form-aside__footer">
-      <a
-        href="mailto:test@gmail.com"
-        aria-label="Написать на почту test@gmail.com"
-        class="button button--bg-secondary-200"
+      <button
+        data-modal="contactUpModal"
+        class="button button--bg-secondary-200 modal-open"
+        data-validate-inputs='["name", "email", "message"]'
+        
       >
         <div class="icon">
           <span class="kit-icon mail"></span>
         </div>
 
         <p class="p2 medium-font">Email</p>
-      </a>
+      </button>
 
-      <a
-        href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
-        aria-label="Поделиться статьей в WhatsApp"
-        title="WhatsApp"
-        class="button button--bg-green-400"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        class="button button--bg-green-400 modal-open"
+        type="button"
+        data-modal="contactUpModal"
+        data-validate-inputs='["name", "tel", "message"]'
       >
         <span class="icon">
           <svg>
@@ -3936,16 +3985,17 @@
           </svg>
         </span>
 
-        <p class="p2">WhatsApp</p>
-      </a>
+        <p class="p2 medium-font">WhatsApp</p>
+      </button>
 
       <button
         class="button button--bg-secondary-300 contact-form-aside__footer-item-big modal-open"
         data-modal="contactUpModal"
+        data-validate-inputs='["name", "tel", "message"]'
       >
-      <div class="icon">
-        <span class="kit-icon phone"></span>
-      </div>
+        <div class="icon">
+          <span class="kit-icon phone"></span>
+        </div>
 
         <p class="p2 medium-font">Request Call</p>
       </button>
@@ -4250,25 +4300,24 @@
     </div>
 
     <div class="contact-form-aside__footer">
-      <a
-        href="mailto:test@gmail.com"
-        aria-label="Написать на почту test@gmail.com"
-        class="button button--bg-secondary-200"
+      <button
+        data-modal="contactUpModal"
+        class="button button--bg-secondary-200 modal-open"
+        data-validate-inputs='["name", "email", "message"]'
+        
       >
         <div class="icon">
           <span class="kit-icon mail"></span>
         </div>
 
         <p class="p2 medium-font">Email</p>
-      </a>
+      </button>
 
-      <a
-        href="https://wa.me/?text=Поделиться%20статьей%20с%20сайта%20Agregators.com%3A%0A%0Ahttps%3A%2F%2Fwww.agregators.com%2Farticle"
-        aria-label="Поделиться статьей в WhatsApp"
-        title="WhatsApp"
-        class="button button--bg-green-400"
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        class="button button--bg-green-400 modal-open"
+        type="button"
+        data-modal="contactUpModal"
+        data-validate-inputs='["name", "tel", "message"]'
       >
         <span class="icon">
           <svg>
@@ -4276,16 +4325,17 @@
           </svg>
         </span>
 
-        <p class="p2">WhatsApp</p>
-      </a>
+        <p class="p2 medium-font">WhatsApp</p>
+      </button>
 
       <button
         class="button button--bg-secondary-300 contact-form-aside__footer-item-big modal-open"
         data-modal="contactUpModal"
+        data-validate-inputs='["name", "tel", "message"]'
       >
-      <div class="icon">
-        <span class="kit-icon phone"></span>
-      </div>
+        <div class="icon">
+          <span class="kit-icon phone"></span>
+        </div>
 
         <p class="p2 medium-font">Request Call</p>
       </button>
@@ -4563,6 +4613,7 @@
   class="button button--bg-secondary-200 modal-open  "
   type="button"
   data-modal="contactUpModal"
+  data-validate-inputs='["name", "email", "tel", "message"]'
 >
   <div class="icon ">
     <span class="kit-icon mail"></span>
@@ -4842,6 +4893,7 @@
   class="button button--bg-secondary-200 modal-open  "
   type="button"
   data-modal="contactUpModal"
+  data-validate-inputs='["name", "email", "tel", "message"]'
 >
   <div class="icon ">
     <span class="kit-icon mail"></span>
@@ -5121,6 +5173,7 @@
   class="button button--bg-secondary-200 modal-open  "
   type="button"
   data-modal="contactUpModal"
+  data-validate-inputs='["name", "email", "tel", "message"]'
 >
   <div class="icon ">
     <span class="kit-icon mail"></span>
@@ -5400,6 +5453,7 @@
   class="button button--bg-secondary-200 modal-open  "
   type="button"
   data-modal="contactUpModal"
+  data-validate-inputs='["name", "email", "tel", "message"]'
 >
   <div class="icon ">
     <span class="kit-icon mail"></span>

@@ -54,6 +54,8 @@ export const openModalStep = (modalBtn, modals, modalBlock) => {
     getDownloadFile(modalBtn, modalBlock);
   }
 
+  applyValidateInputs(modalBtn, modalBlock);
+
   modalBlock.classList.add("open");
   document.body.classList.add("open-modal");
   document.documentElement.classList.add("open-modal");
@@ -278,10 +280,48 @@ export const handleKeyboardEffectsModal = (e) => {
   if (!modal) return;
 
   const effect = keyboardEffects[e.key];
-  
+
   if (!effect) return;
 
   if (!effect.enabled(modal)) return;
 
   effect.handler(modal);
+};
+
+const applyValidateInputs = (modalBtn, modalBlock) => {
+  if (!modalBtn || !modalBlock) return;
+
+  const validateAttr = modalBtn.dataset.validateInputs;
+  if (!validateAttr) return;
+
+  let validateNames = [];
+
+  try {
+    validateNames = JSON.parse(validateAttr);
+  } catch {
+    return;
+  }
+
+  const fields = modalBlock.querySelectorAll("input[name], textarea[name]");
+
+  fields.forEach((field) => {
+    const name = field.getAttribute("name");
+    const placeholder = field.getAttribute("placeholder") || "";
+
+    const isRequired = validateNames.includes(name);
+
+    if (isRequired) {
+      field.setAttribute("required", "required");
+
+      if (!placeholder.trim().endsWith("*")) {
+        field.setAttribute("placeholder", `${placeholder}*`.trim());
+      }
+    } else {
+      field.removeAttribute("required");
+
+      if (placeholder.includes("*")) {
+        field.setAttribute("placeholder", placeholder.replace(/\s*\*$/, ""));
+      }
+    }
+  });
 };

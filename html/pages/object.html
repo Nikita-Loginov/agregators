@@ -75,10 +75,12 @@
                 </div>
 
                 <div class="object-top__info">
-                  <div class="gallery-simple gallery" data-gallery-relative-name="main-gallery">
+                  <div
+                    class="gallery-simple gallery"
+                    data-gallery-relative-name="main-gallery"
+                  >
                     <div
                       class="gallery-simple__swiper-big gallery-simple__item"
-                      
                     >
                       <div class="swiper swiper--gallery-big">
                         <div class="swiper-wrapper">
@@ -272,6 +274,29 @@
                                 />
                                 <img
                                   src="/img/decor/six.webp"
+                                  alt="фотография"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+                          </div>
+
+                          <div
+                            class="swiper-slide modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-8"
+                          >
+                            <div class="gallery-simple__img-box">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/decor/seven.webp   1x,
+                                    /img/decor/seven2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/decor/seven.webp"
                                   alt="фотография"
                                   loading="lazy"
                                 />
@@ -529,6 +554,29 @@
                               </picture>
                             </div>
                           </div>
+
+                          <div
+                          class="swiper-slide modal-open"
+                          data-modal="galleryModal"
+                          data-gallery-item
+                          data-block="img-gallery-8"
+                        >
+                          <div class="gallery-simple__img-box">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/decor/seven.webp   1x,
+                                  /img/decor/seven2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/decor/seven.webp"
+                                alt="фотография"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+                        </div>
                         </div>
 
                         @@include('../swiper/arrows-swiper-full.html')
@@ -700,7 +748,10 @@
 
                         <div class="object-bottom__top-line">
                           <div class="md-desktop-show">
-                            <div class="object-bottom__top-line-btns" style="width: 100%;">
+                            <div
+                              class="object-bottom__top-line-btns"
+                              style="width: 100%"
+                            >
                               <div
                                 class="share list-popup relative relative-top left-media"
                               >
@@ -729,7 +780,6 @@
 
                               <button
                                 class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--comparison"
-                               
                               >
                                 <div class="icon">
                                   <span
@@ -742,7 +792,7 @@
                                 title="On the Map"
                                 class="button button--bg-secondary-200 modal-open"
                                 data-modal="mapModal"
-                                style="width: 100%;"
+                                style="width: 100%"
                               >
                                 <div class="icon">
                                   <span class="kit-icon map"></span>
@@ -1796,7 +1846,7 @@
                   </div>
 
                   <div class="tablet-show">
-                    <aside class="contact-aside" style="width: 100%;">
+                    <aside class="contact-aside" style="width: 100%">
                       @@include('../modules/contact-form-aside.html')
                     </aside>
                   </div>

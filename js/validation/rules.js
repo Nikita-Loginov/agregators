@@ -12,7 +12,7 @@ export const validationRules = {
   },
 
   tel: {
-    required: true,
+    required: false,
     type: "phone",
 
     message: {
@@ -24,7 +24,7 @@ export const validationRules = {
   },
 
   email: {
-    required: true,
+    required: false,
     pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
 
     message: {
