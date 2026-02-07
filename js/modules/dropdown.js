@@ -60,6 +60,7 @@ export const toggleDropdown = (e) => {
 };
 
 const openFixedDropdown = (dropdown) => {
+
   const menu = dropdown.querySelector(".dropdown__content");
   if (!menu) return;
 
@@ -71,7 +72,6 @@ const openFixedDropdown = (dropdown) => {
     dropdown.querySelector(".dropdown__btn");
 
   if (!toggle) return;
-
   const anchor = toggle.closest(".dropdown") || toggle;
   const anchorRect = anchor.getBoundingClientRect();
 

@@ -268,7 +268,7 @@
   &__item-property {
     &:not(:has(.swiper-pagination.swiper-pagination-lock)) {
       .object-bottom__property-details .pagination {
-        display: none;
+        // display: none;
       }
     }
   }
@@ -357,6 +357,35 @@
   &__property-swiper-box {
     width: 100%;
     min-width: 0;
+
+    @media (min-width: $tablet-breakpoint) {
+      .swiper--property {
+        & > .swiper-wrapper.swiper-wrapper--grid {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 14px;
+
+          @media (max-width: $lg-breakpoint) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          & > .swiper-slide {
+            @media (min-width: $lg-breakpoint) {
+              &:not(:nth-child(-n + 3)) {
+                display: none;
+              }
+            }
+
+            @media (min-width: $tablet-breakpoint ) and (max-width: $lg-breakpoint) {
+              &:not(:nth-child(-n + 2)) {
+                display: none;
+              }
+            }
+            
+          }
+        }
+      }
+    }
   }
 
   &__table-box {

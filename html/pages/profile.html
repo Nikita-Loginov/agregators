@@ -398,7 +398,11 @@
                             </div>
                           </div>
 
-                          <div class="decor-el lg-none">
+                          <a
+                            aria-label="Перейти к блоку properties"
+                            class="decor-el lg-none"
+                            href="#properties"
+                          >
                             <div class="icon icon--big text-secondary-300">
                               <span class="kit-icon building-01"></span>
                             </div>
@@ -410,7 +414,7 @@
                             <div class="icon icon--big text-primary-100">
                               <span class="kit-icon arrow-down-md"></span>
                             </div>
-                          </div>
+                          </a>
                         </div>
 
                         <div class="object-bottom__top-item">
@@ -503,13 +507,10 @@
                         <p class="p2 medium-font">Request Objects</p>
                       </button>
 
-                      <a
-                        href="/img/article/one.webp"
-                        download=""
-                        data-modal="successModal"
-                        data-download-file="/img/goods/five.webp"
-                        aria-label="Скачать файл"
+                      <button
+                        data-modal="contactUpModal"
                         class="button button--lg button--bg-primary-200 button--rounded-3xl modal-open"
+                        data-validate-inputs='["name", "email", "tel", "message"]'
                         type="button"
                       >
                         <div class="icon icon--big">
@@ -517,7 +518,7 @@
                         </div>
 
                         <p class="p2 medium-font">Download Brochure</p>
-                      </a>
+                      </button>
                     </div>
 
                     <div
@@ -782,9 +783,8 @@
                           <a
                             href="#"
                             aria-label="Перейти к подробной информации"
-                            title="Learn more"
                             class="scheme-plan__item"
-                            style="top: 37%; left: 25%"
+                            style="--top-item: 37%; --left-item: 25%"
                           >
                             <div class="scheme-plan__item-header">
                               <div class="scheme-plan__item-icon">
@@ -818,9 +818,8 @@
                           <a
                             href="#"
                             aria-label="Перейти к подробной информации"
-                            title="Learn more"
                             class="scheme-plan__item"
-                            style="top: 37%; left: 48%"
+                            style="--top-item: 37%; --left-item: 48%"
                           >
                             <div class="scheme-plan__item-header">
                               <div class="scheme-plan__item-icon">
@@ -894,6 +893,7 @@
 
                   <div
                     class="object-bottom__item object-bottom__item-property swiper-box--visible-tablet swiper-box--visible-tablet-inner"
+                    id="properties"
                   >
                     <h2 class="h4">Properties in SkyHills Astra</h2>
 
@@ -1147,10 +1147,10 @@
                       </div>
 
                       <div
-                        class="object-bottom__property-swiper-box swiper-box swiper-box--pagination-bottom"
+                        class="object-bottom__property-swiper-box swiper-box swiper-box--pagination-bottom swiper-box--pagination-bottom-big"
                       >
                         <div class="swiper swiper--property">
-                          <div class="swiper-wrapper">
+                          <div class="swiper-wrapper swiper-wrapper--grid">
                             <div class="swiper-slide">
                               <!-- prettier-ignore -->
 
@@ -1180,16 +1180,16 @@
                             </div>
                           </div>
                           <div class="swiper-pagination"></div>
+
+                          <div
+                            class="object-bottom__property-details tablet-none"
+                            style="width: 100%"
+                          >
+                            @@include('../modules/pagination.html', {"details":
+                            "false"})
+                          </div>
                         </div>
                       </div>
-                    </div>
-
-                    <div
-                      class="object-bottom__property-details"
-                      style="width: 100%"
-                    >
-                      @@include('../modules/pagination.html', {"details":
-                      "false"})
                     </div>
                   </div>
 
@@ -1366,16 +1366,19 @@
                       </footer>
                     </div>
 
-                    <div class="banner-content__img">
+                    <div
+                      class="banner-content__img"
+                      style="top: 20px; bottom: 20px"
+                    >
                       <picture>
                         <source
                           srcset="
-                            /img/decors/three.webp   1x,
-                            /img/decors/three2x.webp 2x
+                            /img/decors/seven.webp   1x,
+                            /img/decors/seven2x.webp 2x
                           "
                         />
                         <img
-                          src="/img/decors/three.webp"
+                          src="/img/decors/seven.webp"
                           alt="фотография круга"
                         />
                       </picture>
@@ -1913,7 +1916,7 @@
                           <div class="floor__item">
                             <div class="floor__item-content">
                               <div
-                                class="table-grid table-grid--two table-grid--odd"
+                                class="table-grid table-grid--two table-grid--odd table-grid--noGap"
                               >
                                 <div class="table-grid__items">
                                   <div class="table-grid__row">
@@ -2012,7 +2015,6 @@
                         <div class="floor__footer-content">
                           <button
                             class="button button--circle button--bg-gray-300 disabled"
-                            style="rotate: -180deg"
                           >
                             <div class="icon icon--big">
                               <span class="kit-icon arrow-left-lg"></span>
@@ -2146,7 +2148,10 @@
                             </div>
 
                             <div class="table-grid__items">
-                              <div class="table-grid__row">
+                              <div
+                                class="table-grid__row"
+                                data-floor-text="Type A"
+                              >
                                 <div class="table-grid__cell">
                                   <p class="p2">Type A</p>
 
@@ -2161,10 +2166,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-show">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/three', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2172,6 +2181,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2191,10 +2201,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-none">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/one', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2202,6 +2216,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2209,7 +2224,10 @@
                                 </div>
                               </div>
 
-                              <div class="table-grid__row">
+                              <div
+                                class="table-grid__row"
+                                data-floor-text="Type B"
+                              >
                                 <div class="table-grid__cell">
                                   <p class="p2">Type B</p>
 
@@ -2224,10 +2242,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-show">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/three', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2235,6 +2257,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2254,10 +2277,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-none">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/three', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2265,6 +2292,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2308,7 +2336,10 @@
                             </div>
 
                             <div class="table-grid__items">
-                              <div class="table-grid__row">
+                              <div
+                                class="table-grid__row"
+                                data-floor-text="Type A"
+                              >
                                 <div class="table-grid__cell">
                                   <p class="p2">Type A</p>
 
@@ -2323,10 +2354,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-show">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/three', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2334,6 +2369,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2353,10 +2389,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-none">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/one', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2364,6 +2404,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2371,7 +2412,10 @@
                                 </div>
                               </div>
 
-                              <div class="table-grid__row">
+                              <div
+                                class="table-grid__row"
+                                data-floor-text="Type B"
+                              >
                                 <div class="table-grid__cell">
                                   <p class="p2">Type B</p>
 
@@ -2386,10 +2430,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-show">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/three', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2397,6 +2445,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2416,10 +2465,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-none">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/one', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2427,6 +2480,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2470,7 +2524,10 @@
                             </div>
 
                             <div class="table-grid__items">
-                              <div class="table-grid__row">
+                              <div
+                                class="table-grid__row"
+                                data-floor-text="Type A"
+                              >
                                 <div class="table-grid__cell">
                                   <p class="p2">Type A</p>
 
@@ -2485,10 +2542,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-show">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/three', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2496,6 +2557,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2515,10 +2577,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-none">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/one', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2526,6 +2592,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2533,7 +2600,10 @@
                                 </div>
                               </div>
 
-                              <div class="table-grid__row">
+                              <div
+                                class="table-grid__row"
+                                data-floor-text="Type B"
+                              >
                                 <div class="table-grid__cell">
                                   <p class="p2">Type B</p>
 
@@ -2548,10 +2618,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-show">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/three', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2559,6 +2633,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2578,10 +2653,14 @@
                                 </div>
 
                                 <div class="table-grid__cell tablet-none">
-                                  <div class="table-grid__cell-btns">
+                                  <div
+                                    class="table-grid__cell-btns"
+                                    data-imgs="{'2d-floor-popup': '/img/floor/one', '3d-floor-popup' : '/img/floor/two'}"
+                                  >
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
                                     </button>
@@ -2589,6 +2668,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
                                     </button>
@@ -2737,7 +2817,7 @@
                       </div>
 
                       <div
-                        class="table-grid table-grid--two tab-item active"
+                        class="table-grid table-grid--noGap table-grid--two tab-item active"
                         data-block-tab="payment-all"
                         data-block-category="payment"
                       >
@@ -2787,7 +2867,7 @@
                       </div>
 
                       <div
-                        class="table-grid table-grid--two tab-item"
+                        class="table-grid table-grid--two tab-item table-grid--noGap"
                         data-block-tab="payment-1bed"
                         data-block-category="payment"
                       >
@@ -2827,7 +2907,7 @@
                       </div>
 
                       <div
-                        class="table-grid table-grid--two tab-item"
+                        class="table-grid table-grid--two tab-item table-grid--noGap"
                         data-block-tab="payment-2bed"
                         data-block-category="payment"
                       >
@@ -2857,7 +2937,7 @@
                       </div>
 
                       <div
-                        class="table-grid table-grid--two tab-item"
+                        class="table-grid table-grid--two tab-item table-grid--noGap"
                         data-block-tab="payment-3bed"
                         data-block-category="payment"
                       >
@@ -2927,7 +3007,7 @@
                       </div>
 
                       <div
-                        class="table-grid table-grid--two tab-item"
+                        class="table-grid table-grid--two tab-item table-grid--noGap"
                         data-block-tab="payment-4bed"
                         data-block-category="payment"
                       >
@@ -3532,32 +3612,47 @@
                       </header>
 
                       <div class="banner-content__badges">
-                        <div
+                        <a
                           class="badge badge--big badge--white br-el--rounded-base badge--2xl"
+                          href="#"
+                          aria-label="Перейти на страницу How is real estate in Dubai examined before a
+                          purchase?"
+                          title="How is real estate in Dubai examined before a
+                          purchase?"
                         >
                           <span class="p1"
                             >How is real estate in Dubai examined before a
                             purchase?</span
                           >
-                        </div>
+                        </a>
 
-                        <div
+                        <a
                           class="badge badge--big badge--white br-el--rounded-base badge--2xl"
+                          href="#"
+                          aria-label="Перейти на страницу How much does it cost to maintain a property in
+                          Dubai?"
+                          title="How much does it cost to maintain a property in
+                          Dubai?"
                         >
                           <span class="p1"
                             >How much does it cost to maintain a property in
                             Dubai?</span
                           >
-                        </div>
+                        </a>
 
-                        <div
+                        <a
                           class="badge badge--big badge--white br-el--rounded-base badge--2xl"
+                          href="#"
+                          aria-label="Перейти на страницу How to choose a reliable investment property in
+                          Dubai?"
+                          title=">How to choose a reliable investment property in
+                          Dubai?"
                         >
                           <span class="p1"
                             >How to choose a reliable investment property in
                             Dubai?</span
                           >
-                        </div>
+                        </a>
                       </div>
 
                       <footer class="banner-content__footer">
@@ -3743,49 +3838,13 @@
                   <div class="object-bottom__item">
                     <h2 class="h4">Popular Questions</h2>
 
-                    @@include('../modules/accordeon.html')
+                    @@include('../modules/accordeon.html', {"classAddAccordeon"
+                    : "accordeon--active-bg-gray-200"})
                   </div>
 
                   <div class="object-bottom__item tablet-show">
                     <div class="contact-aside" style="width: 100%">
                       @@include('../modules/contact-form-aside.html')
-                    </div>
-                  </div>
-
-                  <div
-                    class="object-bottom__item swiper-box swiper-box--pagination-bottom also-section swiper-box--visible-tablet swiper-box--visible-tablet-inner"
-                  >
-                    <h2 class="h4">Similar Property</h2>
-
-                    <div class="swiper-box__block">
-                      <div class="swiper swiper--also">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
-                            <!-- prettier-ignore -->
-
-                            @@include('../good-item/good-item-one.html',
-                            {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/one'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add active", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true, "tagFloor" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
-                          </div>
-
-                          <div class="swiper-slide">
-                            <!-- prettier-ignore -->
-
-                            @@include('../good-item/good-item-one.html',
-                           {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
-                          </div>
-
-                          <div class="swiper-slide">
-                            <!-- prettier-ignore -->
-
-                            @@include('../good-item/good-item-one.html',
-                         {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
-                          </div>
-                        </div>
-
-                        <div
-                          class="swiper-pagination swiper-pagination--also"
-                        ></div>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -3836,6 +3895,58 @@
                       </button>
                     </div>
                   </aside>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="swiper-box swiper-box--visible swiper-box--visible-tablet swiper-box--pagination-bottom also-section"
+        >
+          <div class="container">
+            <div class="topBox topBox--small">
+              <header class="topBox__header">
+                <h2 class="h4">Similar Property</h2>
+              </header>
+
+              <div class="swiper-box__inner">
+                <div class="swiper-box__block">
+                  <div class="swiper swiper--also">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+
+                        @@include('../good-item/good-item-one.html',
+                        {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/one'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add active", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true, "tagFloor" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
+                      </div>
+
+                      <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+
+                        @@include('../good-item/good-item-one.html',
+                       {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
+                      </div>
+
+                      <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+
+                        @@include('../good-item/good-item-one.html',
+                     {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
+                      </div>
+
+                      <div class="swiper-slide">
+                        <!-- prettier-ignore -->
+
+                        @@include('../good-item/good-item-one.html',
+                   {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
+                      </div>
+                    </div>
+
+                    <div
+                      class="swiper-pagination swiper-pagination--also"
+                    ></div>
+                  </div>
                 </div>
               </div>
             </div>

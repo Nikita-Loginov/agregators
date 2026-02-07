@@ -18,9 +18,10 @@ const swipers = [
   },
   {
     ...SWIPERS.PROPERTY,
+    breakpoint: 767,
   },
   {
-    ...SWIPERS.ALSO_CARDS_THREE,
+    ...SWIPERS.ALSO_CARDS
   },
 ];
 

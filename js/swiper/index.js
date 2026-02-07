@@ -266,7 +266,7 @@ export const SWIPERS = {
   },
   PROPERTY: {
     selector: ".object-bottom__property-swiper-box .swiper--property",
-    breakpoint: 122300000000,
+    breakpoint: 10000000,
 
     options: {
       slidesPerView: 1.1,

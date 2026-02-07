@@ -34,9 +34,12 @@
     border-radius: var(--radius-2xl);
     background-color: var(--white-color-170);
     max-width: 94px;
+    top: var(--top-item);
+    left: var(--left-item);
     cursor: pointer;
     overflow: hidden;
-    transition: all 1s 0.3s;
+    transition: background-color 1s 0.3s, padding 1s 0.3s, border-radius 1s 0.3s,
+      transform 0s, max-width 1s 0.3s;
     position: absolute;
     z-index: 3;
 
@@ -44,8 +47,11 @@
       background-color: var(--white-color);
       padding: 8px 12px 8px 4px;
       border-radius: var(--radius-md);
-      transition: all 0.3s;
+      transition: background-color 0.3s, padding 0.3s, border-radius 0.3s,
+        max-width 0.3s;
       max-width: 150px;
+      // top: calc(var(--top-item) - 15px);
+      // transform: translateY(-15px);
 
       .scheme-plan {
         &__item-icon {
@@ -134,7 +140,7 @@
 
   &__img {
     position: absolute;
-    inset:0;
+    inset: 0;
     z-index: 1;
 
     img,

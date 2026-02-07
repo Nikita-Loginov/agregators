@@ -622,6 +622,15 @@
     }
   }
 
+  &--share {
+   
+
+    &:hover,
+    &:active {
+      @include share-hover;
+    }
+  }
+
   &--noBg {
     background-color: transparent;
 

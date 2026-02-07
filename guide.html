@@ -7313,8 +7313,8 @@
             </div>
 
             <div class="input-box form__item nput-box--xl input-box--gray input-tel-wrapper dropdown-tel">
-              <div class="input-box__content dropdown">
-                <div class="input-box__info popup-select">
+              <div class="input-box__content dropdown" data-fixed-dropdown>
+                <div class="input-box__info popup-select dropdown__btn">
                   <input type="tel" name="tel" placeholder="Phone*" required />
                 </div>
 
@@ -7381,12 +7381,17 @@
     data-tab-category="floor-popup"
   >
     <header class="modalBlock__head modalBlock__head--static">
-      <p class="h6">Type С</p>
+      <div class="floorModal__head">
+        <p class="h6" data-floor-text></p>
+
+        <p class="p2 text-dark-500 tablet-show">Floorplan</p>
+      </div>
+      
 
       <div class="checkbox-box tab-btns">
         <label class="check tab-btn" data-btn-tab="2d-floor-popup">
           <div class="check__info">
-            <input type="radio" checked name="floor-popup" />
+            <input type="radio" name="floor-popup" />
 
             <div class="check__info-content">
               <span class="p2">2D</span>
@@ -7422,10 +7427,10 @@
         data-block-tab="2d-floor-popup"
         data-block-category="floor-popup"
       >
-        <picture>
+        <!-- <picture>
           <source srcset="/img/floor/one.webp 1x, /img/floor/one2x.webp 2x" />
           <img src="/img/floor/one.webp" alt="фотография" loading="lazy" />
-        </picture>
+        </picture> -->
       </div>
 
       <div
@@ -7433,10 +7438,10 @@
         data-block-tab="3d-floor-popup"
         data-block-category="floor-popup"
       >
-        <picture>
+        <!-- <picture>
           <source srcset="/img/floor/two.webp 1x, /img/floor/two2x.webp 2x" />
           <img src="/img/floor/two.webp" alt="фотография" loading="lazy" />
-        </picture>
+        </picture> -->
       </div>
     </div>
   </div>

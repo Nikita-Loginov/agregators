@@ -1,6 +1,4 @@
 .share {
-  
-
   &__bnts {
     display: flex;
     align-items: center;
@@ -16,9 +14,10 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+    background-color: var(--white-color);
+    left: 50%;
+    transform: translateX(-50%);
   }
-
-  
 
   &__items {
     display: grid;
@@ -28,10 +27,9 @@
     gap: 8px;
 
     button,
-  a {
-    color: var(--dark-color-200);
-  }
-   
+    a {
+      color: var(--dark-color-200);
+    }
   }
 
   &__item-box {
@@ -73,13 +71,20 @@
     }
   }
 
+  &:hover {
+    .share__btns {
+      .button {
+        @include share-hover;
+      }
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     .list-popup__box {
       max-width: 300px;
-     
     }
 
-    &__item-box  {
+    &__item-box {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
     }

@@ -54,12 +54,71 @@ export const openModalStep = (modalBtn, modals, modalBlock) => {
     getDownloadFile(modalBtn, modalBlock);
   }
 
+  if (modalBlock.classList.contains("floorModal")) {
+    initFloorModal(modalBtn, modalBlock);
+  }
+
   applyValidateInputs(modalBtn, modalBlock);
 
   modalBlock.classList.add("open");
   document.body.classList.add("open-modal");
   document.documentElement.classList.add("open-modal");
 };
+
+const initFloorModal = (btn, modalBlock) => {
+  if (!btn || !modalBlock) return;
+
+  const floorTextBox = btn.closest("[data-floor-text]");
+
+  if (floorTextBox) {
+    const floorText = floorTextBox?.dataset.floorText;
+    const title = modalBlock.querySelector("[data-floor-text]");
+
+    if (title) {
+      title.textContent = floorText;
+    }
+  }
+
+  const imgsContainer = btn.closest("[data-imgs]");
+  if (!imgsContainer) return;
+
+  let imgsMap = {};
+
+  try {
+    imgsMap = JSON.parse(
+      imgsContainer.dataset.imgs.replace(/'/g, '"')
+    );
+  } catch {
+    return;
+  }
+
+  Object.entries(imgsMap).forEach(([tabName, imgPath]) => {
+    const tabBlock = modalBlock.querySelector(
+      `[data-block-tab="${tabName}"]`
+    );
+
+    if (!tabBlock) return;
+
+    tabBlock.innerHTML = `
+      <picture>
+        <source srcset="${imgPath}.webp 1x, ${imgPath}2x.webp 2x">
+        <img src="${imgPath}.webp" alt="План этажа" loading="lazy">
+      </picture>
+    `;
+  });
+
+  const checkedTab = btn.dataset.checked;
+  if (!checkedTab) return;
+
+  const tabBtn = modalBlock.querySelector(
+    `[data-btn-tab="${checkedTab}"]`
+  );
+
+  if (tabBtn) {
+    tabBtn.click(); 
+  }
+};
+
 
 const getDownloadFile = (btn, modalBlock) => {
   if (!btn) return;

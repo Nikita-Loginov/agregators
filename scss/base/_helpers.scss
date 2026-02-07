@@ -110,4 +110,7 @@ $mobile-breakpoint: 479px;
   }
 }
 
-
+@mixin share-hover {
+  background-color: var(--dark-color-200);
+  color: var(--white-color);
+}

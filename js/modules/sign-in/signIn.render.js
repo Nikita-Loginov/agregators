@@ -331,9 +331,9 @@ export const renderBody = (form, step) => {
                     </p>
                   </div>
 
-                  <div class="warning__content">
+                  <div class="warning__content" style="padding-left: 4px;">
                     <label class="check-simple check-simple--primary-100 check-simple--center form__item">
-                      <div class="check-simple__content" style="gap:20px;">
+                      <div class="check-simple__content" style="gap:15px;">
                         <div class="check-simple__custom">
                           <input type="checkbox" name="important" ${checked}/>
 
@@ -404,6 +404,7 @@ export const renderBreadcrumbs = (form, step) => {
 
   breadcrumbsList.innerHTML = "";
 
+ 
   step.breadcrumbs.forEach((breadcrumb, index) => {
     const last = step.breadcrumbs.length - 1 === index;
     const classBreadcrumbItem = last
@@ -415,8 +416,8 @@ export const renderBreadcrumbs = (form, step) => {
                     <a
                       href="#"
                       aria-label="Вернуться на ${breadcrumb}"
-                      title=${breadcrumb}
-                      class=${classBreadcrumbItem}
+                       title="${breadcrumb}"
+                      class="${classBreadcrumbItem}"
                       >${breadcrumb}</a
                     >
                   </li>`)
