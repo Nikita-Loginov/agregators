@@ -11,6 +11,8 @@ import { initCharts } from "./modules/chart.js";
 import { charts } from "./data/chart.js";
 import { initSimpleMap } from "./modules/map.js";
 import { lagerhauser } from "./data/lagerhauser.js";
+import { floorInit } from "./modules/floor.js";
+import { floorPlansData } from "./data/floorPlan.js";
 
 const swipers = [
   {
@@ -21,7 +23,7 @@ const swipers = [
     breakpoint: 767,
   },
   {
-    ...SWIPERS.ALSO_CARDS
+    ...SWIPERS.ALSO_CARDS,
   },
 ];
 
@@ -34,6 +36,10 @@ const handleGlobalClick = (e) => {
 document.addEventListener("DOMContentLoaded", () => {
   hideUnnecessaryButtons();
   initImgsSwiperGoods();
+  floorInit(
+    floorPlansData,
+    document.querySelector('.floor[data-block="floor-relative"]')
+  );
 
   swipers.forEach((config) => {
     slidersConfig.push(config);
@@ -41,9 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleAllSliders();
 
-  initCharts([{...charts.priceChange}])
+  initCharts([{ ...charts.priceChange }]);
   initSimpleMap("map-2d", [lagerhauser.at(-1)]);
-
 
   document.addEventListener("click", handleGlobalClick);
 });

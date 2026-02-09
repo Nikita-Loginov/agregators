@@ -25,6 +25,14 @@
     gap: 8px;
   }
 
+  &__swiper {
+    &:has(.swiper.swiper-disabled) {
+      .floor__footer {
+        display: none;
+      }
+    }
+  }
+
   &__item-content {
     display: flex;
     flex-direction: column;

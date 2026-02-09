@@ -1787,7 +1787,10 @@
                   <div class="object-bottom__item">
                     <h2 class="h4">Residential Floor Plans</h2>
 
-                    <div class="floor">
+                    <div
+                      class="floor swiper-box swiper-box--pagination-bottom swiper--gallery-big"
+                      data-block="floor-relative"
+                    >
                       <div class="floor__block">
                         <div class="floor__top">
                           <div class="floor__filter">
@@ -1846,190 +1849,38 @@
                             </div>
                           </div>
 
-                          <p class="p1 semibold-font tablet-none">
-                            Apartments, 3 beds, 105 sq.m.
-                          </p>
+                          <p
+                            class="p1 semibold-font tablet-none"
+                            data-block="floor-title"
+                          ></p>
                         </div>
 
-                        <div class="floor__content">
-                          <div class="floor-plan">
-                            <div class="floor-plan__content">
-                              <div
-                                class="floor-plan__img-box tabs-box"
-                                data-tab-category="floor"
-                              >
-                                <div
-                                  class="floor-plan__img tab-item active"
-                                  data-block-tab="2d-floor"
-                                  data-block-category="floor"
-                                >
-                                  <picture>
-                                    <source
-                                      srcset="
-                                        /img/floor/one.webp   1x,
-                                        /img/floor/one2x.webp 2x
-                                      "
-                                    />
-                                    <img
-                                      src="/img/floor/one.webp"
-                                      alt="фотография"
-                                      loading="lazy"
-                                    />
-                                  </picture>
-                                </div>
-
-                                <div
-                                  class="floor-plan__img tab-item"
-                                  data-block-tab="3d-floor"
-                                  data-block-category="floor"
-                                >
-                                  <picture>
-                                    <source
-                                      srcset="
-                                        /img/floor/two.webp   1x,
-                                        /img/floor/two2x.webp 2x
-                                      "
-                                    />
-                                    <img
-                                      src="/img/floor/two.webp"
-                                      alt="фотография"
-                                      loading="lazy"
-                                    />
-                                  </picture>
-                                </div>
-
-                                <div class="floor-plan__decors">
-                                  @@include('../components/checkboxs/checkbox-box-floor.html',
-                                  {"classAdd" : "tab-btns"})
-                                </div>
-                              </div>
-                            </div>
+                        <div class="floor__swiper" data-block="floor-swiper">
+                          <div class="swiper swiper--floor">
+                            <div class="swiper-wrapper"></div>
                           </div>
 
-                          <p
-                            class="p1 semibold-font tablet-show"
-                            style="justify-content: center"
-                          >
-                            Apartments, 3 beds, 105 sq.m.
-                          </p>
-
-                          <div class="floor__item">
-                            <div class="floor__item-content">
-                              <div
-                                class="table-grid table-grid--two table-grid--odd table-grid--noGap"
+                          <div class="floor__footer">
+                            <div class="floor__footer-content">
+                              <button
+                                class="button button--circle button--bg-gray-300 arrow-swiper prev"
                               >
-                                <div class="table-grid__items">
-                                  <div class="table-grid__row">
-                                    <div class="table-grid__cell">
-                                      <p class="p2 semibold-font">
-                                        Living space
-                                      </p>
-                                    </div>
-
-                                    <div
-                                      class="table-grid__cell"
-                                      style="justify-content: flex-end"
-                                    >
-                                      <p class="p2">105 sq.m.</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="table-grid__row">
-                                    <div class="table-grid__cell">
-                                      <p class="p2 semibold-font">Rooms</p>
-                                    </div>
-
-                                    <div
-                                      class="table-grid__cell"
-                                      style="justify-content: flex-end"
-                                    >
-                                      <p class="p2">Rooms</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="table-grid__row">
-                                    <div class="table-grid__cell">
-                                      <p class="p2 semibold-font">Bedrooms</p>
-                                    </div>
-
-                                    <div
-                                      class="table-grid__cell"
-                                      style="justify-content: flex-end"
-                                    >
-                                      <p class="p2">Rooms</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="table-grid__row">
-                                    <div class="table-grid__cell">
-                                      <p class="p2 semibold-font">
-                                        Price, from
-                                      </p>
-                                    </div>
-
-                                    <div
-                                      class="table-grid__cell"
-                                      style="justify-content: flex-end"
-                                    >
-                                      <p class="p2">17,005,900 AED</p>
-                                    </div>
-                                  </div>
-
-                                  <div class="table-grid__row">
-                                    <div class="table-grid__cell">
-                                      <p class="p2 semibold-font">On sale</p>
-                                    </div>
-
-                                    <div
-                                      class="table-grid__cell"
-                                      style="justify-content: flex-end"
-                                    >
-                                      <p class="p2">11</p>
-                                    </div>
-                                  </div>
+                                <div class="icon icon--big">
+                                  <span class="kit-icon arrow-left-lg"></span>
                                 </div>
-                              </div>
+                              </button>
+
+                              <div class="swiper-pagination"></div>
 
                               <button
-                                class="button button--lg button--bg-primary-100 modal-open tablet-none"
-                                type="button"
-                                data-modal="requestModal"
+                                class="button button--circle button--bg-gray-300 arrow-swiper next"
                               >
-                                <p class="p2 medium-font">
-                                  Get all floor plans
-                                </p>
-
-                                <div
-                                  class="icon icon--big"
-                                  style="rotate: -45deg"
-                                >
-                                  <span class="kit-icon arrow-right-md"></span>
+                                <div class="icon icon--big">
+                                  <span class="kit-icon arrow-right-lg"></span>
                                 </div>
                               </button>
                             </div>
                           </div>
-                        </div>
-                      </div>
-
-                      <div class="floor__footer">
-                        <div class="floor__footer-content">
-                          <button
-                            class="button button--circle button--bg-gray-300 disabled"
-                          >
-                            <div class="icon icon--big">
-                              <span class="kit-icon arrow-left-lg"></span>
-                            </div>
-                          </button>
-
-                          <p class="p2">Layout 2 of 7</p>
-
-                          <button
-                            class="button button--circle button--bg-gray-300"
-                          >
-                            <div class="icon icon--big">
-                              <span class="kit-icon arrow-right-lg"></span>
-                            </div>
-                          </button>
                         </div>
                       </div>
 
@@ -3078,7 +2929,7 @@
                       <div
                         class="object-bottom__items object-bottom__items--four more-block more-block--eight"
                         data-block="more-items"
-                        data-max="8"
+                        data-max="80"
                         data-media-init="767"
                         data-media-max="3"
                       >

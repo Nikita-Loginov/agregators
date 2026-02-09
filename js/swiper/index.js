@@ -504,4 +504,18 @@ export const SWIPERS = {
       },
     },
   },
+  FLOOR: {
+    selector: ".swiper--floor",
+    breakpoint: 122300000000,
+
+    options: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      // navigation: {
+      //   nextEl: ".swiper--gallery-caption .arrow-swiper.next",
+      //   prevEl: ".swiper--gallery-caption .arrow-swiper.prev",
+      // },
+    },
+  },
 };
