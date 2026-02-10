@@ -66,6 +66,12 @@
     }
   }
 
+  &--fz-s {
+    p {
+      font-size: var(--font-size-s);
+    }
+  }
+
   &__header {
     background-color: var(--gray-color-200);
     border-radius: var(--radius-base);

@@ -27,7 +27,7 @@
   }
 
   &--middle {
-    padding: 12px 24px;
+    padding: calculate-clamp(8px, 12px, 767px, 480px) calculate-clamp(12px, 24px, 767px, 480px);
     gap: 4px;
     border-radius: var(--radius-md);
 
@@ -79,6 +79,11 @@
     &--gray  {
       background-color: transparent;
       border: 1px solid var(--gray-color-300);
+    }
+
+    &--gray-200-media {
+      background-color: var(--gray-color-200);
+      border-color: var(--gray-color-200);
     }
 
     &__footer {

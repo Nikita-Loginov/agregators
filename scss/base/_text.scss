@@ -207,10 +207,37 @@ h6 {
   );
 }
 
+.fz-30-16 {
+  font-size: calculate-clamp(
+    16px,
+    30px,
+    $md-desktop-breakpoint,
+    $tablet-breakpoint
+  );
+}
+
+.fz-30-28 {
+  font-size: calculate-clamp(
+    28px,
+    30px,
+    $md-desktop-breakpoint,
+    $tablet-breakpoint
+  );
+}
+
 .fz-28-22 {
   font-size: calculate-clamp(
     22px,
-    24px,
+    28px,
+    $md-desktop-breakpoint,
+    $lg-breakpoint
+  );
+}
+
+.fz-28-20 {
+  font-size: calculate-clamp(
+    20px,
+    28px,
     $md-desktop-breakpoint,
     $lg-breakpoint
   );
@@ -267,6 +294,42 @@ h6 {
   @media (max-width: $tablet-breakpoint) {
     font-size: calculate-clamp(14px, 16px, $lg-breakpoint, $mobile-breakpoint);
   }
+}
+
+.fz-16-14-media {
+  font-size: calculate-clamp(
+    14px,
+    16px,
+    $tablet-breakpoint,
+    $mobile-breakpoint
+  );
+}
+
+.fz-16-12 {
+  font-size: calculate-clamp(
+    14px,
+    16px,
+    $lg-breakpoint,
+    $tablet-breakpoint
+  );
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: calculate-clamp(
+    12px,
+    14px,
+    $tablet-breakpoint,
+    $mobile-breakpoint
+  );
+  }
+}
+
+.fz-14-12 {
+  font-size: calculate-clamp(
+    12px,
+    14px,
+    $tablet-breakpoint,
+    $mobile-breakpoint
+  );
 }
 
 .lh100 {

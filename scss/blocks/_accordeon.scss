@@ -154,4 +154,17 @@
       }
     }
   }
+
+  &--lh-small {
+    @media (max-width: $lg-breakpoint) {
+      .accordeon {
+        &__answer {
+          p {
+            line-height: 1.57;
+          }
+         
+        }
+      }
+    }
+  }
 }

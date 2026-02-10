@@ -369,6 +369,10 @@
             grid-template-columns: repeat(2, 1fr);
           }
 
+          .good-item--column .good-item__swiper-box {
+            aspect-ratio: unset;
+          }
+
           & > .swiper-slide {
             @media (min-width: $lg-breakpoint) {
               &:not(:nth-child(-n + 3)) {
@@ -376,12 +380,11 @@
               }
             }
 
-            @media (min-width: $tablet-breakpoint ) and (max-width: $lg-breakpoint) {
+            @media (min-width: $tablet-breakpoint) and (max-width: $lg-breakpoint) {
               &:not(:nth-child(-n + 2)) {
                 display: none;
               }
             }
-            
           }
         }
       }
@@ -406,6 +409,28 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+  }
+
+  &__property-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+
+    .checkbox-box {
+      width: fit-content;
+    }
+  }
+
+  &__property-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+
+    .checkbox-box {
+      width: 100%;
+    }
   }
 
   @media (max-width: $md-desktop-breakpoint) {
@@ -435,6 +460,26 @@
     &__top-footer {
       display: grid;
       grid-template-columns: calc(100% - 280px - var(--gap-footer)) 280px;
+    }
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__feature-footer {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      width: 100%;
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    &__item--near {
+      .object-bottom__items {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   }
 
@@ -550,8 +595,9 @@
     }
 
     &__property-items {
-      display: flex;
-      gap: 12px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
 
       .checkbox-box {
         width: 100%;
@@ -571,9 +617,30 @@
       align-items: normal;
     }
 
+    &__property-block {
+      &.accordeon__item {
+        gap: 0;
+      }
+
+      &.accordeon__item.active {
+        .accordeon__answer {
+          padding-top: 12px;
+        }
+
+        .accordeon__question {
+          background-color: var(--dark-color-200);
+          color: var(--white-color);
+        }
+      }
+    }
+
     &__details {
       gap: calculate-clamp(8px, 24px, 767px, 480px);
       grid-template-columns: 60% auto;
+    }
+
+    &__feature-footer {
+      display: flex;
     }
 
     .table-swiper {

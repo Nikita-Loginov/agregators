@@ -1,0 +1,23 @@
+.schemaModal {
+  &.modalBlock {
+    padding: 0;
+
+    .modalBlock {
+      &__inner {
+        max-width: 100%;
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+
+    .scheme-plan {
+      height: 100dvh;
+      border-radius: 0;
+
+      &__content {
+        border-radius: 0;
+        padding: 16px;
+      }
+    }
+  }
+}

@@ -15,7 +15,11 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(20px, 24px, 1279px, 1023px);
+    gap: calculate-clamp(20px, 24px, 1279px, 1023px); 
+
+    p {
+      font-size: calculate-clamp(14px, 16px, $tablet-breakpoint, $mobile-breakpoint);
+    }
   }
 }
 
@@ -135,6 +139,12 @@
 
   @media (max-width: $lg-breakpoint) {
     padding: 16px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .badge--rating {
+      background-color: var(--white-color);
+    }
   }
 }
 

@@ -15,6 +15,10 @@
     .icon {
       color: var(--secondary-color-100);
     }
+
+    p {
+      font-size: var(--font-size-s);
+    }
   }
 
   &__info {
@@ -58,7 +62,7 @@
   &__budges {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: calculate-clamp(4px, 16px, $lg-breakpoint, $tablet-breakpoint);
   }
 
   @media (max-width: $lg-breakpoint) {
@@ -74,7 +78,12 @@
     }
 
     &__content {
-      
+      width: 100%;
+    }
+
+    &__footer {
+      justify-content: space-between;
+      gap: calculate-clamp(2px, 16px, $tablet-breakpoint, $mobile-breakpoint);
     }
   }
 }

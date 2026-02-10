@@ -119,11 +119,11 @@ const getHtmlSlide = (item, index) => {
                   ${i === 0 ? "checked" : ""}
                 />
                 <div class="p2 check__info-content">
-                  <div class="icon">
+                  <!-- <div class="icon">
                     <span class="kit-icon ${
                       type === "2d" ? "d2" : "d3"
                     }"></span>
-                  </div>
+                  </div>  -->
                   ${type.toUpperCase()}
                 </div>
               </div>
@@ -169,7 +169,7 @@ const getHtmlSlide = (item, index) => {
           </div>
 
           <p
-            class="p1 semibold-font tablet-show"
+            class="h6 semibold-font tablet-show"
             style="justify-content: center"
           >
             ${title}

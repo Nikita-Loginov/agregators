@@ -98,11 +98,12 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    padding: calculate-clamp(16px, 20px, 767px, 480px) var(--container-inline-padding);
+    padding: calculate-clamp(16px, 20px, 767px, 480px)
+      var(--container-inline-padding);
   }
 }
 
-.banner-content {
+.promo-content {
   background-color: var(--gray-color-200);
   border-radius: var(--radius-xl);
   padding: calculate-clamp(16px, 28px, 767px, 480px)
@@ -117,7 +118,7 @@
   &--secondary-bg-300 {
     background-color: var(--secondary-color-300);
 
-    .banner-content {
+    .promo-content {
       &__header,
       &__info {
         color: var(--white-color);
@@ -126,8 +127,8 @@
   }
 
   &.isChangePhoto {
-    &:has(.banner-content__footer .button:hover) {
-      .banner-content__img--filter img {
+    &:has(.promo-content__footer .button:hover) {
+      .promo-content__img--filter img {
         filter: grayscale(0%);
       }
     }
@@ -136,7 +137,7 @@
   &--absolute-img {
     position: relative;
 
-    .banner-content {
+    .promo-content {
       &__img {
         position: absolute;
         z-index: 2;
@@ -240,32 +241,52 @@
     }
   }
 
-  @media (max-width: $lg-breakpoint) {
-    &__content {
-      max-width: 100%;
-      align-items: normal;
-    }
-
-    &__img {
-      display: none;
-    }
-  }
-
   @media (max-width: $tablet-breakpoint) {
     border-radius: var(--radius-md);
     gap: calculate-clamp(16px, 20px, 767px, 480px);
 
     &__content {
       gap: calculate-clamp(16px, 20px, 767px, 480px);
+      align-items: normal;
+      max-width: 100%;
+
+      &--media-max {
+        max-width: 86%;
+        align-items: flex-start;
+      }
     }
 
     &__footer {
       align-items: normal;
     }
 
+    &__img {
+      display: none;
+    }
+
+    &.promo-content--showImg {
+      .promo-content {
+        &__img {
+          display: block;
+        }
+      }
+    }
+
+    &.full-el--tablet {
+      border-radius: 0;
+    }
+
     &__badges {
       display: grid;
       width: 100%;
+
+      .badge {
+        padding: 8px;
+
+        .p1 {
+          line-height: var(--line-height-base);
+        }
+      }
     }
   }
 }
@@ -671,6 +692,17 @@
           }
         }
       }
+    }
+  }
+}
+
+.dowload-banner {
+  &__btn {
+    min-height: calculate-clamp(44px, 52px, 1023px, 767px);
+    padding-inline: calculate-clamp(24px, 32px, 1023px, 767px);
+
+    @media (max-width: $tablet-breakpoint) {
+      min-height: 48px;
     }
   }
 }

@@ -36,8 +36,24 @@
   &__item-content {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 24px;
     align-items: flex-start;
+    height: 100%;
+  }
+
+  .table-grid__cell {
+    min-height: calculate-clamp(
+      40px,
+      42px,
+      $tablet-breakpoint,
+      $mobile-breakpoint
+    );
+    padding-block: 6px;
+    
+    p {
+      font-size: var(--font-size-s);
+    }
   }
 
 

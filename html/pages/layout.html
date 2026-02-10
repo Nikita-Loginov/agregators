@@ -95,7 +95,7 @@
                   </div>
                 </div>
 
-                <div class="object-top__info">
+                <div class="object-top__info" style="gap: 6px">
                   <div class="floor-plan floor-plan--big">
                     <div class="floor-plan__content">
                       <div
@@ -204,11 +204,11 @@
                                 <p class="h2 fz-48-26">
                                   1,102,500
 
-                                  <span class="text-uppercase h4">AED</span>
+                                  <span class="text-uppercase h4 fz-30-16">AED</span>
                                 </p>
 
                                 <div class="price__content">
-                                  <p class="p3">11,529 AED / sqm</p>
+                                  <p class="p3 fz-14-12">11,529 AED / sqm</p>
                                 </div>
                               </div>
                             </div>
@@ -235,9 +235,9 @@
                             </div>
 
                             <div class="badge-decor__content">
-                              <p class="p2 medium-font">2</p>
+                              <p class="p2-add medium-font">2</p>
 
-                              <p class="p2">Bedrooms</p>
+                              <p class="p2-add">Bedrooms</p>
                             </div>
                           </div>
 
@@ -249,9 +249,9 @@
                             </div>
 
                             <div class="badge-decor__content">
-                              <p class="p2 medium-font">2</p>
+                              <p class="p2-add medium-font">2</p>
 
-                              <p class="p2">Bathrooms</p>
+                              <p class="p2-add">Bathrooms</p>
                             </div>
                           </div>
 
@@ -263,9 +263,9 @@
                             </div>
 
                             <div class="badge-decor__content">
-                              <p class="p2 medium-font">60.11 sq.m.</p>
+                              <p class="p2-add medium-font">60.11 sq.m.</p>
 
-                              <p class="p2">Apartment area</p>
+                              <p class="p2-add">Apartment area</p>
                             </div>
                           </div>
 
@@ -277,9 +277,9 @@
                             </div>
 
                             <div class="badge-decor__content">
-                              <p class="p2 medium-font">Q2 2026</p>
+                              <p class="p2-add medium-font">Q2 2026</p>
 
-                              <p class="p2">Completion date</p>
+                              <p class="p2-add">Completion date</p>
                             </div>
                           </div>
                         </div>
@@ -499,7 +499,7 @@
                     </div>
                   </div>
 
-                  <div class="object-bottom__item">
+                  <div class="object-bottom__item object-bottom__feature">
                     <h2 class="h4">Features</h2>
 
                     <div class="object-bottom__items">
@@ -588,16 +588,18 @@
                       </div>
                     </div>
 
-                    <button
-                      class="button button--bg-secondary-200 button--rounded-2xl modal-open"
-                      data-modal="featuresModal"
-                    >
-                      <p class="p2 medium-font">See all</p>
+                    <div class="object-bottom__feature-footer">
+                      <button
+                        class="button button--bg-secondary-200 button--rounded-2xl modal-open"
+                        data-modal="featuresModal"
+                      >
+                        <p class="p2 medium-font">See all</p>
 
-                      <span class="icon">
-                        <span class="kit-icon arrow-right-lg"></span>
-                      </span>
-                    </button>
+                        <span class="icon">
+                          <span class="kit-icon arrow-right-lg"></span>
+                        </span>
+                      </button>
+                    </div>
                   </div>
 
                   <div class="object-bottom__item">
@@ -686,7 +688,9 @@
                           <p class="p2 medium-font">Search</p>
 
                           <span class="icon icon--big">
-                            <span class="kit-icon search-magnifying-glass"></span>
+                            <span
+                              class="kit-icon search-magnifying-glass"
+                            ></span>
                           </span>
                         </button>
                       </div>
@@ -698,21 +702,21 @@
                           <div class="swiper-wrapper">
                             <div class="swiper-slide">
                               <!-- prettier-ignore -->
-  
+
                               @@include('../good-item/good-item-one.html',
                               {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/one'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add active", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true, "tagFloor" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
                             </div>
-  
+
                             <div class="swiper-slide">
                               <!-- prettier-ignore -->
-  
+
                               @@include('../good-item/good-item-one.html',
                              {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
                             </div>
-  
+
                             <div class="swiper-slide">
                               <!-- prettier-ignore -->
-  
+
                               @@include('../good-item/good-item-one.html',
                            {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
                             </div>

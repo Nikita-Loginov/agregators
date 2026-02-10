@@ -35,6 +35,12 @@
     gap: 10px;
   }
 
+  &__item-header {
+    .h6 {
+      font-size: 24px;
+    }
+  }
+
   @media (max-width: $lg-breakpoint) {
     &__item {
       min-height: calculate-clamp(66px, 88px, 767px, 480px);

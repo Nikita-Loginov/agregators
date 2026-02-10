@@ -275,7 +275,9 @@
 
                                 <span class="text-uppercase h2">1,102,500</span>
 
-                                <span class="text-uppercase h4">AED</span>
+                                <span class="text-uppercase h4 fz-30-16"
+                                  >AED</span
+                                >
                               </p>
 
                               <p class="p3 text-dark-500 medium-font lg-none">
@@ -392,7 +394,7 @@
                             </div>
 
                             <div class="name-rating__content">
-                              <p class="h4 text-secondary-300">
+                              <p class="h4 fz-30-28 text-secondary-300">
                                 SkyHills Astra
                               </p>
                             </div>
@@ -428,9 +430,9 @@
                                 </div>
 
                                 <div class="badge-decor__content">
-                                  <p class="p2 medium-font">Q2 2026</p>
+                                  <p class="p2-add medium-font">Q2 2026</p>
 
-                                  <p class="p2">Delivery of the object</p>
+                                  <p class="p2-add">Delivery of the object</p>
                                 </div>
                               </div>
 
@@ -442,9 +444,9 @@
                                 </div>
 
                                 <div class="badge-decor__content">
-                                  <p class="p2 medium-font">60.11 sq.m.</p>
+                                  <p class="p2-add medium-font">60.11 sq.m.</p>
 
-                                  <p class="p2">Living space, min.</p>
+                                  <p class="p2-add">Living space, min.</p>
                                 </div>
                               </div>
 
@@ -456,9 +458,9 @@
                                 </div>
 
                                 <div class="badge-decor__content">
-                                  <p class="p2 medium-font">60 / 40</p>
+                                  <p class="p2-add medium-font">60 / 40</p>
 
-                                  <p class="p2">Payment plan</p>
+                                  <p class="p2-add">Payment plan</p>
                                 </div>
                               </div>
                             </div>
@@ -470,19 +472,19 @@
                                 </div>
 
                                 <div class="text-dots text-dots--media-no-dots">
-                                  <p class="p2">
+                                  <p class="p2-add">
                                     <span>Mall of the Emirates</span>
 
                                     <span class="medium-font">700 m</span>
                                   </p>
 
-                                  <p class="p2">
+                                  <p class="p2-add">
                                     <span>Dubai Internet City</span>
 
                                     <span class="medium-font">1 200 m</span>
                                   </p>
 
-                                  <p class="p2">
+                                  <p class="p2-add">
                                     <span>Al Khail (formerly Nakheel)</span>
 
                                     <span class="medium-font">9 000 m</span>
@@ -497,19 +499,21 @@
 
                     <div class="object-bottom__top-btns tablet-none">
                       <button
-                        class="button button--lg button--bg-primary-100 button--rounded-3xl modal-open"
+                        class="button button--lg button--bg-primary-100 button--lg-tablet modal-open"
                         type="button"
                         data-modal="requestModal"
                       >
                         <div class="icon icon--big">
                           <span class="kit-icon building-01"></span>
                         </div>
-                        <p class="p2 medium-font">Request Objects</p>
+                        <p class="p2 medium-font fz-16-14-media">
+                          Request Objects
+                        </p>
                       </button>
 
                       <button
                         data-modal="contactUpModal"
-                        class="button button--lg button--bg-primary-200 button--rounded-3xl modal-open"
+                        class="button button--lg button--bg-primary-200 button--lg-tablet modal-open"
                         data-validate-inputs='["name", "email", "tel", "message"]'
                         type="button"
                       >
@@ -517,7 +521,9 @@
                           <span class="kit-icon file-download"></span>
                         </div>
 
-                        <p class="p2 medium-font">Download Brochure</p>
+                        <p class="p2 medium-font fz-16-14-media">
+                          Download Brochure
+                        </p>
                       </button>
                     </div>
 
@@ -857,18 +863,17 @@
                           <div class="scheme-plan-simple__item">
                             <p class="h6-add semibold-font">Visual Scheme</p>
 
-                            <a
-                              href="#"
-                              aria-label="Перейти на страницу плана"
-                              title="Open"
-                              class="button button--bg-primary-100 br-el--rounded-md"
+                            <button
+                              type="button"
+                              class="button button--bg-primary-100 br-el--rounded-md modal-open"
+                              data-modal="schemaModal"
                             >
                               <p class="p2 medium-font">Open</p>
 
                               <div class="icon" style="rotate: 45deg">
                                 <span class="kit-icon arrow-up-md"></span>
                               </div>
-                            </a>
+                            </button>
                           </div>
                         </div>
 
@@ -897,224 +902,17 @@
                   >
                     <h2 class="h4">Properties in SkyHills Astra</h2>
 
-                    <div class="object-bottom__property">
-                      <div class="checkbox-box tablet-none">
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" checked name="propertie" />
-
-                            <div class="check__info-content">
-                              <span class="p2">Developer</span>
-                            </div>
-                          </div>
-                        </label>
-
-                        <label class="check">
-                          <div class="check__info">
-                            <input type="radio" name="propertie" />
-
-                            <div class="check__info-content">
-                              <span class="p2">Agencies</span>
-                            </div>
-                          </div>
-                        </label>
-                      </div>
-
-                      <div class="object-bottom__property-items">
-                        <div
-                          class="object-bottom__property-item tablet-none"
-                          data-loader-relative
-                        >
-                          <div class="loader" data-loader-box>
-                            <span></span>
-                          </div>
-
-                          <div
-                            class="select-box select-box--words select-box--noMax"
-                            data-placeholder="All blocks"
-                            data-loading="true"
-                          >
-                            <select id="select101">
-                              <option value="">All blocks</option>
-                              <option value="1">some info 1</option>
-                              <option value="2">some info 2</option>
-                              <option value="3">some info 3</option>
-                              <option value="4">some info 4</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div
-                          class="object-bottom__property-item tablet-none"
-                          data-loader-relative
-                        >
-                          <div class="loader" data-loader-box>
-                            <span></span>
-                          </div>
-
-                          <div
-                            class="select-box select-box--words select-box--noMax"
-                            data-placeholder="Living space"
-                            data-loading="true"
-                          >
-                            <select id="select4">
-                              <option value="">Living space</option>
-                              <option value="1">some info 1</option>
-                              <option value="2">some info 2</option>
-                              <option value="3">some info 3</option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div
-                          class="object-bottom__property-item tablet-none"
-                          data-loader-relative
-                        >
-                          <div class="loader" data-loader-box>
-                            <span></span>
-                          </div>
-
-                          <div
-                            class="select-box select-box--noMax select-box--words select-box--check"
-                            data-placeholder="Beds & Baths"
-                            data-loading="true"
-                          >
-                            <select id="select3" multiple>
-                              <option value="">Beds & Baths</option>
-                              <option value="beds-studio" data-group="beds">
-                                Studio
-                              </option>
-                              <option value="beds-1" data-group="beds">
-                                1
-                              </option>
-                              <option value="beds-2" data-group="beds">
-                                2
-                              </option>
-                              <option value="beds-3" data-group="beds">
-                                3
-                              </option>
-                              <option value="beds-4" data-group="beds">
-                                4
-                              </option>
-                              <option value="beds-5" data-group="beds">
-                                5
-                              </option>
-                              <option value="beds-6" data-group="beds">
-                                6
-                              </option>
-                              <option value="beds-7" data-group="beds">
-                                7
-                              </option>
-                              <option value="beds-8" data-group="beds">
-                                8
-                              </option>
-                              <option value="beds-9" data-group="beds">
-                                9
-                              </option>
-                              <option value="beds-10" data-group="beds">
-                                10+
-                              </option>
-                              <option value="baths-1" data-group="baths">
-                                1
-                              </option>
-                              <option value="baths-2" data-group="baths">
-                                2
-                              </option>
-                              <option value="baths-3" data-group="baths">
-                                3
-                              </option>
-                              <option value="baths-4" data-group="baths">
-                                4
-                              </option>
-                              <option value="baths-5" data-group="baths">
-                                5
-                              </option>
-                              <option value="baths-6" data-group="baths">
-                                6+
-                              </option>
-                            </select>
-                          </div>
-                        </div>
-
-                        <div
-                          class="dropdown dropdown--price input-box tablet-none"
-                        >
-                          <button
-                            class="input-box__info dropdown__btn"
-                            type="button"
-                          >
-                            <div class="check">
-                              <div class="icon icon--sm">
-                                <span class="kit-icon check-big"></span>
-                              </div>
-                            </div>
-
-                            <p class="p2">Price</p>
-
-                            <div class="icon icon--big arrow">
-                              <span class="kit-icon caret-up-md"></span>
-                            </div>
-                          </button>
-
-                          <div class="dropdown__content popup price-popup left">
-                            <div class="price-popup__content">
-                              <p class="p2 semibold-font">Price range, AED</p>
-
-                              <div class="price-popup__items">
-                                <div class="input-box">
-                                  <label class="input-box__content">
-                                    <div class="input-box__info">
-                                      <div class="decor p2">Min</div>
-                                      <input
-                                        placeholder="0"
-                                        type="text"
-                                        name="price_min"
-                                        min="0"
-                                        max="10000"
-                                        data-type="price_min"
-                                        data-input-number
-                                      />
-                                    </div>
-                                  </label>
-                                </div>
-                                <div class="input-box">
-                                  <label class="input-box__content">
-                                    <div class="input-box__info">
-                                      <div class="decor p2">Max</div>
-                                      <input
-                                        placeholder="∞"
-                                        type="text"
-                                        name="price_max"
-                                        min="0"
-                                        max="10000"
-                                        data-type="price_max"
-                                        data-input-number
-                                      />
-                                    </div>
-                                  </label>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <button
-                          type="button"
-                          class="button button--lg button--bg-primary-200 button--rounded-md tablet-none"
-                        >
-                          <p class="p2 medium-font">Search</p>
-
-                          <div class="icon icon--big">
-                            <span
-                              class="kit-icon search-magnifying-glass"
-                            ></span>
-                          </div>
-                        </button>
-
-                        <div class="checkbox-box tablet-show">
+                    <div
+                      class="object-bottom__property accordeon accordeon--noMassa accordeon--tablet"
+                      data-width="767"
+                    >
+                      <div
+                        class="object-bottom__property-block accordeon__item"
+                      >
+                        <div class="checkbox-box tablet-none">
                           <label class="check">
                             <div class="check__info">
-                              <input type="radio" checked name="propertie-2" />
+                              <input type="radio" checked name="propertie" />
 
                               <div class="check__info-content">
                                 <span class="p2">Developer</span>
@@ -1124,7 +922,7 @@
 
                           <label class="check">
                             <div class="check__info">
-                              <input type="radio" name="propertie-2" />
+                              <input type="radio" name="propertie" />
 
                               <div class="check__info-content">
                                 <span class="p2">Agencies</span>
@@ -1133,17 +931,241 @@
                           </label>
                         </div>
 
-                        <button
-                          type="button"
-                          class="button button--bg-gray-300 button--lg button--rounded-md modal-open tablet-show"
-                          data-modal="filterModal"
+              
+                          <div class="object-bottom__property-inner tablet-show">
+                            <div class="checkbox-box">
+                              <label class="check">
+                                <div class="check__info">
+                                  <input
+                                    type="radio"
+                                    checked
+                                    name="propertie-2"
+                                  />
+
+                                  <div class="check__info-content">
+                                    <span class="p2">Developer</span>
+                                  </div>
+                                </div>
+                              </label>
+
+                              <label class="check">
+                                <div class="check__info">
+                                  <input type="radio" name="propertie-2" />
+
+                                  <div class="check__info-content">
+                                    <span class="p2">Agencies</span>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+
+                            <button
+                              type="button"
+                              class="button button--bg-gray-300 button--lg button--rounded-md accordeon__question"
+                            >
+                              <div class="icon">
+                                <span class="kit-icon filter-icon"></span>
+                              </div>
+
+                              <p class="p3 medium-font">Filters</p>
+                            </button>
+                          </div>
+                      
+
+                        <div
+                          class="object-bottom__property-items accordeon__answer"
+                          data-padding-top="100"
                         >
-                          <div class="icon">
-                            <span class="kit-icon filter-icon"></span>
+                          <div
+                            class="object-bottom__property-item"
+                            data-loader-relative
+                          >
+                            <div class="loader" data-loader-box>
+                              <span></span>
+                            </div>
+
+                            <div
+                              class="select-box select-box--words select-box--noMax"
+                              data-placeholder="All blocks"
+                              data-loading="true"
+                            >
+                              <select id="select101" data-dropdown-outside>
+                                <option value="">All blocks</option>
+                                <option value="1">some info 1</option>
+                                <option value="2">some info 2</option>
+                                <option value="3">some info 3</option>
+                                <option value="4">some info 4</option>
+                              </select>
+                            </div>
                           </div>
 
-                          <p class="p3 medium-font">Filters</p>
-                        </button>
+                          <div
+                            class="object-bottom__property-item"
+                            data-loader-relative
+                          >
+                            <div class="loader" data-loader-box>
+                              <span></span>
+                            </div>
+
+                            <div
+                              class="select-box select-box--words select-box--noMax"
+                              data-placeholder="Living space"
+                              data-loading="true"
+                            >
+                              <select id="select4" data-dropdown-outside>
+                                <option value="">Living space</option>
+                                <option value="1">some info 1</option>
+                                <option value="2">some info 2</option>
+                                <option value="3">some info 3</option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div
+                            class="object-bottom__property-item"
+                            data-loader-relative
+                          >
+                            <div class="loader" data-loader-box>
+                              <span></span>
+                            </div>
+
+                            <div
+                              class="select-box select-box--noMax select-box--words select-box--check"
+                              data-placeholder="Beds & Baths"
+                              data-loading="true"
+                            >
+                              <select id="select3" multiple data-dropdown-outside>
+                                <option value="">Beds & Baths</option>
+                                <option value="beds-studio" data-group="beds">
+                                  Studio
+                                </option>
+                                <option value="beds-1" data-group="beds">
+                                  1
+                                </option>
+                                <option value="beds-2" data-group="beds">
+                                  2
+                                </option>
+                                <option value="beds-3" data-group="beds">
+                                  3
+                                </option>
+                                <option value="beds-4" data-group="beds">
+                                  4
+                                </option>
+                                <option value="beds-5" data-group="beds">
+                                  5
+                                </option>
+                                <option value="beds-6" data-group="beds">
+                                  6
+                                </option>
+                                <option value="beds-7" data-group="beds">
+                                  7
+                                </option>
+                                <option value="beds-8" data-group="beds">
+                                  8
+                                </option>
+                                <option value="beds-9" data-group="beds">
+                                  9
+                                </option>
+                                <option value="beds-10" data-group="beds">
+                                  10+
+                                </option>
+                                <option value="baths-1" data-group="baths">
+                                  1
+                                </option>
+                                <option value="baths-2" data-group="baths">
+                                  2
+                                </option>
+                                <option value="baths-3" data-group="baths">
+                                  3
+                                </option>
+                                <option value="baths-4" data-group="baths">
+                                  4
+                                </option>
+                                <option value="baths-5" data-group="baths">
+                                  5
+                                </option>
+                                <option value="baths-6" data-group="baths">
+                                  6+
+                                </option>
+                              </select>
+                            </div>
+                          </div>
+
+                          <div class="dropdown dropdown--price input-box" data-fixed-dropdown>
+                            <button
+                              class="input-box__info dropdown__btn"
+                              type="button"
+                            >
+                              <div class="check">
+                                <div class="icon icon--sm">
+                                  <span class="kit-icon check-big"></span>
+                                </div>
+                              </div>
+
+                              <p class="p2">Price</p>
+
+                              <div class="icon icon--big arrow">
+                                <span class="kit-icon caret-up-md"></span>
+                              </div>
+                            </button>
+
+                            <div
+                              class="dropdown__content popup price-popup left"
+                            >
+                              <div class="price-popup__content">
+                                <p class="p2 semibold-font">Price range, AED</p>
+
+                                <div class="price-popup__items">
+                                  <div class="input-box">
+                                    <label class="input-box__content">
+                                      <div class="input-box__info">
+                                        <div class="decor p2">Min</div>
+                                        <input
+                                          placeholder="0"
+                                          type="text"
+                                          name="price_min"
+                                          min="0"
+                                          max="10000"
+                                          data-type="price_min"
+                                          data-input-number
+                                        />
+                                      </div>
+                                    </label>
+                                  </div>
+                                  <div class="input-box">
+                                    <label class="input-box__content">
+                                      <div class="input-box__info">
+                                        <div class="decor p2">Max</div>
+                                        <input
+                                          placeholder="∞"
+                                          type="text"
+                                          name="price_max"
+                                          min="0"
+                                          max="10000"
+                                          data-type="price_max"
+                                          data-input-number
+                                        />
+                                      </div>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <button
+                            type="button"
+                            class="button button--lg button--bg-primary-200 button--rounded-md tablet-none"
+                          >
+                            <p class="p2 medium-font">Search</p>
+
+                            <div class="icon icon--big">
+                              <span
+                                class="kit-icon search-magnifying-glass"
+                              ></span>
+                            </div>
+                          </button>
+                        </div>
                       </div>
 
                       <div
@@ -1193,7 +1215,7 @@
                     </div>
                   </div>
 
-                  <div class="object-bottom__item">
+                  <div class="object-bottom__item object-bottom__feature">
                     <h2 class="h4">Features</h2>
 
                     <div class="object-bottom__items">
@@ -1282,27 +1304,29 @@
                       </div>
                     </div>
 
-                    <button
-                      class="button button--bg-secondary-200 button--rounded-2xl modal-open"
-                      data-modal="featuresModal"
-                    >
-                      <p class="p2 medium-font">See all</p>
+                    <div class="object-bottom__feature-footer">
+                      <button
+                        class="button button--bg-secondary-200 button--rounded-2xl modal-open"
+                        data-modal="featuresModal"
+                      >
+                        <p class="p2-add medium-font">See all</p>
 
-                      <div class="icon">
-                        <span class="kit-icon arrow-right-lg"></span>
-                      </div>
-                    </button>
+                        <div class="icon">
+                          <span class="kit-icon arrow-right-lg"></span>
+                        </div>
+                      </button>
+                    </div>
                   </div>
 
-                  <div class="banner-content banner-content--absolute-img">
-                    <div class="banner-content__content">
-                      <header class="banner-content__header">
-                        <div class="banner-content__header-top">
+                  <div class="promo-content promo-content--absolute-img">
+                    <div class="promo-content__content">
+                      <header class="promo-content__header">
+                        <div class="promo-content__header-top">
                           <p class="h4 semibold-font">Any Questions?</p>
                         </div>
                       </header>
 
-                      <div class="banner-content__badges">
+                      <div class="promo-content__badges">
                         <div
                           class="badge badge--big badge--white br-el--rounded-base badge--2xl"
                         >
@@ -1342,7 +1366,7 @@
                         </div>
                       </div>
 
-                      <footer class="banner-content__footer">
+                      <footer class="promo-content__footer">
                         <button
                           type="button"
                           aria-label="Открыть модальное окно"
@@ -1367,7 +1391,7 @@
                     </div>
 
                     <div
-                      class="banner-content__img"
+                      class="promo-content__img"
                       style="top: 20px; bottom: 20px"
                     >
                       <picture>
@@ -1898,13 +1922,15 @@
                     </div>
                   </div>
 
-                  <div class="banner-content isChangePhoto">
-                    <div class="banner-content__content">
-                      <header class="banner-content__header">
-                        <div class="banner-content__header-top">
-                          <p class="h5 semibold-font">Download the brochure</p>
+                  <div class="promo-content isChangePhoto dowload-banner">
+                    <div class="promo-content__content">
+                      <header class="promo-content__header">
+                        <div class="promo-content__header-top">
+                          <p class="h5 fz-28-22 semibold-font">
+                            Download the brochure
+                          </p>
 
-                          <div class="banner-content__header-img tablet-show">
+                          <div class="promo-content__header-img tablet-show">
                             <picture>
                               <source
                                 srcset="
@@ -1920,22 +1946,22 @@
                           </div>
                         </div>
 
-                        <p class="p2">
+                        <p class="p2-add">
                           You will receive detailed information about the
                           property, additional photos and a calculation of the
                           expected return on investment.
                         </p>
                       </header>
 
-                      <footer class="banner-content__footer">
+                      <footer class="promo-content__footer">
                         <a
                           href="/img/goods/four.webp"
                           download=""
                           data-download-file="/img/goods/five.webp"
-                          class="button button--noBg button--xl modal-open button--noBg-primary-color-100 button--border-small br-el--rounded-3xl"
+                          class="button button--noBg button--xl modal-open button--noBg-primary-color-100 button--border-small br-el--rounded-3xl dowload-banner__btn"
                           data-modal="successModal"
                         >
-                          <p class="p2 semibold-font">Download</p>
+                          <p class="p2-add semibold-font">Download</p>
 
                           <div class="icon">
                             <span class="kit-icon download"></span>
@@ -1944,9 +1970,7 @@
                       </footer>
                     </div>
 
-                    <div
-                      class="banner-content__img banner-content__img--filter"
-                    >
+                    <div class="promo-content__img promo-content__img--filter">
                       <picture>
                         <source
                           srcset="
@@ -1972,7 +1996,7 @@
                           <p class="h6">Studio</p>
 
                           <div
-                            class="table-grid table-grid--five table-grid--media-two-head"
+                            class="table-grid table-grid--five table-grid--media-two-head table-grid--fz-s"
                           >
                             <div class="table-grid__header">
                               <div class="table-grid__row">
@@ -2160,7 +2184,7 @@
                           <p class="h6">1 Bedroom</p>
 
                           <div
-                            class="table-grid table-grid--five table-grid--media-two-head"
+                            class="table-grid table-grid--five table-grid--media-two-head table-grid--fz-s"
                           >
                             <div class="table-grid__header">
                               <div class="table-grid__row">
@@ -2348,7 +2372,7 @@
                           <p class="h6">1 Bedroom</p>
 
                           <div
-                            class="table-grid table-grid--five table-grid--media-two-head"
+                            class="table-grid table-grid--five table-grid--media-two-head table-grid--fz-s"
                           >
                             <div class="table-grid__header">
                               <div class="table-grid__row">
@@ -2668,7 +2692,7 @@
                       </div>
 
                       <div
-                        class="table-grid table-grid--noGap table-grid--two tab-item active"
+                        class="table-grid table-grid--noGap table-grid--two tab-item table-grid--fz-s active"
                         data-block-tab="payment-all"
                         data-block-category="payment"
                       >
@@ -3309,7 +3333,9 @@
                         <div class="more-block__item">
                           <div class="text-boxs__item">
                             <div class="text-boxs__item-content">
-                              <p class="h5 semibold-font">Despite the heat</p>
+                              <p class="h5 semibold-font fz-28-20">
+                                Despite the heat
+                              </p>
 
                               <div class="textbox">
                                 <p class="p1">
@@ -3350,7 +3376,9 @@
                         <div class="more-block__item">
                           <div class="text-boxs__item">
                             <div class="text-boxs__item-content">
-                              <p class="h5 semibold-font">Logistical matters</p>
+                              <p class="h5 fz-28-20 semibold-font">
+                                Logistical matters
+                              </p>
 
                               <div class="textbox text-dark-300">
                                 <p class="p1">
@@ -3453,16 +3481,18 @@
                   </div>
 
                   <div
-                    class="banner-content banner-content--absolute-img banner-content--secondary-bg-300"
+                    class="promo-content promo-content--absolute-img promo-content--secondary-bg-300 promo-content--showImg full-el--tablet"
                   >
-                    <div class="banner-content__content">
-                      <header class="banner-content__header">
-                        <div class="banner-content__header-top">
+                    <div
+                      class="promo-content__content promo-content__content--media-max"
+                    >
+                      <header class="promo-content__header">
+                        <div class="promo-content__header-top">
                           <p class="h4 semibold-font">Maybe Useful</p>
                         </div>
                       </header>
 
-                      <div class="banner-content__badges">
+                      <div class="promo-content__badges">
                         <a
                           class="badge badge--big badge--white br-el--rounded-base badge--2xl"
                           href="#"
@@ -3506,7 +3536,7 @@
                         </a>
                       </div>
 
-                      <footer class="banner-content__footer">
+                      <footer class="promo-content__footer">
                         <button
                           type="button"
                           aria-label="Открыть модальное окно"
@@ -3515,7 +3545,7 @@
                         >
                           <p class="p2 semibold-font">Get information</p>
 
-                          <div class="icon" style="rotate: -145deg">
+                          <div class="icon" style="rotate: -135deg">
                             <span class="kit-icon arrow-down-md"></span>
                           </div>
                         </button>
@@ -3523,7 +3553,7 @@
                     </div>
 
                     <div
-                      class="banner-content__img banner-content__img--big banner-content__img--filter-inherit"
+                      class="promo-content__img promo-content__img--big promo-content__img--filter-inherit"
                     >
                       <picture>
                         <source
@@ -3542,11 +3572,11 @@
 
                     <div class="object-bottom__boxs">
                       <div
-                        class="pricing-card pricing-card--gray pricing-card--middle"
+                        class="pricing-card pricing-card--gray pricing-card--middle pricing-card--gray-200-media"
                       >
                         <header class="pricing-card__header">
                           <div class="pricing-card__block">
-                            <p class="h5 text-dark-100 text-uppercase">
+                            <p class="h5 fz-28-20 text-dark-100 text-uppercase">
                               32,540 AED
                             </p>
 
@@ -3559,18 +3589,18 @@
                         <footer
                           class="pricing-card__footer pricing-card__footer--row"
                         >
-                          <p class="p3 semibold-font text-dark-100">
+                          <p class="p3 fz-14-12 semibold-font text-dark-100">
                             Average price per sq.m.
                           </p>
                         </footer>
                       </div>
 
                       <div
-                        class="pricing-card pricing-card--gray pricing-card--middle"
+                        class="pricing-card pricing-card--gray pricing-card--middle pricing-card--gray-200-media"
                       >
                         <header class="pricing-card__header">
                           <div class="pricing-card__block">
-                            <p class="h5 text-dark-100 text-uppercase">
+                            <p class="h5 fz-28-20 text-dark-100 text-uppercase">
                               1,635,540 AED
                             </p>
 
@@ -3583,7 +3613,7 @@
                         <footer
                           class="pricing-card__footer pricing-card__footer--row"
                         >
-                          <p class="p3 semibold-font text-dark-100">
+                          <p class="p3 fz-14-12 semibold-font text-dark-100">
                             Average price per sq.m.
                           </p>
                         </footer>
@@ -3809,7 +3839,7 @@
       @@include('../modals/features.html') @@include('../modals/success.html')
       @@include('../modals/request.html') @@include('../modals/floor.html')
       @@include('../modals/map.html') @@include('../modals/filter.html')
-      @@include('../modals/gallery.html')
+      @@include('../modals/gallery.html') @@include('../modals/schema.html')
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>

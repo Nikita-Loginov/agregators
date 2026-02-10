@@ -244,6 +244,15 @@ body.scrollBottom {
     line-clamp: 4;
     -webkit-line-clamp: 4;
   }
+
+  &--media {
+    @media (max-width: $tablet-breakpoint) {
+      &-one {
+        line-clamp: 1;
+        -webkit-line-clamp: 1;
+      }
+    }
+  }
 }
 
 .close {
