@@ -101,6 +101,9 @@ html {
   --container-width-second: calc(
     800px + calc(var(--container-inline-padding) * 2)
   );
+  --container-width-middle: calc(
+    904px + calc(var(--container-inline-padding) * 2)
+  );
 
   --calback-header-height: 116px;
 

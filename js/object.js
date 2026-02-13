@@ -50,7 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   handleAllSliders();
 
-  initSimpleMap("map-2d", [lagerhauser.at(-1)]);
+  initSimpleMap("map-2d", [lagerhauser.at(-1)], {
+    clickInit: true,
+  });
 
   document.addEventListener("click", handleGlobalClick);
 });

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Website Search", "links" :
+  ["./css/search.css", "./css/lib/swiper.min.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail main--detail-big">
+        <div class="top-page">
+          <div class="container container--middle">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Website Search</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Website Search"
+                  title="Website Search"
+                  class="breadcrumbs__media"
+                >
+                  <span class="icon" style="rotate: 90deg">
+                    <span class="kit-icon arrow-circle-down"></span>
+                  </span>
+
+                  <span>Website Search</span>
+                </a>
+              </div>
+
+              <h1 class="h2">Website Search</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="search">
+            <div class="container container--middle">
+              <div class="search__inner">
+                <form class="search__header" novalidate>
+                  <div class="search__inputs">
+                    <div class="input-box">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Search..."
+                            required
+                          />
+                        </div>
+                      </label>
+
+                      <p class="input-box__errors p4 form__errors"></p>
+                    </div>
+
+                    <div class="tablet-none">
+                      <button
+                        class="button button--lg button--bg-primary-500 button--rounded-md"
+                        type="button"
+                        style="width: 100%"
+                      >
+                        <p class="p2 medium-font">Find</p>
+
+                        <div class="icon icon--md-base">
+                          <span class="kit-icon search-magnifying-glass"></span>
+                        </div>
+                      </button>
+                    </div>
+
+                    <div class="tablet-show">
+                      <button
+                        class="button button--cub button--cub-lg button--bg-primary-500 button--rounded-md"
+                        type="button"
+                      >
+                        <div class="icon icon--md-base">
+                          <span class="kit-icon search-magnifying-glass"></span>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="search__content">
+                  <div
+                    class="banner-status banner-status--small banner-status--white-bg"
+                  >
+                    <div
+                      class="banner-status__icon banner-status__icon--default"
+                    >
+                      <span class="icon icon--lg text-primary-100">
+                        <span class="kit-icon info"></span>
+                      </span>
+                    </div>
+
+                    <div class="banner-status__content">
+                      <div class="textbox">
+                        <p class="p1 medium-font">
+                          Start your journey today by entering a location or
+                          keyword below to discover premium real estate listings
+                          and essential property insights tailored specifically
+                          to your needs.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="promo-content promo-content--absolute-img promo-content--gray-bg-300 promo-content--showImg promo-content--mh promo-content--media-start"
+                  >
+                    <div
+                      class="promo-content__content promo-content__content--media-max"
+                    >
+                      <header class="promo-content__header"  style="max-width: 85%;">
+                        <div class="promo-content__header-top">
+                          <p class="h4 fz-48-22 semibold-font text-dark-500">
+                            Nothing found for your search query.
+                          </p>
+                        </div>
+                      </header>
+                    </div>
+
+                    <div
+                      class="promo-content__img promo-content__img--big promo-content__img--filter-inherit promo-content__img--media-fly"
+                      style="--fly: 90px;"
+                    >
+                      <picture>
+                        <source
+                          srcset="
+                            /img/decors/four.webp   1x,
+                            /img/decors/four2x.webp 2x
+                          "
+                        />
+                        <img src="/img/decors/four.webp" alt="фотография" />
+                      </picture>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+    </div>
+
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/search.js" type="module"></script>
+  </body>
+</html>

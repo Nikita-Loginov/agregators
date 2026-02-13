@@ -1,0 +1,128 @@
+.contact {
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  &__item {
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    background-color: var(--white-color);
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(16px, 36px, $lg-breakpoint, $tablet-breakpoint);
+    justify-content: space-between;
+    padding: calculate-clamp(20px, 40px, $lg-breakpoint, $tablet-breakpoint)
+      calculate-clamp(16px, 40px, $lg-breakpoint, $tablet-breakpoint);
+    border: 1px solid var(--gray-color-600);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(16px, 24px, $lg-breakpoint, $tablet-breakpoint);
+  }
+
+  &__link {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: max-content auto;
+    // align-items: center;
+    color: var(--dark-color-500);
+
+    a {
+      color: var(--secondary-color-100);
+    }
+  }
+
+  &__link-icon {
+    transform: translateY(5px);
+  }
+
+  &__map {
+    background-color: var(--gray-color-600);
+
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__items {
+      position: relative;
+      padding: 8px;
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    &__item {
+      position: relative;
+      z-index: 3;
+      border-radius: var(--radius-md);
+      max-width: 388px;
+    }
+
+    &__map {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      border-radius: 0;
+      max-width: 100%;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__map {
+      display: none;
+    }
+
+    &__btns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+    
+      .button {
+        width: 100%;
+        white-space: nowrap; 
+      }
+    }
+
+    &__content {
+      padding: 0;
+      border-radius: 0;
+      border: none;
+    }
+
+    &__items {
+      padding: 0;
+      border-radius: 0;
+    }
+
+    &__item {
+      max-width: 100%;
+    }
+  }
+}

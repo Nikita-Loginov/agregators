@@ -69,6 +69,10 @@
     flex-wrap: wrap;
   }
 
+  &__content {
+    align-items: flex-start;
+  }
+
   &__badges {
     gap: 12px;
   }

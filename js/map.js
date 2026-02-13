@@ -14,23 +14,24 @@ const swipers = [
 ];
 
 const serVars = () => {
-  const infoMap = document.querySelector('.map__info');
+  const infoMap = document.querySelector(".map__info");
 
   if (!infoMap) {
-
   }
- const styles = window.getComputedStyle(infoMap);
+  const styles = window.getComputedStyle(infoMap);
   const height = styles.getPropertyValue("height");
 
- setVar('--info-map-height', height);
-}
+  setVar("--info-map-height", height);
+};
 
 const handleGlobalClick = (e) => {
-  toggleSibebar(e)
+  toggleSibebar(e);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  initSimpleMap("map", lagerhauser);
+  initSimpleMap("map", lagerhauser, {
+    clickInit: true,
+  });
   initImgsSwiperGoods();
   serVars();
 

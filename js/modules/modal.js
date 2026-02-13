@@ -1,4 +1,6 @@
 import { initGallery } from "./gallery/index.js";
+import { MAP_ITEMS_CONFIG } from "../data/lagerhauser.js";
+import { initSimpleMap } from "./map.js";
 
 const CONFIG_MODAL = {
   outsideHiddenModals: false,
@@ -56,6 +58,10 @@ export const openModalStep = (modalBtn, modals, modalBlock) => {
 
   if (modalBlock.classList.contains("floorModal")) {
     initFloorModal(modalBtn, modalBlock);
+  }
+
+  if (modalBlock.classList.contains("mapModalSimple")) {
+    initMapModalSimple(modalBtn, modalBlock);
   }
 
   applyValidateInputs(modalBtn, modalBlock);
@@ -383,4 +389,26 @@ const applyValidateInputs = (modalBtn, modalBlock) => {
       }
     }
   });
+};
+
+const initMapModalSimple = (modalBtn, modalBlock) => {
+  if (!modalBtn || !modalBlock) return;
+
+  if (!modalBlock.classList.contains("mapModalSimple")) return;
+
+  const mapContainer = modalBlock.querySelector("#map-simple");
+  if (!mapContainer) return;
+
+  const itemKey = modalBtn.dataset.item;
+  if (!itemKey) return;
+
+  const config = MAP_ITEMS_CONFIG[itemKey];
+  if (!config) return;
+
+  const { warehouses, options } = config;
+
+  if (mapContainer.__mapInited) return;
+  mapContainer.__mapInited = true;
+
+  initSimpleMap("map-simple", warehouses, options);
 };

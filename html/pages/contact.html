@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Contacts", "links" :
+  ["./css/contact.css", "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
+  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"]
+  })
+  <body class="white-page">
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail main--detail-big">
+        <div class="top-page">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Contacts</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Contacts"
+                  title="Contacts"
+                  class="breadcrumbs__media"
+                >
+                  <span class="icon" style="rotate: 90deg">
+                    <span class="kit-icon arrow-circle-down"></span>
+                  </span>
+
+                  <span>Contacts</span>
+                </a>
+              </div>
+
+              <h1 class="h2">Contacts</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="contact">
+            <div class="container">
+              <div class="contact__inner">
+                <div class="contact__items">
+                  <div class="contact__item contact__content">
+                    <div class="textbox">
+                      <p class="p2 fz18-16">
+                        If you have any enquiries on how to become a seller on
+                        our website, fill out the contact form or contact us
+                        via:
+                      </p>
+                    </div>
+
+                    <ul class="contact__list">
+                      <li class="contact__link">
+                        <div class="icon contact__link-icon">
+                          <span class="kit-icon phone"></span>
+                        </div>
+
+                        <div class="contact__link-content">
+                          <a
+                            href="tel:+971521408957"
+                            aria-label="Позвонить по номеру +971 52 140 8957"
+                            title="+971 52 140 8957"
+                            class="p2-add"
+                            >+971 52 140 8957</a
+                          >
+                        </div>
+                      </li>
+
+                      <li class="contact__link">
+                        <div class="icon contact__link-icon">
+                          <span class="kit-icon mail"></span>
+                        </div>
+
+                        <div class="contact__link-content">
+                          <a
+                            href="mailto:info@emirates.estate"
+                            aria-label="Написать на почту info@emirates.estate"
+                            title="info@emirates.estate"
+                            class="p2-add"
+                            >info@emirates.estate</a
+                          >
+                        </div>
+                      </li>
+
+                      <li class="contact__link">
+                        <div class="icon contact__link-icon">
+                          <span class="kit-icon map-pin"></span>
+                        </div>
+
+                        <div class="contact__link-content">
+                          <p class="p2-add">
+                            Office 2700-036, Al Saqr Real Estate Management
+                            (L.L.C.), Dubai Branch, Trade Centre 2 (مكتب
+                            2700-036 ملك الصقر الدارة العقارات )ش.ذ.م.م( - فرع
+                            دب -المركز التجاري2)
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="contact__link">
+                        <div class="icon contact__link-icon"></div>
+
+                        <div class="contact__link-content">
+                          <p class="p2-add text-uppercase">
+                            Wre GLOBAL REAL ESTATE L.L.C.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+
+                    <div class="contact__btns">
+                      <button
+                        class="button button--lg button--bg-primary-100 br-el--rounded-3xl-md modal-open"
+                        data-modal="contactUpModal"
+                        data-validate-inputs='["name", "email", "tel", "message"]'
+                      >
+                        <p class="p2 meduim-font">Leave your enquiry</p>
+
+                        <div class="icon icon--big" style="rotate: -45deg">
+                          <span class="kit-icon arrow-right-md"></span>
+                        </div>
+                      </button>
+
+                      <div class="tablet-show">
+                        <button
+                          class="button button--lg button--bg-secondary-300 br-el--rounded-3xl-md modal-open"
+                          data-modal="mapModalSimple"
+                          data-item="office"
+                        >
+                          <p class="p2 meduim-font">On the map</p>
+
+                          <div class="icon icon--big">
+                            <span class="kit-icon map-pin"></span>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="contact__item contact__map">
+                    <div id="map"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+    </div>
+
+    @@include('../modals/map-simple.html')
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+    <script src="/js/contact.js" type="module"></script>
+  </body>
+</html>

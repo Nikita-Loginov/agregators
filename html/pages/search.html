@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Website Search", "links" :
+  ["./css/search.css", "./css/lib/swiper.min.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail main--detail-big">
+        <div class="top-page">
+          <div class="container container--middle">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Website Search</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="#"
+                  aria-label="Вернуться на Website Search"
+                  title="Website Search"
+                  class="breadcrumbs__media"
+                >
+                  <span class="icon" style="rotate: 90deg">
+                    <span class="kit-icon arrow-circle-down"></span>
+                  </span>
+
+                  <span>Website Search</span>
+                </a>
+              </div>
+
+              <h1 class="h2">Website Search</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="search">
+            <div class="container container--middle">
+              <div class="search__inner search__inner--small">
+                <form class="search__header" novalidate>
+                  <div class="search__inputs">
+                    <div class="input-box">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Search..."
+                            required
+                          />
+                        </div>
+                      </label>
+
+                      <p class="input-box__errors p4 form__errors"></p>
+                    </div>
+
+                    <div class="tablet-none">
+                      <button
+                        class="button button--lg button--bg-primary-500 button--rounded-md"
+                        type="button"
+                        style="width: 100%"
+                      >
+                        <p class="p2 medium-font">Find</p>
+
+                        <div class="icon icon--md-base">
+                          <span class="kit-icon search-magnifying-glass"></span>
+                        </div>
+                      </button>
+                    </div>
+
+                    <div class="tablet-show">
+                      <button
+                        class="button button--cub button--cub-lg button--bg-primary-500 button--rounded-md"
+                        type="button"
+                      >
+                        <div class="icon icon--md-base">
+                          <span class="kit-icon search-magnifying-glass"></span>
+                        </div>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+
+                <div class="search__content">
+                  <div class="search__block">
+                    <p class="p3 text-dark-600">Search results: 29</p>
+
+                    <div class="search__items">
+                      <!-- prettier-ignore -->
+
+                      @@include('../good-item/good-item-one.html',
+                        {"tag-class-text": "p2", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/one'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add active", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true, "tagFloor" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
+
+                      <!-- prettier-ignore -->
+                      @@include('../good-item/good-item-one.html',
+                        {"tag-class-text": "p2", "tag-class": "tag--lg","tag-class-icon": "icon--big", "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","train" : true, "geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add ", "classAddBtnsIcon" : "","tagBarrier" : true, "typeItem": "Development", "typeItemClass": "p1 bold-font text-secondary-300", "name" : "SkyHills Astra in Al Barsha, Dubai, UAE № 574705", "nameClass" : "p1 text-secondary-100 semibold-font ellipsis-text ellipsis-text--one good-item__desc", "goodItemClassAdd" : "good-item--nonePrice good-item--big", "tagsWords" : '[{ text: "Studio", title : "from 535,300 AED", classAddTag : "tag--lg", classTagText : "p2", classTagTitle : "p2 medium-font"}, { text: "1 bedroom", title : "from 753,840 AED", classAddTag : "tag--lg", classTagText : "p2", classTagTitle : "p2 medium-font"}, { text: "2 bedrooms", title : "from 1,360,000 AED", classAddTag : "tag--lg", classTagText : "p2", classTagTitle : "p2 medium-font"}]'})
+
+                      <div class="article-item">
+                        <div class="article-item___img-box">
+                          <a
+                            href="#"
+                            title="Freelancer visa"
+                            aria-label="Перейти на чтение статьи : Freelancer visa"
+                            class="article-item__img-block"
+                          >
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/articles/two.webp   1x,
+                                  /img/articles/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/articles/two.webp"
+                                alt="фотография"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </a>
+                        </div>
+
+                        <div class="article-item__content">
+                          <div class="article-item__block">
+                            <a
+                              href="#"
+                              title="Freelancer visa"
+                              aria-label="Перейти на чтение статьи : Freelancer visa"
+                              class="h6 text-secondary-100"
+                            >
+                              Freelancer visa
+                            </a>
+                          </div>
+
+                          <div class="article-item__block">
+                            <div class="article-item__badges">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon icon--little">
+                                  <span class="kit-icon calendar-event"></span>
+                                </span>
+
+                                <time
+                                  class="p3 medium-font"
+                                  datetime="2025-07-07"
+                                  >07.07.2025</time
+                                >
+                              </div>
+
+                              <div class="decor-el decor-el--small">
+                                <span class="icon icon--little">
+                                  <span class="kit-icon clock"></span>
+                                </span>
+
+                                <p class="p3 medium-font">
+                                  Reading time: less than a minute
+                                </p>
+                              </div>
+
+                              <div class="decor-el decor-el--small">
+                                <span class="icon icon--little">
+                                  <span class="kit-icon show"></span>
+                                </span>
+
+                                <p class="p3 medium-font">5621</p>
+                              </div>
+                            </div>
+
+                            <div class="article-item__tags">
+                              <div
+                                class="tag tag--circle tag--circle-small tag--secondary-200"
+                              >
+                                <span class="kit-icon label"></span>
+                              </div>
+
+                              <div
+                                class="tag tag--xs tag--noBg tag--border-gray-600"
+                              >
+                                <p class="p3 medium-font">Real Estate</p>
+                              </div>
+
+                              <div
+                                class="tag tag--xs tag--noBg tag--border-gray-600"
+                              >
+                                <p class="p3 medium-font">Buying</p>
+                              </div>
+
+                              <div
+                                class="tag tag--xs tag--noBg tag--border-gray-600"
+                              >
+                                <p class="p3 medium-font">Dubai</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="article-item__block">
+                            <div class="textbox">
+                              <p class="p2 ellipsis-text ellipsis-text--four">
+                                There is no separate visa for freelancers in the
+                                United Arab Emirates; however, remote
+                                specialists can legally work by obtaining one of
+                                two categories of residence permit – the Green
+                                Visa or the Virtual Work Permit. The Green Visa
+                                is issued for 5 years, does not require a There
+                                is no separate visa for freelancers in the
+                                United Arab Emirates; however, remote
+                                specialists can legally work by obtaining one of
+                                two categories of residence permit – the Green
+                                Visa or the Virtual Work Permit. The Green Visa
+                                is issued for 5 years, does not require a
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="article-item__block">
+                            <div class="article-item__btns">
+                              <a
+                                href="#"
+                                title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                                aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                                class="button button--bg-secondary-200"
+                              >
+                                <p class="p2 medium-font">Read the article</p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="article-item article-item--noImgBox">
+                        <div class="article-item__content">
+                          <div class="article-item__block">
+                            <a
+                              href="#"
+                              title="UAE Property Sales: H1 2025 — Record-Breaking, Red-Hot Market Action"
+                              aria-label="Перейти на чтение статьи : UAE Property Sales: H1 2025 — Record-Breaking, Red-Hot Market Action"
+                              class="h6 text-secondary-100"
+                            >
+                              UAE Property Sales: H1 2025 — Record-Breaking,
+                              Red-Hot Market Action
+                            </a>
+                          </div>
+
+                          <div class="article-item__block">
+                            <div class="article-item__badges">
+                              <div class="decor-el decor-el--small">
+                                <span class="icon icon--little">
+                                  <span class="kit-icon calendar-event"></span>
+                                </span>
+
+                                <time
+                                  class="p3 medium-font"
+                                  datetime="2025-07-07"
+                                  >07.07.2025</time
+                                >
+                              </div>
+
+                              <div class="decor-el decor-el--small">
+                                <span class="icon icon--little">
+                                  <span class="kit-icon clock"></span>
+                                </span>
+
+                                <p class="p3 medium-font">
+                                  Reading time: 12 minutes
+                                </p>
+                              </div>
+
+                              <div class="decor-el decor-el--small">
+                                <span class="icon icon--little">
+                                  <span class="kit-icon show"></span>
+                                </span>
+
+                                <p class="p3 medium-font">5621</p>
+                              </div>
+                            </div>
+
+                            <div class="article-item__tags">
+                              <div
+                                class="tag tag--circle tag--circle-small tag--secondary-200"
+                              >
+                                <span class="kit-icon label"></span>
+                              </div>
+
+                              <div
+                                class="tag tag--xs tag--noBg tag--border-gray-600"
+                              >
+                                <p class="p3 medium-font">Real Estate</p>
+                              </div>
+
+                              <div
+                                class="tag tag--xs tag--noBg tag--border-gray-600"
+                              >
+                                <p class="p3 medium-font">Buying</p>
+                              </div>
+
+                              <div
+                                class="tag tag--xs tag--noBg tag--border-gray-600"
+                              >
+                                <p class="p3 medium-font">Dubai</p>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="article-item__block">
+                            <div class="textbox">
+                              <p class="p2 ellipsis-text ellipsis-text--four">
+                                Now here’s a market that knows how to make a
+                                splash. First half of 2025, and the UAE property
+                                sector turns up the heat across the board. In
+                                Dubai, over 98,000 property deals get inked —
+                                that’s a roaring 22.6% above numbers from early
+                                2024, painting the town red with AED 326.7
+                                billion ($89 billion) in total value. Square
+                                metre prices? Now here’s a market that knows how
+                                to make a splash. First half of 2025, and the
+                                UAE property sector turns up the heat across the
+                                board. In Dubai, over 98,000 property deals get
+                                inked — that’s a roaring 22.6% above numbers
+                                from early 2024, painting the town red with AED
+                                326.7 billion ($89 billion) in total value.
+                                Square metre prices?
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="article-item__block">
+                            <div class="article-item__btns">
+                              <a
+                                href="#"
+                                title="The UAE Golden Visa: All the Straightforward Answers You Need"
+                                aria-label="Перейти на чтение статьи : The UAE Golden Visa: All the Straightforward Answers You Need"
+                                class="button button--bg-secondary-200"
+                              >
+                                <p class="p2 medium-font">Read the article</p>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="companie-card">
+                        <div class="companie-card__img-box">
+                          <div class="companie-card__img-block">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/companie/one.webp   1x,
+                                  /img/companie/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/companie/one.webp"
+                                alt="фотография компании"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+
+                        <div class="companie-card__content">
+                          <div class="companie-card__header">
+                            <div class="companie-card__header-img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/one.webp   1x,
+                                    /img/companie/one2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/one.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="companie-card__header-content">
+                              <div class="companie-card__header-info">
+                                <div class="companie-card__header-item">
+                                  <p class="h5 fz-28-16">Emaar Properties</p>
+
+                                  <span
+                                    class="icon icon--big"
+                                    style="color: var(--blue-color-300)"
+                                  >
+                                    <span class="kit-icon shield-check"></span>
+                                  </span>
+                                </div>
+
+                                <p class="p4 tablet-show">Founded in 1997</p>
+                              </div>
+
+                              <div class="companie-card__header-info">
+                                <div class="name-rating name-rating--small">
+                                  <div class="name-rating__box">
+                                    <span
+                                      class="icon icon--little text-primary-100"
+                                    >
+                                      <span class="kit-icon star"></span>
+                                    </span>
+
+                                    <p class="p3 medium-font text-dark-100">
+                                      4,9
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__info">
+                            <p class="p3 medium-font tablet-none">
+                              Founded in 1997
+                            </p>
+
+                            <div class="textbox">
+                              <p class="p3 ellipsis-text ellipsis-text--three">
+                                Emaar Properties PJSC, a Dubai-based Public
+                                Joint Stock Company listed on the Dubai
+                                Financial Market, is a global property developer
+                                and provider of premier lifestyles. Emaar has
+                                been shaping landscapes and lives in the Emaar
+                                Properties PJSC, a Dubai-based Public Joint
+                                Stock Company listed on the Dubai Financial
+                                Market, is a global property developer and
+                                provider of premier lifestyles. Emaar has been
+                                shaping landscapes and lives in the
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__footer">
+                            <div class="companie-card__btns">
+                              <a
+                                href="#"
+                                title="See all 147 projects"
+                                aria-label="Перейти на страницу всех проектов"
+                                class="button button--bg-secondary-200"
+                              >
+                                <span class="p3 medium-font"
+                                  >See all 147 projects</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="companie-card">
+                        <div class="companie-card__img-box">
+                          <div class="companie-card__img-block">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/companie/two.webp   1x,
+                                  /img/companie/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/companie/two.webp"
+                                alt="фотография компании"
+                                loading="lazy"
+                              />
+                            </picture>
+                          </div>
+                        </div>
+
+                        <div class="companie-card__content">
+                          <div class="companie-card__header">
+                            <div class="companie-card__header-img">
+                              <picture>
+                                <source
+                                  srcset="
+                                    /img/companie/two.webp   1x,
+                                    /img/companie/two2x.webp 2x
+                                  "
+                                />
+                                <img
+                                  src="/img/companie/two.webp"
+                                  alt="фотография компании"
+                                  loading="lazy"
+                                />
+                              </picture>
+                            </div>
+
+                            <div class="companie-card__header-content">
+                              <div class="companie-card__header-info">
+                                <div class="companie-card__header-item">
+                                  <p class="h5 fz-28-16">Damac Properties</p>
+
+                                  <div class="companie-card__header-icons">
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <span
+                                        class="kit-icon shield-check"
+                                      ></span>
+                                    </span>
+
+                                    <span
+                                      class="icon icon--big"
+                                      style="color: var(--blue-color-300)"
+                                    >
+                                      <span
+                                        class="kit-icon shield-check"
+                                      ></span>
+                                    </span>
+                                  </div>
+                                </div>
+
+                                <p class="p4 tablet-show">Founded in 1997</p>
+                              </div>
+
+                              <div class="companie-card__header-info">
+                                <div class="name-rating name-rating--small">
+                                  <div class="name-rating__box">
+                                    <span
+                                      class="icon icon--little text-primary-100"
+                                    >
+                                      <span class="kit-icon star"></span>
+                                    </span>
+
+                                    <p class="p3 medium-font text-dark-100">
+                                      4,6
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__tags">
+                            <div class="tag tag--lg2">
+                              <p class="medium-font p3">Founded in 1997</p>
+                            </div>
+
+                            <div class="tag tag--lg2">
+                              <p class="medium-font p3 text-secondary-100">
+                                6.222
+                              </p>
+
+                              <p class="medium-font p3">properties in</p>
+
+                              <p class="medium-font p3 text-secondary-100">2</p>
+
+                              <p class="medium-font p3">cities</p>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__info">
+                            <div class="textbox">
+                              <p class="p3 ellipsis-text ellipsis-text--three">
+                                Emaar Properties PJSC, a Dubai-based Public
+                                Joint Stock Company listed on the Dubai
+                                Financial Market, is a global property developer
+                                and provider of premier lifestyles. Emaar has
+                                been shaping landscapes and lives in the Emaar
+                                Properties PJSC, a Dubai-based Public Joint
+                                Stock Company listed on the Dubai Financial
+                                Market, is a global property developer and
+                                provider of premier lifestyles. Emaar has been
+                                shaping landscapes and lives in the
+                              </p>
+                            </div>
+                          </div>
+
+                          <div class="companie-card__footer">
+                            <div class="companie-card__btns">
+                              <button
+                                class="button modal-open button--bg-secondary-300"
+                                data-modal="contactUpModal"
+                                title="Antonio Fagundes"
+                              >
+                                <div class="icon">
+                                  <span class="kit-icon mail"></span>
+                                </div>
+
+                                <span class="p3 medium-font"
+                                  >Contact Seller</span
+                                >
+                              </button>
+
+                              <a
+                                href="#"
+                                title="See all 147 projects"
+                                aria-label="Перейти на страницу всех проектов"
+                                class="button button--bg-secondary-200"
+                              >
+                                <span class="p3 medium-font"
+                                  >See all 147 projects</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-team card-team--row card-team--white-bg">
+                        <div class="card-team__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/persons/six.webp   1x,
+                                /img/persons/six2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/persons/six.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+
+                          <div class="card-team__img-decor">
+                            <div class="tag-second">
+                              <div class="tag-second__content">
+                                <span class="icon">
+                                  <span class="kit-icon house-01"></span>
+                                </span>
+
+                                <p class="p3">1 property</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="card-team__content">
+                          <div class="card-team__info">
+                            <p class="h5 fz-20-16">Aiym Tursynova</p>
+
+                            <ul class="card-team__list">
+                              <li class="card-team__link">
+                                <p class="p3 medium-font">Company</p>
+
+                                <a
+                                  title="Primal Alliance Real Estate"
+                                  aria-label="Перейти на страинцу компании"
+                                  href="#"
+                                  class="p3 medium-font text-secondary-100"
+                                  >Primal Alliance Real Estate</a
+                                >
+                              </li>
+
+                              <li class="card-team__link">
+                                <p class="p3 medium-font">Position</p>
+
+                                <p class="p3 medium-font">Property Advisor</p>
+                              </li>
+                            </ul>
+
+                            <div class="card-team__btns">
+                              <a
+                                href="#"
+                                title="All Properties"
+                                aria-label="Перейти на страницу всех проектов"
+                                class="button button--bg-secondary-200"
+                              >
+                                <span class="p3 medium-font"
+                                  >All Properties</span
+                                >
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-team card-team--row card-team--white-bg">
+                        <div class="card-team__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/guides/three.webp   1x,
+                                /img/guides/three2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/guides/three.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+
+                        <div class="card-team__content">
+                          <div class="card-team__info">
+                            <div class="card-team__block">
+                              <a
+                                aria-label="Перейти на страницу Downtown Dubai"
+                                title="Downtown Dubai"
+                                class="h5 fz-20-16"
+                                href="#"
+                                >Downtown Dubai</a
+                              >
+
+                              <div class="card-team__tags">
+                                <div class="card-team__item text-secondary-100">
+                                  <p class="p3 medium-font">3210</p>
+
+                                  <p class="p3">properties</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-team card-team--row card-team--white-bg">
+                        <div class="card-team__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/guides/four.webp   1x,
+                                /img/guides/four2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/guides/four.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+
+                        <div class="card-team__content">
+                          <div class="card-team__info">
+                            <div class="card-team__block">
+                              <a
+                                aria-label="Перейти на страницу Saadiyat Island"
+                                title="Saadiyat Island"
+                                class="h5 fz-20-16"
+                                href="#"
+                                >Saadiyat Island</a
+                              >
+
+                              <div class="card-team__tags">
+                                <div class="card-team__item text-secondary-100">
+                                  <p class="p3 medium-font">2783</p>
+
+                                  <p class="p3">properties</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-team card-team--row card-team--white-bg">
+                        <div class="card-team__content">
+                          <div class="card-team__info">
+                            <div
+                              class="card-team__item card-team__item--column"
+                            >
+                              <a
+                                aria-label="Перейти на страницу Saadiyat Island"
+                                title="Saadiyat Island"
+                                class="h6 text-secondary-100"
+                                href="#"
+                                >Header</a
+                              >
+
+                              <div class="textbox">
+                                <p class="p2">Brief description</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="card-team card-team--row card-team--white-bg">
+                        <div class="card-team__img">
+                          <picture>
+                            <source
+                              srcset="
+                                /img/guides/four.webp   1x,
+                                /img/guides/four2x.webp 2x
+                              "
+                            />
+                            <img
+                              src="/img/guides/four.webp"
+                              alt="фотография"
+                              loading="lazy"
+                            />
+                          </picture>
+                        </div>
+
+                        <div class="card-team__content">
+                          <div class="card-team__info">
+                            <div
+                              class="card-team__item card-team__item--column"
+                            >
+                              <a
+                                aria-label="Перейти на страницу Saadiyat Island"
+                                title="Saadiyat Island"
+                                class="h6 text-secondary-100"
+                                href="#"
+                                >Header</a
+                              >
+
+                              <div class="textbox">
+                                <p class="p2">Brief description</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="search__footer">
+                    @@include('../modules/pagination.html', {"details": "true"})
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ''})
+    </div>
+
+    <script src="/js/lib/swiper.min.js"></script>
+    <script src="/js/search.js" type="module"></script>
+  </body>
+</html>

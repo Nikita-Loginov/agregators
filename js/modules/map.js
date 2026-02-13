@@ -70,11 +70,27 @@ const createMarkerIcon = (warehouse) => {
   });
 };
 
+const applyCenterOffset = (map, offset = [0, 0]) => {
+  if (!offset || (offset[0] === 0 && offset[1] === 0)) return;
+
+  const mapSize = map.getSize();
+  const centerPoint = mapSize.divideBy(2);
+  const targetPoint = centerPoint.subtract(L.point(offset));
+  const newCenter = map.containerPointToLatLng(targetPoint);
+
+  map.setView(newCenter, map.getZoom(), { animate: false });
+};
+
 export const initSimpleMap = (idMap = "map", warehouses = [], options = {}) => {
+  const autoFitBounds = options.autoFitBounds ?? true;
+  const offset = options.offset;
+  const clickInit = options.clickInit;
+
   const map = L.map(idMap).setView(
     warehouses[0]?.coordinates ?? CONFIG.MAP.FALLBACK_CENTER,
     CONFIG.MAP.DEFAULT_ZOOM
   );
+  applyCenterOffset(map, offset);
 
   L.tileLayer(CONFIG.TILE.URL, {
     attribution: CONFIG.TILE.ATTRIBUTION,
@@ -88,6 +104,8 @@ export const initSimpleMap = (idMap = "map", warehouses = [], options = {}) => {
   let activeMarker = null;
 
   const setActiveMarker = (marker) => {
+    if (!clickInit) return ;
+
     if (activeMarker === marker) return;
 
     if (activeMarker) {
@@ -128,7 +146,7 @@ export const initSimpleMap = (idMap = "map", warehouses = [], options = {}) => {
     markersCluster.zoomToShowLayer(activeMarker, () => {
       setActiveMarker(activeMarker);
     });
-  } else if (markers.length) {
+  } else if (markers.length && autoFitBounds) {
     const bounds = markersCluster.getBounds();
     bounds.isValid() && map.fitBounds(bounds.pad(0.1));
   }

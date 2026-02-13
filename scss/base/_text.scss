@@ -207,6 +207,24 @@ h6 {
   );
 }
 
+.fz-48-22 {
+  font-size: calculate-clamp(
+    28px,
+    48px,
+    $lg-breakpoint,
+    $tablet-breakpoint
+  );
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: calculate-clamp(
+      22px,
+      28px,
+      $tablet-breakpoint,
+      $mobile-breakpoint
+    );
+  }
+}
+
 .fz-30-16 {
   font-size: calculate-clamp(
     16px,
@@ -238,6 +256,15 @@ h6 {
   font-size: calculate-clamp(
     20px,
     28px,
+    $md-desktop-breakpoint,
+    $lg-breakpoint
+  );
+}
+
+.fz-20-16 {
+  font-size: calculate-clamp(
+    16px,
+    20px,
     $md-desktop-breakpoint,
     $lg-breakpoint
   );
@@ -281,6 +308,16 @@ h6 {
   @media (max-width: $tablet-breakpoint) {
     font-size: calculate-clamp(22px, 28px, $lg-breakpoint, $mobile-breakpoint);
   }
+}
+
+.fz18-16 {
+  font-size: calculate-clamp(
+    14px,
+    18px,
+    $lg-breakpoint,
+    $tablet-breakpoint
+  );
+
 }
 
 .fz18-14 {

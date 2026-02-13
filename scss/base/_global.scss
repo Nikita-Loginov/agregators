@@ -101,7 +101,7 @@ body {
     gap: 20px;
 
     &-big {
-      gap: calculate-clamp(32px, 40px, 1439px, 1023px);
+      gap: calculate-clamp(24px, 40px, 1439px, 1023px);
     }
 
     &--middle {
@@ -128,7 +128,7 @@ body {
   @media (max-width: $tablet-breakpoint) {
     &--detail {
       &-big {
-        gap: calculate-clamp(20px, 32px, 767px, 480px);
+        // gap: calculate-clamp(20px, 32px, 767px, 480px);
       }
     }
   }
@@ -141,6 +141,10 @@ body {
 
   &--small {
     max-width: var(--container-width-second);
+  }
+
+  &--middle {
+    max-width: var(--container-width-middle);
   }
 
   &--full {
@@ -203,6 +207,27 @@ body .wrapper {
       width: var(--icon-lg);
       height: var(--icon-lg);
       font-size: var(--icon-lg);
+    }
+
+    &--md-base {
+      width: calculate-clamp(
+        20px,
+        24px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+      height: calculate-clamp(
+        20px,
+        24px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+      font-size: calculate-clamp(
+        20px,
+        24px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
     }
 
     &--full {
@@ -366,12 +391,7 @@ body .wrapper {
     }
 
     &--rounded-3xl-md {
-      border-radius: calculate-clamp(
-        12px,
-        24px,
-        1023px,
-        767px
-      );
+      border-radius: calculate-clamp(12px, 24px, 1023px, 767px);
     }
 
     &--rounded-3xl {

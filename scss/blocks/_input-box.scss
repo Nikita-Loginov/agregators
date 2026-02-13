@@ -92,6 +92,7 @@
       cursor: pointer;
       color: var(--dark-color-200);
       resize: none;
+      font-size: 100%;
 
       &::placeholder {
         font-size: 100%;
@@ -211,6 +212,10 @@
     .input-box {
       &__states {
         display: flex;
+      }
+
+      &__info {
+        border-color: var(--dark-color-600);
       }
     }
   }
