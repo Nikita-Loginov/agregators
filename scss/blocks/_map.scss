@@ -35,7 +35,6 @@
   }
 
   &__details {
-    
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -48,11 +47,10 @@
     @media (min-width: 1024px) {
       right: 16px;
       top: 16px;
-     
     }
   }
 
-  @media (max-width:$lg-breakpoint) {
+  @media (max-width: $lg-breakpoint) {
     &__details {
       right: 8px;
       bottom: 8px;
@@ -60,7 +58,7 @@
     }
   }
 
-  @media (max-width:$desktop-breakpoint) {
+  @media (max-width: $desktop-breakpoint) {
     .good-item {
       min-height: 104px;
 
@@ -96,7 +94,9 @@
   @media (max-width: $tablet-breakpoint) {
     .good-item {
       display: grid;
-      
+      border-radius: var(--radius-base);
+      border: 1px solid var(--gray-color-600);
+     
 
       &__title {
         font-size: var(--font-size-base);
@@ -110,8 +110,15 @@
         // gap: 4px;
       }
 
+      &__swiper-box {
+        height: 100%;
+        max-height: 200px;
+      }
+
       &__content {
         padding: 8px 12px;
+        border-radius: 0px;
+        border: none;
       }
     }
 
@@ -127,24 +134,22 @@
         max-height: fit-content;
         padding: 8px;
         height: 100%;
-        
       }
     }
 
     .sibebar {
       max-width: 100%;
-      box-shadow: 0px -8px 8px 0px #A6AFC340;
+      box-shadow: 0px -8px 8px 0px #a6afc340;
       border-radius: var(--radius-md);
       max-height: 0;
       z-index: 999;
       gap: 8px;
-      
+
       overflow: visible;
 
       &:after {
         position: absolute;
-        content:"";
-
+        content: "";
       }
     }
 

@@ -1,5 +1,13 @@
 .text-block {
   display: flex;
   flex-direction: column;
-  gap: calculate-clamp(8px, 16px, 1439px, 1023px);
+  gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);
+  
+  &--mini {
+    gap: 16px;
+
+    @media (max-width: $lg-breakpoint) {
+      gap: 20px;
+    }
+  }
 }

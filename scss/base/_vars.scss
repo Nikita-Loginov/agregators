@@ -63,7 +63,7 @@ html {
   --font-size-s: 16px;
   --font-size-sm: #{calculate-clamp(16px, 18px, 1023px, 767px)};
   --font-size-base2: #{calculate-clamp(20px, 22px, 767px, 480px)};
-  --font-size-base: #{calculate-clamp(18px, 24px, 1023px, 480px)};
+  --font-size-base: #{calculate-clamp(18px, 24px, 1023px, 767px)};
   --font-size-md: #{calculate-clamp(20px, 28px, 1023px, 480px)};
   --font-size-lg: #{calculate-clamp(22px, 30px, 1439px, 1023px)};
   --font-size-xl: #{calculate-clamp(24px, 40px, 1023px, 480px)};

@@ -123,3 +123,15 @@
     }
   }
 }
+
+.full-el {
+  &--tablet {
+    &:has(.quick) {
+      @media (max-width: $tablet-breakpoint) {
+        .quick__title {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+}

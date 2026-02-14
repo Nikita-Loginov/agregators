@@ -240,6 +240,18 @@ a.card-detail {
     }
   }
 
+  @media (max-width: $lg-breakpoint) {
+    &__img-box {
+      aspect-ratio: 237 / 220;
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    &__img-box {
+      aspect-ratio: 328 / 220;
+    }
+  }
+
   @media (max-width: 360px) {
     &__btns {
       display: flex;
@@ -465,6 +477,14 @@ a.card-box {
     flex-direction: column;
     gap: 2px;
     border-radius: var(--radius-md);
+
+    .p1 {
+      font-size: calculate-clamp(16px, 18px, $lg-breakpoint, $tablet-breakpoint);
+
+      @media (max-width: $tablet-breakpoint) {
+        font-size: 18px;
+      }
+    }
   }
 
   &__content-item {

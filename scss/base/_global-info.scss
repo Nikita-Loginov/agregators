@@ -173,7 +173,7 @@ body.scrollBottom {
 
 .goods-items {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
   gap: calculate-clamp(12px, 24px, 1280px, 1023px)
     calculate-clamp(12px, 14px, 1280px, 1023px);
 

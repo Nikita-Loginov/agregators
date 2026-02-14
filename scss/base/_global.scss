@@ -107,6 +107,10 @@ body {
     &--middle {
       gap: calculate-clamp(24px, 32px, 1439px, 1023px);
     }
+
+    &--xl {
+      gap: calculate-clamp(48px, 60px, 1439px, 1023px);
+    }
   }
 
   &--noPaddingAdd {

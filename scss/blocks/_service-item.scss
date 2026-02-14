@@ -1,0 +1,20 @@
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--gray-color-100);
+  padding: 2px 12px;
+  min-height: calculate-clamp(30px, 36px, $lg-breakpoint, $mobile-breakpoint);
+  border-radius: var(--radius-base);
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 2px 8px;
+  }
+}

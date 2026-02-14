@@ -9,10 +9,24 @@
         gap: calculate-clamp(12px, 24px, 1439px, 1023px);
       }
     }
+
+    &--medium {
+      gap: calculate-clamp(20px, 24px, 1439px, 1023px);
+    }
   }
 
   @media (max-width: $lg-breakpoint) {
     overflow: hidden;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__inner {
+      gap: calculate-clamp(20px, 24px, $tablet-breakpoint, $mobile-breakpoint);
+
+      &--medium {
+        gap: calculate-clamp(16px, 20px, $tablet-breakpoint, $mobile-breakpoint);
+      }
+    }
   }
 }
 
@@ -183,6 +197,10 @@
 
     &--two {
       grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: $lg-breakpoint) {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   }
 

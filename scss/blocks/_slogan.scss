@@ -73,11 +73,17 @@
 
   @media (max-width: $md-desktop-breakpoint) {
     &__img-box {
-      height: calculate-clamp(196px, 555px, 767px, 480px);
+      height: calculate-clamp(368px, 408px, $lg-breakpoint, $tablet-breakpoint);
     }
 
     &__logo {
       width: calculate-clamp(68px, 98px, 767px, 480px);
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__img-box {
+      height: calculate-clamp(196px, 368px, 767px, 480px);
     }
   }
 

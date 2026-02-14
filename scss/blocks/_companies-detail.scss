@@ -44,6 +44,18 @@
     gap: 20px;
   }
 
+  &__services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: calculate-clamp(12px, 16px, $lg-breakpoint, $mobile-breakpoint) calculate-clamp(20px, 32px, $lg-breakpoint, $mobile-breakpoint);
+
+    @media (max-width: $tablet-breakpoint) {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     overflow: hidden;
 
