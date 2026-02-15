@@ -632,6 +632,14 @@
     }
   }
 
+  &--bg-gradient {
+    background-image: linear-gradient(89.64deg, #C407FF -2.5%, #7102FE 104.71%);
+    background-color: transparent;
+    color: var(--white-color);
+    background-size: 120% 100%;
+background-position: center;
+  }
+
   &--noBg {
     background-color: transparent;
 

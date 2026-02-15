@@ -57,7 +57,14 @@
 
         @media (max-width: $desktop-breakpoint) and (min-width: $tablet-breakpoint) {
           display: grid;
-          grid-template-columns: calculate-clamp(191px, 250px, 1440px, 1023px) calculate-clamp(76px, 91px, 1440px, 1023px) 1fr auto auto 1fr;
+          grid-template-columns:
+            calculate-clamp(191px, 250px, 1440px, 1023px) calculate-clamp(
+              76px,
+              91px,
+              1440px,
+              1023px
+            )
+            1fr auto auto 1fr;
 
           --font-size-xs: 14px;
 
@@ -85,7 +92,6 @@
         }
 
         @media (max-width: $lg-breakpoint) {
-
         }
 
         @media (max-width: $tablet-breakpoint) {
@@ -130,6 +136,25 @@
     justify-content: space-between;
   }
 
+  &__footer {
+    .accordeon__item {
+      &.active {
+        .accordeon {
+          &__answer {
+           padding: calculate-clamp(12px, 16px, $lg-breakpoint, $tablet-breakpoint) 2px 2px 2px;
+          }
+        }
+      }
+    }
+  }
+
+  &__footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
   &__details {
     --gap-details: 24px;
 
@@ -138,6 +163,10 @@
     align-items: center;
     gap: var(--gap-details);
     transition: all 0.5s;
+
+    &--sb {
+      justify-content: space-between;
+    }
 
     & > *:not(:last-child) {
       position: relative;
@@ -185,6 +214,15 @@
     }
   }
 
+  @media(max-width: $lg-breakpoint) {
+    &__footer {
+      .accordeon__question {
+        width: fit-content;
+      }
+     
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     &__items {
       display: grid;
@@ -224,7 +262,8 @@ body.scrollTop:not(.scrollVisible) {
     padding: 8px 0;
 
     &__details,
-    &__info {
+    &__info,
+    &__footer {
       opacity: 0;
       transition: all 0s;
       position: absolute;

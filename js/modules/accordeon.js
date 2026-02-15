@@ -6,6 +6,24 @@ let currentResizeHandler = null;
 export function toggleAccordeonItems(e) {
   const { target } = e;
 
+  const closeTrigger = target.closest("[data-close-accordeon]");
+
+  if (closeTrigger) {
+    const item = closeTrigger.closest(".accordeon__item");
+
+    if (item && item.classList.contains("active")) {
+      classAction(item, "active", "remove");
+      setHeightAnswer(item);
+      updateAccordeonButtonText(item);
+
+      if (prevActiveAccordeonItem === item) {
+        prevActiveAccordeonItem = null;
+      }
+    }
+
+    return;
+  }
+
   if (target.closest(".accordeon__question")) {
     const relative = target.closest(".accordeon");
     const relativeItem = target.closest(".accordeon__item");

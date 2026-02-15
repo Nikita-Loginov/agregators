@@ -83,9 +83,9 @@ export const removeAllElementClass = (options, className) => {
 export const onChangeInput = (e) => {
   const input = e.target;
 
-  if (input.tagName !== "INPUT") return;
+  if (input.tagName !== "INPUT" && input.tagName !== "TEXTAREA") return;
 
-  toggleHasValue(input)
+  toggleHasValue(input);
 
   if (input.type === "number" || input.closest("[data-input-number]")) {
     handleNumberInput(input);
@@ -106,7 +106,6 @@ export const toggleHasValue = (input) => {
   input.classList.toggle("has-value", hasValue);
   if (inputBox) inputBox.classList.toggle("has-value", hasValue);
 };
-
 
 export const clearFormInputs = (form) => {
   form.addEventListener("reset", () => {

@@ -1,0 +1,65 @@
+.filter-ai {
+  display: grid;
+  grid-template-columns: 65% 1fr;
+  gap: 6px;
+
+  &__inputs {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+  }
+
+  &__content {
+    padding: 4px;
+    border: 1px solid var(--gray-color-300);
+    border-radius: var(--radius-md);
+    width: 100%;
+    min-width: 0;
+  }
+
+  &__swiper-box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    height: 100%;
+    white-space: normal;
+
+    .swiper {
+      width: 100%;
+      min-width: 0;
+      flex: 1;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .arrows-swiper {
+      gap: 4px;
+    }
+  }
+
+  &__head {
+    padding-left: 8px;
+  }
+
+  &__item {
+    padding: 4px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--white-color);
+    border-radius: var(--radius-base);
+    height: 100%;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    display: flex;
+    flex-direction: column;
+  }
+}

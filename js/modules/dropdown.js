@@ -60,7 +60,6 @@ export const toggleDropdown = (e) => {
 };
 
 const openFixedDropdown = (dropdown) => {
-
   const menu = dropdown.querySelector(".dropdown__content");
   if (!menu) return;
 
@@ -189,9 +188,15 @@ const applySelectValue = (dropdown, selectedItem) => {
     dropdown.setAttribute("data-selected-text", selectedText);
   }
 
-  const allItems = dropdown.querySelectorAll(
+  const itemsContainer =
+    dropdown.hasAttribute("data-fixed-dropdown") && fixedMenu
+      ? fixedMenu
+      : dropdown;
+
+  const allItems = itemsContainer.querySelectorAll(
     ".dropdown__item, .dropdown-number__link"
   );
+
   allItems.forEach((item) => item.classList.remove("active"));
   selectedItem.classList.add("active");
 

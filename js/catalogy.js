@@ -22,6 +22,9 @@ const swipers = [
   {
     ...SWIPERS.MARKET_TABLE,
   },
+  {
+    ...SWIPERS.AI_CARDS
+  }
 ];
 
 const handleGlobalClick = (e) => {

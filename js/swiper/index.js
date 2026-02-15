@@ -518,4 +518,18 @@ export const SWIPERS = {
       // },
     },
   },
+  AI_CARDS: {
+    selector: ".swiper--ai",
+    breakpoint: 122300000000,
+
+    options: {
+      slidesPerView: 2,
+      spaceBetween: 4,
+      mousewheel: MOUSE_WHEEL_CONFIG,
+      navigation: {
+        nextEl: ".swiper-box--ai .arrow-swiper.next",
+        prevEl: ".swiper-box--ai .arrow-swiper.prev",
+      },
+    },
+  },
 };
