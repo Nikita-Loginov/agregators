@@ -10,7 +10,7 @@
   &__item-inner {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(20px, 32px, 1023px, 767px);
+    gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);
   }
 
   &__item-boxs {

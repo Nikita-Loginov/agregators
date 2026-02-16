@@ -163,6 +163,12 @@
     }
   }
 
+  &--dark-color-500 {
+    .dropdown__btn {
+      color: var(--dark-color-500);
+    }
+  }
+
   @media (max-width: 479px) {
     &__toggle {
       justify-content: space-between;

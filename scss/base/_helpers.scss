@@ -10,7 +10,7 @@
   $intercept: $min - $slope * $min-width;
   @return clamp(#{$min}, calc(#{$intercept} + #{$slope * 100}vw), #{$max});
 }
-// calculate-clamp(200px, 300px, 1023px, 767px)
+// calculate-clamp(200px, 300px, $lg-breakpoint, $tablet-breakpoint)
 
 @mixin visually-hidden {
   position: absolute;

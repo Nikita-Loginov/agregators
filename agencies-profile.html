@@ -2579,26 +2579,148 @@
                           All company's properties
                           <span class="text-secondary-100">25</span>
                         </h2>
-
-                        <div class="tablet-show">
-                          <button
-                            type="button"
-                            class="button button--bg-gray-300 button--lg button--rounded-md modal-open"
-                            data-modal="filterModal"
-                          >
-                            <span class="icon">
-                              <span class="kit-icon filter-icon"></span
-                            ></span>
-
-                            <p class="p3 medium-font">Filters</p>
-                          </button>
-                        </div>
                       </div>
 
-                      <div class="property__content">
-                        <div class="property__filter tablet-none">
+                      <div
+                        class="property__content accordeon accordeon--noMassa accordeon--tablet"
+                        data-width="767"
+                      >
+                        <div class="property__filter accordeon__item">
+                          <div class="tablet-show">
+                            <div class="property__filter-search">
+                              <button
+                                class="button button--cub button--bg-secondary-200 button--cub-md-add accordeon__question"
+                                type="button"
+                              >
+                                <div class="button__block">
+                                  <div class="icon">
+                                    <span class="kit-icon filter-icon"></span>
+                                  </div>
+                                </div>
+                              </button>
+
+                              <div
+                                class="property__filter-item"
+                                data-loader-relative
+                              >
+                                <div class="loader" data-loader-box>
+                                  <span></span>
+                                </div>
+
+                                <div
+                                  class="select-box select-box--noMax select-box--search with-icon"
+                                  data-icon="search"
+                                  data-loading="true"
+                                >
+                                  <select
+                                    id="search-select-1"
+                                    data-placeholder="Enter location"
+                                    data-selected-top="true"
+                                    multiple
+                                    data-search="true"
+                                    name="location-select"
+                                  >
+                                    <option value="">Enter location</option>
+                                    <option
+                                      value="1"
+                                      data-type="city"
+                                      data-tag="City"
+                                      data-desc="Dubai Hills Estate district, Dubai city, Dubai Dubai Hills Estate district, Dubai city, Dubai"
+                                      data-short-desc="Dubai, UAE"
+                                    >
+                                      Dubai
+                                    </option>
+                                    <option
+                                      value="2"
+                                      data-type="city"
+                                      data-tag="City"
+                                      data-desc="Central Business District, Moscow city, Russia"
+                                      data-short-desc="Moscow, Russia"
+                                    >
+                                      Moscow
+                                    </option>
+                                    <option
+                                      value="3"
+                                      data-type="city"
+                                      data-tag="City"
+                                      data-desc="Manhattan borough, New York city, USA"
+                                      data-short-desc="New York, USA"
+                                    >
+                                      New York
+                                    </option>
+                                    <option
+                                      value="4"
+                                      data-type="country"
+                                      data-tag="Country"
+                                      data-desc="Federal republic in Central Europe with rich history and culture"
+                                      data-short-desc="Germany"
+                                    >
+                                      Germany
+                                    </option>
+                                    <option
+                                      value="5"
+                                      data-type="country"
+                                      data-tag="Country"
+                                      data-desc="Island nation in East Asia known for technology and traditions"
+                                      data-short-desc="Japan"
+                                    >
+                                      Japan
+                                    </option>
+                                    <option
+                                      value="6"
+                                      data-type="region"
+                                      data-tag="Region"
+                                      data-desc="Southeastern region of France on the Mediterranean coast"
+                                      data-short-desc="Provence, France"
+                                    >
+                                      Provence
+                                    </option>
+                                    <option
+                                      value="7"
+                                      data-type="region"
+                                      data-tag="Region"
+                                      data-desc="Northern Italian region known for cuisine and automotive industry"
+                                      data-short-desc="Emilia-Romagna, Italy"
+                                    >
+                                      Emilia-Romagna
+                                    </option>
+                                    <option
+                                      value="8"
+                                      data-type="district"
+                                      data-tag="District"
+                                      data-desc="Historic central district of London with government buildings"
+                                      data-short-desc="Westminster, London"
+                                    >
+                                      Westminster
+                                    </option>
+                                    <option
+                                      value="9"
+                                      data-type="district"
+                                      data-tag="District"
+                                      data-desc="Fashionable district in central Paris with luxury boutiques"
+                                      data-short-desc="Champs-Élysées, Paris"
+                                    >
+                                      Champs-Élysées
+                                    </option>
+                                  </select>
+                                </div>
+                              </div>
+
+                              <button
+                                class="button button--cub button--bg-primary-100 button--cub-md-add"
+                                type="button"
+                              >
+                                <div class="icon">
+                                  <span
+                                    class="kit-icon search-magnifying-glass"
+                                  ></span>
+                                </div>
+                              </button>
+                            </div>
+                          </div>
+
                           <div
-                            class="companies-filter companies-filter--property"
+                            class="companies-filter companies-filter--property accordeon__answer"
                           >
                             <div
                               class="companies-filter__item"
@@ -2657,7 +2779,7 @@
                             </div>
 
                             <div class="companies-filter__item">
-                              <div class="dropdown dropdown--price input-box">
+                              <div class="dropdown dropdown--price input-box dropdown--dark-color-500" data-fixed-dropdown>
                                 <button
                                   class="input-box__info dropdown__btn"
                                   type="button"
@@ -2723,7 +2845,7 @@
                             </div>
 
                             <div
-                              class="companies-filter__item"
+                              class="companies-filter__item tablet-none"
                               data-loader-relative
                             >
                               <div class="loader" data-loader-box>
@@ -2731,7 +2853,7 @@
                               </div>
 
                               <div
-                                class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
+                                class="select-box select-box--noMax  select-box--search with-icon"
                                 data-icon="city"
                                 data-loading="true"
                               >
@@ -2740,6 +2862,7 @@
                                   data-placeholder="Location"
                                   multiple
                                   data-search="true"
+                                  data-dropdown-outside
                                 >
                                   <option value="">Location</option>
                                   <option
@@ -2827,7 +2950,7 @@
                               </div>
                             </div>
 
-                            <div class="companies-filter__item">
+                            <div class="companies-filter__item tablet-none">
                               <button
                                 type="button"
                                 class="button button--lg button--bg-primary-200 button--rounded-md"
@@ -2853,7 +2976,7 @@
                               </div>
 
                               <div
-                                class="select-box select-box--middle select-box--words with-icon"
+                                class="select-box select-box--middle select-box--words with-icon select-box--noMassa-media"
                                 data-icon="sort"
                                 data-loading="true"
                               >
@@ -2865,7 +2988,7 @@
                               </div>
                             </div>
 
-                            <div class="checkbox-box">
+                            <div class="checkbox-box tablet-none">
                               <label
                                 class="check"
                                 data-tooltip="Посмотреть элементы списком"
@@ -2920,10 +3043,10 @@
                               <div
                                 class="swiper-wrapper swiper-wrapper--propperty"
                               >
-                              <div class="swiper-slide">
-                                <!-- prettier-ignore -->
+                                <div class="swiper-slide">
+                                  <!-- prettier-ignore -->
 
-                                <div
+                                  <div
   class="good-item good-item--noShadow good-item--column"
 >
   <div class="good-item__swiper-box">
@@ -3201,12 +3324,12 @@
   </div>
 </div>
 
-                              </div>
+                                </div>
 
-                              <div class="swiper-slide">
-                                <!-- prettier-ignore -->
+                                <div class="swiper-slide">
+                                  <!-- prettier-ignore -->
 
-                                <div
+                                  <div
   class="good-item good-item--noShadow good-item--column"
 >
   <div class="good-item__swiper-box">
@@ -3484,12 +3607,12 @@
   </div>
 </div>
 
-                              </div>
+                                </div>
 
-                              <div class="swiper-slide">
-                                <!-- prettier-ignore -->
+                                <div class="swiper-slide">
+                                  <!-- prettier-ignore -->
 
-                                <div
+                                  <div
   class="good-item good-item--noShadow good-item--column"
 >
   <div class="good-item__swiper-box">
@@ -3767,7 +3890,7 @@
   </div>
 </div>
 
-                              </div>
+                                </div>
                               </div>
 
                               <div class="tablet-show">
@@ -7063,7 +7186,7 @@
                 </select>
               </div>
 
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7348,7 +7471,7 @@
                 </select>
               </div>
 
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7429,7 +7552,7 @@
                 </select>
               </div>
 
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7486,7 +7609,7 @@
                 </div>
               </div>
 
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7674,7 +7797,7 @@
             <div
               class="filterModalBox__items-boxs filterModalBox__items-boxs--media-three"
             >
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7741,7 +7864,7 @@
                   <option value="2">No</option>
                 </select>
               </div>
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7806,7 +7929,7 @@
             <div
               class="filterModalBox__items-boxs filterModalBox__items-boxs--media-three"
             >
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7863,7 +7986,7 @@
                 </div>
               </div>
 
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">
@@ -7920,7 +8043,7 @@
                 </div>
               </div>
 
-              <div class="dropdown dropdown--price input-box">
+              <div class="dropdown dropdown--price input-box dropdown--dark-color-500">
                 <button class="input-box__info dropdown__btn" type="button">
                   <div class="check">
                     <div class="icon icon--sm">

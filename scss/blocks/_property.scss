@@ -24,6 +24,35 @@
     .button {
       width: 100%;
     }
+
+    &.accordeon__item {
+      @media (max-width: $tablet-breakpoint) {
+        gap: 0;
+
+        &.active {
+          .property__filter-search {
+            padding-bottom: 12px;
+          }
+
+          .companies-filter--property {
+            padding-bottom: 24px;
+          }
+
+          .accordeon__question.button {
+            background-color: var(--secondary-color-100);
+            color: var(--white-color);
+          }
+        }
+      }
+    }
+  }
+
+  &__filter-search {
+    display: grid;
+    grid-template-columns: 40px calc(100% - 80px - 16px) 40px;
+    gap: 8px;
+    width: 100%;
+    padding-bottom: 24px;
   }
 
   &__filter-sort {
@@ -72,7 +101,7 @@
     }
   }
 
-  @media (max-width:  $tablet-breakpoint) {
+  @media (max-width: $tablet-breakpoint) {
     .swiper--property {
       overflow: visible;
     }

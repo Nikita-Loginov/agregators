@@ -24,7 +24,12 @@
       gap: calculate-clamp(20px, 24px, $tablet-breakpoint, $mobile-breakpoint);
 
       &--medium {
-        gap: calculate-clamp(16px, 20px, $tablet-breakpoint, $mobile-breakpoint);
+        gap: calculate-clamp(
+          16px,
+          20px,
+          $tablet-breakpoint,
+          $mobile-breakpoint
+        );
       }
     }
   }
@@ -175,6 +180,22 @@
     display: flex;
     flex-direction: column;
     gap: calculate-clamp(16px, 32px, 1439px, 1023px);
+  }
+
+  &__top-items-box {
+    &--row-lg {
+      @media (max-width: $lg-breakpoint) and (min-width: $tablet-breakpoint) {
+        flex-direction: row-reverse;
+
+        .price {
+          white-space: nowrap;
+
+          &__top {
+            flex-direction: column;
+          }
+        }
+      }
+    }
   }
 
   &__item-content {
@@ -435,6 +456,16 @@
     width: 100%;
     gap: 20px;
 
+    &--big {
+      gap: calculate-clamp(20px, 24px, $lg-breakpoint, $tablet-breakpoint);
+    }
+
+    &--reverse-tablet {
+      @media (max-width: $tablet-breakpoint) {
+        flex-direction: column-reverse;
+      }
+    }
+
     .checkbox-box {
       width: fit-content;
     }
@@ -564,10 +595,14 @@
 
     &__top-items-boxs {
       gap: 32px;
+
+     
     }
 
     &__top-items-box {
       gap: 12px;
+
+      
     }
 
     &__top-footer {
