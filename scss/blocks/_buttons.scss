@@ -215,6 +215,10 @@
     &-lg {
       width: 48px;
       height: 48px;
+
+      &--media {
+        width: calculate-clamp(40px, 48px, $tablet-breakpoint, $mobile-breakpoint);
+      }
     }
 
     &-2lg {

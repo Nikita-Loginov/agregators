@@ -704,14 +704,14 @@
   }
 
   @media (max-width: $mobile-breakpoint) {
-    &__property-items {
-      &--three {
-        grid-template-columns: 108px 108px auto;
-      }
-    }
+    // &__property-items {
+    //   &--three {
+    //     grid-template-columns: 108px 108px auto;
+    //   }
+    // }
   }
 
-  @media (max-width: 376px) {
+  @media (max-width: 359px) {
     &__property-items {
       &--three {
         grid-template-columns: repeat(2, 1fr);

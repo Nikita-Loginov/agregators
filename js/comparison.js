@@ -1,22 +1,9 @@
-import { SWIPERS } from "./swiper/index.js";
-import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
+import { initComparison } from "./comparison/index.js";
 
-const swipers = [
-  {
-    ...SWIPERS.COMPARISON,
-  },
-];
-
-const handleGlobalClick = (e) => {
-
-};
+const handleGlobalClick = (e) => {};
 
 document.addEventListener("DOMContentLoaded", () => {
-  swipers.forEach((config) => {
-    slidersConfig.push(config);
-  });
-
-  handleAllSliders();
+  initComparison();
 
   document.addEventListener("click", handleGlobalClick);
 });
@@ -24,7 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
 let resizeTimeout;
 window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
-  resizeTimeout = setTimeout(() => {
-    handleAllSliders();
-  }, 100);
+  resizeTimeout = setTimeout(() => {}, 100);
 });

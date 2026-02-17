@@ -409,11 +409,25 @@ a.card-box {
     gap: 4px;
   }
 
+  &__head {
+    p {
+      line-height: var(--line-height-tighter);
+    }
+  }
+
   &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2px;
+    // gap: 2px;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__head {
+      p {
+        font-size: 38px;
+      }
+    }
   }
 
   @media (max-width: $tablet-breakpoint) {

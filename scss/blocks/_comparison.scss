@@ -34,41 +34,41 @@
     }
   }
 
-  &[data-count="2"] {
-    .table-grid {
-      &__row {
-        .table-grid__cell {
-          &:nth-child(n + 3) {
-            display: none;
-          }
-        }
-      }
-    }
-  }
+  // &[data-count="2"] {
+  //   .table-grid {
+  //     &__row {
+  //       .table-grid__cell {
+  //         &:nth-child(n + 3) {
+  //           display: none;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-  &[data-count="3"] {
-    .table-grid {
-      &__row {
-        .table-grid__cell {
-          &:nth-child(n + 4) {
-            display: none;
-          }
-        }
-      }
-    }
-  }
+  // &[data-count="3"] {
+  //   .table-grid {
+  //     &__row {
+  //       .table-grid__cell {
+  //         &:nth-child(n + 4) {
+  //           display: none;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
-  &[data-count="4"] {
-    .table-grid {
-      &__row {
-        .table-grid__cell {
-          &:nth-child(n + 5) {
-            display: none;
-          }
-        }
-      }
-    }
-  }
+  // &[data-count="4"] {
+  //   .table-grid {
+  //     &__row {
+  //       .table-grid__cell {
+  //         &:nth-child(n + 5) {
+  //           display: none;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   @media (max-width: 1099px) {
     --gap-cards: 16px;
@@ -84,6 +84,14 @@
       &__decor-cell--big {
         background-color: transparent;
       }
+    }
+
+    .table-grid__items:has(+ .table-grid__decor) .table-grid__row:last-child {
+      border-bottom-color: var(--dark-color-600);
+    }
+
+    .table-grid__decor + .table-grid__items .table-grid__row:first-child {
+      border-top-color: var(--dark-color-600);
     }
   }
 
@@ -106,10 +114,17 @@
 
         .arrows-swiper {
           order: 1000;
+          justify-content: space-between;
         }
       }
     }
 
-    
+    .table-grid__items:has(+ .table-grid__decor) .table-grid__row:last-child {
+      border-bottom-color: var(--secondary-color-100);
+    }
+
+    .table-grid__decor + .table-grid__items .table-grid__row:first-child {
+      border-top-color: var(--secondary-color-100);
+    }
   }
 }

@@ -122,6 +122,10 @@
     &--gray-color-600 {
       background-color: var(--gray-color-600);
     }
+
+    &--gray-color-100 {
+      background-color: var(--gray-color-100);
+    }
   }
 
   &:not(.table-grid--odd):not(.table-grid--noBg) {

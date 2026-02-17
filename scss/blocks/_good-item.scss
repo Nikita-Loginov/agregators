@@ -112,6 +112,33 @@
     }
   }
 
+  &--full {
+    @media (min-width: 900px) {
+      &:not(.good-item--column) {
+        grid-template-columns: 32% auto;
+  
+        .good-item {
+          &__swiper-box {
+            aspect-ratio: 400 / 300;
+          }
+  
+          &__content {
+            padding: 25px 20px;
+            gap: 12px;
+          }
+  
+          &__content-details,
+          &__block,
+          &__info {
+            gap: 12px;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+   
+  }
+
   &:hover {
     &:not(.good-item--noShadow) {
       box-shadow: 0px 10px 15px 0px #050d1d2e;

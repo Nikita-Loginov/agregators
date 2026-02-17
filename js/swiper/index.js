@@ -344,7 +344,7 @@ export const SWIPERS = {
         el: ".result-block .swiper--result .swiper-pagination",
       },
       breakpoints: {
-        900: {
+        767: {
           slidesPerView: 5,
         },
 

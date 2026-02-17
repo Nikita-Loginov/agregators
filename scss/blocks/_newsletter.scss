@@ -129,7 +129,21 @@
     }
 
     &__icon {
-      height: 100%;
+      height: -webkit-fill-available;
+    }
+
+    .p1 {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .p1 {
+      font-size: var(--font-size-base);
+    }
+
+    &__icon {
+      height: 40px;
     }
   }
 }

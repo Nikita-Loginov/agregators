@@ -188,10 +188,10 @@
     }
 
     .banner-status {
-      position: relative;
-      width: calc(100% + (var(--container-inline-padding) * 2));
-      left: calc(var(--container-inline-padding) * -1);
-      border-radius: var(--radius-base);
+      // position: relative;
+      // width: calc(100% + (var(--container-inline-padding) * 2));
+      // left: calc(var(--container-inline-padding) * -1);
+      // border-radius: var(--radius-base);
     }
 
     &__filter {
