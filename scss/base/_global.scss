@@ -213,6 +213,12 @@ body .wrapper {
       font-size: var(--icon-lg);
     }
 
+    &--xl {
+      width: var(--icon-xl);
+      height: var(--icon-xl);
+      font-size: var(--icon-xl);
+    }
+
     &--md-base {
       width: calculate-clamp(
         20px,
@@ -229,6 +235,27 @@ body .wrapper {
       font-size: calculate-clamp(
         20px,
         24px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+    }
+
+    &--xl-lg {
+      width: calculate-clamp(
+        28px,
+        36px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+      height: calculate-clamp(
+        28px,
+        36px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+      font-size: calculate-clamp(
+        28px,
+        36px,
         $lg-breakpoint,
         $tablet-breakpoint
       );

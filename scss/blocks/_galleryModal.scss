@@ -51,6 +51,12 @@
       object-fit: cover;
     }
 
+    &--big {
+      img {
+        object-fit: contain;
+      }
+    }
+
     &--small {
       .arrow-swiper {
         visibility: hidden;

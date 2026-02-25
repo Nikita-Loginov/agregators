@@ -102,6 +102,20 @@
       aspect-ratio: 328 / 220;
     }
 
+    &__content {
+      .textbox {
+        p {
+          line-height: 1.57;
+        }
+      }
+    }
+
+    &__badges {
+      p {
+        line-height: 1.57;
+      }
+    }
+
     &__btns {
       display: grid;
     }

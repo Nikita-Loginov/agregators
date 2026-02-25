@@ -163,5 +163,21 @@
     &__top-img {
       height: calculate-clamp(220px, 368px, 767px, 480px);
     }
+
+    .table-main.full-el--tablet {
+      tr td {
+        border-radius: 0 !important;
+      }
+    }
+
+    .table-main--article {
+      .table-main {
+        &__body {
+          td {
+            padding: 8px 12px;
+          }
+        }
+      }
+    }
   }
 }

@@ -70,6 +70,18 @@
       }
     }
 
+    &-lg-inner {
+      @media (max-width: $lg-breakpoint) {
+        &:not(:has(.swiper.swiper-disabled)) {
+          overflow: visible;
+
+          .swiper {
+            overflow: visible;
+          }
+        }
+      }
+    }
+
     &-tablet-inner {
       @media (max-width: $tablet-breakpoint) {
         &:not(:has(.swiper.swiper-disabled)) {

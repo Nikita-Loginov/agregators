@@ -1,6 +1,9 @@
 import {
   initMoreBlocks,
   hideUnnecessaryButtons,
+  initClampText,
+  handleMoreContentResize,
+  clampTextToggle,
 } from "./modules/moreContent.js";
 
 import { initComments } from "./modules/comments.js";
@@ -49,6 +52,7 @@ const swipers = [
 const handleGlobalClick = (e) => {
   initMoreBlocks(e);
   initComments(e);
+  clampTextToggle(e);
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -57,6 +61,8 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   handleAllSliders();
+
+  initClampText()
 
   initImgsSwiperGoods();
   hideUnnecessaryButtons();
@@ -69,5 +75,6 @@ window.addEventListener("resize", () => {
   clearTimeout(resizeTimeout);
   resizeTimeout = setTimeout(() => {
     handleAllSliders();
+    handleMoreContentResize();
   }, 100);
 });

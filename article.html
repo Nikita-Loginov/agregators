@@ -1806,7 +1806,7 @@
         </div>
 
         <div class="main__sections">
-          <section class="article">
+          <section class="article" style="overflow: hidden">
             <div class="container container--small">
               <div class="article__inner">
                 <header class="article__header">
@@ -1829,15 +1829,17 @@
                           </div>
                         </div>
 
-                        <div class="badge-decor">
-                          <div class="icon icon--big">
-                            <span class="kit-icon clock"></span>
-                          </div>
+                        <div class="lg-none">
+                          <div class="badge-decor">
+                            <div class="icon icon--big">
+                              <span class="kit-icon clock"></span>
+                            </div>
 
-                          <div class="badge-decor__content">
-                            <p class="p3">Reading time:</p>
+                            <div class="badge-decor__content">
+                              <p class="p3">Reading time:</p>
 
-                            <p class="p3">4 minutes</p>
+                              <p class="p3">4 minutes</p>
+                            </div>
                           </div>
                         </div>
 
@@ -1850,14 +1852,25 @@
                             <p class="p3">5621</p>
                           </div>
                         </div>
+
+                        <div class="lg-show">
+                          <div class="badge-decor">
+                            <div class="icon icon--big">
+                              <span class="kit-icon clock"></span>
+                            </div>
+
+                            <div class="badge-decor__content">
+                              <p class="p3">Reading time:</p>
+
+                              <p class="p3">4 minutes</p>
+                            </div>
+                          </div>
+                        </div>
                       </div>
 
                       <div class="article__top-content">
-                        <a
-                          href="#"
-                          aria-label="Перейти к автору"
-                          title="Elena Smirnova"
-                          class="badge-detail badge-detail--secondary-bg-200 badge-detail--circle-icon badge-detail--small isHover"
+                        <div
+                          class="badge-detail badge-detail--secondary-bg-200 badge-detail--circle-icon badge-detail--small badge-detail--without-img"
                         >
                           <div class="badge-detail__icon">
                             <picture>
@@ -1875,15 +1888,18 @@
                           </div>
 
                           <div class="badge-detail__content">
-                            <p
+                            <a
+                              href="#"
+                              aria-label="Перейти к автору"
+                              title="Elena Smirnova"
                               class="p3 medium-font link active-noColor active-line"
                             >
                               Elena Smirnova
-                            </p>
+                            </a>
 
                             <p class="p3">Content Manager</p>
                           </div>
-                        </a>
+                        </div>
                       </div>
                     </div>
 
@@ -2078,7 +2094,6 @@
                         <a
                           href="#"
                           aria-label="Перейти к статье: Benefits of buying real estate in Dubai"
-                          title="Benefits of buying real estate in Dubai"
                           class="p1 link-dashed"
                           >Benefits of buying real estate in Dubai</a
                         >
@@ -2088,7 +2103,6 @@
                         <a
                           href="#"
                           aria-label="Перейти к статье: How to buy real estate in Dubai: Step-by-step guide"
-                          title="How to buy real estate in Dubai: Step-by-step guide"
                           class="p1 link-dashed"
                           >How to buy real estate in Dubai: Step-by-step
                           guide</a
@@ -2099,7 +2113,6 @@
                         <a
                           href="#"
                           aria-label="Перейти к статье: Additional costs when buying a home in Dubai"
-                          title="Additional costs when buying a home in Dubai"
                           class="p1 link-dashed"
                           >Additional costs when buying a home in Dubai</a
                         >
@@ -2109,7 +2122,6 @@
                         <a
                           href="#"
                           aria-label="Перейти к статье: Benefits of buying real estate in Dubai"
-                          title="Benefits of buying real estate in Dubai"
                           class="p1 link-dashed"
                           >Benefits of buying real estate in Dubai</a
                         >
@@ -2119,7 +2131,6 @@
                         <a
                           href="#"
                           aria-label="Перейти к статье: How to buy real estate in Dubai: Step-by-step guide"
-                          title="How to buy real estate in Dubai: Step-by-step guide"
                           class="p1 link-dashed"
                           >How to buy real estate in Dubai: Step-by-step
                           guide</a
@@ -2130,7 +2141,6 @@
                         <a
                           href="#"
                           aria-label="Перейти к статье: Additional costs when buying a home in Dubai"
-                          title="Additional costs when buying a home in Dubai"
                           class="p1 link-dashed"
                           >Additional costs when buying a home in Dubai</a
                         >
@@ -3106,6 +3116,7 @@
                         class="button br-el--rounded-3xl-md button--bg-primary-100 button--lg"
                         aria-label="Смотреть больше"
                         title="See more"
+                        style="min-width: 160px"
                       >
                         <p class="p2 medium-font">See more</p>
 
@@ -3117,7 +3128,7 @@
 
                     <div class="lg-show" style="width: 100%">
                       <div
-                        class="swiper-box swiper-box--property swiper-box--pagination-bottom swiper-box--visible-lg"
+                        class="swiper-box swiper-box--property swiper-box--pagination-bottom swiper-box--visible-lg-inner"
                         style="width: 100%"
                       >
                         <div class="swiper-box__content" data-loader-relative>
@@ -3144,7 +3155,7 @@
                               <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                   <!-- prettier-ignore -->
-      
+
                                   <div
   class="good-item good-item--noShadow good-item--column"
 >
@@ -3426,7 +3437,7 @@
 
                                 <div class="swiper-slide">
                                   <!-- prettier-ignore -->
-      
+
                                   <div
   class="good-item good-item--noShadow good-item--column"
 >
@@ -3708,7 +3719,7 @@
 
                                 <div class="swiper-slide">
                                   <!-- prettier-ignore -->
-      
+
                                   <div
   class="good-item good-item--noShadow good-item--column"
 >
@@ -3990,7 +4001,7 @@
 
                                 <div class="swiper-slide">
                                   <!-- prettier-ignore -->
-      
+
                                   <div
   class="good-item good-item--noShadow good-item--column"
 >
@@ -4284,13 +4295,13 @@
                   <div class="quote">
                     <header class="quote__header">
                       <div class="quote__icon">
-                        <div class="icon icon--lg">
+                        <div class="icon icon--xl-lg">
                           <span class="kit-icon double-quotes-r"></span>
                         </div>
                       </div>
 
                       <blockquote>
-                        <p class="p1 medium-font">
+                        <p class="p1 medium-font lh175-media">
                           The market of real estate in Dubai has long been
                           established as one of the most promising investment
                           destinations globally. It combines high investor
@@ -4306,7 +4317,7 @@
                     </header>
 
                     <footer class="quote__footer">
-                      <p class="p2">Marina Sheludko</p>
+                      <p class="p2-add">Marina Sheludko</p>
 
                       <div class="text-dots text-dots--secondary-100">
                         <p class="p3">
@@ -4385,6 +4396,21 @@
                       <header class="promo-content__header">
                         <div class="promo-content__header-top">
                           <p class="h5 semibold-font">Download the brochure</p>
+
+                          <div class="promo-content__header-img tablet-show">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/decors/two.webp   1x,
+                                  /img/decors/two2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/decors/two.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
                         </div>
 
                         <p class="p2">
@@ -4399,11 +4425,11 @@
                           href="/img/goods/four.webp"
                           download=""
                           data-download-file="/img/goods/six.webp"
-                          class="button button--noBg button--noBg-primary-color-100 button--border-small br-el--rounded-3xl modal-open"
+                          class="button button--noBg button--noBg-primary-color-100 button--border-small br-el--rounded-3xl modal-open button--mh-52-48"
                           data-modal="successModal"
-                          style="min-height: 52px; padding-inline: 32px"
+                          style="padding-inline: 32px"
                         >
-                          <p class="p2 semibold-font">Download</p>
+                          <p class="p2-add semibold-font">Download</p>
 
                           <div class="icon icon--big">
                             <span class="kit-icon download"></span>
@@ -4412,9 +4438,7 @@
                       </footer>
                     </div>
 
-                    <div
-                      class="promo-content__img promo-content__img--filter"
-                    >
+                    <div class="promo-content__img promo-content__img--filter">
                       <picture>
                         <source
                           srcset="
@@ -4450,8 +4474,16 @@
                           </p>
                         </td>
 
-                        <td>
-                          <p class="p3">
+                        <td
+                          class="clamp-text-block"
+                          data-block="clamp-relative"
+                        >
+                          <p
+                            class="p3 is-clamped no-rotate"
+                            data-block="clamp-text"
+                            data-block="clamp-text-simple"
+                            data-max="7"
+                          >
                             Dubai real estate offers some of the highest yields
                             globally: up to 8% annually for long-term rentals
                             and up to 15% for short-term rentals. In luxury
@@ -4466,6 +4498,23 @@
                             as of May 2025) and over 18,000,000 tourists in
                             2024.
                           </p>
+
+                          <div
+                            data-block="clamp-footer"
+                            class="more-clamp-footer"
+                          >
+                            <button
+                              data-block="clamp-btn"
+                              class="button button--noBg button--noMassa"
+                              data-more-text="read more"
+                              data-less-text="read less"
+                              style="display: inline-flex"
+                            >
+                              <p class="p3" data-block="clamp-btn-text">
+                                read more
+                              </p>
+                            </button>
+                          </div>
                         </td>
                       </tr>
 
@@ -4476,20 +4525,62 @@
                           </p>
                         </td>
 
-                        <td>
-                          <p class="p3">
-                            Buying property worth AED 750,000+ (approx. USD
-                            204,000) grants eligibility for a 2-year UAE
-                            residence visa. Investments from AED 2,000,000
-                            (approx. USD 544,500) qualify for a 5-year Golden
-                            Visa. Residency includes benefits such as legal
-                            stay, bank account access, healthcare and a driver's
-                            license. It also allows family to join (spouse,
-                            unmarried children). Applies to all property
-                            types—residential, commercial, completed or under
-                            construction. Residency is renewable as long as the
-                            property is owned.
+                        <td
+                          class="clamp-text-block"
+                          data-block="clamp-relative"
+                        >
+                          <p
+                            class="p3 is-clamped no-rotate"
+                            data-block="clamp-text"
+                            data-block="clamp-text-simple"
+                            data-max="8"
+                          >
+                            Dubai real estate offers some of the highest yields
+                            globally: up to 8% annually for long-term rentals
+                            and up to 15% for short-term rentals. In luxury
+                            tourist areas, returns can exceed 20%, allowing
+                            investors to recover their capital in under five
+                            years. Property values have steadily increased (8.1%
+                            in 2021, 21.1% in 2022, 14.2% in 2023 and 11.6% in
+                            2024). Thanks to high liquidity (average time on the
+                            market is 40–60 days), owners can sell quickly.
+                            Demand is driven by infrastructure growth,
+                            government incentives, population growth (+6.3% YoY
+                            as of May 2025) and over 18,000,000 tourists in
+                            2024. Dubai real estate offers some of the highest
+                            yields globally: up to 8% annually for long-term
+                            rentals and up to 15% for short-term rentals. In
+                            luxury tourist areas, returns can exceed 20%,
+                            allowing investors to recover their capital in under
+                            five years. Property values have steadily increased
+                            (8.1% in 2021, 21.1% in 2022, 14.2% in 2023 and
+                            11.6% in 2024). Thanks to high liquidity (average
+                            time on the market is 40–60 days), owners can sell
+                            quickly. Demand is driven by infrastructure growth,
+                            government incentives, population growth (+6.3% YoY
+                            as of May 2025) and over 18,000,000 tourists in
+                            2024.
                           </p>
+
+                          <div
+                            data-block="clamp-footer"
+                            class="more-clamp-footer"
+                          >
+                            <button
+                              data-block="clamp-btn"
+                              class="button button--noBg button--noMassa"
+                              data-more-text="read more"
+                              data-less-text="read less"
+                              style="display: inline-flex"
+                            >
+                              <p
+                                class="p3 text-secondary-100 medium-font"
+                                data-block="clamp-btn-text"
+                              >
+                                read more
+                              </p>
+                            </button>
+                          </div>
                         </td>
                       </tr>
                     </tbody>
@@ -4511,10 +4602,18 @@
 
                   <div class="lg-none">
                     <div class="gallery">
-                      <div class="gallery__inner">
-                        <div class="gallery__items">
-                          <div class="gallery__item gallery__item--big">
-                            <picture>
+                      <div
+                        class="gallery__inner"
+                        data-gallery-relative-name="main-gallery"
+                      >
+                        <div class="gallery__items" data-gallery-box>
+                          <div
+                            class="gallery__item gallery__item--big modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-1"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
                                   /img/gallery/one.webp   1x,
@@ -4528,8 +4627,13 @@
                             </picture>
                           </div>
 
-                          <div class="gallery__item">
-                            <picture>
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-2"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
                                   /img/gallery/two.webp   1x,
@@ -4543,8 +4647,13 @@
                             </picture>
                           </div>
 
-                          <div class="gallery__item">
-                            <picture>
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-3"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
                                   /img/gallery/three.webp   1x,
@@ -4558,8 +4667,13 @@
                             </picture>
                           </div>
 
-                          <div class="gallery__item">
-                            <picture>
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-4"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
                                   /img/gallery/four.webp   1x,
@@ -4573,8 +4687,13 @@
                             </picture>
                           </div>
 
-                          <div class="gallery__item">
-                            <picture>
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-5"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
                                   /img/gallery/five.webp   1x,
@@ -4588,8 +4707,33 @@
                             </picture>
                           </div>
 
-                          <div class="gallery__item">
-                            <picture>
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-6"
+                          >
+                            <picture data-gallery-content>
+                              <source
+                                srcset="
+                                  /img/gallery/five.webp   1x,
+                                  /img/gallery/five2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/gallery/five.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
+
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-7"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
                                   /img/gallery/two.webp   1x,
@@ -4603,8 +4747,13 @@
                             </picture>
                           </div>
 
-                          <div class="gallery__item">
-                            <picture>
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-8"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
                                   /img/gallery/three.webp   1x,
@@ -4618,31 +4767,21 @@
                             </picture>
                           </div>
 
-                          <div class="gallery__item">
-                            <picture>
+                          <div
+                            class="gallery__item modal-open"
+                            data-modal="galleryModal"
+                            data-gallery-item
+                            data-block="img-gallery-9"
+                          >
+                            <picture data-gallery-content>
                               <source
                                 srcset="
-                                  /img/gallery/three.webp   1x,
-                                  /img/gallery/three2x.webp 2x
+                                  /img/gallery/four.webp   1x,
+                                  /img/gallery/four2x.webp 2x
                                 "
                               />
                               <img
-                                src="/img/gallery/three.webp"
-                                alt="фотография"
-                              />
-                            </picture>
-                          </div>
-
-                          <div class="gallery__item">
-                            <picture>
-                              <source
-                                srcset="
-                                  /img/gallery/one.webp   1x,
-                                  /img/gallery/one2x.webp 2x
-                                "
-                              />
-                              <img
-                                src="/img/gallery/one.webp"
+                                src="/img/gallery/four.webp"
                                 alt="фотография"
                               />
                             </picture>
@@ -4738,7 +4877,7 @@
 
                   <div class="attention">
                     <div class="attention__icon">
-                      <div class="icon icon--lg">
+                      <div class="icon icon--xl-lg">
                         <span class="kit-icon wavy-warning"></span>
                       </div>
                     </div>
@@ -4874,7 +5013,6 @@
                       <a
                         href="#"
                         aria-label="Перейти на How to make money from real estate investments in Dubai with no starter money on your bank account"
-                        title="How to make money from real estate investments in Dubai with no starter money on your bank account"
                         class="badge-detail badge-detail--white-bg badge-detail--circle-icon isHover"
                       >
                         <div class="badge-detail__icon">
@@ -4903,7 +5041,6 @@
                       <a
                         href="#"
                         aria-label="Перейти на How to get a residence permit in the UAE?"
-                        title="How to get a residence permit in the UAE?"
                         class="badge-detail badge-detail--white-bg isHover"
                       >
                         <div class="badge-detail__icon">
@@ -4931,7 +5068,6 @@
                       <a
                         href="#"
                         aria-label="Перейти на How can a foreigner buy real estate in Dubai?"
-                        title="How can a foreigner buy real estate in Dubai?"
                         class="badge-detail badge-detail--white-bg badge-detail--circle-icon isHover"
                       >
                         <div class="badge-detail__icon">
@@ -4966,17 +5102,32 @@
                         </div>
                       </div>
 
-                      <div class="tag tag--lg tag--gray-200">
+                      <a
+                        href="#"
+                        aria-label="Перейти на статью пупуп"
+                        class="tag tag--lg tag--gray-200"
+                        title="Перейти на статью пупуп"
+                      >
                         <p class="p3 medium-font">Real Estate</p>
-                      </div>
+                      </a>
 
-                      <div class="tag tag--lg tag--gray-300">
+                      <a
+                        href="#"
+                        aria-label="Перейти на статью пупуп"
+                        class="tag tag--lg tag--gray-300"
+                        title="Перейти на статью пупуп"
+                      >
                         <p class="p3 medium-font">Buying</p>
-                      </div>
+                      </a>
 
-                      <div class="tag tag--lg tag--gray-200">
+                      <a
+                        href="#"
+                        aria-label="Перейти на статью пупуп"
+                        class="tag tag--lg tag--gray-200"
+                        title="Перейти на статью пупуп"
+                      >
                         <p class="p3 medium-font">Dubai</p>
-                      </div>
+                      </a>
                     </div>
 
                     <div
@@ -5000,16 +5151,16 @@
                             class="button button--bg-secondary-200 button--md br-el--rounded-3xl"
                             style="min-height: 48px; width: 100%"
                           >
-                            <p class="p2 medium-font">Share</p>
+                            <p class="p2-add medium-font">Share</p>
 
-                            <div class="icon">
+                            <div class="icon icon--big">
                               <span class="kit-icon share-android"></span>
                             </div>
                           </button>
                         </div>
                       </div>
 
-                      <div class="list-popup__box share__popup">
+                      <div class="list-popup__box share__popup right">
   <div class="share__items">
     <div class="share__item-box">
       <a
@@ -5265,9 +5416,9 @@
                       <button
                         type="button"
                         aria-label="Открыть модальное окно"
-                        class="button button--bg-primary-100 br-el--rounded-3xl modal-open"
+                        class="button button--bg-primary-100 br-el--rounded-3xl modal-open button--mh-52-48"
                         data-modal="contactUpModal"
-                        style="min-height: 52px; padding-inline: 32px"
+                        style="padding-inline: 32px; margin-right: auto"
                       >
                         <p class="p2 semibold-font">Send a request</p>
 
@@ -5288,6 +5439,21 @@
                       />
                       <img
                         src="/img/decors/three.webp"
+                        alt="фотография круга"
+                      />
+                    </picture>
+                  </div>
+
+                  <div class="promo-content__mobile-img">
+                    <picture>
+                      <source
+                        srcset="
+                          /img/decors/three-mobile.webp   1x,
+                          /img/decors/three-mobile2x.webp 2x
+                        "
+                      />
+                      <img
+                        src="/img/decors/three-mobile.webp"
                         alt="фотография круга"
                       />
                     </picture>
@@ -6163,7 +6329,7 @@
                             </div>
 
                             <div class="card-detail__content">
-                              <p class="p1 medium-font ellipse-text">
+                              <p class="p1 medium-font">
                                 Dubai Launches Ejari Rental Registration via
                                 WhatsApp in Major Digital Leap
                               </p>
@@ -6202,7 +6368,7 @@
                             </div>
 
                             <div class="card-detail__content">
-                              <p class="p1 medium-font ellipse-text">
+                              <p class="p1 medium-font">
                                 Dubai Launches Ejari Rental Registration via
                                 WhatsApp in Major Digital Leap
                               </p>
@@ -6241,7 +6407,7 @@
                             </div>
 
                             <div class="card-detail__content">
-                              <p class="p1 medium-font ellipse-text">
+                              <p class="p1 medium-font">
                                 Dubai Launches Ejari Rental Registration via
                                 WhatsApp in Major Digital Leap
                               </p>
@@ -9853,6 +10019,82 @@
 <script src="https://unpkg.com/libphonenumber-js@1.10.57/bundle/libphonenumber-js.min.js" defer></script>
 
 <script src="/js/page.js" type="module"></script>
+
+      <div class="modalBlock galleryModal" data-block="gallery-box">
+  <div class="modalBlock__inner galleryModal__inner tabs-box" data-tab-category="gallery">
+    <header class="modalBlock__head modalBlock__head--static">
+      <div class="checkbox-box tab-btns"></div>
+
+      <div class="swiper-pagination swiper-pagination--counter lg-show"></div>
+
+      <button class="modalBlock__close modal-close" type="button" aria-label="Закрыть модалку">
+        <div class="icon icon--big" style="color: var(--white-color)">
+          <span class="kit-icon close-md"></span>
+        </div>
+      </button>
+    </header>
+
+    <div class="modalBlock__content">
+      <div class="galleryModal__box swiper-box" data-block-tab="gallery-all">
+        <div class="galleryModal__swiper-box galleryModal__swiper-box--big">
+          <button class="button button--bg-gray-300 button--circle arrow-swiper prev" type="button">
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-left-lg"></span>
+            </div>
+          </button>
+
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--big-gallery">
+              <div class="swiper-wrapper"></div>
+            </div>
+          </div>
+
+          <button class="button button--bg-gray-300 button--circle arrow-swiper next" type="button">
+            <div class="icon icon--big">
+              <span class="kit-icon arrow-right-lg"></span>
+            </div>
+          </button>
+        </div>
+
+        <div class="galleryModal__swiper-box galleryModal__swiper-box--small">
+          <div class="galleryModal__swiper-block">
+            <div class="swiper swiper--small-gallery">
+              <div class="swiper-wrapper"></div>
+
+              <div class="arrows-swiper arrows-swiper--absolute arrows-swiper--absolute-full">
+                <button class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper prev" type="button">
+                  <div class="icon icon--big">
+                    <span class="kit-icon arrow-left-md"></span>
+                  </div>
+                </button>
+
+                <button class="button button--bg-white-170 button--cub-second button--cub-second-left-border arrow-swiper next" type="button">
+                  <div class="icon icon--big">
+                    <span class="kit-icon arrow-right-md"></span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="arrows-swiper arrows-swiper--bg galleryModal__arrows-main lg-show">
+      <button class="arrow-swiper prev" type="button" aria-label="Посмотреть прошлый слайд">
+        <div class="icon icon--big">
+          <span class="kit-icon arrow-left-md"></span>
+        </div>
+      </button>
+
+      <button class="arrow-swiper next" type="button" aria-label="Посмотреть следующий слайд">
+        <div class="icon icon--big">
+          <span class="kit-icon arrow-right-md"></span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
 
     </div>
 

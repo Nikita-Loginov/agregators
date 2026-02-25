@@ -76,7 +76,11 @@
   }
 
   &--mh-52-44 {
-    min-height: calculate-clamp(44px, 52px, 1023px, 767px);
+    min-height: calculate-clamp(44px, 52px, $lg-breakpoint, $tablet-breakpoint);
+  }
+
+  &--mh-52-48 {
+    min-height: calculate-clamp(48px, 52px, $lg-breakpoint, $tablet-breakpoint);
   }
 
   &--cub {

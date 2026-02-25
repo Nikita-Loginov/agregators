@@ -175,6 +175,17 @@
     --badge-main-gap: 12px;
   }
 
+  &--without-img {
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+
+    &:has(.badge-detail__icon) {
+
+      padding-inline-start: 4px;
+      padding-inline-end: 16px;
+    }
+  }
+
   &__icon {
     width: var(--badge-icon-size);
     height: var(--badge-icon-size);

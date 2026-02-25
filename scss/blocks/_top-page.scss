@@ -29,7 +29,7 @@
     gap: var(--gap-details);
 
     &--sort {
-      --gap-details: 24px;
+      --gap-details: #{calculate-clamp(8px, 24px, $lg-breakpoint, $tablet-breakpoint)};;
     }
 
     &--one {
@@ -52,6 +52,14 @@
       display: flex;
       flex-direction: column;
       gap: 16px;
+    }
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    &__details {
+      &--sort {
+        grid-template-columns: 124px 200px;
+      }
     }
   }
 

@@ -508,6 +508,12 @@ body.scrollBottom {
   transform: rotate(-180deg);
 }
 
+[data-block="clamp-text"].is-open.no-rotate
+  + [data-block="clamp-footer"]
+  [data-block="clamp-btn"] {
+  transform: rotate(0deg);
+}
+
 [data-block="clamp-footer"] {
   display: none;
 }

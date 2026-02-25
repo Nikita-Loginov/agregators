@@ -395,6 +395,16 @@ h6 {
   line-height: var(--line-height-md);
 }
 
+.lh175 {
+  line-height: var(--line-height-loosest);
+}
+
+.lh175-media {
+  @media (max-width: $lg-breakpoint) {
+    line-height: var(--line-height-loosest);
+  }
+}
+
 body .main {
   .br-base {
     border-radius: var(--radius-base);

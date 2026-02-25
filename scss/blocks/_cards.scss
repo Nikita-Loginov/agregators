@@ -39,11 +39,13 @@ a.card-detail {
   transition: all 0.5s;
   cursor: pointer;
 
-  &:hover {
-    .card-detail {
-      &__img {
-        img {
-          scale: 1.2;
+  &.isHover {
+    &:hover {
+      .card-detail {
+        &__img {
+          img {
+            scale: 1.2;
+          }
         }
       }
     }
@@ -265,11 +267,13 @@ a.card-box {
   transition: all 0.2s;
   cursor: pointer;
 
-  &:hover {
-    .card-box {
-      &__img {
-        img {
-          scale: 1.2;
+  &.isHover {
+    &:hover {
+      .card-box {
+        &__img {
+          img {
+            scale: 1.2;
+          }
         }
       }
     }
@@ -493,7 +497,12 @@ a.card-box {
     border-radius: var(--radius-md);
 
     .p1 {
-      font-size: calculate-clamp(16px, 18px, $lg-breakpoint, $tablet-breakpoint);
+      font-size: calculate-clamp(
+        16px,
+        18px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
 
       @media (max-width: $tablet-breakpoint) {
         font-size: 18px;

@@ -73,6 +73,17 @@
     transition: all 0.3s;
   }
 
+  // &--custom {
+  //   &:after {
+  //     height: 3px;
+  //     border: none;
+  //     bottom: -7px;
+  //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='3'%3E%3Crect x='0' y='0' width='17' height='3' rx='2' fill='%239da3af' /%3E%3C/svg%3E");
+  //     background-repeat: repeat-x;
+  //     background-size: 20px 2px;
+  //   }
+  // }
+
   &:hover {
     color: var(--primary-color-100);
 

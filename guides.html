@@ -1810,7 +1810,7 @@
                     </div>
 
                     <div
-                      class="select-box select-box--middle select-box--words with-icon select-box--noMassa-media"
+                      class="select-box  select-box--noMax select-box--noMin select-box--words with-icon select-box--noMassa-media"
                       data-icon="sort"
                       data-loading="true"
                     >
@@ -1822,88 +1822,21 @@
                     </div>
                   </div>
 
-                  <div class="top-page__item" data-loader-relative>
-                    <div class="loader" data-loader-box>
-                      <span></span>
-                    </div>
+                  <div class="top-page__item">
+                    <div class="input-box">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <input type="text" name="name" placeholder="Find the guide" required />
 
-                    <div
-                      class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
-                      data-icon="search"
-                      data-loading="true"
-                    >
-                      <select
-                        id="search-select"
-                        data-placeholder="Find the guide"
-                        multiple
-                        data-search="true"
-                      >
-                        <option value="">Find the guide</option>
-
-                        <option
-                          value="1"
-                          data-desc="Buying property"
-                          data-short-desc="Buying property"
-                        >
-                          Buying property
-                        </option>
-
-                        <option
-                          value="4"
-                          data-short-desc="For foreign nationals"
-                        >
-                          For foreign nationals
-                        </option>
-
-                        <option
-                          value="4"
-                          data-short-desc="For foreign nationals"
-                        >
-                          For foreign nationals
-                        </option>
-
-                        <option
-                          value="5"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Holidays
-                        </option>
-
-                        <option
-                          value="6"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Legal issues
-                        </option>
-
-                        <option
-                          value="7"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Living in UAE
-                        </option>
-
-                        <option
-                          value="8"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Mortgage
-                        </option>
-
-                        <option
-                          value="9"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Personal stories
-                        </option>
-
-                        <option
-                          value="10"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Other
-                        </option>
-                      </select>
+                          <button class="button button--noMassa button--noBg" type="button">
+                            <div class="icon icon--md-base">
+                              <span class="kit-icon search-magnifying-glass"></span>
+                            </div>
+                          </button>
+                        </div>
+                      </label>
+        
+                      <p class="input-box__errors p4 form__errors"></p>
                     </div>
                   </div>
                 </div>

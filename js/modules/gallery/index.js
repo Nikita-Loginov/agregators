@@ -18,12 +18,14 @@ export const initGallery = (slide, modalBlock, skipClick = false) => {
   if (!galleryRoot) return;
 
   const allSlides = Array.from(
-    galleryRoot.querySelectorAll(".swiper--gallery-big [data-gallery-item]")
+    galleryRoot.querySelectorAll("[data-gallery-box] [data-gallery-item]")
   ).map((s) => ({
     block: s.dataset.block,
     type: s.dataset.block.startsWith("video") ? "video" : "img",
-    html: s.querySelector(".gallery-simple__img-box").innerHTML,
+    html: s.querySelector(".gallery-simple__img-box")?.innerHTML || s.querySelector("[data-gallery-content]")?.innerHTML,
   }));
+
+  // console.log(allSlides)
 
   const activeBlock = slide?.dataset.block || allSlides[0]?.block;
   const activeType = activeBlock.startsWith("video") ? "video" : "img";
