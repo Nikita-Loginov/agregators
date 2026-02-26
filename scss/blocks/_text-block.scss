@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: column;
   gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);
+
+  &--little {
+    gap: calculate-clamp(8px, 12px, $lg-breakpoint, $tablet-breakpoint);
+  }
   
   &--mini {
     gap: 16px;

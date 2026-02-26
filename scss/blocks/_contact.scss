@@ -125,4 +125,11 @@
       max-width: 100%;
     }
   }
+
+  @media (max-width: $mobile-breakpoint) {
+    &__btns {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }

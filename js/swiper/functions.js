@@ -127,3 +127,59 @@ export const setTableCountItems = (swiper) => {
 
   comparison.setAttribute("data-count", tableCount);
 };
+
+export const initTabletSwipers = () => {
+  const boxes = document.querySelectorAll(".table-swiper");
+  if (!boxes.length) return;
+
+  boxes.forEach((box) => {
+    const swiperEls = Array.from(box.querySelectorAll(".swiper--table"));
+    if (!swiperEls.length) return;
+
+    const nextEl = box.querySelector(".arrow-swiper.next");
+    const prevEl = box.querySelector(".arrow-swiper.prev");
+    const pagination = box.querySelector(".swiper-pagination");
+
+    const swiperInstances = swiperEls.map((el) =>
+      initSwiper(el, {
+        ...SWIPERS.TABLET.options,
+        mousewheel: true,
+        allowTouchMove: true,
+        pagination: {
+          el: pagination,
+          type: "custom",
+          renderCustom: (swiper, current, total) =>
+            `<span class="current-slide">${current}</span>/<span class="total-slides">${total}</span>`,
+        },
+      })
+    );
+
+    let isSyncing = false;
+
+    swiperInstances.forEach((swiper, index) => {
+      swiper.on("slideChange", () => {
+        if (isSyncing) return;
+
+        isSyncing = true;
+        const activeIndex = swiper.activeIndex;
+        
+        swiperInstances.forEach((sw, i) => {
+          
+          if (i !== index && sw.activeIndex !== activeIndex) {
+            sw.slideTo(activeIndex, 500);
+          }
+        });
+
+        isSyncing = false;
+      });
+    });
+
+    nextEl?.addEventListener("click", () => {
+      swiperInstances[0].slideNext();
+    });
+
+    prevEl?.addEventListener("click", () => {
+      swiperInstances[0].slidePrev();
+    });
+  });
+};

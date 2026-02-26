@@ -1,5 +1,5 @@
 .banner-ai {
-  display: none;
+  display: flex;
   align-items: center;
   gap: calculate-clamp(20px, 32px, 1023px, 767px);
   justify-content: space-between;
@@ -16,7 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4px 14px;
+    gap: 4px 8px;
     flex-shrink: 0;
 
     .button {
@@ -36,6 +36,8 @@
 
     .button {
       padding-inline: calculate-clamp(16px, 32px, 1023px, 767px);
+      max-width: 172px;
+      width: 100%;
     }
   }
 
@@ -43,6 +45,20 @@
     &__items {
       gap: 12px 8px;
       max-width: 432px;
+
+      .button {
+        padding-inline: 12px;
+        max-width: 130px;
+        width: 100%;
+
+        @media (min-width: $tablet-breakpoint) {
+          &:nth-child(4) {
+            margin-left: auto;
+          }
+        }
+
+        
+      }
     }
   }
 
@@ -53,6 +69,22 @@
 
     &__items {
       gap: 12px;
+      max-width: 300px;
+
+      .button {
+        max-width: 140px;
+
+        &:first-child,
+        &:nth-last-child(2) {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $mobile-breakpoint) {
+    &__items {
+      max-width: 100%;
     }
   }
 }

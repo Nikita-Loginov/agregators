@@ -467,9 +467,11 @@ a.card-box {
   border: 1px solid var(--gray-color-600);
   border-radius: var(--radius-xl);
   overflow: hidden;
+  padding-inline: 3px;
+  padding-bottom: 3px;
 
   &__img-box {
-    padding: 20px 16px;
+    padding: 20px 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -496,6 +498,7 @@ a.card-box {
     gap: 2px;
     border-radius: var(--radius-md);
 
+
     .p1 {
       font-size: calculate-clamp(
         16px,
@@ -514,6 +517,10 @@ a.card-box {
     display: flex;
     align-items: center;
     gap: 4px;
+  }
+
+  @media (max-width: $lg-breakpoint) {
+    // padding-bottom: 6px;
   }
 }
 

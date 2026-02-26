@@ -129,6 +129,10 @@
       line-height: 1;
     }
   }
+
+  &--start {
+    align-items: flex-start;
+  }
 }
 
 .badge-detail {

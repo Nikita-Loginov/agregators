@@ -40,24 +40,6 @@ const BREAKPOINTS_CARDS_ITEMS = {
   },
 };
 
-export const TABLE_OPTIONS = {
-  slidesPerView: 1,
-  spaceBetween: 16,
-  speed: 0,
-  followFinger: false,
-  touchReleaseOnEdges: true,
-  allowTouchMove: false,
-  simulateTouch: false,
-  shortSwipes: false,
-  longSwipes: false,
-  allowSlidePrev: true,
-  allowSlideNext: true,
-  preventInteractionOnTransition: true,
-  touchRatio: 0,
-  touchAngle: 0,
-  grabCursor: false,
-  mousewheel: false,
-};
 
 export const CARDS_OPTIONS = {
   mousewheel: MOUSE_WHEEL_CONFIG,
@@ -354,24 +336,12 @@ export const SWIPERS = {
       },
     },
   },
-  MARKET_TABLE: {
-    selector: ".marketModal .swiper--market",
-    breakpoint: 122300000000,
+  TABLET: {
     options: {
-      ...TABLE_OPTIONS,
-
-      navigation: {
-        nextEl: ".marketModal .table-swiper .arrow-swiper.next",
-        prevEl: ".marketModal .table-swiper .arrow-swiper.prev",
-      },
-
-      pagination: {
-        el: ".marketModal .table-swiper .swiper-pagination",
-        type: "custom",
-        renderCustom: function (swiper, current, total) {
-          return `<span class="current-slide">${current}</span>/<span class="total-slides">${total}</span>`;
-        },
-      },
+      spaceBetween: 16,
+      slidesPerView: 1,
+      speed: 500,
+      mousewheel: MOUSE_WHEEL_CONFIG
     },
   },
   MAP_SIBEBAR_CARDS: {
@@ -387,26 +357,6 @@ export const SWIPERS = {
         },
         360: {
           slidesPerView: 1.1,
-        },
-      },
-    },
-  },
-  STATIC_TABLE: {
-    selector: ".object .swiper--static",
-    breakpoint: 122300000000,
-    options: {
-      ...TABLE_OPTIONS,
-
-      navigation: {
-        nextEl: ".object .table-swiper .arrow-swiper.next",
-        prevEl: ".object .table-swiper .arrow-swiper.prev",
-      },
-
-      pagination: {
-        el: ".object .table-swiper .swiper-pagination",
-        type: "custom",
-        renderCustom: function (swiper, current, total) {
-          return `<span class="current-slide">${current}</span>/<span class="total-slides">${total}</span>`;
         },
       },
     },

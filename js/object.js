@@ -8,6 +8,7 @@ import { initImgsSwiperGoods } from "./swiper/functions.js";
 import { searcBlockTab } from "./modules/tab.js";
 import { initSimpleMap } from "./modules/map.js";
 import { lagerhauser } from "./data/lagerhauser.js";
+import { initTabletSwipers } from "./swiper/functions.js";
 
 const swipers = [
   {
@@ -43,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSwipersGood();
   hideUnnecessaryButtons();
   initImgsSwiperGoods();
+  initTabletSwipers();
 
   swipers.forEach((config) => {
     slidersConfig.push(config);

@@ -76,88 +76,54 @@
                     </div>
                   </div>
 
-                  <div class="top-page__item" data-loader-relative>
-                    <div class="loader" data-loader-box>
-                      <span></span>
-                    </div>
+                  <div class="top-page__item">
+                    <div class="input-box">
+                      <label class="input-box__content">
+                        <div class="input-box__info">
+                          <input
+                            type="text"
+                            name="name"
+                            placeholder="Find the topic"
+                            required
+                          />
 
-                    <div
-                      class="select-box select-box--noMax select-box--noMin select-box--search with-icon"
-                      data-icon="search"
-                      data-loading="true"
-                    >
-                      <select
-                        id="search-select"
-                        data-placeholder="Find the topic"
-                        multiple
-                        data-search="true"
-                      >
-                        <option value="">Find the topic</option>
-
-                        <option
-                          value="1"
-                          data-desc="Buying property"
-                          data-short-desc="Buying property"
+                          <button
+                            class="button button--noMassa button--noBg"
+                            type="button"
+                          >
+                            <div class="icon icon--md-base">
+                              <span
+                                class="kit-icon search-magnifying-glass"
+                              ></span>
+                            </div>
+                          </button>
+                        </div>
+                      </label>
+                      
+                      <div class="input-box__dropdown">
+                        <div class="search-address">
+                          <label
+                          class="check-simple check-simple--center input-box"
                         >
-                          Buying property
-                        </option>
+                          <div class="check-simple__content">
+                            <div class="check-simple__custom check-simple__custom--white-bg">
+                              <input type="checkbox" />
 
-                        <option
-                          value="4"
-                          data-short-desc="For foreign nationals"
-                        >
-                          For foreign nationals
-                        </option>
+                              <span></span>
+                            </div>
 
-                        <option
-                          value="4"
-                          data-short-desc="For foreign nationals"
-                        >
-                          For foreign nationals
-                        </option>
+                            <div class="check-simple__info">
+                              <p class="p3 regular-font">
+                                Search in headlines only
+                              </p>
+                            </div>
+                          </div>
 
-                        <option
-                          value="5"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Holidays
-                        </option>
-
-                        <option
-                          value="6"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Legal issues
-                        </option>
-
-                        <option
-                          value="7"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Living in UAE
-                        </option>
-
-                        <option
-                          value="8"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Mortgage
-                        </option>
-
-                        <option
-                          value="9"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Personal stories
-                        </option>
-
-                        <option
-                          value="10"
-                          data-short-desc="For foreign nationals"
-                        >
-                          Other
-                        </option>
-                      </select>
+                          <div class="check-simple__errors p4"></div>
+                        </label>
+                        </div>
+                        
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -187,7 +153,7 @@
                             <button
                               type="button"
                               aria-label="Выбрать статьи категории Buying property"
-                              class="tag tag--lg tag--gray-200"
+                              class="tag tag--lg tag--gray-200 active"
                               data-block="tag"
                             >
                               <p class="p3 medium-font">Buying property</p>
@@ -200,8 +166,8 @@
                               </div>
                             </button>
 
-                            <button
-                              type="button"
+                            <a
+                              href="/"
                               aria-label="Выбрать статьи категории For foreign nationals"
                               class="tag tag--lg tag--gray-200"
                               data-block="tag"
@@ -216,10 +182,10 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
 
-                            <button
-                              type="button"
+                            <a
+                              href="/"
                               aria-label="Выбрать статьи категории Holidays"
                               class="tag tag--lg tag--gray-200"
                               data-block="tag"
@@ -232,13 +198,13 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
 
-                            <button
-                              type="button"
+                            <a
                               aria-label="Выбрать статьи категории Legal issues"
                               class="tag tag--lg tag--gray-200"
                               data-block="tag"
+                              href="/"
                             >
                               <p class="p3 medium-font">Legal issues</p>
 
@@ -248,10 +214,10 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
 
-                            <button
-                              type="button"
+                            <a
+                              href="/"
                               aria-label="Выбрать статьи категории Living in UAE"
                               class="tag tag--lg tag--gray-200"
                               data-block="tag"
@@ -264,10 +230,10 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
 
-                            <button
-                              type="button"
+                            <a
+                              href="/"
                               aria-label="Выбрать статьи категории Mortgage"
                               class="tag tag--lg tag--gray-200"
                               data-block="tag"
@@ -280,10 +246,10 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
 
-                            <button
-                              type="button"
+                            <a
+                              href="/"
                               aria-label="Выбрать статьи категории Personal stories"
                               class="tag tag--lg tag--gray-200"
                               data-block="tag"
@@ -296,9 +262,10 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
 
-                            <button
+                            <a
+                              href="/"
                               type="button"
                               aria-label="Выбрать статьи категории Rent"
                               class="tag tag--lg tag--gray-200"
@@ -312,10 +279,10 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
 
-                            <button
-                              type="button"
+                            <a
+                              href="/"
                               aria-label="Выбрать статьи категории Residence permit"
                               class="tag tag--lg tag--gray-200"
                               data-block="tag"
@@ -328,7 +295,7 @@
                               >
                                 <span class="kit-icon close-md"></span>
                               </div>
-                            </button>
+                            </a>
                           </div>
                         </div>
 

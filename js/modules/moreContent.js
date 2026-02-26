@@ -106,6 +106,19 @@ export const hideUnnecessaryButtons = () => {
   });
 };
 
+const getMaxLines = (text) => {
+  const defaultMax = parseInt(text.dataset.max, 10) || 1;
+
+  const mediaInit = text.dataset.mediaInit;
+  const mediaMax = text.dataset.mediaMax;
+
+  if (mediaInit && window.innerWidth <= parseInt(mediaInit, 10)) {
+    return mediaMax ? parseInt(mediaMax, 10) : defaultMax;
+  }
+
+  return defaultMax;
+};
+
 export const initClampText = () => {
   const items = document.querySelectorAll('[data-block="clamp-relative"]');
 
@@ -115,7 +128,7 @@ export const initClampText = () => {
 
     if (!text || !footer) return;
 
-    const maxLines = parseInt(text.dataset.max, 10) || 1;
+    const maxLines = getMaxLines(text);
     text.style.setProperty("--lines", maxLines);
 
     updateClampState(text, footer);
@@ -186,7 +199,7 @@ export const handleMoreContentResize = () => {
 
     if (!text || !footer) return;
 
-    const maxLines = parseInt(text.dataset.max, 10) || 1;
+    const maxLines = getMaxLines(text);
     text.style.setProperty("--lines", maxLines);
 
     const wasOpen = text.classList.contains("is-open");

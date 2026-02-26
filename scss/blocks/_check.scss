@@ -133,6 +133,12 @@
         transition: all 0.2s;
       }
     }
+
+    &--white-bg {
+      span {
+        background-color: var(--white-color);
+      }
+    }
   }
 
   &__errors {

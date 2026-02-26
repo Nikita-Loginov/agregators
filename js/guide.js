@@ -4,7 +4,7 @@ import {
   initMoreBlocks,
   hideUnnecessaryButtons,
 } from "./modules/moreContent.js";
-import { initImgsSwiperGoods } from "./swiper/functions.js";
+import { initImgsSwiperGoods, initTabletSwipers } from "./swiper/functions.js";
 import {
   changeTypeGrid,
   initGridSystem,
@@ -16,12 +16,11 @@ const swipers = [
     ...SWIPERS.GALLERY_BIG,
   },
   {
-    ...SWIPERS.DEV
+    ...SWIPERS.DEV,
   },
-  {
-    ...SWIPERS.STATIC_TABLE
-  }
 ];
+
+
 
 const handleGlobalClick = (e) => {
   initMoreBlocks(e);
@@ -32,7 +31,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initImgsSwiperGoods();
   initGridSystem();
 
-  handleGridResize()
+  initTabletSwipers();
+
+  handleGridResize();
 
   swipers.forEach((config) => {
     slidersConfig.push(config);
