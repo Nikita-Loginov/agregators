@@ -8,7 +8,7 @@ import { initImgsSwiperGoods } from "./swiper/functions.js";
 import { searcBlockTab } from "./modules/tab.js";
 import { initSimpleMap } from "./modules/map.js";
 import { lagerhauser } from "./data/lagerhauser.js";
-import { initTabletSwipers } from "./swiper/functions.js";
+import { initTabletSwipers } from "./modules/table-swiper.js";
 
 const swipers = [
   {

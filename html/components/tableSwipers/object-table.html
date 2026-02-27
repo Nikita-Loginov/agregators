@@ -1,4 +1,8 @@
-<div class="table-swiper swiper-box tablet-show">
+<div
+  class="table-swiper swiper-box table-swiper--tablet object-table"
+  data-init="767"
+  style="--items-table: 4"
+>
   <div class="table-swiper__header">
     <div class="swiper-box__decor-full">
       <button
@@ -26,12 +30,12 @@
   </div>
 
   <div
-    class="table-grid table-grid--two table-grid--noBg table-grid--noRadius table-grid--border table-grid--noGap"
+    class="table-grid table-grid--two table-grid--noBg table-grid--noRadius table-grid--noGap"
   >
     <div class="table-grid__header table-grid__header--noBg">
       <div class="table-grid__row">
-        <div class="table-grid__cell table-grid__cell--gray-color-200">
-          <p class="p2 semibold-font">Parameters</p>
+        <div class="table-grid__cell">
+          <p class="p2 -add semibold-font">Parameters</p>
         </div>
 
         <div class="table-swiper__swiper-box">
@@ -39,13 +43,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="table-grid__cell">
-                  <p class="p2 semibold-font">Kazan</p>
+                  <p class="p2 -add semibold-font">Kazan</p>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="table-grid__cell">
-                  <p class="p2 semibold-font">Piter</p>
+                  <p class="p2 -add semibold-font">Piter</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2 -add semibold-font">Difference</p>
                 </div>
               </div>
             </div>
@@ -56,14 +66,14 @@
 
     <div class="table-grid__decor">
       <div class="table-grid__cell">
-        <p class="p3">Monthly Rent Cost</p>
+        <p class="p1 medium-font">Monthly Rent Cost</p>
       </div>
     </div>
 
     <div class="table-grid__items">
       <div class="table-grid__row">
-        <div class="table-grid__cell table-grid__cell--gray-color-200">
-          <p class="p3">1-Room Apartment</p>
+        <div class="table-grid__cell">
+          <p class="p2-add">1-Room Apartment</p>
         </div>
 
         <div class="table-swiper__swiper-box">
@@ -71,13 +81,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="table-grid__cell">
-                  <p class="p3 medium-font">$ 582</p>
+                  <p class="p2-add">$ 582</p>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="table-grid__cell">
-                  <p class="p3 medium-font">$ 5482</p>
+                  <p class="p2-add">$ 5482</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add text-primary-500">+312%</p>
                 </div>
               </div>
             </div>
@@ -86,8 +102,8 @@
       </div>
 
       <div class="table-grid__row">
-        <div class="table-grid__cell table-grid__cell--gray-color-200">
-          <p class="p3">2-Room Apartment</p>
+        <div class="table-grid__cell">
+          <p class="p2-add">2-Room Apartment</p>
         </div>
 
         <div class="table-swiper__swiper-box">
@@ -95,13 +111,19 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="table-grid__cell">
-                  <p class="p3 medium-font">$ 1582</p>
+                  <p class="p2-add">$ 1582</p>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="table-grid__cell">
-                  <p class="p3 medium-font">$ 57482</p>
+                  <p class="p2-add">$ 53482</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add text-green-100">+612%</p>
                 </div>
               </div>
             </div>
@@ -112,58 +134,70 @@
 
     <div class="table-grid__decor">
       <div class="table-grid__cell">
-        <p class="p3">In the City Center</p>
+        <p class="p1 medium-font">Apartment Purchase Price per sq.m.</p>
       </div>
     </div>
 
     <div class="table-grid__items">
-        <div class="table-grid__row">
-          <div class="table-grid__cell table-grid__cell--gray-color-200">
-            <p class="p3">1-Room Apartment</p>
-          </div>
-  
-          <div class="table-swiper__swiper-box">
-            <div class="swiper swiper--table">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="table-grid__cell">
-                    <p class="p3 medium-font">$ 582</p>
-                  </div>
-                </div>
-  
-                <div class="swiper-slide">
-                  <div class="table-grid__cell">
-                    <p class="p3 medium-font">$ 5482</p>
-                  </div>
+      <div class="table-grid__row">
+        <div class="table-grid__cell">
+          <p class="p2-add">In the City Center</p>
+        </div>
+
+        <div class="table-swiper__swiper-box">
+          <div class="swiper swiper--table">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add">$ 582</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-  
-        <div class="table-grid__row">
-          <div class="table-grid__cell table-grid__cell--gray-color-200">
-            <p class="p3">2-Room Apartment</p>
-          </div>
-  
-          <div class="table-swiper__swiper-box">
-            <div class="swiper swiper--table">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="table-grid__cell">
-                    <p class="p3 medium-font">$ 1582</p>
-                  </div>
+
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add">$ 5482</p>
                 </div>
-  
-                <div class="swiper-slide">
-                  <div class="table-grid__cell">
-                    <p class="p3 medium-font">$ 57482</p>
-                  </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add text-primary-500">+312%</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      <div class="table-grid__row">
+        <div class="table-grid__cell">
+          <p class="p2-add">Outside the City Center</p>
+        </div>
+
+        <div class="table-swiper__swiper-box">
+          <div class="swiper swiper--table">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add">$ 1582</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add">$ 53482</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="table-grid__cell">
+                  <p class="p2-add text-green-100">+612%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

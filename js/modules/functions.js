@@ -169,3 +169,12 @@ export const setVarElement = (el, nameVar, value) => {
 
   el.style.setProperty(nameVar, value);
 };
+
+export const debounce = (fn, delay = 200) => {
+  let timer;
+  
+  return (...args) => {
+    clearTimeout(timer);
+    timer= setTimeout(() => fn(...args), delay);
+  };
+};

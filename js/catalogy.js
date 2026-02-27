@@ -17,7 +17,7 @@ import { initCharts } from "./modules/chart.js";
 import { charts } from "./data/chart.js";
 import { initSharedFormSync } from "./modules/shared-form/sharedFormSync.js";
 import { handleChartDeleteClick } from "./modules/chart.js";
-import { initTabletSwipers } from "./swiper/functions.js";
+import { initTabletSwipers } from "./modules/table-swiper.js";
 
 const swipers = [
   {

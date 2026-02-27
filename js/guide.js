@@ -4,12 +4,14 @@ import {
   initMoreBlocks,
   hideUnnecessaryButtons,
 } from "./modules/moreContent.js";
-import { initImgsSwiperGoods, initTabletSwipers } from "./swiper/functions.js";
+import { initImgsSwiperGoods } from "./swiper/functions.js";
 import {
   changeTypeGrid,
   initGridSystem,
   handleGridResize,
 } from "./modules/catalogy-grid.js";
+
+import { initTabletSwipers } from "./modules/table-swiper.js";
 
 const swipers = [
   {

@@ -147,6 +147,10 @@
 
     .dropdown__btn {
       background-color: var(--white-color);
+
+      &.input-box__info {
+       padding-block: 4px;
+      }
     }
   }
 
