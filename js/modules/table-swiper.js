@@ -37,7 +37,7 @@ const initBoxSwipers = (box) => {
 
       swiperInstances.forEach((sw, i) => {
         if (i !== index && sw.activeIndex !== activeIndex) {
-          sw.slideTo(activeIndex, Math.max(100, params.speed + 200));
+          sw.slideTo(activeIndex, params.speed);
         }
       });
 
