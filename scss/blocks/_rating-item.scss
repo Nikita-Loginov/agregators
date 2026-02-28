@@ -6,10 +6,26 @@
   background-color: var(--white-color-170);
   gap: 4px;
   border-radius: var(--radius-base);
-  padding: 2px calculate-clamp(8px, 16px, $lg-breakpoint, $tablet-breakpoint);
+  padding: calculate-clamp(1px, 2px, $lg-breakpoint, $tablet-breakpoint) calculate-clamp(8px, 16px, $lg-breakpoint, $tablet-breakpoint);
   color: var(--dark-color-100);
+
+  &--gray-color-200 {
+    background-color: var(--gray-color-200);
+    color: var(--dark-color-100)
+  }
 
   @media (max-width: $lg-breakpoint) {
     border-radius: var(--radius-md);
+
+    .kit-icon.star {
+      font-size: var(--icon-sm) !important;
+      width: var(--icon-sm);
+      height: var(--icon-sm);
+
+    }
+
+    p {
+      line-height: 1.57;
+    }
   }
 }

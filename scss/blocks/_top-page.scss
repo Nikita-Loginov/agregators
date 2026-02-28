@@ -22,6 +22,12 @@
     gap: 32px;
   }
 
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   &__details {
     display: grid;
     grid-template-columns: 200px 280px;

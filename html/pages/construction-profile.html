@@ -54,44 +54,83 @@
                 </div>
               </div>
 
-              <div
-                class="top-page__header top-page__header--row md-desktop-show"
-              >
-                <h1 class="h2">Emaar Properties</h1>
-              </div>
+              <div class="top-page__block">
+                <div
+                  class="top-page__header top-page__header--row tablet-show"
+                  style="align-items: center"
+                >
+                  <h2 class="h2">Emaar Properties</h2>
 
-              <div class="top-page__content">
-                <div class="hero-block">
-                  <div class="hero-block__content">
-                    <div class="hero-block__header">
-                      <div class="item-info">
-                        <div class="item-info__logo">
-                          <picture>
-                            <source
-                              srcset="
-                                /img/companie/one.webp 1x,
-                                /img/companie/one2x.webp  2x
-                              "
-                            />
-                            <img src="/img/companie/one.webp" alt="фотография" />
-                          </picture>
-                        </div>
+                  <div class="rating-item rating-item--gray-color-200">
+                    <span class="icon text-primary-100">
+                      <span class="kit-icon star"></span>
+                    </span>
 
-                        <div class="item-info__content">
-                          <h1 class="h1 fz60-28">Emaar Properties</h1>
+                    <p class="p2 medium-font">4,9</p>
+                  </div>
+                </div>
 
-                          <div class="rating-item">
-                            <span class="icon text-primary-100">
-                              <span class="kit-icon star"></span>
-                            </span>
+                <div class="top-page__content">
+                  <div class="hero-block">
+                    <div class="hero-block__content">
+                      <div class="hero-block__header">
+                        <div class="item-info">
+                          <div class="item-info__logo">
+                            <picture>
+                              <source
+                                srcset="
+                                  /img/companie/one.webp   1x,
+                                  /img/companie/one2x.webp 2x
+                                "
+                              />
+                              <img
+                                src="/img/companie/one.webp"
+                                alt="фотография"
+                              />
+                            </picture>
+                          </div>
 
-                            <p class="p2 medium-font">4,9</p>
+                          <div class="item-info__content">
+                            <h1 class="h1 fz60-28">Emaar Properties</h1>
+
+                            <div class="rating-item">
+                              <span class="icon text-primary-100">
+                                <span class="kit-icon star"></span>
+                              </span>
+
+                              <p class="p2 medium-font">4,9</p>
+                            </div>
                           </div>
                         </div>
                       </div>
+
+                      <div class="hero-block__footer">
+                        <a
+                          title="Choose Apartment"
+                          class="button button--bg-primary-100 button--xl br-el--rounded-3xl"
+                        >
+                          <p class="p2 medium-font">Choose Apartment</p>
+
+                          <div class="icon icon--big">
+                            <span class="kit-icon arrow-right-md"></span>
+                          </div>
+                        </a>
+                      </div>
+
+                      <div class="hero-block__img">
+                        <picture>
+                          <source
+                            srcset="
+                              /img/slogan/one.webp   1x,
+                              /img/slogan/one2x.webp 2x
+                            "
+                          />
+                          <img src="/img/slogan/one.webp" alt="фотография" />
+                        </picture>
+                      </div>
                     </div>
 
-                    <div class="hero-block__footer">
+                    <div class="hero-block__bottom">
                       <a
                         title="Choose Apartment"
                         class="button button--bg-primary-100 button--xl br-el--rounded-3xl"
@@ -103,18 +142,6 @@
                         </div>
                       </a>
                     </div>
-                  </div>
-
-                  <div class="hero-block__img">
-                    <picture>
-                      <source
-                        srcset="
-                          /img/slogan/one.webp 1x,
-                          /img/slogan/one2x.webp  2x
-                        "
-                      />
-                      <img src="/img/slogan/one.webp" alt="фотография" />
-                    </picture>
                   </div>
                 </div>
               </div>
@@ -128,57 +155,90 @@
               <div class="companies-detail__inner detail-block">
                 <div class="companies-detail__info">
                   <section class="companies-detail__item">
-                    <div class="companies-detail__item-inner">
-                      <h2 class="h4">Main information</h2>
+                    <div class="companies-detail__item-wrapper">
+                      <div class="companies-detail__item-block">
+                        <h2 class="h4">Main information</h2>
 
-                      <div class="companies-detail__top-inner">
                         <div class="companies-detail__top-block">
                           <div class="banner-profile banner-profile--noBg">
                             <div class="banner-profile__content">
                               <ul
-                                class="banner-profile__list banner-profile__list--bg-links banner-profile__list--two"
+                                class="banner-profile__list banner-profile__list--two"
                               >
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
-                                    <p class="p2 medium-font">
-                                      Working languages
-                                    </p>
+                                    <p class="p2">Working languages</p>
                                   </div>
 
-                                  <div class="banner-profile__link-mean">
-                                    <div class="banner-profile__flags">
-                                      <div class="banner-profile__flags-item">
-                                        <span class="icon icon--big">
-                                          <svg>
-                                            <use xlink:href="#rus-lang"></use>
-                                          </svg>
-                                        </span>
+                                  <div
+                                    class="banner-profile__link-mean banner-profile__link-mean--row"
+                                    data-block="more-relative"
+                                  >
+                                    <div
+                                      class="banner-profile__flags more-block"
+                                      data-block="more-items"
+                                      data-max="2"
+                                    >
+                                      <div class="more-block__item">
+                                        <div class="banner-profile__flags-item">
+                                          <span class="icon icon--big">
+                                            <svg>
+                                              <use xlink:href="#rus-lang"></use>
+                                            </svg>
+                                          </span>
+                                        </div>
                                       </div>
 
-                                      <div class="banner-profile__flags-item">
-                                        <span class="icon icon--big">
-                                          <svg>
-                                            <use xlink:href="#kasax-lang"></use>
-                                          </svg>
-                                        </span>
+                                      <div class="more-block__item">
+                                        <div class="banner-profile__flags-item">
+                                          <span class="icon icon--big">
+                                            <svg>
+                                              <use
+                                                xlink:href="#kasax-lang"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </div>
                                       </div>
 
-                                      <div class="banner-profile__flags-item">
-                                        <span class="icon icon--big">
-                                          <svg>
-                                            <use
-                                              xlink:href="#español-lang"
-                                            ></use>
-                                          </svg>
-                                        </span>
+                                      <div class="more-block__item">
+                                        <div class="banner-profile__flags-item">
+                                          <span class="icon icon--big">
+                                            <svg>
+                                              <use
+                                                xlink:href="#español-lang"
+                                              ></use>
+                                            </svg>
+                                          </span>
+                                        </div>
                                       </div>
                                     </div>
+
+                                    <footer
+                                      class="quick__footer"
+                                      data-block="more-footer"
+                                    >
+                                      <button
+                                      data-block="more-btn"
+                                        class="button button--noBg button--noMassa"
+                                      >
+                                        <span
+                                          class="button button--circle button--circle-3xs button--bg-gray-400"
+                                        >
+                                          <span class="icon icon">
+                                            <span
+                                              class="kit-icon caret-down-md"
+                                            ></span>
+                                          </span>
+                                        </span>
+                                      </button>
+                                    </footer>
                                   </div>
                                 </li>
 
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
-                                    <p class="p2 medium-font">Founded</p>
+                                    <p class="p2">Founded</p>
                                   </div>
 
                                   <div
@@ -217,7 +277,7 @@
 
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
-                                    <p class="p2 medium-font">License No.</p>
+                                    <p class="p2">License No.</p>
                                   </div>
 
                                   <div
@@ -257,9 +317,7 @@
 
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
-                                    <p class="p2 medium-font text-uppercase">
-                                      ORN
-                                    </p>
+                                    <p class="p2 text-uppercase">ORN</p>
                                   </div>
 
                                   <div
@@ -298,9 +356,7 @@
 
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
-                                    <p class="p2 medium-font">
-                                      Speciality services
-                                    </p>
+                                    <p class="p2">Speciality services</p>
                                   </div>
 
                                   <div
@@ -339,7 +395,7 @@
 
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
-                                    <p class="p2 medium-font">Regions</p>
+                                    <p class="p2">Regions</p>
                                   </div>
 
                                   <div
@@ -381,43 +437,25 @@
                             </div>
                           </div>
                         </div>
-
-                        <div class="md-desktop-show">
-                          <div
-                            class="companies-detail__top-block"
-                            style="width: 100%"
-                          >
-                            <aside class="contact-aside">
-                              @@include('../modules/contact-form-aside.html')
-                            </aside>
-
-                            <div class="tablet-show">
-                              <button class="button button--noMassa">
-                                <span
-                                  class="icon icon--little text-secondary-300"
-                                >
-                                  <span class="kit-icon flag"></span>
-                                </span>
-
-                                <p class="p3 regular-font text-secondary-300">
-                                  Report this agencie
-                                </p>
-                              </button>
-                            </div>
-                          </div>
-                        </div>
                       </div>
 
-                      <div class="tablet-none" style="margin-left: auto">
-                        <div class="md-desktop-show">
-                          <button
-                            class="button button--noMassa text-secondary-300"
-                          >
-                            <span class="icon icon--little">
+                      <div class="md-desktop-show" style="height: auto">
+                        <div
+                          class="companies-detail__item-block companies-detail__item-block--md-start"
+                          style="width: 100%"
+                        >
+                          <aside class="contact-aside" style="width: 100%">
+                            @@include('../modules/contact-form-aside.html')
+                          </aside>
+
+                          <button class="button button--noMassa">
+                            <span class="icon icon--little text-secondary-300">
                               <span class="kit-icon flag"></span>
                             </span>
 
-                            <p class="p3 regular-font">Report this developer</p>
+                            <p class="p3 regular-font text-secondary-300">
+                              Report this agencie
+                            </p>
                           </button>
                         </div>
                       </div>
@@ -433,7 +471,7 @@
                           href="#"
                           aria-label="Перейти по адресу GH32+7RF - Al Muqta - Al Muqta 1 - Emirate of Umm Al Quwain - UAE"
                           title="GH32+7RF - Al Muqta - Al Muqta 1 - Emirate of Umm Al Quwain - UAE"
-                          class="badge-detail isHover"
+                          class="badge-detail badge-detail--border badge-detail--gray-bg-100 isHover"
                         >
                           <div class="badge-detail__icon">
                             <picture>
@@ -462,7 +500,7 @@
                           href="#"
                           aria-label="Перейти по адресу Behind Mashreq Bank - Sheikh Zayed Rd - Al Quoz - Al Quoz 4 - Dubai - UAE"
                           title="Behind Mashreq Bank - Sheikh Zayed Rd - Al Quoz - Al Quoz 4 - Dubai - UAE"
-                          class="badge-detail isHover"
+                          class="badge-detail badge-detail--border badge-detail--gray-bg-100 isHover"
                         >
                           <div class="badge-detail__icon">
                             <picture>
@@ -491,7 +529,7 @@
                           href="#"
                           aria-label="Перейти по адресу 2X3R+45 - The Palm Jebel Ali - Dubai - UAE"
                           title="2X3R+45 - The Palm Jebel Ali - Dubai - UAE"
-                          class="badge-detail isHover"
+                          class="badge-detail badge-detail--border badge-detail--gray-bg-100 isHover"
                         >
                           <div class="badge-detail__icon">
                             <picture>
@@ -519,7 +557,7 @@
                           href="#"
                           aria-label="Перейти по адресу Burj Khalifa District, P.O.BOX 215088"
                           title="Burj Khalifa District, P.O.BOX 215088"
-                          class="badge-detail isHover"
+                          class="badge-detail badge-detail--border badge-detail--gray-bg-100 isHover"
                         >
                           <div class="badge-detail__icon">
                             <picture>
@@ -1286,7 +1324,7 @@
                                   <p class="p2">Price</p>
 
                                   <div class="icon icon--big arrow">
-                                    <span class="kit-icon caret-up-md"></span>
+                                    <span class="kit-icon caret-down-md"></span>
                                   </div>
                                 </button>
 
@@ -1531,45 +1569,25 @@
                         </div>
 
                         <div class="property__info">
-                          <div class="property__swiper-box swiper-box__block">
-                            <div class="swiper swiper--property">
-                              <div
-                                class="swiper-wrapper swiper-wrapper--propperty"
-                              >
-                                <div class="swiper-slide">
-                                  <!-- prettier-ignore -->
+                          <div class="property__items">
+                            <!-- prettier-ignore -->
 
-                                  @@include('../good-item/good-item-one.html',
+                            @@include('../good-item/good-item-one.html',
                                {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
-                                </div>
 
-                                <div class="swiper-slide">
-                                  <!-- prettier-ignore -->
+                            <!-- prettier-ignore -->
 
-                                  @@include('../good-item/good-item-one.html',
+                            @@include('../good-item/good-item-one.html',
                                {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
-                                </div>
 
-                                <div class="swiper-slide">
-                                  <!-- prettier-ignore -->
+                            <!-- prettier-ignore -->
 
-                                  @@include('../good-item/good-item-one.html',
+                            @@include('../good-item/good-item-one.html',
                                {"tag-class-text": "p2", "goodItemClassAdd" : "good-item--column", "tag-class": "tag--lg","tag-class-icon": "icon--big", "badges": true, "imgs": "[{img: '/img/goods/three'}, {img: '/img/goods/two'}]","geo-link": true, "favoriteBtn" : true, "comparisonBtn" : true, classAddBtns: "button--cub button--cub-md-add", "classAddBtnsIcon" : "", "tagBed" : true, "tagBath" : true,"tagBarrier" : true,"tagRuler" : true, "price" : "761,000", "typeItem": "Apartment", "typeItemClass": "p1 bold-font text-secondary-300", "nameAdd" : "Apartment, 2 bedroom, 60.11 sq.m. № 3427", "nameAddClass" : "p2 text-secondary-100 medium-font ellipsis-text ellipsis-text--one good-item__desc"})
-                                </div>
-                              </div>
-
-                              <div class="tablet-show">
-                                <div
-                                  class="swiper-pagination swiper-pagination--property"
-                                ></div>
-                              </div>
-                            </div>
                           </div>
 
-                          <div class="tablet-none">
-                            @@include('../modules/pagination.html', {"details":
-                            "false"})
-                          </div>
+                          @@include('../modules/pagination.html', {"details":
+                          "false"})
                         </div>
                       </div>
                     </div>

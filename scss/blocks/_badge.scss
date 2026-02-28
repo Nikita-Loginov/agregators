@@ -166,9 +166,17 @@
     --badge-background-color: var(--white-color);
   }
 
+  &--gray-bg-100 {
+    background-color: var(--gray-color-100);
+  }
+
   &--secondary-bg-200 {
     --badge-background-color: var(--secondary-color-200);
     color: var(--dark-color-200);
+  }
+
+  &--border {
+    border: 1px solid var(--gray-color-600);
   }
 
   &--circle-icon {
@@ -189,7 +197,6 @@
     padding-inline-end: 16px;
 
     &:has(.badge-detail__icon) {
-
       padding-inline-start: 4px;
       padding-inline-end: 16px;
     }

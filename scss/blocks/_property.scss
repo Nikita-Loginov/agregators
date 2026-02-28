@@ -68,46 +68,55 @@
     }
   }
 
-  @media (min-width: $tablet-breakpoint) {
-    &__swiper-box .swiper-wrapper--propperty {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  // @media (min-width: $tablet-breakpoint) {
+    // &__swiper-box .swiper-wrapper--propperty {
+    //   display: flex;
+    //   flex-direction: column;
+    //   gap: 24px;
+    // }
 
     &[data-grid="tiles"] {
-      .property__swiper-box .swiper-wrapper--propperty {
+      .property__items {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 24px 14px;
 
         & > *:not(.swiper-slide) {
-          grid-column: 1 / -1;
+          // grid-column: 1 / -1;
         }
       }
     }
 
-    .swiper-wrapper--propperty > .swiper-slide {
-      display: none;
-      width: 100%;
+    // .swiper-wrapper--propperty > .swiper-slide {
+    //   display: none;
+    //   width: 100%;
 
-      &:nth-child(-n + 3) {
-        display: flex;
-      }
+    //   &:nth-child(-n + 3) {
+    //     display: flex;
+    //   }
 
-      .good-item {
-        width: 100%;
-      }
-    }
-  }
+    //   .good-item {
+    //     width: 100%;
+    //   }
+    // }
+  // }
 
   @media (max-width: $tablet-breakpoint) {
-    .swiper--property {
-      overflow: visible;
+    &__info {
+      gap: 24px;
     }
+    // .swiper--property {
+    //   overflow: visible;
+    // }
 
-    .swiper-pagination--property {
-      width: 100%;
-    }
+    // .swiper-pagination--property {
+    //   width: 100%;
+    // }
   }
 }

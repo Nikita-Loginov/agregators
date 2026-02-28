@@ -26,4 +26,10 @@
     gap: calculate-clamp(4px, 16px, $lg-breakpoint, $tablet-breakpoint);;;
     align-items: flex-start;
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    &__logo {
+      width: calculate-clamp(68px, 98px, $tablet-breakpoint, $mobile-breakpoint);
+    }
+  }
 }

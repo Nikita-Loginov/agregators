@@ -13,6 +13,13 @@
     gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);
   }
 
+  &__item-block {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(20px, 24px, $lg-breakpoint, $tablet-breakpoint);
+    justify-content: space-between;
+  }
+
   &__item-boxs {
     display: flex;
     flex-direction: column;
@@ -47,7 +54,8 @@
   &__services {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: calculate-clamp(12px, 16px, $lg-breakpoint, $mobile-breakpoint) calculate-clamp(20px, 32px, $lg-breakpoint, $mobile-breakpoint);
+    gap: calculate-clamp(12px, 16px, $lg-breakpoint, $mobile-breakpoint)
+      calculate-clamp(20px, 32px, $lg-breakpoint, $mobile-breakpoint);
 
     @media (max-width: $tablet-breakpoint) {
       display: flex;
@@ -56,11 +64,29 @@
     }
   }
 
+  @media (max-width: $md-desktop-breakpoint) {
+    &__item-wrapper {
+      display: flex;
+      gap: 20px;
+    }
+
+    &__item-block {
+      &--md-start {
+        align-items: flex-start;
+      }
+    }
+  }
+
   @media (max-width: $tablet-breakpoint) {
     overflow: hidden;
 
     &__top {
       gap: 20px;
+    }
+
+    &__item-wrapper {
+      flex-direction: column;
+      gap: 48px;
     }
 
     &__top-inner {
