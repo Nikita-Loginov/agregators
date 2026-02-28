@@ -321,6 +321,7 @@ const syncDropdownClassesFromSelect = (select, dropdown) => {
 };
 
 const wrapDropdownWithSelectBox = (select, dropdown) => {
+  console.log('dasds')
   if (!dropdown || dropdown.closest(".select-box")) return;
 
   const sourceBox = select.closest(".select-box");

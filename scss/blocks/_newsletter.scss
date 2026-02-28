@@ -97,6 +97,22 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    .textbox {
+      p {
+        color: var(--dark-color-400);
+        font-size: var(--font-size-s);
+
+        @media (max-width: $lg-breakpoint) {
+          color: var(--dark-color-500);
+         
+        }
+
+        @media (max-width: $tablet-breakpoint) {
+          font-size: var(--font-size-xs);
+        }
+      }
+    }
   }
 
   &__content,
@@ -116,7 +132,7 @@
   @media (max-width: $lg-breakpoint) {
     &__content {
       flex-direction: row;
-    
+
       .input-box__info,
       .input-box,
       .input-box__content {

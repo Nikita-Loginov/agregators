@@ -16,8 +16,10 @@
 
     <div class="selectedItemsModalBox__content">
       <div class="selectedItemsModalBox__items">
-        <div class="companie-card">
-          <div class="companie-card__img-box companie-card__img-box--small">
+        <div class="companie-card companie-card--show-img">
+          <div
+            class="companie-card__img-box companie-card__img-box--small"
+          >
             <div class="companie-card__img-block">
               <picture>
                 <source
@@ -37,22 +39,6 @@
 
           <div class="companie-card__content">
             <div class="companie-card__header">
-              <div class="companie-card__header-img">
-                <picture>
-                  <source
-                    srcset="
-                      /img/companie/one.webp   1x,
-                      /img/companie/one2x.webp 2x
-                    "
-                  />
-                  <img
-                    src="/img/companie/one.webp"
-                    alt="фотография компании"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
-
               <div class="companie-card__header-content">
                 <div class="companie-card__header-info">
                   <div class="companie-card__header-item">
@@ -61,58 +47,93 @@
                     <span
                       class="icon"
                       style="color: var(--blue-color-300)"
+                      data-tooltip="Какой-то текст"
                     >
-                      <span class="kit-icon shield-check"></span>
+                      <span
+                        class="kit-icon shield-check"
+                      ></span>
                     </span>
                   </div>
-
-                  <div class="companie-card__badges md-desktop-show">
-                    <div class="badge badge--gray-color-200 badge--xs">
-                      <span class="icon icon--little text-dark-100">
-                        <span class="kit-icon house-01"></span>
-                      </span>
-
-                      <p class="p4 medium-font text-dark-200">958 properties</p>
-                    </div>
-
-                    <div class="badge badge--gray-color-200 badge--xs">
-                      <span class="icon icon--little text-primary-100">
-                        <span class="kit-icon star"></span>
-                      </span>
-
-                      <p class="p4 medium-font text-dark-100">4,9</p>
-                    </div>
-                  </div>
                 </div>
 
-                <div class="companie-card__header-info md-desktop-none">
+                <div
+                  class="companie-card__header-info md-desktop-none"
+                >
                   <div class="name-rating name-rating--small">
                     <div class="name-rating__box">
-                      <span class="icon icon--little text-primary-100">
+                      <span
+                        class="icon icon--little text-primary-100"
+                      >
                         <span class="kit-icon star"></span>
                       </span>
 
-                      <p class="p3 medium-font text-dark-100">4,9</p>
+                      <p class="p3 medium-font text-dark-100">
+                        4,9
+                      </p>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="companie-card__info">
+              <p class="p3 text-dark-600">
+                Al Muqta - Al Muqta 1 - Emirate of Umm Al Quwain
+                - UAE
+              </p>
+            </div>
+
+            <div class="companie-card__footer">
+              <div class="decor-el decor-el--small">
+                <span class="icon text-secondary-100 lg-none">
+                  <span class="kit-icon house-01"></span>
+                </span>
+
+                <p class="p3 medium-font text-secondary-100">
+                  1071
+                </p>
+
+                <p class="p3">properties</p>
+
+                <p class="p3 medium-font text-secondary-100">
+                  2
+                </p>
+
+                <p class="p3">cities</p>
+              </div>
+
+              <div class="companie-card__btns md-desktop-none">
+                <a
+                  href="#"
+                  title="See all"
+                  aria-label="Перейти на страницу всех проектов"
+                  class="button button--bg-secondary-200"
+                >
+                  <span class="p3 medium-font">See all</span>
+
+                  <span class="icon">
+                    <span
+                      class="kit-icon arrow-right-md"
+                    ></span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="companie-card companie-card--empty">
-          <div class="companie-card__img-box companie-card__img-box--small">
+        <div class="companie-card companie-card--empty companie-card--show-img">
+          <div
+            class="companie-card__img-box companie-card__img-box--small"
+          >
             <div class="companie-card__img-block">
-             <span class="kit-icon crane"></span>
+              <span class="kit-icon building-04"></span>
             </div>
           </div>
 
           <div class="companie-card__content">
             <div class="companie-card__header">
-              <div class="companie-card__header-img">
-                <span class="kit-icon crane"></span>
-              </div>
+             
 
               <div class="companie-card__header-content">
                 <div class="companie-card__header-info">
@@ -122,82 +143,78 @@
                     <span
                       class="icon"
                       style="color: var(--blue-color-300)"
+                      data-tooltip="Какой-то текст"
                     >
-                      <span class="kit-icon shield-check"></span>
+                      <span
+                        class="kit-icon shield-check"
+                      ></span>
                     </span>
                   </div>
-
-                  <div class="companie-card__badges md-desktop-show">
-                    <div class="badge badge--gray-color-200 badge--xs">
-                      <span class="icon icon--little text-dark-100">
-                        <span class="kit-icon house-01"></span>
-                      </span>
-
-                      <p class="p4 medium-font text-dark-200">958 properties</p>
-                    </div>
-
-                    <div class="badge badge--gray-color-200 badge--xs">
-                      <span class="icon icon--little text-primary-100">
-                        <span class="kit-icon star"></span>
-                      </span>
-
-                      <p class="p4 medium-font text-dark-100">4,9</p>
-                    </div>
-                  </div>
                 </div>
 
-                <div class="companie-card__header-info md-desktop-none">
+                <div
+                  class="companie-card__header-info"
+                >
                   <div class="name-rating name-rating--small">
                     <div class="name-rating__box">
-                      <span class="icon icon--little text-primary-100">
+                      <span
+                        class="icon icon--little text-primary-100"
+                      >
                         <span class="kit-icon star"></span>
                       </span>
 
-                      <p class="p3 medium-font text-dark-100">4,9</p>
+                      <p class="p3 medium-font text-dark-100">
+                        4,9
+                      </p>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="companie-card__footer ">
+              <div class="decor-el decor-el--small">
+                <span class="icon text-secondary-100 lg-none">
+                  <span class="kit-icon house-01"></span>
+                </span>
+
+                <p class="p3 medium-font">1071</p>
+
+                <p class="p3">properties</p>
+              </div>
+
+              <div class="companie-card__btns md-desktop-none">
+                <a
+                  href="#"
+                  title="See all"
+                  aria-label="Перейти на страницу всех проектов"
+                  class="button button--bg-secondary-200"
+                >
+                  <span class="p3 medium-font">See all</span>
+
+                  <span class="icon">
+                    <span
+                      class="kit-icon arrow-right-md"
+                    ></span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="companie-card">
-          <div class="companie-card__img-box companie-card__img-box--small">
+        <div class="companie-card companie-card--empty companie-card--show-img">
+          <div
+            class="companie-card__img-box companie-card__img-box--small"
+          >
             <div class="companie-card__img-block">
-              <picture>
-                <source
-                  srcset="
-                    /img/companie/one.webp   1x,
-                    /img/companie/one2x.webp 2x
-                  "
-                />
-                <img
-                  src="/img/companie/one.webp"
-                  alt="фотография компании"
-                  loading="lazy"
-                />
-              </picture>
+              <span class="kit-icon building-04"></span>
             </div>
           </div>
 
           <div class="companie-card__content">
             <div class="companie-card__header">
-              <div class="companie-card__header-img">
-                <picture>
-                  <source
-                    srcset="
-                      /img/companie/one.webp   1x,
-                      /img/companie/one2x.webp 2x
-                    "
-                  />
-                  <img
-                    src="/img/companie/one.webp"
-                    alt="фотография компании"
-                    loading="lazy"
-                  />
-                </picture>
-              </div>
+             
 
               <div class="companie-card__header-content">
                 <div class="companie-card__header-info">
@@ -207,41 +224,142 @@
                     <span
                       class="icon"
                       style="color: var(--blue-color-300)"
+                      data-tooltip="Какой-то текст"
                     >
-                      <span class="kit-icon shield-check"></span>
+                      <span
+                        class="kit-icon shield-check"
+                      ></span>
                     </span>
                   </div>
-
-                  <div class="companie-card__badges md-desktop-show">
-                    <div class="badge badge--gray-color-200 badge--xs">
-                      <span class="icon icon--little text-dark-100">
-                        <span class="kit-icon house-01"></span>
-                      </span>
-
-                      <p class="p4 medium-font text-dark-200">958 properties</p>
-                    </div>
-
-                    <div class="badge badge--gray-color-200 badge--xs">
-                      <span class="icon icon--little text-primary-100">
-                        <span class="kit-icon star"></span>
-                      </span>
-
-                      <p class="p4 medium-font text-dark-100">4,9</p>
-                    </div>
-                  </div>
                 </div>
 
-                <div class="companie-card__header-info md-desktop-none">
+                <div
+                  class="companie-card__header-info"
+                >
                   <div class="name-rating name-rating--small">
                     <div class="name-rating__box">
-                      <span class="icon icon--little text-primary-100">
+                      <span
+                        class="icon icon--little text-primary-100"
+                      >
                         <span class="kit-icon star"></span>
                       </span>
 
-                      <p class="p3 medium-font text-dark-100">4,9</p>
+                      <p class="p3 medium-font text-dark-100">
+                        4,9
+                      </p>
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            <div class="companie-card__footer ">
+              <div class="decor-el decor-el--small">
+                <span class="icon text-secondary-100 lg-none">
+                  <span class="kit-icon house-01"></span>
+                </span>
+
+                <p class="p3 medium-font">1071</p>
+
+                <p class="p3">properties</p>
+              </div>
+
+              <div class="companie-card__btns md-desktop-none">
+                <a
+                  href="#"
+                  title="See all"
+                  aria-label="Перейти на страницу всех проектов"
+                  class="button button--bg-secondary-200"
+                >
+                  <span class="p3 medium-font">See all</span>
+
+                  <span class="icon">
+                    <span
+                      class="kit-icon arrow-right-md"
+                    ></span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="companie-card companie-card--empty companie-card--show-img">
+          <div
+            class="companie-card__img-box companie-card__img-box--small"
+          >
+            <div class="companie-card__img-block">
+              <span class="kit-icon building-04"></span>
+            </div>
+          </div>
+
+          <div class="companie-card__content">
+            <div class="companie-card__header">
+             
+
+              <div class="companie-card__header-content">
+                <div class="companie-card__header-info">
+                  <div class="companie-card__header-item">
+                    <p class="h6 fz-24-16">Emaar Properties</p>
+
+                    <span
+                      class="icon"
+                      style="color: var(--blue-color-300)"
+                      data-tooltip="Какой-то текст"
+                    >
+                      <span
+                        class="kit-icon shield-check"
+                      ></span>
+                    </span>
+                  </div>
+                </div>
+
+                <div
+                  class="companie-card__header-info"
+                >
+                  <div class="name-rating name-rating--small">
+                    <div class="name-rating__box">
+                      <span
+                        class="icon icon--little text-primary-100"
+                      >
+                        <span class="kit-icon star"></span>
+                      </span>
+
+                      <p class="p3 medium-font text-dark-100">
+                        4,9
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="companie-card__footer ">
+              <div class="decor-el decor-el--small">
+                <span class="icon text-secondary-100 lg-none">
+                  <span class="kit-icon house-01"></span>
+                </span>
+
+                <p class="p3 medium-font">1071</p>
+
+                <p class="p3">properties</p>
+              </div>
+
+              <div class="companie-card__btns md-desktop-none">
+                <a
+                  href="#"
+                  title="See all"
+                  aria-label="Перейти на страницу всех проектов"
+                  class="button button--bg-secondary-200"
+                >
+                  <span class="p3 medium-font">See all</span>
+
+                  <span class="icon">
+                    <span
+                      class="kit-icon arrow-right-md"
+                    ></span>
+                  </span>
+                </a>
               </div>
             </div>
           </div>

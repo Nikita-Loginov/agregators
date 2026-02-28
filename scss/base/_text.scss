@@ -225,6 +225,12 @@ h6 {
   }
 }
 
+.fz-h3-h4 {
+  @media (max-width: $tablet-breakpoint) {
+    font-size: var(--font-size-lg);
+  }
+}
+
 .fz-30-16 {
   font-size: calculate-clamp(
     16px,
@@ -317,6 +323,15 @@ h6 {
   @media (max-width: $tablet-breakpoint) {
     font-size: calculate-clamp(22px, 28px, $lg-breakpoint, $mobile-breakpoint);
   }
+}
+
+.fz60-28 {
+  font-size: calculate-clamp(
+    28px,
+    60px,
+    $md-desktop-breakpoint,
+    $tablet-breakpoint
+  );
 }
 
 .fz18-16 {

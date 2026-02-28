@@ -15,6 +15,9 @@
     padding: 8px 0;
   }
 
+  &--five {
+    --count-items: 5;
+  }
 
   &--six {
     --count-items: 6;
@@ -39,6 +42,14 @@
   }
 
   &--map {
+    @media ((min-width: $desktop-breakpoint)) {
+      grid-template-columns: 2fr 2fr 2fr 1fr 1fr;
+    }
+
+    @media (max-width: $desktop-breakpoint) and (min-width: $lg-breakpoint) {
+      grid-template-columns: 19% 19% 19% 14% 14%;
+    }
+
     @media (max-width: $lg-breakpoint) {
       --count-items: 4;
     }
@@ -68,6 +79,20 @@
 
         &:nth-child(4) {
           grid-column: span 3;
+        }
+      }
+
+      .companies-filter {
+        &__bottom {
+          grid-column: 1 / -1;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 16px;
+
+          .button {
+            min-width: 94px;
+          }
         }
       }
     }

@@ -1,0 +1,29 @@
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: calculate-clamp(16px, 32px, $lg-breakpoint, $tablet-breakpoint);;
+
+  &__logo {
+    width: calculate-clamp(98px, 120px, $lg-breakpoint, $tablet-breakpoint);
+    padding: 4px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    background-color: var(--white-color);
+    border-radius: var(--radius-base);
+    overflow: hidden;
+
+    img,
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: calculate-clamp(4px, 16px, $lg-breakpoint, $tablet-breakpoint);;;
+    align-items: flex-start;
+  }
+}

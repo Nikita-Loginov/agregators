@@ -1878,7 +1878,7 @@
                                 </div>
 
                                 <div class="tabs-box__content">
-                                  <p class="p1 medium-font fz18-14-now">
+                                  <p class="p1 fz18-14-now">
                                     Construction companies
                                   </p>
                                 </div>
@@ -1894,7 +1894,9 @@
                                 </div>
 
                                 <div class="tabs-box__content">
-                                  <p class="p1 fz18-14-now">Real estate agencies</p>
+                                  <p class="p1 medium-font fz18-14-now">
+                                    Real estate agencies
+                                  </p>
                                 </div>
                               </div>
 
@@ -1913,7 +1915,9 @@
                                 </div>
 
                                 <div class="tabs-box__content">
-                                  <p class="p1 fz18-14-now">Real estate agents</p>
+                                  <p class="p1 fz18-14-now">
+                                    Real estate agents
+                                  </p>
                                 </div>
                               </a>
                             </div>
@@ -2075,7 +2079,7 @@
                             >
                               <span class="p2 medium-font">Search</span>
 
-                              <span class="icon icon--big">
+                              <span class="icon icon--big tablet-none">
                                 <span
                                   class="kit-icon search-magnifying-glass"
                                 ></span>
@@ -2107,17 +2111,31 @@
                               </div>
                             </div>
 
-                            <a
-                              href="Перейти на страницу карты"
-                              title="On the Map"
-                              class="button button--bg-secondary-200 button--rounded-md button--lg"
-                            >
-                              <span class="icon icon--big">
-                                <span class="kit-icon map"></span>
-                              </span>
+                            <div class="tablet-none">
+                              <a
+                                href="Перейти на страницу карты"
+                                title="On the Map"
+                                class="button button--bg-secondary-200 button--rounded-md button--lg"
+                              >
+                                <span class="icon icon--md-base">
+                                  <span class="kit-icon map"></span>
+                                </span>
 
-                              <p class="p2 medium-font">On the Map</p>
-                            </a>
+                                <p class="p2 medium-font">On the Map</p>
+                              </a>
+                            </div>
+
+                            <div class="tablet-show">
+                              <a
+                                href="Перейти на страницу карты"
+                                title="On the Map"
+                                class="button button--cub button--cub-md-add button--bg-secondary-200 button--rounded-md"
+                              >
+                                <span class="icon icon--md-base">
+                                  <span class="kit-icon map"></span>
+                                </span>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -2170,7 +2188,8 @@
 
                                       <span
                                         class="icon icon--big"
-                                        style="color: var(--blue-color-300)" data-tooltip="Какой-то текст"
+                                        style="color: var(--blue-color-300)"
+                                        data-tooltip="Какой-то текст"
                                       >
                                         <span
                                           class="kit-icon shield-check"
@@ -2205,7 +2224,7 @@
                                 class="companie-card__badges companie-card__badges--big-gap"
                               >
                                 <div
-                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base tablet-none"
                                 >
                                   <p class="p3 medium-font text-dark-200">
                                     Founded in 1997
@@ -2213,7 +2232,7 @@
                                 </div>
 
                                 <div
-                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
                                 >
                                   <p class="p3 medium-font text-secondary-100">
                                     6.222
@@ -2258,14 +2277,14 @@
                                   class="companie-card__btns companie-card__btns--two"
                                 >
                                   <button
-                                    class="button button--bg-secondary-300"
-                                    type="button"
+                                    class="button button--bg-secondary-300 modal-open"
+                                    data-validate-inputs='["name", "email", "tel", "message"]'
+                                    data-modal="contactUpModal"
+                                    data-tooltip="Отставить заявку"
                                   >
-                                    <span class="icon">
-                                       <span class="kit-icon mail"></span>
-                                    </span>
-
-                                    <p class="p3 medium-font">Contact Seller</p>
+                                    <span class="p3 medium-font"
+                                      >Contact Seller</span
+                                    >
                                   </button>
 
                                   <a
@@ -2273,13 +2292,16 @@
                                     title="See All Properties"
                                     aria-label="Перейти на страницу всех проектов"
                                     class="button button--bg-secondary-200"
+                                    data-tooltip="Перейти на страницу всех проектов"
                                   >
                                     <span class="p3 medium-font"
                                       >All Properties</span
                                     >
 
                                     <span class="icon" style="rotate: -45deg">
-                                       <span class="kit-icon arrow-right-md"></span>
+                                      <span
+                                        class="kit-icon arrow-right-md"
+                                      ></span>
                                     </span>
                                   </a>
                                 </div>
@@ -2335,7 +2357,7 @@
                                 class="companie-card__badges companie-card__badges--big-gap"
                               >
                                 <div
-                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base tablet-none"
                                 >
                                   <p class="p3 medium-font text-dark-200">
                                     Founded in 1997
@@ -2343,7 +2365,7 @@
                                 </div>
 
                                 <div
-                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
                                 >
                                   <p class="p3 medium-font text-secondary-100">
                                     6.222
@@ -2388,14 +2410,14 @@
                                   class="companie-card__btns companie-card__btns--two"
                                 >
                                   <button
-                                    class="button button--bg-secondary-300"
-                                    type="button"
+                                    class="button button--bg-secondary-300 modal-open"
+                                    data-validate-inputs='["name", "email", "tel", "message"]'
+                                    data-modal="contactUpModal"
+                                    data-tooltip="Отставить заявку"
                                   >
-                                    <span class="icon">
-                                       <span class="kit-icon mail"></span>
-                                    </span>
-
-                                    <p class="p3 medium-font">Contact Seller</p>
+                                    <span class="p3 medium-font"
+                                      >Contact Seller</span
+                                    >
                                   </button>
 
                                   <a
@@ -2403,13 +2425,16 @@
                                     title="See All Properties"
                                     aria-label="Перейти на страницу всех проектов"
                                     class="button button--bg-secondary-200"
+                                    data-tooltip="Перейти на страницу всех проектов"
                                   >
                                     <span class="p3 medium-font"
                                       >All Properties</span
                                     >
 
                                     <span class="icon" style="rotate: -45deg">
-                                       <span class="kit-icon arrow-right-md"></span>
+                                      <span
+                                        class="kit-icon arrow-right-md"
+                                      ></span>
                                     </span>
                                   </a>
                                 </div>
@@ -2463,7 +2488,8 @@
 
                                       <span
                                         class="icon icon--big"
-                                        style="color: var(--blue-color-300)" data-tooltip="Какой-то текст"
+                                        style="color: var(--blue-color-300)"
+                                        data-tooltip="Какой-то текст"
                                       >
                                         <span
                                           class="kit-icon shield-check"
@@ -2498,7 +2524,7 @@
                                 class="companie-card__badges companie-card__badges--big-gap"
                               >
                                 <div
-                                  class="badge badge--gray-100 badge--xl br-el--rounded-base tablet-none"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base tablet-none"
                                 >
                                   <p class="p3 medium-font text-dark-200">
                                     Founded in 1997
@@ -2506,7 +2532,7 @@
                                 </div>
 
                                 <div
-                                  class="badge badge--gray-100 badge--xl br-el--rounded-base"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
                                 >
                                   <p class="p3 medium-font text-secondary-100">
                                     6.222
@@ -2551,14 +2577,14 @@
                                   class="companie-card__btns companie-card__btns--two"
                                 >
                                   <button
-                                    class="button button--bg-secondary-300"
-                                    type="button"
+                                    class="button button--bg-secondary-300 modal-open"
+                                    data-validate-inputs='["name", "email", "tel", "message"]'
+                                    data-modal="contactUpModal"
+                                    data-tooltip="Отставить заявку"
                                   >
-                                    <span class="icon">
-                                       <span class="kit-icon mail"></span>
-                                    </span>
-
-                                    <p class="p3 medium-font">Contact Seller</p>
+                                    <span class="p3 medium-font"
+                                      >Contact Seller</span
+                                    >
                                   </button>
 
                                   <a
@@ -2566,13 +2592,16 @@
                                     title="See All Properties"
                                     aria-label="Перейти на страницу всех проектов"
                                     class="button button--bg-secondary-200"
+                                    data-tooltip="Перейти на страницу всех проектов"
                                   >
                                     <span class="p3 medium-font"
                                       >All Properties</span
                                     >
 
                                     <span class="icon" style="rotate: -45deg">
-                                       <span class="kit-icon arrow-right-md"></span>
+                                      <span
+                                        class="kit-icon arrow-right-md"
+                                      ></span>
                                     </span>
                                   </a>
                                 </div>
@@ -2773,12 +2802,14 @@
                       </div>
 
                       <div
-                        class="promo-content promo-content--absolute-img promo-content--secondary-bg-300"
+                        class="promo-content promo-content--absolute-img promo-content--secondary-bg-300 promo-content--companies"
                       >
                         <div class="promo-content__content">
                           <header class="promo-content__header">
                             <div class="promo-content__header-top">
-                              <p class="h3">Want to sell your properties?</p>
+                              <p class="h3 fz-h3-h4">
+                                Want to sell your properties?
+                              </p>
                             </div>
                           </header>
 
@@ -2802,7 +2833,7 @@
                               <p class="p2 semibold-font">Get Started</p>
 
                               <span
-                                class="icon icon--big"
+                                class="icon icon--big tablet-none"
                                 style="rotate: -45deg"
                               >
                                 <span class="kit-icon arrow-right-md"></span>

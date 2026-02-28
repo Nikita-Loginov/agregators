@@ -359,6 +359,18 @@
         }
       }
     }
+
+    &--companies {
+      .promo-content {
+        &__content {
+          .textbox {
+            p {
+              color: var(--gray-color-300)
+            }
+          }
+        }
+      }
+    }
   }
 }
 

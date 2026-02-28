@@ -10,6 +10,10 @@
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 100%;
+
+  &--gray-color-100 {
+    background-color: var(--gray-color-100);
+  }
   
   transition: all .5s;
 

@@ -92,6 +92,24 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
+    &__cart {
+      position: fixed;
+      inset:0;
+      top: var(--header-height, --calback-header-height);
+    }
+
+    &__info {
+      background-color: var(--white-color-170);
+      border-bottom-left-radius: var(--radius-md);
+      border-bottom-right-radius: var(--radius-md);
+      overflow: hidden;
+      z-index: 10;
+    }
+
+    .filter {
+      top: 0;
+    }
+
     .good-item {
       display: grid;
       border-radius: var(--radius-base);
@@ -139,6 +157,7 @@
 
     .sibebar {
       max-width: 100%;
+      background-color: var(--white-color);
       box-shadow: 0px -8px 8px 0px #a6afc340;
       border-radius: var(--radius-md);
       max-height: 0;

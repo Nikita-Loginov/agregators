@@ -629,6 +629,14 @@
       flex-direction: column;
     }
   }
+
+  &:not(:has(.filterModalBox__footer-info)) {
+    // display: none;
+
+    .filterModalBox__footer {
+      padding-bottom: 8px;
+    }
+  }
 }
 
 .floorModal {
@@ -814,6 +822,51 @@
 
   &__footer {
     margin-top: auto;
+  }
+
+  .companie-card {
+    height: 100%;
+    
+    &__content {
+      justify-content: space-between;
+    }
+
+    &__img-block {
+      aspect-ratio: unset;
+    }
+
+    &--empty {
+      .companie-card {
+        &__img-block {
+          aspect-ratio: 1 / 1;
+          width: 100px;
+          background-color: transparent;
+        }
+      }
+    }
+
+   
+
+    @media (max-width: $lg-breakpoint) {
+      padding: 8px;
+
+      &__content {
+        gap: 8px;
+      }
+
+      &__info {
+        order: 1000;
+      }
+
+      &__footer {
+        .decor-el {
+          background-color: var(--gray-color-200);
+          border-radius: var(--radius-md);
+          padding: 2px 6px;
+          min-height: 20px;
+        }
+      }
+    }
   }
 
   @media (max-width: calc($lg-breakpoint + 1px)) {

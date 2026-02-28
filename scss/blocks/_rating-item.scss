@@ -1,0 +1,15 @@
+.rating-item {
+  min-height: calculate-clamp(26px, 44px, $lg-breakpoint, $tablet-breakpoint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-color-170);
+  gap: 4px;
+  border-radius: var(--radius-base);
+  padding: 2px calculate-clamp(8px, 16px, $lg-breakpoint, $tablet-breakpoint);
+  color: var(--dark-color-100);
+
+  @media (max-width: $lg-breakpoint) {
+    border-radius: var(--radius-md);
+  }
+}

@@ -11,6 +11,7 @@
         align-items: center;
         justify-content: center;
         color: var(--dark-color-700);
+        background-color: var(--gray-color-100);
 
         img,
         svg,
@@ -65,12 +66,12 @@
     border-right: 1px solid var(--gray-color-600);
 
     &--small {
-      padding: 15px;
-      max-width: 150px;
+      padding: 20px;
+      max-width: 200px;
 
       .companie-card {
         &__img-block {
-          width: 100px;
+          width: 160px;
         }
       }
     }
@@ -81,7 +82,7 @@
     overflow: hidden;
     width: 200px;
     aspect-ratio: 1 / 1;
-    background-color: var(--gray-color-100);
+    
 
     img,
     svg {
@@ -209,7 +210,7 @@
     @include companieCardMediaOrSmall;
   }
 
-  @media (max-width: 360px) {
+  @media (max-width: 359px) {
     &__header {
       flex-direction: column;
       align-items: flex-start;
@@ -220,5 +221,7 @@
       flex-direction: column;
       align-items: normal;
     }
+
+    
   }
 }

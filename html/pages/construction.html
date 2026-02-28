@@ -106,7 +106,9 @@
                                 </div>
 
                                 <div class="tabs-box__content">
-                                  <p class="p1 fz18-14-now">Real estate agencies</p>
+                                  <p class="p1 fz18-14-now">
+                                    Real estate agencies
+                                  </p>
                                 </div>
                               </a>
 
@@ -125,7 +127,9 @@
                                 </div>
 
                                 <div class="tabs-box__content">
-                                  <p class="p1 fz18-14-now">Real estate agents</p>
+                                  <p class="p1 fz18-14-now">
+                                    Real estate agents
+                                  </p>
                                 </div>
                               </a>
                             </div>
@@ -287,7 +291,7 @@
                             >
                               <span class="p2 medium-font">Search</span>
 
-                              <span class="icon icon--big">
+                              <span class="icon icon--big tablet-none">
                                 <span
                                   class="kit-icon search-magnifying-glass"
                                 ></span>
@@ -319,17 +323,31 @@
                               </div>
                             </div>
 
-                            <a
-                              href="Перейти на страницу карты"
-                              title="On the Map"
-                              class="button button--bg-secondary-200 button--rounded-md button--lg"
-                            >
-                              <span class="icon icon--big">
-                                <span class="kit-icon map"></span>
-                              </span>
+                            <div class="tablet-none">
+                              <a
+                                href="Перейти на страницу карты"
+                                title="On the Map"
+                                class="button button--bg-secondary-200 button--rounded-md button--lg"
+                              >
+                                <span class="icon icon--md-base">
+                                  <span class="kit-icon map"></span>
+                                </span>
 
-                              <p class="p2 medium-font">On the Map</p>
-                            </a>
+                                <p class="p2 medium-font">On the Map</p>
+                              </a>
+                            </div>
+
+                            <div class="tablet-show">
+                              <a
+                                href="Перейти на страницу карты"
+                                title="On the Map"
+                                class="button button--cub button--cub-md-add button--bg-secondary-200 button--rounded-md"
+                              >
+                                <span class="icon icon--md-base">
+                                  <span class="kit-icon map"></span>
+                                </span>
+                              </a>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -440,6 +458,16 @@
 
                               <div class="companie-card__footer">
                                 <div class="companie-card__btns">
+                                  <button
+                                    class="button button--bg-secondary-300 modal-open"
+                                    data-validate-inputs='["name", "email", "tel", "message"]'
+                                    data-modal="contactUpModal"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >Contact Seller</span
+                                    >
+                                  </button>
+
                                   <a
                                     href="#"
                                     title="See all 147 projects"
@@ -458,14 +486,14 @@
                           <div class="companie-card companie-card--empty">
                             <div class="companie-card__img-box">
                               <div class="companie-card__img-block">
-                                <span class="kit-icon building-04"></span>
+                                <span class="kit-icon crane"></span>
                               </div>
                             </div>
 
                             <div class="companie-card__content">
                               <div class="companie-card__header">
                                 <div class="companie-card__header-img">
-                                  <span class="kit-icon building-04"></span>
+                                  <span class="kit-icon crane"></span>
                                 </div>
 
                                 <div class="companie-card__header-content">
@@ -582,14 +610,51 @@
                                         Damac Properties
                                       </p>
 
-                                      <span
-                                        class="icon icon--big"
-                                        style="color: var(--blue-color-300)" data-tooltip="Какой-то текст"
-                                      >
+                                      <div class="companie-card__header-icons">
                                         <span
-                                          class="kit-icon shield-check"
-                                        ></span>
-                                      </span>
+                                          class="icon icon--big"
+                                          style="color: var(--blue-color-300)"
+                                          data-tooltip="Какой-то title"
+                                        >
+                                          <span
+                                            class="kit-icon shield-check"
+                                          ></span>
+                                        </span>
+
+                                        <span
+                                          class="icon icon--big"
+                                          data-tooltip="Какой-то title"
+                                        >
+                                          <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="24"
+                                            height="24"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                          >
+                                            <path
+                                              d="M17.116 9.65196C16.6124 8.33051 15.8784 7.10663 14.9474 6.03589C13.3362 4.19129 10.85 3 8.9 3C9.67188 5.8125 8.31663 7.70571 7.08041 9.58004C6.05625 11.1305 5 12.7341 5 14.5714C5 18.116 7.91606 21 11.5 21C15.0839 21 18 18.116 18 14.5714C18 12.8317 17.7026 11.1767 17.116 9.65196ZM12.8134 18.5367C12.3937 18.9786 11.8677 19.0714 11.5 19.0714C11.1323 19.0714 10.6062 18.9786 10.1866 18.5367C9.76694 18.0947 9.55 17.3936 9.55 16.5C9.55 15.4899 9.90831 14.7209 10.2544 13.9776C10.5177 13.4123 10.85 12.8839 10.8683 12.19C11.3273 12.4263 11.8299 12.8695 12.2715 13.4468C13.0096 14.4111 13.4496 15.553 13.4496 16.5004C13.45 17.3936 13.2298 18.0979 12.8134 18.5367Z"
+                                              fill="url(#paint0_linear_4740_12734)"
+                                            />
+                                            <defs>
+                                              <linearGradient
+                                                id="paint0_linear_4740_12734"
+                                                x1="11.5"
+                                                y1="3"
+                                                x2="11.5"
+                                                y2="21"
+                                                gradientUnits="userSpaceOnUse"
+                                              >
+                                                <stop stop-color="#FBBC04" />
+                                                <stop
+                                                  offset="1"
+                                                  stop-color="#FA6837"
+                                                />
+                                              </linearGradient>
+                                            </defs>
+                                          </svg>
+                                        </span>
+                                      </div>
                                     </div>
 
                                     <p class="p4 tablet-show">
@@ -671,12 +736,12 @@
                       </div>
 
                       <div
-                        class="promo-content promo-content--absolute-img promo-content--secondary-bg-300"
+                        class="promo-content promo-content--absolute-img promo-content--secondary-bg-300 promo-content--companies"
                       >
                         <div class="promo-content__content">
                           <header class="promo-content__header">
                             <div class="promo-content__header-top">
-                              <p class="h3">Want to sell your properties?</p>
+                              <p class="h3 fz-h3-h4">Want to sell your properties?</p>
                             </div>
                           </header>
 
@@ -700,7 +765,7 @@
                               <p class="p2 semibold-font">Get Started</p>
 
                               <span
-                                class="icon icon--big"
+                                class="icon icon--big tablet-none"
                                 style="rotate: -45deg"
                               >
                                 <span class="kit-icon arrow-right-md"></span>
@@ -904,7 +969,9 @@
                                     class="button--circle button--circle-3xs button--bg-gray-600"
                                   >
                                     <span class="icon">
-                                      <span class="kit-icon arrow-down-sm"></span>
+                                      <span
+                                        class="kit-icon arrow-down-sm"
+                                      ></span>
                                     </span>
                                   </div>
                                 </button>
@@ -1087,7 +1154,9 @@
                                     class="button--circle button--circle-3xs button--bg-gray-600"
                                   >
                                     <span class="icon">
-                                      <span class="kit-icon arrow-down-sm"></span>
+                                      <span
+                                        class="kit-icon arrow-down-sm"
+                                      ></span>
                                     </span>
                                   </div>
                                 </button>
@@ -1272,7 +1341,9 @@
                                     class="button--circle button--circle-3xs button--bg-gray-600"
                                   >
                                     <span class="icon">
-                                      <span class="kit-icon arrow-down-sm"></span>
+                                      <span
+                                        class="kit-icon arrow-down-sm"
+                                      ></span>
                                     </span>
                                   </div>
                                 </button>
