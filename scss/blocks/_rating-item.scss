@@ -14,6 +14,12 @@
     color: var(--dark-color-100)
   }
 
+  &--mini {
+    padding-inline: calculate-clamp(7px, 8px, $lg-breakpoint, $tablet-breakpoint);
+    min-height: calculate-clamp(26px, 48px, $lg-breakpoint, $tablet-breakpoint);
+    border-radius: var(--radius-md);
+  }
+
   @media (max-width: $lg-breakpoint) {
     border-radius: var(--radius-md);
 

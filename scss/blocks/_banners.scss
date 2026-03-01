@@ -592,6 +592,7 @@
     flex-shrink: 0;
     width: 100%;
     aspect-ratio: 1 / 1;
+    border: 3px solid var(--gray-color-200);
     // display: flex;
     // align-items: center;
     // justify-content: center;
@@ -624,7 +625,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(8px, 12px, $tablet-breakpoint $lg-breakpoint) 32px;
+    gap: calculate-clamp(8px, 12px, $tablet-breakpoint, $lg-breakpoint) 32px;
 
     @media (min-width: $md-desktop-breakpoint) {
       &--two {
@@ -651,7 +652,7 @@
     padding-bottom: calculate-clamp(
       8px,
       12px,
-      $tablet-breakpoint $lg-breakpoint
+      $tablet-breakpoint, $lg-breakpoint
     );
 
     &:has(.clamp-text-block) {
@@ -759,12 +760,12 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   width: 100%;
-  min-height: 100px;
-  height: calculate-clamp(220px, 300px, 767px, 480px);
+  min-height: calculate-clamp(100px, 200px, $tablet-breakpoint, $mobile-breakpoint);
+  height: calculate-clamp(100px, 200px, $tablet-breakpoint, $mobile-breakpoint);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: calculate-clamp(16px, 20px, $tablet-breakpoint, $mobile-breakpoint);
 
   &--secondary-bg-200 {
     background-color: var(--secondary-color-200);
@@ -776,8 +777,8 @@
   }
 
   &__img {
-    width: 70%;
-    height: 90%;
+    width: 100%;
+    height: 100%;
     border-radius: var(--radius-xl);
     overflow: hidden;
 
@@ -791,10 +792,11 @@
 
   @media (max-width: 767px) {
     border-radius: var(--radius-md);
+    // min-height: 100px;
     // background-color: var(--secondary-color-200);
 
     &--big {
-      height: calculate-clamp(232px, 300px, 1023px, 767px);
+      // height: calculate-clamp(232px, 300px, 1023px, 767px);
     }
 
     &--cub-img {

@@ -64,15 +64,32 @@
     }
   }
 
+  &__aside {
+    .companies-detail__item-block {
+      align-items: flex-start;
+    }
+  }
+
   @media (max-width: $md-desktop-breakpoint) {
     &__item-wrapper {
       display: flex;
       gap: 20px;
     }
+  }
 
-    &__item-block {
-      &--md-start {
-        align-items: flex-start;
+  @media (max-width: $md-desktop-breakpoint) and (min-width: calc($tablet-breakpoint + 1px)) {
+    // &__item-block {
+    //   &--md-end {
+    //     align-items: flex-end;
+    //   }
+    // }
+
+    &__aside {
+      max-width: 280px;
+      width: 100%;
+
+      .companies-detail__item-block {
+        align-items: flex-end;
       }
     }
   }

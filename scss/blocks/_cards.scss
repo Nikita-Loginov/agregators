@@ -747,4 +747,10 @@ a.card-box {
     flex-direction: column;
     gap: calculate-clamp(2px, 4px, 1280px, 767px);
   }
+
+  @media (max-width: $lg-breakpoint) {
+    .p1 {
+      font-size: var(--font-size-xs);
+    }
+  }
 }
