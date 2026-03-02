@@ -86,6 +86,7 @@ export const onChangeInput = (e) => {
   if (input.tagName !== "INPUT" && input.tagName !== "TEXTAREA") return;
 
   toggleHasValue(input);
+  // toggleDropdownInput(input, true);
 
   if (input.type === "number" || input.closest("[data-input-number]")) {
     handleNumberInput(input);
@@ -106,6 +107,27 @@ export const toggleHasValue = (input) => {
   input.classList.toggle("has-value", hasValue);
   if (inputBox) inputBox.classList.toggle("has-value", hasValue);
 };
+
+export const toggleDropdownInput = (input, open) => {
+  const inputBox = input.closest(".input-box");
+  if (!inputBox) return;
+
+  document.querySelectorAll(".input-box.is-open").forEach((box) => {
+    if (box !== inputBox) {
+      box.classList.remove("is-open");
+    }
+  });
+
+  inputBox.classList.toggle("is-open", open);
+};
+
+// export const closeAllDropdownInputs = (e) => {
+//   if (e.target.closest(".input-box")) return;
+
+//   document
+//     .querySelectorAll(".input-box.is-open input, .input-box.is-open textarea")
+//     .forEach((input) => toggleDropdownInput(input, false));
+// };
 
 export const clearFormInputs = (form) => {
   form.addEventListener("reset", () => {
@@ -172,9 +194,9 @@ export const setVarElement = (el, nameVar, value) => {
 
 export const debounce = (fn, delay = 200) => {
   let timer;
-  
+
   return (...args) => {
     clearTimeout(timer);
-    timer= setTimeout(() => fn(...args), delay);
+    timer = setTimeout(() => fn(...args), delay);
   };
 };

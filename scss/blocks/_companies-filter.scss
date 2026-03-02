@@ -47,11 +47,11 @@
     }
 
     @media (max-width: $desktop-breakpoint) and (min-width: $lg-breakpoint) {
-      grid-template-columns: 19% 19% 19% 14% 14%;
+      grid-template-columns: 18% 18% 18% 13% 13%;
     }
 
-    @media (max-width: $lg-breakpoint) {
-      --count-items: 4;
+    @media (max-width: $lg-breakpoint) and (min-width: $tablet-breakpoint){
+      grid-template-columns: 1fr 1fr 1fr auto auto
     }
 
     @media (max-width: $tablet-breakpoint) {

@@ -77,14 +77,15 @@
                   </div>
 
                   <div class="top-page__item">
-                    <div class="input-box">
-                      <label class="input-box__content">
-                        <div class="input-box__info">
+                    <div class="input-box dropdown dropdown--input" data-dropdown-behavior="open">
+                      <div class="input-box__content dropdown__btn">
+                        <div class="input-box__info" style="width: 100%">
                           <input
                             type="text"
                             name="name"
                             placeholder="Find the topic"
                             required
+                            autocomplete="false"
                           />
 
                           <button
@@ -98,31 +99,32 @@
                             </div>
                           </button>
                         </div>
-                      </label>
-                      
-                      <div class="input-box__dropdown">
+                      </div>
+
+                      <div class="input-box__dropdown dropdown__content">
                         <div class="search-address">
                           <label
-                          class="check-simple check-simple--center input-box"
-                        >
-                          <div class="check-simple__content">
-                            <div class="check-simple__custom check-simple__custom--white-bg">
-                              <input type="checkbox" />
+                            class="check-simple check-simple--center input-box"
+                          >
+                            <div class="check-simple__content">
+                              <div
+                                class="check-simple__custom check-simple__custom--white-bg"
+                              >
+                                <input type="checkbox" />
 
-                              <span></span>
+                                <span></span>
+                              </div>
+
+                              <div class="check-simple__info">
+                                <p class="p3 regular-font">
+                                  Search in headlines only
+                                </p>
+                              </div>
                             </div>
 
-                            <div class="check-simple__info">
-                              <p class="p3 regular-font">
-                                Search in headlines only
-                              </p>
-                            </div>
-                          </div>
-
-                          <div class="check-simple__errors p4"></div>
-                        </label>
+                            <div class="check-simple__errors p4"></div>
+                          </label>
                         </div>
-                        
                       </div>
                     </div>
                   </div>

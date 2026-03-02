@@ -167,6 +167,13 @@
     }
   }
 
+  &--input {
+    .dropdown__content {
+      // all: unset;
+      @include input-dropdown
+    }
+  }
+
   &--dark-color-500 {
     .dropdown__btn {
       color: var(--dark-color-500);

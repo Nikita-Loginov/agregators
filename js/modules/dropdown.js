@@ -59,6 +59,7 @@ export const toggleDropdown = (e) => {
   }
 };
 
+
 const openFixedDropdown = (dropdown) => {
   const menu = dropdown.querySelector(".dropdown__content");
   if (!menu) return;
@@ -143,8 +144,14 @@ const openRegularDropdown = (dropdown) => {
   });
 };
 
-const closeDropdown = (dropdown) => {
+const closeDropdown = (dropdown, { ignoreBehavior = false } = {}) => {
   if (!dropdown) return;
+
+  const behavior = dropdown.dataset.dropdownBehavior || "toggle";
+
+  if (behavior === "open" && !ignoreBehavior) {
+    return;
+  }
 
   dropdown.classList.remove("active");
 
@@ -173,7 +180,7 @@ const closeDropdown = (dropdown) => {
 
 export const closeAllDropdowns = () => {
   if (activeDropdown) {
-    closeDropdown(activeDropdown);
+    closeDropdown(activeDropdown, { ignoreBehavior: true });
   }
 };
 

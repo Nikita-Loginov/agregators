@@ -560,7 +560,7 @@
   border-radius: var(--radius-xl);
   display: flex;
   align-items: flex-start;
-  gap: 32px;
+  gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);;
   width: 100%;
 
   @mixin resetBanner {
@@ -620,12 +620,17 @@
     gap: 10px;
     flex: 1;
     padding: 16px 0;
+
+    &--big {
+      gap: 20px;
+      height: auto;
+    }
   }
 
   &__list {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(8px, 12px, $tablet-breakpoint, $lg-breakpoint) 32px;
+    gap: calculate-clamp(8px, 12px,  $lg-breakpoint, $tablet-breakpoint) 32px;
 
     @media (min-width: $md-desktop-breakpoint) {
       &--two {
@@ -649,11 +654,7 @@
     align-items: center;
     gap: 16px;
     border-bottom: 1px solid var(--gray-color-300);
-    padding-bottom: calculate-clamp(
-      8px,
-      12px,
-      $tablet-breakpoint, $lg-breakpoint
-    );
+    padding-bottom: calculate-clamp(8px, 12px,  $lg-breakpoint, $tablet-breakpoint);
 
     &:has(.clamp-text-block) {
       align-items: flex-start;
@@ -704,6 +705,15 @@
     }
   }
 
+  &__content-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 48px;
+    width: 100%;
+  }
+
   @media (max-width: $lg-breakpoint) and (min-width: $tablet-breakpoint) {
     &__link {
       // @include linkBg;
@@ -741,6 +751,29 @@
 
       &:first-child {
         // padding-top: 0;
+      }
+    }
+
+    &__content-block {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+
+      .button:not(.button--noMassa) {
+        width: 100%;
+        border-radius: var(--radius-3xl);
+        min-height: 52px;
+        gap: 12px;
+
+        p {
+          font-size: var(--font-size-s);
+          font-weight: var(--weight-font-lg);
+        }
+
+        .icon {
+          font-size: var(--icon-md);
+          width: var(--icon-md);
+          height: var(--icon-md);
+        }
       }
     }
   }

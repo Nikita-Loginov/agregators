@@ -116,10 +116,7 @@
     position: relative;
     padding: 2px 2px 0px;
 
-
     .input-box {
-      
-
       &__info {
         position: relative;
         z-index: 11;
@@ -127,7 +124,7 @@
     }
   }
 
-  &.has-value:has(.input-box__dropdown) {
+  &.dropdown.active {
     background-color: var(--gray-color-200);
     border-top-right-radius: var(--radius-xl);
     border-top-left-radius: var(--radius-xl);
@@ -142,20 +139,7 @@
   }
 
   &__dropdown {
-    position: absolute;
-    top: 100%;
-    left: -0.5px;
-    right: -0.5px;
-    z-index: 10;
-    // padding-top: calculate-clamp(40px, 48px, 1023px, 767px);
-    background-color: var(--gray-color-200);
-    border: 1px solid var(--gray-color-300);
-    border-top: none;
-    opacity: 0;
-    visibility: hidden;
-    border-bottom-right-radius: var(--radius-xl);
-    border-bottom-left-radius: var(--radius-xl);
-
+   @include input-dropdown
   }
 
   &__label {

@@ -1812,18 +1812,6 @@
                     <span>Companies</span>
                   </a>
                 </div>
-
-                <div class="tablet-none">
-                  <div class="md-desktop-show">
-                    <button class="button button--noMassa text-primary-100">
-                      <span class="icon icon--little">
-                        <span class="kit-icon flag"></span>
-                      </span>
-
-                      <p class="p3 regular-font">Report this agencie</p>
-                    </button>
-                  </div>
-                </div>
               </div>
 
               <div class="top-page__header top-page__header--row">
@@ -1874,10 +1862,14 @@
                     <h2 class="h4 tablet-show">Main information</h2>
 
                     <div class="companies-detail__top-inner">
-                      <div class="companies-detail__top-block">
+                      <div
+                        class="companies-detail__top-block"
+                        style="width: 100%"
+                      >
                         <div class="banner-profile banner-profile--noBg">
                           <div
                             class="banner-profile__img-box banner-profile__img-box--block banner-profile__img-box--full tablet-none"
+                            style="border: 0"
                           >
                             <picture>
                               <source
@@ -1894,7 +1886,9 @@
                             </picture>
                           </div>
 
-                          <div class="banner-profile__content">
+                          <div
+                            class="banner-profile__content banner-profile__content--big"
+                          >
                             <ul class="banner-profile__list">
                               <li class="banner-profile__link">
                                 <div class="banner-profile__link-key">
@@ -2087,7 +2081,7 @@
                                     data-block="clamp-text"
                                     data-max="1"
                                   >
-                                  Property Advisor
+                                    Property Advisor
                                   </p>
 
                                   <div
@@ -2126,7 +2120,7 @@
                                     data-block="clamp-text"
                                     data-max="1"
                                   >
-                                  Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah
+                                    Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah
                                   </p>
 
                                   <div
@@ -2190,34 +2184,41 @@
                                 </div>
                               </li>
                             </ul>
+
+                            <div class="md-desktop-show">
+                              <div class="banner-profile__content-block">
+                                <button
+                                  class="button button--bg-primary-100 modal-open"
+                                  type="button"
+                                  data-modal="contactUpModal"
+                                  data-validate-inputs='["name", "email", "tel", "message"]'
+                                >
+                                  <p class="p3 medium-font">Contact specialist</p>
+
+                                  <div class="icon" style="rotate: 45deg">
+                                    <span class="kit-icon arrow-up-md"></span>
+                                  </div>
+                                </button>
+
+                                <button
+                                  class="button button--noMassa button--rounded-md text-secondary-300"
+                                  type="button"
+                                  
+                                >
+                                  <span class="icon icon--little">
+                                    <span class="kit-icon flag"></span>
+                                  </span>
+
+                                  <p class="p3 regular-font">
+                                    Report this agencie
+                                  </p>
+                                </button>
+                              </div>
+                            </div>
                           </div>
                         </div>
 
-                        <div class="tablet-show">
-                          <button class="button button--noMassa">
-                            <span class="icon icon--little text-secondary-300">
-                              <span class="kit-icon flag"></span>
-                            </span>
-
-                            <p class="p3 regular-font text-secondary-300">
-                              Report this agencie
-                            </p>
-                          </button>
-                        </div>
-                      </div>
-
-                      <div class="tablet-show">
-                        <button
-                          class="button button--bg-primary-100 modal-open br-el--rounded-3xl"
-                          data-modal="contactModal"
-                          style="width: 100%; min-height: 52px"
-                        >
-                          <p class="p3 medium-font">Contact specialist</p>
-
-                          <span class="icon" style="rotate: -45deg">
-                            <span class="kit-icon arrow-right-md"></span>
-                          </span>
-                        </button>
+                      
                       </div>
                     </div>
                   </section>
