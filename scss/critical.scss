@@ -3,11 +3,15 @@
 @import "base/_reset.scss";
 @import "base/_text.scss";
 @import "base/_global.scss";
+@import "base/_global-info.scss";
 @import "base/_helpers.scss";
 
 @import "blocks/_header.scss";
 @import "blocks/_menu.scss";
+@import "blocks/_menu-popup.scss";
 @import "blocks/_buttons.scss";
 @import "blocks/_links.scss";
 @import "blocks/_breadcrumbs.scss";
 @import "blocks/_logo.scss";
+@import "blocks/_modalBlock.scss";
+@import "blocks/_popup.scss";
