@@ -18,7 +18,7 @@ export function initPhoneMasks(form) {
       autoHideDialCode: false,
       autoPlaceholder: "aggressive",
       utilsScript:
-        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/utils.js",
+        "/js/lib/intl-tel-input-utils.min.js",
     });
 
     const wrapper = input.closest(".input-tel-wrapper");

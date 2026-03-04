@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Каталог", "links" :
   ["./css/catalogy.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.css"] })
+  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css"] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -17,7 +17,7 @@
                     <div class="filter__item tablet-show">
                       <button
                         class="button button--cub button--bg-secondary-200 button--cub-md-add modal-open"
-                        type="button"
+                        type="button" aria-label="Открыть фильтр"
                         data-modal="filterModal"
                       >
                         <div class="button__block">
@@ -328,6 +328,7 @@
                       <button
                         class="button button--cub button--bg-primary-100 button--cub-md-add"
                         type="button"
+                        aria-label="Начать поиск"
                       >
                         <div class="icon">
                           <span class="kit-icon search-magnifying-glass"></span>
@@ -385,7 +386,7 @@
                       <div class="param__btns">
                         <button
                           class="button button--bg-white button--circle button--circle-4xl"
-                          type="button"
+                          type="button" aria-label="Удалить категорию"
                         >
                           <div class="icon icon--sm">
                             <span class="kit-icon close-md"></span>
@@ -406,7 +407,7 @@
                       <div class="param__btns">
                         <button
                           class="button button--bg-white button--circle button--circle-4xl"
-                          type="button"
+                          type="button" aria-label="Удалить категорию"
                         >
                           <div class="icon icon--sm">
                             <span class="kit-icon close-md"></span>
@@ -427,7 +428,7 @@
                       <div class="param__btns">
                         <button
                           class="button button--bg-white button--circle button--circle-4xl"
-                          type="button"
+                          type="button" aria-label="Удалить категорию"
                         >
                           <div class="icon icon--sm">
                             <span class="kit-icon close-md"></span>
@@ -448,7 +449,7 @@
                       <div class="param__btns">
                         <button
                           class="button button--bg-white button--circle button--circle-4xl"
-                          type="button"
+                          type="button" aria-label="Удалить категорию"
                         >
                           <div class="icon icon--sm">
                             <span class="kit-icon close-md"></span>
@@ -1352,7 +1353,7 @@
                               <div class="catalogy-content__filter-block">
                                 <div class="accordeon__question tablet-show">
                                   <button
-                                    class="button button--cub button--bg-secondary-200 button--cub-md-add"
+                                    class="button button--cub button--bg-secondary-200 button--cub-md-add" aria-label="Посмотреть поля фильтра"
                                   >
                                     <div class="button__block">
                                       <div class="icon">

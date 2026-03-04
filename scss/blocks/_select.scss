@@ -459,3 +459,12 @@ body {
     position: absolute;
   }
 }
+
+.select-label {
+  &__text {
+    // display: none;
+    position: absolute;
+    opacity: 0;
+    // visibility: hidden;
+  }
+}

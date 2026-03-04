@@ -4,7 +4,13 @@
       <picture>
         <source srcset="@@img.webp 1x, @@img2x.webp 2x" />
 
-        <img src="@@img.webp" alt="фотография Apartment" loading="lazy" />
+        @@if (typeof firstSlide !== 'undefined' && firstSlide === true) {
+          <img src="@@img" alt="фотография Apartment" fetchpriority="high" width="400" height="300">
+        }
+
+        @@if (typeof firstSlide === 'undefined') {
+          <img src="@@img" alt="фотография Apartment" loading="lazy">
+        }
       </picture>
     </div>
   </div>

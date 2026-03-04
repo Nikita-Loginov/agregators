@@ -60,7 +60,7 @@ const createItemRenderer = (isMultiple, hasCheckboxes) => (data, escape) =>
     ${escape(data.text)}
     ${
       isMultiple && !hasCheckboxes
-        ? '<button class="ts-item-remove" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 12L8.00001 8.00001M8.00001 8.00001L4 4M8.00001 8.00001L12 4M8.00001 8.00001L4 12" stroke="#636899" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+        ? '<button class="ts-item-remove" type="button" aria-label="Удалить элемент из выбранных"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M12 12L8.00001 8.00001M8.00001 8.00001L4 4M8.00001 8.00001L12 4M8.00001 8.00001L4 12" stroke="#636899" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
         : ""
     }
   </div>
@@ -321,7 +321,6 @@ const syncDropdownClassesFromSelect = (select, dropdown) => {
 };
 
 const wrapDropdownWithSelectBox = (select, dropdown) => {
-  console.log('dasds')
   if (!dropdown || dropdown.closest(".select-box")) return;
 
   const sourceBox = select.closest(".select-box");
@@ -334,6 +333,25 @@ const wrapDropdownWithSelectBox = (select, dropdown) => {
   wrapper.appendChild(dropdown);
 
   return wrapper;
+};
+
+const wrapSelectWithLabel = (select, labelText = "") => {
+  if (select.closest("label")) return;
+
+  const label = document.createElement("label");
+  label.className = "select-label";
+
+  if (labelText) {
+    const p = document.createElement("p");
+    p.className = "select-label__text";
+    p.textContent = labelText;
+    label.appendChild(p);
+  }
+
+  select.parentNode.insertBefore(label, select);
+  label.appendChild(select);
+
+  return label;
 };
 
 export const initSelects = () => {
@@ -351,6 +369,8 @@ export const initSelects = () => {
       groups,
       optionsData
     );
+
+    wrapSelectWithLabel(select, select.dataset.placeholder ?? "");
 
     const renderFunctions = {
       item: createItemRenderer(isMultiple, hasCheckboxes),
