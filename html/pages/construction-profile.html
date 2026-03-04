@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Construction profile", "links"
   : ["./css/companies-info.css","./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css", ] })
+  "/css/lib/tom-select.css", ] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -125,7 +125,7 @@
                               /img/slogan/one2x.webp 2x
                             "
                           />
-                          <img src="/img/slogan/one.webp" alt="фотография" />
+                          <img src="/img/slogan/one.webp" alt="фотография" fetchpriority="high"/>
                         </picture>
                       </div>
                     </div>
@@ -288,7 +288,8 @@
                                     >
                                       <button
                                         data-block="more-btn"
-                                        class="button button--noBg button--noMassa"
+                                        class="button button--noBg button--noMassa" aria-label="Посмотреть больше"
+                                        aria-label="смотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -300,7 +301,10 @@
                                           </span>
                                         </span>
 
-                                        <p style="display: none;" data-block="more-btn-text"></p>
+                                        <p
+                                          style="display: none"
+                                          data-block="more-btn-text"
+                                        ></p>
                                       </button>
                                     </footer>
                                   </div>
@@ -329,7 +333,8 @@
                                     >
                                       <button
                                         data-block="clamp-btn"
-                                        class="button button--noBg button--noMassa"
+                                        class="button button--noBg button--noMassa" aria-label="Посмотреть больше"
+                                        aria-label="смотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -369,7 +374,8 @@
                                     >
                                       <button
                                         data-block="clamp-btn"
-                                        class="button button--noBg button--noMassa"
+                                        class="button button--noBg button--noMassa" aria-label="Посмотреть больше"
+                                        aria-label="смотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -408,7 +414,8 @@
                                     >
                                       <button
                                         data-block="clamp-btn"
-                                        class="button button--noBg button--noMassa"
+                                        class="button button--noBg button--noMassa" aria-label="Посмотреть больше"
+                                        aria-label="смотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -447,7 +454,8 @@
                                     >
                                       <button
                                         data-block="clamp-btn"
-                                        class="button button--noBg button--noMassa"
+                                        class="button button--noBg button--noMassa" aria-label="Посмотреть больше"
+                                        aria-label="смотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -488,7 +496,8 @@
                                     >
                                       <button
                                         data-block="clamp-btn"
-                                        class="button button--noBg button--noMassa"
+                                        class="button button--noBg button--noMassa" aria-label="Посмотреть больше"
+                                        aria-label="смотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -509,7 +518,10 @@
                         </div>
                       </div>
 
-                      <div class="md-desktop-show companies-detail__aside" style="height: auto">
+                      <div
+                        class="md-desktop-show companies-detail__aside"
+                        style="height: auto"
+                      >
                         <div
                           class="companies-detail__item-block"
                           style="width: 100%"
@@ -518,7 +530,7 @@
                             @@include('../modules/contact-form-aside.html')
                           </aside>
 
-                          <button class="button button--noMassa">
+                          <button class="button button--noMassa" aria-label="Пожаловаться">
                             <span class="icon icon--little text-secondary-300">
                               <span class="kit-icon flag"></span>
                             </span>
@@ -708,7 +720,8 @@
                             data-block="more-btn"
                             aria-label="Посмотреть больше"
                             type="button"
-                            data-more-text="Read more"
+                            data-more-text="read more"
+                            aria-label="read more"
                             data-less-text="Read less"
                           >
                             <p
@@ -1187,8 +1200,9 @@
                           <div class="tablet-show">
                             <div class="property__filter-search">
                               <button
-                                class="button button--cub button--bg-secondary-200 button--cub-md-add accordeon__question"
+                                class="button button--cub button--bg-secondary-200 button--cub-md-add accordeon__question" aria-label="Открыть фильтр"
                                 type="button"
+                                
                               >
                                 <div class="button__block">
                                   <div class="icon">
@@ -1305,8 +1319,9 @@
                               </div>
 
                               <button
-                                class="button button--cub button--bg-primary-100 button--cub-md-add"
+                                class="button button--cub button--bg-primary-100 button--cub-md-add" aria-label="Поиск"
                                 type="button"
+                                aria-label="Поиск"
                               >
                                 <div class="icon">
                                   <span
@@ -1383,6 +1398,7 @@
                               >
                                 <button
                                   class="input-box__info dropdown__btn"
+                                  aria-label="какой-то текст"
                                   type="button"
                                 >
                                   <div class="check">
@@ -1555,6 +1571,7 @@
                               <button
                                 type="button"
                                 class="button button--lg button--bg-primary-200 button--rounded-md"
+                                aria-label="Поиск"
                               >
                                 <p class="p2 medium-font">Search</p>
 
@@ -1867,7 +1884,11 @@
                     @@include('../modules/contact-form-aside.html')
 
                     <div class="contact-aside__footer">
-                      <button type="button" class="chips">
+                      <button
+                        type="button"
+                        class="chips"
+                        aria-label="пожаловаться"
+                      >
                         <span class="icon icon--little">
                           <span class="kit-icon flag"></span>
                         </span>
@@ -1888,7 +1909,7 @@
     </div>
 
     <script src="/js/lib/swiper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
 
     <script src="/js/companies-info.js" type="module"></script>
   </body>

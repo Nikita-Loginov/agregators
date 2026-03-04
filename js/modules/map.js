@@ -52,7 +52,7 @@ const createMarkerIcon = (warehouse) => {
 
   return L.divIcon({
     html: `
-      <div class="${classes}">
+      <div class="${classes}" data-block="sibebar-box__open">
         <span class="icon icon--little">
           ${
             isActive

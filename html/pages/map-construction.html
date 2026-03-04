@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Карта construction", "links" :
-  ["./css/map.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css",
-  "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css",
-  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
-  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"]
-  })
+  ["./css/map.css", "./css/lib/swiper.min.css", "/css/lib/tom-select.css",
+  "/css/lib/leaflet/index.css", "/css/lib/leaflet/markerCluster.css",
+  "/css/lib/leaflet/markerClusterDefault.css"] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html', {"full" : "true"})
@@ -24,6 +21,7 @@
                     class="button button--cub button--bg-secondary-300 button--cub-md-add modal-open"
                     data-modal="filterConstructionModal"
                     type="button"
+                    aria-label="Открыть фильтр"
                   >
                     <div class="button__block">
                       <span class="icon">
@@ -182,12 +180,15 @@
                 <button
                   class="button button--lg button--bg-gray-300 button--rounded-md lg-none"
                   type="reset"
+                  aria-label="Reset search"
                 >
                   <span class="p2 medium-font">Reset search</span>
                 </button>
 
                 <button
+                  aria-label="Открыть модалку для отправки контактов"
                   class="button button--lg button--bg-primary-100 button--rounded-md tablet-none"
+                  aria-label="Search"
                 >
                   <span class="p2 medium-font">Search</span>
 
@@ -234,6 +235,7 @@
                 <div class="companies-filter__item tablet-show">
                   <button
                     class="button button--cub button--bg-primary-100 button--cub-md-add"
+                    aria-label="search"
                   >
                     <span class="icon">
                       <span class="kit-icon search-magnifying-glass"></span>
@@ -269,6 +271,7 @@
                         type="button"
                         class="button button--cub button--bg-gray-200 button--cub-sm modal-open"
                         data-modal="selectedItemsConstructionModal"
+                        aria-label="Посмотреть выбранные элементы"
                       >
                         <span
                           class="icon icon--little text-dark-100"
@@ -282,6 +285,7 @@
 
                   <button
                     class="close tablet-none"
+                    aria-label="Закрыть sibebar"
                     data-block="sibebar-box__close"
                   >
                     <span class="icon icon--big">
@@ -402,7 +406,9 @@
                       </div>
 
                       <div class="swiper-slide">
-                        <div class="companie-card companie-card--empty companie-card--show-img">
+                        <div
+                          class="companie-card companie-card--empty companie-card--show-img"
+                        >
                           <div
                             class="companie-card__img-box companie-card__img-box--small"
                           >
@@ -413,8 +419,6 @@
 
                           <div class="companie-card__content">
                             <div class="companie-card__header">
-                             
-
                               <div class="companie-card__header-content">
                                 <div class="companie-card__header-info">
                                   <div class="companie-card__header-item">
@@ -432,9 +436,7 @@
                                   </div>
                                 </div>
 
-                                <div
-                                  class="companie-card__header-info"
-                                >
+                                <div class="companie-card__header-info">
                                   <div class="name-rating name-rating--small">
                                     <div class="name-rating__box">
                                       <span
@@ -452,7 +454,7 @@
                               </div>
                             </div>
 
-                            <div class="companie-card__footer ">
+                            <div class="companie-card__footer">
                               <div class="decor-el decor-el--small">
                                 <span class="icon text-secondary-100 lg-none">
                                   <span class="kit-icon house-01"></span>
@@ -1239,7 +1241,6 @@
                           </div>
                         </div>
                       </div>
-
                     </div>
                   </div>
                 </div>
@@ -1306,7 +1307,7 @@
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/map.js" type="module"></script>
   </body>

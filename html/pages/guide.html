@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Профиль гайда", "links" :
-  ["./css/object.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css", ] })
+  ["./css/object.css", "./css/lib/swiper.min.css", "/css/lib/tom-select.css", ]
+  })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -82,7 +82,7 @@
                                 <img
                                   src="/img/object/one.webp"
                                   alt="фотография"
-                                  loading="lazy"
+                                  fetchpriority="high"
                                 />
                               </picture>
                             </div>
@@ -97,12 +97,19 @@
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/one.mp4"
-                                poster="/videos/posters/one.png"
+                                poster="/videos/posters/one.webp"
                                 loop
                                 muted
                                 preload="metadata"
                                 playsinline
-                              ></video>
+                              >
+                                <track
+                                  kind="captions"
+                                  src="subtitles_en.vtt"
+                                  srclang="en"
+                                  label="English"
+                                />
+                              </video>
                             </div>
                           </div>
 
@@ -159,6 +166,7 @@
                           <button
                             class="button button--bg-white-170 button--circle arrow-swiper prev"
                             type="button"
+                            aria-label="Пред слайд"
                           >
                             <span class="icon icon--big">
                               <span class="kit-icon arrow-left-lg"></span>
@@ -168,6 +176,7 @@
                           <button
                             class="button button--bg-white-170 button--circle arrow-swiper next"
                             type="button"
+                            aria-label="След слайд"
                           >
                             <span class="icon icon--big">
                               <span class="kit-icon arrow-right-lg"></span>
@@ -429,6 +438,7 @@
                       <button
                         class="button button--bg-secondary-200 button--rounded-2xl modal-open tablet-none"
                         data-modal="featuresModal"
+                        aria-label="Посмотреть все особенности"
                       >
                         <p class="p2 medium-font">See all</p>
 
@@ -441,6 +451,7 @@
                         class="button button--bg-secondary-200 button--rounded-2xl modal-open tablet-show"
                         style="width: 100%"
                         data-modal="featuresModal"
+                        aria-label="Посмотреть все особенности"
                       >
                         <p class="p2 medium-font">See all</p>
 
@@ -596,6 +607,7 @@
                             >
                               <button
                                 class="input-box__info dropdown__btn"
+                                aria-label="какой-то текст"
                                 type="button"
                               >
                                 <div class="check">
@@ -660,6 +672,7 @@
                             <button
                               type="button"
                               class="button button--lg button--bg-primary-200 button--rounded-md object-bottom__property-item--full"
+                              aria-label="Search"
                             >
                               <p class="p2 medium-font">Search</p>
 
@@ -699,6 +712,7 @@
                               <button
                                 type="button"
                                 class="button button--bg-gray-300 button--lg button--rounded-md accordeon__question"
+                                aria-label="Посмотреть поля фильтра"
                               >
                                 <span class="icon">
                                   <span class="kit-icon filter-icon"></span>
@@ -909,6 +923,7 @@
                           <button
                             class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper prev"
                             type="button"
+                            aria-label="Пред слайд"
                           >
                             <span class="icon icon--big">
                               <span class="kit-icon arrow-left-md"></span>
@@ -918,6 +933,7 @@
                           <button
                             class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper next"
                             type="button"
+                            aria-label="След слайд"
                           >
                             <span class="icon icon--big">
                               <span class="kit-icon arrow-right-md"></span>
@@ -1281,7 +1297,7 @@
       @@include('../modals/gallery.html')
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/guide.js" type="module"></script>
   </body>

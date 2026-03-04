@@ -186,9 +186,9 @@ const getHtmlSlide = (item, index) => {
               </div>
 
               <button
-                class="button button--lg button--bg-primary-100 modal-open tablet-none"
+                aria-label="Открыть модалку для отправки контактов" class="button button--lg button--bg-primary-100 modal-open tablet-none"
                 type="button"
-                data-modal="requestModal"
+                data-modal="requestModal" aria-label="Открыть модалку для отправки контактов"
               >
                 <p class="p2 medium-font">Get all floor plans</p>
                 <div class="icon icon--big" style="rotate: -45deg">

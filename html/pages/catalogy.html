@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Каталог", "links" :
   ["./css/catalogy.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css"] })
+  "/css/lib/tom-select.css"] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -226,7 +226,7 @@
                     <div class="filter__item desktop-none">
                       <div class="dropdown dropdown--price input-box">
                         <button
-                          class="input-box__info dropdown__btn"
+                          class="input-box__info dropdown__btn" aria-label="какой-то текст"
                           type="button"
                         >
                           <div class="check">
@@ -1910,13 +1910,10 @@
       @@include('../modals/savedSearch.html')
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="/js/lib/chart/index.js" defer></script>
+    <script src="/js/lib/chart/datalabels.js" defer></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"
+      src="/js/lib/tom-select.min.js" defer
       defer
     ></script>
     <script src="/js/lib/swiper.min.js" defer></script>

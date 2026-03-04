@@ -155,6 +155,7 @@
                         <img
                           src="/img/article/one.webp"
                           alt="фотография статьи"
+                          fetchpriority="high"
                         />
                       </picture>
                     </div>
@@ -203,7 +204,8 @@
                             data-block="more-btn"
                             aria-label="Посмотреть больше"
                             type="button"
-                            data-more-text="Read more"
+                            data-more-text="read more"
+                            aria-label="read more"
                             data-less-text="Read less"
                           >
                             <p
@@ -825,6 +827,7 @@
                               data-block="clamp-btn"
                               class="button button--noBg button--noMassa"
                               data-more-text="read more"
+                              aria-label="read more"
                               data-less-text="read less"
                               style="display: inline-flex"
                             >
@@ -893,6 +896,7 @@
                               data-block="clamp-btn"
                               class="button button--noBg button--noMassa"
                               data-more-text="read more"
+                              aria-label="read more"
                               data-less-text="read less"
                               style="display: inline-flex"
                             >
@@ -1166,6 +1170,7 @@
                             <div class="arrows-swiper arrows-swiper--absolute">
                               <button
                                 class="button button--bg-white button--cub-icon br-el--rounded-md arrow-swiper prev"
+                                aria-label="Посмотреть пред"
                                 type="button"
                               >
                                 <div class="icon">
@@ -1175,6 +1180,7 @@
 
                               <button
                                 class="button button--bg-white button--cub-icon br-el--rounded-md arrow-swiper next"
+                                aria-label="Посмореть след"
                                 type="button"
                               >
                                 <div class="icon">
@@ -1384,6 +1390,7 @@
                         <div class="tablet-none">
                           <button
                             class="button button--bg-primary-100 button--md br-el--rounded-2xl"
+                            aria-label="share"
                           >
                             <p class="p2 medium-font">Share</p>
 
@@ -1396,6 +1403,7 @@
                         <div class="tablet-show">
                           <button
                             class="button button--bg-secondary-200 button--md br-el--rounded-3xl"
+                            aria-label="Share"
                             style="min-height: 48px; width: 100%"
                           >
                             <p class="p2-add medium-font">Share</p>
@@ -1438,6 +1446,7 @@
                         aria-label="Открыть модальное окно"
                         class="button button--bg-primary-100 br-el--rounded-3xl modal-open button--mh-52-48"
                         data-modal="contactUpModal"
+                        aria-label="Открыть модалку для отправки контактов"
                         style="padding-inline: 32px; margin-right: auto"
                       >
                         <p class="p2 semibold-font">Send a request</p>

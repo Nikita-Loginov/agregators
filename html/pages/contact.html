@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Contacts", "links" :
-  ["./css/contact.css", "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css",
-  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
-  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"]
+  ["./css/contact.css", "/css/lib/leaflet/index.css",
+  "/css/lib/leaflet/markerCluster.css",
+  "/css/lib/leaflet/markerClusterDefault.css"]
   })
   <body class="white-page">
     <div class="wrapper">
@@ -124,8 +124,8 @@
 
                     <div class="contact__btns">
                       <button
-                        class="button button--lg button--bg-primary-100 br-el--rounded-3xl-md modal-open"
-                        data-modal="contactUpModal"
+                        aria-label="Открыть модалку для отправки контактов" class="button button--lg button--bg-primary-100 br-el--rounded-3xl-md modal-open"
+                        data-modal="contactUpModal" aria-label="Открыть модалку для отправки контактов"
                         data-validate-inputs='["name", "email", "tel", "message"]'
                       >
                         <p class="p2 meduim-font">Leave your enquiry</p>

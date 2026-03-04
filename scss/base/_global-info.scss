@@ -440,7 +440,7 @@ body.scrollBottom {
 }
 
 [data-loading="true"] {
-  display: none;
+  display: none !important;
 }
 
 [data-block="more-footer"] {
@@ -560,6 +560,17 @@ body.scrollBottom {
       &:not(:first-child) {
         display: none;
       }
+    }
+  }
+
+  &--gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    height: 100%;
+
+    .loader {
+      height: 100%;
     }
   }
 }

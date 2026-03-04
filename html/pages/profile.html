@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Профиль ЖК", "links" :
-  ["./css/object.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css",
-  "https://unpkg.com/leaflet@1.7.1/dist/leaflet.css",
-  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css",
-  "https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"]
-  })
+  ["./css/object.css", "./css/lib/swiper.min.css", "/css/lib/tom-select.css",
+  "/css/lib/leaflet/index.css", "/css/lib/leaflet/markerCluster.css",
+  "/css/lib/leaflet/markerClusterDefault.css"] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -62,7 +59,10 @@
 
                   <div class="tablet-none">
                     <div class="lg-show">
-                      <button class="button button--noMassa text-primary-100">
+                      <button
+                        class="button button--noMassa text-primary-100"
+                        aria-label="Пожаловаться"
+                      >
                         <div class="icon icon--little">
                           <span class="kit-icon flag"></span>
                         </div>
@@ -100,7 +100,7 @@
                                 <img
                                   src="/img/object/one.webp"
                                   alt="фотография"
-                                  loading="lazy"
+                                  fetchpriority="high"
                                 />
                               </picture>
                             </div>
@@ -115,12 +115,19 @@
                             <div class="gallery-simple__img-box">
                               <video
                                 src="/videos/one.mp4"
-                                poster="/videos/posters/one.png"
+                                poster="/videos/posters/one.webp"
                                 loop
                                 muted
                                 preload="metadata"
                                 playsinline
-                              ></video>
+                              >
+                                <track
+                                  kind="captions"
+                                  src="subtitles_en.vtt"
+                                  srclang="en"
+                                  label="English"
+                                />
+                              </video>
                             </div>
                           </div>
 
@@ -303,6 +310,7 @@
                                 <div class="share__btns">
                                   <button
                                     class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base"
+                                    aria-label="Поделиться"
                                   >
                                     <div class="icon">
                                       <span
@@ -317,6 +325,7 @@
 
                               <button
                                 class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--favorite"
+                                aria-label="Добавить в избранное"
                               >
                                 <div class="icon">
                                   <span class="kit-icon heart"></span>
@@ -325,6 +334,7 @@
 
                               <button
                                 class="button button--cub button--bg-gray-300 button--cub-md-add br-el--rounded-base button--comparison"
+                                aria-label="добавить в сравнение"
                               >
                                 <div class="icon">
                                   <span
@@ -336,6 +346,7 @@
                               <button
                                 title="On the Map"
                                 class="button button--bg-secondary-200 modal-open"
+                                aria-label="Посмотреть объект на карте"
                                 data-modal="mapModal"
                                 style="width: 100%"
                               >
@@ -352,6 +363,7 @@
                             <button
                               title="On the Map"
                               class="button button--bg-gray-200 button--lg button--rounded-3xl modal-open"
+                              aria-label="Открыть модалку с картой"
                               data-modal="mapModal"
                             >
                               <div class="icon icon--big">
@@ -371,6 +383,7 @@
                           <div class="tablet-show">
                             <button
                               class="button button--noMassa text-primary-100"
+                              aria-label="Пожаловаться"
                             >
                               <div class="icon icon--little">
                                 <span
@@ -499,9 +512,10 @@
 
                     <div class="object-bottom__top-btns tablet-none">
                       <button
-                        class="button button--lg button--bg-primary-100 button--lg-tablet modal-open"
+                      class="button button--lg button--bg-primary-100 button--lg-tablet modal-open"
                         type="button"
                         data-modal="requestModal"
+                        aria-label="Открыть модалку для отправки контактов"
                       >
                         <div class="icon icon--big">
                           <span class="kit-icon building-01"></span>
@@ -513,6 +527,7 @@
 
                       <button
                         data-modal="contactUpModal"
+                        aria-label="Открыть модалку для отправки контактов"
                         class="button button--lg button--bg-primary-200 button--lg-tablet modal-open"
                         data-validate-inputs='["name", "email", "tel", "message"]'
                         type="button"
@@ -646,9 +661,10 @@
 
                       <div class="object-bottom__top-btns tablet-show">
                         <button
-                          class="button button--lg button--bg-primary-100 button--rounded-md modal-open"
+                          aria-label="Открыть модалку для отправки контактов" class="button button--lg button--bg-primary-100 button--rounded-md modal-open"
                           type="button"
                           data-modal="requestModal"
+          
                         >
                           <div class="icon">
                             <span class="kit-icon building-01"></span>
@@ -867,6 +883,7 @@
                               type="button"
                               class="button button--bg-primary-100 br-el--rounded-md modal-open"
                               data-modal="schemaModal"
+                              aria-label="Открыть визуальную схему"
                             >
                               <p class="p2 medium-font">Open</p>
 
@@ -961,6 +978,7 @@
                           <button
                             type="button"
                             class="button button--bg-gray-300 button--lg button--rounded-md accordeon__question"
+                            aria-label="Посмотреть поля фильтра"
                           >
                             <div class="icon">
                               <span class="kit-icon filter-icon"></span>
@@ -1099,6 +1117,7 @@
                           >
                             <button
                               class="input-box__info dropdown__btn"
+                              aria-label="какой-то текст"
                               type="button"
                             >
                               <div class="check">
@@ -1161,6 +1180,7 @@
                           <button
                             type="button"
                             class="button button--lg button--bg-primary-200 button--rounded-md tablet-none"
+                            aria-label="Поиск"
                           >
                             <p class="p2 medium-font">Search</p>
 
@@ -1313,6 +1333,7 @@
                       <button
                         class="button button--bg-secondary-200 button--rounded-2xl modal-open"
                         data-modal="featuresModal"
+                        aria-label="Посмотреть все особенности"
                       >
                         <p class="p2-add medium-font">See all</p>
 
@@ -1377,6 +1398,7 @@
                           aria-label="Открыть модальное окно"
                           class="button button--bg-primary-100 button--xl modal-open"
                           data-modal="requestModal"
+                          aria-label="Открыть модалку для отправки контактов"
                         >
                           <p class="p2 semibold-font">Send a request</p>
 
@@ -1803,6 +1825,7 @@
                     <button
                       class="button button--bg-primary-100 modal-open br-el--rounded-3xl"
                       data-modal="requestModal"
+                      aria-label="Открыть модалку для отправки контактов"
                       style="width: 100%; min-height: 48px"
                     >
                       <div class="icon">
@@ -1893,6 +1916,7 @@
                             <div class="floor__footer-content">
                               <button
                                 class="button button--circle button--bg-gray-300 arrow-swiper prev"
+                                aria-label="Предыдущий слайд"
                               >
                                 <div class="icon icon--big">
                                   <span class="kit-icon arrow-left-lg"></span>
@@ -1903,6 +1927,7 @@
 
                               <button
                                 class="button button--circle button--bg-gray-300 arrow-swiper next"
+                                aria-label="След слайд"
                               >
                                 <div class="icon icon--big">
                                   <span class="kit-icon arrow-right-lg"></span>
@@ -1914,9 +1939,10 @@
                       </div>
 
                       <button
-                        class="button button--lg button--bg-primary-100 modal-open tablet-show"
+                      class="button button--lg button--bg-primary-100 modal-open tablet-show"
                         type="button"
                         data-modal="requestModal"
+                        aria-label="Открыть модалку для отправки контактов"
                       >
                         <p class="p2 medium-font">Get all floor plans</p>
 
@@ -2053,6 +2079,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2061,6 +2088,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2088,6 +2116,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2096,6 +2125,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2129,6 +2159,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2137,6 +2168,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2164,6 +2196,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2172,6 +2205,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2241,6 +2275,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2249,6 +2284,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2276,6 +2312,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2284,6 +2321,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2317,6 +2355,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2325,6 +2364,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2352,6 +2392,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2360,6 +2401,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2429,6 +2471,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2437,6 +2480,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2464,6 +2508,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2472,6 +2517,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2505,6 +2551,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2513,6 +2560,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2540,6 +2588,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="2d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">2D</p>
@@ -2548,6 +2597,7 @@
                                     <button
                                       class="button button--sm button--bg-secondary-200 modal-open"
                                       data-modal="floorModal"
+                                      aria-label="Открыть модалку с планами"
                                       data-checked="3d-floor-popup"
                                     >
                                       <p class="p3 text-uppercase">3D</p>
@@ -2589,6 +2639,7 @@
                     <button
                       class="button button--bg-primary-100 modal-open br-el--rounded-3xl"
                       data-modal="requestModal"
+                      aria-label="Открыть модалку для отправки контактов"
                       style="width: 100%; min-height: 48px"
                     >
                       <div class="icon">
@@ -3465,7 +3516,7 @@
                           class="btn-decor"
                           data-block="more-btn"
                           aria-label="Посмотреть больше"
-                          data-more-text="Read more"
+                          data-more-text="read more" aria-label="read more"
                           data-less-text="Read less"
                           type="button"
                         >
@@ -3544,9 +3595,10 @@
                       <footer class="promo-content__footer">
                         <button
                           type="button"
-                          aria-label="Открыть модальное окно"
+                
                           class="button button--bg-primary-100 button--xl modal-open"
                           data-modal="requestModal"
+                          aria-label="Открыть модалку для отправки контактов"
                         >
                           <p class="p2 semibold-font">Get information</p>
 
@@ -3710,6 +3762,7 @@
                     <button
                       class="button button--bg-primary-100 modal-open br-el--rounded-3xl"
                       data-modal="requestModal"
+                      aria-label="Открыть модалку для отправки контактов"
                       style="width: 100%; min-height: 48px"
                     >
                       <div class="icon">
@@ -3741,7 +3794,10 @@
                     <div class="contact-aside__items">
                       <div class="share list-popup relative relative-top">
                         <div class="share__btns">
-                          <button class="button button--bg-gray-200 button--lg">
+                          <button
+                            class="button button--bg-gray-200 button--lg"
+                            aria-label="Поделиться"
+                          >
                             <div class="icon icon--big">
                               <span class="kit-icon share-android"></span>
                             </div>
@@ -3773,7 +3829,11 @@
                     @@include('../modules/contact-form-aside.html')
 
                     <div class="contact-aside__footer">
-                      <button type="button" class="chips">
+                      <button
+                        type="button"
+                        class="chips"
+                        aria-label="пожаловаться"
+                      >
                         <div class="icon icon--little">
                           <span class="kit-icon flag"></span>
                         </div>
@@ -3848,12 +3908,9 @@
       @@include('../modals/gallery.html') @@include('../modals/schema.html')
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"
-      defer
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/chart/index.js" defer></script>
+    <script src="/js/lib/chart/datalabels.js" defer></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
 
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>

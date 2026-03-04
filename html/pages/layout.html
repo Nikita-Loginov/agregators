@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Планировка", "links" :
-  ["./css/object.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css"] })
+  ["./css/object.css", "./css/lib/swiper.min.css", "/css/lib/tom-select.css"] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -63,6 +62,7 @@
                           <div class="share__btns">
                             <button
                               class="button button--bg-gray-200 button--cub button--cub-sm"
+                              aria-label="Поделиться"
                             >
                               <div class="icon icon--small">
                                 <span class="kit-icon share-android"></span>
@@ -117,7 +117,7 @@
                             <img
                               src="/img/floor/three.webp"
                               alt="фотография"
-                              loading="lazy"
+                              fetchpriority="high"
                             />
                           </picture>
                         </div>
@@ -157,7 +157,7 @@
                       >
                         <div class="share__btns">
                           <button
-                            class="button button--bg-gray-200 button--md2x"
+                            class="button button--bg-gray-200 button--md2x" aria-label="Поделиться"
                           >
                             <div class="icon icon--little">
                               <span class="kit-icon share-android"></span>
@@ -194,7 +194,9 @@
                 <div class="object-bottom__content">
                   <div class="object-bottom__top">
                     <div class="object-bottom__top-items-boxs">
-                      <div class="object-bottom__top-items-box object-bottom__top-items-box--row-lg">
+                      <div
+                        class="object-bottom__top-items-box object-bottom__top-items-box--row-lg"
+                      >
                         <div class="object-bottom__top-item">
                           <div class="object-bottom__top-line">
                             <div class="price">
@@ -204,7 +206,9 @@
                                 <p class="h2 fz-48-26">
                                   1,102,500
 
-                                  <span class="text-uppercase h4 fz-30-16">AED</span>
+                                  <span class="text-uppercase h4 fz-30-16"
+                                    >AED</span
+                                  >
                                 </p>
 
                                 <div class="price__content">
@@ -286,7 +290,9 @@
                       </div>
                     </div>
 
-                    <div class="object-bottom__top-footer object-bottom__top-footer--reverse-media">
+                    <div
+                      class="object-bottom__top-footer object-bottom__top-footer--reverse-media"
+                    >
                       <div class="object-bottom__top-items">
                         <div class="guide-item">
                           <a
@@ -295,7 +301,9 @@
                             title="Guide"
                             class="guide-item__header"
                           >
-                            <p class="p2 bold-font text-secondary-100">Building</p>
+                            <p class="p2 bold-font text-secondary-100">
+                              Building
+                            </p>
 
                             <div class="icon icon--big">
                               <span class="kit-icon arrow-right-md"></span>
@@ -338,7 +346,9 @@
                             title="Guide"
                             class="guide-item__header"
                           >
-                            <p class="p2 bold-font text-secondary-100">Building</p>
+                            <p class="p2 bold-font text-secondary-100">
+                              Building
+                            </p>
 
                             <div class="icon icon--big">
                               <span class="kit-icon arrow-right-md"></span>
@@ -592,6 +602,7 @@
                       <button
                         class="button button--bg-secondary-200 button--rounded-2xl modal-open"
                         data-modal="featuresModal"
+                        aria-label="Посмотреть все особенности"
                       >
                         <p class="p2 medium-font">See all</p>
 
@@ -625,6 +636,7 @@
                         <div class="dropdown dropdown--price input-box">
                           <button
                             class="input-box__info dropdown__btn"
+                            aria-label="какой-то текст"
                             type="button"
                           >
                             <div class="check">
@@ -683,7 +695,7 @@
                         </div>
                         <button
                           type="button"
-                          class="button button--lg button--bg-primary-200 button--rounded-md"
+                          class="button button--lg button--bg-primary-200 button--rounded-md" aria-label="Поиск"
                         >
                           <p class="p2 medium-font">Search</p>
 
@@ -734,7 +746,10 @@
                     <div class="contact-aside__items">
                       <div class="share list-popup relative relative-top">
                         <div class="share__btns">
-                          <button class="button button--bg-gray-200 button--lg">
+                          <button
+                            class="button button--bg-gray-200 button--lg"
+                            aria-label="Поделиться"
+                          >
                             <div class="icon icon--big">
                               <span class="kit-icon share-android"></span>
                             </div>
@@ -766,7 +781,11 @@
                     @@include('../modules/contact-form-aside.html')
 
                     <div class="contact-aside__footer">
-                      <button type="button" class="chips">
+                      <button
+                        type="button"
+                        class="chips"
+                        aria-label="пожаловаться"
+                      >
                         <div class="icon icon--little">
                           <span class="kit-icon flag"></span>
                         </div>
@@ -786,10 +805,7 @@
       @@include('../modals/features.html')
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"
-      defer
-    ></script>
+    <script src="/js/lib/tom-select.min.js" defer defer></script>
 
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/layout.js" type="module"></script>

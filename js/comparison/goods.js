@@ -6,7 +6,7 @@ export const renderGoodsSwiper = (swiperEl, data) => {
   const wrapper = swiperEl.querySelector(".swiper-wrapper");
   wrapper.innerHTML = "";
 
-  data.forEach((item) => {
+  data.forEach((item, index) => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
 
@@ -30,7 +30,8 @@ export const renderGoodsSwiper = (swiperEl, data) => {
               <img
                 src="${item.img.src}.webp"
                 alt="${item.title}"
-                loading="lazy"
+                loading="${index ? 'lazy' : 'eager'}"
+                fetchpriority="${index ? '' : 'high'}"
               />
             </picture>
           </a>
@@ -38,7 +39,6 @@ export const renderGoodsSwiper = (swiperEl, data) => {
           <div class="good-small__img-decor">
             <div class="good-small__btns">
 
-              <!-- favorite -->
               <button
                 aria-label="Добавить в избранное"
                 class="button button--bg-gray-200 button--cub button--cub-md-add button--rounded-base button--favorite
@@ -50,7 +50,6 @@ export const renderGoodsSwiper = (swiperEl, data) => {
                 </div>
               </button>
 
-              <!-- comparison -->
               <button
                 aria-label="Добавить в сравнение"
                 class="button button--bg-gray-200 button--cub button--cub-md-add button--rounded-base button--comparison

@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Agencies profile", "links" :
   ["./css/companies-info.css","./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css", ] })
+  "/css/lib/tom-select.css", ] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -55,7 +55,11 @@
 
                 <div class="tablet-none">
                   <div class="md-desktop-show">
-                    <button class="button button--noMassa text-primary-100">
+                    <button
+                      class="button button--noMassa text-primary-100"
+                      aria-label="Пожаловаться"
+                      aria-label="пожаловаться"
+                    >
                       <span class="icon icon--little">
                         <span class="kit-icon flag"></span>
                       </span>
@@ -66,10 +70,15 @@
                 </div>
               </div>
 
-              <div class="top-page__header top-page__header--row" style="align-items: center">
+              <div
+                class="top-page__header top-page__header--row"
+                style="align-items: center"
+              >
                 <h1 class="h2">Fam Properties</h1>
 
-                <div class="rating-item rating-item--gray-color-200 rating-item--mini">
+                <div
+                  class="rating-item rating-item--gray-color-200 rating-item--mini"
+                >
                   <span class="icon text-primary-100">
                     <span class="kit-icon star"></span>
                   </span>
@@ -124,20 +133,18 @@
                                 <img
                                   src="/img/companie/two.webp"
                                   alt="фотография"
-                                  loading="lazy"
+                                  fetchpriority="high"
                                 />
                               </picture>
                             </div>
-  
+
                             <div class="banner-profile__content">
-                              <ul
-                                class="banner-profile__list"
-                              >
+                              <ul class="banner-profile__list">
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
                                     <p class="p2">Working languages</p>
                                   </div>
-  
+
                                   <div
                                     class="banner-profile__link-mean banner-profile__link-mean--row"
                                     data-block="more-relative"
@@ -156,7 +163,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -168,7 +175,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -180,7 +187,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -190,7 +197,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -202,7 +209,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -214,7 +221,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -224,7 +231,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -236,7 +243,7 @@
                                           </span>
                                         </div>
                                       </div>
-  
+
                                       <div class="more-block__item">
                                         <div class="banner-profile__flags-item">
                                           <span class="icon icon--big">
@@ -249,7 +256,7 @@
                                         </div>
                                       </div>
                                     </div>
-  
+
                                     <footer
                                       class="quick__footer"
                                       data-block="more-footer"
@@ -257,6 +264,7 @@
                                       <button
                                         data-block="more-btn"
                                         class="button button--noBg button--noMassa"
+                                        aria-label="Посмотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -267,18 +275,21 @@
                                             ></span>
                                           </span>
                                         </span>
-  
-                                        <p style="display: none;" data-block="more-btn-text"></p>
+
+                                        <p
+                                          style="display: none"
+                                          data-block="more-btn-text"
+                                        ></p>
                                       </button>
                                     </footer>
                                   </div>
                                 </li>
-  
+
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
                                     <p class="p2">Founded</p>
                                   </div>
-  
+
                                   <div
                                     class="banner-profile__link-mean clamp-text-block"
                                     data-block="clamp-relative"
@@ -290,7 +301,7 @@
                                     >
                                       2009
                                     </p>
-  
+
                                     <div
                                       data-block="clamp-footer"
                                       class="more-clamp-footer"
@@ -298,6 +309,7 @@
                                       <button
                                         data-block="clamp-btn"
                                         class="button button--noBg button--noMassa"
+                                        aria-label="Посмотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -312,12 +324,12 @@
                                     </div>
                                   </div>
                                 </li>
-  
+
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
                                     <p class="p2">License No.</p>
                                   </div>
-  
+
                                   <div
                                     class="banner-profile__link-mean clamp-text-block"
                                     data-block="clamp-relative"
@@ -330,7 +342,7 @@
                                       1234 1234 1234 1234 1234 1234 1234 1234
                                       1234 1234 1234 1234
                                     </p>
-  
+
                                     <div
                                       data-block="clamp-footer"
                                       class="more-clamp-footer"
@@ -338,6 +350,7 @@
                                       <button
                                         data-block="clamp-btn"
                                         class="button button--noBg button--noMassa"
+                                        aria-label="Посмотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -352,12 +365,12 @@
                                     </div>
                                   </div>
                                 </li>
-  
+
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
                                     <p class="p2 text-uppercase">ORN</p>
                                   </div>
-  
+
                                   <div
                                     class="banner-profile__link-mean clamp-text-block"
                                     data-block="clamp-relative"
@@ -369,7 +382,7 @@
                                     >
                                       1858
                                     </p>
-  
+
                                     <div
                                       data-block="clamp-footer"
                                       class="more-clamp-footer"
@@ -377,6 +390,7 @@
                                       <button
                                         data-block="clamp-btn"
                                         class="button button--noBg button--noMassa"
+                                        aria-label="Посмотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -391,12 +405,12 @@
                                     </div>
                                   </div>
                                 </li>
-  
+
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
                                     <p class="p2">Speciality services</p>
                                   </div>
-  
+
                                   <div
                                     class="banner-profile__link-mean clamp-text-block"
                                     data-block="clamp-relative"
@@ -408,7 +422,7 @@
                                     >
                                       Sell, mortgage, after-sales service
                                     </p>
-  
+
                                     <div
                                       data-block="clamp-footer"
                                       class="more-clamp-footer"
@@ -416,6 +430,7 @@
                                       <button
                                         data-block="clamp-btn"
                                         class="button button--noBg button--noMassa"
+                                        aria-label="Посмотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -430,12 +445,12 @@
                                     </div>
                                   </div>
                                 </li>
-  
+
                                 <li class="banner-profile__link">
                                   <div class="banner-profile__link-key">
                                     <p class="p2">Regions</p>
                                   </div>
-  
+
                                   <div
                                     class="banner-profile__link-mean clamp-text-block"
                                     data-block="clamp-relative"
@@ -449,7 +464,7 @@
                                       Lorem ipsum dolor sit amet consectetur
                                       adipisicing elit. Provident, dolorem?
                                     </p>
-  
+
                                     <div
                                       data-block="clamp-footer"
                                       class="more-clamp-footer"
@@ -457,6 +472,7 @@
                                       <button
                                         data-block="clamp-btn"
                                         class="button button--noBg button--noMassa"
+                                        aria-label="Посмотреть больше"
                                       >
                                         <span
                                           class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -477,7 +493,10 @@
                         </div>
                       </div>
 
-                      <div class="md-desktop-show companies-detail__aside" style="height: auto">
+                      <div
+                        class="md-desktop-show companies-detail__aside"
+                        style="height: auto"
+                      >
                         <div
                           class="companies-detail__item-block"
                           style="width: 100%"
@@ -486,7 +505,7 @@
                             @@include('../modules/contact-form-aside.html')
                           </aside>
 
-                          <button class="button button--noMassa">
+                          <button class="button button--noMassa" aria-label="Пожаловаться">
                             <span class="icon icon--little text-secondary-300">
                               <span class="kit-icon flag"></span>
                             </span>
@@ -498,7 +517,6 @@
                         </div>
                       </div>
                     </div>
-                  
                   </section>
 
                   <section class="companies-detail__item">
@@ -677,7 +695,8 @@
                             data-block="more-btn"
                             aria-label="Посмотреть больше"
                             type="button"
-                            data-more-text="Read more"
+                            data-more-text="read more"
+                            aria-label="read more"
                             data-less-text="Read less"
                           >
                             <p
@@ -860,6 +879,7 @@
                             <div class="property__filter-search">
                               <button
                                 class="button button--cub button--bg-secondary-200 button--cub-md-add accordeon__question"
+                                aria-label="Открыть фильтр"
                                 type="button"
                               >
                                 <div class="button__block">
@@ -977,7 +997,7 @@
                               </div>
 
                               <button
-                                class="button button--cub button--bg-primary-100 button--cub-md-add"
+                                class="button button--cub button--bg-primary-100 button--cub-md-add" aria-label="Поиск"
                                 type="button"
                               >
                                 <div class="icon">
@@ -1055,6 +1075,7 @@
                               >
                                 <button
                                   class="input-box__info dropdown__btn"
+                                  aria-label="какой-то текст"
                                   type="button"
                                 >
                                   <div class="check">
@@ -1227,6 +1248,7 @@
                               <button
                                 type="button"
                                 class="button button--lg button--bg-primary-200 button--rounded-md"
+                                aria-label="Поиск"
                               >
                                 <p class="p2 medium-font">Search</p>
 
@@ -1347,7 +1369,11 @@
                     @@include('../modules/contact-form-aside.html')
 
                     <div class="contact-aside__footer">
-                      <button type="button" class="chips">
+                      <button
+                        type="button"
+                        class="chips"
+                        aria-label="пожаловаться"
+                      >
                         <span class="icon icon--little">
                           <span class="kit-icon flag"></span>
                         </span>
@@ -1368,7 +1394,7 @@
     </div>
 
     <script src="/js/lib/swiper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
 
     <script src="/js/companies-info.js" type="module"></script>
   </body>

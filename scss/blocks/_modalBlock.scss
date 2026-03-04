@@ -792,7 +792,8 @@
       min-height: 104px;
 
       &__swiper-box {
-        aspect-ratio: 1 / 1;
+        aspect-ratio: 1 / 1 !important;
+        height: stretch !important;
         // width: auto;
       }
 

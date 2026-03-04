@@ -2,6 +2,7 @@ import { categoryItems, comparisonData } from "./data.js";
 import { renderGoodsSwiper } from "./goods.js";
 import { renderComparisonTable } from "./comparisonTable.js";
 import { initGoodsSwiper } from "./goods.js";
+import { hiddenLoader } from "../modules/loader.js";
 
 export const initComparison = () => {
   const table = document.querySelector('[data-block="comparison-goods-table"]');
@@ -17,6 +18,8 @@ export const initComparison = () => {
   const goodsSwiper = initGoodsSwiper(goodsSwiperEl);
 
   syncTableWithSwiper(goodsSwiper, table);
+
+  hiddenLoader(goodsSwiperEl)
 };
 
 const syncTableWithSwiper = (swiper, table) => {

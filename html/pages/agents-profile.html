@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Agencies profile", "links" :
   ["./css/companies-info.css","./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css", ] })
+  "/css/lib/tom-select.css", ] })
   <body class="white-page">
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -83,7 +83,7 @@
                       <img
                         src="/img/persons/five.webp"
                         alt="фотография"
-                        loading="lazy"
+                        fetchpriority="high"
                       />
                     </picture>
                   </div>
@@ -248,6 +248,7 @@
                                     <button
                                       data-block="more-btn"
                                       class="button button--noBg button--noMassa"
+                                      aria-label="read more"
                                     >
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -292,6 +293,7 @@
                                     <button
                                       data-block="clamp-btn"
                                       class="button button--noBg button--noMassa"
+                                      aria-label="read more"
                                     >
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -331,6 +333,7 @@
                                     <button
                                       data-block="clamp-btn"
                                       class="button button--noBg button--noMassa"
+                                      aria-label="read more"
                                     >
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -370,6 +373,7 @@
                                     <button
                                       data-block="clamp-btn"
                                       class="button button--noBg button--noMassa"
+                                      aria-label="read more"
                                     >
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -409,6 +413,7 @@
                                     <button
                                       data-block="clamp-btn"
                                       class="button button--noBg button--noMassa"
+                                      aria-label="read more"
                                     >
                                       <span
                                         class="button button--circle button--circle-3xs button--bg-gray-400"
@@ -429,11 +434,15 @@
                               <div class="banner-profile__content-block">
                                 <button
                                   class="button button--bg-primary-100 modal-open"
+                                  aria-label="Открыть форму"
                                   type="button"
                                   data-modal="contactUpModal"
+                                  aria-label="Открыть модалку для отправки контактов"
                                   data-validate-inputs='["name", "email", "tel", "message"]'
                                 >
-                                  <p class="p3 medium-font">Contact specialist</p>
+                                  <p class="p3 medium-font">
+                                    Contact specialist
+                                  </p>
 
                                   <div class="icon" style="rotate: 45deg">
                                     <span class="kit-icon arrow-up-md"></span>
@@ -443,7 +452,7 @@
                                 <button
                                   class="button button--noMassa button--rounded-md text-secondary-300"
                                   type="button"
-                                  
+                                  aria-label="Пожаловаться"
                                 >
                                   <span class="icon icon--little">
                                     <span class="kit-icon flag"></span>
@@ -457,8 +466,6 @@
                             </div>
                           </div>
                         </div>
-
-                      
                       </div>
                     </div>
                   </section>
@@ -517,7 +524,8 @@
                             data-block="more-btn"
                             aria-label="Посмотреть больше"
                             type="button"
-                            data-more-text="Read more"
+                            data-more-text="read more"
+                            aria-label="read more"
                             data-less-text="Read less"
                           >
                             <p
@@ -785,6 +793,7 @@
                             <div class="property__filter-search">
                               <button
                                 class="button button--cub button--bg-secondary-200 button--cub-md-add accordeon__question"
+                                aria-label="Открыть фильтр"
                                 type="button"
                               >
                                 <div class="button__block">
@@ -903,6 +912,7 @@
 
                               <button
                                 class="button button--cub button--bg-primary-100 button--cub-md-add"
+                                aria-label="Поиск"
                                 type="button"
                               >
                                 <div class="icon">
@@ -980,6 +990,7 @@
                               >
                                 <button
                                   class="input-box__info dropdown__btn"
+                                  aria-label="какой-то текст"
                                   type="button"
                                 >
                                   <div class="check">
@@ -1152,6 +1163,7 @@
                               <button
                                 type="button"
                                 class="button button--lg button--bg-primary-200 button--rounded-md"
+                                aria-label="Поиск"
                               >
                                 <p class="p2 medium-font">Search</p>
 
@@ -1278,7 +1290,11 @@
                     @@include('../modules/contact-form.html')
 
                     <div class="contact-aside__footer">
-                      <button type="button" class="chips">
+                      <button
+                        type="button"
+                        class="chips"
+                        aria-label="пожаловаться"
+                      >
                         <span class="icon icon--little">
                           <span class="kit-icon flag"></span>
                         </span>
@@ -1300,7 +1316,7 @@
     </div>
 
     <script src="/js/lib/swiper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
 
     <script src="/js/companies-info.js" type="module"></script>
   </body>

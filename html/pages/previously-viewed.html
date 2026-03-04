@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "История просмотра", "links" :
   ["./css/previously-viewed.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css"] })
+  "/css/lib/tom-select.css"] })
   <body>
     <div class="wrapper">
       @@include('../modules/header.html')
@@ -136,7 +136,7 @@
       @@include('../modules/footer.html', {"inner" : ''})
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/previously-viewed.js" type="module"></script>
   </body>

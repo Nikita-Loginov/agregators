@@ -9,6 +9,7 @@ import { searcBlockTab } from "./modules/tab.js";
 import { initSimpleMap } from "./modules/map.js";
 import { lagerhauser } from "./data/lagerhauser.js";
 import { initTabletSwipers } from "./modules/table-swiper.js";
+import { hiddenLoader } from "./modules/loader.js";
 
 const swipers = [
   {
@@ -33,6 +34,9 @@ const initSwipersGood = () => {
       ...SWIPERS.GALLERY_BIG.events
     },
   });
+  
+
+  hiddenLoader(swiperThumbs.hostEl);
 };
 
 const handleGlobalClick = (e) => {

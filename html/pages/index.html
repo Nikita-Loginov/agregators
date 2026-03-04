@@ -2,7 +2,7 @@
 <html lang="en">
   @@include('../modules/head.html', { "title" : "Главная", "links" :
   ["./css/main.css", "./css/lib/swiper.min.css",
-  "https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.min.css"] })
+  "/css/lib/tom-select.css"] })
 
   <body class="white-page">
     <div class="wrapper">
@@ -322,7 +322,7 @@
                                   data-fixed-dropdown
                                 >
                                   <button
-                                    class="input-box__info dropdown__btn"
+                                    class="input-box__info dropdown__btn" aria-label="какой-то текст"
                                     type="button"
                                   >
                                     <div class="check">
@@ -1547,7 +1547,7 @@
       @@include('../modals/savedSearch.html')
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
+    <script src="/js/lib/tom-select.min.js" defer></script>
     <script src="/js/lib/swiper.min.js"></script>
     <script src="/js/index.js" type="module"></script>
   </body>
