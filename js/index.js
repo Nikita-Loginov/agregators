@@ -35,6 +35,20 @@ const swipers = [
     },
   },
   {
+    selector: ".swiper-box--popular .swiper--popular",
+    breakpoint: 122300000000,
+    options: {
+      ...CARDS_OPTIONS,
+      pagination: {
+        el: getPaginationSwiper(
+          document.querySelector(
+            ".swiper-box--popular .swiper--popular .swiper__detail"
+          )
+        ).pagination,
+      },
+    },
+  },
+  {
     selector: ".swiper-box--dev .swiper--dev",
     breakpoint: 122300000000,
     options: {
