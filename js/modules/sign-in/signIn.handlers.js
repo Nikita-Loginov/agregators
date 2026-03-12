@@ -14,6 +14,6 @@ export const renderStep = (form) => {
   renderHeader(form, step, steps.length + 1);
   renderBody(form, step);
   
-  renderFooter(step.footer, form.querySelector("[data-sign-footer]"));
+  renderFooter(step.footer, form.querySelector("[data-sign-footer]"), steps.length, step.step);
   renderBreadcrumbs(form, step)
 };

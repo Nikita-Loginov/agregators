@@ -64,6 +64,26 @@
     gap: 12px;
     flex-wrap: wrap;
     color: var(--dark-color-600);
+
+    & > *:not(:last-child) {
+      padding-right: 12px;
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        content:"";
+        position: absolute;
+        right: 0;
+        width: 1px;
+        height: 18px;
+        background-color: var(--dark-color-600);
+      }
+    }
+
+    button {
+      background-color: transparent;
+    }
   }
 
   @media (max-width: $tablet-breakpoint) {

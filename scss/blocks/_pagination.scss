@@ -26,15 +26,13 @@
     }
   }
 
- 
-
-  @media (max-width: 767px) {
+  @media (max-width: $tablet-breakpoint) {
     width: 100%;
     flex-direction: column-reverse;
     gap: 16px;
 
     &__details {
-      // display: none;
+      display: none;
     }
 
     .button--circle {

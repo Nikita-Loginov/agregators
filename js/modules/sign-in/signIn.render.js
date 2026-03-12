@@ -25,8 +25,10 @@ export const renderContentInfo = (box, content) => {
     `;
 };
 
-export const renderFooter = (footer, container) => {
+export const renderFooter = (footer, container, stepsLength, currentStep) => {
   container.innerHTML = "";
+
+  // console.log(stepsLength, currentStep);
 
   const footerContent = document.createElement("div");
   footerContent.className = "form-sign__footer-content";
@@ -65,7 +67,7 @@ export const renderFooter = (footer, container) => {
   }
 
   if (hasButtons) {
-    const btnContStyle = !hasSocial ? `style="width: 100%"` : "";
+    const btnContStyle = !hasSocial ? `` : "";
     const boxStyle = !hasSocial ? `style="width: 100%"` : "";
 
     footerContent.insertAdjacentHTML(
@@ -73,9 +75,13 @@ export const renderFooter = (footer, container) => {
       `
       <div class="form-sign__footer-btns" ${boxStyle}>
         <button type="button" data-back class="button button--noBg button--noMassa">
-          Back
+          <div class="icon icon--big">
+            <span class="kit-icon chevron-left"></span>
+          </div>
+          
+          <p class="p2-add text-secondary-100 medium-font">Back<p>
         </button>
-        <button ${btnContStyle} type="submit" class="button button--lg button--rounded-md button--bg-secondary-100">
+        <button ${btnContStyle} type="submit" class="button button--lg button--rounded-md button--bg-secondary-100 form-sign__footer-btn-continue">
           <p class="p2 medium-font">Continue</p>
           <div class="icon icon--big">
             <span class="kit-icon chevron-right"></span>
@@ -110,6 +116,10 @@ export const renderFooter = (footer, container) => {
       </a>
     `
     );
+  }
+
+  if (stepsLength === currentStep - 1) {
+    return;
   }
 
   container.appendChild(footerContent);
@@ -203,10 +213,14 @@ export const renderBody = (form, step) => {
 
           initPhoneMasks(form);
         } else {
+          const inputBoxClass = `input-box input-box--white form__item ${
+            item.bigInput ? "form-sign__input-big" : ""
+          }`;
+
           inputs.insertAdjacentHTML(
             "beforeend",
             `
-            <div class="input-box input-box--white form__item">
+            <div class="${inputBoxClass}">
               <label class="input-box__content">
                 <p class="p3 medium-font input-box__label">${item.head}</p>
                 <div class="input-box__info">
@@ -311,19 +325,19 @@ export const renderBody = (form, step) => {
                     </label>`
         );
       }
-
-      
     });
 
     if (step.form.important) {
       const checked = signInState.formData["important"] ? "checked" : "";
 
-      const {title, text, icon} = step.form.important;
+      const { title, text, icon } = step.form.important;
 
-      inputs.insertAdjacentHTML('beforeend', `<div class="warning">
+      inputs.insertAdjacentHTML(
+        "beforeend",
+        `<div class="warning">
                   <div class="warning__header">
                     <div class="icon icon--lg text-yellow-300">
-                      <span class="kit-icon ${icon || 'wavy-warning'}"></span>
+                      <span class="kit-icon ${icon || "wavy-warning"}"></span>
                     </div>
 
                     <p class="p2 medium-font">
@@ -348,17 +362,18 @@ export const renderBody = (form, step) => {
                       <div class="check-simple__errors form__errors p4"></div>
                     </label>
                   </div>
-                </div>`)
+                </div>`
+      );
     }
 
-    const formItems = box.querySelectorAll('.form__item')
+    const formItems = box.querySelectorAll(".form__item");
 
     formItems.forEach((formItem) => {
-      const input = formItem.querySelector('input');
+      const input = formItem.querySelector("input");
 
       toggleHasValue(input);
       validateFormField(formItem, { showError: false });
-    })
+    });
   } else {
     box.innerHTML = "";
     box.style.display = "none";
@@ -404,15 +419,15 @@ export const renderBreadcrumbs = (form, step) => {
 
   breadcrumbsList.innerHTML = "";
 
- 
   step.breadcrumbs.forEach((breadcrumb, index) => {
     const last = step.breadcrumbs.length - 1 === index;
     const classBreadcrumbItem = last
       ? "breadcrumbs__item"
       : "breadcrumbs__item link active active-noColor active-line";
-    
 
-      breadcrumbsList.insertAdjacentHTML('beforeend', `<li class="breadcrumbs__link">
+    breadcrumbsList.insertAdjacentHTML(
+      "beforeend",
+      `<li class="breadcrumbs__link">
                     <a
                       href="#"
                       aria-label="Вернуться на ${breadcrumb}"
@@ -420,6 +435,7 @@ export const renderBreadcrumbs = (form, step) => {
                       class="${classBreadcrumbItem}"
                       >${breadcrumb}</a
                     >
-                  </li>`)
+                  </li>`
+    );
   });
 };

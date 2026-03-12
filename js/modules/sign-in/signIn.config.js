@@ -73,52 +73,52 @@ export const SIGN_IN_CONFIG = {
     },
   ],
   company: [
+    // {
+    //   step: 2,
+    //   breadcrumbs: ["Home", "Sign up", "Company"],
+    //   headerContent: {
+    //     head: "Select company type",
+    //     text: ["This determines the features available to your account"],
+    //   },
+    //   form: {
+    //     items: [
+    //       {
+    //         type: "radio",
+    //         typeInput: "radio",
+    //         name: "company",
+    //         typeItem: "agency",
+    //         title: "Agency",
+    //         text: "Real estate agency or brokerage",
+    //         value: "",
+    //       },
+    //       {
+    //         type: "radio",
+    //         typeInput: "radio",
+    //         name: "company",
+    //         typeItem: "developer",
+    //         title: "Developer",
+    //         text: "Property developer or builder",
+    //         value: "",
+    //       },
+    //     ],
+    //     important: {
+    //       title: "Important: You can't change your company type later",
+    //       text: ["I understand that my choice of Agency is permanent and cannot be changed after account creation"],
+    //       icon : "wavy-warning",
+    //       value: "",
+    //     }
+    //   },
+    //   footer: {
+    //     policy: false,
+    //     policyValue: false,
+    //     detais: {
+    //       showed: false,
+    //       social: false,
+    //     },
+    //   },
+    // },
     {
       step: 2,
-      breadcrumbs: ["Home", "Sign up", "Company"],
-      headerContent: {
-        head: "Select company type",
-        text: ["This determines the features available to your account"],
-      },
-      form: {
-        items: [
-          {
-            type: "radio",
-            typeInput: "radio",
-            name: "company",
-            typeItem: "agency",
-            title: "Agency",
-            text: "Real estate agency or brokerage",
-            value: "",
-          },
-          {
-            type: "radio",
-            typeInput: "radio",
-            name: "company",
-            typeItem: "developer",
-            title: "Developer",
-            text: "Property developer or builder",
-            value: "",
-          },
-        ],
-        important: {
-          title: "Important: You can't change your company type later",
-          text: ["I understand that my choice of Agency is permanent and cannot be changed after account creation"],
-          icon : "wavy-warning",
-          value: "",
-        }
-      },
-      footer: {
-        policy: false,
-        policyValue: false,
-        detais: {
-          showed: false,
-          social: false,
-        },
-      },
-    },
-    {
-      step: 3,
       breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
       headerContent: {
         head: "Account info",
@@ -158,26 +158,6 @@ export const SIGN_IN_CONFIG = {
             placeholder: "",
             value: "",
           },
-        ],
-      },
-      footer: {
-        policy: false,
-        policyValue: false,
-        detais: {
-          showed: false,
-          social: false,
-        },
-      },
-    },
-    {
-      step: 4,
-      breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
-      headerContent: {
-        head: "Account password",
-        text: ["Set up your login credentials"],
-      },
-      form: {
-        items: [
           {
             type: "input",
             head: "Password",
@@ -206,8 +186,45 @@ export const SIGN_IN_CONFIG = {
         },
       },
     },
+    // {
+    //   step: 3,
+    //   breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
+    //   headerContent: {
+    //     head: "Account password",
+    //     text: ["Set up your login credentials"],
+    //   },
+    //   form: {
+    //     items: [
+    //       {
+    //         type: "input",
+    //         head: "Password",
+    //         typeInput: "password",
+    //         typeItem: "password",
+    //         placeholder: "Create strong password",
+    //         value: "",
+    //         state: true,
+    //       },
+    //       {
+    //         type: "input",
+    //         head: "Confirm password",
+    //         typeInput: "password",
+    //         typeItem: "passwordConfirm",
+    //         placeholder: "Re-enter your password",
+    //         value: "",
+    //       },
+    //     ],
+    //   },
+    //   footer: {
+    //     policy: true,
+    //     policyValue: "",
+    //     detais: {
+    //       showed: false,
+    //       social: false,
+    //     },
+    //   },
+    // },
     {
-      step: 5,
+      step: 3,
       breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
       headerContent: {
         head: "Account Created",
@@ -221,7 +238,8 @@ export const SIGN_IN_CONFIG = {
       },
       footer: {
         showed: true,
-        closeBtn: true,
+        closeBtn: false,
+
       },
     },
   ],
@@ -242,6 +260,7 @@ export const SIGN_IN_CONFIG = {
             typeItem: "name",
             placeholder: "ex. Jeffrey Dahmer",
             value: "",
+            bigInput: true,
           },
           {
             type: "input",
@@ -279,8 +298,8 @@ export const SIGN_IN_CONFIG = {
         ],
       },
       footer: {
-        policy: false,
-        policyValue: false,
+        policy: true,
+        policyValue: "",
         detais: {
           showed: false,
           social: false,

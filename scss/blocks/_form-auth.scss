@@ -3,7 +3,8 @@
   --form-auth-padding-y: 24px;
   --form-auth-gap: 24px;
   --form-auth-content-gap: 16px;
-  --form-auth-info-gap: 16px;
+  --form-auth-details-gap: 16px;
+  --form-auth-info-gap: 24px;
   --form-auth-inputs-gap: 16px;
   --form-auth-decor-gap: 12px;
   --form-auth-btns-gap: 10px;
@@ -16,6 +17,11 @@
   display: flex;
   flex-direction: column;
   gap: var(--form-auth-gap);
+
+  &.form {
+    --form-auth-gap: 24px;
+    gap: var(--form-auth-gap);
+  }
 
   &__content {
     display: flex;
@@ -60,6 +66,12 @@
     }
   }
 
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--form-auth-details-gap);
+  }
+
   &__socials {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -75,6 +87,8 @@
     --form-auth-info-gap: 32px;
     --form-auth-padding-x: 0;
     --form-auth-padding-y: 0;
+    --form-auth-inputs-gap: 20px;
+    --form-auth-content-gap: 20px;
 
     border-radius: 0px;
     background-color: transparent;

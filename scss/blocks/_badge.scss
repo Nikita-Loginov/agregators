@@ -142,7 +142,7 @@
 
 .badge-detail {
   --badge-padding-x: 16px;
-  --badge-padding-y: 4px;
+  --badge-padding-y: 3px;
   --badge-main-gap: #{calculate-clamp(12px, 16px, 1023px, 767px)};
   --badge-icon-size: 60px;
   --badge-content-gap: 2px;
@@ -157,7 +157,7 @@
   align-items: center;
   gap: var(--badge-main-gap);
   padding: var(--badge-padding-y) var(--badge-padding-x) var(--badge-padding-y)
-    4px;
+    3px;
   border-radius: var(--badge-border-radius);
   background-color: var(--badge-background-color);
   transition: var(--badge-transition);

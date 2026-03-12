@@ -6,42 +6,56 @@
     <div class="wrapper">
       @@include('../modules/header.html', {"details": "true"})
 
-      <main class="main main--small main--detail main--detail-big">
-        <div class="top-page tablet-none">
+      <main class="main main--small main--detail main--detail-big-s">
+        <div class="top-page">
           <div class="container">
             <div class="top-page__inner">
-              <div class="breadcrumbs">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__link">
-                    <a
-                      href="#"
-                      aria-label="Вернуться на Home"
-                      title="Home"
-                      class="breadcrumbs__item link active active-noColor active-line"
-                      >Home</a
-                    >
-                  </li>
+              <div class="top-page__header top-page__header--row">
+                <div class="breadcrumbs">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__link">
+                      <a
+                        href="#"
+                        aria-label="Вернуться на Home"
+                        title="Home"
+                        class="breadcrumbs__item link active active-noColor active-line"
+                        >Home</a
+                      >
+                    </li>
+  
+                    <li class="breadcrumbs__link">
+                      <span class="breadcrumbs__item">Companies</span>
+                    </li>
+                  </ul>
+  
+                  <a
+                    href="#"
+                    aria-label="Вернуться на Home"
+                    title="Home"
+                    class="breadcrumbs__media"
+                  >
+                    <span class="icon" style="rotate: 90deg">
+                      <span class="kit-icon arrow-circle-down"></span>
+                    </span>
+  
+                    <span>Home</span>
+                  </a>
+                </div>
 
-                  <li class="breadcrumbs__link">
-                    <span class="breadcrumbs__item">Companies</span>
-                  </li>
-                </ul>
-
-                <a
-                  href="#"
-                  aria-label="Вернуться на Home"
-                  title="Home"
-                  class="breadcrumbs__media"
-                >
-                  <span class="icon" style="rotate: 90deg">
-                    <span class="kit-icon arrow-circle-down"></span>
-                  </span>
-
-                  <span>Home</span>
-                </a>
+                <div class="top-page__details top-page__details--one tablet-show">
+                  <a
+                    href="#"
+                    title="Register your company"
+                    aria-label="Перейти на страницу Register your company"
+                    class="button button--bg-secondary-200 button--rounded-md button--lg"
+                  >
+                    <span class="p2 medium-font">Register your company</span>
+                  </a>
+                </div>
               </div>
+              
 
-              <div class="top-page__header">
+              <div class="top-page__header tablet-none">
                 <h1 class="h2">Companies</h1>
 
                 <div class="top-page__details top-page__details--one">
@@ -444,7 +458,7 @@
                                 </div>
 
                                 <div
-                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base companie-card__badge--media-full"
                                 >
                                   <p class="p3 medium-font text-secondary-100">
                                     6.222
@@ -495,6 +509,10 @@
                                     aria-label="Открыть модалку для отправки контактов"
                                     data-tooltip="Отставить заявку"
                                   >
+                                    <div class="icon">
+                                      <span class="kit-icon mail"></span>
+                                    </div>
+
                                     <span class="p3 medium-font"
                                       >Contact Seller</span
                                     >
@@ -578,7 +596,7 @@
                                 </div>
 
                                 <div
-                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base companie-card__badge--media-full"
                                 >
                                   <p class="p3 medium-font text-secondary-100">
                                     6.222
@@ -629,6 +647,10 @@
                                     aria-label="Открыть модалку для отправки контактов"
                                     data-tooltip="Отставить заявку"
                                   >
+                                    <div class="icon">
+                                      <span class="kit-icon mail"></span>
+                                    </div>
+
                                     <span class="p3 medium-font"
                                       >Contact Seller</span
                                     >
@@ -746,7 +768,7 @@
                                 </div>
 
                                 <div
-                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
+                                  class="badge badge--gray-color-100 badge--xl br-el--rounded-base companie-card__badge--media-full"
                                 >
                                   <p class="p3 medium-font text-secondary-100">
                                     6.222
@@ -797,6 +819,10 @@
                                     aria-label="Открыть модалку для отправки контактов"
                                     data-tooltip="Отставить заявку"
                                   >
+                                    <div class="icon">
+                                      <span class="kit-icon mail"></span>
+                                    </div>
+
                                     <span class="p3 medium-font"
                                       >Contact Seller</span
                                     >
@@ -846,7 +872,7 @@
                         <div class="promo-content__content">
                           <header class="promo-content__header">
                             <div class="promo-content__header-top">
-                              <p class="h3 fz-h3-h4">
+                              <p class="h3 fz-48-22">
                                 Want to sell your properties?
                               </p>
                             </div>

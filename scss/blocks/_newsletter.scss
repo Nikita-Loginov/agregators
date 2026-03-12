@@ -140,6 +140,12 @@
       }
     }
 
+    &__top-content {
+      .h6 {
+        font-size: 22px;
+      }
+    }
+
     &__inputs {
       width: 100%;
     }
@@ -160,6 +166,12 @@
 
     &__icon {
       height: 40px;
+    }
+
+    &__top-content {
+      .h6 {
+        font-size: 18px;
+      }
     }
   }
 }

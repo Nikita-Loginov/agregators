@@ -163,6 +163,18 @@ $mobile-breakpoint: 479px;
       height: var(--icon-base) !important;
     }
   }
+
+  &__badge--media-full {
+    width: 100%;
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  
 }
 
 @mixin share-hover {

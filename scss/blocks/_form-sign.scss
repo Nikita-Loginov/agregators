@@ -2,7 +2,7 @@
   display: none;
   flex-direction: column;
   gap: calculate-clamp(28px, 32px, 767px, 480px);
-  max-width: 488px;
+  max-width: 904px;
   width: 100%;
   margin: 0 auto;
 
@@ -13,13 +13,14 @@
   &__header {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(12px, 32px, 1023px, 767px);
+    gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);
   }
 
   &__header-content {
     display: flex;
     flex-direction: column;
-    gap: calculate-clamp(4px, 8px, 767px, 480px);
+    align-items: center;
+    gap: calculate-clamp(4px, 8px, $tablet-breakpoint, 480px);
 
     .textbox {
       color: var(--dark-color-600);
@@ -29,8 +30,8 @@
   &__box {
     background-color: var(--white-color);
     width: 100%;
-    padding: calculate-clamp(24px, 32px, 1023px, 767px)
-      calculate-clamp(20px, 32px, 767px, 480px);
+    padding: calculate-clamp(24px, 32px, $lg-breakpoint, $tablet-breakpoint)
+      calculate-clamp(20px, 32px, $tablet-breakpoint, 480px);
     border-radius: var(--radius-2xl);
     border: 1px solid var(--gray-color-600);
     display: flex;
@@ -39,9 +40,10 @@
   }
 
   &__inputs {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     flex-direction: column;
-    gap: calculate-clamp(20px, 24px, 1023px, 767px);
+    gap: calculate-clamp(20px, 24px, $lg-breakpoint, $tablet-breakpoint);
 
     .warning {
       display: none;
@@ -52,6 +54,10 @@
         display: flex;
       }
     }
+  }
+
+  &__input-big {
+    grid-column: 1 / -1;
   }
 
   &__footer {
@@ -69,14 +75,19 @@
 
   &__footer-btns {
     display: flex;
-    gap: calculate-clamp(20px, 23px, 767px, 480px);
+    justify-content: space-between;
+    gap: calculate-clamp(20px, 23px, $tablet-breakpoint, 480px);
+  }
+
+  &__footer-btn-continue {
+    min-width: calculate-clamp(200px, 240px, $lg-breakpoint, $tablet-breakpoint);
   }
 
   &__footer-socials {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: calculate-clamp(4px, 12px, 767px, 480px);
+    gap: calculate-clamp(4px, 12px, $tablet-breakpoint, 480px);
     color: var(--gray-color-300);
   }
 
@@ -94,6 +105,9 @@
     gap: 10px;
     color: var(--green-color-700);
     border-radius: var(--radius-2xl);
+    max-width: 492px;
+    width: 100%;
+    margin: 0 auto;
   }
 
   &__content-info-icon {
@@ -132,6 +146,10 @@
       text-align: center;
     }
 
+    .form-sign__header  {
+      gap: 12px;
+    }
+
     &__footer-socials {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -148,6 +166,11 @@
           font-size: 24px;
         }
       }
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
     }
 
     &__footer-btns {

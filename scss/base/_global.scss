@@ -104,6 +104,10 @@ body {
       gap: calculate-clamp(24px, 40px, 1439px, 1023px);
     }
 
+    &-big-s {
+      gap: calculate-clamp(20px, 40px, 1439px, 1023px);
+    }
+
     &--middle {
       gap: calculate-clamp(24px, 32px, 1439px, 1023px);
     }

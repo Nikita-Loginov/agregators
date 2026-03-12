@@ -1,5 +1,4 @@
-@@include('../sprites/socials.html') 
-@@include('../sprites/sprite.html') 
+@@include('../sprites/socials.html') @@include('../sprites/sprite.html')
 @@include('../sprites/languages.html') @@include('../sprites/ai.html')
 
 <header
@@ -190,11 +189,9 @@
             </li>
 
             <li class="header-top__link">
-              <a
-                href="#"
-                aria-label="Перейти на страницу Sign in"
-                title="Sign in"
-                class="button text-secondary-300 button--noMassa link active active-line"
+              <button
+                data-modal="loginModal"
+                class="button text-secondary-300 button--noMassa link active active-line modal-open"
                 style="
                   --link-color-active: var(--secondary-color-100);
                   --link-underline-color: var(--secondary-color-100);
@@ -207,7 +204,7 @@
 
                   <p class="p3">Sign in</p>
                 </div>
-              </a>
+              </button>
             </li>
           </ul>
 
@@ -411,16 +408,15 @@
           <span class="p4">WRE Group</span>
         </a>
 
-        <a
-          href="#"
-          aria-label="Перейти на страницу Sign in"
-          title="Sign in"
-          class="header-main__person"
+        <button
+          data-modal="loginModal"
+          class="header-main__person modal-open"
+          style="background-color: transparent"
         >
           <span class="icon">
             <span class="kit-icon user"></span>
           </span>
-        </a>
+        </button>
 
         <div class="menu">
           <button
@@ -884,7 +880,7 @@
     </div>
   </div>
 
-  @@if(typeof details !== 'undefined' && details === 'true'){
+  <!-- @@if(typeof details !== 'undefined' && details === 'true'){
   <div class="header-details">
     <ul class="header-details__list">
       <li class="header-details__link">
@@ -914,5 +910,5 @@
       </a>
     </div>
   </div>
-  }
+  } -->
 </header>

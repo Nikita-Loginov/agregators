@@ -72,7 +72,7 @@
                       <input
                         type="radio"
                         name="signType"
-                        data-sign-type="user"
+                        data-sign-type="company"
                         class="check-big-item__hidden"
                       />
 
@@ -233,14 +233,28 @@
                     </div>
 
                     <div class="sign-in__decor">
-                      <p class="p3">Already member?</p>
+                      <a
+                        href="/"
+                        aria-label="Перейти на страницу How to sign up"
+                        title="How to sign up"
+                        class="p3 medium-font text-secondary-100"
+                        >How to sign up</a
+                      >
+
+                      <button
+                        data-modal="loginModal"
+                        class="p3 medium-font text-secondary-100 modal-open"
+                        data-tooltip="Открыть модалку с Sign In"
+                      >
+                        Sign In
+                      </button>
 
                       <a
-                        href="/sign-in.html"
-                        aria-label="Перейти на страницу регистрации"
-                        title="Sign Up"
+                        href="/"
+                        aria-label="Перейти на страницу Forgot password?"
+                        title="Forgot password?"
                         class="p3 medium-font text-secondary-100"
-                        >Sign Up</a
+                        >Forgot password?</a
                       >
                     </div>
                   </div>

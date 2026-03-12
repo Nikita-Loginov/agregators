@@ -2,7 +2,7 @@
   --padding-main-auth: 30px;
   --bg-main-auth: transparent;
   --blur-strength-auth: 8px;
-  --max-width-inner-auth: 392px;
+  --max-width-inner-auth: 360px;
   --inner-gap-auth: 28px;
   --top-gap-auth: 10px;
   --btn-gap-auth: 8px;
@@ -13,18 +13,21 @@
 
   width: 100%;
   height: 100%;
-  position: relative;
+  // position: relative;
   padding: var(--padding-main-auth, 30px);
   background-color: var(--bg-main-auth);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  &:before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background-color: #2f31480d;
-    backdrop-filter: blur(var(--blur-strength-auth, 8px));
-  }
+  // &:before {
+  //   content: "";
+  //   position: absolute;
+  //   inset: 0;
+  //   z-index: 2;
+  //   background-color: #2f31480d;
+  //   backdrop-filter: blur(var(--blur-strength-auth, 8px));
+  // }
 
   .container {
     width: 100%;
@@ -37,7 +40,7 @@
     z-index: 2;
     max-width: var(--max-width-inner-auth, 392px);
     width: 100%;
-    margin: auto;
+    // margin: auto;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -46,7 +49,7 @@
 
   &__top {
     margin-left: auto;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: var(--top-gap-auth, 10px);
   }
@@ -93,7 +96,7 @@
   }
 
   &__footer {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -102,20 +105,26 @@
   }
 
   @media (max-width: $tablet-breakpoint) {
-    --padding-main-auth: 16px 0;
+    --padding-main-auth: 16px 16px;
     --max-width-inner-auth: 100%;
+    --bg-main-auth: var(--white-color);
 
     &__inner {
       margin: 0;
     }
 
+    &__top,
+    &__footer {
+      display: flex;
+    }
+
     &__img-box,
     &:before {
-        display: none;
+      display: none;
     }
 
     &__top {
-        margin: 0;
+      margin: 0;
     }
   }
 }

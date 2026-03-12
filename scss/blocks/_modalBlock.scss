@@ -827,7 +827,7 @@
 
   .companie-card {
     height: 100%;
-    
+
     &__content {
       justify-content: space-between;
     }
@@ -845,8 +845,6 @@
         }
       }
     }
-
-   
 
     @media (max-width: $lg-breakpoint) {
       padding: 8px;
@@ -1013,5 +1011,42 @@ body.scrollBottom .wrapper .modalSecond {
 
   .textbox {
     color: var(--dark-color-500);
+  }
+}
+
+.loginModal {
+  padding: 0;
+  .modalBlock {
+    &__inner {
+      margin: 0;
+      // max-width: 360px;
+    }
+  }
+
+  .form-auth {
+    --form-auth-padding-x: 0;
+    --form-auth-padding-y: 0;
+
+    &__header {
+      .h5 {
+        font-size: 28px;
+
+        @media (max-width: $tablet-breakpoint) {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    padding: 0;
+
+    .modalBlock {
+      &__inner {
+        max-width: 100%;
+        padding: 0;
+        // padding: 16px;
+      }
+    }
   }
 }
