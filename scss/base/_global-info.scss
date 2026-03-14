@@ -7,6 +7,28 @@
   border-radius: var(--radius-md);
   border: 1px solid var(--gray-color-400);
   white-space: nowrap;
+
+  &--secondary-bg-200 {
+    background-color: var(--secondary-color-200);
+
+    .check {
+      &__info {
+        input {
+          &:checked + .check__info-content {
+            text-shadow: 0.1px 0 0 currentColor, -0.1px 0 0 currentColor,
+              0 0.1px 0 currentColor, 0 -0.1px 0 currentColor;
+            background-color: var(--white-color);
+            color: var(--secondary-color-100);
+          }
+        }
+
+        &-content {
+          color: var(--dark-color-500);
+          font-weight: var(--weight-font-md);
+        }
+      }
+    }
+  }
 }
 
 .scroll-max {

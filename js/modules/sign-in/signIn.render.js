@@ -11,9 +11,12 @@ export const renderHeader = (form, step, totalSteps) => {
     step.headerContent.head;
 
   const textbox = form.querySelector("[data-sign-textbox]");
-  textbox.innerHTML = step.headerContent.text
-    .map((t) => `<p class="p2">${t}</p>`)
-    .join("");
+
+  if (textbox && step.headerContent.text) {
+    textbox.innerHTML = step.headerContent.text
+      .map((t) => `<p class="p2">${t}</p>`)
+      .join("");
+  }
 };
 
 export const renderContentInfo = (box, content) => {
@@ -33,8 +36,9 @@ export const renderFooter = (footer, container, stepsLength, currentStep) => {
   const footerContent = document.createElement("div");
   footerContent.className = "form-sign__footer-content";
 
-  const hasButtons = !footer.closeBtn;
+  const hasButtons = footer.closeBtn;
   const hasSocial = footer.detais?.social;
+  const hasModal = footer.detais?.modal;
 
   if (footer.policy) {
     const checked = signInState.formData["policy"] ? "checked" : "";
@@ -66,7 +70,7 @@ export const renderFooter = (footer, container, stepsLength, currentStep) => {
     );
   }
 
-  if (hasButtons) {
+  if (stepsLength !== currentStep - 1) {
     const btnContStyle = !hasSocial ? `` : "";
     const boxStyle = !hasSocial ? `style="width: 100%"` : "";
 
@@ -103,20 +107,29 @@ export const renderFooter = (footer, container, stepsLength, currentStep) => {
     footerContent.insertAdjacentHTML("beforeend", renderSocials());
   }
 
-  if (footer.closeBtn) {
+  if (hasModal) {
     footerContent.insertAdjacentHTML(
       "beforeend",
-      `
-      <a href="/login.html" data-close class="button button--lg button--rounded-md button--bg-primary-100" style="margin: 0 auto;">
-        <div class="icon icon--big">
-          <span class="kit-icon close-md"></span>
-        </div>
-
-        <p class="p2 medium-font">Close</p>
-      </a>
-    `
+      renderBtnModal(footer.detais?.modal)
     );
+
+    container.appendChild(footerContent);
   }
+
+  // if (footer.closeBtn) {
+  //   footerContent.insertAdjacentHTML(
+  //     "beforeend",
+  //     `
+  //     <a href="/login.html" data-close class="button button--lg button--rounded-md button--bg-primary-100" style="margin: 0 auto;">
+  //       <div class="icon icon--big">
+  //         <span class="kit-icon close-md"></span>
+  //       </div>
+
+  //       <p class="p2 medium-font">Close</p>
+  //     </a>
+  //   `
+  //   );
+  // }
 
   if (stepsLength === currentStep - 1) {
     return;
@@ -159,6 +172,16 @@ export const renderSocials = () => `
     </button>
   </div>
 `;
+
+export const renderBtnModal = (modalInfo) => {
+  const { icon, text, modalName } = modalInfo;
+
+  return `<button class="button button--bg-secondary-300 modal-open" type="button" data-modal="${modalName}">
+                  <p class="p2">${text}</p>
+
+                  ${icon}
+                </button>`;
+};
 
 export const renderBody = (form, step) => {
   const box = form.querySelector(".form-sign__box");
@@ -394,9 +417,14 @@ export const renderBody = (form, step) => {
         <div class="form-sign__content-info-details">
           <h3 class="p2 medium-font">${step.content.head}</h3>
 
-          <div class="textbox">
+          ${
+            step.content.text
+              ? `<div class="textbox">
             ${step.content.text.map((t) => `<p class="p3">${t}</p>`).join("")}
-          </div>
+          </div>`
+              : ""
+          }
+          
         </div>
         
      
@@ -420,6 +448,8 @@ export const renderBreadcrumbs = (form, step) => {
   breadcrumbsList.innerHTML = "";
 
   step.breadcrumbs.forEach((breadcrumb, index) => {
+    const { name, href } = breadcrumb;
+
     const last = step.breadcrumbs.length - 1 === index;
     const classBreadcrumbItem = last
       ? "breadcrumbs__item"
@@ -428,13 +458,21 @@ export const renderBreadcrumbs = (form, step) => {
     breadcrumbsList.insertAdjacentHTML(
       "beforeend",
       `<li class="breadcrumbs__link">
-                    <a
-                      href="#"
-                      aria-label="Вернуться на ${breadcrumb}"
-                       title="${breadcrumb}"
+                    ${
+                      !last
+                        ? `<a
+                      href="${href}"
+                      aria-label="Вернуться на ${name}"
+                       title="${name}"
                       class="${classBreadcrumbItem}"
-                      >${breadcrumb}</a
-                    >
+                      >${name}</a
+                    >`
+                        : `<span
+                      class="${classBreadcrumbItem}"
+                      >${name}</span
+                    >`
+                    }
+                    
                   </li>`
     );
   });

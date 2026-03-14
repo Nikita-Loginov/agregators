@@ -10,6 +10,29 @@
     display: flex;
   }
 
+  &--createPassword {
+    max-width: 508px;
+
+    .form-sign {
+      &__content-info {
+        max-width: 100%;
+      }
+
+      &__footer-content {
+        justify-content: center;
+
+        .button {
+          min-width: 240px;
+
+          @media (max-width: $tablet-breakpoint) {
+            min-width: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
   &__header {
     display: flex;
     flex-direction: column;

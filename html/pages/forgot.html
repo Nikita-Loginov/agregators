@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('../modules/head.html', { "title" : "Create password", "links" :
+  @@include('../modules/head.html', { "title" : "forgot-password", "links" :
   ["./css/sign-in.css"] })
   <body>
     <div class="wrapper">
@@ -33,7 +33,7 @@
                   </li>
 
                   <li class="breadcrumbs__link">
-                    <span class="breadcrumbs__item">Create new password</span>
+                    <span class="breadcrumbs__item">Reset password</span>
                   </li>
                 </ul>
 
@@ -60,99 +60,34 @@
               <div class="sign-in__inner" data-sign-box>
                 <form
                   class="sign-in__content sign-in__content--small form reset-none"
-                  style="max-width: 488px"
                   novalidate
                 >
                   <div class="sign-in__header">
-                    <h1 class="h4">Create new password</h1>
+                    <h1 class="h4">Reset password</h1>
 
                     <div class="textbox">
                       <p class="p1">
-                        Create new strong password and remember it or use secure
-                        password manager
+                        Enter the email address you used to register. <br />
+                        You will receive an email with further instructions.
                       </p>
                     </div>
                   </div>
 
-                  <div class="sign-in__form sign-in__form--bg">
+                  <div class="sign-in__form">
                     <div class="sign-in__form-inputs">
-                      <div class="input-box input-box--white form__item">
+                      <div class="input-box form__item">
                         <label class="input-box__content">
-                          <p class="p3 medium-font input-box__label">
-                            Password
-                          </p>
                           <div class="input-box__info">
+                            <div class="icon icon--big">
+                              <span class="kit-icon mail"></span>
+                            </div>
+
                             <input
-                              type="password"
-                              name="password"
-                              placeholder="Create strong password"
+                              type="email"
+                              name="email"
+                              placeholder="Email"
                               required
                             />
-
-                            <div class="input-box__icon text-green-100">
-                              <div class="icon icon--big">
-                                <span class="kit-icon check-big"></span>
-                              </div>
-                            </div>
-                          </div>
-                        </label>
-
-                        <div class="input-box__states">
-                          <div class="input-box__states-header">
-                            <div class="input-box__states-line">
-                              <div class=""></div>
-                            </div>
-
-                            <p class="input-box__states-status">Weak</p>
-                          </div>
-
-                          <div class="input-box__states-content">
-                            <div class="input-box__states-items">
-                              <div class="input-box__states-item">
-                                <div class="input-box__states-icon">
-                                  <p class="p4">8+ characters</p>
-                                </div>
-                              </div>
-
-                              <div class="input-box__states-item">
-                                <div class="input-box__states-icon">
-                                  <p class="p4">1 digit</p>
-                                </div>
-                              </div>
-
-                              <div class="input-box__states-item">
-                                <div class="input-box__states-icon">
-                                  <p class="p4">1 letter</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <p
-                          class="input-box__errors p4 form__errors"
-                          style="display: none"
-                        ></p>
-                      </div>
-
-                      <div class="input-box input-box--white form__item">
-                        <label class="input-box__content">
-                          <p class="p3 medium-font input-box__label">
-                            Confirm password
-                          </p>
-                          <div class="input-box__info">
-                            <input
-                              type="password"
-                              name="passwordConfirm"
-                              placeholder="Re-enter your password"
-                              required
-                            />
-
-                            <div class="input-box__icon text-green-100">
-                              <div class="icon icon--big">
-                                <span class="kit-icon check-big"></span>
-                              </div>
-                            </div>
                           </div>
                         </label>
 
@@ -166,16 +101,38 @@
                           class="button button--lg button--bg-primary-100 button--rounded-md sign-in__form-start"
                           type="submit"
                           style="padding-inline: 31px"
-                          data-sign-type="createPassword"
+                          data-sign-type="resetPassword"
                         >
-                          <p class="p2-add">Set a new password</p>
+                          <p class="p2-add">Send</p>
                         </button>
                       </div>
                     </div>
                   </div>
+
+                  <div class="sign-in__footer">
+                    <div class="sign-in__decor">
+                      <button
+                        href="/sign-in.html"
+                        title="Sign up"
+                        type="button"
+                        data-modal="loginModal"
+                        data-tooltip="Открыть модалку с login"
+                        class="p3 medium-font text-secondary-100 modal-open"
+                        >Sign up</button
+                      >
+
+                      <a
+                        href="/sign-in.html"
+                        aria-label="Перейти на страницу Sign In"
+                        title="Перейти на страницу Sign In"
+                        class="p3 medium-font text-secondary-100"
+                        >Sign In</a
+                      >
+                    </div>
+                  </div>
                 </form>
 
-                <form class="form-sign form-sign--createPassword form reset-none" novalidate>
+                <form class="form-sign form reset-none" novalidate>
                   <div class="form-sign__header">
                     <div class="propgress propgress--none">
                       <div class="propgress__header">
@@ -188,9 +145,9 @@
                     <div class="form-sign__header-content">
                       <p class="h4" data-sign-header></p>
 
-                      <!-- <div class="textbox" data-sign-textbox>
+                      <div class="textbox" data-sign-textbox>
                         <p class="p2"></p>
-                      </div> -->
+                      </div>
                     </div>
                   </div>
 

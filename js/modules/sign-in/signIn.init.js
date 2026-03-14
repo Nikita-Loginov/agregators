@@ -13,8 +13,17 @@ export const initSignIn = () => {
 
     if (!isFormValid(firstForm)) return;
 
+    const btnContinue = firstForm.querySelector('.sign-in__form .sign-in__form-start');
     const selected = firstForm.querySelector('input[name="signType"]:checked');
-    signInState.type = selected?.dataset.signType;
+
+    if (selected) {
+      signInState.type = selected?.dataset.signType;
+    } else if (btnContinue) {
+      signInState.type = btnContinue?.dataset.signType;
+    }
+
+    console.log(signInState.type, 'signInState.type')
+    
 
     if (!signInState.type) return;
 

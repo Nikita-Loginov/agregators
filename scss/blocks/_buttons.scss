@@ -177,7 +177,11 @@
   }
 
   &--rounded-3xl {
-    border-radius: calculate-clamp(8px, 24px, 1023px, 480px);
+    border-radius: calculate-clamp(8px, 24px, $lg-breakpoint, 480px);
+  }
+
+  &--radius-3xl-md {
+    border-radius: calculate-clamp(12px, 24px, $lg-breakpoint, $tablet-breakpoint);;
   }
 
   &--circle {

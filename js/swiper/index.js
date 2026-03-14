@@ -40,13 +40,58 @@ const BREAKPOINTS_CARDS_ITEMS = {
   },
 };
 
-
 export const CARDS_OPTIONS = {
   mousewheel: MOUSE_WHEEL_CONFIG,
   slidesPerView: 1.1,
   spaceBetween: 16,
   breakpoints: {
     ...BREAKPOINTS_CARDS_ITEMS,
+  },
+};
+
+export const CARDS_MAIN_OPTIONS = {
+  mousewheel: MOUSE_WHEEL_CONFIG,
+  spaceBetween: 12,
+  slidesPerView: 1.1,
+  breakpoints: {
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    767: {
+      slidesPerView: 2,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 2.1,
+    },
+  },
+};
+
+export const CARDS_MAIN_SECOND_OPTIONS = {
+  mousewheel: MOUSE_WHEEL_CONFIG,
+  spaceBetween: 12,
+  slidesPerView: 1.1,
+  breakpoints: {
+    1280: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    767: {
+      slidesPerView: 3,
+      spaceBetween: 16,
+    },
+    600: {
+      slidesPerView: 2.1,
+    },
   },
 };
 
@@ -341,7 +386,7 @@ export const SWIPERS = {
       spaceBetween: 16,
       slidesPerView: 1,
       speed: 500,
-      mousewheel: MOUSE_WHEEL_CONFIG
+      mousewheel: MOUSE_WHEEL_CONFIG,
     },
   },
   MAP_SIBEBAR_CARDS: {

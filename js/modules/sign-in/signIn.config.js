@@ -2,7 +2,20 @@ export const SIGN_IN_CONFIG = {
   user: [
     {
       step: 2,
-      breadcrumbs: ["Home", "Sign up", "User"],
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "User",
+          href: "/sign-in.html",
+        },
+      ],
       headerContent: {
         head: "Account & Security",
         text: ["Set up your login credentials"],
@@ -55,7 +68,20 @@ export const SIGN_IN_CONFIG = {
     },
     {
       step: 3,
-      breadcrumbs: ["Home", "Sign up", "User"],
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "User",
+          href: "/sign-in.html",
+        },
+      ],
       headerContent: {
         head: "Account Created",
         text: ["Your account has been successfully created."],
@@ -119,7 +145,24 @@ export const SIGN_IN_CONFIG = {
     // },
     {
       step: 2,
-      breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Company",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Agency",
+          href: "/sign-in.html",
+        },
+      ],
       headerContent: {
         head: "Account info",
         text: ["Set up your login credentials"],
@@ -225,7 +268,24 @@ export const SIGN_IN_CONFIG = {
     // },
     {
       step: 3,
-      breadcrumbs: ["Home", "Sign up", "Company", "Agency"],
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Company",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Agency",
+          href: "/sign-in.html",
+        },
+      ],
       headerContent: {
         head: "Account Created",
         text: ["Your account has been successfully created."],
@@ -239,14 +299,26 @@ export const SIGN_IN_CONFIG = {
       footer: {
         showed: true,
         closeBtn: false,
-
       },
     },
   ],
   specialist: [
     {
       step: 2,
-      breadcrumbs: ["Home", "Sign up", "Specialist"],
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Specialist",
+          href: "/sign-in.html",
+        },
+      ],
       headerContent: {
         head: "Account & Security",
         text: ["Set up your login credentials"],
@@ -308,7 +380,20 @@ export const SIGN_IN_CONFIG = {
     },
     {
       step: 3,
-      breadcrumbs: ["Home", "Sign up", "Specialist"],
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Specialist",
+          href: "/sign-in.html",
+        },
+      ],
       headerContent: {
         head: "Account Created",
         text: ["Your account has been successfully created."],
@@ -322,6 +407,73 @@ export const SIGN_IN_CONFIG = {
       footer: {
         showed: true,
         closeBtn: true,
+      },
+    },
+  ],
+  resetPassword: [
+    {
+      step: 2,
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Reset password",
+          href: "/forgot.html",
+        },
+      ],
+      headerContent: {
+        head: "Almost there!",
+        text: ["An email has been successfully sent to your email address."],
+      },
+      content: {
+        head: "Check the email address you provided. ",
+        text: ["Follow the instructions in the email to reset your password."],
+      },
+      footer: {
+        showed: true,
+        closeBtn: true,
+      },
+    },
+  ],
+  createPassword: [
+    {
+      step: 2,
+      breadcrumbs: [
+        {
+          name: "Home",
+          href: "/",
+        },
+        {
+          name: "Sign up",
+          href: "/sign-in.html",
+        },
+        {
+          name: "Create new password",
+          href: "/create-password.html",
+        },
+      ],
+      headerContent: {
+        head: "Done!",
+      },
+      content: {
+        head: "A new password for your account has been successfully set.",
+      },
+      footer: {
+        showed: true,
+        closeBtn: false,
+        detais: {
+          modal: {
+            text: "Login",
+            modalName: "loginModal",
+            icon: ' <div class="icon" style="rotate: -45deg"><span class="kit-icon arrow-right-md"></span></div>',
+          },
+        },
       },
     },
   ],

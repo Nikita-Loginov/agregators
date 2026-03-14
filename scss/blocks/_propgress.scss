@@ -6,6 +6,10 @@
   font-weight: var(--weight-font-md);
   text-align: center;
 
+  &--none {
+    display: none;
+  }
+
   &__items {
     width: 100%;
     display: flex;

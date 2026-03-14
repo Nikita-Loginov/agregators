@@ -13,7 +13,7 @@
             <div class="hero__inner">
               <div class="hero__content">
                 <div class="hero__head">
-                  <h1 class="h3">
+                  <h1 class="h3 fz-30-24">
                     Apartments for sale directly from developers with
                     <span class="text-primary-100">no extra fees!</span>
                   </h1>
@@ -132,7 +132,9 @@
                         </div>
 
                         <div class="form-hero__filter-item">
-                          <div class="checkbox-box">
+                          <div
+                            class="checkbox-box checkbox-box--secondary-bg-200"
+                          >
                             <label class="check">
                               <div class="check__info">
                                 <input type="radio" checked name="type-deal" />
@@ -866,8 +868,6 @@
                           <div class="guide-card__content">
                             <div class="guide-card__info">
                               <ul class="guide-card__list">
-                                
-
                                 <li class="guide-card__link">
                                   <div class="guide-card__link-content">
                                     <a
@@ -1172,8 +1172,6 @@
                           <div class="guide-card__content">
                             <div class="guide-card__info">
                               <ul class="guide-card__list">
-                                
-
                                 <li class="guide-card__link">
                                   <div class="guide-card__link-content">
                                     <a
@@ -1677,12 +1675,38 @@
         </section>
 
         <section
-          class="swiper-box swiper-box--dev swiper-box--visible-lg swiper-box--pagination-bottom swiper-box--pagination-bottom-big"
+          class="swiper-box swiper-box--dev swiper-box--visible-lg swiper-box--pagination-bottom swiper-box--pagination-bottom-big explore-section"
         >
           <div class="container">
             <div class="topBox topBox--middle">
               <div class="topBox__header">
                 <h2 class="h4">Explore Trusted Developers</h2>
+              </div>
+
+              <div class="checkbox-box">
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" checked name="explore" />
+
+                    <div class="p2 check__info-content">Developers</div>
+                  </div>
+                </label>
+
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" name="explore" />
+
+                    <div class="p2 check__info-content">Agencies</div>
+                  </div>
+                </label>
+
+                <label class="check">
+                  <div class="check__info">
+                    <input type="radio" name="explore" />
+
+                    <div class="p2 check__info-content">Specialists</div>
+                  </div>
+                </label>
               </div>
 
               <div class="swiper-box__content" data-loader-relative>
@@ -1879,33 +1903,133 @@
                     </div>
 
                     <div class="tablet-none">
-                      <div
-                        class="arrows-swiper arrows-swiper--big arrows-swiper--full-static"
-                      >
-                        <button
-                          class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper prev"
-                          type="button"
+                      <div class="lg-show">
+                        <div
+                          class="arrows-swiper arrows-swiper--big arrows-swiper--full-static"
                         >
-                          <span class="icon icon--big">
-                            <span class="kit-icon arrow-left-md"></span>
-                          </span>
-                        </button>
+                          <button
+                            class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper prev"
+                            type="button"
+                          >
+                            <span class="icon icon--big">
+                              <span class="kit-icon arrow-left-md"></span>
+                            </span>
+                          </button>
 
-                        <button
-                          class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper next"
-                          type="button"
-                        >
-                          <span class="icon icon--big">
-                            <span class="kit-icon arrow-right-md"></span>
-                          </span>
-                        </button>
+                          <button
+                            class="button button--bg-gray-200 button--circle button--circle-lg arrow-swiper next"
+                            type="button"
+                          >
+                            <span class="icon icon--big">
+                              <span class="kit-icon arrow-right-md"></span>
+                            </span>
+                          </button>
+                        </div>
                       </div>
                     </div>
 
-                    <div class="tablet-show">
+                    <div class="lg-none explore-section__pagination">
                       <div class="swiper-pagination" style="width: 100%"></div>
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="text-block text-section">
+          <div class="container">
+            <div class="text-block__inner topBox topBox--middle">
+              <h2 class="h4">Real Estate in UAE</h2>
+
+              <div class="text-block__content" data-block="more-relative">
+                <div
+                  class="textbox more-block"
+                  data-block="more-items"
+                  data-max="3"
+                  data-media-init="767"
+                  data-media-max="1"
+                >
+                  <div class="more-block__item">
+                    <p class="p1">
+                      The Emirates.Estate website contains a detailed and
+                      up-to-date database of listings from the largest
+                      construction companies in the UAE. Here you will find <a
+                        href="#"
+                        aria-label="Перейти на property in Dubai"
+                        title="property in Dubai"
+                        class="text-secondary-100 text-underline"
+                        >property in Dubai</a
+                      >
+                      , Abu Dhabi, and other emirates at competitive prices with
+                      exclusive offers from developers.
+                    </p>
+                  </div>
+
+                  <div class="more-block__item">
+                    <p class="p1">
+                      Emirates.Estate will help you choose your dream home
+                      within the allocated budget and provide detailed
+                      information about the properties you find interesting. Our
+                      team keeps abreast of the market of real estate in the
+                      United Arab Emirates and thoroughly verifies each listing
+                      before publishing.
+                    </p>
+                  </div>
+
+                  <div class="more-block__item">
+                    <p class="p1">
+                      Search for <a
+                        href="#"
+                        aria-label="Перейти на villas in Dubai"
+                        title="villas in Dubai"
+                        class="text-secondary-100 text-underline"
+                        >villas in Dubai</a
+                      > on your own with our intuitive search engine or reach
+                      out to our expert who will help you with buying property
+                      in the UAE for expats that matches your individual
+                      preferences and goals.
+                    </p>
+                  </div>
+
+                  <div class="more-block__item">
+                    <p class="p1">
+                      Search for <a
+                        href="#"
+                        aria-label="Перейти на villas in Dubai"
+                        title="villas in Dubai"
+                        class="text-secondary-100 text-underline"
+                        >villas in Dubai</a
+                      > on your own with our intuitive search engine or reach
+                      out to our expert who will help you with buying property
+                      in the UAE for expats that matches your individual
+                      preferences and goals.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="text-block__footer"  data-block="more-footer">
+                  <button
+                    class="btn-decor"
+                    data-block="more-btn"
+                    data-more-text="Show more"
+                    data-less-text="Show less"
+                    aria-label="Посмотреть больше"
+                    type="button"
+                  >
+                    <p class="p2 medium-font" data-block="more-btn-text">
+                      Show more
+                    </p>
+
+                    <div
+                      class="button--circle button--circle-3xs button--bg-gray-600"
+                    >
+                      <div class="icon">
+                        <span class="kit-icon arrow-down-md"></span>
+                      </div>
+                    </div>
+                  </button>
                 </div>
               </div>
             </div>

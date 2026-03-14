@@ -1,4 +1,4 @@
-import { CARDS_OPTIONS } from "./swiper/index.js";
+import { CARDS_MAIN_OPTIONS, CARDS_MAIN_SECOND_OPTIONS } from "./swiper/index.js";
 import { initImgsSwiperGoods } from "./swiper/functions.js";
 import {
   initMoreBlocks,
@@ -6,13 +6,14 @@ import {
 } from "./modules/moreContent.js";
 import { handleAllSliders, slidersConfig } from "./modules/swiper.js";
 import { getPaginationSwiper, getArrowSwiper } from "./modules/functions.js";
+import { MOUSE_WHEEL_CONFIG } from "./swiper/index.js";
 
 const swipers = [
   {
     selector: ".projects .swiper--projects",
     breakpoint: 122300000000,
     options: {
-      ...CARDS_OPTIONS,
+      ...CARDS_MAIN_OPTIONS,
       pagination: {
         el: getPaginationSwiper(
           document.querySelector(".projects .swiper--projects .swiper__detail")
@@ -24,7 +25,7 @@ const swipers = [
     selector: ".swiper-box--offers .swiper--offers",
     breakpoint: 122300000000,
     options: {
-      ...CARDS_OPTIONS,
+      ...CARDS_MAIN_OPTIONS,
       pagination: {
         el: getPaginationSwiper(
           document.querySelector(
@@ -38,7 +39,7 @@ const swipers = [
     selector: ".swiper-box--popular .swiper--popular",
     breakpoint: 122300000000,
     options: {
-      ...CARDS_OPTIONS,
+      ...CARDS_MAIN_OPTIONS,
       pagination: {
         el: getPaginationSwiper(
           document.querySelector(
@@ -52,7 +53,7 @@ const swipers = [
     selector: ".swiper-box--dev .swiper--dev",
     breakpoint: 122300000000,
     options: {
-      ...CARDS_OPTIONS,
+      ...CARDS_MAIN_SECOND_OPTIONS,
       navigation: {
         nextEl: getArrowSwiper(
           document.querySelector(".swiper-box--dev .swiper--dev")
@@ -72,7 +73,7 @@ const swipers = [
     selector: ".swiper-box--articles .swiper--articles",
     breakpoint: 122300000000,
     options: {
-      ...CARDS_OPTIONS,
+      ...CARDS_MAIN_SECOND_OPTIONS,
       pagination: {
         el: getPaginationSwiper(
           document.querySelector(

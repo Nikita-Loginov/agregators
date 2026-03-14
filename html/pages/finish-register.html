@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('../modules/head.html', { "title" : "Account Activated", "links" :
+  ["./css/sign-in.css"] })
+  <body>
+    <div class="wrapper">
+      @@include('../modules/header.html')
+
+      <main class="main main--detail main--detail--middle">
+        <div class="top-page">
+          <div class="container">
+            <div class="top-page__inner">
+              <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Home"
+                      title="Home"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Home</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Sign up"
+                      title="Sign up"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Sign up</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <a
+                      href="#"
+                      aria-label="Вернуться на Company"
+                      title="Company"
+                      class="breadcrumbs__item link active active-noColor active-line"
+                      >Company</a
+                    >
+                  </li>
+
+                  <li class="breadcrumbs__link">
+                    <span class="breadcrumbs__item">Agency</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="/"
+                  aria-label="Вернуться на Home"
+                  title="Home"
+                  class="breadcrumbs__media"
+                >
+                  <span class="icon" style="rotate: 90deg">
+                    <span class="kit-icon arrow-circle-down"></span>
+                  </span>
+
+                  <span>Home</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="main__sections">
+          <section class="sign-in">
+            <div class="container">
+              <div class="sign-in__inner">
+                <form
+                  class="sign-in__content sign-in__content--small form reset-none"
+                  style="max-width: 450px"
+                  novalidate
+                >
+                  <div class="sign-in__header">
+                    <h1 class="h4">Account Activated</h1>
+
+                    <div class="textbox">
+                      <p class="p1">
+                        Your account has been successfully activated.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="sign-in__form">
+                    <div class="form-sign active">
+                      <div class="form-sign__content-info">
+                        <div class="form-sign__content-info-icon"></div>
+
+                        <div class="form-sign__content-info-details">
+                          <h3 class="p2 medium-font">
+                            Now you can use your account
+                          </h3>
+
+                          <div class="textbox">
+                            <p class="p3">
+                              Log in to upload objects, update your account info
+                              and more
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="sign-in__form-footer">
+                      <div class="sign-in__form-btns">
+                        <a
+                          title="Sign in"
+                          href="/sign-in.html"
+                          aria-label="Перейти на страницу Sign in"
+                          class="button button--lg button--bg-primary-100 button--radius-3xl-md"
+                          type="submit"
+                          style="padding-inline: 39px; margin: 0 auto"
+                        >
+                          <p class="p2">Sign in</p>
+
+                          <div
+                            class="icon icon--md-base"
+                            style="rotate: -45deg"
+                          >
+                            <span class="kit-icon arrow-right-md"></span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('../modules/footer.html', {"inner" : ""})
+    </div>
+
+    <script src="/js/sign-in.js" type="module"></script>
+  </body>
+</html>

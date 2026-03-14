@@ -1,0 +1,29 @@
+.explore-section {
+  .checkbox-box {
+    margin-right: auto;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    .checkbox-box {
+      margin: 0;
+    }
+
+    &__pagination {
+      display: flex;
+    }
+  }
+}
+
+body .wrapper {
+  .explore-section {
+    @media (max-width: $tablet-breakpoint) {
+      .checkbox-box {
+        margin: 0;
+      }
+
+      &__pagination {
+        display: flex;
+      }
+    }
+  }
+}

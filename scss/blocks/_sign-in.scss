@@ -16,6 +16,41 @@
     &.hidden {
       display: none;
     }
+
+    &--small {
+      max-width: 435px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    &--bg {
+      background-color: var(--white-color);
+      width: 100%;
+      padding: calculate-clamp(24px, 32px, $lg-breakpoint, $tablet-breakpoint)
+        calculate-clamp(20px, 32px, $tablet-breakpoint, 480px);
+      border-radius: var(--radius-2xl);
+      border: 1px solid var(--gray-color-600);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__form-inputs,
+  &__form-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__header {
@@ -34,8 +69,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: calculate-clamp(12px, 22px, 1023px, 767px);
-
-    
   }
 
   &__footer {
@@ -72,7 +105,7 @@
       align-items: center;
 
       &:before {
-        content:"";
+        content: "";
         position: absolute;
         right: 0;
         width: 1px;

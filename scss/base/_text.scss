@@ -249,6 +249,15 @@ h6 {
   );
 }
 
+.fz-30-24 {
+  font-size: calculate-clamp(
+    24px,
+    30px,
+    $lg-breakpoint,
+    $tablet-breakpoint
+  );
+}
+
 .fz-28-22 {
   font-size: calculate-clamp(
     22px,

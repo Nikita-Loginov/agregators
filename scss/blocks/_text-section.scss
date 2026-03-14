@@ -1,0 +1,5 @@
+.text-section {
+  .textbox {
+    gap: calculate-clamp(12px, 16px, $lg-breakpoint, $tablet-breakpoint);
+  }
+}
