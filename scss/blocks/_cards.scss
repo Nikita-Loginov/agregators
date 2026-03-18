@@ -910,13 +910,13 @@ a.card-box {
 
   &__link-info {
     .button {
-      @media (min-width: $lg-breakpoint) {
+      // @media (min-width: $lg-breakpoint) {
         color: var(--dark-color-700);
         border: 1px solid var(--dark-color-700);
         border-radius: 50%;
         width: 18px;
         height: 18px;
-      }
+      // }
 
       .icon {
         width: 100%;
@@ -946,11 +946,11 @@ a.card-box {
 
   @media (max-width: $lg-breakpoint) {
     &__content {
-      padding-top: 32px;
+      // padding-top: 32px;
     }
 
     &__list {
-      gap: 32px;
+      // gap: 32px;
     }
 
     &__title {
@@ -962,11 +962,11 @@ a.card-box {
     }
 
     &__link-content {
-      flex-direction: row;
-      align-items: center;
-      flex: 1;
-      gap: 10px;
-      justify-content: space-between;
+      // flex-direction: row;
+      // align-items: center;
+      // flex: 1;
+      // gap: 10px;
+      // justify-content: space-between;
     }
 
     &__items {
@@ -975,25 +975,25 @@ a.card-box {
     }
 
     &__item {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 0;
+      // display: flex;
+      // flex-direction: column;
+      // align-items: flex-end;
+      // gap: 0;
     }
 
     &__link-info {
-      .button {
-        width: 20px;
-        height: 20px;
-        font-size: 20px;
-        color: var(--dark-color-600);
+      // .button {
+      //   width: 20px;
+      //   height: 20px;
+      //   font-size: 20px;
+      //   color: var(--dark-color-600);
 
-        .icon {
-          width: 20px;
-          height: 20px;
-          font-size: 20px;
-        }
-      }
+      //   .icon {
+      //     width: 20px;
+      //     height: 20px;
+      //     font-size: 20px;
+      //   }
+      // }
     }
 
     &__item-count {

@@ -8,6 +8,12 @@
   padding: 4px 8px;
   min-height: 32px;
 
+  &--xl {
+    min-height: 44px;
+    border-radius: var(--radius-md);
+    padding: 4px 28px;
+  }
+
   &--big {
     border-radius: var(--radius-2xl);
     padding: calculate-clamp(2px, 4px, 1280px, 1023px)
@@ -93,6 +99,11 @@
 
   &--secondary-400 {
     background-color: var(--secondary-color-400);
+    color: var(--white-color);
+  }
+
+  &--primary-100 {
+    background-color: var(--primary-color-100);
     color: var(--white-color);
   }
 

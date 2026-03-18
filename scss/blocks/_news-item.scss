@@ -1,0 +1,15 @@
+.news-item {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .textbox {
+      color: var(--dark-color-500);
+    }
+  }
+}
