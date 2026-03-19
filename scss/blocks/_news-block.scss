@@ -1,4 +1,11 @@
 .news-block {
+  --gap-inner-news-block: #{calculate-clamp(
+      24px,
+      40px,
+      $lg-breakpoint,
+      $tablet-breakpoint
+    )};
+
   &__inner {
     padding: calculate-clamp(24px, 40px, $lg-breakpoint, $tablet-breakpoint);
     border-radius: var(--radius-2xl);
@@ -7,7 +14,7 @@
     background-color: var(--gray-color-200);
     display: flex;
     justify-content: space-between;
-    gap: calculate-clamp(24px, 40px, $lg-breakpoint, $tablet-breakpoint);
+    gap: var(--gap-inner-news-block);
   }
 
   &__content {
@@ -15,14 +22,14 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: calculate-clamp(20px, 28px, $lg-breakpoint, $tablet-breakpoint);
     align-items: flex-start;
   }
 
   &__details {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: calculate-clamp(8px, 12px, $lg-breakpoint, $tablet-breakpoint);
 
     .textbox {
       color: var(--dark-color-500);
@@ -32,7 +39,7 @@
   &__info {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);
     max-width: 560px;
     width: 100%;
   }
@@ -40,7 +47,7 @@
   &__items {
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: calculate-clamp(20px, 32px, $lg-breakpoint, $tablet-breakpoint);
   }
 
   &__footer {
@@ -53,11 +60,40 @@
   @media (max-width: $lg-breakpoint) {
     &__inner {
       flex-direction: column;
+
+      & > *:not(:last-child) {
+        padding-bottom: var(--gap-inner-news-block);
+        border-bottom: 1px solid var(--gray-color-600);
+      }
     }
 
     &__content,
     &__info {
       max-width: 100%;
+    }
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    --gap-inner-news-block: #{calculate-clamp(
+        16px,
+        20px,
+        $tablet-breakpoint,
+        $mobile-breakpoint
+      )};
+      // background-color: var(--gray-color-200);
+
+    &__inner {
+      // background-color: transparent;
+      padding-inline: var(--container-inline-padding);
+      border-radius: 0;
+    }
+
+    &__items {
+      gap: 15px;
+    }
+
+    .container {
+      padding: 0;
     }
   }
 }

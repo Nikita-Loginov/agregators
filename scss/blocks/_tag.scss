@@ -9,9 +9,9 @@
   min-height: 32px;
 
   &--xl {
-    min-height: 44px;
+    min-height: calculate-clamp(36px, 44px, $lg-breakpoint, $tablet-breakpoint);
     border-radius: var(--radius-md);
-    padding: 4px 28px;
+    padding: calculate-clamp(2px, 4px, $lg-breakpoint, $tablet-breakpoint) calculate-clamp(16px, 28px, $lg-breakpoint, $tablet-breakpoint);;
   }
 
   &--big {

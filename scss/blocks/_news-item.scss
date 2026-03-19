@@ -12,4 +12,9 @@
       color: var(--dark-color-500);
     }
   }
+
+  @media (max-width: $tablet-breakpoint) {
+    flex-direction: column;
+    gap: 3px;
+  }
 }
