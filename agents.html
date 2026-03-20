@@ -1877,12 +1877,12 @@
                         >Home</a
                       >
                     </li>
-  
+
                     <li class="breadcrumbs__link">
                       <span class="breadcrumbs__item">Companies</span>
                     </li>
                   </ul>
-  
+
                   <a
                     href="#"
                     aria-label="Вернуться на Home"
@@ -1892,12 +1892,14 @@
                     <span class="icon" style="rotate: 90deg">
                       <span class="kit-icon arrow-circle-down"></span>
                     </span>
-  
+
                     <span>Home</span>
                   </a>
                 </div>
 
-                <div class="top-page__details top-page__details--one tablet-show">
+                <div
+                  class="top-page__details top-page__details--one tablet-show"
+                >
                   <a
                     href="#"
                     title="Register your company"
@@ -1908,7 +1910,6 @@
                   </a>
                 </div>
               </div>
-              
 
               <div class="top-page__header tablet-none">
                 <h1 class="h2">Companies</h1>
@@ -2125,7 +2126,8 @@
                               </div>
 
                               <button
-                                aria-label="Открыть модалку для отправки контактов" class="button button--lg button--bg-primary-100 button--rounded-md"
+                                aria-label="Открыть модалку для отправки контактов"
+                                class="button button--lg button--bg-primary-100 button--rounded-md"
                               >
                                 <span class="p2 medium-font">Search</span>
 
@@ -2368,20 +2370,6 @@
                                 </ul>
 
                                 <div class="card-box__btns">
-                                  <button
-                                    title="Написать автору"
-                                    class="button button--bg-secondary-300 modal-open"
-                                    data-modal="contactUpModal" aria-label="Открыть модалку для отправки контактов"
-                                  >
-                                    <span class="icon">
-                                      <span class="kit-icon mail"></span>
-                                    </span>
-
-                                    <span class="p3 medium-font"
-                                      >Contact Specialist</span
-                                    >
-                                  </button>
-
                                   <a
                                     href="/author-detail.html"
                                     aria-label="Перейти к автору"
@@ -2391,88 +2379,19 @@
                                     <span class="p3 medium-font"
                                       >All Properties</span
                                     >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <span
+                                        class="kit-icon arrow-right-md"
+                                      ></span>
+                                    </span>
                                   </a>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
 
-                          <div class="card-box card-box--big card-box--media">
-                            <div class="card-box__img-box">
-                              <div class="card-box__img">
-                                <picture>
-                                  <source
-                                    srcset="
-                                      /img/persons/two.webp   1x,
-                                      /img/persons/two2x.webp 2x
-                                    "
-                                  />
-                                  <img
-                                    src="/img/persons/two.webp"
-                                    alt="фотография автора"
-                                    loading="lazy"
-                                  />
-                                </picture>
-                              </div>
-
-                              <div class="card-box__img-content">
-                                <p
-                                  class="h6-add semibold-font tablet-show"
-                                  style="font-size: 20px"
-                                >
-                                  Anafiy Murtazaev
-                                </p>
-
-                                <div class="card-box__badges tablet-show">
-                                  <div
-                                    class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
-                                  >
-                                    <p
-                                      class="p3 medium-font text-secondary-100"
-                                    >
-                                      0
-                                    </p>
-
-                                    <p class="p3 medium-font text-dark-200">
-                                      property
-                                    </p>
-                                  </div>
-                                </div>
-
-                                <div class="card-box__img-item tablet-none">
-                                  <span class="icon">
-                                    <span class="kit-icon house-01"></span>
-                                  </span>
-
-                                  <p class="p3">10 property</p>
-                                </div>
-                              </div>
-                            </div>
-
-                            <div class="card-box__content">
-                              <div class="card-box__info">
-                                <p
-                                  class="h6-add semibold-font tablet-none"
-                                  style="font-size: 20px"
-                                >
-                                  Aiym Tursynova
-                                </p>
-
-                                <ul class="list-simple list-simple--small">
-                                  <li class="list-simple__item">
-                                    <p class="p3 medium-font">Company</p>
-
-                                    <p class="p3 text-secondary-100">
-                                      Private person
-                                    </p>
-                                  </li>
-                                </ul>
-
-                                <div class="card-box__btns">
                                   <button
                                     title="Написать автору"
                                     class="button button--bg-secondary-300 modal-open"
-                                    data-modal="contactUpModal" aria-label="Открыть модалку для отправки контактов"
+                                    data-modal="contactUpModal"
+                                    aria-label="Открыть модалку для отправки контактов"
                                   >
                                     <span class="icon">
                                       <span class="kit-icon mail"></span>
@@ -2482,17 +2401,6 @@
                                       >Contact Specialist</span
                                     >
                                   </button>
-
-                                  <a
-                                    href="/author-detail.html"
-                                    aria-label="Перейти к автору"
-                                    title="Посмотреть проекты ФИО автора"
-                                    class="button button--bg-secondary-200"
-                                  >
-                                    <span class="p3 medium-font"
-                                      >All Properties</span
-                                    >
-                                  </a>
                                 </div>
                               </div>
                             </div>
@@ -2590,7 +2498,116 @@
                                   <button
                                     title="Написать автору"
                                     class="button button--bg-secondary-300 modal-open"
-                                    data-modal="contactUpModal" aria-label="Открыть модалку для отправки контактов"
+                                    data-modal="contactUpModal"
+                                    aria-label="Открыть модалку для отправки контактов"
+                                  >
+                                    <span class="icon">
+                                      <span class="kit-icon mail"></span>
+                                    </span>
+
+                                    <span class="p3 medium-font"
+                                      >Contact Specialist</span
+                                    >
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="card-box card-box--big card-box--media">
+                            <div class="card-box__img-box">
+                              <div class="card-box__img">
+                                <picture>
+                                  <source
+                                    srcset="
+                                      /img/persons/two.webp   1x,
+                                      /img/persons/two2x.webp 2x
+                                    "
+                                  />
+                                  <img
+                                    src="/img/persons/two.webp"
+                                    alt="фотография автора"
+                                    loading="lazy"
+                                  />
+                                </picture>
+                              </div>
+
+                              <div class="card-box__img-content">
+                                <p
+                                  class="h6-add semibold-font tablet-show"
+                                  style="font-size: 20px"
+                                >
+                                  Anafiy Murtazaev
+                                </p>
+
+                                <div class="card-box__badges tablet-show">
+                                  <div
+                                    class="badge badge--gray-color-100 badge--xl br-el--rounded-base"
+                                  >
+                                    <p
+                                      class="p3 medium-font text-secondary-100"
+                                    >
+                                      0
+                                    </p>
+
+                                    <p class="p3 medium-font text-dark-200">
+                                      property
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="card-box__img-item tablet-none">
+                                  <span class="icon">
+                                    <span class="kit-icon house-01"></span>
+                                  </span>
+
+                                  <p class="p3">10 property</p>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card-box__content">
+                              <div class="card-box__info">
+                                <p
+                                  class="h6-add semibold-font tablet-none"
+                                  style="font-size: 20px"
+                                >
+                                  Aiym Tursynova
+                                </p>
+
+                                <ul class="list-simple list-simple--small">
+                                  <li class="list-simple__item">
+                                    <p class="p3 medium-font">Company</p>
+
+                                    <p class="p3 text-secondary-100">
+                                      Private person
+                                    </p>
+                                  </li>
+                                </ul>
+
+                                <div class="card-box__btns">
+                                  <a
+                                    href="/author-detail.html"
+                                    aria-label="Перейти к автору"
+                                    title="Посмотреть проекты ФИО автора"
+                                    class="button button--bg-secondary-200"
+                                  >
+                                    <span class="p3 medium-font"
+                                      >All Properties</span
+                                    >
+
+                                    <span class="icon" style="rotate: -45deg">
+                                      <span
+                                        class="kit-icon arrow-right-md"
+                                      ></span>
+                                    </span>
+                                  </a>
+
+                                  <button
+                                    title="Написать автору"
+                                    class="button button--bg-secondary-300 modal-open"
+                                    data-modal="contactUpModal"
+                                    aria-label="Открыть модалку для отправки контактов"
                                   >
                                     <span class="icon">
                                       <span class="kit-icon mail"></span>
@@ -2804,7 +2821,8 @@
                                   <button
                                     title="Написать автору"
                                     class="button button--bg-secondary-300 modal-open"
-                                    data-modal="contactUpModal" aria-label="Открыть модалку для отправки контактов"
+                                    data-modal="contactUpModal"
+                                    aria-label="Открыть модалку для отправки контактов"
                                   >
                                     <span class="icon">
                                       <span class="kit-icon mail"></span>
@@ -3004,7 +3022,7 @@
       >
         <p class="p3 medium-font">Subscribe</p>
 
-        <div class="icon lg-none" style="rotate: -45deg">
+        <div class="icon tablet-none">
           <span class="kit-icon arrow-right-md"></span>
         </div>
       </button>
@@ -4098,7 +4116,7 @@
       >
         <p class="p3 medium-font">Subscribe</p>
 
-        <div class="icon lg-none" style="rotate: -45deg">
+        <div class="icon tablet-none">
           <span class="kit-icon arrow-right-md"></span>
         </div>
       </button>

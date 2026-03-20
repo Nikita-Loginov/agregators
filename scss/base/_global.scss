@@ -426,7 +426,7 @@ body .wrapper {
     }
 
     &--rounded-3xl-md {
-      border-radius: calculate-clamp(12px, 24px, 1023px, 767px);
+      border-radius: calculate-clamp(12px, 24px, $lg-breakpoint, $tablet-breakpoint);
     }
 
     &--rounded-3xl {

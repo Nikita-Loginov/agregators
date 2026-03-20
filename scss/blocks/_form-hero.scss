@@ -98,6 +98,12 @@
       gap: 20px;
     }
 
+    &__filter-item {
+      &:has(.checkbox-box) {
+        order: -1;
+      }
+    }
+
     &__head {
       .accordeon {
         display: none;

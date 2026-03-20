@@ -18,7 +18,7 @@
     right: 0;
     top: 0;
     height: calculate-clamp(200px, 200px, $lg-breakpoint, $tablet-breakpoint);
-    backdrop-filter: blur(2px);
+    // backdrop-filter: blur(2px);
     background-image: linear-gradient(
       -180deg,
       rgba(17, 25, 40, 0.64) 0%,

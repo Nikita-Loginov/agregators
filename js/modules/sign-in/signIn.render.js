@@ -14,7 +14,7 @@ export const renderHeader = (form, step, totalSteps) => {
 
   if (textbox && step.headerContent.text) {
     textbox.innerHTML = step.headerContent.text
-      .map((t) => `<p class="p2">${t}</p>`)
+      .map((t) => `<p class="p2-add">${t}</p>`)
       .join("");
   }
 };
@@ -271,7 +271,7 @@ export const renderBody = (form, step) => {
                     <div class=""></div>
                   </div>
   
-                  <p class="input-box__states-status">Weak</p>
+                  <p class="input-box__states-status"></p>
                 </div>
   
                 <div class="input-box__states-content">

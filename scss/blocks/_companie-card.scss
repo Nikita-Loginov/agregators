@@ -32,8 +32,8 @@
             img,
             svg,
             * {
-              width: 80px;
-              font-size: 80px;
+              width: 120px;
+              font-size: 120px;
 
               &:before {
                 font-size: 100%;
@@ -53,6 +53,24 @@
         }
       }
     }
+
+    .companie-card__img-box--small {
+      @media (min-width: $md-desktop-breakpoint) {
+        height: 197px;
+      }
+
+      img,
+      svg,
+      * {
+        width: 100px !important;
+        font-size: 100px !important;
+        aspect-ratio: 1 / 1;
+
+        &:before {
+          font-size: 100%;
+        }
+      }
+    }
   }
 
   &__img-box {
@@ -69,9 +87,15 @@
       padding: 20px;
       max-width: 200px;
 
+      @media (min-width: $md-desktop-breakpoint) {
+        height: 170px;
+      }
+
+
       .companie-card {
         &__img-block {
-          width: 160px;
+          width: auto;
+          aspect-ratio: auto;
         }
       }
     }

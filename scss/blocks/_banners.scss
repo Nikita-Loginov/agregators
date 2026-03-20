@@ -247,6 +247,20 @@
     gap: 8px;
   }
 
+  &__header {
+    &--empty {
+      max-width: 85%;
+
+      @media (max-width: $lg-breakpoint) {
+        max-width: 70%;
+      }
+
+      @media (max-width: $tablet-breakpoint) {
+        max-width: 90%;
+      }
+    }
+  }
+
   &__img {
     width: 236px;
     height: 115px;
@@ -602,6 +616,12 @@
     .banner-profile {
       &__content {
         padding: 0;
+      }
+
+      &__list {
+        * {
+          line-height: 1.57;
+        }
       }
     }
   }

@@ -18,7 +18,7 @@
 
         input {
           &::placeholder {
-            color: var(--dark-color-500)
+            color: var(--dark-color-500);
           }
         }
       }
@@ -145,7 +145,7 @@
   }
 
   &__dropdown {
-   @include input-dropdown
+    @include input-dropdown;
   }
 
   &__label {
@@ -169,6 +169,18 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s;
+  }
+
+  &:has(.input-box__info input:focus) {
+    // &.weak,
+    // &:not(.medium),
+    // &:not(.strong) {
+    //   .input-box__states-line {
+    //     div {
+    //       width: 12px;
+    //     }
+    //   }
+    // }
   }
 
   &__states {
@@ -198,7 +210,7 @@
 
     div {
       height: 100%;
-      width: 40%;
+      width: 0%;
       background-color: var(--color-content-states);
       border-radius: var(--radius-sm);
     }

@@ -43,6 +43,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     gap: calculate-clamp(4px, 8px, $tablet-breakpoint, 480px);
 
     .textbox {

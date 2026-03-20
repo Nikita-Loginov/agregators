@@ -105,7 +105,6 @@
 
         @media (max-width: $lg-breakpoint) {
           color: var(--dark-color-500);
-         
         }
 
         @media (max-width: $tablet-breakpoint) {
@@ -126,6 +125,14 @@
   .input-box__info {
     input {
       font-size: var(--font-size-2xs);
+    }
+  }
+
+  &__btns {
+    .icon {
+      @media (min-width: $lg-breakpoint) {
+        rotate: -45deg;
+      }
     }
   }
 

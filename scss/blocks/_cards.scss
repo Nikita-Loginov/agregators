@@ -69,6 +69,32 @@ a.card-detail {
     }
   }
 
+  &--row {
+    @media (min-width: $tablet-breakpoint) {
+      flex-direction: row;
+      align-items: center;
+      // gap: 16px;
+  
+      .card-box {
+        &__img-box {
+          aspect-ratio: 250 / 220;
+          max-width: 250px;
+        }
+  
+        &__content {
+          padding: 12px;
+        }
+      }
+    }
+    
+  }
+
+  &--white-bg {
+    @media (min-width: $tablet-breakpoint) {
+      // background-color: var(--white-color);
+    }
+  }
+
   &--noBorder {
     border: none;
   }
@@ -638,6 +664,66 @@ a.card-box {
     }
   }
 
+  &--media {
+    @media (max-width: $tablet-breakpoint) {
+      padding: 20px;
+
+      .card-team {
+        &__img {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          aspect-ratio: unset;
+          background-color: transparent;
+          border-radius: 0;
+          max-height: max-content;
+        }
+
+        &__img-block {
+          width: 60px;
+          height: 60px;
+          border-radius: var(--radius-sm);
+          overflow: hidden;
+
+          img,
+          svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+
+        &__content {
+          padding: 0;
+        }
+
+        &__info {
+          gap: 16px;
+        }
+
+        &__list {
+          gap: 8px;
+        }
+
+        &__img-decor {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          position: static;
+
+          .tag-second {
+            background-color: var(--gray-color-100);
+            min-height: 30px;
+            border-radius: var(--radius-base);
+
+            &__content {
+              gap: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
   &--media-img-big {
     @media (max-width: $lg-breakpoint) {
       .card-team {
@@ -911,11 +997,11 @@ a.card-box {
   &__link-info {
     .button {
       // @media (min-width: $lg-breakpoint) {
-        color: var(--dark-color-700);
-        border: 1px solid var(--dark-color-700);
-        border-radius: 50%;
-        width: 18px;
-        height: 18px;
+      color: var(--dark-color-700);
+      border: 1px solid var(--dark-color-700);
+      border-radius: 50%;
+      width: 18px;
+      height: 18px;
       // }
 
       .icon {

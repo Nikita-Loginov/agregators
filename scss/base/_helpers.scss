@@ -122,11 +122,16 @@ $mobile-breakpoint: 479px;
           display: flex;
           align-items: center;
           justify-content: center;
+          font-size: 32px !important;
         }
 
         * {
-          width: 60px !important;
-          font-size: 32px !important;
+          width: 100%;
+          height: auto;
+        }
+
+        img {
+          object-fit: cover;
         }
       }
 
@@ -174,7 +179,21 @@ $mobile-breakpoint: 479px;
     align-items: normal;
   }
 
-  
+  &__footer {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 4px;
+    
+    .decor-el {
+      * {
+        font-weight: var(--weight-font-md);
+      }
+
+      .icon.text-secondary-100 {
+        color: var(--dark-color-200);
+      }
+    }
+  }
 }
 
 @mixin share-hover {

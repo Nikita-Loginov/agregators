@@ -4,6 +4,8 @@ const strengthRules = {
   letter: (v) => /[A-Za-z]/.test(v),
 };
 
+let isFocused = false;
+
 export const getPasswordStrength = (value) => {
   const checks = {
     length: strengthRules.length(value),
@@ -36,7 +38,8 @@ export const initPasswordStrength = (formItem) => {
     letter: states.querySelectorAll(".input-box__states-item")[2],
   };
 
-  input.addEventListener("input", () => {
+  const updatePassword = (e) => {
+    const input = e.currentTarget;
     const value = input.value;
     const { level, checks, passed } = getPasswordStrength(value);
 
@@ -46,12 +49,19 @@ export const initPasswordStrength = (formItem) => {
     statusText.textContent =
       level === "strong" ? "Strong" : level === "medium" ? "Medium" : "Weak";
 
-    progressLine.style.width = `${(passed / 3) * 100}%`;
+    if (level === "weak" && document.activeElement === input && !input.value.length) {
+      progressLine.style.width = "12px";
+    } else {
+      progressLine.style.width = `${(passed / 3) * 100}%`;
+    }
 
     Object.entries(checks).forEach(([key, valid]) => {
       items[key]?.classList.toggle("success", valid);
     });
 
     input.setAttribute("aria-invalid", String(level === "weak"));
-  });
+  };
+
+  input.addEventListener("input", updatePassword);
+  input.addEventListener("focus", updatePassword);
 };

@@ -258,6 +258,15 @@ h6 {
   );
 }
 
+.fz-40-24 {
+  font-size: calculate-clamp(
+    24px,
+    40px,
+    $lg-breakpoint,
+    $tablet-breakpoint
+  );
+}
+
 .fz-28-22 {
   font-size: calculate-clamp(
     22px,
@@ -449,4 +458,8 @@ body .main {
 
 .no-wrap {
   white-space: nowrap;
+}
+
+.text-shadow {
+  text-shadow: 0px 5px 12px rgba(0, 0, 0, 0.1);
 }
