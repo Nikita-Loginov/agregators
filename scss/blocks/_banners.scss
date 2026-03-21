@@ -224,7 +224,7 @@
     flex-direction: column;
     align-items: flex-start;
     gap: calculate-clamp(20px, 28px, 1023px, 767px);
-    max-width: 80%;
+    max-width: var(--max-width-content, 80%);
     width: 100%;
   }
 

@@ -194,6 +194,14 @@ $mobile-breakpoint: 479px;
       }
     }
   }
+
+  &__header-content {
+    align-items: baseline;
+  }
+
+  &__header-item  {
+    align-items: flex-start;
+  }
 }
 
 @mixin share-hover {

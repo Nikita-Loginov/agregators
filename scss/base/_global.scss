@@ -223,6 +223,27 @@ body .wrapper {
       font-size: var(--icon-xl);
     }
 
+    &--base-sm {
+      width: calculate-clamp(
+        16px,
+        20px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+      height: calculate-clamp(
+        16px,
+        20px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+      font-size: calculate-clamp(
+        16px,
+        20px,
+        $lg-breakpoint,
+        $tablet-breakpoint
+      );
+    }
+
     &--md-base {
       width: calculate-clamp(
         20px,
