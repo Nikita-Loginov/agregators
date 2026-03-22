@@ -22,9 +22,6 @@ export const initSignIn = () => {
       signInState.type = btnContinue?.dataset.signType;
     }
 
-    console.log(signInState.type, 'signInState.type')
-    
-
     if (!signInState.type) return;
 
     initFormState(SIGN_IN_CONFIG[signInState.type]);

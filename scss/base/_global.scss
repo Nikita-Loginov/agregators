@@ -265,6 +265,27 @@ body .wrapper {
       );
     }
 
+    &--md-base-media {
+      width: calculate-clamp(
+        20px,
+        24px,
+        $tablet-breakpoint
+        $mobile-breakpoint
+      );
+      height: calculate-clamp(
+        20px,
+        24px,
+        $tablet-breakpoint
+        $mobile-breakpoint
+      );
+      font-size: calculate-clamp(
+        20px,
+        24px,
+        $tablet-breakpoint
+        $mobile-breakpoint
+      );
+    }
+
     &--xl-lg {
       width: calculate-clamp(
         28px,

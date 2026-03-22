@@ -158,11 +158,18 @@
     }
 
     &__icon {
-      height: -webkit-fill-available;
+      height: auto;
+      min-height: 100%;
     }
 
     .p1 {
       font-size: 22px;
+    }
+
+    &__btns {
+      .button {
+        padding-inline: 34px;
+      }
     }
   }
 
@@ -173,11 +180,18 @@
 
     &__icon {
       height: 40px;
+      min-height: 0;
     }
 
     &__top-content {
       .h6 {
         font-size: 18px;
+      }
+    }
+
+    &__btns {
+      .button {
+        padding-inline: 12px;
       }
     }
   }
