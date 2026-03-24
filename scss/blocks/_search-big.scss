@@ -4,13 +4,15 @@
   gap: 10px;
   min-height: 126px;
   height: 100%;
+  padding-bottom: 2px;
 
   &__content {
     box-shadow: 0px 4px 12px 0px #0d0a2c0f;
     border-radius: var(--radius-sm);
     width: 100%;
     background-color: var(--white-color);
-    padding: calculate-clamp(12px, 16px, $lg-breakpoint, $tablet-breakpoint) calculate-clamp(12px, 16px, $lg-breakpoint, $tablet-breakpoint) 8px;
+    padding: calculate-clamp(12px, 16px, $lg-breakpoint, $tablet-breakpoint)
+      calculate-clamp(12px, 16px, $lg-breakpoint, $tablet-breakpoint) 8px;
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -20,10 +22,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: -2px;
-      left: -2px;
-      right: -2px;
-      bottom: -2px;
+      inset: -2px;
       border-radius: calc(var(--radius-sm) + 2px);
       background: linear-gradient(
         91.24deg,
@@ -31,7 +30,11 @@
         #3b3efb 49.5%,
         #c00bdc 101.96%
       );
+      background-size: 300% 100%;
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
       z-index: -1;
+      animation: borderBeam 4s linear infinite;
     }
   }
 
@@ -94,7 +97,7 @@
 
   &__edit {
     display: none;
-    color:var(--dark-color-100);
+    color: var(--dark-color-100);
   }
 
   &__footer {
@@ -106,7 +109,12 @@
     .button--bg-gradient {
       padding-inline-start: 16px;
       padding-inline-end: 4px;
-      min-height: calculate-clamp(32px, 36px, $tablet-breakpoint, $mobile-breakpoint);
+      min-height: calculate-clamp(
+        32px,
+        36px,
+        $tablet-breakpoint,
+        $mobile-breakpoint
+      );
     }
   }
 
@@ -116,9 +124,15 @@
     gap: 8px;
   }
 
-  @media (max-width:$tablet-breakpoint) {
+  @media (max-width: $tablet-breakpoint) {
     &__content {
-      padding: calculate-clamp(4px, 12px, $tablet-breakpoint, $mobile-breakpoint) calculate-clamp(4px, 12px, $tablet-breakpoint, $mobile-breakpoint) 8px;
+      padding: calculate-clamp(
+          4px,
+          12px,
+          $tablet-breakpoint,
+          $mobile-breakpoint
+        )
+        calculate-clamp(4px, 12px, $tablet-breakpoint, $mobile-breakpoint) 8px;
     }
 
     &__inputs,
