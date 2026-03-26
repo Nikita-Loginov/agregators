@@ -43,7 +43,7 @@
     property="og:image"
     content="https://emirates.estate/uploads/images/2020-11/Emirates.Estate.png"
   />
-  
+
   <link
     rel="apple-touch-icon"
     sizes="180x180"
@@ -79,7 +79,7 @@
   />
   <link rel="stylesheet" href="/css/fonts.css" />
 
-  <link rel="stylesheet" href="/css/critical.css">
+  <link rel="stylesheet" href="/css/critical.css" />
 
   
   <link
@@ -168,14 +168,117 @@
     <style>
       .swiper-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
         gap: 20px;
       }
-      .swiper--good-img .swiper-wrapper{
+      .swiper--good-img .swiper-wrapper {
         grid-template-columns: repeat(1, 1fr);
+      }
+      .arrows-swiper,
+      .swiper-pagination,
+      .arrow-swiper {
+        display: none !important;
       }
       .more-block__item {
         display: block;
+      }
+      .select-box select {
+        width: 100%;
+        padding: 4px 16px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--gray-color-600);
+        font-size: var(--font-size-xs);
+        line-height: 1;
+        color: var(--dark-color-500);
+        width: fit-content;
+        min-width: 91px;
+        /* max-width: 260px; */
+        width: 100%;
+        height: 48px;
+        position: relative;
+
+        background-color: var(--white-color);
+        gap: 8px;
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        cursor: pointer;
+        justify-content: center;
+      }
+
+      .select-box select option {
+        height: 100%;
+        display: flex;
+        align-items: center;
+      }
+
+      .select-box select option:not(:first-child) {
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+        display: none;
+      }
+      @media (min-width: 1400px) {
+        .swiper-wrapper {
+          grid-template-columns: repeat(4, 1fr) !important;
+        }
+        .swiper-slide:nth-child(n + 5) {
+          display: none !important;
+        }
+      }
+      @media (max-width: 1399px) and (min-width: 992px) {
+        .swiper-wrapper {
+          grid-template-columns: repeat(3, 1fr) !important;
+        }
+        .swiper-slide:nth-child(n + 4) {
+          display: none !important;
+        }
+      }
+      @media (max-width: 991px) and (min-width: 768px) {
+        .swiper-wrapper {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .swiper-slide:nth-child(n + 3) {
+          display: none !important;
+        }
+      }
+      @media (max-width: 767px) and (min-width: 576px) {
+        .swiper-wrapper {
+          grid-template-columns: repeat(2, 1fr) !important;
+        }
+        .swiper-slide:nth-child(n + 3) {
+          display: none !important;
+        }
+      }
+      @media (max-width: 575px) {
+        .swiper-wrapper {
+          grid-template-columns: 1fr !important;
+        }
+        .swiper-slide:nth-child(n + 2) {
+          display: none !important;
+        }
+      }
+      .swiper--good-img .swiper-wrapper {
+        grid-template-columns: repeat(1, 1fr) !important;
+      }
+      .swiper--good-img .swiper-slide:nth-child(n + 2) {
+        display: none !important;
+      }
+      .swiper {
+        width: 100%;
+      }
+      [data-loading="true"] {
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        display: flex !important;
+      }
+
+      [data-loader-box] {
+        display: none !important;
+      }
+      [data-block="more-footer"] {
+        display: none;
       }
     </style>
   </noscript>
