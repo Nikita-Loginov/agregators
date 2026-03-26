@@ -462,7 +462,14 @@ body.scrollBottom {
 }
 
 [data-loading="true"] {
-  display: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  display: flex;
 }
 
 [data-block="more-footer"] {

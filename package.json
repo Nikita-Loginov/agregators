@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "browser-sync": "^3.0.3",
-    "gulp-file-include": "^2.3.0"
+    "gulp-file-include": "^2.3.0",
+    "sass": "^1.98.0"
   }
 }

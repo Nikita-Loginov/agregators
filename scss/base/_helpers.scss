@@ -6,11 +6,15 @@
   $width-at-max: 1500px,
   $min-width: 415px
 ) {
-  $slope: math.div($max - $min, $width-at-max - $min-width);
-  $intercept: $min - $slope * $min-width;
-  @return clamp(#{$min}, calc(#{$intercept} + #{$slope * 100}vw), #{$max});
+  @return clamp(
+    #{$min},
+    calc(
+      #{$min} + (#{$max} - #{$min}) *
+      ((100vw - #{$min-width}) / (#{$width-at-max} - #{$min-width}))
+    ),
+    #{$max}
+  );
 }
-// calculate-clamp(200px, 300px, $lg-breakpoint, $tablet-breakpoint)
 
 @mixin visually-hidden {
   position: absolute;
@@ -183,7 +187,7 @@ $mobile-breakpoint: 479px;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 4px;
-    
+
     .decor-el {
       * {
         font-weight: var(--weight-font-md);
@@ -199,7 +203,7 @@ $mobile-breakpoint: 479px;
     align-items: baseline;
   }
 
-  &__header-item  {
+  &__header-item {
     align-items: flex-start;
   }
 }
