@@ -6,14 +6,9 @@
   $width-at-max: 1500px,
   $min-width: 415px
 ) {
-  @return clamp(
-    #{$min},
-    calc(
-      #{$min} + (#{$max} - #{$min}) *
-      ((100vw - #{$min-width}) / (#{$width-at-max} - #{$min-width}))
-    ),
-    #{$max}
-  );
+  $slope: math.div($max - $min, $width-at-max - $min-width);
+  $intercept: $min - $slope * $min-width;
+  @return clamp(#{$min}, calc(#{$intercept} + #{$slope * 100}vw), #{$max});
 }
 
 @mixin visually-hidden {

@@ -47,7 +47,8 @@ body {
   }
 
   &.white-page {
-    background-color: #fff;
+    // background-color: var(--white-color);
+    background-color:  dark;
   }
 
   &:has(.modalSecond.open) {
@@ -269,19 +270,19 @@ body .wrapper {
       width: calculate-clamp(
         20px,
         24px,
-        $tablet-breakpoint
+        $tablet-breakpoint,
         $mobile-breakpoint
       );
       height: calculate-clamp(
         20px,
         24px,
-        $tablet-breakpoint
+        $tablet-breakpoint,
         $mobile-breakpoint
       );
       font-size: calculate-clamp(
         20px,
         24px,
-        $tablet-breakpoint
+        $tablet-breakpoint,
         $mobile-breakpoint
       );
     }
